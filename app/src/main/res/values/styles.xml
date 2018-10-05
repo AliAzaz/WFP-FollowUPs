@@ -30,7 +30,7 @@
     </style>
 
     <style name="BackgroundStyle" parent="android:Widget.ScrollView">
-        <item name="android:background">@drawable/background_grad_light</item>
+        <item name="android:background">@drawable/bg</item>
     </style>
 
     <style name="SpinnerItem">
@@ -114,14 +114,14 @@
     </style>
 
     <style name="textInput" parent="android:Widget.Material.Light.EditText">
-        <item name="android:textSize">24sp</item>
-        <item name="android:background">#efefef</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:background">@drawable/et_style</item>
         <item name="android:paddingBottom">8dp</item>
         <item name="android:paddingStart">8dp</item>
         <item name="android:paddingEnd">8dp</item>
         <item name="android:elevation">2dp</item>
         <item name="android:radius">2dp</item>
-
+        <item name="android:layout_margin">10dp</item>
         <item name="android:textColorHint">@color/colorPrimaryAlpha</item>
 
     </style>
