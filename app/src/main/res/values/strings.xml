@@ -15,9 +15,9 @@
     <string name="permission_rationale">"Contacts permissions are needed for providing email completions." </string>
 
     <!-- String related to form buttons -->
-    <string name="end_interview"> اختتام </string>
-    <string name="start_interview"> انٽرويو شروع ڪريو </string>
-    <string name="nextSection"> اڳيون سيڪشن </string>
+    <string name="end_interview">اختتام </string>
+    <string name="start_interview"> انٹروہو شروع کریں </string>
+    <string name="nextSection"> اگلا سیکشن </string>
 
     <!-- String related to section headings -->
     <string name="Seca"> معلومات براء سڃاڻپ </string>
@@ -29,10 +29,10 @@
     <string name="title_activity_splashscreen">SplashscreenActivity</string>
     <string name="dummy_button">Dummy Button</string>
     <string name="dummy_content">DUMMY\nCONTENT</string>
-    <string name="other">ٻيو ڪو(وضاحت ڪريو)</string>
-    <string name="dkn">خبر ڪونهي</string>
-    <string name="yes">ها</string>
-    <string name="no">نه</string>
+    <string name="other"> دیگر وضاحت کریں </string>
+    <string name="dkn"> معلوم نہیں </string>
+    <string name="yes"> ہاں </string>
+    <string name="no"> نہیں </string>
     <string name="na">لاڳو نه ٿو ٿئي</string>
     <string name="male"> مرد </string>
     <string name="female"> عورت </string>
@@ -226,52 +226,6 @@
     <string name="mp15b22a">ها</string>
     <string name="mp15b22b">نہ</string>
     <string name="mp15b22c">خبر ناهي</string>
-
-    <!--========================Form 15 Section C D=================================-->
-    <!--Section C-->
-    <string name="mp15c01Heading">شموليت ڪندڙ جي پنهنجي ٻار جي صحت جي باري ۾ خيالات</string>
-    <string name="mp15c01">توهان پنهنجي ٻار جي صحت هن تحقيق۾ شرڪت ڪرڻ کانپوءِ ڪيئن محسوس ڪري رهيا آهيو؟</string>
-    <string name="mp15c01a">تمام بهترين</string>
-    <string name="mp15c01b">وچولو  </string>
-    <string name="mp15c01c">خراب  </string>
-    <string name="mp15c01d">Not Applicable </string>
-
-    <string name="mp15c02">ڇا توهان کي لڳي ٿو ته توهان جي ٻار جي صحت اضافي اجزا واري خوراڪ کائڻ جي وجھه سان بهتر ٿي آهي؟</string>
-    <string name="mp15c02a">ها</string>
-    <string name="mp15c02b">نه   </string>
-    <string name="mp15c02c">خبر ناهي</string>
-
-
-    <!--Section D-->
-    <string name="mp15d01Heading">مطمئن ٿيڻ </string>
-    <string name="mp15d01">ڇا توهان کي هن تحقيق(مئپس) ۾ شرڪت ڪرڻ پسند آيو؟</string>
-    <string name="mp15d01a"> مون کي بلڪل به پسند نه آيو </string>
-    <string name="mp15d01b">ان مان ڪجهه ڪجهه پسند نه آيو   </string>
-    <string name="mp15d01c">مون کي نه پسند آيو نه ئي نا پسند آيو   </string>
-    <string name="mp15d01d"> ان مان ڪجهه ڪجهه پسند آيو </string>
-    <string name="mp15d01e"> مون کي تما گھڻو پسند آيو  </string>
-
-    <string name="mp15d02">ڇا توهان هن تحيق (مئپس) ۾ ٻيهر شرڪت ڪندا ؟</string>
-    <string name="mp15d02a">ها</string>
-    <string name="mp15d02b">نه </string>
-    <string name="mp15d02c">خبر ناهي</string>
-
-    <!--Section 16_B-->
-
-    <string name="mp16b01Heading"> دوري جي تفصيل  </string>
-    <string name="mp16b01"> شرڪت ڪندڙ جي تحقيق ۾ شرڪت ڪرڻ ڇو ختم ٿي رھي آھي؟   </string>
-    <string name="mp16b01a">   حامله ٿي تحقيق جا سڀ مرحلا مڪمل ڪيا       </string>
-    <string name="mp16b01b"> انٽروينشن نه وٺڻ جي چونڊ ڪئي</string>
-    <string name="mp16b01c">ڊيٽا ڪليڪشڻ نه  ڪرائڻ جي چونڊ ڪئي</string>
-    <string name="mp16b01d">فالو اپ مس ٿيو   </string>
-    <string name="mp16b01e">ناڪاري واقعو</string>
-    <string name="mp16b01f"> ڪنهن به بنيادي بيماريءسان ڪا  لاڳاپيل بيماري</string>
-    <string name="mp16b01g">  موت   </string>
-    <string name="mp16b01h"> پريڪنسيپشن/حمل کان پهرين وارو  مرحلو مڪمل ڪيو ۽ حامله ڪون ٿي </string>
-    <string name="mp16b01i"> تحقيق مڪمل ٿي </string>
-    <string name="mp16b01j">بيو ڪجه</string>
-
-    <string name="mp16b02"> ملاقات  جي آخري تاريخ</string>
 
 
 </resources>
