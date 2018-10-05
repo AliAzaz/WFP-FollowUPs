@@ -54,4 +54,5 @@ dependencies {
     androidTestImplementation 'junit:junit:4.12'
     implementation 'com.github.amlcurran.showcaseview:library:5.4.3'
     annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
+    implementation 'com.android.support:cardview-v7:27.1.1'
 }
