@@ -1,0 +1,2562 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="callback"
+            type="edu.aku.hassannaqvi.wfp_followups.activities.SectionIActivity" />
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!--01-->
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:elevation="10dp">
+
+                <LinearLayout
+                    android:id="@+id/fldgrppfi01"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:background="@color/colorPrimary"
+                        android:padding="5dp"
+                        android:text="@string/pfi01"
+                        android:textColor="@color/white"
+                        android:textSize="25sp" />
+
+                    <RadioGroup
+                        android:id="@+id/pfi01"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layoutDirection="rtl"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+
+                        <RadioButton
+                            android:id="@+id/pfi01a"
+                            style="@style/radiobutton"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/pfi01a"
+                            android:textSize="20sp" />
+
+                        <RadioButton
+                            android:id="@+id/pfi01b"
+                            style="@style/radiobutton"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/pfi01b"
+                            android:textSize="20sp" />
+
+                        <RadioButton
+                            android:id="@+id/pfi0198"
+                            style="@style/radiobutton"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/pfi98"
+                            android:textSize="20sp" />
+                    </RadioGroup>
+
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <!--Q2-->
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:elevation="10dp">
+
+                <LinearLayout
+                    android:id="@+id/fldgrppfi02"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:background="@color/colorPrimary"
+                        android:padding="5dp"
+                        android:text="@string/pfi03"
+                        android:textColor="@color/white"
+                        android:textSize="25sp" />
+
+                    <RadioGroup
+                        android:id="@+id/pfi02"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layoutDirection="rtl"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+
+                        <RadioButton
+                            android:id="@+id/pfi02a"
+                            style="@style/radiobutton"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/pfi02a"
+                            android:textSize="20sp" />
+
+                        <RadioButton
+                            android:id="@+id/pfi02h"
+                            style="@style/radiobutton"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/pfi02h"
+                            android:textSize="20sp" />
+
+                        <EditText
+                            android:id="@+id/pfi02hx"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/pfi02h"
+                            android:text='@{pfi02h.checked? pfi02hx.getText.toString : ""}'
+                            android:visibility='@{pfi02h.checked? View.VISIBLE : View.GONE}' />
+
+                        <RadioButton
+                            android:id="@+id/pfi02d"
+                            style="@style/radiobutton"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/pfi02d"
+                            android:textSize="20sp" />
+
+                        <EditText
+                            android:id="@+id/pfi02dx"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/pfi02d"
+                            android:text='@{pfi02d.checked? pfi02dx.getText.toString : ""}'
+                            android:visibility='@{pfi02d.checked? View.VISIBLE : View.GONE}' />
+                    </RadioGroup>
+
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <!--Q3-->
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:elevation="10dp">
+
+                <LinearLayout
+                    android:id="@+id/fldgrppfi03"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:background="@color/colorPrimary"
+                        android:padding="5dp"
+                        android:text="@string/pfi03"
+                        android:textColor="@color/white"
+                        android:textSize="25sp" />
+
+                    <RadioGroup
+                        android:id="@+id/pfi03"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layoutDirection="rtl"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+
+                        <RadioButton
+                            android:id="@+id/pfi03a"
+                            style="@style/radiobutton"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/yes"
+                            android:textSize="20sp" />
+
+                        <RadioButton
+                            android:id="@+id/pfi03b"
+                            style="@style/radiobutton"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/no"
+                            android:textSize="20sp" />
+
+                        <RadioButton
+                            android:id="@+id/pfi0398"
+                            style="@style/radiobutton"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/dkn"
+                            android:textSize="20sp" />
+                    </RadioGroup>
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <!--Q4-->
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:elevation="10dp">
+
+                <LinearLayout
+                    android:id="@+id/fldgrppfi04"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:background="@color/colorPrimary"
+                        android:padding="5dp"
+                        android:text="@string/pfi04"
+                        android:textColor="@color/white"
+                        android:textSize="25sp" />
+
+                    <RadioGroup
+                        android:id="@+id/pfi04"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layoutDirection="rtl"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+
+                        <RadioButton
+                            android:id="@+id/pfi04a"
+                            style="@style/radiobutton"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/pfi04a"
+                            android:textSize="20sp" />
+
+                        <RadioButton
+                            android:id="@+id/pfi04b"
+                            style="@style/radiobutton"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/pfi04b"
+                            android:textSize="20sp" />
+
+                        <RadioButton
+                            android:id="@+id/pfi04c"
+                            style="@style/radiobutton"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/pfi04c"
+                            android:textSize="20sp" />
+
+                        <RadioButton
+                            android:id="@+id/pfi0496"
+                            style="@style/radiobutton"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/other"
+                            android:textSize="20sp" />
+
+                        <EditText
+                            android:id="@+id/pfi0496x"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/other"
+                            android:text='@{pfi0496.checked? pfi0496x.getText.toString : ""}'
+                            android:visibility='@{pfi0496.checked? View.VISIBLE : View.GONE}' />
+
+                    </RadioGroup>
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <!--Q5-->
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:elevation="10dp">
+
+                <LinearLayout
+                    android:id="@+id/fldgrppfi05"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:background="@color/colorPrimary"
+                        android:padding="5dp"
+                        android:text="@string/pfi05"
+                        android:textColor="@color/white"
+                        android:textSize="25sp" />
+
+                    <RadioGroup
+                        android:id="@+id/pfi05"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layoutDirection="rtl"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+
+                        <RadioButton
+                            android:id="@+id/pfi05a"
+                            style="@style/radiobutton"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/yes"
+                            android:textSize="20sp" />
+
+                        <RadioButton
+                            android:id="@+id/pfi05b"
+                            style="@style/radiobutton"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/no"
+                            android:textSize="20sp" />
+                    </RadioGroup>
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <!--Q6-->
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:elevation="10dp">
+
+                <LinearLayout
+                    android:id="@+id/fldgrppfi06"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:background="@color/colorPrimary"
+                        android:padding="5dp"
+                        android:text="@string/pfi06"
+                        android:textColor="@color/white"
+                        android:textSize="25sp" />
+
+                    <CheckBox
+                        android:id="@+id/pfi06a"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/pfi06a" />
+
+                    <CheckBox
+                        android:id="@+id/pfi06b"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/pfi06b" />
+
+                    <CheckBox
+                        android:id="@+id/pfi06c"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/pfi06c" />
+
+                    <CheckBox
+                        android:id="@+id/pfi06d"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/pfi06d" />
+
+                    <CheckBox
+                        android:id="@+id/pfi06e"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/pfi06e" />
+
+                    <CheckBox
+                        android:id="@+id/pfi06f"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/pfi06f" />
+
+                    <CheckBox
+                        android:id="@+id/pfi06g"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/pfi06g" />
+
+                    <CheckBox
+                        android:id="@+id/pfi06h"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/pfi06h" />
+
+                    <CheckBox
+                        android:id="@+id/pfi06i"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/pfi06i" />
+
+                    <CheckBox
+                        android:id="@+id/pfi06j"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/pfi06j" />
+
+                    <CheckBox
+                        android:id="@+id/pfi0696"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/other" />
+
+                    <EditText
+                        android:id="@+id/pfi0696x"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/other"
+                        android:text='@{pfi0696.checked? pfi0696x.getText.toString : ""}'
+                        android:visibility='@{pfi0696.checked? View.VISIBLE : View.GONE}' />
+
+                    <CheckBox
+                        android:id="@+id/pfi0699"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/pfi0699" />
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <!--10-->
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:elevation="10dp">
+
+                <LinearLayout
+                    android:id="@+id/fldgrppfi10"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:background="@color/colorPrimary"
+                        android:padding="5dp"
+                        android:text="@string/pfi10"
+                        android:textColor="@color/white"
+                        android:textSize="25sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:background="@color/colorPrimary"
+                        android:padding="5dp"
+                        android:text="@string/pfi10sub"
+                        android:textColor="@color/white"
+                        android:textSize="25sp" />
+
+                    <android.support.v7.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:elevation="10dp">
+
+                        <LinearLayout
+                            android:id="@+id/fldgrppfi10a"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="10dp"
+                                android:background="@color/colorPrimaryDark"
+                                android:padding="5dp"
+                                android:text="@string/pfi10a"
+                                android:textColor="@color/white"
+                                android:textSize="25sp" />
+
+                            <RadioGroup
+                                android:id="@+id/pfi10a"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layoutDirection="rtl"
+                                android:orientation="vertical"
+                                android:padding="16dp">
+
+                                <RadioButton
+                                    android:id="@+id/pfi10a01"
+                                    style="@style/radiobutton"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="@string/yes"
+                                    android:textSize="20sp" />
+
+                                <RadioButton
+                                    android:id="@+id/pfi10a02"
+                                    style="@style/radiobutton"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="@string/no"
+                                    android:textSize="20sp" />
+
+                                <RadioButton
+                                    android:id="@+id/pfi10a98"
+                                    style="@style/radiobutton"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="@string/dkn"
+                                    android:textSize="20sp" />
+                            </RadioGroup>
+
+                        </LinearLayout>
+                    </android.support.v7.widget.CardView>
+
+                    <android.support.v7.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:elevation="10dp">
+
+                        <LinearLayout
+                            android:id="@+id/fldgrppfi10b"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="10dp"
+                                android:background="@color/colorPrimaryDark"
+                                android:padding="5dp"
+                                android:text="@string/pfi10b"
+                                android:textColor="@color/white"
+                                android:textSize="25sp" />
+
+                            <RadioGroup
+                                android:id="@+id/pfi10b"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layoutDirection="rtl"
+                                android:orientation="vertical"
+                                android:padding="16dp">
+
+                                <RadioButton
+                                    android:id="@+id/pfi10b01"
+                                    style="@style/radiobutton"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="@string/yes"
+                                    android:textSize="20sp" />
+
+                                <EditText
+                                    android:id="@+id/pfi10bx"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text='@{pfi10b01.checked? pfi10bx.getText.toString :"" }'
+                                    android:visibility='@{pfi10b01.checked? View.VISIBLE : View.GONE}' />
+
+                                <RadioButton
+                                    android:id="@+id/pfi10b02"
+                                    style="@style/radiobutton"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="@string/no"
+                                    android:textSize="20sp" />
+
+                                <RadioButton
+                                    android:id="@+id/pfi10b98"
+                                    style="@style/radiobutton"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="@string/dkn"
+                                    android:textSize="20sp" />
+                            </RadioGroup>
+
+                        </LinearLayout>
+                    </android.support.v7.widget.CardView>
+
+                    <android.support.v7.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:elevation="10dp">
+
+                        <LinearLayout
+                            android:id="@+id/fldgrppfi10c"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="10dp"
+                                android:background="@color/colorPrimaryDark"
+                                android:padding="5dp"
+                                android:text="@string/pfi10c"
+                                android:textColor="@color/white"
+                                android:textSize="25sp" />
+
+                            <RadioGroup
+                                android:id="@+id/pfi10c"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layoutDirection="rtl"
+                                android:orientation="vertical"
+                                android:padding="16dp">
+
+                                <RadioButton
+                                    android:id="@+id/pfi10c01"
+                                    style="@style/radiobutton"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="@string/yes"
+                                    android:textSize="20sp" />
+
+                                <EditText
+                                    android:id="@+id/pfi10c01x"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text='@{pfi10c01.checked? pfi10c01x.getText.toString :"" }'
+                                    android:visibility='@{pfi10c01.checked? View.VISIBLE : View.GONE}' />
+
+                                <RadioButton
+                                    android:id="@+id/pfi10c02"
+                                    style="@style/radiobutton"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="@string/no"
+                                    android:textSize="20sp" />
+
+                                <RadioButton
+                                    android:id="@+id/pfi10c98"
+                                    style="@style/radiobutton"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="@string/dkn"
+                                    android:textSize="20sp" />
+                            </RadioGroup>
+
+                        </LinearLayout>
+                    </android.support.v7.widget.CardView>
+
+                    <android.support.v7.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:elevation="10dp">
+
+                        <LinearLayout
+                            android:id="@+id/fldgrppfi10d"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="10dp"
+                                android:background="@color/colorPrimaryDark"
+                                android:padding="5dp"
+                                android:text="@string/pfi10d"
+                                android:textColor="@color/white"
+                                android:textSize="25sp" />
+
+                            <RadioGroup
+                                android:id="@+id/pfi10d"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layoutDirection="rtl"
+                                android:orientation="vertical"
+                                android:padding="16dp">
+
+                                <RadioButton
+                                    android:id="@+id/pfi10d01"
+                                    style="@style/radiobutton"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="@string/yes"
+                                    android:textSize="20sp" />
+
+                                <RadioButton
+                                    android:id="@+id/pfi10d02"
+                                    style="@style/radiobutton"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="@string/no"
+                                    android:textSize="20sp" />
+
+                                <RadioButton
+                                    android:id="@+id/pfi10d98"
+                                    style="@style/radiobutton"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="@string/dkn"
+                                    android:textSize="20sp" />
+                            </RadioGroup>
+
+                        </LinearLayout>
+                    </android.support.v7.widget.CardView>
+
+                    <android.support.v7.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:elevation="10dp">
+
+                        <LinearLayout
+                            android:id="@+id/fldgrppfi10e"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="10dp"
+                                android:background="@color/colorPrimaryDark"
+                                android:padding="5dp"
+                                android:text="@string/pfi10e"
+                                android:textColor="@color/white"
+                                android:textSize="25sp" />
+
+                            <RadioGroup
+                                android:id="@+id/pfi10e"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layoutDirection="rtl"
+                                android:orientation="vertical"
+                                android:padding="16dp">
+
+                                <RadioButton
+                                    android:id="@+id/pfi10e01"
+                                    style="@style/radiobutton"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="@string/yes"
+                                    android:textSize="20sp" />
+
+                                <RadioButton
+                                    android:id="@+id/pfi10e02"
+                                    style="@style/radiobutton"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="@string/no"
+                                    android:textSize="20sp" />
+
+                                <RadioButton
+                                    android:id="@+id/pfi10e98"
+                                    style="@style/radiobutton"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="@string/dkn"
+                                    android:textSize="20sp" />
+                            </RadioGroup>
+
+                        </LinearLayout>
+                    </android.support.v7.widget.CardView>
+
+                    <android.support.v7.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:elevation="10dp">
+
+                        <LinearLayout
+                            android:id="@+id/fldgrppfi10f"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="10dp"
+                                android:background="@color/colorPrimaryDark"
+                                android:padding="5dp"
+                                android:text="@string/pfi10f"
+                                android:textColor="@color/white"
+                                android:textSize="25sp" />
+
+                            <RadioGroup
+                                android:id="@+id/pfi10f"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layoutDirection="rtl"
+                                android:orientation="vertical"
+                                android:padding="16dp">
+
+                                <RadioButton
+                                    android:id="@+id/pfi10f01"
+                                    style="@style/radiobutton"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="@string/yes"
+                                    android:textSize="20sp" />
+
+                                <EditText
+                                    android:id="@+id/pfi10f01x"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text='@{pfi10f01.checked? pfi10f01x.getText.toString :"" }'
+                                    android:visibility='@{pfi10f01.checked? View.VISIBLE : View.GONE}' />
+
+                                <RadioButton
+                                    android:id="@+id/pfi10f02"
+                                    style="@style/radiobutton"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="@string/no"
+                                    android:textSize="20sp" />
+
+                                <RadioButton
+                                    android:id="@+id/pfi10f98"
+                                    style="@style/radiobutton"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="@string/dkn"
+                                    android:textSize="20sp" />
+                            </RadioGroup>
+
+                        </LinearLayout>
+                    </android.support.v7.widget.CardView>
+
+                    <android.support.v7.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:elevation="10dp">
+
+                        <LinearLayout
+                            android:id="@+id/fldgrppfi10g"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="10dp"
+                                android:background="@color/colorPrimaryDark"
+                                android:padding="5dp"
+                                android:text="@string/pfi10g"
+                                android:textColor="@color/white"
+                                android:textSize="25sp" />
+
+                            <RadioGroup
+                                android:id="@+id/pfi10g"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layoutDirection="rtl"
+                                android:orientation="vertical"
+                                android:padding="16dp">
+
+                                <RadioButton
+                                    android:id="@+id/pfi10g01"
+                                    style="@style/radiobutton"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="@string/yes"
+                                    android:textSize="20sp" />
+
+                                <RadioButton
+                                    android:id="@+id/pfi10g02"
+                                    style="@style/radiobutton"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="@string/no"
+                                    android:textSize="20sp" />
+
+                                <RadioButton
+                                    android:id="@+id/pfi10g98"
+                                    style="@style/radiobutton"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="@string/dkn"
+                                    android:textSize="20sp" />
+                            </RadioGroup>
+
+                        </LinearLayout>
+                    </android.support.v7.widget.CardView>
+
+                    <android.support.v7.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:elevation="10dp">
+
+                        <LinearLayout
+                            android:id="@+id/fldgrppfi10h"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="10dp"
+                                android:background="@color/colorPrimaryDark"
+                                android:padding="5dp"
+                                android:text="@string/pfi10h"
+                                android:textColor="@color/white"
+                                android:textSize="25sp" />
+
+                            <RadioGroup
+                                android:id="@+id/pfi10h"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layoutDirection="rtl"
+                                android:orientation="vertical"
+                                android:padding="16dp">
+
+                                <RadioButton
+                                    android:id="@+id/pfi10h01"
+                                    style="@style/radiobutton"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="@string/yes"
+                                    android:textSize="20sp" />
+
+                                <RadioButton
+                                    android:id="@+id/pfi10h02"
+                                    style="@style/radiobutton"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="@string/no"
+                                    android:textSize="20sp" />
+
+                                <RadioButton
+                                    android:id="@+id/pfi10h98"
+                                    style="@style/radiobutton"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="@string/dkn"
+                                    android:textSize="20sp" />
+                            </RadioGroup>
+
+                        </LinearLayout>
+                    </android.support.v7.widget.CardView>
+
+                    <android.support.v7.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:elevation="10dp">
+
+                        <LinearLayout
+                            android:id="@+id/fldgrppfi10i"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="10dp"
+                                android:background="@color/colorPrimaryDark"
+                                android:padding="5dp"
+                                android:text="@string/pfi10i"
+                                android:textColor="@color/white"
+                                android:textSize="25sp" />
+
+                            <RadioGroup
+                                android:id="@+id/pfi10i"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layoutDirection="rtl"
+                                android:orientation="vertical"
+                                android:padding="16dp">
+
+                                <RadioButton
+                                    android:id="@+id/pfi10i01"
+                                    style="@style/radiobutton"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="@string/yes"
+                                    android:textSize="20sp" />
+
+                                <RadioButton
+                                    android:id="@+id/pfi10i02"
+                                    style="@style/radiobutton"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="@string/no"
+                                    android:textSize="20sp" />
+
+                                <RadioButton
+                                    android:id="@+id/pfi10i98"
+                                    style="@style/radiobutton"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="@string/dkn"
+                                    android:textSize="20sp" />
+                            </RadioGroup>
+
+                        </LinearLayout>
+                    </android.support.v7.widget.CardView>
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <!--12-->
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:elevation="10dp">
+
+                <LinearLayout
+                    android:id="@+id/fldgrppfi12"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:background="@color/colorPrimary"
+                        android:padding="5dp"
+                        android:text="@string/pfi12"
+                        android:textColor="@color/white"
+                        android:textSize="25sp" />
+
+                    <android.support.v7.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:elevation="10dp">
+
+                        <LinearLayout
+                            android:id="@+id/fldgrppfi12a"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="10dp"
+                                android:background="@color/colorPrimaryDark"
+                                android:padding="5dp"
+                                android:text="@string/pfi12a"
+                                android:textColor="@color/white"
+                                android:textSize="25sp" />
+
+                            <RadioGroup
+                                android:id="@+id/pfi12a"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layoutDirection="rtl"
+                                android:orientation="vertical"
+                                android:padding="16dp">
+
+                                <RadioButton
+                                    android:id="@+id/pfi12a01"
+                                    style="@style/radiobutton"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="@string/yes"
+                                    android:textSize="20sp" />
+
+                                <RadioButton
+                                    android:id="@+id/pfi12a02"
+                                    style="@style/radiobutton"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="@string/no"
+                                    android:textSize="20sp" />
+
+                                <RadioButton
+                                    android:id="@+id/pfi12a98"
+                                    style="@style/radiobutton"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="@string/dkn"
+                                    android:textSize="20sp" />
+                            </RadioGroup>
+
+                        </LinearLayout>
+                    </android.support.v7.widget.CardView>
+
+                    <android.support.v7.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:elevation="10dp">
+
+                        <LinearLayout
+                            android:id="@+id/fldgrppfi12b"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="10dp"
+                                android:background="@color/colorPrimaryDark"
+                                android:padding="5dp"
+                                android:text="@string/pfi12b"
+                                android:textColor="@color/white"
+                                android:textSize="25sp" />
+
+                            <RadioGroup
+                                android:id="@+id/pfi12b"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layoutDirection="rtl"
+                                android:orientation="vertical"
+                                android:padding="16dp">
+
+                                <RadioButton
+                                    android:id="@+id/pfi12b01"
+                                    style="@style/radiobutton"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="@string/yes"
+                                    android:textSize="20sp" />
+
+                                <RadioButton
+                                    android:id="@+id/pfi12b02"
+                                    style="@style/radiobutton"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="@string/no"
+                                    android:textSize="20sp" />
+
+                                <RadioButton
+                                    android:id="@+id/pfi12b98"
+                                    style="@style/radiobutton"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="@string/dkn"
+                                    android:textSize="20sp" />
+                            </RadioGroup>
+
+                        </LinearLayout>
+                    </android.support.v7.widget.CardView>
+
+                    <android.support.v7.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:elevation="10dp">
+
+                        <LinearLayout
+                            android:id="@+id/fldgrppfi12c"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="10dp"
+                                android:background="@color/colorPrimaryDark"
+                                android:padding="5dp"
+                                android:text="@string/pfi12c"
+                                android:textColor="@color/white"
+                                android:textSize="25sp" />
+
+                            <RadioGroup
+                                android:id="@+id/pfi12c"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layoutDirection="rtl"
+                                android:orientation="vertical"
+                                android:padding="16dp">
+
+                                <RadioButton
+                                    android:id="@+id/pfi12c01"
+                                    style="@style/radiobutton"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="@string/yes"
+                                    android:textSize="20sp" />
+
+                                <RadioButton
+                                    android:id="@+id/pfi12c02"
+                                    style="@style/radiobutton"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="@string/no"
+                                    android:textSize="20sp" />
+
+                                <RadioButton
+                                    android:id="@+id/pfi12c98"
+                                    style="@style/radiobutton"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="@string/dkn"
+                                    android:textSize="20sp" />
+                            </RadioGroup>
+
+                        </LinearLayout>
+                    </android.support.v7.widget.CardView>
+
+                    <android.support.v7.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:elevation="10dp">
+
+                        <LinearLayout
+                            android:id="@+id/fldgrppfi12d"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="10dp"
+                                android:background="@color/colorPrimaryDark"
+                                android:padding="5dp"
+                                android:text="@string/pfi12d"
+                                android:textColor="@color/white"
+                                android:textSize="25sp" />
+
+                            <RadioGroup
+                                android:id="@+id/pfi12d"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layoutDirection="rtl"
+                                android:orientation="vertical"
+                                android:padding="16dp">
+
+                                <RadioButton
+                                    android:id="@+id/pfi12d01"
+                                    style="@style/radiobutton"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="@string/yes"
+                                    android:textSize="20sp" />
+
+                                <RadioButton
+                                    android:id="@+id/pfi12d02"
+                                    style="@style/radiobutton"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="@string/no"
+                                    android:textSize="20sp" />
+
+                                <RadioButton
+                                    android:id="@+id/pfi12d98"
+                                    style="@style/radiobutton"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="@string/dkn"
+                                    android:textSize="20sp" />
+                            </RadioGroup>
+
+                        </LinearLayout>
+                    </android.support.v7.widget.CardView>
+
+                    <android.support.v7.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:elevation="10dp">
+
+                        <LinearLayout
+                            android:id="@+id/fldgrppfi12e"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="10dp"
+                                android:background="@color/colorPrimaryDark"
+                                android:padding="5dp"
+                                android:text="@string/pfi12e"
+                                android:textColor="@color/white"
+                                android:textSize="25sp" />
+
+                            <RadioGroup
+                                android:id="@+id/pfi12e"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layoutDirection="rtl"
+                                android:orientation="vertical"
+                                android:padding="16dp">
+
+                                <RadioButton
+                                    android:id="@+id/pfi12e01"
+                                    style="@style/radiobutton"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="@string/yes"
+                                    android:textSize="20sp" />
+
+                                <RadioButton
+                                    android:id="@+id/pfi12e02"
+                                    style="@style/radiobutton"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="@string/no"
+                                    android:textSize="20sp" />
+
+                                <RadioButton
+                                    android:id="@+id/pfi12e98"
+                                    style="@style/radiobutton"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="@string/dkn"
+                                    android:textSize="20sp" />
+                            </RadioGroup>
+
+                        </LinearLayout>
+                    </android.support.v7.widget.CardView>
+
+                    <android.support.v7.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:elevation="10dp">
+
+                        <LinearLayout
+                            android:id="@+id/fldgrppfi12f"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="10dp"
+                                android:background="@color/colorPrimaryDark"
+                                android:padding="5dp"
+                                android:text="@string/pfi12f"
+                                android:textColor="@color/white"
+                                android:textSize="25sp" />
+
+                            <RadioGroup
+                                android:id="@+id/pfi12f"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layoutDirection="rtl"
+                                android:orientation="vertical"
+                                android:padding="16dp">
+
+                                <RadioButton
+                                    android:id="@+id/pfi12f01"
+                                    style="@style/radiobutton"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="@string/yes"
+                                    android:textSize="20sp" />
+
+                                <RadioButton
+                                    android:id="@+id/pfi12f02"
+                                    style="@style/radiobutton"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="@string/no"
+                                    android:textSize="20sp" />
+
+                                <RadioButton
+                                    android:id="@+id/pfi12f98"
+                                    style="@style/radiobutton"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="@string/dkn"
+                                    android:textSize="20sp" />
+                            </RadioGroup>
+
+                        </LinearLayout>
+                    </android.support.v7.widget.CardView>
+
+                    <android.support.v7.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:elevation="10dp">
+
+                        <LinearLayout
+                            android:id="@+id/fldgrppfi12g"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="10dp"
+                                android:background="@color/colorPrimaryDark"
+                                android:padding="5dp"
+                                android:text="@string/pfi12g"
+                                android:textColor="@color/white"
+                                android:textSize="25sp" />
+
+                            <RadioGroup
+                                android:id="@+id/pfi12g"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layoutDirection="rtl"
+                                android:orientation="vertical"
+                                android:padding="16dp">
+
+                                <RadioButton
+                                    android:id="@+id/pfi12g01"
+                                    style="@style/radiobutton"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="@string/yes"
+                                    android:textSize="20sp" />
+
+                                <RadioButton
+                                    android:id="@+id/pfi12g02"
+                                    style="@style/radiobutton"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="@string/no"
+                                    android:textSize="20sp" />
+
+                                <RadioButton
+                                    android:id="@+id/pfi12g98"
+                                    style="@style/radiobutton"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="@string/dkn"
+                                    android:textSize="20sp" />
+                            </RadioGroup>
+
+                        </LinearLayout>
+                    </android.support.v7.widget.CardView>
+
+                    <android.support.v7.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:elevation="10dp">
+
+                        <LinearLayout
+                            android:id="@+id/fldgrppfi12h"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="10dp"
+                                android:background="@color/colorPrimaryDark"
+                                android:padding="5dp"
+                                android:text="@string/pfi12h"
+                                android:textColor="@color/white"
+                                android:textSize="25sp" />
+
+                            <RadioGroup
+                                android:id="@+id/pfi12h"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layoutDirection="rtl"
+                                android:orientation="vertical"
+                                android:padding="16dp">
+
+                                <RadioButton
+                                    android:id="@+id/pfi12h01"
+                                    style="@style/radiobutton"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="@string/yes"
+                                    android:textSize="20sp" />
+
+                                <RadioButton
+                                    android:id="@+id/pfi12h02"
+                                    style="@style/radiobutton"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="@string/no"
+                                    android:textSize="20sp" />
+
+                                <RadioButton
+                                    android:id="@+id/pfi12h98"
+                                    style="@style/radiobutton"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="@string/dkn"
+                                    android:textSize="20sp" />
+                            </RadioGroup>
+
+                        </LinearLayout>
+                    </android.support.v7.widget.CardView>
+
+                    <android.support.v7.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:elevation="10dp">
+
+                        <LinearLayout
+                            android:id="@+id/fldgrppfi12i"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="10dp"
+                                android:background="@color/colorPrimaryDark"
+                                android:padding="5dp"
+                                android:text="@string/pfi12i"
+                                android:textColor="@color/white"
+                                android:textSize="25sp" />
+
+                            <RadioGroup
+                                android:id="@+id/pfi12i"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layoutDirection="rtl"
+                                android:orientation="vertical"
+                                android:padding="16dp">
+
+                                <RadioButton
+                                    android:id="@+id/pfi12i01"
+                                    style="@style/radiobutton"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="@string/yes"
+                                    android:textSize="20sp" />
+
+                                <RadioButton
+                                    android:id="@+id/pfi12i02"
+                                    style="@style/radiobutton"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="@string/no"
+                                    android:textSize="20sp" />
+
+                                <RadioButton
+                                    android:id="@+id/pfi12i98"
+                                    style="@style/radiobutton"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="@string/dkn"
+                                    android:textSize="20sp" />
+                            </RadioGroup>
+
+                        </LinearLayout>
+                    </android.support.v7.widget.CardView>
+
+                    <android.support.v7.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:elevation="10dp">
+
+                        <LinearLayout
+                            android:id="@+id/fldgrppfi12j"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="10dp"
+                                android:background="@color/colorPrimaryDark"
+                                android:padding="5dp"
+                                android:text="@string/pfi12j"
+                                android:textColor="@color/white"
+                                android:textSize="25sp" />
+
+                            <RadioGroup
+                                android:id="@+id/pfi12j"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layoutDirection="rtl"
+                                android:orientation="vertical"
+                                android:padding="16dp">
+
+                                <RadioButton
+                                    android:id="@+id/pfi12j01"
+                                    style="@style/radiobutton"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="@string/yes"
+                                    android:textSize="20sp" />
+
+                                <RadioButton
+                                    android:id="@+id/pfi12j02"
+                                    style="@style/radiobutton"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="@string/no"
+                                    android:textSize="20sp" />
+
+                                <RadioButton
+                                    android:id="@+id/pfi12j98"
+                                    style="@style/radiobutton"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="@string/dkn"
+                                    android:textSize="20sp" />
+                            </RadioGroup>
+
+                        </LinearLayout>
+                    </android.support.v7.widget.CardView>
+
+                    <android.support.v7.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:elevation="10dp">
+
+                        <LinearLayout
+                            android:id="@+id/fldgrppfi12k"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="10dp"
+                                android:background="@color/colorPrimaryDark"
+                                android:padding="5dp"
+                                android:text="@string/pfi12k"
+                                android:textColor="@color/white"
+                                android:textSize="25sp" />
+
+                            <RadioGroup
+                                android:id="@+id/pfi12k"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layoutDirection="rtl"
+                                android:orientation="vertical"
+                                android:padding="16dp">
+
+                                <RadioButton
+                                    android:id="@+id/pfi12k01"
+                                    style="@style/radiobutton"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="@string/yes"
+                                    android:textSize="20sp" />
+
+                                <RadioButton
+                                    android:id="@+id/pfi12k02"
+                                    style="@style/radiobutton"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="@string/no"
+                                    android:textSize="20sp" />
+
+                                <RadioButton
+                                    android:id="@+id/pfi12k98"
+                                    style="@style/radiobutton"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="@string/dkn"
+                                    android:textSize="20sp" />
+                            </RadioGroup>
+
+                        </LinearLayout>
+                    </android.support.v7.widget.CardView>
+
+                    <android.support.v7.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:elevation="10dp">
+
+                        <LinearLayout
+                            android:id="@+id/fldgrppfi12l"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="10dp"
+                                android:background="@color/colorPrimaryDark"
+                                android:padding="5dp"
+                                android:text="@string/pfi12l"
+                                android:textColor="@color/white"
+                                android:textSize="25sp" />
+
+                            <RadioGroup
+                                android:id="@+id/pfi12l"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layoutDirection="rtl"
+                                android:orientation="vertical"
+                                android:padding="16dp">
+
+                                <RadioButton
+                                    android:id="@+id/pfi12l01"
+                                    style="@style/radiobutton"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="@string/yes"
+                                    android:textSize="20sp" />
+
+                                <RadioButton
+                                    android:id="@+id/pfi12l02"
+                                    style="@style/radiobutton"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="@string/no"
+                                    android:textSize="20sp" />
+
+                                <RadioButton
+                                    android:id="@+id/pfi12l98"
+                                    style="@style/radiobutton"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="@string/dkn"
+                                    android:textSize="20sp" />
+                            </RadioGroup>
+
+                        </LinearLayout>
+                    </android.support.v7.widget.CardView>
+
+                    <android.support.v7.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:elevation="10dp">
+
+                        <LinearLayout
+                            android:id="@+id/fldgrppfi12m"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="10dp"
+                                android:background="@color/colorPrimaryDark"
+                                android:padding="5dp"
+                                android:text="@string/pfi12m"
+                                android:textColor="@color/white"
+                                android:textSize="25sp" />
+
+                            <RadioGroup
+                                android:id="@+id/pfi12m"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layoutDirection="rtl"
+                                android:orientation="vertical"
+                                android:padding="16dp">
+
+                                <RadioButton
+                                    android:id="@+id/pfi12m01"
+                                    style="@style/radiobutton"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="@string/yes"
+                                    android:textSize="20sp" />
+
+                                <RadioButton
+                                    android:id="@+id/pfi12m02"
+                                    style="@style/radiobutton"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="@string/no"
+                                    android:textSize="20sp" />
+
+                                <RadioButton
+                                    android:id="@+id/pfi12m98"
+                                    style="@style/radiobutton"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="@string/dkn"
+                                    android:textSize="20sp" />
+                            </RadioGroup>
+
+                        </LinearLayout>
+                    </android.support.v7.widget.CardView>
+
+                    <android.support.v7.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:elevation="10dp">
+
+                        <LinearLayout
+                            android:id="@+id/fldgrppfi12n"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="10dp"
+                                android:background="@color/colorPrimaryDark"
+                                android:padding="5dp"
+                                android:text="@string/pfi12n"
+                                android:textColor="@color/white"
+                                android:textSize="25sp" />
+
+                            <RadioGroup
+                                android:id="@+id/pfi12n"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layoutDirection="rtl"
+                                android:orientation="vertical"
+                                android:padding="16dp">
+
+                                <RadioButton
+                                    android:id="@+id/pfi12n01"
+                                    style="@style/radiobutton"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="@string/yes"
+                                    android:textSize="20sp" />
+
+                                <RadioButton
+                                    android:id="@+id/pfi12n02"
+                                    style="@style/radiobutton"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="@string/no"
+                                    android:textSize="20sp" />
+
+                                <RadioButton
+                                    android:id="@+id/pfi12n98"
+                                    style="@style/radiobutton"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="@string/dkn"
+                                    android:textSize="20sp" />
+                            </RadioGroup>
+
+                        </LinearLayout>
+                    </android.support.v7.widget.CardView>
+
+                    <android.support.v7.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:elevation="10dp">
+
+                        <LinearLayout
+                            android:id="@+id/fldgrppfi12o"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="10dp"
+                                android:background="@color/colorPrimaryDark"
+                                android:padding="5dp"
+                                android:text="@string/pfi12o"
+                                android:textColor="@color/white"
+                                android:textSize="25sp" />
+
+                            <RadioGroup
+                                android:id="@+id/pfi12o"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layoutDirection="rtl"
+                                android:orientation="vertical"
+                                android:padding="16dp">
+
+                                <RadioButton
+                                    android:id="@+id/pfi12o01"
+                                    style="@style/radiobutton"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="@string/yes"
+                                    android:textSize="20sp" />
+
+                                <RadioButton
+                                    android:id="@+id/pfi12o02"
+                                    style="@style/radiobutton"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="@string/no"
+                                    android:textSize="20sp" />
+
+                                <RadioButton
+                                    android:id="@+id/pfi12o98"
+                                    style="@style/radiobutton"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="@string/dkn"
+                                    android:textSize="20sp" />
+                            </RadioGroup>
+
+                        </LinearLayout>
+                    </android.support.v7.widget.CardView>
+
+                    <android.support.v7.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:elevation="10dp">
+
+                        <LinearLayout
+                            android:id="@+id/fldgrppfi12p"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="10dp"
+                                android:background="@color/colorPrimaryDark"
+                                android:padding="5dp"
+                                android:text="@string/pfi12p"
+                                android:textColor="@color/white"
+                                android:textSize="25sp" />
+
+                            <RadioGroup
+                                android:id="@+id/pfi12p"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layoutDirection="rtl"
+                                android:orientation="vertical"
+                                android:padding="16dp">
+
+                                <RadioButton
+                                    android:id="@+id/pfi12p01"
+                                    style="@style/radiobutton"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="@string/yes"
+                                    android:textSize="20sp" />
+
+                                <RadioButton
+                                    android:id="@+id/pfi12p02"
+                                    style="@style/radiobutton"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="@string/no"
+                                    android:textSize="20sp" />
+
+                                <RadioButton
+                                    android:id="@+id/pfi12p98"
+                                    style="@style/radiobutton"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="@string/dkn"
+                                    android:textSize="20sp" />
+                            </RadioGroup>
+
+                        </LinearLayout>
+                    </android.support.v7.widget.CardView>
+
+                    <android.support.v7.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:elevation="10dp">
+
+                        <LinearLayout
+                            android:id="@+id/fldgrppfi12q"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="10dp"
+                                android:background="@color/colorPrimaryDark"
+                                android:padding="5dp"
+                                android:text="@string/pfi12q"
+                                android:textColor="@color/white"
+                                android:textSize="25sp" />
+
+                            <RadioGroup
+                                android:id="@+id/pfi12q"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layoutDirection="rtl"
+                                android:orientation="vertical"
+                                android:padding="16dp">
+
+                                <RadioButton
+                                    android:id="@+id/pfi12q01"
+                                    style="@style/radiobutton"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="@string/yes"
+                                    android:textSize="20sp" />
+
+                                <RadioButton
+                                    android:id="@+id/pfi12q02"
+                                    style="@style/radiobutton"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="@string/no"
+                                    android:textSize="20sp" />
+
+                                <RadioButton
+                                    android:id="@+id/pfi12q98"
+                                    style="@style/radiobutton"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="@string/dkn"
+                                    android:textSize="20sp" />
+                            </RadioGroup>
+
+                        </LinearLayout>
+                    </android.support.v7.widget.CardView>
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <!--13-->
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:elevation="10dp">
+
+                <LinearLayout
+                    android:id="@+id/fldgrppfi13"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:background="@color/colorPrimaryDark"
+                        android:padding="5dp"
+                        android:text="@string/pfi13"
+                        android:textColor="@color/white"
+                        android:textSize="25sp" />
+
+                    <RadioGroup
+                        android:id="@+id/pfi13"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layoutDirection="rtl"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+
+                        <RadioButton
+                            android:id="@+id/pfi13a"
+                            style="@style/radiobutton"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/yes"
+                            android:textSize="20sp" />
+
+                        <RadioButton
+                            android:id="@+id/pfi13b"
+                            style="@style/radiobutton"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/no"
+                            android:textSize="20sp" />
+
+                        <RadioButton
+                            android:id="@+id/pfi1398"
+                            style="@style/radiobutton"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/dkn"
+                            android:textSize="20sp" />
+                    </RadioGroup>
+
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <!--Q14-->
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:elevation="10dp">
+
+                <LinearLayout
+                    android:id="@+id/fldgrppfi14"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:background="@color/colorPrimaryDark"
+                        android:padding="5dp"
+                        android:text="@string/pfi14"
+                        android:textColor="@color/white"
+                        android:textSize="25sp" />
+
+                    <EditText
+                        android:id="@+id/pfi14t"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text='@{pfi1498.checked? "" : pfi14t.getText.toString }'
+                        android:visibility='@{pfi1498.checked? View.GONE : View.VISIBLE}' />
+
+                    <CheckBox
+                        android:id="@+id/pfi1498"
+                        style="@style/checkbox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/dkn" />
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <!--Q15-->
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:elevation="10dp">
+
+                <LinearLayout
+                    android:id="@+id/fldgrppfi15"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:background="@color/colorPrimaryDark"
+                        android:padding="5dp"
+                        android:text="@string/pfi15"
+                        android:textColor="@color/white"
+                        android:textSize="25sp" />
+
+                    <RadioGroup
+                        android:id="@+id/pfi15"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layoutDirection="rtl"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+
+                        <RadioButton
+                            android:id="@+id/pfi15a"
+                            style="@style/radiobutton"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/yes"
+                            android:textSize="20sp" />
+
+                        <RadioButton
+                            android:id="@+id/pfi15b"
+                            style="@style/radiobutton"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/no"
+                            android:textSize="20sp" />
+
+                        <RadioButton
+                            android:id="@+id/pfi1598"
+                            style="@style/radiobutton"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/dkn"
+                            android:textSize="20sp" />
+                    </RadioGroup>
+
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <!--Q16-->
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:elevation="10dp">
+
+                <LinearLayout
+                    android:id="@+id/fldgrppfi16"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:background="@color/colorPrimaryDark"
+                        android:padding="5dp"
+                        android:text="@string/pfi16"
+                        android:textColor="@color/white"
+                        android:textSize="25sp" />
+
+                    <RadioGroup
+                        android:id="@+id/pfi16"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layoutDirection="rtl"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+
+                        <RadioButton
+                            android:id="@+id/pfi16a"
+                            style="@style/radiobutton"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/pfi16a"
+                            android:textSize="20sp" />
+
+                        <RadioButton
+                            android:id="@+id/pfi16b"
+                            style="@style/radiobutton"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/pfi16b"
+                            android:textSize="20sp" />
+
+                        <RadioButton
+                            android:id="@+id/pfi16c"
+                            style="@style/radiobutton"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/pfi16c"
+                            android:textSize="20sp" />
+
+                        <RadioButton
+                            android:id="@+id/pfi1696"
+                            style="@style/radiobutton"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/other"
+                            android:textSize="20sp" />
+
+                        <EditText
+                            android:id="@+id/pfi1696x"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/other"
+                            android:text='@{pfi1696.checked? pfi1696x.getText.toString : ""}'
+                            android:visibility='@{pfi1696.checked? View.VISIBLE : View.GONE}' />
+
+                    </RadioGroup>
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <!--Q17-->
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:elevation="10dp">
+
+                <LinearLayout
+                    android:id="@+id/fldgrppfi17"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:background="@color/colorPrimaryDark"
+                        android:padding="5dp"
+                        android:text="@string/pfi17"
+                        android:textColor="@color/white"
+                        android:textSize="25sp" />
+
+                    <RadioGroup
+                        android:id="@+id/pfi17"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layoutDirection="rtl"
+                        android:orientation="vertical"
+                        android:padding="17dp">
+
+                        <RadioButton
+                            android:id="@+id/pfi17a"
+                            style="@style/radiobutton"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/pfi17a"
+                            android:textSize="20sp" />
+
+                        <RadioButton
+                            android:id="@+id/pfi17b"
+                            style="@style/radiobutton"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/pfi17b"
+                            android:textSize="20sp" />
+
+                        <RadioButton
+                            android:id="@+id/pfi17c"
+                            style="@style/radiobutton"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/pfi17c"
+                            android:textSize="20sp" />
+
+                        <RadioButton
+                            android:id="@+id/pfi1796"
+                            style="@style/radiobutton"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/other"
+                            android:textSize="20sp" />
+
+                        <EditText
+                            android:id="@+id/pfi1796x"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/other"
+                            android:text='@{pfi1796.checked? pfi1796x.getText.toString : ""}'
+                            android:visibility='@{pfi1796.checked? View.VISIBLE : View.GONE}' />
+
+                    </RadioGroup>
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <!--Q18-->
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:elevation="10dp">
+
+                <LinearLayout
+                    android:id="@+id/fldgrppfi18"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:background="@color/colorPrimaryDark"
+                        android:padding="5dp"
+                        android:text="@string/pfi18"
+                        android:textColor="@color/white"
+                        android:textSize="25sp" />
+
+                    <RadioGroup
+                        android:id="@+id/pfi18"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layoutDirection="rtl"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+
+                        <RadioButton
+                            android:id="@+id/pfi18a"
+                            style="@style/radiobutton"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/yes"
+                            android:textSize="20sp" />
+
+                        <RadioButton
+                            android:id="@+id/pfi18b"
+                            style="@style/radiobutton"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/no"
+                            android:textSize="20sp" />
+
+                        <RadioButton
+                            android:id="@+id/pfi1898"
+                            style="@style/radiobutton"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/dkn"
+                            android:textSize="20sp" />
+                    </RadioGroup>
+
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <!--================End Buttons======================-->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_marginTop="80dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btn_End"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:onClick="@{() -> callback.BtnEnd()}"
+                    android:padding="2dp"
+                    android:text="@string/end_interview"
+                    android:textColor="#ff1e1e"
+                    android:textSize="32sp" />
+
+                <Button
+                    android:id="@+id/btn_Continue"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:onClick="@{() -> callback.BtnContinue()}"
+                    android:padding="2dp"
+                    android:text="@string/nextSection"
+                    android:textColor="@color/whiteOverlay"
+                    android:textSize="32sp"
+                    android:visibility="visible" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</layout>
