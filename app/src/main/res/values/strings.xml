@@ -227,5 +227,39 @@
     <string name="mp15b22b">نہ</string>
     <string name="mp15b22c">خبر ناهي</string>
 
+    <!--Section D-->
+
+    <string name="wrf01">کیا آپ نے گزشتہ 3ماہ کے دوران ایس این ایف مامتا موصول کی تھی ۔ مامتا کے ساشے دکھائیں۔</string>
+    <string name="wrf02">آپ کو کس نےمامتا دیئے تھے؟</string>
+    <string name="wrf02a">لیڈی ہیلتھ ورکر</string>
+    <string name="wrf02b">دیگر زرائع</string>
+    <string name="wrf03">آپ نے گزشتہ 3-1 ماہ میں اپنے لیے کتنے مامتا کے ساشے موصول کیے تھے ؟</string>
+    <string name="wrf03a">مامتا کے کتنے ساشے ملے تعداد لکہیں</string>
+    <string name="wrf04">ایک دن میں آپ نے کتنے ساشے استعمال کیےتھے؟</string>
+    <string name="wrf04a">ساشے</string>
+    <string name="wrf05">آپ نے گزشتہ 3-1 ماہ میں کتنے دن اور کتنے ساشے استعمال کیے تھے؟</string>
+    <string name="wrf05a">دن</string>
+    <string name="wrf05b">ساشے</string>
+    <string name="wrf06">کیا آپ مجھے استعمال شدہ اور غیر استعمال شدہ ساشے کے پیکٹ دیکھا سکتے ہیں؟ (اگر موجود نہیں تو (00) لکھیں)</string>
+    <string name="wrf06a">استعمال شدہ پیکٹ دیکھائے</string>
+    <string name="wrf06b">بغیر استعمال شدہ پیکٹ دیکھائے</string>
+    <string name="wrf07">کیا آپ نے گزشتہ 3-1 ماہ میں مامتا کے کھانے کی وجہ سے کوئی منفی اثرات دیکھے تھے؟</string>
+    <string name="wrf08">اگر ہاں تو وہ منفی اثرات کیا تھے؟</string>
+    <string name="wrf08a">دست</string>
+    <string name="wrf08b">الٹی</string>
+    <string name="wrf08c">پیٹ کا درد</string>
+    <string name="wrf08d">جسم پے دانے</string>
+    <string name="wrf09">کیا گزشتہ 3-1 ماہ کے دوران ٓپ نے مامتا کسی اور کے ساتھ تقسیم کیا یا کسی اور کو بھی کھانے کیلئے دیا تھا؟</string>
+    <string name="wrf0901">اگر ہاں تو کس کو تقسیم کیا یا دیا تھا؟</string>
+    <string name="wrf0901a">اپنے بچوں کو</string>
+    <string name="wrf0901b">پڑوسی گھروں کے ساتھ</string>
+    <string name="wrf0901c">بڑوں کے ساتھ</string>
+    <string name="wrf0902">گزشتہ 3-1 ماہ کے دوران کتنے ساشے تقسیم کیے؟</string>
+    <string name="wrf0902a">ساشے</string>
+    <string name="wrf0903">دوسرں کے ساتھ ساشے تقسیم کرنے کی کیا وجوہات تھیں؟</string>
+    <string name="wrf0903a">منع نہیں کر سکتے</string>
+    <string name="wrf0903b">ذائقہ اچھا تھا</string>
+    <string name="wrf0903c">مجھے یقین تھا یہ دوسرے بچوں/بڑوں کے لئے فائدہ مند ہے۔</string>
+
 
 </resources>

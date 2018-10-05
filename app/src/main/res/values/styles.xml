@@ -30,7 +30,8 @@
     </style>
 
     <style name="BackgroundStyle" parent="android:Widget.ScrollView">
-        <item name="android:background">@drawable/bg</item>
+        <item name="android:background">#FFEBEE</item>
+        <item name="android:padding">16dp</item>
     </style>
 
     <style name="SpinnerItem">
@@ -53,9 +54,8 @@
         <item name="android:padding">8dp</item>
     </style>
 
-    <style name="ActionBarTheme" parent="android:Widget.ActionBar">
-        <item name="android:background">@drawable/background_grad</item>
-        <item name="background">@drawable/background_grad</item>
+    <style name="ActionBarTheme" parent="android:Theme.Material.Light.DarkActionBar">
+        <item name="android:background">@color/colorPrimaryDark</item>
     </style>
 
 
@@ -65,7 +65,7 @@
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_marginTop">24dp</item>
         <item name="android:drawable">@drawable/textview_background_grad</item>
-        <item name="android:textColor">@color/colorPrimary</item>
+        <item name="android:textColor">@color/white</item>
         <item name="android:textSize">24sp</item>
         <item name="android:typeface">serif</item>
         <item name="android:paddingTop">16dp</item>
@@ -89,9 +89,9 @@
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_marginTop">24dp</item>
-        <item name="android:background">#ffd6d6</item>
+        <item name="android:background">#B71C1C</item>
         <item name="android:gravity">center</item>
-        <item name="android:textColor">#ff1e1e</item>
+        <item name="android:textColor">@color/white</item>
         <item name="android:textSize">24sp</item>
         <item name="android:typeface">serif</item>
         <item name="android:visibility">invisible</item>
@@ -116,13 +116,11 @@
     <style name="textInput" parent="android:Widget.Material.Light.EditText">
         <item name="android:textSize">16sp</item>
         <item name="android:background">@drawable/et_style</item>
-        <item name="android:paddingBottom">8dp</item>
-        <item name="android:paddingStart">8dp</item>
-        <item name="android:paddingEnd">8dp</item>
+        <item name="android:padding">10dp</item>
         <item name="android:elevation">2dp</item>
         <item name="android:radius">2dp</item>
         <item name="android:layout_margin">10dp</item>
-        <item name="android:textColorHint">@color/colorPrimaryAlpha</item>
+        <item name="android:textColorHint">@color/black</item>
 
     </style>
 
@@ -174,7 +172,7 @@
         <item name="android:drawableRight">@android:drawable/btn_radio</item>
         <item name="android:textSize">24sp</item>
         <item name="android:typeface">serif</item>
-        <item name="android:background">#efefef</item>
+        <item name="android:background">@color/white</item>
         <item name="android:padding">4dp</item>
         <item name="android:elevation">1dp</item>
     </style>

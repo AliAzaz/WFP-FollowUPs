@@ -67,6 +67,11 @@
             android:name=".activities.SectionBActivity"
             android:theme="@style/AppTheme1"
             android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".activities.SectionFActivity"
+            android:windowSoftInputMode="adjustResize" />
+        <activity android:name=".activities.SectionGActivity" />
+        <activity android:name=".activities.SectionDActivity"></activity>
     </application>
 
 </manifest>
