@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="72dp"
+    tools:context="edu.aku.hassannaqvi.wfp_followups.activities.MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:id="@+id/lblMainMenu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:text="Main Menu"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/testing"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/red"
+            android:elevation="2dp"
+            android:gravity="center_horizontal"
+            android:keepScreenOn="true"
+            android:text="ONLY FOR TESTING"
+            android:textColor="@color/dullWhile"
+            android:textSize="32sp"
+            android:textStyle="bold"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/recordSummary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:background="@color/black"
+            android:padding="20dp"
+            android:text="Records Summary"
+            android:textColor="@color/green"
+            android:textSize="14sp"
+            android:typeface="monospace"
+
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/syncClusters"
+                style="?android:textAppearanceMedium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_weight="3"
+                android:text="CLUSTERS: "
+                android:textStyle="bold" />
+
+            <Spinner
+                android:id="@+id/spUC"
+                style="@style/Widget.AppCompat.Spinner.Underlined"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_weight="35"
+                android:gravity="center"
+                android:popupBackground="#ffffff" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/openForm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="16dp"
+            android:onClick="openForm15"
+            android:text="Form - 15"
+            android:textSize="28sp" />
+
+        <Button
+            android:id="@+id/openForm7"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="16dp"
+            android:onClick="openForm16"
+            android:text="Form - 16"
+            android:textSize="28sp" />
+
+        <Button
+            android:id="@+id/openForm9"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="16dp"
+            android:onClick="openForm9"
+            android:text="Form - 9"
+            android:textSize="28sp"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/openForm10"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="16dp"
+            android:onClick="openForm10"
+            android:text="Form - 10"
+            android:textSize="28sp"
+            android:visibility="gone" />
+
+
+        <!--<Button
+            android:id="@+id/openForm5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="16dp"
+            android:onClick="openForm5"
+            android:text="Open Form 5"
+            android:textSize="28sp"
+            android:visibility="gone" />-->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/areaCode"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="Cluster No."
+                android:inputType="number"
+                android:textSize="28sp" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:onClick="CheckCluster"
+                android:text="Check Forms"
+                android:textSize="28sp" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/syncServer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="16dp"
+            android:onClick="syncServer"
+            android:text="Upload Data"
+            android:textSize="28sp" />
+
+        <Button
+            android:id="@+id/syncDevice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="16dp"
+            android:onClick="syncDevice"
+            android:text="Download Enrollment Data"
+            android:textSize="28sp" />
+
+        <LinearLayout
+            android:id="@+id/adminsec"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <Button
+                android:id="@+id/openMembers"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="16dp"
+                android:onClick="openMembers"
+                android:text="Section Members"
+                android:textSize="28sp" />
+
+            <Button
+                android:id="@+id/openA"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="16dp"
+                android:onClick="openA"
+                android:text="Section A"
+                android:textSize="28sp" />
+
+            <Button
+                android:id="@+id/openB"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="16dp"
+                android:onClick="openB"
+                android:text="Section B"
+                android:textSize="28sp" />
+
+            <Button
+                android:id="@+id/openC"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="16dp"
+                android:onClick="openC"
+                android:text="Section C"
+                android:textSize="28sp" />
+
+            <Button
+                android:id="@+id/openD"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="16dp"
+                android:onClick="openD"
+                android:text="Section D"
+                android:textSize="28sp" />
+
+            <Button
+                android:id="@+id/openE"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="16dp"
+                android:onClick="openE"
+                android:text="Section E"
+                android:textSize="28sp" />
+
+
+            <!--<Button-->
+            <!--android:id="@+id/openEnd"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginBottom="8dp"-->
+            <!--android:layout_marginTop="16dp"-->
+            <!--android:onClick="openEnd"-->
+            <!--android:text="Section End" />-->
+
+            <Button
+                android:id="@+id/openDB"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="16dp"
+                android:onClick="openDB"
+                android:text="Open Database Manager"
+                android:textSize="28sp" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+</ScrollView>

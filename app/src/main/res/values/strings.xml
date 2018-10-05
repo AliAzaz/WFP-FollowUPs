@@ -1,0 +1,277 @@
+<resources>
+    <string name="app_name">WFP Follow UPs</string>
+    <string name="app_name15">MaPPS - Form 15: Exit Questionnaire </string>
+    <string name="app_name16">MaPPS - Form 16: End of Study Participation </string>
+
+    <!-- Strings related to login -->
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password (optional)</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="error_invalid_email">This email address is invalid</string>
+    <string name="error_invalid_password">This password is too short</string>
+    <string name="error_incorrect_password">This password is incorrect</string>
+    <string name="error_field_required">This field is required</string>
+    <string name="permission_rationale">"Contacts permissions are needed for providing email completions." </string>
+
+    <!-- String related to form buttons -->
+    <string name="end_interview"> اختتام </string>
+    <string name="start_interview"> انٽرويو شروع ڪريو </string>
+    <string name="nextSection"> اڳيون سيڪشن </string>
+
+    <!-- String related to section headings -->
+    <string name="Seca"> معلومات براء سڃاڻپ </string>
+    <string name="Secb">  آخري ماهواري جي نشاندهي </string>
+    <string name="form5">الٽراسائونڊ جو معائنو</string>
+
+
+    <!-- Strings that are fixed for all apps -->
+    <string name="title_activity_splashscreen">SplashscreenActivity</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="other">ٻيو ڪو(وضاحت ڪريو)</string>
+    <string name="dkn">خبر ڪونهي</string>
+    <string name="yes">ها</string>
+    <string name="no">نه</string>
+    <string name="na">لاڳو نه ٿو ٿئي</string>
+    <string name="male"> مرد </string>
+    <string name="female"> عورت </string>
+    <string name="year"> سال </string>
+    <string name="month"> مهينو </string>
+    <string name="day"> ڏينهن </string>
+    <string name="weeks"> هفتا </string>
+    <string name="hours"> ڪلاڪ </string>
+    <string name="times"> تعداد </string>
+    <string name="gl"> g/L </string>
+
+
+    <!-- Strings related to Sections Below -->
+
+    <!--- Section Info String -->
+    <string name="mp08a001"> خاندا ن نمبر </string>
+    <string name="mp08a002"> شرڪت ڪندڙ جو شناخت نمبر </string>
+    <string name="mp08a003"> شرڪت ڪندڙ جو نالو </string>
+    <string name="mp08a005"> گھر جي سربراه جو نالو </string>
+    <string name="mp08a008"> رابطي لاء نمبر </string>
+    <string name="mp08a006"> ڳوٺ جو نالو </string>
+    <string name="mp08a007"> مڪمل پتو </string>
+    <string name="mp08a013"> زباني رضامندي </string>
+    <string name="mp08a014"> انٽرويو جو نتيجو </string>
+    <string name="mp08a01401"> پورو ٿيو </string>
+    <string name="mp08a01402"> اڌ ۾ ڇڏيو </string>
+    <string name="mp08a01403"> انڪار ڪيو </string>
+    <string name="mp08a01404"> ٻن دورن کان پوء به ڪير به موجوده نه هو </string>
+    <string name="mp08a01405"> لڏي وئي </string>
+    <string name="mp08a01406">Ultrasound not done </string>
+    <string name="mp08a01407">شرڪت ڪندڙ وفات ڪري وئي  </string>
+
+    <!--Form 15 Section A-->
+
+    <string name="mp15b01Heading">شموليت ڪندڙ جي پنهنجي صحت ۽ اضافي خوراڪ جي باري ۾ خيالات</string>
+    <string name="mp15b01">توهان پنهنجي صحت هن تحقيق۾ شرڪت ڪرڻ کانپوءِ ڪيئن محسوس ڪري رهيا آهيو؟</string>
+    <string name="mp15b01a">تمام بهترين</string>
+    <string name="mp15b01b">سٺي </string>
+    <string name="mp15b01c">چڱي </string>
+    <string name="mp15b01d">خراب </string>
+
+    <string name="mp15b02">چا شرڪت ڪندڙ انٽروينشن گروپ ۾ هُئو </string>
+    <string name="mp15b02a">ھا </string>
+    <string name="mp15b02b">نہ </string>
+
+    <string name="mp15b03">حمل کان پھرين واري مرحلي ۾  توهان پنهنجي صحت لاءِمليل طاقت يا اضافي اجزا واري خوراڪ ڪيتري في سيڪڙو استعمال ڪئي ؟</string>
+    <string name="mp15b03a">0%</string>
+    <string name="mp15b03b">25%</string>
+    <string name="mp15b03c">50%</string>
+    <string name="mp15b03d">75%</string>
+    <string name="mp15b03e">100%</string>
+
+    <string name="mp15b04">ڇا شرڪت ڪندڙ تحقيق دوران حمل/پيٽ سان ٿي آهي؟</string>
+    <string name="mp15b04a">  انٽروينشن ۾ ها</string>
+    <string name="mp15b04b">  ڪنٽرول ۾ ها </string>
+    <string name="mp15b04c">نه انٽروينشن ۾ </string>
+    <string name="mp15b04d">نه ڪنٽرول ۾ </string>
+
+    <string name="mp15b05">توهان کي دوران حمل/پيٽ سان صحت لاءِمليل طاقت واري خوراڪ يا اضافي اجزا واري خوراڪ ڪيترو سيڪڙو استعمال ڪئي ؟</string>
+    <string name="mp15b05a">0%</string>
+    <string name="mp15b05b">25%</string>
+    <string name="mp15b05c">50%</string>
+    <string name="mp15b05d">75%</string>
+    <string name="mp15b05e">100%</string>
+
+
+    <string name="mp15b06">توهان حمل کانپوءِ صحت لاءِ مليل طاقت واري خوراڪ يا اضافي اجزا واري خوراڪ ڪيترو سيڪڙو استعمال ڪئي ؟</string>
+    <string name="mp15b06a">0%</string>
+    <string name="mp15b06b">25%</string>
+    <string name="mp15b06c">50%</string>
+    <string name="mp15b06d">75%</string>
+    <string name="mp15b06e">100%</string>
+
+    <string name="mp15b07">ڇا  جڏهن توهان  اميد / حمل سان هُئا ته توهان کي آئرن يا فولڪ ائسڊ جون گوريون ڏنيو ويون هُيون  ؟</string>
+    <string name="mp15b07a">ھا </string>
+    <string name="mp15b07b">نہ </string>
+
+    <string name="mp15b08">ڇا توهان اهو چاهيو پيا ته ڪو توهان کي حمل يا اميد جي دوران آئرن يا فولڪ ائسڊ فراهم ڪري ها؟</string>
+    <string name="mp15b08a"> ها</string>
+    <string name="mp15b08b">نه </string>
+
+
+    <string name="mp15b09">حمل جي دوران توهان کي آئرن يا فولڪ ائسڊ جون گوريون ڪنهن مُهيا ڪيون؟</string>
+    <string name="mp15b09a">سرڪاري اسپتال             </string>
+    <string name="mp15b09b">بنيادي  صحت جو ڪز </string>
+    <string name="mp15b09c">ڊسپينسري </string>
+    <string name="mp15b09d">ليڊي هيلٿ ورڪر </string>
+    <string name="mp15b09e">پرائيوٽ اسپتال </string>
+    <string name="mp15b09f">ميڊيڪل اسٽور</string>
+    <string name="mp15b09g">مڙس  </string>
+    <string name="mp15b09h">سس  </string>
+    <string name="mp15b09i">ماءَ </string>
+    <string name="mp15b09j">ٻيا رشتيدار</string>
+    <string name="mp15b09k">دوست </string>
+    <string name="mp15b09l">حڪيم  </string>
+    <string name="mp15b09m">ٻيو ڪجه </string>
+
+    <string name="mp15b10">توهان ڇا ٿا سجهو ته حمل دوران  آئرن يا فولڪ ائسڊ جو ٽڪيون جيڪي توهان کي فراهم ڪيون ويون هُيون انهن جو  ڪيترو سيڪڙو توهان استعمال هيٺ آنديون ؟</string>
+    <string name="mp15b10a">0%</string>
+    <string name="mp15b10b">25%</string>
+    <string name="mp15b10c">50%</string>
+    <string name="mp15b10d">75%</string>
+    <string name="mp15b10e">100%</string>
+
+    <string name="mp15b11"> توهان ڇا ٿا سجهو ته حمل کان پوء آئرن يا فولڪ ائسڊ جو ٽڪيون جيڪي توهان کي فراهم ڪيون ويون هُيون انهن جو  ڪيترو سيڪڙو توهان استعمال هيٺ آنديون ؟</string>
+    <string name="mp15b11a">0%</string>
+    <string name="mp15b11b">25%</string>
+    <string name="mp15b11c">50%</string>
+    <string name="mp15b11d">75%</string>
+    <string name="mp15b11e">100%</string>
+
+    <string name="mp15b12">اهي ڪهڙا سبب هُئا جن جي ڪري توهان ايم  اين پوريء ريت نه وٺي سگهيا؟ </string>
+    <string name="mp15b12a">وسري وئي       </string>
+    <string name="mp15b12b"> طبيعت جو خراب محسوس ٿيڻ</string>
+    <string name="mp15b12c">انهن مان مون کي مضر اثرات مليا</string>
+    <string name="mp15b12d">مون   کائڻ پسند نه ڪيو </string>
+    <string name="mp15b12e"> مون کي انهن جي ضرورت نه هئي</string>
+    <string name="mp15b12f">انهن جو ذائقو سٺو نه هو</string>
+    <string name="mp15b12g">اهي ڏسڻ ۾ سٺيون نه هيون. </string>
+    <string name="mp15b12h">مون وٽ گوريون موجود ڪون هُيون </string>
+    <string name="mp15b12i">منهنجي خاندان مونکي   جھليو</string>
+    <string name="mp15b12j"> ٻيو ڪجهه</string>
+    <string name="mp15b12k">ڪابه خبر ناهي</string>
+
+    <string name="mp15b13">ڇا توهان جي ڪڏهن به ڪنهن به طاقت واري يا اضافي اجزا واري خوراڪ استعمال ڪرڻ لاءِ همٿ افزائي ڪئي ؟ </string>
+    <string name="mp15b13a">ها</string>
+    <string name="mp15b13b">نه </string>
+
+    <string name="mp15b14">اهڙيون طاقت جون گوريون کائڻ لاء توهان جي ڪنهن همٿ افضائي ڪئي؟</string>
+    <string name="mp15b14a">مڙس</string>
+    <string name="mp15b14b">سس </string>
+    <string name="mp15b14c">ماءَ </string>
+    <string name="mp15b14d"> ٻيا رشتيدار</string>
+    <string name="mp15b14e">دوست</string>
+    <string name="mp15b14f">ليڊي هيلٿ ورڪر</string>
+    <string name="mp15b14g">نرس، مڊوائيف</string>
+    <string name="mp15b14h">ڊاڪٽر </string>
+    <string name="mp15b14i">استاد</string>
+    <string name="mp15b14j">ٻيو ڪو</string>
+
+
+    <string name="mp15b15">ڇا توهانکي ڪڏهن به ڪنهن به طاقت واري يا اضافي اجزا واري خوراڪ استعمال ڪرڻ کان روڪيو؟</string>
+    <string name="mp15b15a">ها</string>
+    <string name="mp15b15b">نه </string>
+
+    <string name="mp15b16">توهان کي  اهڙيون  طاقت وارين غزائن  کائڻ کان ڪنهن منع ڪيو؟</string>
+    <string name="mp15b16a">مڙس</string>
+    <string name="mp15b16b">سس </string>
+    <string name="mp15b16c">ماءَ </string>
+    <string name="mp15b16d"> ٻيا رشتيدار</string>
+    <string name="mp15b16e">دوست</string>
+    <string name="mp15b16f">ليڊي هيلٿ ورڪر</string>
+    <string name="mp15b16g">نرس، مڊوائيف</string>
+    <string name="mp15b16h">ڊاڪٽر </string>
+    <string name="mp15b16i">استاد</string>
+    <string name="mp15b16j">ٻيو ڪو</string>
+
+    <string name="mp15b17">ڇا توهان اهو چاهيو ٿا ته توهان اڃان اها طاقت جي غزا باقائده وٺو ها؟</string>
+    <string name="mp15b17a"> ها</string>
+    <string name="mp15b17b">نہ</string>
+    <string name="mp15b17c">روزانه طاقت جي غذا وٺندو رهيس</string>
+    <string name="mp15b17d">خبر ناهي </string>
+
+
+    <string name="mp15b18sub">شموليت ڪندڙ جي پنهنجي ٻار جي صحت جي باري ۾ خيالات</string>
+    <string name="mp15b18">چا شرڪت ڪندڙ تحقيقي جي مرحلي ۾ هوندي ڪنهن به زنده ٻار کي جنم ڏنو؟</string>
+    <string name="mp15b18a">ها</string>
+    <string name="mp15b18b">نہ</string>
+
+    <string name="mp15b19">توهان پنهنجي ٻار جي صحت هن تحقيق۾ شرڪت ڪرڻ کانپوءِ ڪيئن محسوس ڪري رهيا آهيو؟</string>
+    <string name="mp15b19a">تمام بهترين</string>
+    <string name="mp15b19b">وچولو</string>
+    <string name="mp15b19c">خراب</string>
+    <string name="mp15b19d">لاڳو نٿو ٿئي</string>
+
+
+    <string name="mp15b20">ڇا توهان اهو سمجهو ٿا ته توهان جي ٻار جي صحت ۾ بهتري طاقت واري  غزا کائڻ جي ڪري ٿي آهي</string>
+    <string name="mp15b20a">ها</string>
+    <string name="mp15b20b">نہ</string>
+    <string name="mp15b20c">خبر ناهي</string>
+
+    <string name="mp15b21sub">مطمئن ٿيڻ  </string>
+    <string name="mp15b21">ڇا توهان کي هن تحقيق(مئپس) جو حصو هُجڻ پسند آيو؟</string>
+    <string name="mp15b21a">مون کي بلڪل به پسند نه آيو </string>
+    <string name="mp15b21b">ان مان ڪجهه ڪجهه پسند نه آيو </string>
+    <string name="mp15b21c">مون کي نه پسند آيو نه ئي نا پسند آيو </string>
+    <string name="mp15b21d">    ان مان ڪجهه ڪجهه پسند آيو</string>
+    <string name="mp15b21e"> مون کي تما گھڻو پسند آيو</string>
+
+    <string name="mp15b22">ڇا توهان هن تحقيق (مئپس) ۾ ٻيهر شرڪت ڪندا ؟</string>
+    <string name="mp15b22a">ها</string>
+    <string name="mp15b22b">نہ</string>
+    <string name="mp15b22c">خبر ناهي</string>
+
+    <!--========================Form 15 Section C D=================================-->
+    <!--Section C-->
+    <string name="mp15c01Heading">شموليت ڪندڙ جي پنهنجي ٻار جي صحت جي باري ۾ خيالات</string>
+    <string name="mp15c01">توهان پنهنجي ٻار جي صحت هن تحقيق۾ شرڪت ڪرڻ کانپوءِ ڪيئن محسوس ڪري رهيا آهيو؟</string>
+    <string name="mp15c01a">تمام بهترين</string>
+    <string name="mp15c01b">وچولو  </string>
+    <string name="mp15c01c">خراب  </string>
+    <string name="mp15c01d">Not Applicable </string>
+
+    <string name="mp15c02">ڇا توهان کي لڳي ٿو ته توهان جي ٻار جي صحت اضافي اجزا واري خوراڪ کائڻ جي وجھه سان بهتر ٿي آهي؟</string>
+    <string name="mp15c02a">ها</string>
+    <string name="mp15c02b">نه   </string>
+    <string name="mp15c02c">خبر ناهي</string>
+
+
+    <!--Section D-->
+    <string name="mp15d01Heading">مطمئن ٿيڻ </string>
+    <string name="mp15d01">ڇا توهان کي هن تحقيق(مئپس) ۾ شرڪت ڪرڻ پسند آيو؟</string>
+    <string name="mp15d01a"> مون کي بلڪل به پسند نه آيو </string>
+    <string name="mp15d01b">ان مان ڪجهه ڪجهه پسند نه آيو   </string>
+    <string name="mp15d01c">مون کي نه پسند آيو نه ئي نا پسند آيو   </string>
+    <string name="mp15d01d"> ان مان ڪجهه ڪجهه پسند آيو </string>
+    <string name="mp15d01e"> مون کي تما گھڻو پسند آيو  </string>
+
+    <string name="mp15d02">ڇا توهان هن تحيق (مئپس) ۾ ٻيهر شرڪت ڪندا ؟</string>
+    <string name="mp15d02a">ها</string>
+    <string name="mp15d02b">نه </string>
+    <string name="mp15d02c">خبر ناهي</string>
+
+    <!--Section 16_B-->
+
+    <string name="mp16b01Heading"> دوري جي تفصيل  </string>
+    <string name="mp16b01"> شرڪت ڪندڙ جي تحقيق ۾ شرڪت ڪرڻ ڇو ختم ٿي رھي آھي؟   </string>
+    <string name="mp16b01a">   حامله ٿي تحقيق جا سڀ مرحلا مڪمل ڪيا       </string>
+    <string name="mp16b01b"> انٽروينشن نه وٺڻ جي چونڊ ڪئي</string>
+    <string name="mp16b01c">ڊيٽا ڪليڪشڻ نه  ڪرائڻ جي چونڊ ڪئي</string>
+    <string name="mp16b01d">فالو اپ مس ٿيو   </string>
+    <string name="mp16b01e">ناڪاري واقعو</string>
+    <string name="mp16b01f"> ڪنهن به بنيادي بيماريءسان ڪا  لاڳاپيل بيماري</string>
+    <string name="mp16b01g">  موت   </string>
+    <string name="mp16b01h"> پريڪنسيپشن/حمل کان پهرين وارو  مرحلو مڪمل ڪيو ۽ حامله ڪون ٿي </string>
+    <string name="mp16b01i"> تحقيق مڪمل ٿي </string>
+    <string name="mp16b01j">بيو ڪجه</string>
+
+    <string name="mp16b02"> ملاقات  جي آخري تاريخ</string>
+
+
+</resources>
