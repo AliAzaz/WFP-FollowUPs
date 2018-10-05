@@ -246,7 +246,7 @@ public class InfoActivity extends Activity {
                     Intent intent = new Intent(this, SectionBActivity.class);
                     startActivity(intent);
                 } else {
-                    Intent intent = new Intent(this, Section16_BActivity.class);
+                    Intent intent = new Intent(this, SectionBActivity.class);
                     startActivity(intent);
                 }
             } else {
