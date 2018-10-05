@@ -12,20 +12,20 @@ import org.json.JSONObject;
 import edu.aku.hassannaqvi.wfp_followups.R;
 import edu.aku.hassannaqvi.wfp_followups.core.AppMain;
 import edu.aku.hassannaqvi.wfp_followups.core.DatabaseHelper;
-import edu.aku.hassannaqvi.wfp_followups.databinding.ActivitySectionBBinding;
+import edu.aku.hassannaqvi.wfp_followups.databinding.ActivitySectionCBinding;
 
-public class SectionBActivity extends AppCompatActivity {
+public class SectionHActivity extends AppCompatActivity {
 
 
-    ActivitySectionBBinding binding;
+    ActivitySectionCBinding binding;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        binding = DataBindingUtil.setContentView(this, R.layout.activity_section_b);
+        binding = DataBindingUtil.setContentView(this, R.layout.activity_section_h);
         binding.setCallback(this);
 
-        this.setTitle(getString(R.string.pfbheading));
+        this.setTitle(getString(R.string.pfhheading));
 
         setupViews();
 
@@ -48,7 +48,7 @@ public class SectionBActivity extends AppCompatActivity {
 
             if (UpdateDB()) {
 
-                startActivity(new Intent(this, SectionCActivity.class)
+                startActivity(new Intent(this, EndingActivity.class)
                         .putExtra("complete", true));
                 finish();
             }
