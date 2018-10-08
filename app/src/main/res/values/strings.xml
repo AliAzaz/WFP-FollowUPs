@@ -29,11 +29,12 @@
     <string name="title_activity_splashscreen">SplashscreenActivity</string>
     <string name="dummy_button">Dummy Button</string>
     <string name="dummy_content">DUMMY\nCONTENT</string>
-    <string name="other"> دیگر وضاحت کریں </string>
+    <string name="other"> کوئی اور وضاحت کریں </string>
     <string name="dkn"> معلوم نہیں </string>
     <string name="yes"> ہاں </string>
     <string name="no"> نہیں </string>
     <string name="na">کوئی بھی نہیں</string>
+    <string name="na1">لاگو نہیں ہوتا</string>
     <string name="male"> مرد </string>
     <string name="female"> عورت </string>
     <string name="year"> سال </string>
@@ -65,201 +66,137 @@
     <string name="mp08a01406">Ultrasound not done </string>
     <string name="mp08a01407">شرڪت ڪندڙ وفات ڪري وئي  </string>
 
-    <!--Form 15 Section A-->
-
-    <string name="mp15b01Heading">شموليت ڪندڙ جي پنهنجي صحت ۽ اضافي خوراڪ جي باري ۾ خيالات</string>
-    <string name="mp15b01">توهان پنهنجي صحت هن تحقيق۾ شرڪت ڪرڻ کانپوءِ ڪيئن محسوس ڪري رهيا آهيو؟</string>
-    <string name="mp15b01a">تمام بهترين</string>
-    <string name="mp15b01b">سٺي </string>
-    <string name="mp15b01c">چڱي </string>
-    <string name="mp15b01d">خراب </string>
-
-    <string name="mp15b02">چا شرڪت ڪندڙ انٽروينشن گروپ ۾ هُئو </string>
-    <string name="mp15b02a">ھا </string>
-    <string name="mp15b02b">نہ </string>
-
-    <string name="mp15b03">حمل کان پھرين واري مرحلي ۾  توهان پنهنجي صحت لاءِمليل طاقت يا اضافي اجزا واري خوراڪ ڪيتري في سيڪڙو استعمال ڪئي ؟</string>
-    <string name="mp15b03a">0%</string>
-    <string name="mp15b03b">25%</string>
-    <string name="mp15b03c">50%</string>
-    <string name="mp15b03d">75%</string>
-    <string name="mp15b03e">100%</string>
-
-    <string name="mp15b04">ڇا شرڪت ڪندڙ تحقيق دوران حمل/پيٽ سان ٿي آهي؟</string>
-    <string name="mp15b04a">  انٽروينشن ۾ ها</string>
-    <string name="mp15b04b">  ڪنٽرول ۾ ها </string>
-    <string name="mp15b04c">نه انٽروينشن ۾ </string>
-    <string name="mp15b04d">نه ڪنٽرول ۾ </string>
-
-    <string name="mp15b05">توهان کي دوران حمل/پيٽ سان صحت لاءِمليل طاقت واري خوراڪ يا اضافي اجزا واري خوراڪ ڪيترو سيڪڙو استعمال ڪئي ؟</string>
-    <string name="mp15b05a">0%</string>
-    <string name="mp15b05b">25%</string>
-    <string name="mp15b05c">50%</string>
-    <string name="mp15b05d">75%</string>
-    <string name="mp15b05e">100%</string>
-
-
-    <string name="mp15b06">توهان حمل کانپوءِ صحت لاءِ مليل طاقت واري خوراڪ يا اضافي اجزا واري خوراڪ ڪيترو سيڪڙو استعمال ڪئي ؟</string>
-    <string name="mp15b06a">0%</string>
-    <string name="mp15b06b">25%</string>
-    <string name="mp15b06c">50%</string>
-    <string name="mp15b06d">75%</string>
-    <string name="mp15b06e">100%</string>
-
-    <string name="mp15b07">ڇا  جڏهن توهان  اميد / حمل سان هُئا ته توهان کي آئرن يا فولڪ ائسڊ جون گوريون ڏنيو ويون هُيون  ؟</string>
-    <string name="mp15b07a">ھا </string>
-    <string name="mp15b07b">نہ </string>
-
-    <string name="mp15b08">ڇا توهان اهو چاهيو پيا ته ڪو توهان کي حمل يا اميد جي دوران آئرن يا فولڪ ائسڊ فراهم ڪري ها؟</string>
-    <string name="mp15b08a"> ها</string>
-    <string name="mp15b08b">نه </string>
-
-
-    <string name="mp15b09">حمل جي دوران توهان کي آئرن يا فولڪ ائسڊ جون گوريون ڪنهن مُهيا ڪيون؟</string>
-    <string name="mp15b09a">سرڪاري اسپتال             </string>
-    <string name="mp15b09b">بنيادي  صحت جو ڪز </string>
-    <string name="mp15b09c">ڊسپينسري </string>
-    <string name="mp15b09d">ليڊي هيلٿ ورڪر </string>
-    <string name="mp15b09e">پرائيوٽ اسپتال </string>
-    <string name="mp15b09f">ميڊيڪل اسٽور</string>
-    <string name="mp15b09g">مڙس  </string>
-    <string name="mp15b09h">سس  </string>
-    <string name="mp15b09i">ماءَ </string>
-    <string name="mp15b09j">ٻيا رشتيدار</string>
-    <string name="mp15b09k">دوست </string>
-    <string name="mp15b09l">حڪيم  </string>
-    <string name="mp15b09m">ٻيو ڪجه </string>
-
-    <string name="mp15b10">توهان ڇا ٿا سجهو ته حمل دوران  آئرن يا فولڪ ائسڊ جو ٽڪيون جيڪي توهان کي فراهم ڪيون ويون هُيون انهن جو  ڪيترو سيڪڙو توهان استعمال هيٺ آنديون ؟</string>
-    <string name="mp15b10a">0%</string>
-    <string name="mp15b10b">25%</string>
-    <string name="mp15b10c">50%</string>
-    <string name="mp15b10d">75%</string>
-    <string name="mp15b10e">100%</string>
-
-    <string name="mp15b11"> توهان ڇا ٿا سجهو ته حمل کان پوء آئرن يا فولڪ ائسڊ جو ٽڪيون جيڪي توهان کي فراهم ڪيون ويون هُيون انهن جو  ڪيترو سيڪڙو توهان استعمال هيٺ آنديون ؟</string>
-    <string name="mp15b11a">0%</string>
-    <string name="mp15b11b">25%</string>
-    <string name="mp15b11c">50%</string>
-    <string name="mp15b11d">75%</string>
-    <string name="mp15b11e">100%</string>
-
-    <string name="mp15b12">اهي ڪهڙا سبب هُئا جن جي ڪري توهان ايم  اين پوريء ريت نه وٺي سگهيا؟ </string>
-    <string name="mp15b12a">وسري وئي       </string>
-    <string name="mp15b12b"> طبيعت جو خراب محسوس ٿيڻ</string>
-    <string name="mp15b12c">انهن مان مون کي مضر اثرات مليا</string>
-    <string name="mp15b12d">مون   کائڻ پسند نه ڪيو </string>
-    <string name="mp15b12e"> مون کي انهن جي ضرورت نه هئي</string>
-    <string name="mp15b12f">انهن جو ذائقو سٺو نه هو</string>
-    <string name="mp15b12g">اهي ڏسڻ ۾ سٺيون نه هيون. </string>
-    <string name="mp15b12h">مون وٽ گوريون موجود ڪون هُيون </string>
-    <string name="mp15b12i">منهنجي خاندان مونکي   جھليو</string>
-    <string name="mp15b12j"> ٻيو ڪجهه</string>
-    <string name="mp15b12k">ڪابه خبر ناهي</string>
-
-    <string name="mp15b13">ڇا توهان جي ڪڏهن به ڪنهن به طاقت واري يا اضافي اجزا واري خوراڪ استعمال ڪرڻ لاءِ همٿ افزائي ڪئي ؟ </string>
-    <string name="mp15b13a">ها</string>
-    <string name="mp15b13b">نه </string>
-
-    <string name="mp15b14">اهڙيون طاقت جون گوريون کائڻ لاء توهان جي ڪنهن همٿ افضائي ڪئي؟</string>
-    <string name="mp15b14a">مڙس</string>
-    <string name="mp15b14b">سس </string>
-    <string name="mp15b14c">ماءَ </string>
-    <string name="mp15b14d"> ٻيا رشتيدار</string>
-    <string name="mp15b14e">دوست</string>
-    <string name="mp15b14f">ليڊي هيلٿ ورڪر</string>
-    <string name="mp15b14g">نرس، مڊوائيف</string>
-    <string name="mp15b14h">ڊاڪٽر </string>
-    <string name="mp15b14i">استاد</string>
-    <string name="mp15b14j">ٻيو ڪو</string>
-
-
-    <string name="mp15b15">ڇا توهانکي ڪڏهن به ڪنهن به طاقت واري يا اضافي اجزا واري خوراڪ استعمال ڪرڻ کان روڪيو؟</string>
-    <string name="mp15b15a">ها</string>
-    <string name="mp15b15b">نه </string>
-
-    <string name="mp15b16">توهان کي  اهڙيون  طاقت وارين غزائن  کائڻ کان ڪنهن منع ڪيو؟</string>
-    <string name="mp15b16a">مڙس</string>
-    <string name="mp15b16b">سس </string>
-    <string name="mp15b16c">ماءَ </string>
-    <string name="mp15b16d"> ٻيا رشتيدار</string>
-    <string name="mp15b16e">دوست</string>
-    <string name="mp15b16f">ليڊي هيلٿ ورڪر</string>
-    <string name="mp15b16g">نرس، مڊوائيف</string>
-    <string name="mp15b16h">ڊاڪٽر </string>
-    <string name="mp15b16i">استاد</string>
-    <string name="mp15b16j">ٻيو ڪو</string>
-
-    <string name="mp15b17">ڇا توهان اهو چاهيو ٿا ته توهان اڃان اها طاقت جي غزا باقائده وٺو ها؟</string>
-    <string name="mp15b17a"> ها</string>
-    <string name="mp15b17b">نہ</string>
-    <string name="mp15b17c">روزانه طاقت جي غذا وٺندو رهيس</string>
-    <string name="mp15b17d">خبر ناهي </string>
-
-
-    <string name="mp15b18sub">شموليت ڪندڙ جي پنهنجي ٻار جي صحت جي باري ۾ خيالات</string>
-    <string name="mp15b18">چا شرڪت ڪندڙ تحقيقي جي مرحلي ۾ هوندي ڪنهن به زنده ٻار کي جنم ڏنو؟</string>
-    <string name="mp15b18a">ها</string>
-    <string name="mp15b18b">نہ</string>
-
-    <string name="mp15b19">توهان پنهنجي ٻار جي صحت هن تحقيق۾ شرڪت ڪرڻ کانپوءِ ڪيئن محسوس ڪري رهيا آهيو؟</string>
-    <string name="mp15b19a">تمام بهترين</string>
-    <string name="mp15b19b">وچولو</string>
-    <string name="mp15b19c">خراب</string>
-    <string name="mp15b19d">لاڳو نٿو ٿئي</string>
-
-
-    <string name="mp15b20">ڇا توهان اهو سمجهو ٿا ته توهان جي ٻار جي صحت ۾ بهتري طاقت واري  غزا کائڻ جي ڪري ٿي آهي</string>
-    <string name="mp15b20a">ها</string>
-    <string name="mp15b20b">نہ</string>
-    <string name="mp15b20c">خبر ناهي</string>
-
-    <string name="mp15b21sub">مطمئن ٿيڻ  </string>
-    <string name="mp15b21">ڇا توهان کي هن تحقيق(مئپس) جو حصو هُجڻ پسند آيو؟</string>
-    <string name="mp15b21a">مون کي بلڪل به پسند نه آيو </string>
-    <string name="mp15b21b">ان مان ڪجهه ڪجهه پسند نه آيو </string>
-    <string name="mp15b21c">مون کي نه پسند آيو نه ئي نا پسند آيو </string>
-    <string name="mp15b21d">    ان مان ڪجهه ڪجهه پسند آيو</string>
-    <string name="mp15b21e"> مون کي تما گھڻو پسند آيو</string>
-
-    <string name="mp15b22">ڇا توهان هن تحقيق (مئپس) ۾ ٻيهر شرڪت ڪندا ؟</string>
-    <string name="mp15b22a">ها</string>
-    <string name="mp15b22b">نہ</string>
-    <string name="mp15b22c">خبر ناهي</string>
-
-    <!--Section D-->
-
-    <string name="wrf01">کیا آپ نے گزشتہ 3ماہ کے دوران ایس این ایف مامتا موصول کی تھی ۔ مامتا کے ساشے دکھائیں۔</string>
-    <string name="wrf02">آپ کو کس نےمامتا دیئے تھے؟</string>
-    <string name="wrf02a">لیڈی ہیلتھ ورکر</string>
-    <string name="wrf02b">دیگر زرائع</string>
-    <string name="wrf03">آپ نے گزشتہ 3-1 ماہ میں اپنے لیے کتنے مامتا کے ساشے موصول کیے تھے ؟</string>
-    <string name="wrf03a">مامتا کے کتنے ساشے ملے تعداد لکہیں</string>
-    <string name="wrf04">ایک دن میں آپ نے کتنے ساشے استعمال کیےتھے؟</string>
-    <string name="wrf04a">ساشے</string>
-    <string name="wrf05">آپ نے گزشتہ 3-1 ماہ میں کتنے دن اور کتنے ساشے استعمال کیے تھے؟</string>
-    <string name="wrf05a">دن</string>
-    <string name="wrf05b">ساشے</string>
-    <string name="wrf06">کیا آپ مجھے استعمال شدہ اور غیر استعمال شدہ ساشے کے پیکٹ دیکھا سکتے ہیں؟ (اگر موجود نہیں تو (00) لکھیں)</string>
-    <string name="wrf06a">استعمال شدہ پیکٹ دیکھائے</string>
-    <string name="wrf06b">بغیر استعمال شدہ پیکٹ دیکھائے</string>
-    <string name="wrf07">کیا آپ نے گزشتہ 3-1 ماہ میں مامتا کے کھانے کی وجہ سے کوئی منفی اثرات دیکھے تھے؟</string>
-    <string name="wrf08">اگر ہاں تو وہ منفی اثرات کیا تھے؟</string>
-    <string name="wrf08a">دست</string>
-    <string name="wrf08b">الٹی</string>
-    <string name="wrf08c">پیٹ کا درد</string>
-    <string name="wrf08d">جسم پے دانے</string>
-    <string name="wrf09">کیا گزشتہ 3-1 ماہ کے دوران ٓپ نے مامتا کسی اور کے ساتھ تقسیم کیا یا کسی اور کو بھی کھانے کیلئے دیا تھا؟</string>
-    <string name="wrf0901">اگر ہاں تو کس کو تقسیم کیا یا دیا تھا؟</string>
-    <string name="wrf0901a">اپنے بچوں کو</string>
-    <string name="wrf0901b">پڑوسی گھروں کے ساتھ</string>
-    <string name="wrf0901c">بڑوں کے ساتھ</string>
-    <string name="wrf0902">گزشتہ 3-1 ماہ کے دوران کتنے ساشے تقسیم کیے؟</string>
-    <string name="wrf0902a">ساشے</string>
-    <string name="wrf0903">دوسرں کے ساتھ ساشے تقسیم کرنے کی کیا وجوہات تھیں؟</string>
-    <string name="wrf0903a">منع نہیں کر سکتے</string>
-    <string name="wrf0903b">ذائقہ اچھا تھا</string>
-    <string name="wrf0903c">مجھے یقین تھا یہ دوسرے بچوں/بڑوں کے لئے فائدہ مند ہے۔</string>
-
+    <!--Sections-->
+    <string name="pfaheading"> شناخت </string>
+    <string name="pfa01"> کلسٹر کی قسم </string>
+    <string name="pfa01a"> انٹروینشن </string>
+    <string name="pfa01b"> کنٹرول </string>
+    <string name="pfa02"> حاملہ خاتون کا شناخت نمبر </string>
+    <string name="pfa03"> حاملہ خاتون یا دودھ پلانے والی ماں کا فالواپ نمبر </string>
+    <string name="pfa03a"> فالواپ نمبر </string>
+    <string name="pfa04"> خا تون کی قسم </string>
+    <string name="pfa04a"> حاملہ خاتون </string>
+    <string name="pfa04b"> دودھ پلانے والی ماں </string>
+    <string name="pfa05"> فالو اپ کی تاریخ </string>
+    <string name="pfbheading"> حاملہ خاتون یا دودھ پلانے والی ماں کی موجودہ صورت حال </string>
+    <string name="pfb01"> کیا حاملہ خاتون یا دودھ پلانے والی ماں انٹرویو کے لئے دستیاب ہے؟ </string>
+    <string name="pfb01a"> موجود ہے انٹرویو جاری رکھیں </string>
+    <string name="pfb01b"> وقتی طور پر موجود نہیں </string>
+    <string name="pfb01c"> دورے کے دوران گھر بندتھا </string>
+    <string name="pfb01d"> موجود نہیں </string>
+    <string name="pfb01e"> ہمیشہ کے لئے جا چکے ہیں </string>
+    <string name="pfb01f"> انکار کردیا </string>
+    <string name="pfb01g"> انتقال ہو گیا </string>
+    <string name="pfb02"> حاملہ خاتون یا دودھ پلانے والی ماں کی موجودہ حیثیت کیا ہے؟ </string>
+    <string name="pfb02a"> اس وقت حمل سے ہیں </string>
+    <string name="pfb02b"> حمل سے نہیں </string>
+    <string name="pfb02c"> حمل ضائع ہو گیا </string>
+    <string name="pfb02d"> مردہ بچہ پیدا ہوا تھا </string>
+    <string name="pfb02e"> زندہ بچہ پیدا ہوا ہےاوراس وقت زندہ ہے </string>
+    <string name="pfb02f"> زندہ بچہ پیدا ہوا تھا بعد میں انتقال ہو گیا </string>
+    <string name="pfb03"> موجودہ حمل کا مہینہ؟ </string>
+    <string name="pfb03a"> مہینے </string>
+    <string name="pfb04"> زندہ بچے کی تاریخ پیدائش </string>
+    <string name="pfcheading"> وزن کی جانچ </string>
+    <string name="pfc01"> وزن </string>
+    <string name="pfc01a"> کلو گرام </string>
+    <string name="pfc02"> خون کی مقدار کا نتیجہ </string>
+    <string name="pfc02sub"> 9 ماہ کی حاملہ خاتون کے لئے </string>
+    <string name="pfdheading"> ڈبلیو ایف پی کی اضافی خوراک کی جانچ </string>
+    <string name="pfd01"> کیا آپ کوگزشتہ مہینے کے دوران مامتا کے ساشے ملے تھے؟ </string>
+    <string name="pfd01c"> لینے سے انکار کردیا </string>
+    <string name="pfd02"> آپ نے گزشتہ ایک ماہ میں اپنے لیے کتنے مامتا کے ساشے موصول کیے تھے؟ </string>
+    <string name="pfd02a"> مامتا کےکتنے ساشے ملے تعداد لکھیں </string>
+    <string name="pfd03"> ایک دن میں آپ نے کتنے ساشے استعمال کیےتھے؟ </string>
+    <string name="pfd03a"> ساشے </string>
+    <string name="pfd04"> آپ نے گزشتہ ایک ماہ میں کتنے دن اور کتنے ساشے استعمال کیے تھے؟ </string>
+    <string name="pfd04a"> دن </string>
+    <string name="pfd04b"> ساشے </string>
+    <string name="pfd05"> کیا آپ مجھے استعمال شدہ اور غیر استعمال شدہ ساشے کے پیکٹ دیکھا سکتے ہیں؟ (اگر موجود نہیں تو (00) لکھیں </string>
+    <string name="pfd05a"> استعمال شدہ پیکٹ دیکھائیں </string>
+    <string name="pfd05b"> بغیر استعمال شدہ پیکٹ دیکھائیں </string>
+    <string name="pfd06"> کیا آپ نے گزشتہ ایک ماہ میں مامتا کے کھانے کی وجہ سے کوئی منفی اثرات دیکھے تھے؟ </string>
+    <string name="pfd07"> اگر ہاں تو وہ منفی اثرات کیا تھے؟ </string>
+    <string name="pfd07a"> دست </string>
+    <string name="pfd07b"> الٹی </string>
+    <string name="pfd07c"> پیٹ کا درد </string>
+    <string name="pfd07d"> جسم پے دانے </string>
+    <string name="pfd08"> کیا گزشتہ ایک ماہ کے دوران آپ نے مامتا کسی اور کے ساتھ تقسیم کیا یا کسی اور کو بھی کھانے کیلئے دیئے تھے؟ </string>
+    <string name="pfd09"> اگر ہاں تو کس کو تقسیم کئیے یا دیئے تھے؟ </string>
+    <string name="pfd09a"> اپنے بچوں کو </string>
+    <string name="pfd09b"> پڑوسی گھروں کے ساتھ </string>
+    <string name="pfd09c"> بڑوں کے ساتھ </string>
+    <string name="pfd10"> گزشتہ ایک ماہ کے دوران کتنے ساشے تقسیم کیے تھے؟ </string>
+    <string name="pfd10a"> ساشے </string>
+    <string name="pfd11"> دوسرں کے ساتھ ساشے تقسیم کرنے کی کیا وجوہات تھیں؟ </string>
+    <string name="pfd11a"> منع نہیں کر سکتے </string>
+    <string name="pfd11b"> ذائقہ اچھا تھا </string>
+    <string name="pfd11c"> مجھے یقین تھا یہ دوسرے بچوں/بڑوں کے لئے فائدہ مند ہے۔ </string>
+    <string name="pfd12"> امتا نہ کھانے، وصول نہ کرنے اور استعمال نہ کرنے کی وجوہات کیا ہیں؟ </string>
+    <string name="pfd12a"> ذائقہ اچھا نہیں / خراب ذائقہ </string>
+    <string name="pfd12b"> اسہال کا سبب </string>
+    <string name="pfd12c"> قے کا سبب </string>
+    <string name="pfd12d"> پیٹ کے درد کا سبب </string>
+    <string name="pfd12e"> جسم پے دانوں کاسبب </string>
+    <string name="pfd12f"> مذہب میں منع ہے </string>
+    <string name="pfd12g"> یہ خاندانی منصوبہ بندی کے لیے ہے </string>
+    <string name="pfeheading"> حاملہ خاتون یا دودھ پلانے والی ماں کے لئے کم سے کم غذائی مقدار </string>
+    <string name="pfesub"> براہ مہربانی کھانے کی اشیاء (کھانے اور ہلکی غذائیں) جو کہ کل دن یا رات کے دوران گھر میں یا گھر سے باہر کھایا یا پیا وضاحت کریں ۔صبح سویرے جو پہلی غذا یا یا مشروب کھایا پیا اس سے شروع کریں ۔ </string>
+    <string name="pfesub1"> اوپر دیئے ہوئے کھانے یا پینے کے بارے میں لکھیں ۔اجزاء کی فہرست میں سے پوچھیں جن میں کھانے اور پینے والی اجزا ء کا ذکر نہیں ہے ان کے بارے میں مزید تحقیقات کریں </string>
+    <string name="pfe01"> اناج </string>
+    <string name="pfe01a"> دلیہ ، روٹی ، چاول مکئی کے دانے ، مکئی ، گندم ، جوار ، باجرا، یا دیگر دانے یا خوارک جو ان چیزوں سے بنایا گیا ہو مثال کے طور پر روٹی ، نوڈلس ، دلیہ یا دیگر اناج کی مصنوعات سے بنایا +دیگرمقامی طور پردستیاب اناج (جیسے سویاں ، ڈبل روٹی ، چپاتی ،گھی والا پراٹھا) </string>
+    <string name="pfe02"> سفید جڑوں اور نباتیات </string>
+    <string name="pfe02a"> سفید آلو،شکر قندی( ایک قسم کا میٹھا آلو) سفید شکرقندی جڑوں سے بنی (مثال کے طور پر سبز پیاز ،مولی ، ادرک وغیرہ) </string>
+    <string name="pfe03"> دالیں </string>
+    <string name="pfe03a"> دالیں مٹر، پیز وغیرہ </string>
+    <string name="pfe04"> پھلی ، گرے دار میوے اور بیچ </string>
+    <string name="pfe04a"> پھلیاں ، گرے دار میوے ، بیج ،یا ان سے بنے کھانے کی چیزیں (مشلاً تل کے بیج ، سونف کے بیج ،بایان کا پھل ، سیاہ زیرہ غیرہ </string>
+    <string name="pfe05"> دودھ اور دودھ کی مصنوعات </string>
+    <string name="pfe05a"> دودھ ، پنیر ، دہی،یا دیگر دودھ کی مصنوعات </string>
+    <string name="pfe06"> اعضاء کا گوشت </string>
+    <string name="pfe06a"> جگر ، گردے ، دلیا دوسر ے اعضاءکے گوشت یا خون کی بنیاد پر کھانے کی اشیاء </string>
+    <string name="pfe07"> گوشت </string>
+    <string name="pfe07a"> بڑا گوشت ، بھیڑ کا بچہ ، بکری ،خرگوش ، ہرن ، چکن، بطخ، اور دوسرے پرندے (مشلاً تیتر ،بٹیر ، شتر مرغ جنگلی بطخ، وغیرہ </string>
+    <string name="pfe08"> مچھلی </string>
+    <string name="pfe08a"> تازہ یا خشک مچھلی یا سمندری خول والا یا جھنگا مچھلی </string>
+    <string name="pfe09"> انڈے </string>
+    <string name="pfe09a"> چکن، بطخ، شتر مرغ یا دیگر کوئی انڈا </string>
+    <string name="pfe10"> سبز پتوں والی سبزیاں </string>
+    <string name="pfe10a"> سبز پتوں والی جن میں جنگلی یا مقامی دستیاب پتے جیسےسلاد کے پتے (فولادی قوت کی حامل سبزیاں پالک ، سرسوں کےپتے، گوبی ، مٹر ، سبز لہسن ، پودینہ ، چیرا، متیرا، وغیرہ) </string>
+    <string name="pfe11"> وٹا من اے سے بھر پور سبزیاں اور نباتیات (آلو پیاز) </string>
+    <string name="pfe11a"> کدو،گاجر کچلی ہوئی یا میٹھاآلو جو کہ اندر سے پیلا یا نارنجی یا مالٹے جیسا ہو + دیگرمقامی طور پردستیاب وٹامن اے سے بھر پور سبزیاں (مثال کے طور پر سرخ میتھی ، اوری کے پتے ، دھنیہ کے پتے ، پیاز کے پتے، میتھی کے پتے،شملہ مرچ ، گوبی ، کھیرا، بکری کا گوشت ، شلجم ، چقندر، وغیرہ۔) </string>
+    <string name="pfe12"> وٹا من اے سے بھر پورپھل </string>
+    <string name="pfe12a"> پکا ہواآم ، گرما ، خوبانی ، (تازہ یا خشک ) پکا ہوا پپیتا ، آڑو، دیگرمقامی طور پردستیاب وٹامن اے سے بھر پور پھل جیسے فروٹر ، نارنجی ، تربوز ، بیر یا انجیر ، چیکو ، ناشپاتی ، اسٹرابیری ، نیلی بیری ، امرود ، انار، آڑو وغیرہ </string>
+    <string name="pfe13"> دیگر سبزیاں </string>
+    <string name="pfe13a"> دیگر سبزیاں ( جیسے ٹماٹر ، پیاز، بینگن، کدو، لوکی ، شاخ گوبی، وغیرہ) اور جنگلی سبزیاں </string>
+    <string name="pfe14"> دیگر پھل </string>
+    <string name="pfe14a"> دیگر پھل ، جنگلی پھل (جیسے کھجور یں ، کالے بیر ، شہتوت ، کیلا،سیب ، انگور ، وغیرہ شامل ہیں ۔ </string>
+    <string name="pfe15"> مصالحے ، مصالحہ جات </string>
+    <string name="pfe15a"> مصالحہ جات، کالی مرچ ، سویا ساس ، گرم چٹنی وغیرہ۔ </string>
+    <string name="pfe16"> مشروبات </string>
+    <string name="pfe16a"> کافی ، چائے ، الکوحل سے بنے مشروبات </string>
+    <string name="pfe17"> تیل اور چربی </string>
+    <string name="pfe17a"> تیل ، چربی یا مکھن کھانے میں شامل یا کھانا پکانے میں استعمال کیا جاتا ہو </string>
+    <string name="pfe18"> مٹھائی </string>
+    <string name="pfe18a"> چینی سے بنی اشیاء جیسے کہ چاکلیٹ ، کینڈی ، بسکٹ، اور کیک۔ وغیرہ </string>
+    <string name="pffheading"> حاملہ عورت کے لیے:حمل کے دوران کی دیکھ بھال اور بیماریاں </string>
+    <string name="pff01"> کیا آپ نے گزشتہ ایک مہینے کے دوران حمل کے لئے چیک اپ کروایا تھا؟ </string>
+    <string name="pff02"> پچھلے ایک مہینہ کے دوران کس نے دورہ کیا تھا ؟ </string>
+    <string name="pff02sub"> HEALTH PERSONNEL </string>
+    <string name="pff02a"> ڈاکٹر </string>
+    <string name="pff02b"> نرس/مڈوائف/ایل ایچ وی </string>
+    <string name="pff02c"> کمیونٹی مڈوائف </string>
+    <string name="pff02sub1"> OTHER PERSON </string>
+    <string name="pff02d"> دائی/ٹی بی اے </string>
+    <string name="pff02e"> لیڈی ہیلتھ ورکر </string>
+    <string name="pff02f"> ہومیوپیتھک </string>
+    <string name="pff02g"> حکیم </string>
+    <string name="pff02h"> ڈسپینسر/کم پائونڈر </string>
+    <string name="pff03"> پچھلے ایک مہینہ کے دوران آپ نے حمل کی دیکھ بھال کہاں سے حاصل کی؟ </string>
+    <string name="pff03a"> گھر میں </string>
+    <string name="pff03b"> سرکاری مرکزصحت </string>
+    <string name="pff03c"> پرائیوٹ مرکز صحت </string>
+    <string name="pff03d"> حکیم/ ہومیو پیتھک </string>
+    <string name="pff04"> پچھلے ایک مہینہ کے دوران حمل کی دیکھ بھال کا حصہ ہونے کے مطابق، آپ نے مندرجہ ذیل میں سے کم از کم کوئی ایک چیز چیک کروائی تھی؟ </string>
 
 </resources>
