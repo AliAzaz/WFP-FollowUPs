@@ -50,8 +50,24 @@
     <!-- Strings related to Sections Below -->
 
     <!--- Section Info String -->
-    <string name="none"> کوئی بھی نہیں </string>
+    <string name="mp08a001"> خاندا ن نمبر </string>
+    <string name="mp08a002"> شرڪت ڪندڙ جو شناخت نمبر </string>
+    <string name="mp08a003"> شرڪت ڪندڙ جو نالو </string>
+    <string name="mp08a005"> گھر جي سربراه جو نالو </string>
+    <string name="mp08a008"> رابطي لاء نمبر </string>
+    <string name="mp08a006"> ڳوٺ جو نالو </string>
+    <string name="mp08a007"> مڪمل پتو </string>
+    <string name="mp08a013"> زباني رضامندي </string>
+    <string name="mp08a014"> انٽرويو جو نتيجو </string>
+    <string name="mp08a01401"> پورو ٿيو </string>
+    <string name="mp08a01402"> اڌ ۾ ڇڏيو </string>
+    <string name="mp08a01403"> انڪار ڪيو </string>
+    <string name="mp08a01404"> ٻن دورن کان پوء به ڪير به موجوده نه هو </string>
+    <string name="mp08a01405"> لڏي وئي </string>
+    <string name="mp08a01406">Ultrasound not done </string>
+    <string name="mp08a01407">شرڪت ڪندڙ وفات ڪري وئي  </string>
 
+    <string name="none"> کوئی بھی نہیں </string>
     <string name="pfaheading"> شناخت </string>
     <string name="pfa01"> کلسٹر کی قسم </string>
     <string name="pfa01a"> انٹروینشن </string>
