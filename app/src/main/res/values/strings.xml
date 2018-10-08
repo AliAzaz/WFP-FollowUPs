@@ -43,7 +43,8 @@
     <string name="weeks"> هفتا </string>
     <string name="hours"> ڪلاڪ </string>
     <string name="times"> تعداد </string>
-    <string name="gl"> g/L </string>
+    <string name="gl"> g/dL </string>
+    <string name="not_applicable">Not Applicable</string>
 
 
     <!-- Strings related to Sections Below -->

@@ -32,7 +32,7 @@
                 android:elevation="10dp">
 
                 <LinearLayout
-                    android:id="@+id/fldgrppfb01"
+                    android:id="@+id/fldgropfc01"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
@@ -42,34 +42,34 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_horizontal"
                         android:background="@color/colorPrimaryDark"
-                        android:text="@string/pfb01"
+                        android:text="@string/pfc01"
                         android:textColor="@color/white" />
 
                     <Spinner
-                        android:id="@+id/pfb01a"
+                        android:id="@+id/pfc01a"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="8sp" />
 
                     <EditText
-                        android:id="@+id/pfb0101"
+                        android:id="@+id/pfc0101"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:hint="@string/pfb0101"
+                        android:hint="@string/pfc01a"
                         android:inputType="numberDecimal"
                         android:maxLength="4" />
 
                     <Spinner
-                        android:id="@+id/pfb01b"
+                        android:id="@+id/pfc01b"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="8sp" />
 
                     <EditText
-                        android:id="@+id/pfb0102"
+                        android:id="@+id/pfc0102"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:hint="@string/pfb0102"
+                        android:hint="@string/pfc01a"
                         android:inputType="numberDecimal"
                         android:maxLength="4" />
 
@@ -85,7 +85,7 @@
                 android:elevation="10dp">
 
                 <LinearLayout
-                    android:id="@+id/fldgrppfb02"
+                    android:id="@+id/fldgrppfc02"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
@@ -95,16 +95,23 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_horizontal"
                         android:background="@color/colorPrimaryDark"
-                        android:text="@string/pfb02"
+                        android:text="@string/pfc02sub"
                         android:textColor="@color/white" />
 
                     <EditText
-                        android:id="@+id/pfb02"
+                        android:id="@+id/pfc02"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:hint="@string/pfb02"
+                        android:hint="@string/gl"
                         android:inputType="numberDecimal"
                         android:maxLength="3" />
+
+
+                    <CheckBox
+                        android:id="@+id/pfc0297"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/not_applicable"/>
 
                 </LinearLayout>
 

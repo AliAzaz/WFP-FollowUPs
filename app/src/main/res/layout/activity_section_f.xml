@@ -28,6 +28,7 @@
 
             <!--Q1-->
             <android.support.v7.widget.CardView
+                android:id="@+id/fldgrppff01"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
@@ -73,6 +74,7 @@
 
             <!--Q02-->
             <android.support.v7.widget.CardView
+                android:id="@+id/fldgrppff02"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
@@ -201,6 +203,7 @@
 
             <!--Q03-->
             <android.support.v7.widget.CardView
+                android:id="@+id/fldgrppff03"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
@@ -282,6 +285,7 @@
 
             <!--Q04-->
             <android.support.v7.widget.CardView
+                android:id="@+id/fldgrppff04"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
@@ -360,8 +364,55 @@
                 </LinearLayout>
             </android.support.v7.widget.CardView>
 
+            <!--Q05-->
+            <android.support.v7.widget.CardView
+                android:id="@+id/fldgrppff05"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:elevation="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:background="@color/colorPrimaryDark"
+                        android:text="@string/pff05"
+                        android:textColor="@color/white" />
+
+                    <RadioGroup
+                        android:id="@+id/pff05"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <RadioButton
+                            android:id="@+id/pff05a"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="1dp"
+                            android:layout_weight="1"
+                            android:text="@string/yes" />
+
+                        <RadioButton
+                            android:id="@+id/pff05b"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="1dp"
+                            android:layout_weight="1"
+                            android:text="@string/no" />
+                    </RadioGroup>
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
             <!--Q06-->
             <android.support.v7.widget.CardView
+                android:id="@+id/fldgrppff06"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
@@ -407,6 +458,7 @@
 
             <!--Q07-->
             <android.support.v7.widget.CardView
+                android:id="@+id/fldgrppff07"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
@@ -472,6 +524,7 @@
 
             <!--Q08-->
             <android.support.v7.widget.CardView
+                android:id="@+id/fldgrppff08"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
@@ -517,6 +570,7 @@
 
             <!--Q09-->
             <android.support.v7.widget.CardView
+                android:id="@+id/fldgrppff09"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
@@ -1006,8 +1060,7 @@
                             android:layout_height="wrap_content"
                             android:layout_margin="10dp"
                             android:hint="@string/other"
-                            android:text='@{pff0996a.checked? pff0996x.getText.toString : "" }'
-                            android:visibility='@{pff0996a.checked? View.VISIBLE : View.GONE}' />
+                            android:visibility="gone" />
                     </RadioGroup>
 
                     <CheckBox
@@ -1023,6 +1076,7 @@
 
             <!--Q10-->
             <android.support.v7.widget.CardView
+                android:id="@+id/fldgrppff10"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
@@ -1068,6 +1122,7 @@
 
             <!--Q11-->
             <android.support.v7.widget.CardView
+                android:id="@+id/fldgrppff11"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"

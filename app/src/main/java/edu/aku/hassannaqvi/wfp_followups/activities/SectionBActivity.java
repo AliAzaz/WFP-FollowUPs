@@ -40,12 +40,7 @@ public class SectionBActivity extends AppCompatActivity {
     public void BtnContinue() {
 
         if (formValidation()) {
-            try {
-                saveDraft();
-            } catch (JSONException e) {
-                e.printStackTrace();
-            }
-
+            saveDraft();
             if (UpdateDB()) {
 
                 startActivity(new Intent(this, SectionCActivity.class)

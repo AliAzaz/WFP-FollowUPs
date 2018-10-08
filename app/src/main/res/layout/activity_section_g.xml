@@ -676,33 +676,22 @@
                             android:layout_weight="1"
                             android:text="@string/pfg10e" />
 
-                        <EditText
-                            android:id="@+id/pfg10ex"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_margin="10dp"
-                            android:hint="@string/other"
-                            android:text='@{pfg10e.checked? pfg10ex.getText.toString : "" }'
-                            android:visibility='@{pfg10e.checked? View.VISIBLE : View.GONE}' />
-
-
                         <RadioButton
-                            android:id="@+id/pfg10f"
+                            android:id="@+id/pfg1096"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginBottom="1dp"
                             android:layout_weight="1"
-                            android:text="@string/pfg10f" />
+                            android:text="@string/other" />
 
                         <EditText
-                            android:id="@+id/pfg10fx"
+                            android:id="@+id/pfg1096x"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_margin="10dp"
                             android:hint="@string/other"
-                            android:text='@{pfg10f.checked? pfg10fx.getText.toString : "" }'
-                            android:visibility='@{pfg10f.checked? View.VISIBLE : View.GONE}' />
-
+                            android:text='@{pfg1096.checked? pfg1096x.getText.toString : "" }'
+                            android:visibility='@{pfg1096.checked? View.VISIBLE : View.GONE}' />
 
                         <TextView
                             android:layout_width="match_parent"
@@ -711,6 +700,14 @@
                             android:background="@color/colorPrimary"
                             android:text="@string/pfg10sub2"
                             android:textColor="@color/white" />
+
+                        <RadioButton
+                            android:id="@+id/pfg10f"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="1dp"
+                            android:layout_weight="1"
+                            android:text="@string/pfg10f" />
 
                         <RadioButton
                             android:id="@+id/pfg10g"
@@ -736,39 +733,31 @@
                             android:layout_weight="1"
                             android:text="@string/pfg10i" />
 
-                        <RadioButton
-                            android:id="@+id/pfg10961"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginBottom="1dp"
-                            android:layout_weight="1"
-                            android:text="@string/other" />
-
                         <EditText
-                            android:id="@+id/pfg10961x"
+                            android:id="@+id/pfg10ix"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_margin="10dp"
                             android:hint="@string/other"
-                            android:text='@{pfg10961.checked? pfg10961x.getText.toString : "" }'
-                            android:visibility='@{pfg10961.checked? View.VISIBLE : View.GONE}' />
+                            android:text='@{pfg10i.checked? pfg10ix.getText.toString : "" }'
+                            android:visibility='@{pfg10i.checked? View.VISIBLE : View.GONE}' />
 
                         <RadioButton
-                            android:id="@+id/pfg10962"
+                            android:id="@+id/pfg10j"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginBottom="1dp"
                             android:layout_weight="1"
-                            android:text="@string/other" />
+                            android:text="@string/pfg10j" />
 
                         <EditText
-                            android:id="@+id/pfg10962x"
+                            android:id="@+id/pfg10jx"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_margin="10dp"
                             android:hint="@string/other"
-                            android:text='@{pfg10962.checked? pfg10962x.getText.toString : "" }'
-                            android:visibility='@{pfg10962.checked? View.VISIBLE : View.GONE}' />
+                            android:text='@{pfg10j.checked? pfg10jx.getText.toString : "" }'
+                            android:visibility='@{pfg10j.checked? View.VISIBLE : View.GONE}' />
 
 
                     </RadioGroup>
@@ -1257,21 +1246,21 @@
                             android:text="@string/pfg17e" />
 
                         <RadioButton
-                            android:id="@+id/pfg17f"
+                            android:id="@+id/pfg1796"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginBottom="1dp"
                             android:layout_weight="1"
-                            android:text="@string/pfg17f" />
+                            android:text="@string/other" />
 
                         <EditText
-                            android:id="@+id/pfg17fx"
+                            android:id="@+id/pfg1796x"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_margin="10dp"
                             android:hint="@string/other"
-                            android:text='@{pfg17f.checked? pfg17fx.getText.toString : "" }'
-                            android:visibility='@{pfg17f.checked? View.VISIBLE : View.GONE}' />
+                            android:text='@{pfg1796.checked? pfg1796x.getText.toString : "" }'
+                            android:visibility='@{pfg1796.checked? View.VISIBLE : View.GONE}' />
 
                         <TextView
                             android:layout_width="match_parent"
@@ -1280,6 +1269,14 @@
                             android:background="@color/colorPrimary"
                             android:text="@string/pfg17sub1"
                             android:textColor="@color/white" />
+
+                        <RadioButton
+                            android:id="@+id/pfg17f"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="1dp"
+                            android:layout_weight="1"
+                            android:text="@string/pfg17f" />
 
                         <RadioButton
                             android:id="@+id/pfg17g"
@@ -1314,6 +1311,31 @@
                             android:text="@string/pfg17j" />
 
                         <RadioButton
+                            android:id="@+id/pfg179602"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="1dp"
+                            android:layout_weight="1"
+                            android:text="@string/other" />
+
+                        <EditText
+                            android:id="@+id/pfg179602x"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:hint="@string/other"
+                            android:text='@{pfg179602.checked? pfg179602x.getText.toString : "" }'
+                            android:visibility='@{pfg179602.checked? View.VISIBLE : View.GONE}' />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:background="@color/colorPrimary"
+                            android:text="@string/pfg17sub2"
+                            android:textColor="@color/white" />
+
+                        <RadioButton
                             android:id="@+id/pfg17k"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -1329,23 +1351,6 @@
                             android:layout_weight="1"
                             android:text="@string/pfg17l" />
 
-                        <EditText
-                            android:id="@+id/pfg17lx"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_margin="10dp"
-                            android:hint="@string/other"
-                            android:text='@{pfg17l.checked? pfg17fx.getText.toString : "" }'
-                            android:visibility='@{pfg17l.checked? View.VISIBLE : View.GONE}' />
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center_horizontal"
-                            android:background="@color/colorPrimary"
-                            android:text="@string/pfg17sub2"
-                            android:textColor="@color/white" />
-
                         <RadioButton
                             android:id="@+id/pfg17m"
                             android:layout_width="match_parent"
@@ -1355,37 +1360,21 @@
                             android:text="@string/pfg17m" />
 
                         <RadioButton
-                            android:id="@+id/pfg17n"
+                            android:id="@+id/pfg179603"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginBottom="1dp"
                             android:layout_weight="1"
-                            android:text="@string/pfg17n" />
-
-                        <RadioButton
-                            android:id="@+id/pfg17o"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginBottom="1dp"
-                            android:layout_weight="1"
-                            android:text="@string/pfg17o" />
-
-                        <RadioButton
-                            android:id="@+id/pfg17p"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginBottom="1dp"
-                            android:layout_weight="1"
-                            android:text="@string/pfg17p" />
+                            android:text="@string/other" />
 
                         <EditText
-                            android:id="@+id/pfg17px"
+                            android:id="@+id/pfg179603x"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_margin="10dp"
                             android:hint="@string/other"
-                            android:text='@{pfg17p.checked? pfg17px.getText.toString : "" }'
-                            android:visibility='@{pfg17p.checked? View.VISIBLE : View.GONE}' />
+                            android:text='@{pfg179603.checked? pfg179603x.getText.toString : "" }'
+                            android:visibility='@{pfg179603.checked? View.VISIBLE : View.GONE}' />
 
                     </RadioGroup>
                 </LinearLayout>
