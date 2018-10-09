@@ -30,7 +30,7 @@
         android:icon="@drawable/agakhannew"
         android:label="@string/app_name"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
+        android:theme="@style/AppTheme1">
         <activity
             android:name=".activities.SplashscreenActivity"
             android:screenOrientation="portrait"
@@ -65,13 +65,28 @@
             android:windowSoftInputMode="adjustResize" />
         <activity
             android:name=".activities.SectionBActivity"
-            android:theme="@style/AppTheme1"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".activities.SectionCActivity"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".activities.SectionDActivity"
             android:windowSoftInputMode="adjustResize" />
         <activity
             android:name=".activities.SectionFActivity"
             android:windowSoftInputMode="adjustResize" />
-        <activity android:name=".activities.SectionGActivity" />
-        <activity android:name=".activities.SectionDActivity"></activity>
+        <activity
+            android:name=".activities.SectionGActivity"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".activities.SectionHActivity"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".activities.SectionIActivity"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".activities.SectionJActivity"
+            android:windowSoftInputMode="adjustResize" />
     </application>
 
 </manifest>

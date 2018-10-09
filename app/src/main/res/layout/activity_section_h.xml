@@ -42,15 +42,16 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_horizontal"
                         android:background="@color/colorPrimaryDark"
-                        android:text="@string/pfha"
+                        android:text="@string/pfh01"
                         android:textColor="@color/white" />
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="5dp"
                         android:background="@color/colorPrimaryDark"
-                        android:text="@string/pfh01"
+                        android:text="@string/pfha"
                         android:textColor="@color/white" />
 
                     <Spinner
@@ -111,7 +112,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_horizontal"
                         android:background="@color/colorPrimaryDark"
-                        android:text="@string/pfha"
+                        android:text="@string/pfh02"
                         android:textColor="@color/white" />
 
                     <TextView
@@ -119,7 +120,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_horizontal"
                         android:background="@color/colorPrimaryDark"
-                        android:text="@string/pfh02"
+                        android:text="@string/pfha"
                         android:textColor="@color/white" />
 
                     <Spinner
@@ -183,11 +184,22 @@
                         android:text="@string/pfh03"
                         android:textColor="@color/white" />
 
+                    <CheckBox
+                        android:id="@+id/pfh0399"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/not_applicable" />
+
                     <EditText
                         android:id="@+id/pfh03"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:hint="@string/pfh03" />
+                        android:hint="@string/gl"
+                        android:inputType="numberDecimal"
+                        android:maxLength="4"
+                        android:text='@{pfh0399.checked ? "" : pfh03.getText.toString}'
+                        android:visibility="@{pfh0399.checked ? View.GONE : View.VISIBLE}" />
+
 
                 </LinearLayout>
 

@@ -5,7 +5,6 @@ import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 
-import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
@@ -491,16 +490,12 @@ public class SectionIActivity extends AppCompatActivity {
 
         if (formValidate()) {
 
-            try {
-                saveData();
-                if (updateDb()) {
-                    Intent secNext = new Intent(this, SectionJActivity.class);
-                    secNext.putExtra("check", false);
-                    startActivity(secNext);
-                    finish();
-                }
-            } catch (JSONException e) {
-                e.printStackTrace();
+            saveData();
+            if (updateDb()) {
+                Intent secNext = new Intent(this, SectionJActivity.class);
+                secNext.putExtra("check", false);
+                startActivity(secNext);
+                finish();
             }
         }
 
