@@ -180,11 +180,11 @@
 
                     <EditText
                         android:id="@+id/pff0296x"
+                        style="@style/textInput"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_margin="10dp"
                         android:hint="@string/other"
-                        style="@style/textInput"
                         android:text='@{pff0296.checked? pff0296x.getText.toString : "" }'
                         android:visibility='@{pff0296.checked? View.VISIBLE : View.GONE}' />
 
@@ -254,8 +254,8 @@
                         android:text="@string/other" />
 
                     <EditText
-                        style="@style/textInput"
                         android:id="@+id/pff0396x"
+                        style="@style/textInput"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_margin="10dp"
@@ -337,8 +337,8 @@
                         android:text="@string/other" />
 
                     <EditText
-                        style="@style/textInput"
                         android:id="@+id/pff0496x"
+                        style="@style/textInput"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_margin="10dp"
@@ -476,8 +476,8 @@
                             android:text="@string/day" />
 
                         <EditText
-                            style="@style/textInput"
                             android:id="@+id/pff07dx"
+                            style="@style/textInput"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_margin="10dp"
@@ -1042,8 +1042,8 @@
                     </RadioGroup>
 
                     <EditText
-                        style="@style/textInput"
                         android:id="@+id/pff0996x"
+                        style="@style/textInput"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_margin="10dp"
@@ -1217,8 +1217,8 @@
                         android:text="@string/other" />
 
                     <EditText
-                        style="@style/textInput"
                         android:id="@+id/pff1196x"
+                        style="@style/textInput"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_margin="10dp"

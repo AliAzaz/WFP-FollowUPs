@@ -5,7 +5,6 @@ import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-import android.widget.CompoundButton;
 import android.widget.RadioGroup;
 
 import org.json.JSONException;
@@ -63,10 +62,10 @@ public class SectionFActivity extends AppCompatActivity {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
 
-                if(i == R.id.pff06b){
+                if (i == R.id.pff06b) {
                     bi.fldgrppff07.setVisibility(View.GONE);
                     ClearClass.ClearAllCardFields(bi.fldgrppff07, false);
-                }else{
+                } else {
                     bi.fldgrppff07.setVisibility(View.VISIBLE);
                     ClearClass.ClearAllCardFields(bi.fldgrppff07, true);
                 }
@@ -281,9 +280,7 @@ public class SectionFActivity extends AppCompatActivity {
                     return false;
                 }
                 if (bi.pff1196.isChecked()) {
-                    if (!validatorClass.EmptyTextBox(this, bi.pff1196x, getString(R.string.pff11))) {
-                        return false;
-                    }
+                    return validatorClass.EmptyTextBox(this, bi.pff1196x, getString(R.string.pff11));
                 }
             }
         }

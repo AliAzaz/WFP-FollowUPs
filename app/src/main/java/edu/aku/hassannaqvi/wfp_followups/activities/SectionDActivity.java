@@ -188,43 +188,43 @@ public class SectionDActivity extends AppCompatActivity {
     private void saveDraft() throws JSONException {
 
         JSONObject sD = new JSONObject();
-        sD.put("pfd01",bi.pfd01a.isChecked()? "1" : bi.pfd01b.isChecked()? "2" : bi.pfd01c.isChecked()? "3" : "0");
-        sD.put("pfd01reason",bi.pfd01bx.getText().toString());
-        sD.put("pfd02",bi.pfd02.getText().toString());
-        sD.put("pfd03",bi.pfd03.getText().toString());
-        sD.put("pfd04d",bi.pfd04a.getText().toString());
-        sD.put("pfd04sachet",bi.pfd04b.getText().toString());
-        sD.put("pfd05a",bi.pfd05a.getText().toString());
-        sD.put("pfd05b",bi.pfd05b.getText().toString());
-        sD.put("pfd06",bi.pfd06a.isChecked()? "1" : bi.pfd06b.isChecked()? "2" : "0");
-        sD.put("pfd07a",bi.pfd07a.isChecked()? "1" : "0");
-        sD.put("pfd07b",bi.pfd07b.isChecked()? "2" : "0");
-        sD.put("pfd07c",bi.pfd07c.isChecked()? "3" : "0");
-        sD.put("pfd07d",bi.pfd07d.isChecked()? "4" : "0");
-        sD.put("pfd0796",bi.pfd0796.isChecked()? "96" : "0");
-        sD.put("pfd0796x",bi.pfd0796x.getText().toString());
-        sD.put("pfd08",bi.pfd08a.isChecked()? "1" : bi.pfd08b.isChecked()? "2" : "0");
-        sD.put("pfd09a",bi.pfd09a.isChecked()? "2" : "0");
-        sD.put("pfd09b",bi.pfd09b.isChecked()? "3" : "0");
-        sD.put("pfd09c",bi.pfd09c.isChecked()? "4" : "0");
-        sD.put("pfd0996",bi.pfd0996.isChecked()? "96" : "0");
-        sD.put("pfd0996x",bi.pfd0996x.getText().toString());
-        sD.put("pfd10",bi.pfd10.getText().toString());
-        sD.put("pfd11a",bi.pfd11a.isChecked()? "1" : "0");
-        sD.put("pfd11b",bi.pfd11b.isChecked()? "2" : "0");
-        sD.put("pfd11c",bi.pfd11c.isChecked()? "3" : "0");
-        sD.put("pfd1196",bi.pfd1196.isChecked()? "96" : "0");
-        sD.put("pfd1196x",bi.pfd1196x.getText().toString());
-        sD.put("pfd1198",bi.pfd1198.isChecked()? "98" : "0");
-        sD.put("pfd12a",bi.pfd12a.isChecked()? "1" : "0");
-        sD.put("pfd12b",bi.pfd12b.isChecked()? "1" : "0");
-        sD.put("pfd12c",bi.pfd12c.isChecked()? "1" : "0");
-        sD.put("pfd12d",bi.pfd12d.isChecked()? "1" : "0");
-        sD.put("pfd12e",bi.pfd12e.isChecked()? "1" : "0");
-        sD.put("pfd12f",bi.pfd12f.isChecked()? "1" : "0");
-        sD.put("pfd12g",bi.pfd12g.isChecked()? "1" : "0");
-        sD.put("pfd1296",bi.pfd1296.isChecked()? "1" : "0");
-        sD.put("pfd1196x",bi.pfd1196x.getText().toString());
+        sD.put("pfd01", bi.pfd01a.isChecked() ? "1" : bi.pfd01b.isChecked() ? "2" : bi.pfd01c.isChecked() ? "3" : "0");
+        sD.put("pfd01reason", bi.pfd01bx.getText().toString());
+        sD.put("pfd02", bi.pfd02.getText().toString());
+        sD.put("pfd03", bi.pfd03.getText().toString());
+        sD.put("pfd04d", bi.pfd04a.getText().toString());
+        sD.put("pfd04sachet", bi.pfd04b.getText().toString());
+        sD.put("pfd05a", bi.pfd05a.getText().toString());
+        sD.put("pfd05b", bi.pfd05b.getText().toString());
+        sD.put("pfd06", bi.pfd06a.isChecked() ? "1" : bi.pfd06b.isChecked() ? "2" : "0");
+        sD.put("pfd07a", bi.pfd07a.isChecked() ? "1" : "0");
+        sD.put("pfd07b", bi.pfd07b.isChecked() ? "2" : "0");
+        sD.put("pfd07c", bi.pfd07c.isChecked() ? "3" : "0");
+        sD.put("pfd07d", bi.pfd07d.isChecked() ? "4" : "0");
+        sD.put("pfd0796", bi.pfd0796.isChecked() ? "96" : "0");
+        sD.put("pfd0796x", bi.pfd0796x.getText().toString());
+        sD.put("pfd08", bi.pfd08a.isChecked() ? "1" : bi.pfd08b.isChecked() ? "2" : "0");
+        sD.put("pfd09a", bi.pfd09a.isChecked() ? "2" : "0");
+        sD.put("pfd09b", bi.pfd09b.isChecked() ? "3" : "0");
+        sD.put("pfd09c", bi.pfd09c.isChecked() ? "4" : "0");
+        sD.put("pfd0996", bi.pfd0996.isChecked() ? "96" : "0");
+        sD.put("pfd0996x", bi.pfd0996x.getText().toString());
+        sD.put("pfd10", bi.pfd10.getText().toString());
+        sD.put("pfd11a", bi.pfd11a.isChecked() ? "1" : "0");
+        sD.put("pfd11b", bi.pfd11b.isChecked() ? "2" : "0");
+        sD.put("pfd11c", bi.pfd11c.isChecked() ? "3" : "0");
+        sD.put("pfd1196", bi.pfd1196.isChecked() ? "96" : "0");
+        sD.put("pfd1196x", bi.pfd1196x.getText().toString());
+        sD.put("pfd1198", bi.pfd1198.isChecked() ? "98" : "0");
+        sD.put("pfd12a", bi.pfd12a.isChecked() ? "1" : "0");
+        sD.put("pfd12b", bi.pfd12b.isChecked() ? "1" : "0");
+        sD.put("pfd12c", bi.pfd12c.isChecked() ? "1" : "0");
+        sD.put("pfd12d", bi.pfd12d.isChecked() ? "1" : "0");
+        sD.put("pfd12e", bi.pfd12e.isChecked() ? "1" : "0");
+        sD.put("pfd12f", bi.pfd12f.isChecked() ? "1" : "0");
+        sD.put("pfd12g", bi.pfd12g.isChecked() ? "1" : "0");
+        sD.put("pfd1296", bi.pfd1296.isChecked() ? "1" : "0");
+        sD.put("pfd1196x", bi.pfd1196x.getText().toString());
 
 
 
@@ -304,20 +304,18 @@ public class SectionDActivity extends AppCompatActivity {
             }
         }
 
-        if(bi.pfd01b.isChecked()){
+        if (bi.pfd01b.isChecked()) {
             if (!validatorClass.EmptyTextBox(this, bi.pfd01bx, getString(R.string.pfd01))) {
                 return false;
             }
         }
 
-        if(bi.pfd01c.isChecked()){
+        if (bi.pfd01c.isChecked()) {
             if (!validatorClass.EmptyCardCheckBox(this, bi.fldgrppd12, bi.pfd12a, getString(R.string.pfd12))) {
                 return false;
             }
             if (bi.pfd1296.isChecked()) {
-                if (!validatorClass.EmptyTextBox(this, bi.pfd1296x, getString(R.string.pfd12))) {
-                    return false;
-                }
+                return validatorClass.EmptyTextBox(this, bi.pfd1296x, getString(R.string.pfd12));
             }
         }
 
