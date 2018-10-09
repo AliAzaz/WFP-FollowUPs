@@ -49,7 +49,7 @@
                         android:id="@+id/pfd01"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="horizontal">
+                        android:orientation="vertical">
 
                         <RadioButton
                             android:id="@+id/pfd01a"
@@ -91,13 +91,14 @@
 
             <!--Q2-->
             <android.support.v7.widget.CardView
+                android:id="@+id/fldgrppd02"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:elevation="10dp">
 
                 <LinearLayout
-                    android:id="@+id/fldgrppd02"
+
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
@@ -124,13 +125,14 @@
 
             <!--Q3-->
             <android.support.v7.widget.CardView
+                android:id="@+id/fldgrppd03"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:elevation="10dp">
 
                 <LinearLayout
-                    android:id="@+id/fldgrppd03"
+
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
@@ -157,13 +159,14 @@
 
             <!--Q4-->
             <android.support.v7.widget.CardView
+                android:id="@+id/fldgrppd04"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:elevation="10dp">
 
                 <LinearLayout
-                    android:id="@+id/fldgrppd04"
+
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
@@ -198,13 +201,14 @@
 
             <!--Q5-->
             <android.support.v7.widget.CardView
+                android:id="@+id/fldgrppd05"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:elevation="10dp">
 
                 <LinearLayout
-                    android:id="@+id/fldgrppd05"
+
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
@@ -239,6 +243,7 @@
 
             <!--Q6-->
             <android.support.v7.widget.CardView
+                android:id="@+id/fldgrppd06"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
@@ -246,7 +251,7 @@
 
 
                 <LinearLayout
-                    android:id="@+id/fldgrppd06"
+
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
@@ -289,6 +294,7 @@
 
             <!--Q7-->
             <android.support.v7.widget.CardView
+                android:id="@+id/fldgrppd07"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
@@ -296,7 +302,7 @@
 
 
                 <LinearLayout
-                    android:id="@+id/fldgrppd07"
+
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
@@ -359,6 +365,7 @@
 
             <!--Q8-->
             <android.support.v7.widget.CardView
+                android:id="@+id/fldgrppd08"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
@@ -366,7 +373,7 @@
 
 
                 <LinearLayout
-                    android:id="@+id/fldgrppd08"
+
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
@@ -409,6 +416,7 @@
 
             <!--Q9-->
             <android.support.v7.widget.CardView
+                android:id="@+id/fldgrppd09"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
@@ -416,7 +424,7 @@
 
 
                 <LinearLayout
-                    android:id="@+id/fldgrppd09"
+
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
@@ -473,13 +481,14 @@
 
             <!--Q10-->
             <android.support.v7.widget.CardView
+                android:id="@+id/fldgrppd10"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:elevation="10dp">
 
                 <LinearLayout
-                    android:id="@+id/fldgrppd10"
+
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
@@ -506,6 +515,7 @@
 
             <!--Q11-->
             <android.support.v7.widget.CardView
+                android:id="@+id/fldgrppd11"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
@@ -513,7 +523,7 @@
 
 
                 <LinearLayout
-                    android:id="@+id/fldgrppd11"
+
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
@@ -576,6 +586,7 @@
 
             <!--Q12-->
             <android.support.v7.widget.CardView
+                android:id="@+id/fldgrppd12"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
@@ -583,7 +594,6 @@
 
 
                 <LinearLayout
-                    android:id="@+id/fldgrppd12"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
