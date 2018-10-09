@@ -45,6 +45,7 @@
     <string name="times"> تعداد </string>
     <string name="gl"> g/dL </string>
     <string name="not_applicable">Not Applicable</string>
+    <string name="reason">وجہ</string>
 
 
     <!-- Strings related to Sections Below -->
