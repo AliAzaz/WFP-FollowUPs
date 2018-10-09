@@ -200,7 +200,7 @@ public class MainActivity extends Activity {
         recordSummary.setText(rSumText);
 
 
-        //        Spinner Cluster
+//        Spinner Cluster
 
         Collection<ClustersContract> clusterCollection = db.getAllClusters();
 
