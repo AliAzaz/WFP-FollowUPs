@@ -1879,7 +1879,7 @@
                         android:text="@string/other" />
 
                     <EditText
-                        android:id="@+id/pfg1246x"
+                        android:id="@+id/pfg2496x"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_margin="10dp"
@@ -2054,7 +2054,7 @@
                         android:text="@string/other" />
 
                     <EditText
-                        android:id="@+id/pfg1266x"
+                        android:id="@+id/pfg2696x"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_margin="10dp"

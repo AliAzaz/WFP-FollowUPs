@@ -4,9 +4,6 @@ import android.content.Intent;
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.view.View;
-import android.widget.RadioGroup;
-import android.widget.Toast;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -17,8 +14,6 @@ import edu.aku.hassannaqvi.wfp_followups.R;
 import edu.aku.hassannaqvi.wfp_followups.core.AppMain;
 import edu.aku.hassannaqvi.wfp_followups.core.DatabaseHelper;
 import edu.aku.hassannaqvi.wfp_followups.databinding.ActivitySectionIBinding;
-import edu.aku.hassannaqvi.wfp_followups.validation.ClearClass;
-import edu.aku.hassannaqvi.wfp_followups.validation.validatorClass;
 
 public class SectionIActivity extends AppCompatActivity {
 
@@ -38,7 +33,7 @@ public class SectionIActivity extends AppCompatActivity {
         //=====================skip patterns=======================================
 
 
-        bi.cci01.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+        /*bi.cci01.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
 
@@ -489,7 +484,7 @@ public class SectionIActivity extends AppCompatActivity {
                     ClearClass.ClearAllFields(bi.fldgrpcci09, false);
                 }
             }
-        });
+        });*/
     }
 
     public void BtnContinue() {
@@ -515,7 +510,7 @@ public class SectionIActivity extends AppCompatActivity {
     public boolean updateDb() {
         DatabaseHelper db = new DatabaseHelper(this);
 
-        int updcount = db.updateSI();
+        /*int updcount = db.updateSI();
 
         if (updcount == 1) {
             Toast.makeText(this, "Updating Database... Successful!", Toast.LENGTH_SHORT).show();
@@ -523,14 +518,15 @@ public class SectionIActivity extends AppCompatActivity {
         } else {
             Toast.makeText(this, "Updating Database... ERROR!", Toast.LENGTH_SHORT).show();
             return false;
-        }
+        }*/
+        return true;
     }
 
-    public void saveData() throws JSONException {
+    public void saveData() {
 
         JSONObject sI = new JSONObject();
 
-        sI.put("cci01", bi.cci01a.isChecked() ? "1" : bi.cci01b.isChecked() ? "2" : bi.cci0198.isChecked() ? "98" : "0");
+        /*sI.put("cci01", bi.cci01a.isChecked() ? "1" : bi.cci01b.isChecked() ? "2" : bi.cci0198.isChecked() ? "98" : "0");
         sI.put("cci02", bi.cci02a.isChecked() ? "1" : bi.cci02b.isChecked() ? "2" : bi.cci0298.isChecked() ? "98" : "0");
         sI.put("cci03", bi.cci03a.isChecked() ? "1" : bi.cci03h.isChecked() ? "2" : bi.cci03d.isChecked() ? "3" : "0");
         sI.put("cci03h", bi.cci03hx.getText().toString());
@@ -581,14 +577,14 @@ public class SectionIActivity extends AppCompatActivity {
         sI.put("cci16m", bi.cci16mx.getText().toString());
         sI.put("cci16d", bi.cci16dx.getText().toString());
         MainApp.fc.setsI(String.valueOf(sI));
-        Toast.makeText(this, "Validation Successful", Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, "Validation Successful", Toast.LENGTH_SHORT).show();*/
 
     }
 
     private boolean formValidate() {
 
 
-        if (!validatorClass.EmptyRadioButton(this, bi.cci01, bi.cci01a, getString(R.string.cci01))) {
+       /* if (!validatorClass.EmptyRadioButton(this, bi.cci01, bi.cci01a, getString(R.string.cci01))) {
             return false;
         }
 
@@ -756,7 +752,7 @@ public class SectionIActivity extends AppCompatActivity {
         }
         if (bi.cci16d.isChecked()) {
             return validatorClass.EmptyTextBox(this, bi.cci16dx, getString(R.string.cci16));
-        }
+        }*/
 
         return true;
     }

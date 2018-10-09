@@ -2,17 +2,15 @@ package edu.aku.hassannaqvi.wfp_followups.activities;
 
 import android.content.Intent;
 import android.databinding.DataBindingUtil;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.CompoundButton;
 import android.widget.RadioGroup;
 
-import org.json.JSONException;
-
 import edu.aku.hassannaqvi.wfp_followups.R;
-import edu.aku.hassannaqvi.wfp_followups.databinding.ActivitySectionIBinding;
-import edu.aku.hassannaqvi.wfp_followups.validation.ClearClass;
+import edu.aku.hassannaqvi.wfp_followups.core.AppMain;
+import edu.aku.hassannaqvi.wfp_followups.databinding.ActivitySectionFBinding;
 
 public class SectionFActivity extends AppCompatActivity {
 
@@ -30,7 +28,7 @@ public class SectionFActivity extends AppCompatActivity {
 
         //============================Skip Patterns===============================
 
-        bi.pff01.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+        /*bi.pff01.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
 
@@ -74,7 +72,7 @@ public class SectionFActivity extends AppCompatActivity {
                     ClearClass.ClearAllFields(bi.fldgrppff07, true);
                 }
             }
-        });
+        });*/
 
         bi.pff0915.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
@@ -277,11 +275,11 @@ public class SectionFActivity extends AppCompatActivity {
                 if (i == R.id.pff0996a || i == R.id.pff0996b) {
 
                     bi.pff0915.setChecked(false);
-                    bi.pff0996x.setVisibilty(View.VISIBLE);
+                    bi.pff0996x.setVisibility(View.VISIBLE);
 
                 }else{
                     bi.pff0915.setChecked(false);
-                    bi.pff0996x.setVisibilty(View.GONE);
+                    bi.pff0996x.setVisibility(View.GONE);
                     bi.pff0996x.setText(null);
                 }
             }
@@ -293,11 +291,7 @@ public class SectionFActivity extends AppCompatActivity {
     public void BtnContinue() {
 
         if (formValidation()) {
-            try {
-                saveDraft();
-            } catch (JSONException e) {
-                e.printStackTrace();
-            }
+            saveDraft();
 
             if (UpdateDB()) {
 
@@ -321,5 +315,9 @@ public class SectionFActivity extends AppCompatActivity {
 
 
         return true;
+    }
+
+    public void BtnEnd() {
+        AppMain.endActivity(this, this);
     }
 }

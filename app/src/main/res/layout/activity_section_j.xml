@@ -94,7 +94,7 @@
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_horizontal"
                             android:background="@color/colorPrimaryDark"
-                            android:text="@string/pfj0101"
+                            android:text="@string/pfj01a"
                             android:textColor="@color/white" />
 
                         <RadioGroup
@@ -143,7 +143,7 @@
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_horizontal"
                             android:background="@color/colorPrimaryDark"
-                            android:text="@string/pfj0102"
+                            android:text="@string/pfj01b"
                             android:textColor="@color/white" />
 
                         <RadioGroup
@@ -192,7 +192,7 @@
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_horizontal"
                             android:background="@color/colorPrimaryDark"
-                            android:text="@string/pfj0103"
+                            android:text="@string/pfj01c"
                             android:textColor="@color/white" />
 
                         <RadioGroup
@@ -241,7 +241,7 @@
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_horizontal"
                             android:background="@color/colorPrimaryDark"
-                            android:text="@string/pfj0104"
+                            android:text="@string/pfj01d"
                             android:textColor="@color/white" />
 
                         <RadioGroup
@@ -290,7 +290,7 @@
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_horizontal"
                             android:background="@color/colorPrimaryDark"
-                            android:text="@string/pfj0105"
+                            android:text="@string/pfj01e"
                             android:textColor="@color/white" />
 
                         <RadioGroup
@@ -329,7 +329,7 @@
                     android:elevation="10dp">
 
                     <LinearLayout
-                        android:id="@+id/fldgrppfj0105"
+                        android:id="@+id/fldgrppfj0106"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="vertical">
@@ -339,7 +339,7 @@
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_horizontal"
                             android:background="@color/colorPrimaryDark"
-                            android:text="@string/pfj0106"
+                            android:text="@string/pfj01f"
                             android:textColor="@color/white" />
 
                         <RadioGroup
@@ -388,7 +388,7 @@
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_horizontal"
                             android:background="@color/colorPrimaryDark"
-                            android:text="@string/pfj0107"
+                            android:text="@string/pfj01g"
                             android:textColor="@color/white" />
 
                         <RadioGroup
@@ -437,7 +437,7 @@
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_horizontal"
                             android:background="@color/colorPrimaryDark"
-                            android:text="@string/pfj0108"
+                            android:text="@string/pfj01h"
                             android:textColor="@color/white" />
 
                         <RadioGroup

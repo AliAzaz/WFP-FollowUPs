@@ -42,6 +42,14 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_horizontal"
                         android:background="@color/colorPrimaryDark"
+                        android:text="@string/pfha"
+                        android:textColor="@color/white" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:background="@color/colorPrimaryDark"
                         android:text="@string/pfc01"
                         android:textColor="@color/white" />
 
@@ -58,6 +66,14 @@
                         android:hint="@string/pfc01a"
                         android:inputType="numberDecimal"
                         android:maxLength="4" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:background="@color/colorPrimaryDark"
+                        android:text="@string/pfhb"
+                        android:textColor="@color/white" />
 
                     <Spinner
                         android:id="@+id/pfc01b"

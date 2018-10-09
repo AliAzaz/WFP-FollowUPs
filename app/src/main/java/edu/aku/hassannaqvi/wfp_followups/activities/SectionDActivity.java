@@ -1,9 +1,11 @@
 package edu.aku.hassannaqvi.wfp_followups.activities;
 
-import android.support.v7.app.AppCompatActivity;
+import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 
 import edu.aku.hassannaqvi.wfp_followups.R;
+import edu.aku.hassannaqvi.wfp_followups.core.AppMain;
 
 public class SectionDActivity extends AppCompatActivity {
 
@@ -12,4 +14,39 @@ public class SectionDActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_section_d);
     }
+
+
+    public void BtnContinue() {
+
+        if (formValidation()) {
+            saveDraft();
+
+            if (UpdateDB()) {
+
+                startActivity(new Intent(this, EndingActivity.class)
+                        .putExtra("complete", true));
+                finish();
+            }
+        }
+
+    }
+
+    private boolean UpdateDB() {
+
+        return true;
+    }
+
+    private void saveDraft() {
+    }
+
+    private boolean formValidation() {
+
+
+        return true;
+    }
+
+    public void BtnEnd() {
+        AppMain.endActivity(this, this);
+    }
+
 }
