@@ -1,25 +1,174 @@
 package edu.aku.hassannaqvi.wfp_followups.activities;
 
 import android.content.Intent;
+import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
+import android.widget.RadioGroup;
+import android.widget.Toast;
+
+import org.json.JSONException;
+import org.json.JSONObject;
 
 import edu.aku.hassannaqvi.wfp_followups.R;
 import edu.aku.hassannaqvi.wfp_followups.core.AppMain;
+import edu.aku.hassannaqvi.wfp_followups.databinding.ActivitySectionDBinding;
+import edu.aku.hassannaqvi.wfp_followups.validation.ClearClass;
+import edu.aku.hassannaqvi.wfp_followups.validation.validatorClass;
 
 public class SectionDActivity extends AppCompatActivity {
+
+    ActivitySectionDBinding bi;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_section_d);
+
+        bi = DataBindingUtil.setContentView(this, R.layout.activity_section_d);
+        bi.setCallback(this);
+
+        this.setTitle(R.string.pfdheading);
+
+
+        //=====================Skip patterns=============================
+
+        bi.pfd01.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup radioGroup, int i) {
+
+                if (i == R.id.pfd01b) {
+                    bi.pfd01bx.setVisibility(View.VISIBLE);
+                    bi.fldgrppd02.setVisibility(View.GONE);
+                    ClearClass.ClearAllCardFields(bi.fldgrppd02, false);
+                    bi.fldgrppd03.setVisibility(View.GONE);
+                    ClearClass.ClearAllCardFields(bi.fldgrppd03, false);
+                    bi.fldgrppd04.setVisibility(View.GONE);
+                    ClearClass.ClearAllCardFields(bi.fldgrppd04, false);
+                    bi.fldgrppd05.setVisibility(View.GONE);
+                    ClearClass.ClearAllCardFields(bi.fldgrppd05, false);
+                    bi.fldgrppd06.setVisibility(View.GONE);
+                    ClearClass.ClearAllCardFields(bi.fldgrppd06, false);
+                    bi.fldgrppd07.setVisibility(View.GONE);
+                    ClearClass.ClearAllCardFields(bi.fldgrppd07, false);
+                    bi.fldgrppd08.setVisibility(View.GONE);
+                    ClearClass.ClearAllCardFields(bi.fldgrppd08, false);
+                    bi.fldgrppd09.setVisibility(View.GONE);
+                    ClearClass.ClearAllCardFields(bi.fldgrppd09, false);
+                    bi.fldgrppd10.setVisibility(View.GONE);
+                    ClearClass.ClearAllCardFields(bi.fldgrppd10, false);
+                    bi.fldgrppd11.setVisibility(View.GONE);
+                    ClearClass.ClearAllCardFields(bi.fldgrppd11, false);
+                    bi.fldgrppd12.setVisibility(View.GONE);
+                    ClearClass.ClearAllCardFields(bi.fldgrppd12, false);
+                }
+                if (i == R.id.pfd01c) {
+                    bi.pfd01bx.setVisibility(View.GONE);
+                    bi.pfd01bx.setText(null);
+                    ClearClass.ClearAllCardFields(bi.fldgrppd02, false);
+                    bi.fldgrppd03.setVisibility(View.GONE);
+                    ClearClass.ClearAllCardFields(bi.fldgrppd03, false);
+                    bi.fldgrppd04.setVisibility(View.GONE);
+                    ClearClass.ClearAllCardFields(bi.fldgrppd04, false);
+                    bi.fldgrppd05.setVisibility(View.GONE);
+                    ClearClass.ClearAllCardFields(bi.fldgrppd05, false);
+                    bi.fldgrppd06.setVisibility(View.GONE);
+                    ClearClass.ClearAllCardFields(bi.fldgrppd06, false);
+                    bi.fldgrppd07.setVisibility(View.GONE);
+                    ClearClass.ClearAllCardFields(bi.fldgrppd07, false);
+                    bi.fldgrppd08.setVisibility(View.GONE);
+                    ClearClass.ClearAllCardFields(bi.fldgrppd08, false);
+                    bi.fldgrppd09.setVisibility(View.GONE);
+                    ClearClass.ClearAllCardFields(bi.fldgrppd09, false);
+                    bi.fldgrppd10.setVisibility(View.GONE);
+                    ClearClass.ClearAllCardFields(bi.fldgrppd10, false);
+                    bi.fldgrppd11.setVisibility(View.GONE);
+                    ClearClass.ClearAllCardFields(bi.fldgrppd11, false);
+                }
+                if (i == R.id.pfd01a) {
+                    bi.pfd01bx.setVisibility(View.GONE);
+                    bi.pfd01bx.setText(null);
+                    ClearClass.ClearAllCardFields(bi.fldgrppd02, true);
+                    bi.fldgrppd03.setVisibility(View.VISIBLE);
+                    ClearClass.ClearAllCardFields(bi.fldgrppd03, true);
+                    bi.fldgrppd04.setVisibility(View.VISIBLE);
+                    ClearClass.ClearAllCardFields(bi.fldgrppd04, true);
+                    bi.fldgrppd05.setVisibility(View.VISIBLE);
+                    ClearClass.ClearAllCardFields(bi.fldgrppd05, true);
+                    bi.fldgrppd06.setVisibility(View.VISIBLE);
+                    ClearClass.ClearAllCardFields(bi.fldgrppd06, true);
+                    bi.fldgrppd07.setVisibility(View.VISIBLE);
+                    ClearClass.ClearAllCardFields(bi.fldgrppd07, true);
+                    bi.fldgrppd08.setVisibility(View.VISIBLE);
+                    ClearClass.ClearAllCardFields(bi.fldgrppd08, true);
+                    bi.fldgrppd09.setVisibility(View.VISIBLE);
+                    ClearClass.ClearAllCardFields(bi.fldgrppd09, true);
+                    bi.fldgrppd10.setVisibility(View.VISIBLE);
+                    ClearClass.ClearAllCardFields(bi.fldgrppd10, true);
+                    bi.fldgrppd11.setVisibility(View.VISIBLE);
+                    ClearClass.ClearAllCardFields(bi.fldgrppd11, true);
+                    bi.fldgrppd12.setVisibility(View.VISIBLE);
+                    ClearClass.ClearAllCardFields(bi.fldgrppd12, true);
+                }
+            }
+        });
+
+        bi.pfd06.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup radioGroup, int i) {
+
+                if (i == R.id.pfd06b) {
+                    bi.fldgrppd07.setVisibility(View.GONE);
+                    ClearClass.ClearAllCardFields(bi.fldgrppd07, false);
+                } else {
+                    bi.fldgrppd07.setVisibility(View.VISIBLE);
+                    ClearClass.ClearAllCardFields(bi.fldgrppd07, true);
+                }
+            }
+        });
+
+        bi.pfd08.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup radioGroup, int i) {
+
+                if (i == R.id.pfd08b) {
+
+                    bi.fldgrppd09.setVisibility(View.GONE);
+                    ClearClass.ClearAllCardFields(bi.fldgrppd09, false);
+                    bi.fldgrppd10.setVisibility(View.GONE);
+                    ClearClass.ClearAllCardFields(bi.fldgrppd10, false);
+                    bi.fldgrppd11.setVisibility(View.GONE);
+                    ClearClass.ClearAllCardFields(bi.fldgrppd11, false);
+                    bi.fldgrppd12.setVisibility(View.GONE);
+                    ClearClass.ClearAllCardFields(bi.fldgrppd12, false);
+
+                } else {
+
+                    bi.fldgrppd09.setVisibility(View.VISIBLE);
+                    ClearClass.ClearAllCardFields(bi.fldgrppd09, true);
+                    bi.fldgrppd10.setVisibility(View.VISIBLE);
+                    ClearClass.ClearAllCardFields(bi.fldgrppd10, true);
+                    bi.fldgrppd11.setVisibility(View.VISIBLE);
+                    ClearClass.ClearAllCardFields(bi.fldgrppd11, true);
+                    bi.fldgrppd12.setVisibility(View.VISIBLE);
+                    ClearClass.ClearAllCardFields(bi.fldgrppd12, true);
+                }
+            }
+        });
+
+
     }
 
 
     public void BtnContinue() {
 
         if (formValidation()) {
-            saveDraft();
+            Toast.makeText(this, "validated", Toast.LENGTH_SHORT).show();
+            try {
+                saveDraft();
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
 
             if (UpdateDB()) {
 
@@ -36,10 +185,139 @@ public class SectionDActivity extends AppCompatActivity {
         return true;
     }
 
-    private void saveDraft() {
+    private void saveDraft() throws JSONException {
+
+        JSONObject sD = new JSONObject();
+        sD.put("pfd01", bi.pfd01a.isChecked() ? "1" : bi.pfd01b.isChecked() ? "2" : bi.pfd01c.isChecked() ? "3" : "0");
+        sD.put("pfd01reason", bi.pfd01bx.getText().toString());
+        sD.put("pfd02", bi.pfd02.getText().toString());
+        sD.put("pfd03", bi.pfd03.getText().toString());
+        sD.put("pfd04d", bi.pfd04a.getText().toString());
+        sD.put("pfd04sachet", bi.pfd04b.getText().toString());
+        sD.put("pfd05a", bi.pfd05a.getText().toString());
+        sD.put("pfd05b", bi.pfd05b.getText().toString());
+        sD.put("pfd06", bi.pfd06a.isChecked() ? "1" : bi.pfd06b.isChecked() ? "2" : "0");
+        sD.put("pfd07a", bi.pfd07a.isChecked() ? "1" : "0");
+        sD.put("pfd07b", bi.pfd07b.isChecked() ? "2" : "0");
+        sD.put("pfd07c", bi.pfd07c.isChecked() ? "3" : "0");
+        sD.put("pfd07d", bi.pfd07d.isChecked() ? "4" : "0");
+        sD.put("pfd0796", bi.pfd0796.isChecked() ? "96" : "0");
+        sD.put("pfd0796x", bi.pfd0796x.getText().toString());
+        sD.put("pfd08", bi.pfd08a.isChecked() ? "1" : bi.pfd08b.isChecked() ? "2" : "0");
+        sD.put("pfd09a", bi.pfd09a.isChecked() ? "2" : "0");
+        sD.put("pfd09b", bi.pfd09b.isChecked() ? "3" : "0");
+        sD.put("pfd09c", bi.pfd09c.isChecked() ? "4" : "0");
+        sD.put("pfd0996", bi.pfd0996.isChecked() ? "96" : "0");
+        sD.put("pfd0996x", bi.pfd0996x.getText().toString());
+        sD.put("pfd10", bi.pfd10.getText().toString());
+        sD.put("pfd11a", bi.pfd11a.isChecked() ? "1" : "0");
+        sD.put("pfd11b", bi.pfd11b.isChecked() ? "2" : "0");
+        sD.put("pfd11c", bi.pfd11c.isChecked() ? "3" : "0");
+        sD.put("pfd1196", bi.pfd1196.isChecked() ? "96" : "0");
+        sD.put("pfd1196x", bi.pfd1196x.getText().toString());
+        sD.put("pfd1198", bi.pfd1198.isChecked() ? "98" : "0");
+        sD.put("pfd12a", bi.pfd12a.isChecked() ? "1" : "0");
+        sD.put("pfd12b", bi.pfd12b.isChecked() ? "1" : "0");
+        sD.put("pfd12c", bi.pfd12c.isChecked() ? "1" : "0");
+        sD.put("pfd12d", bi.pfd12d.isChecked() ? "1" : "0");
+        sD.put("pfd12e", bi.pfd12e.isChecked() ? "1" : "0");
+        sD.put("pfd12f", bi.pfd12f.isChecked() ? "1" : "0");
+        sD.put("pfd12g", bi.pfd12g.isChecked() ? "1" : "0");
+        sD.put("pfd1296", bi.pfd1296.isChecked() ? "1" : "0");
+        sD.put("pfd1196x", bi.pfd1196x.getText().toString());
+
+
+
     }
 
     private boolean formValidation() {
+
+        if (!validatorClass.EmptyRadioButton(this, bi.pfd01, bi.pfd01a, getString(R.string.pfd01))) {
+            return false;
+        }
+        if (bi.pfd01a.isChecked()) {
+            if (!validatorClass.EmptyTextBox(this, bi.pfd02, getString(R.string.pfd02))) {
+                return false;
+            }
+            if (!validatorClass.EmptyTextBox(this, bi.pfd03, getString(R.string.pfd03))) {
+                return false;
+            }
+            if (!validatorClass.EmptyTextBox(this, bi.pfd04a, getString(R.string.pfd04))) {
+                return false;
+            }
+            if (!validatorClass.EmptyTextBox(this, bi.pfd04b, getString(R.string.pfd04))) {
+                return false;
+            }
+            if (!validatorClass.EmptyTextBox(this, bi.pfd05a, getString(R.string.pfd05))) {
+                return false;
+            }
+            if (!validatorClass.EmptyTextBox(this, bi.pfd05b, getString(R.string.pfd05))) {
+                return false;
+            }
+            if (!validatorClass.EmptyRadioButton(this, bi.pfd06, bi.pfd06a, getString(R.string.pfd06))) {
+                return false;
+            }
+            if (!bi.pfd06b.isChecked()) {
+                if (!validatorClass.EmptyCardCheckBox(this, bi.fldgrppd07, bi.pfd07a, getString(R.string.pfd07))) {
+                    return false;
+                }
+                if (bi.pfd0796.isChecked()) {
+                    if (!validatorClass.EmptyTextBox(this, bi.pfd0796x, getString(R.string.pfd07))) {
+                        return false;
+                    }
+                }
+                if (!validatorClass.EmptyRadioButton(this, bi.pfd08, bi.pfd08a, getString(R.string.pfd08))) {
+                    return false;
+                }
+                if (!bi.pfd08b.isChecked()) {
+                    if (!validatorClass.EmptyCardCheckBox(this, bi.fldgrppd09, bi.pfd09a, getString(R.string.pfd09))) {
+                        return false;
+                    }
+                    if (bi.pfd0996.isChecked()) {
+                        if (!validatorClass.EmptyTextBox(this, bi.pfd0996x, getString(R.string.pfd09))) {
+                            return false;
+                        }
+                    }
+                    if (!validatorClass.EmptyTextBox(this, bi.pfd10, getString(R.string.pfd10))) {
+                        return false;
+                    }
+                    if (!bi.pfd1198.isChecked()) {
+                        if (!validatorClass.EmptyCardCheckBox(this, bi.fldgrppd11, bi.pfd11a, getString(R.string.pfd11))) {
+                            return false;
+                        }
+                        if (bi.pfd1196.isChecked()) {
+                            if (!validatorClass.EmptyTextBox(this, bi.pfd1196x, getString(R.string.pfd11))) {
+                                return false;
+                            }
+                        }
+                    }
+                    if (!validatorClass.EmptyCardCheckBox(this, bi.fldgrppd12, bi.pfd12a, getString(R.string.pfd12))) {
+                        return false;
+                    }
+                    if (bi.pfd1296.isChecked()) {
+                        if (!validatorClass.EmptyTextBox(this, bi.pfd1296x, getString(R.string.pfd12))) {
+                            return false;
+                        }
+                    }
+
+                }
+            }
+        }
+
+        if (bi.pfd01b.isChecked()) {
+            if (!validatorClass.EmptyTextBox(this, bi.pfd01bx, getString(R.string.pfd01))) {
+                return false;
+            }
+        }
+
+        if (bi.pfd01c.isChecked()) {
+            if (!validatorClass.EmptyCardCheckBox(this, bi.fldgrppd12, bi.pfd12a, getString(R.string.pfd12))) {
+                return false;
+            }
+            if (bi.pfd1296.isChecked()) {
+                return validatorClass.EmptyTextBox(this, bi.pfd1296x, getString(R.string.pfd12));
+            }
+        }
 
 
         return true;
