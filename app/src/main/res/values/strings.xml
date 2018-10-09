@@ -370,8 +370,12 @@
     <string name="pfg26d"> صحت مرکز جانے کا مشورہ دینے </string>
     <string name="pfg26e"> بچے کے علاج کے بارے میں </string>
     <string name="pfhheading"> اور ہیموگلوبین جسمانی پیمائش </string>
+    <string name="pfha"> Measure Code: 1 </string>
+    <string name="pfhb"> Measure Code: 2 </string>
     <string name="pfh01"> لمبائی </string>
     <string name="pfh02"> وزن </string>
+    <string name="pfh01a"> سینتی میٹر </string>
+    <string name="pfh02a"> سینتی میٹر </string>
     <string name="pfh03"> خون کی مقدار کا نتیجہ </string>
     <string name="pfiheading"> نومولود اور چھوٹے بچوں کی غذا کے بارے میں معلومات </string>
     <string name="pfi01"> کیا بچہ(نام) کو کبھی ماں کا دودھ پلایا گیا ہے ؟ </string>

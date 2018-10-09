@@ -493,7 +493,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_margin="10dp"
-                            android:hint="@string/pff06d"
+                            android:hint="@string/day"
                             android:inputType="number"
                             android:text='@{pff07d.checked? pff06d.getText.toString: ""}'
                             android:visibility='@{pff07d.checked? View.VISIBLE : View.GONE}' />
@@ -583,7 +583,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_horizontal"
                         android:background="@color/colorPrimaryDark"
-                        android:text="@string/pff0901"
+                        android:text="@string/pff09"
                         android:textColor="@color/white" />
 
                     <TextView
@@ -591,7 +591,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_horizontal"
                         android:background="@color/colorPrimary"
-                        android:text="@string/pff090101"
+                        android:text="@string/pff09a"
                         android:textColor="@color/white" />
 
                     <RadioGroup
@@ -622,7 +622,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_horizontal"
                         android:background="@color/colorPrimary"
-                        android:text="@string/pff090102"
+                        android:text="@string/pff09b"
                         android:textColor="@color/white" />
 
                     <RadioGroup
@@ -653,7 +653,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_horizontal"
                         android:background="@color/colorPrimary"
-                        android:text="@string/pff090103"
+                        android:text="@string/pff09c"
                         android:textColor="@color/white" />
 
                     <RadioGroup
@@ -684,7 +684,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_horizontal"
                         android:background="@color/colorPrimary"
-                        android:text="@string/pff090104"
+                        android:text="@string/pff09d"
                         android:textColor="@color/white" />
 
                     <RadioGroup
@@ -715,7 +715,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_horizontal"
                         android:background="@color/colorPrimary"
-                        android:text="@string/pff090105"
+                        android:text="@string/pff09e"
                         android:textColor="@color/white" />
 
                     <RadioGroup
@@ -746,7 +746,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_horizontal"
                         android:background="@color/colorPrimary"
-                        android:text="@string/pff090106"
+                        android:text="@string/pff09f"
                         android:textColor="@color/white" />
 
                     <RadioGroup
@@ -777,7 +777,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_horizontal"
                         android:background="@color/colorPrimary"
-                        android:text="@string/pff090107"
+                        android:text="@string/pff09g"
                         android:textColor="@color/white" />
 
                     <RadioGroup
@@ -808,7 +808,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_horizontal"
                         android:background="@color/colorPrimary"
-                        android:text="@string/pff090108"
+                        android:text="@string/pff09h"
                         android:textColor="@color/white" />
 
                     <RadioGroup
@@ -839,7 +839,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_horizontal"
                         android:background="@color/colorPrimary"
-                        android:text="@string/pff090109"
+                        android:text="@string/pff09i"
                         android:textColor="@color/white" />
 
                     <RadioGroup
@@ -870,7 +870,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_horizontal"
                         android:background="@color/colorPrimary"
-                        android:text="@string/pff090110"
+                        android:text="@string/pff09j"
                         android:textColor="@color/white" />
 
                     <RadioGroup
@@ -901,7 +901,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_horizontal"
                         android:background="@color/colorPrimary"
-                        android:text="@string/pff090111"
+                        android:text="@string/pff09k"
                         android:textColor="@color/white" />
 
                     <RadioGroup
@@ -932,7 +932,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_horizontal"
                         android:background="@color/colorPrimary"
-                        android:text="@string/pff090112"
+                        android:text="@string/pff09l"
                         android:textColor="@color/white" />
 
                     <RadioGroup
@@ -964,7 +964,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_horizontal"
                         android:background="@color/colorPrimary"
-                        android:text="@string/pff090113"
+                        android:text="@string/pff09m"
                         android:textColor="@color/white" />
 
                     <RadioGroup
@@ -995,7 +995,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_horizontal"
                         android:background="@color/colorPrimary"
-                        android:text="@string/pff090114"
+                        android:text="@string/pff09n"
                         android:textColor="@color/white" />
 
                     <RadioGroup
@@ -1026,7 +1026,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_horizontal"
                         android:background="@color/colorPrimary"
-                        android:text="@string/pff090196"
+                        android:text="@string/other"
                         android:textColor="@color/white" />
 
                     <RadioGroup
@@ -1057,7 +1057,8 @@
                             android:layout_height="wrap_content"
                             android:layout_margin="10dp"
                             android:hint="@string/other"
-                            android:visibility="gone" />
+                            android:text='@{pff0996a.checked ? pff0996x.getText.toString : "" }'
+                            android:visibility='@{pff0996a.checked? View.VISIBLE : View.GONE}' />
                     </RadioGroup>
 
                     <CheckBox
@@ -1066,7 +1067,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="1dp"
                         android:layout_weight="1"
-                        android:text="@string/pff0915" />
+                        android:text="@string/pff09o" />
                 </LinearLayout>
             </android.support.v7.widget.CardView>
 
@@ -1089,7 +1090,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_horizontal"
                         android:background="@color/colorPrimaryDark"
-                        android:text="@string/pff10"
+                        android:text="@string/pff010"
                         android:textColor="@color/white" />
 
                     <RadioGroup
@@ -1135,7 +1136,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_horizontal"
                         android:background="@color/colorPrimaryDark"
-                        android:text="@string/pff11"
+                        android:text="@string/pff011"
                         android:textColor="@color/white" />
 
                     <RadioGroup
@@ -1149,7 +1150,7 @@
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_horizontal"
                             android:background="@color/colorPrimary"
-                            android:text="@string/pff11"
+                            android:text="@string/pff011sub"
                             android:textColor="@color/white" />
 
                         <RadioButton
@@ -1158,7 +1159,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginBottom="1dp"
                             android:layout_weight="1"
-                            android:text="@string/pff11a" />
+                            android:text="@string/pff011a" />
 
                         <RadioButton
                             android:id="@+id/pff11b"
@@ -1166,7 +1167,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginBottom="1dp"
                             android:layout_weight="1"
-                            android:text="@string/pff11b" />
+                            android:text="@string/pff011b" />
 
                         <RadioButton
                             android:id="@+id/pff11c"
@@ -1174,14 +1175,14 @@
                             android:layout_height="wrap_content"
                             android:layout_marginBottom="1dp"
                             android:layout_weight="1"
-                            android:text="@string/pff11c" />
+                            android:text="@string/pff011c" />
 
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_horizontal"
                             android:background="@color/colorPrimary"
-                            android:text="@string/pff11"
+                            android:text="@string/pff011sub1"
                             android:textColor="@color/white" />
 
                         <RadioButton
@@ -1190,7 +1191,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginBottom="1dp"
                             android:layout_weight="1"
-                            android:text="@string/pff11d" />
+                            android:text="@string/pff011d" />
 
                         <RadioButton
                             android:id="@+id/pff11e"
@@ -1198,7 +1199,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginBottom="1dp"
                             android:layout_weight="1"
-                            android:text="@string/pff11e" />
+                            android:text="@string/pff011e" />
 
                         <RadioButton
                             android:id="@+id/pff11f"
@@ -1206,7 +1207,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginBottom="1dp"
                             android:layout_weight="1"
-                            android:text="@string/pff11f" />
+                            android:text="@string/pff011f" />
 
                         <RadioButton
                             android:id="@+id/pff11g"
@@ -1214,7 +1215,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginBottom="1dp"
                             android:layout_weight="1"
-                            android:text="@string/pff11g" />
+                            android:text="@string/pff011g" />
 
                         <RadioButton
                             android:id="@+id/pff11h"
@@ -1222,7 +1223,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginBottom="1dp"
                             android:layout_weight="1"
-                            android:text="@string/pff11h" />
+                            android:text="@string/pff011h" />
 
                         <RadioButton
                             android:id="@+id/pff1196"
@@ -1238,7 +1239,7 @@
                             android:layout_height="wrap_content"
                             android:layout_margin="10dp"
                             android:hint="@string/other"
-                            android:text='@{pff1196.checked? pff1196x.getText.toString : "" }'
+                            android:text='@{pff1196.checked ? pff1196x.getText.toString : "" }'
                             android:visibility='@{pff1196.checked? View.VISIBLE : View.GONE}' />
 
                     </RadioGroup>

@@ -6,18 +6,17 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.Toast;
 
-import org.json.JSONException;
 import org.json.JSONObject;
 
 import edu.aku.hassannaqvi.wfp_followups.R;
 import edu.aku.hassannaqvi.wfp_followups.core.AppMain;
 import edu.aku.hassannaqvi.wfp_followups.core.DatabaseHelper;
-import edu.aku.hassannaqvi.wfp_followups.databinding.ActivitySectionCBinding;
+import edu.aku.hassannaqvi.wfp_followups.databinding.ActivitySectionHBinding;
 
 public class SectionHActivity extends AppCompatActivity {
 
 
-    ActivitySectionCBinding binding;
+    ActivitySectionHBinding binding;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,11 +39,7 @@ public class SectionHActivity extends AppCompatActivity {
     public void BtnContinue() {
 
         if (formValidation()) {
-            try {
-                saveDraft();
-            } catch (JSONException e) {
-                e.printStackTrace();
-            }
+            saveDraft();
 
             if (UpdateDB()) {
 
