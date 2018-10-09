@@ -581,7 +581,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:elevation="10dp">
+                android:elevation="10dp"
+                android:visibility="@{pfj02b.checked ? View.GONE : View.VISIBLE}">
 
                 <LinearLayout
                     android:id="@+id/fldgrppfj03"
