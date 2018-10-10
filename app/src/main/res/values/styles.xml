@@ -168,8 +168,8 @@
     <style name="radiobutton" parent="android:Widget.Material.Light.CompoundButton.RadioButton">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:button">@null</item>
-        <item name="android:drawableRight">@android:drawable/btn_radio</item>
+        <!--<item name="android:button">@null</item>-->
+        <!--<item name="android:drawableRight">@android:drawable/btn_radio</item>-->
         <item name="android:textSize">24sp</item>
         <item name="android:typeface">serif</item>
         <item name="android:background">@color/white</item>

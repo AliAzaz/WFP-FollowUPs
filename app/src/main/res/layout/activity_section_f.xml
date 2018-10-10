@@ -14,6 +14,7 @@
     </data>
 
     <ScrollView
+        android:id="@+id/scrollView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
@@ -91,11 +92,12 @@
                         android:textColor="@color/white" />
 
                     <TextView
+                        android:gravity="center"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_horizontal"
                         android:background="@color/colorPrimary"
-                        android:text="@string/pff02"
+                        android:text="@string/pff02sub"
                         android:textColor="@color/white" />
 
                     <CheckBox
@@ -123,11 +125,12 @@
                         android:text="@string/pff02c" />
 
                     <TextView
+                        android:gravity="center"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_horizontal"
                         android:background="@color/colorPrimary"
-                        android:text="@string/pff02"
+                        android:text="@string/pff02sub1"
                         android:textColor="@color/white" />
 
                     <CheckBox
