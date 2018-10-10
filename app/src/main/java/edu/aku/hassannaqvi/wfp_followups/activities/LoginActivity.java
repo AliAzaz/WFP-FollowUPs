@@ -135,15 +135,15 @@ public class LoginActivity extends Activity implements LoaderCallbacks<Cursor> {
         try {
             AppMain.installedOn = this
                     .getPackageManager()
-                    .getPackageInfo("edu.aku.hassannaqvi.mappsform15__16", 0)
+                    .getPackageInfo("edu.aku.hassannaqvi.wfp_followups", 0)
                     .lastUpdateTime;
             AppMain.versionCode = this
                     .getPackageManager()
-                    .getPackageInfo("edu.aku.hassannaqvi.mappsform15__16", 0)
+                    .getPackageInfo("edu.aku.hassannaqvi.wfp_followups", 0)
                     .versionCode;
             AppMain.versionName = this
                     .getPackageManager()
-                    .getPackageInfo("edu.aku.hassannaqvi.mappsform15__16", 0)
+                    .getPackageInfo("edu.aku.hassannaqvi.wfp_followups", 0)
                     .versionName;
             txtinstalldate.setText("Ver. " + AppMain.versionName + "." + String.valueOf(AppMain.versionCode) + " \r\n( Last Updated: " + new SimpleDateFormat("dd MMM. yyyy").format(new Date(AppMain.installedOn)) + " )");
         } catch (PackageManager.NameNotFoundException e) {
@@ -522,18 +522,18 @@ public class LoginActivity extends Activity implements LoaderCallbacks<Cursor> {
             if (mlocManager.isProviderEnabled(LocationManager.GPS_PROVIDER)) {
                 DatabaseHelper db = new DatabaseHelper(LoginActivity.this);
                 if ((mEmail1.equals("dmu@aku") && mPassword1.equals("aku?dmu")) || db.Login(mEmail1, mPassword1) ||
-                        (mEmail1.equals("test1234") && mPassword1.equals("test1234")) || (mEmail1.equals("test12345") && mPassword1.equals("test12345"))) {
+                        (mEmail1.equals("test1234") && mPassword1.equals("test1234"))) {
                     AppMain.userName = mEmail1;
                     AppMain.admin = mEmail1.contains("@");
 
                     if ((mEmail2.equals("dmu@aku") && mPassword2.equals("aku?dmu")) || db.Login(mEmail2, mPassword2) ||
-                            (mEmail2.equals("test1234") && mPassword2.equals("test1234")) || (mEmail2.equals("test12345") && mPassword2.equals("test12345"))) {
+                            (mEmail2.equals("test1234") && mPassword2.equals("test1234"))) {
                         AppMain.userName = mEmail2;
                         AppMain.admin = mEmail2.contains("@");
 
                         finish();
 
-                        Intent iLogin = new Intent(LoginActivity.this, SectionCActivity.class);
+                        Intent iLogin = new Intent(LoginActivity.this, MainActivity.class);
                         startActivity(iLogin);
 
                     } else {
