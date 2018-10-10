@@ -5,6 +5,7 @@ import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.CompoundButton;
 import android.widget.RadioGroup;
 
 import org.json.JSONException;
@@ -28,6 +29,8 @@ public class SectionFActivity extends AppCompatActivity {
         bi.setCallback(this);
 
         setTitle("ANC & Morbidity");
+
+        validatorClass.setScrollViewFocus(bi.scrollView);
 
 
         //============================Skip Patterns===============================
@@ -68,6 +71,41 @@ public class SectionFActivity extends AppCompatActivity {
                 } else {
                     bi.fldgrppff07.setVisibility(View.VISIBLE);
                     ClearClass.ClearAllCardFields(bi.fldgrppff07, true);
+                }
+            }
+        });
+
+        bi.pff0998.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+
+                if (b) {
+                    bi.pff0901.clearCheck();
+                    bi.pff0902.clearCheck();
+                    bi.pff0903.clearCheck();
+                    bi.pff0904.clearCheck();
+                    bi.pff0905.clearCheck();
+                    bi.pff0906.clearCheck();
+                    bi.pff0907.clearCheck();
+                    bi.pff0908.clearCheck();
+                    bi.pff0909.clearCheck();
+                    bi.pff0910.clearCheck();
+                    bi.pff0911.clearCheck();
+                    bi.pff0912.clearCheck();
+                    bi.pff0913.clearCheck();
+                    bi.pff0914.clearCheck();
+                    bi.pff0996.clearCheck();
+                    bi.pff0996x.setText(null);
+                    bi.fldgrppff10.setVisibility(View.GONE);
+                    ClearClass.ClearAllCardFields(bi.fldgrppff10, false);
+                    bi.fldgrppff11.setVisibility(View.GONE);
+                    ClearClass.ClearAllCardFields(bi.fldgrppff11, false);
+
+                } else {
+                    bi.fldgrppff10.setVisibility(View.VISIBLE);
+                    ClearClass.ClearAllCardFields(bi.fldgrppff10, true);
+                    bi.fldgrppff11.setVisibility(View.VISIBLE);
+                    ClearClass.ClearAllCardFields(bi.fldgrppff11, true);
                 }
             }
         });
