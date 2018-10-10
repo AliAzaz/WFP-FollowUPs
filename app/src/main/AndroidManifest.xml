@@ -32,7 +32,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme1">
         <activity
-            android:name=".activities.SectionJActivity"
+            android:name=".activities.SplashscreenActivity"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustResize|stateHidden">
             <intent-filter>
@@ -84,9 +84,9 @@
         <activity
             android:name=".activities.SectionIActivity"
             android:windowSoftInputMode="adjustResize" />
-        <!--<activity-->
-        <!--android:name=".activities.SectionJActivity"-->
-        <!--android:windowSoftInputMode="adjustResize" />-->
+        <activity
+            android:name=".activities.SectionJActivity"
+            android:windowSoftInputMode="adjustResize" />
     </application>
 
 </manifest>
