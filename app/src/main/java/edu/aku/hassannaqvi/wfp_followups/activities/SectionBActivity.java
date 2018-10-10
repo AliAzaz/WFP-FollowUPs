@@ -12,6 +12,7 @@ import org.json.JSONObject;
 import java.text.SimpleDateFormat;
 
 import edu.aku.hassannaqvi.wfp_followups.R;
+import edu.aku.hassannaqvi.wfp_followups.contracts.FormsContract;
 import edu.aku.hassannaqvi.wfp_followups.core.AppMain;
 import edu.aku.hassannaqvi.wfp_followups.core.DatabaseHelper;
 import edu.aku.hassannaqvi.wfp_followups.databinding.ActivitySectionBBinding;
@@ -62,6 +63,7 @@ public class SectionBActivity extends AppCompatActivity {
 
     public void saveDraft() throws JSONException {
 
+        AppMain.fc = new FormsContract();
         JSONObject sB = new JSONObject();
 
         sB.put("pfb01", bi.pfb01a.isChecked() ? "1" : bi.pfb01b.isChecked() ? "2" : bi.pfb01c.isChecked() ? "3" : bi.pfb01d.isChecked() ? "4" : bi.pfb01e.isChecked() ? "5" : bi.pfb01f.isChecked() ? "6" : bi.pfb01g.isChecked() ? "7" : "0");

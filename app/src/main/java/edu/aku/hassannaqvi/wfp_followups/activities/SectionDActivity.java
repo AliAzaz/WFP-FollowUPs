@@ -172,7 +172,7 @@ public class SectionDActivity extends AppCompatActivity {
 
             if (UpdateDB()) {
 
-                startActivity(new Intent(this, EndingActivity.class)
+                startActivity(new Intent(this, SectionEActivity.class)
                         .putExtra("complete", true));
                 finish();
             }
