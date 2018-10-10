@@ -84,9 +84,9 @@
         <activity
             android:name=".activities.SectionIActivity"
             android:windowSoftInputMode="adjustResize" />
-        <!--<activity-->
-        <!--android:name=".activities.SectionJActivity"-->
-        <!--android:windowSoftInputMode="adjustResize" />-->
+        <activity
+            android:name=".activities.SectionJActivity"
+            android:windowSoftInputMode="adjustResize" />
     </application>
 
 </manifest>

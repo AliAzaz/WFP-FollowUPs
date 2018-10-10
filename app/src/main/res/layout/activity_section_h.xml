@@ -133,7 +133,7 @@
                         android:id="@+id/pfh0201"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:hint="@string/pfh02a"
+                        android:hint="@string/pfc01a"
                         android:inputType="numberDecimal"
                         android:maxLength="4" />
 
@@ -155,7 +155,7 @@
                         android:id="@+id/pfh0202"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:hint="@string/pfh02a"
+                        android:hint="@string/pfc01a"
                         android:inputType="numberDecimal"
                         android:maxLength="4" />
 

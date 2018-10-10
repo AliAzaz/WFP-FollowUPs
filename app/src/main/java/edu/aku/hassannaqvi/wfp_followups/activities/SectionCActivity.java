@@ -84,7 +84,7 @@ public class SectionCActivity extends AppCompatActivity {
 
             if (UpdateDB()) {
 
-                startActivity(new Intent(this, EndingActivity.class)
+                startActivity(new Intent(this, SectionDActivity.class)
                         .putExtra("complete", true));
                 finish();
             }
@@ -133,6 +133,9 @@ public class SectionCActivity extends AppCompatActivity {
         if (!validatorClass.PatternTextBox(this, bi.pfc0101, getString(R.string.pfc01a), "^(\\d{2,2}\\.\\d{2,2})$", "XX.XX")) {
             return false;
         }
+        if (!validatorClass.RangeTextBox(this, bi.pfc0101, 25.0, 110.0, getString(R.string.pfc01a), "weight")) {
+            return false;
+        }
 
         if (!validatorClass.EmptySpinner(this, bi.pfc01b, getString(R.string.pfc01))) {
             return false;
@@ -143,6 +146,9 @@ public class SectionCActivity extends AppCompatActivity {
         }
 
         if (!validatorClass.PatternTextBox(this, bi.pfc0102, getString(R.string.pfc01a), "^(\\d{2,2}\\.\\d{2,2})$", "XX.XX")) {
+            return false;
+        }
+        if (!validatorClass.RangeTextBox(this, bi.pfc0102, 25.0, 110.0, getString(R.string.pfc01a), "weight")) {
             return false;
         }
 

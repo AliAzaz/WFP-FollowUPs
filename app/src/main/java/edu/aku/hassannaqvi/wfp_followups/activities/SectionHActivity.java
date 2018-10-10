@@ -163,12 +163,18 @@ public class SectionHActivity extends AppCompatActivity {
         if (!validatorClass.PatternTextBox(this, bi.pfh0101, getString(R.string.pfh01a), "^(\\d{2,2}\\.\\d{1,1})$", "XX.X")) {
             return false;
         }
+        if (!validatorClass.RangeTextBox(this, bi.pfh0101, 100.0, 180.0, getString(R.string.pfh01a), "height")) {
+            return false;
+        }
 
         if (!validatorClass.EmptySpinner(this, bi.pfh01b, getString(R.string.pfh01))) {
             return false;
         }
 
         if (!validatorClass.EmptyTextBox(this, bi.pfh0102, getString(R.string.pfh01a))) {
+            return false;
+        }
+        if (!validatorClass.RangeTextBox(this, bi.pfh0102, 100.0, 180.0, getString(R.string.pfh01a), "height")) {
             return false;
         }
 
@@ -181,6 +187,9 @@ public class SectionHActivity extends AppCompatActivity {
         }
 
         if (!validatorClass.EmptyTextBox(this, bi.pfh0201, getString(R.string.pfh02a))) {
+            return false;
+        }
+        if (!validatorClass.RangeTextBox(this, bi.pfh0201, 25.0, 110.0, getString(R.string.pfh02a), "weight")) {
             return false;
         }
 
@@ -197,6 +206,9 @@ public class SectionHActivity extends AppCompatActivity {
         }
 
         if (!validatorClass.PatternTextBox(this, bi.pfh0202, getString(R.string.pfh02a), "^(\\d{1,1}\\.\\d{2,2})$", "X.XX")) {
+            return false;
+        }
+        if (!validatorClass.RangeTextBox(this, bi.pfh0202, 25.0, 110.0, getString(R.string.pfh02a), "weight")) {
             return false;
         }
 

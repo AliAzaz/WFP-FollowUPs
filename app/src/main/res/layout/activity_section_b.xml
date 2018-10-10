@@ -217,6 +217,7 @@
                         android:textColor="@color/white" />
 
                     <EditText
+                        style="@style/textInput"
                         android:id="@+id/pfb03"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -249,6 +250,7 @@
 
                     <io.blackbox_vision.datetimepickeredittext.view.DatePickerInputEditText
                         android:id="@+id/pfb04"
+                        style="@style/textInput"
                         android:layout_margin="10dp"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
