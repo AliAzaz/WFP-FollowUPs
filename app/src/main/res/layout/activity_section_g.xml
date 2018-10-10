@@ -25,6 +25,7 @@
 
             <!--Q1-->
             <android.support.v7.widget.CardView
+                android:id="@+id/fldgrppfg01"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
@@ -44,6 +45,8 @@
                         android:textColor="@color/white" />
 
                     <EditText
+                        style="@style/textInput"
+                        android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz"
                         android:id="@+id/pfg01"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -55,6 +58,7 @@
 
             <!--Q02-->
             <android.support.v7.widget.CardView
+                android:id="@+id/fldgrppfg02"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
@@ -77,7 +81,7 @@
                         android:id="@+id/pfg02"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="vertical">
+                        android:orientation="horizontal">
 
                         <RadioButton
                             android:id="@+id/pfg02a"
@@ -101,6 +105,7 @@
 
             <!--Q03-->
             <android.support.v7.widget.CardView
+                android:id="@+id/fldgrppfg03"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
@@ -120,6 +125,7 @@
                         android:textColor="@color/white" />
 
                     <EditText
+                        style="@style/textInput"
                         android:id="@+id/pfg03m"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -128,6 +134,7 @@
                         android:inputType="number" />
 
                     <EditText
+                        style="@style/textInput"
                         android:id="@+id/pfg03d"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -140,6 +147,7 @@
 
             <!--Q04-->
             <android.support.v7.widget.CardView
+                android:id="@+id/fldgrppfg04"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
@@ -162,7 +170,7 @@
                         android:id="@+id/pfg04"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="vertical">
+                        android:orientation="horizontal">
 
                         <RadioButton
                             android:id="@+id/pfg04a"
@@ -187,6 +195,7 @@
 
             <!--Q05-->
             <android.support.v7.widget.CardView
+                android:id="@+id/fldgrppfg05"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
@@ -206,6 +215,8 @@
                         android:textColor="@color/white" />
 
                     <EditText
+                        style="@style/textInput"
+                        android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz"
                         android:id="@+id/pfg05"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -217,6 +228,7 @@
 
             <!--Q06-->
             <android.support.v7.widget.CardView
+                android:id="@+id/fldgrppfg06"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
@@ -239,7 +251,7 @@
                         android:id="@+id/pfg06"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="vertical">
+                        android:orientation="horizontal">
 
                         <RadioButton
                             android:id="@+id/pfg06a"
@@ -264,6 +276,7 @@
             <!--Q07-->
 
             <android.support.v7.widget.CardView
+                android:id="@+id/fldgrppfg07"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
@@ -297,6 +310,8 @@
                             android:text="@string/pfg07a" />
 
                         <EditText
+                            style="@style/textInput"
+                            android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz"
                             android:id="@+id/pfg07ax"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -312,6 +327,8 @@
                             android:text="@string/pfg07b" />
 
                         <EditText
+                            style="@style/textInput"
+                            android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz"
                             android:id="@+id/pfg07bx"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -332,6 +349,7 @@
 
             <!--Q08-->
             <android.support.v7.widget.CardView
+                android:id="@+id/fldgrppfg08"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
@@ -357,6 +375,7 @@
                         android:orientation="vertical">
 
                         <TextView
+                            android:gravity="center"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_horizontal"
@@ -407,6 +426,7 @@
                             android:text="@string/pfg08e" />
 
                         <TextView
+                            android:gravity="center"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_horizontal"
@@ -439,6 +459,8 @@
                             android:text="@string/other" />
 
                         <EditText
+                            style="@style/textInput"
+                            android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz"
                             android:id="@+id/pfg0896x"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -454,6 +476,7 @@
             <!--Q09-->
 
             <android.support.v7.widget.CardView
+                android:id="@+id/fldgrppfg09"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
@@ -479,6 +502,7 @@
                         android:orientation="vertical">
 
                         <TextView
+                            android:gravity="center"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_horizontal"
@@ -529,6 +553,7 @@
                             android:text="@string/pfg09e" />
 
                         <TextView
+                            android:gravity="center"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_horizontal"
@@ -561,6 +586,8 @@
                             android:text="@string/other" />
 
                         <EditText
+                            style="@style/textInput"
+                            android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz"
                             android:id="@+id/pfg0996x"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -584,6 +611,7 @@
 
             <!--Q10-->
             <android.support.v7.widget.CardView
+                android:id="@+id/fldgrppfg10"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
@@ -609,6 +637,7 @@
                         android:orientation="vertical">
 
                         <TextView
+                            android:gravity="center"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_horizontal"
@@ -634,6 +663,8 @@
                             android:text="@string/pfg10b" />
 
                         <EditText
+                            style="@style/textInput"
+                            android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz"
                             android:id="@+id/pfg10bx"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -643,6 +674,7 @@
                             android:visibility='@{pfg10b.checked? View.VISIBLE : View.GONE}' />
 
                         <TextView
+                            android:gravity="center"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_horizontal"
@@ -683,6 +715,8 @@
                             android:text="@string/other" />
 
                         <EditText
+                            style="@style/textInput"
+                            android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz"
                             android:id="@+id/pfg1096x"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -692,6 +726,7 @@
                             android:visibility='@{pfg1096.checked? View.VISIBLE : View.GONE}' />
 
                         <TextView
+                            android:gravity="center"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_horizontal"
@@ -732,6 +767,8 @@
                             android:text="@string/pfg10i" />
 
                         <EditText
+                            style="@style/textInput"
+                            android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz"
                             android:id="@+id/pfg10ix"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -749,6 +786,8 @@
                             android:text="@string/pfg10j" />
 
                         <EditText
+                            style="@style/textInput"
+                            android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz"
                             android:id="@+id/pfg10jx"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -764,6 +803,7 @@
 
             <!--Q11-->
             <android.support.v7.widget.CardView
+                android:id="@+id/fldgrppfg11"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
@@ -817,6 +857,7 @@
 
             <!--Q12-->
             <android.support.v7.widget.CardView
+                android:id="@+id/fldgrppfg12"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
@@ -870,6 +911,7 @@
 
             <!--Q13-->
             <android.support.v7.widget.CardView
+                android:id="@+id/fldgrppfg13"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
@@ -923,6 +965,7 @@
 
             <!--Q14-->
             <android.support.v7.widget.CardView
+                android:id="@+id/fldgrppfg14"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
@@ -956,6 +999,8 @@
                             android:text="@string/pfg14a" />
 
                         <EditText
+                            style="@style/textInput"
+                            android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz"
                             android:id="@+id/pfg14ax"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -974,6 +1019,8 @@
                             android:text="@string/pfg14b" />
 
                         <EditText
+                            style="@style/textInput"
+                            android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz"
                             android:id="@+id/pfg14bx"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -992,6 +1039,8 @@
                             android:text="@string/pfg14c" />
 
                         <EditText
+                            style="@style/textInput"
+                            android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz"
                             android:id="@+id/pfg14cx"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -1021,6 +1070,7 @@
 
             <!--Q15-->
             <android.support.v7.widget.CardView
+                android:id="@+id/fldgrppfg15"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
@@ -1074,6 +1124,7 @@
 
             <!--Q16-->
             <android.support.v7.widget.CardView
+                android:id="@+id/fldgrppfg16"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
@@ -1149,6 +1200,8 @@
                         android:text="@string/other" />
 
                     <EditText
+                        style="@style/textInput"
+                        android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz"
                         android:id="@+id/pfg1696x"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -1171,6 +1224,7 @@
             <!--Q17-->
 
             <android.support.v7.widget.CardView
+                android:id="@+id/fldgrppfg17"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
@@ -1252,6 +1306,8 @@
                             android:text="@string/other" />
 
                         <EditText
+                            style="@style/textInput"
+                            android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz"
                             android:id="@+id/pfg1796x"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -1317,6 +1373,8 @@
                             android:text="@string/other" />
 
                         <EditText
+                            style="@style/textInput"
+                            android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz"
                             android:id="@+id/pfg179602x"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -1366,6 +1424,8 @@
                             android:text="@string/other" />
 
                         <EditText
+                            style="@style/textInput"
+                            android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz"
                             android:id="@+id/pfg179603x"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -1380,6 +1440,7 @@
 
             <!--Q18-->
             <android.support.v7.widget.CardView
+                android:id="@+id/fldgrppfg18"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
@@ -1426,6 +1487,7 @@
 
             <!--Q19-->
             <android.support.v7.widget.CardView
+                android:id="@+id/fldgrppfg19"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
@@ -1509,6 +1571,8 @@
                         android:text="@string/other" />
 
                     <EditText
+                        style="@style/textInput"
+                        android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz"
                         android:id="@+id/pfg1996x"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -1523,6 +1587,7 @@
             <!--Q20-->
 
             <android.support.v7.widget.CardView
+                android:id="@+id/fldgrppfg20"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
@@ -1556,6 +1621,8 @@
                             android:text="@string/pfg20a" />
 
                         <EditText
+                            style="@style/textInput"
+                            android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz"
                             android:id="@+id/pfg20ax"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -1574,6 +1641,8 @@
                             android:text="@string/pfg20b" />
 
                         <EditText
+                            style="@style/textInput"
+                            android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz"
                             android:id="@+id/pfg20bx"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -1592,6 +1661,8 @@
                             android:text="@string/pfg20c" />
 
                         <EditText
+                            style="@style/textInput"
+                            android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz"
                             android:id="@+id/pfg20cx"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -1615,6 +1686,7 @@
 
             <!--Q21-->
             <android.support.v7.widget.CardView
+                android:id="@+id/fldgrppfg21"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
@@ -1634,6 +1706,7 @@
                         android:textColor="@color/white" />
 
                     <EditText
+                        style="@style/textInput"
                         android:id="@+id/pfg21"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -1646,6 +1719,7 @@
             <!--Q22-->
 
             <android.support.v7.widget.CardView
+                android:id="@+id/fldgrppfg22"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
@@ -1737,6 +1811,8 @@
                         android:text="@string/other" />
 
                     <EditText
+                        style="@style/textInput"
+                        android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz"
                         android:id="@+id/pfg2296x"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -1750,6 +1826,7 @@
 
             <!--Q23-->
             <android.support.v7.widget.CardView
+                android:id="@+id/fldgrppfg23"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
@@ -1796,6 +1873,7 @@
 
             <!--Q24-->
             <android.support.v7.widget.CardView
+                android:id="@+id/fldgrppfg24"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
@@ -1879,6 +1957,8 @@
                         android:text="@string/other" />
 
                     <EditText
+                        style="@style/textInput"
+                        android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz"
                         android:id="@+id/pfg2496x"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -1894,6 +1974,7 @@
             <!--Q25-->
 
             <android.support.v7.widget.CardView
+                android:id="@+id/fldgrppfg25"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
@@ -1927,6 +2008,8 @@
                             android:text="@string/pfg25a" />
 
                         <EditText
+                            style="@style/textInput"
+                            android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz"
                             android:id="@+id/pfg25ax"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -1945,6 +2028,8 @@
                             android:text="@string/pfg25b" />
 
                         <EditText
+                            style="@style/textInput"
+                            android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz"
                             android:id="@+id/pfg25bx"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -1986,6 +2071,7 @@
 
             <!--Q26-->
             <android.support.v7.widget.CardView
+                android:id="@+id/fldgrppfg26"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
@@ -2054,6 +2140,8 @@
                         android:text="@string/other" />
 
                     <EditText
+                        style="@style/textInput"
+                        android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz"
                         android:id="@+id/pfg2696x"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"

@@ -32,7 +32,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme1">
         <activity
-            android:name=".activities.SectionFActivity"
+            android:name=".activities.SectionJActivity"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustResize|stateHidden">
             <intent-filter>
@@ -72,9 +72,9 @@
         <activity
             android:name=".activities.SectionDActivity"
             android:windowSoftInputMode="adjustResize" />
-        <!--<activity-->
-        <!--android:name=".activities.SectionFActivity"-->
-        <!--android:windowSoftInputMode="adjustResize" />-->
+        <activity
+            android:name=".activities.SectionFActivity"
+            android:windowSoftInputMode="adjustResize" />
         <activity
             android:name=".activities.SectionGActivity"
             android:windowSoftInputMode="adjustResize" />
@@ -84,9 +84,9 @@
         <activity
             android:name=".activities.SectionIActivity"
             android:windowSoftInputMode="adjustResize" />
-        <activity
-            android:name=".activities.SectionJActivity"
-            android:windowSoftInputMode="adjustResize" />
+        <!--<activity-->
+        <!--android:name=".activities.SectionJActivity"-->
+        <!--android:windowSoftInputMode="adjustResize" />-->
     </application>
 
 </manifest>

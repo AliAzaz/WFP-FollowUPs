@@ -4,27 +4,34 @@ import android.content.Intent;
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
+import android.widget.CompoundButton;
+import android.widget.RadioGroup;
 import android.widget.Toast;
 
+import org.json.JSONException;
 import org.json.JSONObject;
 
 import edu.aku.hassannaqvi.wfp_followups.R;
 import edu.aku.hassannaqvi.wfp_followups.core.AppMain;
 import edu.aku.hassannaqvi.wfp_followups.core.DatabaseHelper;
 import edu.aku.hassannaqvi.wfp_followups.databinding.ActivitySectionJBinding;
+import edu.aku.hassannaqvi.wfp_followups.validation.ClearClass;
+import edu.aku.hassannaqvi.wfp_followups.validation.validatorClass;
 
 public class SectionJActivity extends AppCompatActivity {
 
 
-    ActivitySectionJBinding binding;
+    ActivitySectionJBinding bi;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        binding = DataBindingUtil.setContentView(this, R.layout.activity_section_j);
-        binding.setCallback(this);
+        bi = DataBindingUtil.setContentView(this, R.layout.activity_section_j);
+        bi.setCallback(this);
 
         this.setTitle(getString(R.string.pfjheading));
+        validatorClass.setScrollViewFocus(bi.scrollview);
 
         setupViews();
 
@@ -33,13 +40,70 @@ public class SectionJActivity extends AppCompatActivity {
 
     private void setupViews() {
 
+        bi.pfj0100.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+
+                if (b) {
+                    bi.fldgrppfj02.setVisibility(View.GONE);
+                    bi.fldgrppfj03.setVisibility(View.GONE);
+                    bi.pfj0101.clearCheck();
+                    bi.pfj0102.clearCheck();
+                    bi.pfj0103.clearCheck();
+                    bi.pfj0104.clearCheck();
+                    bi.pfj0105.clearCheck();
+                    bi.pfj0106.clearCheck();
+                    bi.pfj0107.clearCheck();
+                    bi.pfj0108.clearCheck();
+                    bi.pfj0109.clearCheck();
+                    bi.pfj0109ax.setText(null);
+                    bi.pfj02.clearCheck();
+                    bi.pfj03a.setChecked(false);
+                    bi.pfj03b.setChecked(false);
+                    bi.pfj03c.setChecked(false);
+                    bi.pfj03d.setChecked(false);
+                    bi.pfj03e.setChecked(false);
+                    bi.pfj03f.setChecked(false);
+                    bi.pfj03g.setChecked(false);
+                    bi.pfj03h.setChecked(false);
+                    bi.pfj03i.setChecked(false);
+                    bi.pfj03ix.setText(null);
+                } else {
+                    bi.fldgrppfjmain.setVisibility(View.VISIBLE);
+                    bi.fldgrppfj02.setVisibility(View.VISIBLE);
+                    bi.fldgrppfj03.setVisibility(View.VISIBLE);
+
+                }
+            }
+        });
+
+        bi.pfj02.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup radioGroup, int i) {
+
+
+                if (i == R.id.pfj02b) {
+                    bi.fldgrppfj03.setVisibility(View.GONE);
+                    ClearClass.ClearAllCardFields(bi.fldgrppfj03, false);
+                    bi.pfj03ix.setText(null);
+                } else {
+                    bi.fldgrppfj03.setVisibility(View.VISIBLE);
+                    ClearClass.ClearAllCardFields(bi.fldgrppfj03, true);
+                }
+            }
+        });
+
 
     }
 
     public void BtnContinue() {
 
         if (formValidation()) {
-            saveDraft();
+            try {
+                saveDraft();
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
 
             if (UpdateDB()) {
 
@@ -51,9 +115,33 @@ public class SectionJActivity extends AppCompatActivity {
 
     }
 
-    public void saveDraft() {
+    public void saveDraft() throws JSONException {
 
-        JSONObject sB = new JSONObject();
+        JSONObject sJ = new JSONObject();
+
+        sJ.put("pfj0101", bi.pfj0101a.isChecked() ? "1" : bi.pfj0101a.isChecked() ? "2" : "0");
+        sJ.put("pfj0102", bi.pfj0102a.isChecked() ? "1" : bi.pfj0102b.isChecked() ? "2" : "0");
+        sJ.put("pfj0103", bi.pfj0103a.isChecked() ? "1" : bi.pfj0103b.isChecked() ? "2" : "0");
+        sJ.put("pfj0104", bi.pfj0104a.isChecked() ? "1" : bi.pfj0104b.isChecked() ? "2" : "0");
+        sJ.put("pfj0105", bi.pfj0105a.isChecked() ? "1" : bi.pfj0105b.isChecked() ? "2" : "0");
+        sJ.put("pfj0106", bi.pfj0106a.isChecked() ? "1" : bi.pfj0106b.isChecked() ? "2" : "0");
+        sJ.put("pfj0107", bi.pfj0107a.isChecked() ? "1" : bi.pfj0107b.isChecked() ? "2" : "0");
+        sJ.put("pfj0108", bi.pfj0108a.isChecked() ? "1" : bi.pfj0108b.isChecked() ? "2" : "0");
+        sJ.put("pfj0109", bi.pfj0109a.isChecked() ? "1" : bi.pfj0109b.isChecked() ? "2" : "0");
+        sJ.put("pfj0109x", bi.pfj0109ax.getText().toString());
+        sJ.put("pfj0198", bi.pfj0100.isChecked() ? "1" : "0");
+        sJ.put("pfj02", bi.pfj02a.isChecked() ? "1" : bi.pfj02b.isChecked() ? "2" : "0");
+        sJ.put("pfj03a", bi.pfj03a.isChecked() ? "1" : "0");
+        sJ.put("pfj03b", bi.pfj03b.isChecked() ? "2" : "0");
+        sJ.put("pfj03c", bi.pfj03c.isChecked() ? "3" : "0");
+        sJ.put("pfj03d", bi.pfj03d.isChecked() ? "4" : "0");
+        sJ.put("pfj03e", bi.pfj03e.isChecked() ? "5" : "0");
+        sJ.put("pfj03f", bi.pfj03f.isChecked() ? "6" : "0");
+        sJ.put("pfj03g", bi.pfj03g.isChecked() ? "7" : "0");
+        sJ.put("pfj03h", bi.pfj03h.isChecked() ? "8" : "0");
+        sJ.put("pfj03i", bi.pfj03i.isChecked() ? "96" : "0");
+        sJ.put("pfj03i96", bi.pfj03ix.getText().toString());
+
         /*sB.put("mp15b01", bi.mp15b01a.isChecked() ? "1" : bi.mp15b01b.isChecked() ? "2" : bi.mp15b01c.isChecked() ? "3" : bi.mp15b01d.isChecked() ? "4" : "0");
         sB.put("mp15b02", bi.mp15b02a.isChecked() ? "1" : bi.mp15b02b.isChecked() ? "2" : "0");
         sB.put("mp15b03", bi.mp15b03a.isChecked() ? "1" : bi.mp15b03b.isChecked() ? "2" : bi.mp15b03c.isChecked() ? "3" : bi.mp15b03d.isChecked() ? "4" : bi.mp15b03e.isChecked() ? "5" : "0");
@@ -114,75 +202,55 @@ public class SectionJActivity extends AppCompatActivity {
 
     public boolean formValidation() {
 
-        /*if (bi.mp15b04c.isChecked()) {
+        if (!bi.pfj0100.isChecked()) {
 
-            if (!validatorClass.EmptyCheckBox(this, bi.fldgrpmp15b12, bi.mp15b12a, getString(R.string.mp15b12))) {
+            if (!validatorClass.EmptyRadioButton(this, bi.pfj0101, bi.pfj0101a, getString(R.string.pfj01))) {
                 return false;
             }
-
-            if (bi.mp15b12j.isChecked()) {
-                if (!validatorClass.EmptyTextBox(this, bi.mp15b12jx, getString(R.string.mp15b12))) {
+            if (!validatorClass.EmptyRadioButton(this, bi.pfj0102, bi.pfj0102a, getString(R.string.pfj01))) {
+                return false;
+            }
+            if (!validatorClass.EmptyRadioButton(this, bi.pfj0103, bi.pfj0103a, getString(R.string.pfj01))) {
+                return false;
+            }
+            if (!validatorClass.EmptyRadioButton(this, bi.pfj0104, bi.pfj0104a, getString(R.string.pfj01))) {
+                return false;
+            }
+            if (!validatorClass.EmptyRadioButton(this, bi.pfj0105, bi.pfj0105a, getString(R.string.pfj01))) {
+                return false;
+            }
+            if (!validatorClass.EmptyRadioButton(this, bi.pfj0106, bi.pfj0106a, getString(R.string.pfj01))) {
+                return false;
+            }
+            if (!validatorClass.EmptyRadioButton(this, bi.pfj0107, bi.pfj0107a, getString(R.string.pfj01))) {
+                return false;
+            }
+            if (!validatorClass.EmptyRadioButton(this, bi.pfj0108, bi.pfj0108a, getString(R.string.pfj01))) {
+                return false;
+            }
+            if (!validatorClass.EmptyRadioButton(this, bi.pfj0109, bi.pfj0109a, getString(R.string.pfj01))) {
+                return false;
+            }
+            if (bi.pfj0109a.isChecked()) {
+                if (!validatorClass.EmptyTextBox(this, bi.pfj0109ax, getString(R.string.pfj01))) {
                     return false;
                 }
             }
-
-            if (!validatorClass.EmptyRadioButton(this, bi.mp15b13, bi.mp15b13a, getString(R.string.mp15b13))) {
+            if (!validatorClass.EmptyRadioButton(this, bi.pfj02, bi.pfj02a, getString(R.string.pfj02))) {
                 return false;
             }
-            if (!bi.mp15b13b.isChecked()) {
-                if (!validatorClass.EmptyRadioButton(this, bi.mp15b14, bi.mp15b14a, getString(R.string.mp15b14))) {
+            if (!bi.pfj02b.isChecked()) {
+                if (!validatorClass.EmptyCardCheckBox(this, bi.fldgrppfj03, bi.pfj03a, getString(R.string.pfj03))) {
                     return false;
                 }
-
-                if (bi.mp15b14j.isChecked()) {
-                    if (!validatorClass.EmptyTextBox(this, bi.mp15b14jx, getString(R.string.mp15b14))) {
-                        return false;
-                    }
+                if (bi.pfj03i.isChecked()) {
+                    return validatorClass.EmptyTextBox(this, bi.pfj03ix, getString(R.string.pfj03));
                 }
             }
 
-            if (!validatorClass.EmptyRadioButton(this, bi.mp15b15, bi.mp15b15a, getString(R.string.mp15b15))) {
-                return false;
-            }
+        }
 
-            if (!bi.mp15b15b.isChecked()) {
-                if (!validatorClass.EmptyRadioButton(this, bi.mp15b16, bi.mp15b16a, getString(R.string.mp15b16))) {
-                    return false;
-                }
 
-                if (bi.mp15b16j.isChecked()) {
-                    if (!validatorClass.EmptyTextBox(this, bi.mp15b16jx, getString(R.string.mp15b16))) {
-                        return false;
-                    }
-                }
-
-            }
-            if (!validatorClass.EmptyRadioButton(this, bi.mp15b17, bi.mp15b17a, getString(R.string.mp15b17))) {
-                return false;
-            }
-
-            if (!validatorClass.EmptyRadioButton(this, bi.mp15b18, bi.mp15b18a, getString(R.string.mp15b18))) {
-                return false;
-            }
-
-            if (!bi.mp15b18b.isChecked()) {
-                if (!validatorClass.EmptyRadioButton(this, bi.mp15b19, bi.mp15b19a, getString(R.string.mp15b19))) {
-                    return false;
-                }
-                if (!validatorClass.EmptyRadioButton(this, bi.mp15b20, bi.mp15b20a, getString(R.string.mp15b20))) {
-                    return false;
-                }
-            }
-
-            if (!validatorClass.EmptyRadioButton(this, bi.mp15b21, bi.mp15b21a, getString(R.string.mp15b21))) {
-                return false;
-            }
-
-            if (!validatorClass.EmptyRadioButton(this, bi.mp15b22, bi.mp15b22a, getString(R.string.mp15b22))) {
-                return false;
-            }
-
-        }*/
         return true;
 
     }

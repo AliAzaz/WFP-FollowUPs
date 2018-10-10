@@ -11,9 +11,9 @@
     </data>
 
     <ScrollView
+        android:id="@+id/scrollview"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="5dp">
+        android:layout_height="wrap_content">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -24,57 +24,37 @@
             android:paddingEnd="16dp"
             android:paddingRight="14dp">
 
-            <!--Q1-->
-            <android.support.v7.widget.CardView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:elevation="10dp">
+            <!--&lt;!&ndash;Q1&ndash;&gt;-->
+            <!--<android.support.v7.widget.CardView-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginTop="10dp"-->
+            <!--android:elevation="10dp">-->
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
+            <!--<LinearLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:orientation="vertical">-->
 
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_horizontal"
-                        android:background="@color/colorPrimaryDark"
-                        android:text="@string/pfb01"
-                        android:textColor="@color/white" />
+            <!--<TextView-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_gravity="center_horizontal"-->
+            <!--android:background="@color/colorPrimaryDark"-->
+            <!--android:text="@string/pfb01"-->
+            <!--android:textColor="@color/white" />-->
 
-                </LinearLayout>
+            <!--</LinearLayout>-->
 
-            </android.support.v7.widget.CardView>
+            <!--</android.support.v7.widget.CardView>-->
 
-            <!--01.00-->
-            <android.support.v7.widget.CardView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:elevation="10dp">
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
-
-                    <CheckBox
-                        android:id="@+id/pfj0100"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="@string/na" />
-
-                </LinearLayout>
-
-            </android.support.v7.widget.CardView>
 
             <LinearLayout
+                android:id="@+id/fldgrppfjmain"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:visibility="@{pfj0100.checked ? View.GONE : View.VISIBLE}">
+                android:orientation="vertical">
 
                 <!--01.01-->
                 <android.support.v7.widget.CardView
@@ -94,6 +74,14 @@
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_horizontal"
                             android:background="@color/colorPrimaryDark"
+                            android:text="@string/pfj01"
+                            android:textColor="@color/white" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:background="@color/colorPrimary"
                             android:text="@string/pfj01a"
                             android:textColor="@color/white" />
 
@@ -101,7 +89,7 @@
                             android:id="@+id/pfj0101"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:orientation="vertical">
+                            android:orientation="horizontal">
 
                             <RadioButton
                                 android:id="@+id/pfj0101a"
@@ -142,7 +130,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_horizontal"
-                            android:background="@color/colorPrimaryDark"
+                            android:background="@color/colorPrimary"
                             android:text="@string/pfj01b"
                             android:textColor="@color/white" />
 
@@ -150,7 +138,7 @@
                             android:id="@+id/pfj0102"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:orientation="vertical">
+                            android:orientation="horizontal">
 
                             <RadioButton
                                 android:id="@+id/pfj0102a"
@@ -191,7 +179,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_horizontal"
-                            android:background="@color/colorPrimaryDark"
+                            android:background="@color/colorPrimary"
                             android:text="@string/pfj01c"
                             android:textColor="@color/white" />
 
@@ -199,7 +187,7 @@
                             android:id="@+id/pfj0103"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:orientation="vertical">
+                            android:orientation="horizontal">
 
                             <RadioButton
                                 android:id="@+id/pfj0103a"
@@ -240,7 +228,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_horizontal"
-                            android:background="@color/colorPrimaryDark"
+                            android:background="@color/colorPrimary"
                             android:text="@string/pfj01d"
                             android:textColor="@color/white" />
 
@@ -248,7 +236,7 @@
                             android:id="@+id/pfj0104"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:orientation="vertical">
+                            android:orientation="horizontal">
 
                             <RadioButton
                                 android:id="@+id/pfj0104a"
@@ -289,7 +277,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_horizontal"
-                            android:background="@color/colorPrimaryDark"
+                            android:background="@color/colorPrimary"
                             android:text="@string/pfj01e"
                             android:textColor="@color/white" />
 
@@ -297,7 +285,7 @@
                             android:id="@+id/pfj0105"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:orientation="vertical">
+                            android:orientation="horizontal">
 
                             <RadioButton
                                 android:id="@+id/pfj0105a"
@@ -338,7 +326,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_horizontal"
-                            android:background="@color/colorPrimaryDark"
+                            android:background="@color/colorPrimary"
                             android:text="@string/pfj01f"
                             android:textColor="@color/white" />
 
@@ -346,7 +334,7 @@
                             android:id="@+id/pfj0106"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:orientation="vertical">
+                            android:orientation="horizontal">
 
                             <RadioButton
                                 android:id="@+id/pfj0106a"
@@ -387,7 +375,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_horizontal"
-                            android:background="@color/colorPrimaryDark"
+                            android:background="@color/colorPrimary"
                             android:text="@string/pfj01g"
                             android:textColor="@color/white" />
 
@@ -395,7 +383,7 @@
                             android:id="@+id/pfj0107"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:orientation="vertical">
+                            android:orientation="horizontal">
 
                             <RadioButton
                                 android:id="@+id/pfj0107a"
@@ -436,7 +424,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_horizontal"
-                            android:background="@color/colorPrimaryDark"
+                            android:background="@color/colorPrimary"
                             android:text="@string/pfj01h"
                             android:textColor="@color/white" />
 
@@ -444,7 +432,7 @@
                             android:id="@+id/pfj0108"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:orientation="vertical">
+                            android:orientation="horizontal">
 
                             <RadioButton
                                 android:id="@+id/pfj0108a"
@@ -485,7 +473,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_horizontal"
-                            android:background="@color/colorPrimaryDark"
+                            android:background="@color/colorPrimary"
                             android:text="@string/other"
                             android:textColor="@color/white" />
 
@@ -493,7 +481,7 @@
                             android:id="@+id/pfj0109"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:orientation="vertical">
+                            android:orientation="horizontal">
 
                             <RadioButton
                                 android:id="@+id/pfj0109a"
@@ -503,14 +491,6 @@
                                 android:layout_weight="1"
                                 android:text="@string/yes" />
 
-                            <EditText
-                                android:id="@+id/pfj0109ax"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:hint="@string/other"
-                                android:text='@{pfj0109a.checked ? pfj0109ax.getText.toString : ""}'
-                                android:visibility="@{pfj0109a.checked ? View.VISIBLE : View.GONE}" />
-
                             <RadioButton
                                 android:id="@+id/pfj0109b"
                                 android:layout_width="match_parent"
@@ -519,7 +499,42 @@
                                 android:layout_weight="1"
                                 android:text="@string/no" />
 
+
                         </RadioGroup>
+
+                        <EditText
+                            android:id="@+id/pfj0109ax"
+                            style="@style/textInput"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:hint="@string/other"
+                            android:text='@{pfj0109a.checked ? pfj0109ax.getText.toString : ""}'
+                            android:visibility="@{pfj0109a.checked ? View.VISIBLE : View.GONE}" />
+
+                        <!--01.00-->
+                        <android.support.v7.widget.CardView
+                            android:id="@+id/fldgrpfj01"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:elevation="10dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <CheckBox
+                                    android:id="@+id/pfj0100"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/na" />
+
+                            </LinearLayout>
+
+                        </android.support.v7.widget.CardView>
+
 
                     </LinearLayout>
 
@@ -529,13 +544,14 @@
 
             <!--02-->
             <android.support.v7.widget.CardView
+                android:id="@+id/fldgrppfj02"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:elevation="10dp">
 
                 <LinearLayout
-                    android:id="@+id/fldgrppfj02"
+
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
@@ -578,14 +594,13 @@
 
             <!--03-->
             <android.support.v7.widget.CardView
+                android:id="@+id/fldgrppfj03"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:elevation="10dp"
-                android:visibility="@{pfj02b.checked ? View.GONE : View.VISIBLE}">
+                android:elevation="10dp">
 
                 <LinearLayout
-                    android:id="@+id/fldgrppfj03"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
@@ -596,6 +611,15 @@
                         android:layout_gravity="center_horizontal"
                         android:background="@color/colorPrimaryDark"
                         android:text="@string/pfj03"
+                        android:textColor="@color/white" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:background="@color/colorPrimary"
+                        android:gravity="center"
+                        android:text="@string/pfj03sub"
                         android:textColor="@color/white" />
 
                     <CheckBox
@@ -616,6 +640,14 @@
                         android:layout_height="wrap_content"
                         android:text="@string/pfj03c" />
 
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:background="@color/colorPrimary"
+                        android:gravity="center"
+                        android:text="@string/pfj03sub1"
+                        android:textColor="@color/white" />
                     <CheckBox
                         android:id="@+id/pfj03d"
                         android:layout_width="match_parent"
@@ -653,6 +685,9 @@
                         android:text="@string/other" />
 
                     <EditText
+                        style="@style/textInput"
+                        android:layout_margin="10dp"
+                        android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz"
                         android:id="@+id/pfj03ix"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
