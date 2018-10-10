@@ -4,7 +4,11 @@ import android.content.Intent;
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
+import android.widget.RadioGroup;
+import android.widget.Toast;
 
+import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
@@ -13,6 +17,8 @@ import edu.aku.hassannaqvi.wfp_followups.R;
 import edu.aku.hassannaqvi.wfp_followups.core.AppMain;
 import edu.aku.hassannaqvi.wfp_followups.core.DatabaseHelper;
 import edu.aku.hassannaqvi.wfp_followups.databinding.ActivitySectionIBinding;
+import edu.aku.hassannaqvi.wfp_followups.validation.ClearClass;
+import edu.aku.hassannaqvi.wfp_followups.validation.validatorClass;
 
 public class SectionIActivity extends AppCompatActivity {
 
@@ -26,33 +32,31 @@ public class SectionIActivity extends AppCompatActivity {
 
         bi = DataBindingUtil.setContentView(this, R.layout.activity_section_i);
         bi.setCallback(this);
-        this.setTitle("Section I");
-
+        this.setTitle(getString(R.string.pfiheading));
 
         //=====================skip patterns=======================================
 
-
-        /*bi.cci01.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+        bi.pfi01.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
 
-                if (i != R.id.cci01a) {
+                if (i != R.id.pfi01a) {
 
-                    bi.fldgrpcci02.setVisibility(View.VISIBLE);
-                    ClearClass.ClearAllFields(bi.fldgrpcci02, true);
+                    bi.fldgrppfi02.setVisibility(View.VISIBLE);
+                    ClearClass.ClearAllFields(bi.fldgrppfi02, true);
 
                 } else {
-                    bi.fldgrpcci02.setVisibility(View.GONE);
-                    ClearClass.ClearAllFields(bi.fldgrpcci02, false);
+                    bi.fldgrppfi02.setVisibility(View.GONE);
+                    ClearClass.ClearAllFields(bi.fldgrppfi02, false);
                 }
             }
         });
 
-        bi.cci08a.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+        bi.pfi12a.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
 
-                if (i == R.id.cci08a02) {
+                if (i == R.id.pfi12a02) {
                     answersArray.add(2);
                 } else {
                     answersArray.add(1);
@@ -60,47 +64,22 @@ public class SectionIActivity extends AppCompatActivity {
 
                 for (int j = 0; j < answersArray.size(); j++) {
                     if (answersArray.get(j) == 2) {
-                        bi.fldgrpcci08.setVisibility(View.GONE);
-                        ClearClass.ClearAllFields(bi.fldgrpcci08, false);
+                        bi.fldgrppfi12.setVisibility(View.GONE);
+                        ClearClass.ClearAllFields(bi.fldgrppfi12, false);
 
                     } else {
-                        bi.fldgrpcci08.setVisibility(View.VISIBLE);
-                        ClearClass.ClearAllFields(bi.fldgrpcci08, true);
+                        bi.fldgrppfi12.setVisibility(View.VISIBLE);
+                        ClearClass.ClearAllFields(bi.fldgrppfi12, true);
                     }
                 }
 
             }
         });
-        bi.cci08b.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+        bi.pfi12b.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
 
-                if (i == R.id.cci08b02) {
-
-                    answersArray.add(2);
-                } else {
-                    answersArray.add(1);
-                }
-
-                for (int j = 0; j < answersArray.size(); j++) {
-
-                    if (answersArray.get(j) == 2) {
-                        bi.fldgrpcci08.setVisibility(View.GONE);
-                        ClearClass.ClearAllFields(bi.fldgrpcci08, false);
-
-                    } else {
-                        bi.fldgrpcci08.setVisibility(View.VISIBLE);
-                        ClearClass.ClearAllFields(bi.fldgrpcci08, true);
-                    }
-                }
-
-            }
-        });
-        bi.cci08c.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(RadioGroup radioGroup, int i) {
-
-                if (i == R.id.cci08c02) {
+                if (i == R.id.pfi12b02) {
 
                     answersArray.add(2);
                 } else {
@@ -110,22 +89,22 @@ public class SectionIActivity extends AppCompatActivity {
                 for (int j = 0; j < answersArray.size(); j++) {
 
                     if (answersArray.get(j) == 2) {
-                        bi.fldgrpcci08.setVisibility(View.GONE);
-                        ClearClass.ClearAllFields(bi.fldgrpcci08, false);
+                        bi.fldgrppfi12.setVisibility(View.GONE);
+                        ClearClass.ClearAllFields(bi.fldgrppfi12, false);
 
                     } else {
-                        bi.fldgrpcci08.setVisibility(View.VISIBLE);
-                        ClearClass.ClearAllFields(bi.fldgrpcci08, true);
+                        bi.fldgrppfi12.setVisibility(View.VISIBLE);
+                        ClearClass.ClearAllFields(bi.fldgrppfi12, true);
                     }
                 }
 
             }
         });
-        bi.cci08d.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+        bi.pfi12c.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
 
-                if (i == R.id.cci08d02) {
+                if (i == R.id.pfi12c02) {
 
                     answersArray.add(2);
                 } else {
@@ -135,22 +114,22 @@ public class SectionIActivity extends AppCompatActivity {
                 for (int j = 0; j < answersArray.size(); j++) {
 
                     if (answersArray.get(j) == 2) {
-                        bi.fldgrpcci08.setVisibility(View.GONE);
-                        ClearClass.ClearAllFields(bi.fldgrpcci08, false);
+                        bi.fldgrppfi12.setVisibility(View.GONE);
+                        ClearClass.ClearAllFields(bi.fldgrppfi12, false);
 
                     } else {
-                        bi.fldgrpcci08.setVisibility(View.VISIBLE);
-                        ClearClass.ClearAllFields(bi.fldgrpcci08, true);
+                        bi.fldgrppfi12.setVisibility(View.VISIBLE);
+                        ClearClass.ClearAllFields(bi.fldgrppfi12, true);
                     }
                 }
 
             }
         });
-        bi.cci08e.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+        bi.pfi12d.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
 
-                if (i == R.id.cci08e02) {
+                if (i == R.id.pfi12d02) {
 
                     answersArray.add(2);
                 } else {
@@ -160,22 +139,22 @@ public class SectionIActivity extends AppCompatActivity {
                 for (int j = 0; j < answersArray.size(); j++) {
 
                     if (answersArray.get(j) == 2) {
-                        bi.fldgrpcci08.setVisibility(View.GONE);
-                        ClearClass.ClearAllFields(bi.fldgrpcci08, false);
+                        bi.fldgrppfi12.setVisibility(View.GONE);
+                        ClearClass.ClearAllFields(bi.fldgrppfi12, false);
 
                     } else {
-                        bi.fldgrpcci08.setVisibility(View.VISIBLE);
-                        ClearClass.ClearAllFields(bi.fldgrpcci08, true);
+                        bi.fldgrppfi12.setVisibility(View.VISIBLE);
+                        ClearClass.ClearAllFields(bi.fldgrppfi12, true);
                     }
                 }
 
             }
         });
-        bi.cci08f.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+        bi.pfi12e.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
 
-                if (i == R.id.cci08f02) {
+                if (i == R.id.pfi12e02) {
 
                     answersArray.add(2);
                 } else {
@@ -185,21 +164,22 @@ public class SectionIActivity extends AppCompatActivity {
                 for (int j = 0; j < answersArray.size(); j++) {
 
                     if (answersArray.get(j) == 2) {
-                        bi.fldgrpcci08.setVisibility(View.GONE);
-                        ClearClass.ClearAllFields(bi.fldgrpcci08, false);
+                        bi.fldgrppfi12.setVisibility(View.GONE);
+                        ClearClass.ClearAllFields(bi.fldgrppfi12, false);
 
                     } else {
-                        bi.fldgrpcci08.setVisibility(View.VISIBLE);
-                        ClearClass.ClearAllFields(bi.fldgrpcci08, true);
+                        bi.fldgrppfi12.setVisibility(View.VISIBLE);
+                        ClearClass.ClearAllFields(bi.fldgrppfi12, true);
                     }
                 }
+
             }
         });
-        bi.cci08g.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+        bi.pfi12f.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
 
-                if (i == R.id.cci08g02) {
+                if (i == R.id.pfi12f02) {
 
                     answersArray.add(2);
                 } else {
@@ -209,22 +189,21 @@ public class SectionIActivity extends AppCompatActivity {
                 for (int j = 0; j < answersArray.size(); j++) {
 
                     if (answersArray.get(j) == 2) {
-                        bi.fldgrpcci08.setVisibility(View.GONE);
-                        ClearClass.ClearAllFields(bi.fldgrpcci08, false);
+                        bi.fldgrppfi12.setVisibility(View.GONE);
+                        ClearClass.ClearAllFields(bi.fldgrppfi12, false);
 
                     } else {
-                        bi.fldgrpcci08.setVisibility(View.VISIBLE);
-                        ClearClass.ClearAllFields(bi.fldgrpcci08, true);
+                        bi.fldgrppfi12.setVisibility(View.VISIBLE);
+                        ClearClass.ClearAllFields(bi.fldgrppfi12, true);
                     }
                 }
-
             }
         });
-        bi.cci08h.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+        bi.pfi12g.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
 
-                if (i == R.id.cci08h02) {
+                if (i == R.id.pfi12g02) {
 
                     answersArray.add(2);
                 } else {
@@ -234,22 +213,22 @@ public class SectionIActivity extends AppCompatActivity {
                 for (int j = 0; j < answersArray.size(); j++) {
 
                     if (answersArray.get(j) == 2) {
-                        bi.fldgrpcci08.setVisibility(View.GONE);
-                        ClearClass.ClearAllFields(bi.fldgrpcci08, false);
+                        bi.fldgrppfi12.setVisibility(View.GONE);
+                        ClearClass.ClearAllFields(bi.fldgrppfi12, false);
 
                     } else {
-                        bi.fldgrpcci08.setVisibility(View.VISIBLE);
-                        ClearClass.ClearAllFields(bi.fldgrpcci08, true);
+                        bi.fldgrppfi12.setVisibility(View.VISIBLE);
+                        ClearClass.ClearAllFields(bi.fldgrppfi12, true);
                     }
                 }
 
             }
         });
-        bi.cci08i.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+        bi.pfi12h.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
 
-                if (i == R.id.cci08i02) {
+                if (i == R.id.pfi12h02) {
 
                     answersArray.add(2);
                 } else {
@@ -259,22 +238,22 @@ public class SectionIActivity extends AppCompatActivity {
                 for (int j = 0; j < answersArray.size(); j++) {
 
                     if (answersArray.get(j) == 2) {
-                        bi.fldgrpcci08.setVisibility(View.GONE);
-                        ClearClass.ClearAllFields(bi.fldgrpcci08, false);
+                        bi.fldgrppfi12.setVisibility(View.GONE);
+                        ClearClass.ClearAllFields(bi.fldgrppfi12, false);
 
                     } else {
-                        bi.fldgrpcci08.setVisibility(View.VISIBLE);
-                        ClearClass.ClearAllFields(bi.fldgrpcci08, true);
+                        bi.fldgrppfi12.setVisibility(View.VISIBLE);
+                        ClearClass.ClearAllFields(bi.fldgrppfi12, true);
                     }
                 }
 
             }
         });
-        bi.cci08j.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+        bi.pfi12i.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
 
-                if (i == R.id.cci08j02) {
+                if (i == R.id.pfi12i02) {
 
                     answersArray.add(2);
                 } else {
@@ -284,22 +263,22 @@ public class SectionIActivity extends AppCompatActivity {
                 for (int j = 0; j < answersArray.size(); j++) {
 
                     if (answersArray.get(j) == 2) {
-                        bi.fldgrpcci08.setVisibility(View.GONE);
-                        ClearClass.ClearAllFields(bi.fldgrpcci08, false);
+                        bi.fldgrppfi12.setVisibility(View.GONE);
+                        ClearClass.ClearAllFields(bi.fldgrppfi12, false);
 
                     } else {
-                        bi.fldgrpcci08.setVisibility(View.VISIBLE);
-                        ClearClass.ClearAllFields(bi.fldgrpcci08, true);
+                        bi.fldgrppfi12.setVisibility(View.VISIBLE);
+                        ClearClass.ClearAllFields(bi.fldgrppfi12, true);
                     }
                 }
 
             }
         });
-        bi.cci08k.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+        bi.pfi12j.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
 
-                if (i == R.id.cci08k02) {
+                if (i == R.id.pfi12j02) {
 
                     answersArray.add(2);
                 } else {
@@ -309,22 +288,22 @@ public class SectionIActivity extends AppCompatActivity {
                 for (int j = 0; j < answersArray.size(); j++) {
 
                     if (answersArray.get(j) == 2) {
-                        bi.fldgrpcci08.setVisibility(View.GONE);
-                        ClearClass.ClearAllFields(bi.fldgrpcci08, false);
+                        bi.fldgrppfi12.setVisibility(View.GONE);
+                        ClearClass.ClearAllFields(bi.fldgrppfi12, false);
 
                     } else {
-                        bi.fldgrpcci08.setVisibility(View.VISIBLE);
-                        ClearClass.ClearAllFields(bi.fldgrpcci08, true);
+                        bi.fldgrppfi12.setVisibility(View.VISIBLE);
+                        ClearClass.ClearAllFields(bi.fldgrppfi12, true);
                     }
                 }
 
             }
         });
-        bi.cci08l.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+        bi.pfi12k.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
 
-                if (i == R.id.cci08l02) {
+                if (i == R.id.pfi12k02) {
 
                     answersArray.add(2);
                 } else {
@@ -334,22 +313,22 @@ public class SectionIActivity extends AppCompatActivity {
                 for (int j = 0; j < answersArray.size(); j++) {
 
                     if (answersArray.get(j) == 2) {
-                        bi.fldgrpcci08.setVisibility(View.GONE);
-                        ClearClass.ClearAllFields(bi.fldgrpcci08, false);
+                        bi.fldgrppfi12.setVisibility(View.GONE);
+                        ClearClass.ClearAllFields(bi.fldgrppfi12, false);
 
                     } else {
-                        bi.fldgrpcci08.setVisibility(View.VISIBLE);
-                        ClearClass.ClearAllFields(bi.fldgrpcci08, true);
+                        bi.fldgrppfi12.setVisibility(View.VISIBLE);
+                        ClearClass.ClearAllFields(bi.fldgrppfi12, true);
                     }
                 }
 
             }
         });
-        bi.cci08m.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+        bi.pfi12l.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
 
-                if (i == R.id.cci08m02) {
+                if (i == R.id.pfi12l02) {
 
                     answersArray.add(2);
                 } else {
@@ -359,22 +338,22 @@ public class SectionIActivity extends AppCompatActivity {
                 for (int j = 0; j < answersArray.size(); j++) {
 
                     if (answersArray.get(j) == 2) {
-                        bi.fldgrpcci08.setVisibility(View.GONE);
-                        ClearClass.ClearAllFields(bi.fldgrpcci08, false);
+                        bi.fldgrppfi12.setVisibility(View.GONE);
+                        ClearClass.ClearAllFields(bi.fldgrppfi12, false);
 
                     } else {
-                        bi.fldgrpcci08.setVisibility(View.VISIBLE);
-                        ClearClass.ClearAllFields(bi.fldgrpcci08, true);
+                        bi.fldgrppfi12.setVisibility(View.VISIBLE);
+                        ClearClass.ClearAllFields(bi.fldgrppfi12, true);
                     }
                 }
 
             }
         });
-        bi.cci08n.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+        bi.pfi12m.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
 
-                if (i == R.id.cci08n02) {
+                if (i == R.id.pfi12m02) {
 
                     answersArray.add(2);
                 } else {
@@ -384,22 +363,22 @@ public class SectionIActivity extends AppCompatActivity {
                 for (int j = 0; j < answersArray.size(); j++) {
 
                     if (answersArray.get(j) == 2) {
-                        bi.fldgrpcci08.setVisibility(View.GONE);
-                        ClearClass.ClearAllFields(bi.fldgrpcci08, false);
+                        bi.fldgrppfi12.setVisibility(View.GONE);
+                        ClearClass.ClearAllFields(bi.fldgrppfi12, false);
 
                     } else {
-                        bi.fldgrpcci08.setVisibility(View.VISIBLE);
-                        ClearClass.ClearAllFields(bi.fldgrpcci08, true);
+                        bi.fldgrppfi12.setVisibility(View.VISIBLE);
+                        ClearClass.ClearAllFields(bi.fldgrppfi12, true);
                     }
                 }
 
             }
         });
-        bi.cci08o.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+        bi.pfi12n.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
 
-                if (i == R.id.cci08o02) {
+                if (i == R.id.pfi12n02) {
 
                     answersArray.add(2);
                 } else {
@@ -409,22 +388,22 @@ public class SectionIActivity extends AppCompatActivity {
                 for (int j = 0; j < answersArray.size(); j++) {
 
                     if (answersArray.get(j) == 2) {
-                        bi.fldgrpcci08.setVisibility(View.GONE);
-                        ClearClass.ClearAllFields(bi.fldgrpcci08, false);
+                        bi.fldgrppfi12.setVisibility(View.GONE);
+                        ClearClass.ClearAllFields(bi.fldgrppfi12, false);
 
                     } else {
-                        bi.fldgrpcci08.setVisibility(View.VISIBLE);
-                        ClearClass.ClearAllFields(bi.fldgrpcci08, true);
+                        bi.fldgrppfi12.setVisibility(View.VISIBLE);
+                        ClearClass.ClearAllFields(bi.fldgrppfi12, true);
                     }
                 }
 
             }
         });
-        bi.cci08p.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+        bi.pfi12o.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
 
-                if (i == R.id.cci08p02) {
+                if (i == R.id.pfi12o02) {
 
                     answersArray.add(2);
                 } else {
@@ -434,22 +413,22 @@ public class SectionIActivity extends AppCompatActivity {
                 for (int j = 0; j < answersArray.size(); j++) {
 
                     if (answersArray.get(j) == 2) {
-                        bi.fldgrpcci08.setVisibility(View.GONE);
-                        ClearClass.ClearAllFields(bi.fldgrpcci08, false);
+                        bi.fldgrppfi12.setVisibility(View.GONE);
+                        ClearClass.ClearAllFields(bi.fldgrppfi12, false);
 
                     } else {
-                        bi.fldgrpcci08.setVisibility(View.VISIBLE);
-                        ClearClass.ClearAllFields(bi.fldgrpcci08, true);
+                        bi.fldgrppfi12.setVisibility(View.VISIBLE);
+                        ClearClass.ClearAllFields(bi.fldgrppfi12, true);
                     }
                 }
 
             }
         });
-        bi.cci08q.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+        bi.pfi12p.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
 
-                if (i == R.id.cci08q02) {
+                if (i == R.id.pfi12p02) {
 
                     answersArray.add(2);
                 } else {
@@ -459,38 +438,67 @@ public class SectionIActivity extends AppCompatActivity {
                 for (int j = 0; j < answersArray.size(); j++) {
 
                     if (answersArray.get(j) == 2) {
-                        bi.fldgrpcci08.setVisibility(View.GONE);
-                        ClearClass.ClearAllFields(bi.fldgrpcci08, false);
+                        bi.fldgrppfi12.setVisibility(View.GONE);
+                        ClearClass.ClearAllFields(bi.fldgrppfi12, false);
+
                     } else {
-                        bi.fldgrpcci08.setVisibility(View.VISIBLE);
-                        ClearClass.ClearAllFields(bi.fldgrpcci08, true);
+                        bi.fldgrppfi12.setVisibility(View.VISIBLE);
+                        ClearClass.ClearAllFields(bi.fldgrppfi12, true);
+                    }
+                }
+
+            }
+        });
+        bi.pfi12q.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup radioGroup, int i) {
+
+                if (i == R.id.pfi12q02) {
+
+                    answersArray.add(2);
+                } else {
+                    answersArray.add(1);
+                }
+
+                for (int j = 0; j < answersArray.size(); j++) {
+
+                    if (answersArray.get(j) == 2) {
+                        bi.fldgrppfi12.setVisibility(View.GONE);
+                        ClearClass.ClearAllFields(bi.fldgrppfi12, false);
+                    } else {
+                        bi.fldgrppfi12.setVisibility(View.VISIBLE);
+                        ClearClass.ClearAllFields(bi.fldgrppfi12, true);
                     }
                 }
 
             }
         });
 
-        bi.cci09.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+        bi.pfi13.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
 
-                if (i == R.id.cci09a) {
-                    bi.fldgrpcci09.setVisibility(View.VISIBLE);
-                    ClearClass.ClearAllFields(bi.fldgrpcci09, true);
+                if (i == R.id.pfi13a) {
+                    bi.fldgrppfi13.setVisibility(View.VISIBLE);
+                    ClearClass.ClearAllFields(bi.fldgrppfi13, true);
 
                 } else {
-                    bi.fldgrpcci09.setVisibility(View.GONE);
-                    ClearClass.ClearAllFields(bi.fldgrpcci09, false);
+                    bi.fldgrppfi13.setVisibility(View.GONE);
+                    ClearClass.ClearAllFields(bi.fldgrppfi13, false);
                 }
             }
-        });*/
+        });
     }
 
     public void BtnContinue() {
 
         if (formValidate()) {
 
-            saveData();
+            try {
+                saveData();
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
             if (updateDb()) {
                 Intent secNext = new Intent(this, SectionJActivity.class);
                 secNext.putExtra("check", false);
@@ -517,244 +525,206 @@ public class SectionIActivity extends AppCompatActivity {
         return true;
     }
 
-    public void saveData() {
+    public void saveData() throws JSONException {
 
         JSONObject sI = new JSONObject();
 
-        /*sI.put("cci01", bi.cci01a.isChecked() ? "1" : bi.cci01b.isChecked() ? "2" : bi.cci0198.isChecked() ? "98" : "0");
-        sI.put("cci02", bi.cci02a.isChecked() ? "1" : bi.cci02b.isChecked() ? "2" : bi.cci0298.isChecked() ? "98" : "0");
-        sI.put("cci03", bi.cci03a.isChecked() ? "1" : bi.cci03h.isChecked() ? "2" : bi.cci03d.isChecked() ? "3" : "0");
-        sI.put("cci03h", bi.cci03hx.getText().toString());
-        sI.put("cci03d", bi.cci03dx.getText().toString());
-        sI.put("cci04", bi.cci04a.isChecked() ? "1" : bi.cci04b.isChecked() ? "2" : bi.cci0498.isChecked() ? "98" : "0");
-        sI.put("cci05", bi.cci05a.isChecked() ? "1" : bi.cci05b.isChecked() ? "2" : bi.cci0598.isChecked() ? "98" : "0");
-        sI.put("cci06", bi.cci06a.isChecked() ? "1" : bi.cci06b.isChecked() ? "2" : bi.cci0698.isChecked() ? "98" : "0");
-        sI.put("cci07a", bi.cci07a01.isChecked() ? "1" : bi.cci07a02.isChecked() ? "1" : bi.cci07a98.isChecked() ? "98" : "0");
-        sI.put("cci07b", bi.cci07b01.isChecked() ? "1" : bi.cci07b02.isChecked() ? "1" : bi.cci07b98.isChecked() ? "98" : "0");
-        sI.put("cci07bt", bi.cci07bx.getText().toString());
-        sI.put("cci07c", bi.cci07c01.isChecked() ? "1" : bi.cci07c02.isChecked() ? "1" : bi.cci07c98.isChecked() ? "98" : "0");
-        sI.put("cci07ct", bi.cci07c01x.getText().toString());
-        sI.put("cci07d", bi.cci07d01.isChecked() ? "1" : bi.cci07d02.isChecked() ? "1" : bi.cci07d98.isChecked() ? "98" : "0");
-        sI.put("cci07e", bi.cci07e01.isChecked() ? "1" : bi.cci07e02.isChecked() ? "1" : bi.cci07e98.isChecked() ? "98" : "0");
-        sI.put("cci07f", bi.cci07f01.isChecked() ? "1" : bi.cci07f02.isChecked() ? "1" : bi.cci07f98.isChecked() ? "98" : "0");
-        sI.put("cci07ft", bi.cci07f01x.getText().toString());
-        sI.put("cci07g", bi.cci07g01.isChecked() ? "1" : bi.cci07g02.isChecked() ? "1" : bi.cci07g98.isChecked() ? "98" : "0");
-        sI.put("cci07h", bi.cci07h01.isChecked() ? "1" : bi.cci07h02.isChecked() ? "1" : bi.cci07h98.isChecked() ? "98" : "0");
-        sI.put("cci07i", bi.cci07i01.isChecked() ? "1" : bi.cci07i02.isChecked() ? "1" : bi.cci07i98.isChecked() ? "98" : "0");
+        sI.put("pfi01", bi.pfi01a.isChecked() ? "1" : bi.pfi01b.isChecked() ? "2" : bi.pfi0198.isChecked() ? "98" : "0");
+        sI.put("pfi02", bi.pfi02a.isChecked() ? "1" : bi.pfi02h.isChecked() ? "2" : bi.pfi02d.isChecked() ? "3" : "0");
+        sI.put("pfi02h", bi.pfi02hx.getText().toString());
+        sI.put("pfi02d", bi.pfi02dx.getText().toString());
+        sI.put("pfi03", bi.pfi03a.isChecked() ? "1" : bi.pfi03b.isChecked() ? "2" : bi.pfi0398.isChecked() ? "98" : "0");
+        /*sI.put("pfi05", bi.pfi05a.isChecked() ? "1" : bi.pfi05b.isChecked() ? "2" : bi.pfi0598.isChecked() ? "98" : "0");
+        sI.put("pfi06", bi.pfi06a.isChecked() ? "1" : bi.pfi06b.isChecked() ? "2" : bi.pfi0698.isChecked() ? "98" : "0");*/
+        sI.put("pfi10a", bi.pfi10a01.isChecked() ? "1" : bi.pfi10a02.isChecked() ? "1" : bi.pfi10a98.isChecked() ? "98" : "0");
+        sI.put("pfi10b", bi.pfi10b01.isChecked() ? "1" : bi.pfi10b02.isChecked() ? "1" : bi.pfi10b98.isChecked() ? "98" : "0");
+        sI.put("pfi10bt", bi.pfi10bx.getText().toString());
+        sI.put("pfi10c", bi.pfi10c01.isChecked() ? "1" : bi.pfi10c02.isChecked() ? "1" : bi.pfi10c98.isChecked() ? "98" : "0");
+        sI.put("pfi10ct", bi.pfi10c01x.getText().toString());
+        sI.put("pfi10d", bi.pfi10d01.isChecked() ? "1" : bi.pfi10d02.isChecked() ? "1" : bi.pfi10d98.isChecked() ? "98" : "0");
+        sI.put("pfi10e", bi.pfi10e01.isChecked() ? "1" : bi.pfi10e02.isChecked() ? "1" : bi.pfi10e98.isChecked() ? "98" : "0");
+        sI.put("pfi10f", bi.pfi10f01.isChecked() ? "1" : bi.pfi10f02.isChecked() ? "1" : bi.pfi10f98.isChecked() ? "98" : "0");
+        sI.put("pfi10ft", bi.pfi10f01x.getText().toString());
+        sI.put("pfi10g", bi.pfi10g01.isChecked() ? "1" : bi.pfi10g02.isChecked() ? "1" : bi.pfi10g98.isChecked() ? "98" : "0");
+        sI.put("pfi10h", bi.pfi10h01.isChecked() ? "1" : bi.pfi10h02.isChecked() ? "1" : bi.pfi10h98.isChecked() ? "98" : "0");
+        sI.put("pfi10i", bi.pfi10i01.isChecked() ? "1" : bi.pfi10i02.isChecked() ? "1" : bi.pfi10i98.isChecked() ? "98" : "0");
 
-        sI.put("cci08a", bi.cci08a01.isChecked() ? "1" : bi.cci08a02.isChecked() ? "1" : bi.cci08a98.isChecked() ? "98" : "0");
-        sI.put("cci08b", bi.cci08b01.isChecked() ? "1" : bi.cci08b02.isChecked() ? "1" : bi.cci08b98.isChecked() ? "98" : "0");
-        sI.put("cci08c", bi.cci08c01.isChecked() ? "1" : bi.cci08c02.isChecked() ? "1" : bi.cci08c98.isChecked() ? "98" : "0");
-        sI.put("cci08d", bi.cci08d01.isChecked() ? "1" : bi.cci08d02.isChecked() ? "1" : bi.cci08d98.isChecked() ? "98" : "0");
-        sI.put("cci08e", bi.cci08e01.isChecked() ? "1" : bi.cci08e02.isChecked() ? "1" : bi.cci08e98.isChecked() ? "98" : "0");
-        sI.put("cci08f", bi.cci08f01.isChecked() ? "1" : bi.cci08f02.isChecked() ? "1" : bi.cci08f98.isChecked() ? "98" : "0");
-        sI.put("cci08g", bi.cci08g01.isChecked() ? "1" : bi.cci08g02.isChecked() ? "1" : bi.cci08g98.isChecked() ? "98" : "0");
-        sI.put("cci08h", bi.cci08h01.isChecked() ? "1" : bi.cci08h02.isChecked() ? "1" : bi.cci08h98.isChecked() ? "98" : "0");
-        sI.put("cci08i", bi.cci08i01.isChecked() ? "1" : bi.cci08i02.isChecked() ? "1" : bi.cci08i98.isChecked() ? "98" : "0");
-        sI.put("cci08j", bi.cci08j01.isChecked() ? "1" : bi.cci08j02.isChecked() ? "1" : bi.cci08j98.isChecked() ? "98" : "0");
-        sI.put("cci08k", bi.cci08k01.isChecked() ? "1" : bi.cci08k02.isChecked() ? "1" : bi.cci08k98.isChecked() ? "98" : "0");
-        sI.put("cci08l", bi.cci08l01.isChecked() ? "1" : bi.cci08l02.isChecked() ? "1" : bi.cci08l98.isChecked() ? "98" : "0");
-        sI.put("cci08m", bi.cci08m01.isChecked() ? "1" : bi.cci08m02.isChecked() ? "1" : bi.cci08m98.isChecked() ? "98" : "0");
-        sI.put("cci08n", bi.cci08n01.isChecked() ? "1" : bi.cci08n02.isChecked() ? "1" : bi.cci08n98.isChecked() ? "98" : "0");
-        sI.put("cci08o", bi.cci08o01.isChecked() ? "1" : bi.cci08o02.isChecked() ? "1" : bi.cci08o98.isChecked() ? "98" : "0");
-        sI.put("cci08p", bi.cci08p01.isChecked() ? "1" : bi.cci08p02.isChecked() ? "1" : bi.cci08p98.isChecked() ? "98" : "0");
-        sI.put("cci08q", bi.cci08q01.isChecked() ? "1" : bi.cci08q02.isChecked() ? "1" : bi.cci08q98.isChecked() ? "98" : "0");
+        sI.put("pfi12a", bi.pfi12a01.isChecked() ? "1" : bi.pfi12a02.isChecked() ? "1" : bi.pfi12a98.isChecked() ? "98" : "0");
+        sI.put("pfi12b", bi.pfi12b01.isChecked() ? "1" : bi.pfi12b02.isChecked() ? "1" : bi.pfi12b98.isChecked() ? "98" : "0");
+        sI.put("pfi12c", bi.pfi12c01.isChecked() ? "1" : bi.pfi12c02.isChecked() ? "1" : bi.pfi12c98.isChecked() ? "98" : "0");
+        sI.put("pfi12d", bi.pfi12d01.isChecked() ? "1" : bi.pfi12d02.isChecked() ? "1" : bi.pfi12d98.isChecked() ? "98" : "0");
+        sI.put("pfi12e", bi.pfi12e01.isChecked() ? "1" : bi.pfi12e02.isChecked() ? "1" : bi.pfi12e98.isChecked() ? "98" : "0");
+        sI.put("pfi12f", bi.pfi12f01.isChecked() ? "1" : bi.pfi12f02.isChecked() ? "1" : bi.pfi12f98.isChecked() ? "98" : "0");
+        sI.put("pfi12g", bi.pfi12g01.isChecked() ? "1" : bi.pfi12g02.isChecked() ? "1" : bi.pfi12g98.isChecked() ? "98" : "0");
+        sI.put("pfi12h", bi.pfi12h01.isChecked() ? "1" : bi.pfi12h02.isChecked() ? "1" : bi.pfi12h98.isChecked() ? "98" : "0");
+        sI.put("pfi12i", bi.pfi12i01.isChecked() ? "1" : bi.pfi12i02.isChecked() ? "1" : bi.pfi12i98.isChecked() ? "98" : "0");
+        sI.put("pfi12j", bi.pfi12j01.isChecked() ? "1" : bi.pfi12j02.isChecked() ? "1" : bi.pfi12j98.isChecked() ? "98" : "0");
+        sI.put("pfi12k", bi.pfi12k01.isChecked() ? "1" : bi.pfi12k02.isChecked() ? "1" : bi.pfi12k98.isChecked() ? "98" : "0");
+        sI.put("pfi12l", bi.pfi12l01.isChecked() ? "1" : bi.pfi12l02.isChecked() ? "1" : bi.pfi12l98.isChecked() ? "98" : "0");
+        sI.put("pfi12m", bi.pfi12m01.isChecked() ? "1" : bi.pfi12m02.isChecked() ? "1" : bi.pfi12m98.isChecked() ? "98" : "0");
+        sI.put("pfi12n", bi.pfi12n01.isChecked() ? "1" : bi.pfi12n02.isChecked() ? "1" : bi.pfi12n98.isChecked() ? "98" : "0");
+        sI.put("pfi12o", bi.pfi12o01.isChecked() ? "1" : bi.pfi12o02.isChecked() ? "1" : bi.pfi12o98.isChecked() ? "98" : "0");
+        sI.put("pfi12p", bi.pfi12p01.isChecked() ? "1" : bi.pfi12p02.isChecked() ? "1" : bi.pfi12p98.isChecked() ? "98" : "0");
+        sI.put("pfi12q", bi.pfi12q01.isChecked() ? "1" : bi.pfi12q02.isChecked() ? "1" : bi.pfi12q98.isChecked() ? "98" : "0");
 
-        sI.put("cci09", bi.cci09a.isChecked() ? "1" : bi.cci09b.isChecked() ? "2" : bi.cci0998.isChecked() ? "98" : "0");
-        sI.put("cci10", bi.cci1098.isChecked() ? "98" : "0");
-        sI.put("cci10t", bi.cci10t.getText().toString());
-        sI.put("cci11", bi.cci11a.isChecked() ? "1" : bi.cci11b.isChecked() ? "2" : bi.cci1198.isChecked() ? "98" : "0");
-        sI.put("cci12", bi.cci12a.isChecked() ? "1" : bi.cci12b.isChecked() ? "2" : bi.cci1298.isChecked() ? "98" : "0");
-        sI.put("cci13", bi.cci13a.isChecked() ? "1" : bi.cci13b.isChecked() ? "2" : bi.cci1398.isChecked() ? "98" : "0");
-        sI.put("cci14", bi.cci14a.isChecked() ? "1" : bi.cci14b.isChecked() ? "2" : bi.cci1498.isChecked() ? "98" : "0");
-        sI.put("cci15", bi.cci15a.isChecked() ? "1" : bi.cci15b.isChecked() ? "2" : bi.cci1598.isChecked() ? "98" : "0");
-        sI.put("cci16", bi.cci16m.isChecked() ? "1" : bi.cci16d.isChecked() ? "2" : bi.cci1697.isChecked() ? "97" : "0");
-        sI.put("cci16m", bi.cci16mx.getText().toString());
-        sI.put("cci16d", bi.cci16dx.getText().toString());
-        MainApp.fc.setsI(String.valueOf(sI));
-        Toast.makeText(this, "Validation Successful", Toast.LENGTH_SHORT).show();*/
+        sI.put("pfi13", bi.pfi13a.isChecked() ? "1" : bi.pfi13b.isChecked() ? "2" : bi.pfi1398.isChecked() ? "98" : "0");
+        sI.put("pfi14", bi.pfi1498.isChecked() ? "98" : "0");
+        sI.put("pfi14t", bi.pfi14t.getText().toString());
+        sI.put("pfi15", bi.pfi15a.isChecked() ? "1" : bi.pfi15b.isChecked() ? "2" : bi.pfi1598.isChecked() ? "98" : "0");
+//        sI.put("pfi12", bi.pfi12a.isChecked() ? "1" : bi.pfi12b.isChecked() ? "2" : bi.pfi1298.isChecked() ? "98" : "0");
+        sI.put("pfi13", bi.pfi13a.isChecked() ? "1" : bi.pfi13b.isChecked() ? "2" : bi.pfi1398.isChecked() ? "98" : "0");
+//        AppMain.fc.setsI(String.valueOf(sI));
+        Toast.makeText(this, "Validation Successful", Toast.LENGTH_SHORT).show();
 
     }
 
     private boolean formValidate() {
 
-
-       /* if (!validatorClass.EmptyRadioButton(this, bi.cci01, bi.cci01a, getString(R.string.cci01))) {
+        if (!validatorClass.EmptyRadioButton(this, bi.pfi01, bi.pfi01a, getString(R.string.pfi01))) {
             return false;
         }
 
         // Q 1.1 check
-        if (!bi.cci01a.isChecked()) {
-            if (!validatorClass.EmptyRadioButton(this, bi.cci02, bi.cci02a, getString(R.string.cci02))) {
+        if (!bi.pfi01a.isChecked()) {
+            if (!validatorClass.EmptyRadioButton(this, bi.pfi02, bi.pfi02a, getString(R.string.pfi02))) {
                 return false;
             }
         }
         //Q2 check
-        if (!validatorClass.EmptyRadioButton(this, bi.cci03, bi.cci03a, getString(R.string.cci03))) {
+        if (!validatorClass.EmptyRadioButton(this, bi.pfi02, bi.pfi02a, getString(R.string.pfi02))) {
             return false;
         }
-        if (bi.cci03h.isChecked()) {
-            if (!validatorClass.EmptyTextBox(this, bi.cci03hx, getString(R.string.cci03))) {
+        if (bi.pfi02h.isChecked()) {
+            if (!validatorClass.EmptyTextBox(this, bi.pfi02hx, getString(R.string.pfi02))) {
                 return false;
             }
         }
-        if (bi.cci03d.isChecked()) {
-            if (!validatorClass.EmptyTextBox(this, bi.cci03dx, getString(R.string.cci03))) {
+        if (bi.pfi02d.isChecked()) {
+            if (!validatorClass.EmptyTextBox(this, bi.pfi02dx, getString(R.string.pfi02))) {
                 return false;
             }
         }
-        if (!validatorClass.EmptyRadioButton(this, bi.cci04, bi.cci04a, getString(R.string.cci04))) {
+        if (!validatorClass.EmptyRadioButton(this, bi.pfi03, bi.pfi03a, getString(R.string.pfi03))) {
             return false;
         }
-        if (!validatorClass.EmptyRadioButton(this, bi.cci05, bi.cci05a, getString(R.string.cci05))) {
+        /*if (!validatorClass.EmptyRadioButton(this, bi.pfi05, bi.pfi05a, getString(R.string.pfi05))) {
             return false;
         }
-        if (!validatorClass.EmptyRadioButton(this, bi.cci06, bi.cci06a, getString(R.string.cci06))) {
+        if (!validatorClass.EmptyRadioButton(this, bi.pfi06, bi.pfi06a, getString(R.string.pfi06))) {
+            return false;
+        }*/
+        if (!validatorClass.EmptyRadioButton(this, bi.pfi10a, bi.pfi10a01, getString(R.string.pfi10a))) {
             return false;
         }
-        if (!validatorClass.EmptyRadioButton(this, bi.cci07a, bi.cci07a01, getString(R.string.cci07a))) {
+        if (!validatorClass.EmptyRadioButton(this, bi.pfi10b, bi.pfi10b01, getString(R.string.pfi10b))) {
             return false;
         }
-        if (!validatorClass.EmptyRadioButton(this, bi.cci07b, bi.cci07b01, getString(R.string.cci07b))) {
-            return false;
-        }
-        if (bi.cci07b01.isChecked()) {
-            if (!validatorClass.EmptyTextBox(this, bi.cci07bx, getString(R.string.cci07b))) {
-                return false;
-            }
-
-        }
-        if (!validatorClass.EmptyRadioButton(this, bi.cci07c, bi.cci07c01, getString(R.string.cci07c))) {
-            return false;
-        }
-        if (bi.cci07c01.isChecked()) {
-            if (!validatorClass.EmptyTextBox(this, bi.cci07c01x, getString(R.string.cci07c))) {
+        if (bi.pfi10b01.isChecked()) {
+            if (!validatorClass.EmptyTextBox(this, bi.pfi10bx, getString(R.string.pfi10b))) {
                 return false;
             }
 
         }
-        if (!validatorClass.EmptyRadioButton(this, bi.cci07d, bi.cci07d01, getString(R.string.cci07d))) {
+        if (!validatorClass.EmptyRadioButton(this, bi.pfi10c, bi.pfi10c01, getString(R.string.pfi10c))) {
             return false;
         }
-        if (!validatorClass.EmptyRadioButton(this, bi.cci07e, bi.cci07e01, getString(R.string.cci07e))) {
+        if (bi.pfi10c01.isChecked()) {
+            if (!validatorClass.EmptyTextBox(this, bi.pfi10c01x, getString(R.string.pfi10c))) {
+                return false;
+            }
+
+        }
+        if (!validatorClass.EmptyRadioButton(this, bi.pfi10d, bi.pfi10d01, getString(R.string.pfi10d))) {
             return false;
         }
-        if (!validatorClass.EmptyRadioButton(this, bi.cci07f, bi.cci07f01, getString(R.string.cci07f))) {
+        if (!validatorClass.EmptyRadioButton(this, bi.pfi10e, bi.pfi10e01, getString(R.string.pfi10e))) {
             return false;
         }
-        if (bi.cci07f01.isChecked()) {
-            if (!validatorClass.EmptyTextBox(this, bi.cci07f01x, getString(R.string.cci07f))) {
+        if (!validatorClass.EmptyRadioButton(this, bi.pfi10f, bi.pfi10f01, getString(R.string.pfi10f))) {
+            return false;
+        }
+        if (bi.pfi10f01.isChecked()) {
+            if (!validatorClass.EmptyTextBox(this, bi.pfi10f01x, getString(R.string.pfi10f))) {
                 return false;
             }
         }
-        if (!validatorClass.EmptyRadioButton(this, bi.cci07g, bi.cci07g01, getString(R.string.cci07g))) {
+        if (!validatorClass.EmptyRadioButton(this, bi.pfi10g, bi.pfi10g01, getString(R.string.pfi10g))) {
             return false;
         }
-        if (!validatorClass.EmptyRadioButton(this, bi.cci07h, bi.cci07h01, getString(R.string.cci07h))) {
+        if (!validatorClass.EmptyRadioButton(this, bi.pfi10h, bi.pfi10h01, getString(R.string.pfi10h))) {
             return false;
         }
-        if (!validatorClass.EmptyRadioButton(this, bi.cci07i, bi.cci07i01, getString(R.string.cci07i))) {
+        if (!validatorClass.EmptyRadioButton(this, bi.pfi10i, bi.pfi10i01, getString(R.string.pfi10i))) {
             return false;
         }
 
-        if (!validatorClass.EmptyRadioButton(this, bi.cci08a, bi.cci08a01, getString(R.string.cci08a))) {
+        if (!validatorClass.EmptyRadioButton(this, bi.pfi12a, bi.pfi12a01, getString(R.string.pfi12a))) {
             return false;
         }
-        if (!validatorClass.EmptyRadioButton(this, bi.cci08b, bi.cci08b01, getString(R.string.cci08b))) {
+        if (!validatorClass.EmptyRadioButton(this, bi.pfi12b, bi.pfi12b01, getString(R.string.pfi12b))) {
             return false;
         }
-        if (!validatorClass.EmptyRadioButton(this, bi.cci08c, bi.cci08c01, getString(R.string.cci08c))) {
+        if (!validatorClass.EmptyRadioButton(this, bi.pfi12c, bi.pfi12c01, getString(R.string.pfi12c))) {
             return false;
         }
-        if (!validatorClass.EmptyRadioButton(this, bi.cci08d, bi.cci08d01, getString(R.string.cci08d))) {
+        if (!validatorClass.EmptyRadioButton(this, bi.pfi12d, bi.pfi12d01, getString(R.string.pfi12d))) {
             return false;
         }
-        if (!validatorClass.EmptyRadioButton(this, bi.cci08e, bi.cci08e01, getString(R.string.cci08e))) {
+        if (!validatorClass.EmptyRadioButton(this, bi.pfi12e, bi.pfi12e01, getString(R.string.pfi12e))) {
             return false;
         }
-        if (!validatorClass.EmptyRadioButton(this, bi.cci08f, bi.cci08f01, getString(R.string.cci08f))) {
+        if (!validatorClass.EmptyRadioButton(this, bi.pfi12f, bi.pfi12f01, getString(R.string.pfi12f))) {
             return false;
         }
-        if (!validatorClass.EmptyRadioButton(this, bi.cci08g, bi.cci08g01, getString(R.string.cci08g))) {
+        if (!validatorClass.EmptyRadioButton(this, bi.pfi12g, bi.pfi12g01, getString(R.string.pfi12g))) {
             return false;
         }
-        if (!validatorClass.EmptyRadioButton(this, bi.cci08h, bi.cci08h01, getString(R.string.cci08h))) {
+        if (!validatorClass.EmptyRadioButton(this, bi.pfi12h, bi.pfi12h01, getString(R.string.pfi12h))) {
             return false;
         }
-        if (!validatorClass.EmptyRadioButton(this, bi.cci08i, bi.cci08i01, getString(R.string.cci08i))) {
+        if (!validatorClass.EmptyRadioButton(this, bi.pfi12i, bi.pfi12i01, getString(R.string.pfi12i))) {
             return false;
         }
-        if (!validatorClass.EmptyRadioButton(this, bi.cci08j, bi.cci08j01, getString(R.string.cci08j))) {
+        if (!validatorClass.EmptyRadioButton(this, bi.pfi12j, bi.pfi12j01, getString(R.string.pfi12j))) {
             return false;
         }
-        if (!validatorClass.EmptyRadioButton(this, bi.cci08k, bi.cci08k01, getString(R.string.cci08k))) {
+        if (!validatorClass.EmptyRadioButton(this, bi.pfi12k, bi.pfi12k01, getString(R.string.pfi12k))) {
             return false;
         }
-        if (!validatorClass.EmptyRadioButton(this, bi.cci08l, bi.cci08l01, getString(R.string.cci08l))) {
+        if (!validatorClass.EmptyRadioButton(this, bi.pfi12l, bi.pfi12l01, getString(R.string.pfi12l))) {
             return false;
         }
-        if (!validatorClass.EmptyRadioButton(this, bi.cci08m, bi.cci08m01, getString(R.string.cci08m))) {
+        if (!validatorClass.EmptyRadioButton(this, bi.pfi12m, bi.pfi12m01, getString(R.string.pfi12m))) {
             return false;
         }
-        if (!validatorClass.EmptyRadioButton(this, bi.cci08n, bi.cci08n01, getString(R.string.cci08n))) {
+        if (!validatorClass.EmptyRadioButton(this, bi.pfi12n, bi.pfi12n01, getString(R.string.pfi12n))) {
             return false;
         }
-        if (!validatorClass.EmptyRadioButton(this, bi.cci08o, bi.cci08o01, getString(R.string.cci08o))) {
+        if (!validatorClass.EmptyRadioButton(this, bi.pfi12o, bi.pfi12o01, getString(R.string.pfi12o))) {
             return false;
         }
-        if (!validatorClass.EmptyRadioButton(this, bi.cci08p, bi.cci08p01, getString(R.string.cci08p))) {
+        if (!validatorClass.EmptyRadioButton(this, bi.pfi12p, bi.pfi12p01, getString(R.string.pfi12p))) {
             return false;
         }
-        if (!validatorClass.EmptyRadioButton(this, bi.cci08q, bi.cci08q01, getString(R.string.cci08q))) {
+        if (!validatorClass.EmptyRadioButton(this, bi.pfi12q, bi.pfi12q01, getString(R.string.pfi12q))) {
             return false;
         }
         for (int j = 0; j < answersArray.size(); j++) {
             if (answersArray.get(j) != 2) {
-                if (!validatorClass.EmptyRadioButton(this, bi.cci09, bi.cci09a, getString(R.string.cci09))) {
+                if (!validatorClass.EmptyRadioButton(this, bi.pfi13, bi.pfi13a, getString(R.string.pfi13))) {
                     return false;
                 }
             }
         }
-        if (!bi.cci1098.isChecked()) {
-            if (!validatorClass.EmptyTextBox(this, bi.cci10t, getString(R.string.cci10))) {
+        if (!bi.pfi1498.isChecked()) {
+            if (!validatorClass.EmptyTextBox(this, bi.pfi14t, getString(R.string.pfi14))) {
                 return false;
             }
         }
-        if (!validatorClass.EmptyRadioButton(this, bi.cci11, bi.cci11a, getString(R.string.cci11))) {
-            return false;
-        }
-        if (!validatorClass.EmptyRadioButton(this, bi.cci12, bi.cci12a, getString(R.string.cci12))) {
-            return false;
-        }
-        if (!validatorClass.EmptyRadioButton(this, bi.cci13, bi.cci13a, getString(R.string.cci13))) {
-            return false;
-        }
-        if (!validatorClass.EmptyRadioButton(this, bi.cci14, bi.cci14a, getString(R.string.cci14))) {
-            return false;
-        }
-        if (!validatorClass.EmptyRadioButton(this, bi.cci15, bi.cci15a, getString(R.string.cci15))) {
-            return false;
-        }
-
-        if (!validatorClass.EmptyRadioButton(this, bi.cci16, bi.cci16m, getString(R.string.cci16))) {
-            return false;
-        }
-
-        if (bi.cci16m.isChecked()) {
-            if (!validatorClass.EmptyTextBox(this, bi.cci16mx, getString(R.string.cci16))) {
-                return false;
-            }
-        }
-        if (bi.cci16d.isChecked()) {
-            return validatorClass.EmptyTextBox(this, bi.cci16dx, getString(R.string.cci16));
-        }*/
-
-        return true;
+        return validatorClass.EmptyRadioButton(this, bi.pfi15, bi.pfi15a, getString(R.string.pfi15));
     }
 
     public void BtnEnd() {
-
         AppMain.endActivity(this, this);
-
     }
 }

@@ -2218,19 +2218,19 @@
                         android:textColor="@color/white"
                         android:textSize="25sp" />
 
-                    <EditText
-                        android:id="@+id/pfi14t"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text='@{pfi1498.checked? "" : pfi14t.getText.toString }'
-                        android:visibility='@{pfi1498.checked? View.GONE : View.VISIBLE}' />
-
                     <CheckBox
                         android:id="@+id/pfi1498"
                         style="@style/checkbox"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="@string/dkn" />
+
+                    <EditText
+                        android:id="@+id/pfi14t"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text='@{pfi1498.checked? "" : pfi14t.getText.toString }'
+                        android:visibility='@{pfi1498.checked? View.GONE : View.VISIBLE}' />
 
                 </LinearLayout>
 
