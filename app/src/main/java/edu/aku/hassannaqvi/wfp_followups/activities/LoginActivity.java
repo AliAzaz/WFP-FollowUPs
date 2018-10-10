@@ -209,10 +209,10 @@ public class LoginActivity extends Activity implements LoaderCallbacks<Cursor> {
 
         if (sharedPref.getBoolean("flag", false)) {
 
-            String dt = sharedPref.getString("dt", new SimpleDateFormat("dd-MM-yy").format(new Date()).toString());
+            String dt = sharedPref.getString("dt", new SimpleDateFormat("dd-MM-yy").format(new Date()));
 
-            if (dt != new SimpleDateFormat("dd-MM-yy").format(new Date()).toString()) {
-                editor.putString("dt", new SimpleDateFormat("dd-MM-yy").format(new Date()).toString());
+            if (dt != new SimpleDateFormat("dd-MM-yy").format(new Date())) {
+                editor.putString("dt", new SimpleDateFormat("dd-MM-yy").format(new Date()));
 
                 editor.commit();
             }
@@ -533,7 +533,7 @@ public class LoginActivity extends Activity implements LoaderCallbacks<Cursor> {
 
                         finish();
 
-                        Intent iLogin = new Intent(LoginActivity.this, MainActivity.class);
+                        Intent iLogin = new Intent(LoginActivity.this, SectionCActivity.class);
                         startActivity(iLogin);
 
                     } else {

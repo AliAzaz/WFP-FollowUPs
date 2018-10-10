@@ -13,6 +13,7 @@ import org.json.JSONObject;
 
 import edu.aku.hassannaqvi.wfp_followups.R;
 import edu.aku.hassannaqvi.wfp_followups.core.AppMain;
+import edu.aku.hassannaqvi.wfp_followups.core.DatabaseHelper;
 import edu.aku.hassannaqvi.wfp_followups.databinding.ActivitySectionDBinding;
 import edu.aku.hassannaqvi.wfp_followups.validation.ClearClass;
 import edu.aku.hassannaqvi.wfp_followups.validation.validatorClass;
@@ -163,7 +164,6 @@ public class SectionDActivity extends AppCompatActivity {
     public void BtnContinue() {
 
         if (formValidation()) {
-            Toast.makeText(this, "validated", Toast.LENGTH_SHORT).show();
             try {
                 saveDraft();
             } catch (JSONException e) {
@@ -181,8 +181,16 @@ public class SectionDActivity extends AppCompatActivity {
     }
 
     private boolean UpdateDB() {
+        DatabaseHelper db = new DatabaseHelper(this);
 
-        return true;
+        int updcount = db.updatesD();
+
+        if (updcount == 1) {
+            return true;
+        } else {
+            Toast.makeText(this, "Updating Database... ERROR!", Toast.LENGTH_SHORT).show();
+            return false;
+        }
     }
 
     private void saveDraft() throws JSONException {
@@ -226,7 +234,7 @@ public class SectionDActivity extends AppCompatActivity {
         sD.put("pfd1296", bi.pfd1296.isChecked() ? "1" : "0");
         sD.put("pfd1196x", bi.pfd1196x.getText().toString());
 
-
+        AppMain.fc.setsD(String.valueOf(sD));
 
     }
 

@@ -68,6 +68,11 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             FormsTable.COLUMN_SC + " TEXT," +
             FormsTable.COLUMN_SD + " TEXT," +
             FormsTable.COLUMN_SE + " TEXT," +
+            FormsTable.COLUMN_SF + " TEXT," +
+            FormsTable.COLUMN_SG + " TEXT," +
+            FormsTable.COLUMN_SH + " TEXT," +
+            FormsTable.COLUMN_SI + " TEXT," +
+            FormsTable.COLUMN_SJ + " TEXT," +
             FormsTable.COLUMN_ENDINGDATETIME + " TEXT," +
             FormsTable.COLUMN_GPSLAT + " TEXT," +
             FormsTable.COLUMN_GPSLNG + " TEXT," +
@@ -362,6 +367,11 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         values.put(FormsTable.COLUMN_SC, fc.getsC());
         values.put(FormsTable.COLUMN_SD, fc.getsD());
         values.put(FormsTable.COLUMN_SE, fc.getsE());
+        values.put(FormsTable.COLUMN_SF, fc.getsF());
+        values.put(FormsTable.COLUMN_SG, fc.getsG());
+        values.put(FormsTable.COLUMN_SH, fc.getsH());
+        values.put(FormsTable.COLUMN_SI, fc.getsI());
+        values.put(FormsTable.COLUMN_SJ, fc.getsJ());
         values.put(FormsTable.COLUMN_ENDINGDATETIME, fc.getEndingDateTime());
         values.put(FormsTable.COLUMN_GPSLAT, fc.getGpsLat());
         values.put(FormsTable.COLUMN_GPSLNG, fc.getGpsLng());
@@ -415,7 +425,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         values.put(FormsTable.COLUMN_SYNCED_DATE, new Date().toString());
 
 // Which row to update, based on the title
-        String where = FormsContract.FormsTable._ID + " LIKE ?";
+        String where = FormsTable.COLUMN__ID + " LIKE ?";
         String[] whereArgs = {id};
 
         int count = db.update(
@@ -435,7 +445,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         values.put(FormsTable.COLUMN_SYNCED_DATE, new Date().toString());
 
 // Which row to update, based on the title
-        String where = FormsTable._ID + " LIKE ?";
+        String where = FormsTable.COLUMN__ID + " LIKE ?";
         String[] whereArgs = {id};
 
         int count = db.update(
@@ -579,13 +589,13 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         values.put(FormsTable.COLUMN_SB, AppMain.fc.getsB());
 
 // Which row to update, based on the ID
-        String selection = " _ID = " + AppMain.fc.getID();
+        String selection = FormsTable.COLUMN__ID + " =?";
         String[] selectionArgs = {String.valueOf(AppMain.fc.getID())};
 
         int count = db.update(FormsTable.TABLE_NAME,
                 values,
                 selection,
-                null);
+                selectionArgs);
         return count;
     }
 
@@ -597,13 +607,13 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         values.put(FormsTable.COLUMN_SC, AppMain.fc.getsC());
 
 // Which row to update, based on the ID
-        String selection = " _ID = " + AppMain.fc.getID();
+        String selection = FormsTable.COLUMN__ID + " =?";
         String[] selectionArgs = {String.valueOf(AppMain.fc.getID())};
 
         int count = db.update(FormsTable.TABLE_NAME,
                 values,
                 selection,
-                null);
+                selectionArgs);
         return count;
     }
 
@@ -615,13 +625,13 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         values.put(FormsTable.COLUMN_SD, AppMain.fc.getsD());
 
 // Which row to update, based on the ID
-        String selection = " _ID = " + AppMain.fc.getID();
+        String selection = FormsTable.COLUMN__ID + " =?";
         String[] selectionArgs = {String.valueOf(AppMain.fc.getID())};
 
         int count = db.update(FormsTable.TABLE_NAME,
                 values,
                 selection,
-                null);
+                selectionArgs);
         return count;
     }
 
@@ -633,13 +643,103 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         values.put(FormsTable.COLUMN_SE, AppMain.fc.getsE());
 
 // Which row to update, based on the ID
-        String selection = " _ID = " + AppMain.fc.getID();
+        String selection = FormsTable.COLUMN__ID + " =?";
         String[] selectionArgs = {String.valueOf(AppMain.fc.getID())};
 
         int count = db.update(FormsTable.TABLE_NAME,
                 values,
                 selection,
-                null);
+                selectionArgs);
+        return count;
+    }
+
+    public int updatesF() {
+        SQLiteDatabase db = this.getReadableDatabase();
+
+// New value for one column
+        ContentValues values = new ContentValues();
+        values.put(FormsTable.COLUMN_SF, AppMain.fc.getsF());
+
+// Which row to update, based on the ID
+        String selection = FormsTable.COLUMN__ID + " =?";
+        String[] selectionArgs = {String.valueOf(AppMain.fc.getID())};
+
+        int count = db.update(FormsTable.TABLE_NAME,
+                values,
+                selection,
+                selectionArgs);
+        return count;
+    }
+
+    public int updatesG() {
+        SQLiteDatabase db = this.getReadableDatabase();
+
+// New value for one column
+        ContentValues values = new ContentValues();
+        values.put(FormsTable.COLUMN_SG, AppMain.fc.getsG());
+
+// Which row to update, based on the ID
+        String selection = FormsTable.COLUMN__ID + " =?";
+        String[] selectionArgs = {String.valueOf(AppMain.fc.getID())};
+
+        int count = db.update(FormsTable.TABLE_NAME,
+                values,
+                selection,
+                selectionArgs);
+        return count;
+    }
+
+    public int updatesH() {
+        SQLiteDatabase db = this.getReadableDatabase();
+
+// New value for one column
+        ContentValues values = new ContentValues();
+        values.put(FormsTable.COLUMN_SH, AppMain.fc.getsH());
+
+// Which row to update, based on the ID
+        String selection = FormsTable.COLUMN__ID + " =?";
+        String[] selectionArgs = {String.valueOf(AppMain.fc.getID())};
+
+        int count = db.update(FormsTable.TABLE_NAME,
+                values,
+                selection,
+                selectionArgs);
+        return count;
+    }
+
+    public int updatesI() {
+        SQLiteDatabase db = this.getReadableDatabase();
+
+// New value for one column
+        ContentValues values = new ContentValues();
+        values.put(FormsTable.COLUMN_SI, AppMain.fc.getsI());
+
+// Which row to update, based on the ID
+        String selection = FormsTable.COLUMN__ID + " =?";
+        String[] selectionArgs = {String.valueOf(AppMain.fc.getID())};
+
+        int count = db.update(FormsTable.TABLE_NAME,
+                values,
+                selection,
+                selectionArgs);
+        return count;
+    }
+
+    public int updatesJ() {
+        SQLiteDatabase db = this.getReadableDatabase();
+
+// New value for one column
+        ContentValues values = new ContentValues();
+        values.put(FormsTable.COLUMN_SJ, AppMain.fc.getsJ());
+
+// Which row to update, based on the ID
+        String selection = FormsTable.COLUMN__ID + " =?";
+        String[] selectionArgs = {String.valueOf(AppMain.fc.getID())};
+
+        int count = db.update(FormsTable.TABLE_NAME,
+                values,
+                selection,
+                selectionArgs);
         return count;
     }
 
@@ -653,13 +753,13 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         values.put(FormsTable.COLUMN_ENDINGDATETIME, AppMain.fc.getEndingDateTime());
 
 // Which row to update, based on the ID
-        String selection = " _ID = " + AppMain.fc.getID();
+        String selection = FormsTable.COLUMN__ID + " =?";
         String[] selectionArgs = {String.valueOf(AppMain.fc.getID())};
 
         int count = db.update(FormsTable.TABLE_NAME,
                 values,
                 selection,
-                null);
+                selectionArgs);
         return count;
     }
 
@@ -916,6 +1016,11 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 FormsTable.COLUMN_SC,
                 FormsTable.COLUMN_SD,
                 FormsTable.COLUMN_SE,
+                FormsTable.COLUMN_SF,
+                FormsTable.COLUMN_SG,
+                FormsTable.COLUMN_SH,
+                FormsTable.COLUMN_SI,
+                FormsTable.COLUMN_SJ,
                 FormsTable.COLUMN_ENDINGDATETIME,
                 FormsTable.COLUMN_GPSLAT,
                 FormsTable.COLUMN_GPSLNG,
@@ -963,7 +1068,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return allFC;
     }
 
-    public Collection<FormsContract> getUnsyncedForms6() {
+    public Collection<FormsContract> getUnsyncedForms() {
         SQLiteDatabase db = this.getReadableDatabase();
         Cursor c = null;
         String[] columns = {
@@ -984,6 +1089,11 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 FormsTable.COLUMN_SC,
                 FormsTable.COLUMN_SD,
                 FormsTable.COLUMN_SE,
+                FormsTable.COLUMN_SF,
+                FormsTable.COLUMN_SG,
+                FormsTable.COLUMN_SH,
+                FormsTable.COLUMN_SI,
+                FormsTable.COLUMN_SJ,
                 FormsTable.COLUMN_ENDINGDATETIME,
                 FormsTable.COLUMN_GPSLAT,
                 FormsTable.COLUMN_GPSLNG,
@@ -997,17 +1107,15 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 FormsTable.COLUMN_FORMTYPE,
                 FormsTable.COLUMN_SNO,
         };
-/*        String whereClause = FormsTable.COLUMN_SYNCED + " is null OR " + FormsTable.COLUMN_SYNCED + " = '' AND "
-                + FormsTable.COLUMN_FORMTYPE + " =?";*/
-        String whereClause = FormsTable.COLUMN_SYNCED + " is null AND " + FormsTable.COLUMN_FORMTYPE + " =?";
-        String[] whereArgs = new String[]{"8"};
+        String whereClause = FormsTable.COLUMN_SYNCED + " is null OR " + FormsTable.COLUMN_SYNCED + " = ''";
+        String[] whereArgs = null;
         String groupBy = null;
         String having = null;
 
         String orderBy =
                 FormsTable.COLUMN__ID + " ASC";
 
-        Collection<FormsContract> allFC = new ArrayList<FormsContract>();
+        Collection<FormsContract> allFC = new ArrayList<>();
         try {
             c = db.query(
                     FormsTable.TABLE_NAME,  // The table to query
@@ -1032,164 +1140,23 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         }
         return allFC;
     }
-
-    public Collection<FormsContract> getUnsyncedForms15() {
-        SQLiteDatabase db = this.getReadableDatabase();
-        Cursor c = null;
-        String[] columns = {
-                FormsTable.COLUMN_PROJECTNAME,
-                FormsTable.COLUMN_SURVEYTYPE,
-                FormsTable.COLUMN__ID,
-                FormsTable.COLUMN_UID,
-                FormsTable.COLUMN_FORMDATE,
-                FormsTable.COLUMN_INTERVIEWER01,
-                FormsTable.COLUMN_INTERVIEWER02,
-                FormsTable.COLUMN_CLUSTERCODE,
-                FormsTable.COLUMN_VILLAGEACODE,
-                FormsTable.COLUMN_HOUSEHOLD,
-                FormsTable.COLUMN_LHWCODE,
-                FormsTable.COLUMN_ISTATUS,
-                FormsTable.COLUMN_SINFO,
-                FormsTable.COLUMN_SB,
-                FormsTable.COLUMN_SC,
-                FormsTable.COLUMN_SD,
-                FormsTable.COLUMN_SE,
-                FormsTable.COLUMN_ENDINGDATETIME,
-                FormsTable.COLUMN_GPSLAT,
-                FormsTable.COLUMN_GPSLNG,
-                FormsTable.COLUMN_GPSTIME,
-                FormsTable.COLUMN_GPSACC,
-                FormsTable.COLUMN_APP_VERSION,
-                FormsTable.COLUMN_DEVICEID,
-                FormsTable.COLUMN_DEVICETAGID,
-                FormsTable.COLUMN_SYNCED,
-                FormsTable.COLUMN_SYNCED_DATE,
-                FormsTable.COLUMN_FORMTYPE,
-                FormsTable.COLUMN_SNO,
-        };
-/*        String whereClause = FormsTable.COLUMN_SYNCED + " is null OR " + FormsTable.COLUMN_SYNCED + " = '' AND "
-                + FormsTable.COLUMN_FORMTYPE + " =?";*/
-        String whereClause = "(" + FormsTable.COLUMN_SYNCED + " is null OR " + FormsTable.COLUMN_SYNCED + " = '' )  AND " + FormsTable.COLUMN_FORMTYPE + " =?";
-        String[] whereArgs = new String[]{"15"};
-        String groupBy = null;
-        String having = null;
-
-        String orderBy =
-                FormsTable.COLUMN__ID + " ASC";
-
-        Collection<FormsContract> allFC = new ArrayList<FormsContract>();
-        try {
-            c = db.query(
-                    FormsTable.TABLE_NAME,  // The table to query
-                    columns,                   // The columns to return
-                    whereClause,               // The columns for the WHERE clause
-                    whereArgs,                 // The values for the WHERE clause
-                    groupBy,                   // don't group the rows
-                    having,                    // don't filter by row groups
-                    orderBy                    // The sort order
-            );
-            while (c.moveToNext()) {
-                FormsContract fc = new FormsContract();
-                allFC.add(fc.Hydrate(c));
-            }
-        } finally {
-            if (c != null) {
-                c.close();
-            }
-            if (db != null) {
-                db.close();
-            }
-        }
-        return allFC;
-    }
-
-    public Collection<FormsContract> getUnsyncedForms16() {
-        SQLiteDatabase db = this.getReadableDatabase();
-        Cursor c = null;
-        String[] columns = {
-                FormsTable.COLUMN_PROJECTNAME,
-                FormsTable.COLUMN_SURVEYTYPE,
-                FormsTable.COLUMN__ID,
-                FormsTable.COLUMN_UID,
-                FormsTable.COLUMN_FORMDATE,
-                FormsTable.COLUMN_INTERVIEWER01,
-                FormsTable.COLUMN_INTERVIEWER02,
-                FormsTable.COLUMN_CLUSTERCODE,
-                FormsTable.COLUMN_VILLAGEACODE,
-                FormsTable.COLUMN_HOUSEHOLD,
-                FormsTable.COLUMN_LHWCODE,
-                FormsTable.COLUMN_ISTATUS,
-                FormsTable.COLUMN_SINFO,
-                FormsTable.COLUMN_SB,
-                FormsTable.COLUMN_SC,
-                FormsTable.COLUMN_SD,
-                FormsTable.COLUMN_SE,
-                FormsTable.COLUMN_ENDINGDATETIME,
-                FormsTable.COLUMN_GPSLAT,
-                FormsTable.COLUMN_GPSLNG,
-                FormsTable.COLUMN_GPSTIME,
-                FormsTable.COLUMN_GPSACC,
-                FormsTable.COLUMN_APP_VERSION,
-                FormsTable.COLUMN_DEVICEID,
-                FormsTable.COLUMN_DEVICETAGID,
-                FormsTable.COLUMN_SYNCED,
-                FormsTable.COLUMN_SYNCED_DATE,
-                FormsTable.COLUMN_FORMTYPE,
-                FormsTable.COLUMN_SNO,
-        };
-/*        String whereClause = FormsTable.COLUMN_SYNCED + " is null OR " + FormsTable.COLUMN_SYNCED + " = '' AND "
-                + FormsTable.COLUMN_FORMTYPE + " =?";*/
-        String whereClause = "(" + FormsTable.COLUMN_SYNCED + " is null OR " + FormsTable.COLUMN_SYNCED + " = '' )  AND " + FormsTable.COLUMN_FORMTYPE + " = ?";
-        String[] whereArgs = new String[]{"16"};
-        String groupBy = null;
-        String having = null;
-
-        String orderBy =
-                FormsTable.COLUMN__ID + " ASC";
-
-        Collection<FormsContract> allFC = new ArrayList<FormsContract>();
-        try {
-            c = db.query(
-                    FormsTable.TABLE_NAME,  // The table to query
-                    columns,                   // The columns to return
-                    whereClause,               // The columns for the WHERE clause
-                    whereArgs,                 // The values for the WHERE clause
-                    groupBy,                   // don't group the rows
-                    having,                    // don't filter by row groups
-                    orderBy                    // The sort order
-            );
-            while (c.moveToNext()) {
-                FormsContract fc = new FormsContract();
-                allFC.add(fc.Hydrate(c));
-            }
-        } finally {
-            if (c != null) {
-                c.close();
-            }
-            if (db != null) {
-                db.close();
-            }
-        }
-        return allFC;
-    }
-
 
     public Collection<ParticipantsContract> getAllParticipants() {
         SQLiteDatabase db = this.getReadableDatabase();
         Cursor c = null;
         String[] columns = {
-                ParticipantsContract.ParticipantsTable.COLUMN_PROJECTNAME,
+                ParticipantsTable.COLUMN_PROJECTNAME,
                 ParticipantsTable.COLUMN_SURVEYTYPE,
-                ParticipantsContract.ParticipantsTable.COLUMN__ID,
+                ParticipantsTable.COLUMN__ID,
                 ParticipantsTable.COLUMN_UID,
-                ParticipantsContract.ParticipantsTable.COLUMN_UUID,
+                ParticipantsTable.COLUMN_UUID,
                 ParticipantsTable.COLUMN_FORMDATE,
                 ParticipantsTable.COLUMN_INTERVIEWER01,
                 ParticipantsTable.COLUMN_INTERVIEWER02,
                 ParticipantsTable.COLUMN_ISTATUS,
                 ParticipantsTable.COLUMN_SCB,
                 ParticipantsTable.COLUMN_SCC,
-                ParticipantsContract.ParticipantsTable.COLUMN_SCD,
+                ParticipantsTable.COLUMN_SCD,
                 ParticipantsTable.COLUMN_SCE,
                 ParticipantsTable.COLUMN_SCF,
                 ParticipantsTable.COLUMN_SCG,
@@ -1200,13 +1167,13 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 ParticipantsTable.COLUMN_SE,
                 ParticipantsTable.COLUMN_GPSLAT,
                 ParticipantsTable.COLUMN_GPSLNG,
-                ParticipantsContract.ParticipantsTable.COLUMN_GPSTIME,
-                ParticipantsContract.ParticipantsTable.COLUMN_GPSACC,
-                ParticipantsContract.ParticipantsTable.COLUMN_APP_VERSION,
-                ParticipantsContract.ParticipantsTable.COLUMN_DEVICEID,
+                ParticipantsTable.COLUMN_GPSTIME,
+                ParticipantsTable.COLUMN_GPSACC,
+                ParticipantsTable.COLUMN_APP_VERSION,
+                ParticipantsTable.COLUMN_DEVICEID,
                 ParticipantsTable.COLUMN_DEVICETAGID,
-                ParticipantsContract.ParticipantsTable.COLUMN_SYNCED,
-                ParticipantsContract.ParticipantsTable.COLUMN_SYNCED_DATE,
+                ParticipantsTable.COLUMN_SYNCED,
+                ParticipantsTable.COLUMN_SYNCED_DATE,
 
         };
         String whereClause = null;
@@ -1214,13 +1181,12 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         String groupBy = null;
         String having = null;
 
-        String orderBy =
-                ParticipantsTable._ID + " ASC";
+        String orderBy = ParticipantsTable._ID + " ASC";
 
         Collection<ParticipantsContract> allPC = new ArrayList<>();
         try {
             c = db.query(
-                    ParticipantsContract.ParticipantsTable.TABLE_NAME,  // The table to query
+                    ParticipantsTable.TABLE_NAME,  // The table to query
                     columns,                   // The columns to return
                     whereClause,               // The columns for the WHERE clause
                     whereArgs,                 // The values for the WHERE clause
@@ -1319,7 +1285,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         SQLiteDatabase db = this.getReadableDatabase();
         Cursor c = null;
         String[] columns = {
-                FormsTable._ID,
+                FormsTable.COLUMN__ID,
                 FormsTable.COLUMN_CLUSTERCODE,
                 FormsContract.FormsTable.COLUMN_VILLAGEACODE,
                 FormsContract.FormsTable.COLUMN_HOUSEHOLD,
@@ -1331,7 +1297,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         String having = null;
 
         String orderBy =
-                FormsTable._ID + " ASC";
+                FormsTable.COLUMN__ID + " ASC";
 
         Collection<FormsContract> formList = new ArrayList<FormsContract>();
         try {

@@ -25,6 +25,7 @@ public class SectionIActivity extends AppCompatActivity {
 
     ActivitySectionIBinding bi;
     ArrayList<Integer> answersArray = new ArrayList<>();
+    boolean flag = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,18 +42,80 @@ public class SectionIActivity extends AppCompatActivity {
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
 
                 if (i != R.id.pfi01a) {
-
-                    bi.fldgrppfi02.setVisibility(View.VISIBLE);
-                    ClearClass.ClearAllFields(bi.fldgrppfi02, true);
-
+                    ClearClass.ClearAllFields(bi.flgrppfia, true);
                 } else {
-                    bi.fldgrppfi02.setVisibility(View.GONE);
-                    ClearClass.ClearAllFields(bi.fldgrppfi02, false);
+                    ClearClass.ClearAllFields(bi.flgrppfia, false);
                 }
             }
         });
 
-        bi.pfi12a.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+        bi.pfi05.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup radioGroup, int i) {
+                if (i != bi.pfi05a.getId()) {
+                    bi.fldgrppfi06.setVisibility(View.GONE);
+                    ClearClass.ClearAllFields(bi.fldgrppfi06, true);
+                } else {
+                    bi.fldgrppfi06.setVisibility(View.VISIBLE);
+                }
+            }
+        });
+
+        bi.pfi07.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup radioGroup, int i) {
+                if (i != bi.pfi07a.getId()) {
+                    bi.pfi0701.clearCheck();
+                }
+            }
+        });
+
+        RadioGroup.OnCheckedChangeListener check = new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup radioGroup, int i) {
+                if (i == bi.pfi12a02.getId() || i == bi.pfi12b02.getId() || i == bi.pfi12c02.getId() || i == bi.pfi12d02.getId()
+                        || i == bi.pfi12e02.getId() || i == bi.pfi12f02.getId() || i == bi.pfi12g02.getId() || i == bi.pfi12h02.getId()
+                        || i == bi.pfi12i02.getId() || i == bi.pfi12j02.getId() || i == bi.pfi12k02.getId() || i == bi.pfi12l02.getId()
+                        || i == bi.pfi12m02.getId() || i == bi.pfi12n02.getId() || i == bi.pfi12o02.getId() || i == bi.pfi12p02.getId()
+                        || i == bi.pfi12q02.getId()) {
+                    answersArray.add(2);
+                } else {
+                    answersArray.add(1);
+                }
+
+                for (int j = 0; j < answersArray.size(); j++) {
+                    flag = answersArray.get(j) == 2;
+                }
+
+                if (flag) {
+                    bi.pfi13.setVisibility(View.GONE);
+                    bi.pfi13.clearCheck();
+                } else {
+                    bi.pfi13.setVisibility(View.VISIBLE);
+                }
+
+            }
+        };
+
+        bi.pfi12a.setOnCheckedChangeListener(check);
+        bi.pfi12b.setOnCheckedChangeListener(check);
+        bi.pfi12c.setOnCheckedChangeListener(check);
+        bi.pfi12d.setOnCheckedChangeListener(check);
+        bi.pfi12e.setOnCheckedChangeListener(check);
+        bi.pfi12f.setOnCheckedChangeListener(check);
+        bi.pfi12g.setOnCheckedChangeListener(check);
+        bi.pfi12h.setOnCheckedChangeListener(check);
+        bi.pfi12i.setOnCheckedChangeListener(check);
+        bi.pfi12j.setOnCheckedChangeListener(check);
+        bi.pfi12k.setOnCheckedChangeListener(check);
+        bi.pfi12l.setOnCheckedChangeListener(check);
+        bi.pfi12m.setOnCheckedChangeListener(check);
+        bi.pfi12n.setOnCheckedChangeListener(check);
+        bi.pfi12o.setOnCheckedChangeListener(check);
+        bi.pfi12p.setOnCheckedChangeListener(check);
+        bi.pfi12q.setOnCheckedChangeListener(check);
+
+        /*bi.pfi12a.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
 
@@ -472,19 +535,24 @@ public class SectionIActivity extends AppCompatActivity {
                 }
 
             }
-        });
+        });*/
 
         bi.pfi13.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
 
-                if (i == R.id.pfi13a) {
-                    bi.fldgrppfi13.setVisibility(View.VISIBLE);
-                    ClearClass.ClearAllFields(bi.fldgrppfi13, true);
+                if (i != R.id.pfi13a) {
+                    ClearClass.ClearAllFields(bi.fldgrppfi14, true);
+                }
+            }
+        });
 
-                } else {
-                    bi.fldgrppfi13.setVisibility(View.GONE);
-                    ClearClass.ClearAllFields(bi.fldgrppfi13, false);
+        bi.pfi15.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup radioGroup, int i) {
+
+                if (i != R.id.pfi15a) {
+                    ClearClass.ClearAllFields(bi.flgrppfib, true);
                 }
             }
         });
@@ -499,21 +567,20 @@ public class SectionIActivity extends AppCompatActivity {
             } catch (JSONException e) {
                 e.printStackTrace();
             }
-            if (updateDb()) {
-                Intent secNext = new Intent(this, SectionJActivity.class);
-                secNext.putExtra("check", false);
-                startActivity(secNext);
+            if (updateDB()) {
                 finish();
+                Intent secNext = new Intent(this, SectionJActivity.class);
+                startActivity(secNext);
             }
         }
 
 
     }
 
-    public boolean updateDb() {
+    public boolean updateDB() {
         DatabaseHelper db = new DatabaseHelper(this);
 
-        /*int updcount = db.updateSI();
+        int updcount = db.updatesI();
 
         if (updcount == 1) {
             Toast.makeText(this, "Updating Database... Successful!", Toast.LENGTH_SHORT).show();
@@ -521,8 +588,7 @@ public class SectionIActivity extends AppCompatActivity {
         } else {
             Toast.makeText(this, "Updating Database... ERROR!", Toast.LENGTH_SHORT).show();
             return false;
-        }*/
-        return true;
+        }
     }
 
     public void saveData() throws JSONException {
@@ -530,12 +596,33 @@ public class SectionIActivity extends AppCompatActivity {
         JSONObject sI = new JSONObject();
 
         sI.put("pfi01", bi.pfi01a.isChecked() ? "1" : bi.pfi01b.isChecked() ? "2" : bi.pfi0198.isChecked() ? "98" : "0");
-        sI.put("pfi02", bi.pfi02a.isChecked() ? "1" : bi.pfi02h.isChecked() ? "2" : bi.pfi02d.isChecked() ? "3" : "0");
+        sI.put("pfi02", bi.pfi02a.isChecked() ? "000" : bi.pfi02h.isChecked() ? "1" : bi.pfi02d.isChecked() ? "2" : "0");
         sI.put("pfi02h", bi.pfi02hx.getText().toString());
         sI.put("pfi02d", bi.pfi02dx.getText().toString());
         sI.put("pfi03", bi.pfi03a.isChecked() ? "1" : bi.pfi03b.isChecked() ? "2" : bi.pfi0398.isChecked() ? "98" : "0");
-        /*sI.put("pfi05", bi.pfi05a.isChecked() ? "1" : bi.pfi05b.isChecked() ? "2" : bi.pfi0598.isChecked() ? "98" : "0");
-        sI.put("pfi06", bi.pfi06a.isChecked() ? "1" : bi.pfi06b.isChecked() ? "2" : bi.pfi0698.isChecked() ? "98" : "0");*/
+        sI.put("pfi04", bi.pfi04a.isChecked() ? "1" : bi.pfi04b.isChecked() ? "2" : bi.pfi04c.isChecked() ? "3" : bi.pfi0496.isChecked() ? "96" : "0");
+        sI.put("pfi04x", bi.pfi0496x.getText().toString());
+        sI.put("pfi05", bi.pfi05a.isChecked() ? "1" : bi.pfi05b.isChecked() ? "2" : "0");
+
+        sI.put("pfi06a", bi.pfi06a.isChecked() ? "1" : "0");
+        sI.put("pfi06b", bi.pfi06b.isChecked() ? "2" : "0");
+        sI.put("pfi06c", bi.pfi06c.isChecked() ? "3" : "0");
+        sI.put("pfi06d", bi.pfi06d.isChecked() ? "4" : "0");
+        sI.put("pfi06e", bi.pfi06e.isChecked() ? "5" : "0");
+        sI.put("pfi06f", bi.pfi06f.isChecked() ? "6" : "0");
+        sI.put("pfi06g", bi.pfi06g.isChecked() ? "7" : "0");
+        sI.put("pfi06h", bi.pfi06h.isChecked() ? "8" : "0");
+        sI.put("pfi06i", bi.pfi06i.isChecked() ? "9" : "0");
+        sI.put("pfi06j", bi.pfi06j.isChecked() ? "10" : "0");
+        sI.put("pfi0696", bi.pfi0696.isChecked() ? "96" : "0");
+        sI.put("pfi0699", bi.pfi0699.isChecked() ? "99" : "0");
+        sI.put("pfi0696x", bi.pfi0696x.getText().toString());
+
+        sI.put("pfi07", bi.pfi07a.isChecked() ? "1" : bi.pfi07b.isChecked() ? "2" : bi.pfi0798.isChecked() ? "98" : "0");
+        sI.put("pfi07a", bi.pfi0701a.isChecked() ? "1" : bi.pfi0701b.isChecked() ? "2" : bi.pfi070198.isChecked() ? "98" : "0");
+        sI.put("pfi08", bi.pfi08a.isChecked() ? "1" : bi.pfi08b.isChecked() ? "2" : bi.pfi0898.isChecked() ? "98" : "0");
+        sI.put("pfi09", bi.pfi09a.isChecked() ? "1" : bi.pfi09b.isChecked() ? "2" : bi.pfi0998.isChecked() ? "98" : "0");
+
         sI.put("pfi10a", bi.pfi10a01.isChecked() ? "1" : bi.pfi10a02.isChecked() ? "1" : bi.pfi10a98.isChecked() ? "98" : "0");
         sI.put("pfi10b", bi.pfi10b01.isChecked() ? "1" : bi.pfi10b02.isChecked() ? "1" : bi.pfi10b98.isChecked() ? "98" : "0");
         sI.put("pfi10bt", bi.pfi10bx.getText().toString());
@@ -571,10 +658,22 @@ public class SectionIActivity extends AppCompatActivity {
         sI.put("pfi14", bi.pfi1498.isChecked() ? "98" : "0");
         sI.put("pfi14t", bi.pfi14t.getText().toString());
         sI.put("pfi15", bi.pfi15a.isChecked() ? "1" : bi.pfi15b.isChecked() ? "2" : bi.pfi1598.isChecked() ? "98" : "0");
-//        sI.put("pfi12", bi.pfi12a.isChecked() ? "1" : bi.pfi12b.isChecked() ? "2" : bi.pfi1298.isChecked() ? "98" : "0");
-        sI.put("pfi13", bi.pfi13a.isChecked() ? "1" : bi.pfi13b.isChecked() ? "2" : bi.pfi1398.isChecked() ? "98" : "0");
-//        AppMain.fc.setsI(String.valueOf(sI));
-        Toast.makeText(this, "Validation Successful", Toast.LENGTH_SHORT).show();
+
+        sI.put("pfi16", bi.pfi16a.isChecked() ? "1" : bi.pfi16b.isChecked() ? "2"
+                : bi.pfi16c.isChecked() ? "3"
+                : bi.pfi1696.isChecked() ? "96"
+                : "0");
+        sI.put("pfi1696x", bi.pfi1696x.getText().toString());
+
+        sI.put("pfi17", bi.pfi17a.isChecked() ? "1" : bi.pfi17b.isChecked() ? "2"
+                : bi.pfi17c.isChecked() ? "3"
+                : bi.pfi1796.isChecked() ? "96"
+                : "0");
+        sI.put("pfi1796x", bi.pfi1796x.getText().toString());
+
+        sI.put("pfi18", bi.pfi18a.isChecked() ? "1" : bi.pfi18b.isChecked() ? "1" : bi.pfi1898.isChecked() ? "98" : "0");
+
+        AppMain.fc.setsI(String.valueOf(sI));
 
     }
 
@@ -607,12 +706,39 @@ public class SectionIActivity extends AppCompatActivity {
         if (!validatorClass.EmptyRadioButton(this, bi.pfi03, bi.pfi03a, getString(R.string.pfi03))) {
             return false;
         }
-        /*if (!validatorClass.EmptyRadioButton(this, bi.pfi05, bi.pfi05a, getString(R.string.pfi05))) {
+
+        if (bi.pfi03b.isChecked()) {
+            if (!validatorClass.EmptyRadioButton(this, bi.pfi04, bi.pfi0496, bi.pfi0496x, getString(R.string.pfi04))) {
+                return false;
+            }
+        }
+
+        if (!validatorClass.EmptyRadioButton(this, bi.pfi05, bi.pfi05a, getString(R.string.pfi05))) {
             return false;
         }
-        if (!validatorClass.EmptyRadioButton(this, bi.pfi06, bi.pfi06a, getString(R.string.pfi06))) {
+
+        if (bi.pfi05a.isChecked()) {
+            if (!validatorClass.EmptyCheckBox(this, bi.fldgrppfi06, bi.pfi0696, bi.pfi0696x, getString(R.string.pfi06))) {
+                return false;
+            }
+        }
+
+        if (!validatorClass.EmptyRadioButton(this, bi.pfi07, bi.pfi07a, getString(R.string.pfi07))) {
             return false;
-        }*/
+        }
+
+        if (!bi.pfi01a.isChecked() && !bi.pfi07a.isChecked()) {
+            if (!validatorClass.EmptyRadioButton(this, bi.pfi0701, bi.pfi0701a, getString(R.string.pfi07a))) {
+                return false;
+            }
+        }
+
+        if (!validatorClass.EmptyRadioButton(this, bi.pfi08, bi.pfi08a, getString(R.string.pfi08))) {
+            return false;
+        }
+        if (!validatorClass.EmptyRadioButton(this, bi.pfi09, bi.pfi09a, getString(R.string.pfi09))) {
+            return false;
+        }
         if (!validatorClass.EmptyRadioButton(this, bi.pfi10a, bi.pfi10a01, getString(R.string.pfi10a))) {
             return false;
         }
@@ -709,19 +835,35 @@ public class SectionIActivity extends AppCompatActivity {
         if (!validatorClass.EmptyRadioButton(this, bi.pfi12q, bi.pfi12q01, getString(R.string.pfi12q))) {
             return false;
         }
-        for (int j = 0; j < answersArray.size(); j++) {
-            if (answersArray.get(j) != 2) {
-                if (!validatorClass.EmptyRadioButton(this, bi.pfi13, bi.pfi13a, getString(R.string.pfi13))) {
+
+        if (flag) {
+            if (!validatorClass.EmptyRadioButton(this, bi.pfi13, bi.pfi13a, getString(R.string.pfi13))) {
+                return false;
+            }
+        }
+
+        if (flag && bi.pfi13a.isChecked()) {
+            if (!bi.pfi1498.isChecked()) {
+                if (!validatorClass.EmptyTextBox(this, bi.pfi14t, getString(R.string.pfi14))) {
                     return false;
                 }
             }
         }
-        if (!bi.pfi1498.isChecked()) {
-            if (!validatorClass.EmptyTextBox(this, bi.pfi14t, getString(R.string.pfi14))) {
+        if (!validatorClass.EmptyRadioButton(this, bi.pfi15, bi.pfi15a, getString(R.string.pfi15))) {
+            return false;
+        }
+
+        if (bi.pfi15a.isChecked()) {
+            if (!validatorClass.EmptyRadioButton(this, bi.pfi16, bi.pfi1696, bi.pfi1696x, getString(R.string.pfi16))) {
                 return false;
             }
+            if (!validatorClass.EmptyRadioButton(this, bi.pfi17, bi.pfi1796, bi.pfi1796x, getString(R.string.pfi17))) {
+                return false;
+            }
+            return validatorClass.EmptyRadioButton(this, bi.pfi18, bi.pfi18a, getString(R.string.pfi18));
         }
-        return validatorClass.EmptyRadioButton(this, bi.pfi15, bi.pfi15a, getString(R.string.pfi15));
+
+        return true;
     }
 
     public void BtnEnd() {

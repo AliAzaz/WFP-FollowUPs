@@ -227,13 +227,8 @@ public class MainActivity extends Activity {
             spUC.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
                 @Override
                 public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-
-                    //((TextView) parent.getChildAt(0)).setTextColor(getResources().getColor(R.color.colorPrimary));
                     AppMain.curCluster = cluster.get(spUC.getSelectedItem().toString());
-
                     Log.d("Selected Cluster", AppMain.curCluster);
-
-
                 }
 
                 @Override
@@ -482,24 +477,14 @@ public class MainActivity extends Activity {
             /*Toast.makeText(getApplicationContext(), "Syncing Eligibles", Toast.LENGTH_SHORT).show();
             new SyncEligibles(this).execute();*/
 
-            Toast.makeText(getApplicationContext(), "Syncing Forms 15", Toast.LENGTH_SHORT).show();
+            Toast.makeText(getApplicationContext(), "Syncing Forms", Toast.LENGTH_SHORT).show();
             new SyncAllData(
                     this,
-                    "Forms 15",
+                    "Forms",
                     "updateSyncedForms",
                     FormsContract.class,
-                    AppMain._HOST_URL_15_16 + FormsContract.FormsTable._URL.replace(".php", "15.php"),
-                    db.getUnsyncedForms15()
-            ).execute();
-
-            Toast.makeText(getApplicationContext(), "Syncing Forms 16", Toast.LENGTH_SHORT).show();
-            new SyncAllData(
-                    this,
-                    "Forms 16",
-                    "updateSyncedForms",
-                    FormsContract.class,
-                    AppMain._HOST_URL_15_16 + FormsContract.FormsTable._URL.replace(".php", "16.php"),
-                    db.getUnsyncedForms16()
+                    AppMain._HOST_URL + FormsContract.FormsTable._URL,
+                    db.getUnsyncedForms()
             ).execute();
 
             SharedPreferences syncPref = getSharedPreferences("SyncInfo", Context.MODE_PRIVATE);

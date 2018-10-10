@@ -89,31 +89,10 @@ public class ClearClass {
             } else if (v instanceof io.blackbox_vision.datetimepickeredittext.view.DatePickerInputEditText) {
                 ((io.blackbox_vision.datetimepickeredittext.view.DatePickerInputEditText) v).setText(null);
                 v.setEnabled(flag);
+            } else if (v instanceof CardView) {
+                ClearAllCardFields((CardView) v, true);
             } else if (v instanceof LinearLayout) {
-                for (int k = 0; k < ((LinearLayout) v).getChildCount(); k++) {
-                    View v1 = ((LinearLayout) v).getChildAt(k);
-                    if (v1 instanceof CheckBox) {
-                        ((CheckBox) v1).setChecked(false);
-                        ((CheckBox) v1).setError(null);
-                        v1.setEnabled(flag);
-                    } else if (v1 instanceof RadioGroup) {
-                        if (!flag) {
-                            ((RadioGroup) v1).clearCheck();
-                        }
-                        for (int j = 0; j < ((RadioGroup) v1).getChildCount(); j++) {
-                            ((RadioGroup) v1).getChildAt(j).setEnabled(flag);
-                        }
-                    } else if (v1 instanceof EditText) {
-                        ((EditText) v1).setText(null);
-                        ((EditText) v1).setError(null);
-                        v1.clearFocus();
-                        v1.setEnabled(flag);
-                    } else if (v1 instanceof io.blackbox_vision.datetimepickeredittext.view.DatePickerInputEditText) {
-                        ((io.blackbox_vision.datetimepickeredittext.view.DatePickerInputEditText) v1).setText(null);
-                        ((io.blackbox_vision.datetimepickeredittext.view.DatePickerInputEditText) v1).setError(null);
-                        v1.setEnabled(flag);
-                    }
-                }
+                ClearAllFields((LinearLayout) v, flag);
             }
         }
     }

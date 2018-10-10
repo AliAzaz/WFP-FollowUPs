@@ -133,25 +133,21 @@ public class SectionHActivity extends AppCompatActivity {
         sH.put("pfh02b", bi.pfh02b.getSelectedItem().toString());
         sH.put("pfh0202", bi.pfh0202.getText().toString());
         sH.put("pfh03", bi.pfh0399.isChecked() ? "99" : bi.pfh03.getText().toString());
-
-//        AppMain.fc.setsH(String.valueOf(sH));
+        AppMain.fc.setsH(String.valueOf(sH));
     }
 
     private boolean UpdateDB() {
 
         DatabaseHelper db = new DatabaseHelper(this);
 
-        /*int updcount = db.updatesH();
+        int updcount = db.updatesH();
 
         if (updcount == 1) {
             return true;
         } else {
             Toast.makeText(this, "Updating Database... ERROR!", Toast.LENGTH_SHORT).show();
             return false;
-        }*/
-
-
-        return true;
+        }
     }
 
     public boolean formValidation() {

@@ -102,17 +102,14 @@ public class SectionJActivity extends AppCompatActivity {
 
         DatabaseHelper db = new DatabaseHelper(this);
 
-        /*int updcount = db.updatesB();
+        int updcount = db.updatesJ();
 
         if (updcount == 1) {
             return true;
         } else {
             Toast.makeText(this, "Updating Database... ERROR!", Toast.LENGTH_SHORT).show();
             return false;
-        }*/
-
-
-        return true;
+        }
     }
 
     public boolean formValidation() {

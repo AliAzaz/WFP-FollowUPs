@@ -12,8 +12,8 @@ import org.json.JSONObject;
 
 public class FormsContract {
 
-    private String projectName = "MaPPS Study";
-    private String surveyType = "Birth History & Maternal Antrhopometric Assessment (1 week postpartum)";
+    private String projectName = "WFP-PW Study";
+    private String surveyType = "Monthly follow-up form for PLW - Pishin study";
     private Long _ID;
     private String UID = "";
     private String formDate = ""; // Date
@@ -32,6 +32,11 @@ public class FormsContract {
     private String sC = "";
     private String sD = "";
     private String sE = "";
+    private String sF = "";
+    private String sG = "";
+    private String sH = "";
+    private String sI = "";
+    private String sJ = "";
     private String gpsLat = "";
     private String gpsLng = "";
     private String gpsTime = "";
@@ -54,7 +59,6 @@ public class FormsContract {
     }
 
     public String getFormType() {
-
         return formType;
     }
 
@@ -154,7 +158,6 @@ public class FormsContract {
         this.istatus = istatus;
     }
 
-
     public String getEndingDateTime() {
         return endingDateTime;
     }
@@ -201,6 +204,46 @@ public class FormsContract {
 
     public void setsE(String sE) {
         this.sE = sE;
+    }
+
+    public String getsF() {
+        return sF;
+    }
+
+    public void setsF(String sF) {
+        this.sF = sF;
+    }
+
+    public String getsG() {
+        return sG;
+    }
+
+    public void setsG(String sG) {
+        this.sG = sG;
+    }
+
+    public String getsH() {
+        return sH;
+    }
+
+    public void setsH(String sH) {
+        this.sH = sH;
+    }
+
+    public String getsI() {
+        return sI;
+    }
+
+    public void setsI(String sI) {
+        this.sI = sI;
+    }
+
+    public String getsJ() {
+        return sJ;
+    }
+
+    public void setsJ(String sJ) {
+        this.sJ = sJ;
     }
 
     public String getGpsLat() {
@@ -283,7 +326,7 @@ public class FormsContract {
         this.tagID = tagID;
     }
 
-    public FormsContract Sync(JSONObject jsonObject) throws JSONException {
+/*    public FormsContract Sync(JSONObject jsonObject) throws JSONException {
         this.projectName = jsonObject.getString(FormsTable.COLUMN_PROJECTNAME);
         this.surveyType = jsonObject.getString(FormsTable.COLUMN_SURVEYTYPE);
         this._ID = jsonObject.getLong(FormsTable.COLUMN__ID);
@@ -316,7 +359,7 @@ public class FormsContract {
 
         return this;
 
-    }
+    }*/
 
     public FormsContract Hydrate(Cursor cursor) {
         this.projectName = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_PROJECTNAME));
@@ -338,6 +381,11 @@ public class FormsContract {
         this.sC = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_SC));
         this.sD = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_SD));
         this.sE = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_SE));
+        this.sF = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_SF));
+        this.sG = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_SG));
+        this.sH = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_SH));
+        this.sI = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_SI));
+        this.sJ = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_SJ));
         this.endingDateTime = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_ENDINGDATETIME));
         this.gpsLat = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_GPSLAT));
         this.gpsLng = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_GPSLNG));
@@ -406,6 +454,41 @@ public class FormsContract {
         } catch (Exception e) {
         }
 
+        try {
+            if (!this.sF.equals("")) {
+                json.put(FormsTable.COLUMN_SF, this.sF == null ? JSONObject.NULL : new JSONObject(this.sF));
+            }
+        } catch (Exception e) {
+        }
+
+        try {
+            if (!this.sG.equals("")) {
+                json.put(FormsTable.COLUMN_SG, this.sG == null ? JSONObject.NULL : new JSONObject(this.sG));
+            }
+        } catch (Exception e) {
+        }
+
+        try {
+            if (!this.sH.equals("")) {
+                json.put(FormsTable.COLUMN_SH, this.sH == null ? JSONObject.NULL : new JSONObject(this.sH));
+            }
+        } catch (Exception e) {
+        }
+
+        try {
+            if (!this.sI.equals("")) {
+                json.put(FormsTable.COLUMN_SI, this.sI == null ? JSONObject.NULL : new JSONObject(this.sI));
+            }
+        } catch (Exception e) {
+        }
+
+        try {
+            if (!this.sJ.equals("")) {
+                json.put(FormsTable.COLUMN_SJ, this.sJ == null ? JSONObject.NULL : new JSONObject(this.sJ));
+            }
+        } catch (Exception e) {
+        }
+
         json.put(FormsTable.COLUMN_ENDINGDATETIME, this.endingDateTime == null ? JSONObject.NULL : this.endingDateTime);
         json.put(FormsTable.COLUMN_GPSLAT, this.gpsLat == null ? JSONObject.NULL : this.gpsLat);
         json.put(FormsTable.COLUMN_GPSLNG, this.gpsLng == null ? JSONObject.NULL : this.gpsLng);
@@ -445,6 +528,11 @@ public class FormsContract {
         public static final String COLUMN_SC = "sc";
         public static final String COLUMN_SD = "sd";
         public static final String COLUMN_SE = "se";
+        public static final String COLUMN_SF = "sf";
+        public static final String COLUMN_SG = "sg";
+        public static final String COLUMN_SH = "sh";
+        public static final String COLUMN_SI = "si";
+        public static final String COLUMN_SJ = "sj";
         public static final String COLUMN_ENDINGDATETIME = "endingdatetime";
         public static final String COLUMN_GPSLAT = "gpslat";
         public static final String COLUMN_GPSLNG = "gpslng";
