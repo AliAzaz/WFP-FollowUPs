@@ -138,6 +138,7 @@
                                 android:textSize="20sp" />
 
                             <EditText
+                                style="@style/textInput"
                                 android:id="@+id/pfi02hx"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
@@ -155,6 +156,7 @@
                                 android:textSize="20sp" />
 
                             <EditText
+                                style="@style/textInput"
                                 android:id="@+id/pfi02dx"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
@@ -297,6 +299,7 @@
                                 android:textSize="20sp" />
 
                             <EditText
+                                style="@style/textInput"
                                 android:id="@+id/pfi0496x"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
@@ -455,6 +458,7 @@
                             android:text="@string/other" />
 
                         <EditText
+                            style="@style/textInput"
                             android:id="@+id/pfi0696x"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -920,7 +924,9 @@
                                     android:text="@string/yes"
                                     android:textSize="20sp" />
 
+
                                 <EditText
+                                    style="@style/textInput"
                                     android:id="@+id/pfi10c01x"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
@@ -1111,6 +1117,7 @@
                                     android:textSize="20sp" />
 
                                 <EditText
+                                    style="@style/textInput"
                                     android:id="@+id/pfi10f01x"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
@@ -2483,6 +2490,7 @@
                         android:text="@string/dkn" />
 
                     <EditText
+                        style="@style/textInput"
                         android:id="@+id/pfi14t"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -2630,6 +2638,7 @@
                                 android:textSize="20sp" />
 
                             <EditText
+                                style="@style/textInput"
                                 android:id="@+id/pfi1696x"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"

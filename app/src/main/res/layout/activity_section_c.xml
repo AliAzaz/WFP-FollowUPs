@@ -61,6 +61,7 @@
                         android:layout_marginTop="8sp" />
 
                     <EditText
+                        style="@style/textInput"
                         android:id="@+id/pfc0101"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -83,6 +84,7 @@
                         android:layout_marginTop="8sp" />
 
                     <EditText
+                        style="@style/textInput"
                         android:id="@+id/pfc0102"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -122,6 +124,7 @@
                         android:text="@string/not_applicable" />
 
                     <EditText
+                        style="@style/textInput"
                         android:id="@+id/pfc02"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"

@@ -46,6 +46,7 @@
     <string name="gl"> g/dL </string>
     <string name="not_applicable">Not Applicable</string>
     <string name="reason">وجہ</string>
+    <string name="name">نام</string>
 
 
     <!-- Strings related to Sections Below -->
@@ -80,6 +81,7 @@
     <string name="pfa04a"> حاملہ خاتون </string>
     <string name="pfa04b"> دودھ پلانے والی ماں </string>
     <string name="pfa05"> فالو اپ کی تاریخ </string>
+    <string name="pfa06">زبانی رضامندی </string>
     <string name="pfbheading"> حاملہ خاتون یا دودھ پلانے والی ماں کی موجودہ صورت حال </string>
     <string name="pfb01"> کیا حاملہ خاتون یا دودھ پلانے والی ماں انٹرویو کے لئے دستیاب ہے؟ </string>
     <string name="pfb01a"> موجود ہے انٹرویو جاری رکھیں </string>

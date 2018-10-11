@@ -11,9 +11,9 @@
     </data>
 
     <ScrollView
+        android:id="@+id/scrollView"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="5dp">
+        android:layout_height="wrap_content">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -61,6 +61,7 @@
                         android:layout_marginTop="8sp" />
 
                     <EditText
+                        style="@style/textInput"
                         android:id="@+id/pfh0101"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -83,6 +84,7 @@
                         android:layout_marginTop="8sp" />
 
                     <EditText
+                        style="@style/textInput"
                         android:id="@+id/pfh0102"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -130,6 +132,7 @@
                         android:layout_marginTop="8sp" />
 
                     <EditText
+                        style="@style/textInput"
                         android:id="@+id/pfh0201"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -152,6 +155,7 @@
                         android:layout_marginTop="8sp" />
 
                     <EditText
+                        style="@style/textInput"
                         android:id="@+id/pfh0202"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -191,6 +195,7 @@
                         android:text="@string/not_applicable" />
 
                     <EditText
+                        style="@style/textInput"
                         android:id="@+id/pfh03"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"

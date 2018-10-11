@@ -46,7 +46,9 @@ public class SectionJActivity extends AppCompatActivity {
 
                 if (b) {
                     bi.fldgrppfj02.setVisibility(View.GONE);
+                    ClearClass.ClearAllCardFields(bi.fldgrppfj02, false);
                     bi.fldgrppfj03.setVisibility(View.GONE);
+                    ClearClass.ClearAllCardFields(bi.fldgrppfj03, false);
                     bi.pfj0101.clearCheck();
                     bi.pfj0102.clearCheck();
                     bi.pfj0103.clearCheck();
@@ -57,21 +59,32 @@ public class SectionJActivity extends AppCompatActivity {
                     bi.pfj0108.clearCheck();
                     bi.pfj0109.clearCheck();
                     bi.pfj0109ax.setText(null);
-                    bi.pfj02.clearCheck();
-                    bi.pfj03a.setChecked(false);
-                    bi.pfj03b.setChecked(false);
-                    bi.pfj03c.setChecked(false);
-                    bi.pfj03d.setChecked(false);
-                    bi.pfj03e.setChecked(false);
-                    bi.pfj03f.setChecked(false);
-                    bi.pfj03g.setChecked(false);
-                    bi.pfj03h.setChecked(false);
-                    bi.pfj03i.setChecked(false);
-                    bi.pfj03ix.setText(null);
+//                    bi.pfj0101.clearCheck();
+//                    bi.pfj0102.clearCheck();
+//                    bi.pfj0103.clearCheck();
+//                    bi.pfj0104.clearCheck();
+//                    bi.pfj0105.clearCheck();
+//                    bi.pfj0106.clearCheck();
+//                    bi.pfj0107.clearCheck();
+//                    bi.pfj0108.clearCheck();
+//                    bi.pfj0109.clearCheck();
+//                    bi.pfj0109ax.setText(null);
+//                    bi.pfj02.clearCheck();
+//                    bi.pfj03a.setChecked(false);
+//                    bi.pfj03b.setChecked(false);
+//                    bi.pfj03c.setChecked(false);
+//                    bi.pfj03d.setChecked(false);
+//                    bi.pfj03e.setChecked(false);
+//                    bi.pfj03f.setChecked(false);
+//                    bi.pfj03g.setChecked(false);
+//                    bi.pfj03h.setChecked(false);
+//                    bi.pfj03i.setChecked(false);
+//                    bi.pfj03ix.setText(null);
                 } else {
-                    bi.fldgrppfjmain.setVisibility(View.VISIBLE);
                     bi.fldgrppfj02.setVisibility(View.VISIBLE);
                     bi.fldgrppfj03.setVisibility(View.VISIBLE);
+                    ClearClass.ClearAllCardFields(bi.fldgrppfj02, true);
+                    ClearClass.ClearAllCardFields(bi.fldgrppfj03, true);
 
                 }
             }

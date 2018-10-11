@@ -112,6 +112,7 @@
                         android:textColor="@color/white" />
 
                     <EditText
+                        style="@style/textInput"
                         android:id="@+id/pfd02"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -146,6 +147,7 @@
                         android:textColor="@color/white" />
 
                     <EditText
+                        style="@style/textInput"
                         android:id="@+id/pfd03"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -180,6 +182,7 @@
                         android:textColor="@color/white" />
 
                     <EditText
+                        style="@style/textInput"
                         android:id="@+id/pfd04a"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -189,6 +192,7 @@
                         android:maxLength="2" />
 
                     <EditText
+                        style="@style/textInput"
                         android:id="@+id/pfd04b"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -222,6 +226,7 @@
                         android:textColor="@color/white" />
 
                     <EditText
+                        style="@style/textInput"
                         android:id="@+id/pfd05a"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -231,6 +236,7 @@
                         android:maxLength="2" />
 
                     <EditText
+                        style="@style/textInput"
                         android:id="@+id/pfd05b"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -351,6 +357,7 @@
                         android:text="@string/other" />
 
                     <EditText
+                        style="@style/textInput"
                         android:id="@+id/pfd0796x"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -467,6 +474,7 @@
                         android:text="@string/other" />
 
                     <EditText
+                        style="@style/textInput"
                         android:id="@+id/pfd0996x"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -502,6 +510,7 @@
                         android:textColor="@color/white" />
 
                     <EditText
+                        style="@style/textInput"
                         android:id="@+id/pfd10"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -664,6 +673,7 @@
                         android:text="@string/other" />
 
                     <EditText
+                        style="@style/textInput"
                         android:id="@+id/pfd1296x"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"

@@ -14,6 +14,7 @@
     </data>
 
     <ScrollView
+        android:id="@+id/scrollView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
@@ -310,13 +311,14 @@
                             android:text="@string/pfg07a" />
 
                         <EditText
+                            android:hint="@string/pfg07a"
                             android:id="@+id/pfg07ax"
                             style="@style/textInput"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_margin="10dp"
                             android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz"
-                            android:hint="@string/pfg07a" />
+                            android:visibility="gone" />
 
                         <RadioButton
                             android:id="@+id/pfg07b"
@@ -327,13 +329,14 @@
                             android:text="@string/pfg07b" />
 
                         <EditText
+                            android:hint="@string/pfg07b"
                             android:id="@+id/pfg07bx"
                             style="@style/textInput"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_margin="10dp"
                             android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz"
-                            android:hint="@string/pfg07b" />
+                            android:visibility="gone" />
 
                         <RadioButton
                             android:id="@+id/pfg07c"
@@ -538,7 +541,7 @@
                         android:layout_weight="1"
                         android:text="@string/pfg09d" />
 
-                    <RadioButton
+                    <CheckBox
                         android:id="@+id/pfg09e"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -587,8 +590,7 @@
                         android:layout_margin="10dp"
                         android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz"
                         android:hint="@string/other"
-                        android:text='@{pfg0996.checked? pfg0996x.getText.toString : "" }'
-                        android:visibility='@{pfg0996.checked? View.VISIBLE : View.GONE}' />
+                        android:visibility="gone" />
 
 
                     <CheckBox
@@ -1177,8 +1179,7 @@
                         android:layout_margin="10dp"
                         android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz"
                         android:hint="@string/other"
-                        android:text='@{pfg1696.checked? pfg1696x.getText.toString : "" }'
-                        android:visibility='@{pfg1696.checked? View.VISIBLE : View.GONE}' />
+                        android:visibility="gone" />
 
                     <CheckBox
                         android:id="@+id/pfg1698"
@@ -2018,6 +2019,7 @@
                             android:text="@string/pfg25c" />
 
                         <EditText
+                            style="@style/textInput"
                             android:id="@+id/pfg25cx"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"

@@ -13,47 +13,14 @@
         android:paddingEnd="16dp"
         android:paddingRight="14dp">
 
-        <TextView
-            android:id="@+id/app_header"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginTop="16dp"
-            android:background="@color/colorAccent"
-            android:gravity="center"
-            android:text="@string/Seca"
-            android:textSize="40sp" />
 
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="2dp"
-            android:background="@color/colorPrimary" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:background="@color/colorPrimary"
-            android:text="LHWs"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:textColor="@android:color/white" />
-
-        <Spinner
-            android:id="@+id/lhws"
-            style="@style/Widget.AppCompat.Spinner.Underlined"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:popupBackground="#ffffff"
-
-            />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:background="@color/colorPrimary"
-            android:text="@string/mp08a001"
+            android:text="@string/pfa02"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:textColor="@android:color/white" />
 
@@ -64,6 +31,7 @@
             android:orientation="horizontal">
 
             <Button
+                android:layout_marginTop="10dp"
                 android:id="@+id/checkParticipants"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -80,11 +48,12 @@
                 />
 
             <EditText
+                style="@style/textInput"
                 android:id="@+id/mp08a001"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:hint="@string/mp08a001"
+                android:hint="@string/pfa02"
                 android:inputType="number"
                 android:maxLength="3" />
 
@@ -104,96 +73,49 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
                 android:background="@color/colorPrimary"
-                android:text="@string/mp08a003"
-
+                android:text="@string/name"
                 android:textAppearance="?android:attr/textAppearanceLarge"
                 android:textColor="@android:color/white" />
-
-            <!--<EditText-->
-            <!--android:id="@+id/mp08a003"-->
-            <!--android:layout_width="match_parent"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:digits="abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ"-->
-            <!--android:hint="@string/mp08a003"-->
-            <!--android:enabled="false"-->
-            <!--android:inputType="textCapWords" />-->
-
-            <Spinner
-                android:id="@+id/mp08a003"
-                style="@style/Widget.AppCompat.Spinner.Underlined"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:popupBackground="#ffffff" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:background="@color/colorPrimary"
-                android:text="@string/mp08a002"
-                android:textAppearance="?android:attr/textAppearanceLarge"
-                android:textColor="@android:color/white" />
-
             <EditText
-                android:id="@+id/mp08a002"
+                android:id="@+id/pfa01"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:enabled="false"
-                android:hint="@string/mp08a002"
-                android:inputType="number"
-                android:maxLength="9" />
+                style="@style/textInput"
+                android:hint="@string/name"
+                android:inputType="text" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
                 android:background="@color/colorPrimary"
-                android:text="@string/mp08a005"
+                android:text="@string/pfa04"
                 android:textAppearance="?android:attr/textAppearanceLarge"
                 android:textColor="@android:color/white" />
 
-            <EditText
-                android:id="@+id/mp08a005"
+            <RadioGroup
+                android:id="@+id/pfa02"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:digits="abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-                android:hint="@string/mp08a005"
-                android:inputType="textCapWords" />
+                android:orientation="horizontal">
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:background="@color/colorPrimary"
-                android:text="@string/mp08a006"
-                android:textAppearance="?android:attr/textAppearanceLarge"
-                android:textColor="@android:color/white" />
+                <RadioButton
+                    android:id="@+id/pfa02a"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/pfa04a" />
 
-            <EditText
-                android:id="@+id/mp08a007"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:digits="abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-                android:hint="@string/mp08a006"
-                android:inputType="textCapWords" />
+                <RadioButton
+                    android:id="@+id/pfa02b"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/pfa04b" />
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:background="@color/colorPrimary"
-                android:text="@string/mp08a008"
-                android:textAppearance="?android:attr/textAppearanceLarge"
-                android:textColor="@android:color/white" />
+            </RadioGroup>
 
-            <EditText
-                android:id="@+id/mp08a008"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="@string/mp08a008"
-                android:inputType="number"
-                android:maxLength="11" />
 
             <!--<LinearLayout
                 android:id="@+id/fldGrpClinic"
@@ -228,7 +150,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
                 android:background="@color/colorPrimary"
-                android:text="@string/mp08a013"
+                android:text="@string/pfa06"
                 android:textAppearance="?android:attr/textAppearanceLarge"
                 android:textColor="@android:color/white" />
 

@@ -4,21 +4,15 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.graphics.Color;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.format.DateFormat;
 import android.util.Log;
 import android.view.View;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
-import android.widget.Spinner;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import org.json.JSONException;
@@ -51,22 +45,22 @@ public class InfoActivity extends Activity {
     HashMap<String, String> LHWs;
     Boolean check = false;
     Collection<EnrolledContract> enrolledParticipant;
-    @BindView(R.id.app_header)
-    TextView appHeader;
-    @BindView(R.id.mp08a001)
-    EditText mp08a001;
-    @BindView(R.id.mp08a002)
-    EditText mp08a002;
-    @BindView(R.id.mp08a003)
-    Spinner mp08a003;
-    @BindView(R.id.lhws)
-    Spinner lhws;
-    @BindView(R.id.mp08a005)
-    EditText mp08a005;
-    @BindView(R.id.mp08a008)
-    EditText mp08a008;
-    @BindView(R.id.mp08a007)
-    EditText mp08a007;
+    //    @BindView(R.id.app_header)
+//    TextView appHeader;
+//    @BindView(R.id.mp08a001)
+//    EditText mp08a001;
+//    @BindView(R.id.mp08a002)
+//    EditText mp08a002;
+//    @BindView(R.id.mp08a003)
+//    Spinner mp08a003;
+//    @BindView(R.id.lhws)
+//    Spinner lhws;
+//    @BindView(R.id.mp08a005)
+//    EditText mp08a005;
+//    @BindView(R.id.mp08a008)
+//    EditText mp08a008;
+//    @BindView(R.id.mp08a007)
+//    EditText mp08a007;
     @BindView(R.id.mp08a013)
     RadioGroup mp08a013;
     @BindView(R.id.mp08a01301)
@@ -85,7 +79,7 @@ public class InfoActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_info);
         ButterKnife.bind(this);
-
+        this.setTitle(R.string.pfaheading);
         db = new DatabaseHelper(this);
 
         LHWsName = new ArrayList<>();
@@ -100,27 +94,27 @@ public class InfoActivity extends Activity {
             LHWs.put(lhws.getLhwName(), lhws.getLhwId());
 
         }
-        lhws.setAdapter(new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, LHWsName));
-
-        lhws.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-            @Override
-            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-
-
-                ((TextView) parent.getChildAt(0)).setTextColor(getResources().getColor(R.color.colorPrimary));
-                ((TextView) parent.getChildAt(0)).setTextSize(28);
-                Log.d("Selected LHWs", LHWs.get(lhws.getSelectedItem().toString()));
-
-
-                mp08a001.setText(null);
-
-            }
-
-            @Override
-            public void onNothingSelected(AdapterView<?> parent) {
-
-            }
-        });
+//        lhws.setAdapter(new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, LHWsName));
+//
+//        lhws.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+//            @Override
+//            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+//
+//
+//                ((TextView) parent.getChildAt(0)).setTextColor(getResources().getColor(R.color.colorPrimary));
+//                ((TextView) parent.getChildAt(0)).setTextSize(28);
+//                Log.d("Selected LHWs", LHWs.get(lhws.getSelectedItem().toString()));
+//
+//
+//                mp08a001.setText(null);
+//
+//            }
+//
+//            @Override
+//            public void onNothingSelected(AdapterView<?> parent) {
+//
+//            }
+//        });
 
         mp08a013.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
@@ -133,21 +127,21 @@ public class InfoActivity extends Activity {
                 }
             }
         });
-        mp08a003.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-            @Override
-            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-
-                mp08a002.setText(AppMain.Eparticipant.get(i).getSno());
-
-
-                position = i;
-            }
-
-            @Override
-            public void onNothingSelected(AdapterView<?> adapterView) {
-
-            }
-        });
+//        mp08a003.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+//            @Override
+//            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+//
+//                mp08a002.setText(AppMain.Eparticipant.get(i).getSno());
+//
+//
+//                position = i;
+//            }
+//
+//            @Override
+//            public void onNothingSelected(AdapterView<?> adapterView) {
+//
+//            }
+//        });
 
 
         if (AppMain.formType.equals("15")) {
@@ -172,7 +166,7 @@ public class InfoActivity extends Activity {
     void onCheckParticipantsClick() {
         //TODO implement
 
-        enrolledParticipant = db.getEnrolledByHousehold(AppMain.curCluster, LHWs.get(lhws.getSelectedItem().toString()), mp08a001.getText().toString());
+        //enrolledParticipant = db.getEnrolledByHousehold(AppMain.curCluster, LHWs.get(lhws.getSelectedItem().toString()), mp08a001.getText().toString());
 
         if (enrolledParticipant.size() != 0) {
 
@@ -195,7 +189,7 @@ public class InfoActivity extends Activity {
 
             check = true;
 
-            mp08a003.setAdapter(new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, partNames));
+            //mp08a003.setAdapter(new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, partNames));
 
 
         } else {
@@ -293,24 +287,24 @@ public class InfoActivity extends Activity {
         AppMain.fc.setInterviewer01(AppMain.loginMem[1]);
         AppMain.fc.setInterviewer02(AppMain.loginMem[2]);
         AppMain.fc.setClustercode(AppMain.curCluster);
-        AppMain.fc.setHousehold(mp08a001.getText().toString());
+        //AppMain.fc.setHousehold(mp08a001.getText().toString());
         AppMain.fc.setDeviceID(AppMain.deviceId);
         AppMain.fc.setSno(AppMain.Eparticipant.get(position).getSno());
         AppMain.fc.setFormType(AppMain.formType);
-        AppMain.fc.setVillageacode(mp08a007.getText().toString());
+        // AppMain.fc.setVillageacode(mp08a007.getText().toString());
 
         AppMain.fc.setLhwCode(AppMain.Eparticipant.get(position).getLhwCode());
         AppMain.fc.setApp_version(AppMain.versionName + "." + AppMain.versionCode);
 
-        id = AppMain.curCluster + AppMain.Eparticipant.get(position).getLhwCode() + mp08a001.getText().toString() + AppMain.Eparticipant.get(position).getSno();
+        // id = AppMain.curCluster + AppMain.Eparticipant.get(position).getLhwCode() + mp08a001.getText().toString() + AppMain.Eparticipant.get(position).getSno();
 
         JSONObject sInfo = new JSONObject();
 
         sInfo.put("luid", AppMain.Eparticipant.get(position).getLUID());
 //        sInfo.put("uid_f4", AppMain.Eparticipant.get(position).getS1());
-        sInfo.put(AppMain.ftype + "a003", mp08a003.getSelectedItem().toString());
-        sInfo.put(AppMain.ftype + "a005", mp08a005.getText().toString());
-        sInfo.put(AppMain.ftype + "a008", mp08a008.getText().toString());
+        //sInfo.put(AppMain.ftype + "a003", mp08a003.getSelectedItem().toString());
+        //sInfo.put(AppMain.ftype + "a005", mp08a005.getText().toString());
+        //sInfo.put(AppMain.ftype + "a008", mp08a008.getText().toString());
         sInfo.put(AppMain.ftype + "a013", mp08a01301.isChecked() ? "1" : mp08a01302.isChecked() ? "2" : "0");
 
         AppMain.fc.setsInfo(String.valueOf(sInfo));
@@ -358,43 +352,43 @@ public class InfoActivity extends Activity {
 
         //======================= Q 1 ===============
 
-        if (mp08a001.getText().toString().isEmpty()) {
-            Toast.makeText(this, "ERROR(Empty)" + getString(R.string.mp08a001), Toast.LENGTH_SHORT).show();
-            mp08a001.setError("This data is Required!");
-            Log.i(TAG, "mp08a001: This Data is Required!");
-            mp08a001.requestFocus();
-            return false;
-        } else {
-            mp08a001.setError(null);
-        }
+//        if (mp08a001.getText().toString().isEmpty()) {
+//            Toast.makeText(this, "ERROR(Empty)" + getString(R.string.mp08a001), Toast.LENGTH_SHORT).show();
+//            mp08a001.setError("This data is Required!");
+//            Log.i(TAG, "mp08a001: This Data is Required!");
+//            mp08a001.requestFocus();
+//            return false;
+//        } else {
+//            mp08a001.setError(null);
+//        }
 
         //======================= Q 3 ===============
 
-        if (mp08a003.getSelectedItem() == "....") {
-//        if (mp08a003.getSelectedItem().equals("")) {
-            Toast.makeText(this, "ERROR(Empty)" + getString(R.string.mp08a003), Toast.LENGTH_SHORT).show();
-            ((TextView) mp08a003.getSelectedView()).setText("This Data is Required");
-            ((TextView) mp08a003.getSelectedView()).setError("This Data is Required");
-            ((TextView) mp08a003.getSelectedView()).setTextColor(Color.RED);
-            mp08a003.requestFocus();
-
-            Log.i(TAG, "mp08a003: This Data is Required!");
-            return false;
-        } else {
-            ((TextView) mp08a003.getSelectedView()).setError(null);
-        }
+//        if (mp08a003.getSelectedItem() == "....") {
+////        if (mp08a003.getSelectedItem().equals("")) {
+//            Toast.makeText(this, "ERROR(Empty)" + getString(R.string.mp08a003), Toast.LENGTH_SHORT).show();
+//            ((TextView) mp08a003.getSelectedView()).setText("This Data is Required");
+//            ((TextView) mp08a003.getSelectedView()).setError("This Data is Required");
+//            ((TextView) mp08a003.getSelectedView()).setTextColor(Color.RED);
+//            mp08a003.requestFocus();
+//
+//            Log.i(TAG, "mp08a003: This Data is Required!");
+//            return false;
+//        } else {
+//            ((TextView) mp08a003.getSelectedView()).setError(null);
+//        }
 
         //======================= Q 2 ===============
 
-        if (mp08a002.getText().toString().isEmpty()) {
-            Toast.makeText(this, "ERROR(Empty)" + getString(R.string.mp08a002), Toast.LENGTH_SHORT).show();
-            mp08a002.setError("This data is Required!");
-            mp08a002.requestFocus();
-            Log.i(TAG, "mp08a002: This Data is Required!");
-            return false;
-        } else {
-            mp08a002.setError(null);
-        }
+//        if (mp08a002.getText().toString().isEmpty()) {
+//            Toast.makeText(this, "ERROR(Empty)" + getString(R.string.mp08a002), Toast.LENGTH_SHORT).show();
+//            mp08a002.setError("This data is Required!");
+//            mp08a002.requestFocus();
+//            Log.i(TAG, "mp08a002: This Data is Required!");
+//            return false;
+//        } else {
+//            mp08a002.setError(null);
+//        }
 
         /*if (mp08a003.getText().toString().isEmpty()) {
             Toast.makeText(this, "ERROR(Empty)" + getString(R.string.mp08a003), Toast.LENGTH_SHORT).show();
@@ -406,35 +400,35 @@ public class InfoActivity extends Activity {
             mp08a003.setError(null);
         }*/
 
-        if (mp08a005.getText().toString().isEmpty()) {
-            Toast.makeText(this, "ERROR(Empty)" + getString(R.string.mp08a005), Toast.LENGTH_SHORT).show();
-            mp08a005.setError("This data is Required!");
-            mp08a005.requestFocus();
-            Log.i(TAG, "mp08a005: This Data is Required!");
-            return false;
-        } else {
-            mp08a005.setError(null);
-        }
+//        if (mp08a005.getText().toString().isEmpty()) {
+//            Toast.makeText(this, "ERROR(Empty)" + getString(R.string.mp08a005), Toast.LENGTH_SHORT).show();
+//            mp08a005.setError("This data is Required!");
+//            mp08a005.requestFocus();
+//            Log.i(TAG, "mp08a005: This Data is Required!");
+//            return false;
+//        } else {
+//            mp08a005.setError(null);
+//        }
+//
+//        if (mp08a007.getText().toString().isEmpty()) {
+//            Toast.makeText(this, "ERROR(Empty)" + getString(R.string.mp08a006), Toast.LENGTH_SHORT).show();
+//            mp08a007.setError("This data is Required!");
+//            mp08a007.requestFocus();
+//            Log.i(TAG, "mp08a007: This Data is Required!");
+//            return false;
+//        } else {
+//            mp08a007.setError(null);
+//        }
 
-        if (mp08a007.getText().toString().isEmpty()) {
-            Toast.makeText(this, "ERROR(Empty)" + getString(R.string.mp08a006), Toast.LENGTH_SHORT).show();
-            mp08a007.setError("This data is Required!");
-            mp08a007.requestFocus();
-            Log.i(TAG, "mp08a007: This Data is Required!");
-            return false;
-        } else {
-            mp08a007.setError(null);
-        }
-
-        if (mp08a008.getText().toString().isEmpty()) {
-            Toast.makeText(this, "ERROR(Empty)" + getString(R.string.mp08a008), Toast.LENGTH_SHORT).show();
-            mp08a008.setError("This data is Required!");
-            mp08a008.requestFocus();
-            Log.i(TAG, "mp08a008: This Data is Required!");
-            return false;
-        } else {
-            mp08a008.setError(null);
-        }
+//        if (mp08a008.getText().toString().isEmpty()) {
+//            Toast.makeText(this, "ERROR(Empty)" + getString(R.string.mp08a008), Toast.LENGTH_SHORT).show();
+//            mp08a008.setError("This data is Required!");
+//            mp08a008.requestFocus();
+//            Log.i(TAG, "mp08a008: This Data is Required!");
+//            return false;
+//        } else {
+//            mp08a008.setError(null);
+//        }
 
 
         if (mp08a013.getCheckedRadioButtonId() == -1) {
