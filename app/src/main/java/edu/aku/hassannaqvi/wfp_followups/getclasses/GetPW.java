@@ -31,13 +31,13 @@ import edu.aku.hassannaqvi.wfp_followups.core.DatabaseHelper;
 /**
  * Created by hassan.naqvi on 7/26/2016.
  */
-public class GetEnrolled extends AsyncTask<Void, Void, String> {
+public class GetPW extends AsyncTask<Void, Void, String> {
 
-    private static final String TAG = "GetEnrolled";
+    private static final String TAG = "GetPW";
     private Context mContext;
     private ProgressDialog pd;
 
-    public GetEnrolled(Context context) {
+    public GetPW(Context context) {
         mContext = context;
     }
 
@@ -53,7 +53,7 @@ public class GetEnrolled extends AsyncTask<Void, Void, String> {
     protected void onPreExecute() {
         super.onPreExecute();
         pd = new ProgressDialog(mContext);
-        pd.setTitle("Please wait... Processing Enrolleds");
+        pd.setTitle("Please wait... Processing PWs");
         pd.show();
 
     }
@@ -76,17 +76,17 @@ public class GetEnrolled extends AsyncTask<Void, Void, String> {
             json = new JSONArray(result);
             DatabaseHelper db = new DatabaseHelper(mContext);
             db.syncEnrolled(json);
-            Toast.makeText(mContext, "Successfully Synced " + json.length() + " Enrolleds", Toast.LENGTH_SHORT).show();
+            Toast.makeText(mContext, "Successfully Synced " + json.length() + " PWs", Toast.LENGTH_SHORT).show();
 
-            pd.setMessage(json.length() + " Enrolleds synced.");
-            pd.setTitle("Enrolleds: Done");
+            pd.setMessage(json.length() + " PWs synced.");
+            pd.setTitle("PWs: Done");
             pd.show();
         } catch (JSONException e) {
             e.printStackTrace();
             Toast.makeText(mContext, "Failed Sync " + result, Toast.LENGTH_SHORT).show();
 
             pd.setMessage(result);
-            pd.setTitle("Enrolleds Sync Failed");
+            pd.setTitle("PWs Sync Failed");
             pd.show();
 
         }
@@ -121,9 +121,9 @@ public class GetEnrolled extends AsyncTask<Void, Void, String> {
             JSONArray jsonSync = new JSONArray();
             DataOutputStream wr = new DataOutputStream(conn.getOutputStream());
             DatabaseHelper db = new DatabaseHelper(mContext);
-                /*ollection<EnrolledContract> Enrolleds = db.getAllEnrolled();
-                Log.d(TAG, String.valueOf(Enrolleds.size()));
-                for (EnrolledContract fc : Enrolleds) {
+                /*ollection<EnrolledContract> PWs = db.getAllEnrolled();
+                Log.d(TAG, String.valueOf(PWs.size()));
+                for (EnrolledContract fc : PWs) {
 
                     jsonSync.put(fc.toJSONObject());
 

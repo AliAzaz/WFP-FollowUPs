@@ -126,7 +126,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             EnrolledTable.COLUMN_NAME_HOUSEHOLD + " TEXT," +
             EnrolledTable.COLUMN_SYNCED + " TEXT,"
             + EnrolledTable.COLUMN_SYNCED_DATE + " TEXT," +
-            EnrolledTable.COLUMN_NAME_SNO + " TEXT," +
+            EnrolledTable.COLUMN_NAME_STUDY_ID + " TEXT," +
             EnrolledTable.COLUMN_NAME_WOMEN_NAME + " TEXT," +
             EnrolledTable.COLUMN_NAME_S1 + " TEXT" +
 
@@ -234,7 +234,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 values.put(EnrolledTable.COLUMN_NAME_LHWCODE, ec.getLhwCode());
                 values.put(EnrolledTable.COLUMN_NAME_HOUSEHOLD, ec.getHouseHold());
                 values.put(EnrolledTable.COLUMN_NAME_WOMEN_NAME, ec.getWomen_name());
-                values.put(EnrolledTable.COLUMN_NAME_SNO, ec.getSno());
+                values.put(EnrolledTable.COLUMN_NAME_STUDY_ID, ec.getStudy_id());
                 values.put(EnrolledTable.COLUMN_NAME_S1, ec.getS1());
 
                 db.insert(EnrolledTable.TABLE_NAME, null, values);
@@ -855,7 +855,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         String[] columns = {
                 EnrolledTable.COLUMN_NAME_LUID,
                 EnrolledTable.COLUMN_NAME_WOMEN_NAME,
-                EnrolledTable.COLUMN_NAME_SNO,
+                EnrolledTable.COLUMN_NAME_STUDY_ID,
                 EnrolledTable.COLUMN_NAME_SUBAREACODE,
                 EnrolledTable.COLUMN_NAME_LHWCODE,
                 EnrolledTable.COLUMN_NAME_S1,
@@ -908,7 +908,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 EnrolledTable.COLUMN_NAME_SUBAREACODE,
                 EnrolledTable.COLUMN_NAME_LHWCODE,
                 EnrolledTable.COLUMN_NAME_HOUSEHOLD,
-                EnrolledTable.COLUMN_NAME_SNO,
+                EnrolledTable.COLUMN_NAME_STUDY_ID,
                 EnrolledTable.COLUMN_NAME_S1,
                 EnrolledTable.COLUMN_NAME_WOMEN_NAME
         };
@@ -956,7 +956,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 EnrolledTable.COLUMN_NAME_SUBAREACODE,
                 EnrolledTable.COLUMN_NAME_LHWCODE,
                 EnrolledTable.COLUMN_NAME_HOUSEHOLD,
-                EnrolledTable.COLUMN_NAME_SNO,
+                EnrolledTable.COLUMN_NAME_STUDY_ID,
                 EnrolledTable.COLUMN_NAME_S1,
                 EnrolledTable.COLUMN_NAME_WOMEN_NAME
         };

@@ -40,6 +40,11 @@ public class SectionCActivity extends AppCompatActivity {
 
     private void setupViews() {
 
+        if (getIntent().getBooleanExtra("pwMonth", false)) {
+            bi.pfc0299.setChecked(true);
+            bi.pfc0299.setEnabled(false);
+        }
+
         bi.pfc01a.setAdapter(new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, Arrays.asList(AppMain.loginMem)));
         bi.pfc01b.setAdapter(new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, Arrays.asList(AppMain.loginMem)));
 

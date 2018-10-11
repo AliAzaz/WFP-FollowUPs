@@ -38,7 +38,7 @@ import edu.aku.hassannaqvi.wfp_followups.contracts.FormsContract;
 import edu.aku.hassannaqvi.wfp_followups.core.AndroidDatabaseManager;
 import edu.aku.hassannaqvi.wfp_followups.core.AppMain;
 import edu.aku.hassannaqvi.wfp_followups.core.DatabaseHelper;
-import edu.aku.hassannaqvi.wfp_followups.getclasses.GetEnrolled;
+import edu.aku.hassannaqvi.wfp_followups.getclasses.GetPW;
 import edu.aku.hassannaqvi.wfp_followups.otherclasses.FormsList;
 import edu.aku.hassannaqvi.wfp_followups.syncclasses.SyncAllData;
 
@@ -371,7 +371,7 @@ public class MainActivity extends Activity {
 
             // Sync Randomization
             Toast.makeText(getApplicationContext(), "Getting Eligibleomization", Toast.LENGTH_SHORT).show();
-            new GetEnrolled(this).execute();
+            new GetPW(this).execute();
 
 
             SharedPreferences syncPref = getSharedPreferences("SyncInfo", Context.MODE_PRIVATE);

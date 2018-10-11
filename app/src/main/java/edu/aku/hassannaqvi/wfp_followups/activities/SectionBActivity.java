@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.widget.RadioGroup;
 import android.widget.Toast;
 
 import org.json.JSONException;
@@ -16,6 +17,7 @@ import edu.aku.hassannaqvi.wfp_followups.contracts.FormsContract;
 import edu.aku.hassannaqvi.wfp_followups.core.AppMain;
 import edu.aku.hassannaqvi.wfp_followups.core.DatabaseHelper;
 import edu.aku.hassannaqvi.wfp_followups.databinding.ActivitySectionBBinding;
+import edu.aku.hassannaqvi.wfp_followups.validation.ClearClass;
 import edu.aku.hassannaqvi.wfp_followups.validation.validatorClass;
 
 public class SectionBActivity extends AppCompatActivity {
@@ -41,6 +43,36 @@ public class SectionBActivity extends AppCompatActivity {
         bi.pfb04.setManager(getSupportFragmentManager());
         bi.pfb04.setMaxDate(new SimpleDateFormat("dd/MM/yyyy").format(System.currentTimeMillis()));
 
+//        Get check from prv activity
+        int flag = getIntent().getIntExtra("valCheck", 0);
+        if (flag == 1) {
+            bi.pfb02d.setEnabled(false);
+            bi.pfb02e.setEnabled(false);
+        } else {
+            bi.pfb02a.setEnabled(false);
+            bi.pfb02b.setEnabled(false);
+            bi.pfb02c.setEnabled(false);
+            bi.pfb02d.setEnabled(false);
+        }
+
+        bi.pfb01.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup radioGroup, int i) {
+                if (i != bi.pfb01a.getId()) {
+                    ClearClass.ClearAllFields(bi.fldgrppfba, true);
+                }
+            }
+        });
+
+        bi.pfb02.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup radioGroup, int i) {
+                if (i != bi.pfb02a.getId() || i != bi.pfb02e.getId()) {
+                    ClearClass.ClearAllFields(bi.fldgrppfbb, true);
+                }
+            }
+        });
+
     }
 
     public void BtnContinue() {
@@ -53,8 +85,9 @@ public class SectionBActivity extends AppCompatActivity {
             }
             if (UpdateDB()) {
 
-                startActivity(new Intent(this, SectionCActivity.class)
-                        .putExtra("complete", true));
+                startActivity(new Intent(this, bi.pfb01a.isChecked() && !bi.pfb02b.isChecked() ? SectionCActivity.class : EndingActivity.class)
+                        .putExtra("complete", true)
+                        .putExtra("pwMonth", !bi.pfb03.getText().toString().isEmpty() && (Integer.valueOf(bi.pfb03.getText().toString()) < 9)));
                 finish();
             }
         }
@@ -96,15 +129,19 @@ public class SectionBActivity extends AppCompatActivity {
             return false;
         }
 
-        if (!validatorClass.EmptyRadioButton(this, bi.pfb02, bi.pfb02f, getString(R.string.pfb02))) {
-            return false;
+        if (bi.pfb01a.isChecked()) {
+            if (!validatorClass.EmptyRadioButton(this, bi.pfb02, bi.pfb02f, getString(R.string.pfb02))) {
+                return false;
+            }
+
+            if (!validatorClass.EmptyTextBox(this, bi.pfb03, getString(R.string.pfb03))) {
+                return false;
+            }
+
+            return validatorClass.EmptyTextBox(this, bi.pfb04, getString(R.string.pfb04));
         }
 
-        if (!validatorClass.EmptyTextBox(this, bi.pfb03, getString(R.string.pfb03))) {
-            return false;
-        }
-
-        return validatorClass.EmptyTextBox(this, bi.pfb04, getString(R.string.pfb04));
+        return true;
     }
 
     public void BtnEnd() {

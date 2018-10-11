@@ -21,7 +21,7 @@ public class EnrolledContract {
     private String lhwCode; // Cluster
     private String houseHold;  // Structure
     private String women_name;
-    private String sno;
+    private String study_id;
     private String s1;
 
     public EnrolledContract() {
@@ -33,7 +33,7 @@ public class EnrolledContract {
         this.lhwCode = ec.getLhwCode();
         this.houseHold = ec.getHouseHold();
         this.women_name = ec.getWomen_name();
-        this.sno = ec.getSno();
+        this.study_id = ec.getStudy_id();
         this.s1 = ec.getS1();
     }
 
@@ -43,7 +43,7 @@ public class EnrolledContract {
         this.lhwCode = jsonObject.getString(EnrolledTable.COLUMN_NAME_LHWCODE);
         this.houseHold = jsonObject.getString(EnrolledTable.COLUMN_NAME_HOUSEHOLD);
         this.women_name = jsonObject.getString(EnrolledTable.COLUMN_NAME_WOMEN_NAME);
-        this.sno = jsonObject.getString(EnrolledTable.COLUMN_NAME_SNO);
+        this.study_id = jsonObject.getString(EnrolledTable.COLUMN_NAME_STUDY_ID);
         this.s1 = jsonObject.getString(EnrolledTable.COLUMN_NAME_S1);
         return this;
 
@@ -55,7 +55,7 @@ public class EnrolledContract {
         this.lhwCode = cursor.getString(cursor.getColumnIndex(EnrolledTable.COLUMN_NAME_LHWCODE));
         this.houseHold = cursor.getString(cursor.getColumnIndex(EnrolledTable.COLUMN_NAME_HOUSEHOLD));
         this.women_name = cursor.getString(cursor.getColumnIndex(EnrolledTable.COLUMN_NAME_WOMEN_NAME));
-        this.sno = cursor.getString(cursor.getColumnIndex(EnrolledTable.COLUMN_NAME_SNO));
+        this.study_id = cursor.getString(cursor.getColumnIndex(EnrolledTable.COLUMN_NAME_STUDY_ID));
         this.s1 = cursor.getString(cursor.getColumnIndex(EnrolledTable.COLUMN_NAME_S1));
         return this;
     }
@@ -117,8 +117,8 @@ public class EnrolledContract {
     }
 
     public String
-    getSno() {
-        return sno;
+    getStudy_id() {
+        return study_id;
     }
 
     public JSONObject toJSONObject() throws JSONException {
@@ -130,7 +130,7 @@ public class EnrolledContract {
         json.put(EnrolledTable.COLUMN_NAME_LHWCODE, this.lhwCode);
         json.put(EnrolledTable.COLUMN_NAME_HOUSEHOLD, this.houseHold);
         json.put(EnrolledTable.COLUMN_NAME_WOMEN_NAME, this.women_name);
-        json.put(EnrolledTable.COLUMN_NAME_SNO, this.sno);
+        json.put(EnrolledTable.COLUMN_NAME_STUDY_ID, this.study_id);
         json.put(EnrolledTable.COLUMN_NAME_S1, this.s1);
 
         return json;
@@ -138,22 +138,20 @@ public class EnrolledContract {
 
     public static abstract class EnrolledTable implements BaseColumns {
 
-        public static final String _URI = "enrolled.php";
-
-        public static final String TABLE_NAME = "enrolled";
+        public static final String TABLE_NAME = "followups_pw";
 
         public static final String _ID = "id";
-        public static final String COLUMN_NAME_LUID = "uid";
-        public static final String COLUMN_NAME_SUBAREACODE = "clustercode";
-        public static final String COLUMN_NAME_LHWCODE = "lhwcode";
+        public static final String COLUMN_NAME_LUID = "puid";
+        public static final String COLUMN_NAME_SUBAREACODE = "uc_code";
+        public static final String COLUMN_NAME_LHWCODE = "lhw_code";
         public static final String COLUMN_NAME_HOUSEHOLD = "hhno";
-        public static final String COLUMN_NAME_WOMEN_NAME = "epname";
-        public static final String COLUMN_NAME_SNO = "sno";
+        public static final String COLUMN_NAME_WOMEN_NAME = "pw_name";
+        public static final String COLUMN_NAME_STUDY_ID = "studyid";
         public static final String COLUMN_NAME_S1 = "s1";
 
         public static final String COLUMN_SYNCED = "synced";
         public static final String COLUMN_SYNCED_DATE = "synced_date";
-        public static final String _URIGET = "geteligibles.php";
+        public static final String _URIGET = "followups_pw.php";
     }
 
 }

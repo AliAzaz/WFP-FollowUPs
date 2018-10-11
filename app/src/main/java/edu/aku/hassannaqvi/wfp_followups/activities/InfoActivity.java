@@ -61,12 +61,12 @@ public class InfoActivity extends Activity {
 //    EditText mp08a008;
 //    @BindView(R.id.mp08a007)
 //    EditText mp08a007;
-    @BindView(R.id.mp08a013)
-    RadioGroup mp08a013;
-    @BindView(R.id.mp08a01301)
-    RadioButton mp08a01301;
-    @BindView(R.id.mp08a01302)
-    RadioButton mp08a01302;
+    @BindView(R.id.pfa06)
+    RadioGroup pfa06;
+    @BindView(R.id.pfa06a)
+    RadioButton pfa06a;
+    @BindView(R.id.pfa06b)
+    RadioButton pfa06b;
     @BindView(R.id.btn_Continue)
     Button btn_Continue;
     @BindView(R.id.fldGrpParticipant)
@@ -116,10 +116,10 @@ public class InfoActivity extends Activity {
 //            }
 //        });
 
-        mp08a013.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+        pfa06.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
-                if (i == R.id.mp08a01302) {
+                if (i == R.id.pfa06b) {
                     btn_Continue.setVisibility(View.GONE);
                 } else {
                     btn_Continue.setVisibility(View.VISIBLE);
@@ -131,7 +131,7 @@ public class InfoActivity extends Activity {
 //            @Override
 //            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
 //
-//                mp08a002.setText(AppMain.Eparticipant.get(i).getSno());
+//                mp08a002.setText(AppMain.Eparticipant.get(i).getStudy_id());
 //
 //
 //                position = i;
@@ -144,13 +144,13 @@ public class InfoActivity extends Activity {
 //        });
 
 
-        if (AppMain.formType.equals("15")) {
+        /*if (AppMain.formType.equals("15")) {
             AppMain.ftype = "mp15";
             this.setTitle(getResources().getString(R.string.app_name15));
         } else if (AppMain.formType.equals("16")) {
             AppMain.ftype = "mp16";
             this.setTitle(getResources().getString(R.string.app_name16));
-        }
+        }*/
 
     }
 
@@ -289,14 +289,14 @@ public class InfoActivity extends Activity {
         AppMain.fc.setClustercode(AppMain.curCluster);
         //AppMain.fc.setHousehold(mp08a001.getText().toString());
         AppMain.fc.setDeviceID(AppMain.deviceId);
-        AppMain.fc.setSno(AppMain.Eparticipant.get(position).getSno());
+        AppMain.fc.setSno(AppMain.Eparticipant.get(position).getStudy_id());
         AppMain.fc.setFormType(AppMain.formType);
         // AppMain.fc.setVillageacode(mp08a007.getText().toString());
 
         AppMain.fc.setLhwCode(AppMain.Eparticipant.get(position).getLhwCode());
         AppMain.fc.setApp_version(AppMain.versionName + "." + AppMain.versionCode);
 
-        // id = AppMain.curCluster + AppMain.Eparticipant.get(position).getLhwCode() + mp08a001.getText().toString() + AppMain.Eparticipant.get(position).getSno();
+        // id = AppMain.curCluster + AppMain.Eparticipant.get(position).getLhwCode() + mp08a001.getText().toString() + AppMain.Eparticipant.get(position).getStudy_id();
 
         JSONObject sInfo = new JSONObject();
 
@@ -305,7 +305,7 @@ public class InfoActivity extends Activity {
         //sInfo.put(AppMain.ftype + "a003", mp08a003.getSelectedItem().toString());
         //sInfo.put(AppMain.ftype + "a005", mp08a005.getText().toString());
         //sInfo.put(AppMain.ftype + "a008", mp08a008.getText().toString());
-        sInfo.put(AppMain.ftype + "a013", mp08a01301.isChecked() ? "1" : mp08a01302.isChecked() ? "2" : "0");
+        sInfo.put(AppMain.ftype + "a013", pfa06a.isChecked() ? "1" : pfa06b.isChecked() ? "2" : "0");
 
         AppMain.fc.setsInfo(String.valueOf(sInfo));
 
@@ -430,16 +430,16 @@ public class InfoActivity extends Activity {
 //        }
 
 
-        if (mp08a013.getCheckedRadioButtonId() == -1) {
-            Toast.makeText(this, "ERROR(Empty)" + getString(R.string.mp08a013), Toast.LENGTH_SHORT).show();
-            mp08a01302.setError("This data is Required!");
-            mp08a01302.setFocusable(true);
-            mp08a01302.setFocusableInTouchMode(true);
-            mp08a01302.requestFocus();
-            Log.i(TAG, "mp08a013: This Data is Required!");
+        if (pfa06.getCheckedRadioButtonId() == -1) {
+            Toast.makeText(this, "ERROR(Empty)" + getString(R.string.pfa06), Toast.LENGTH_SHORT).show();
+            pfa06b.setError("This data is Required!");
+            pfa06b.setFocusable(true);
+            pfa06b.setFocusableInTouchMode(true);
+            pfa06b.requestFocus();
+            Log.i(TAG, "pfa06: This Data is Required!");
             return false;
         } else {
-            mp08a01302.setError(null);
+            pfa06b.setError(null);
         }
 
 
