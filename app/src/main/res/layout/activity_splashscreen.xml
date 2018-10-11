@@ -20,7 +20,7 @@
             android:layout_gravity="center_horizontal"
             android:contentDescription="Mapps LOGO"
             android:paddingTop="72dp"
-            android:src="@drawable/ic_logo" />
+            android:src="@drawable/agakhannew" />
 
         <TextView
             android:id="@+id/fullscreen_content"
@@ -30,7 +30,7 @@
             android:gravity="center_horizontal"
 
             android:keepScreenOn="true"
-            android:text="Mapps Forms 2017"
+            android:text="@string/app_name"
             android:textColor="@color/colorAccent"
             android:textSize="32sp"
             android:textStyle="bold" />

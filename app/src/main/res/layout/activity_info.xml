@@ -73,16 +73,17 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
                 android:background="@color/colorPrimary"
-                android:text="@string/name"
+                android:text="@string/pw_name"
                 android:textAppearance="?android:attr/textAppearanceLarge"
                 android:textColor="@android:color/white" />
+
             <EditText
                 android:id="@+id/pfa01"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:enabled="false"
                 style="@style/textInput"
-                android:hint="@string/name"
+                android:hint="@string/pw_name"
                 android:inputType="text" />
 
             <TextView
@@ -155,20 +156,20 @@
                 android:textColor="@android:color/white" />
 
             <RadioGroup
-                android:id="@+id/mp08a013"
+                android:id="@+id/pfa06"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
                 <RadioButton
-                    android:id="@+id/mp08a01301"
+                    android:id="@+id/pfa06a"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="@string/yes" />
 
                 <RadioButton
-                    android:id="@+id/mp08a01302"
+                    android:id="@+id/pfa06b"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"

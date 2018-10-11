@@ -365,7 +365,6 @@ public class SectionGActivity extends AppCompatActivity {
         });
 
 
-
     }
 
 
@@ -571,8 +570,14 @@ public class SectionGActivity extends AppCompatActivity {
         if (!validatorClass.EmptyTextBox(this, bi.pfg03m, getString(R.string.pfg03))) {
             return false;
         }
+        if (!validatorClass.RangeTextBox(this, bi.pfg03m, 0, 6, getString(R.string.pfg03), "Months")) {
+            return false;
+        }
 
         if (!validatorClass.EmptyTextBox(this, bi.pfg03d, getString(R.string.pfg03))) {
+            return false;
+        }
+        if (!validatorClass.RangeTextBox(this, bi.pfg03d, 0, 29, getString(R.string.pfg03), "Days")) {
             return false;
         }
 
@@ -582,6 +587,10 @@ public class SectionGActivity extends AppCompatActivity {
         if (!validatorClass.EmptyTextBox(this, bi.pfg05, getString(R.string.pfg05))) {
             return false;
         }
+        if (!validatorClass.RangeTextBox(this, bi.pfg05, 22, 40, getString(R.string.pfg05), "Weeks")) {
+            return false;
+        }
+
         if (!validatorClass.EmptyRadioButton(this, bi.pfg06, bi.pfg06a, getString(R.string.pfg06))) {
             return false;
         }
@@ -654,9 +663,15 @@ public class SectionGActivity extends AppCompatActivity {
                 if (!validatorClass.EmptyTextBox(this, bi.pfg14bx, getString(R.string.pfg14))) {
                     return false;
                 }
+                if (!validatorClass.RangeTextBox(this, bi.pfg14bx, 0, 23, getString(R.string.pfg14), "Hours")) {
+                    return false;
+                }
             }
             if (bi.pfg14c.isChecked()) {
                 if (!validatorClass.EmptyTextBox(this, bi.pfg14cx, getString(R.string.pfg14))) {
+                    return false;
+                }
+                if (!validatorClass.RangeTextBox(this, bi.pfg14cx, 1, 60, getString(R.string.pfg14), "Days")) {
                     return false;
                 }
             }
@@ -714,9 +729,15 @@ public class SectionGActivity extends AppCompatActivity {
                         if (!validatorClass.EmptyTextBox(this, bi.pfg20ax, getString(R.string.pfg20))) {
                             return false;
                         }
+                        if (!validatorClass.RangeTextBox(this, bi.pfg20ax, 0, 23, getString(R.string.pfg20), "Hours")) {
+                            return false;
+                        }
                     }
                     if (bi.pfg20b.isChecked()) {
                         if (!validatorClass.EmptyTextBox(this, bi.pfg20bx, getString(R.string.pfg20))) {
+                            return false;
+                        }
+                        if (!validatorClass.RangeTextBox(this, bi.pfg20bx, 1, 6, getString(R.string.pfg20), "Days")) {
                             return false;
                         }
                     }
@@ -724,11 +745,18 @@ public class SectionGActivity extends AppCompatActivity {
                         if (!validatorClass.EmptyTextBox(this, bi.pfg20cx, getString(R.string.pfg20))) {
                             return false;
                         }
+                        if (!validatorClass.RangeTextBox(this, bi.pfg20cx, 1, 10, getString(R.string.pfg20), "Weeks")) {
+                            return false;
+                        }
                     }
                 }
                 if (!validatorClass.EmptyTextBox(this, bi.pfg21, getString(R.string.pfg21))) {
                     return false;
                 }
+                if (!validatorClass.RangeTextBox(this, bi.pfg21, 1, 5, getString(R.string.pfg21), "Times")) {
+                    return false;
+                }
+
                 if (!validatorClass.EmptyCardCheckBox(this, bi.fldgrppfg22, bi.pfg22a, getString(R.string.pfg22))) {
                     return false;
                 }
@@ -759,14 +787,23 @@ public class SectionGActivity extends AppCompatActivity {
                         if (!validatorClass.EmptyTextBox(this, bi.pfg25ax, getString(R.string.pfg25))) {
                             return false;
                         }
+                        if (!validatorClass.RangeTextBox(this, bi.pfg25ax, 0, 23, getString(R.string.pfg25), "Hours")) {
+                            return false;
+                        }
                     }
                     if (bi.pfg25b.isChecked()) {
                         if (!validatorClass.EmptyTextBox(this, bi.pfg25bx, getString(R.string.pfg25))) {
                             return false;
                         }
+                        if (!validatorClass.RangeTextBox(this, bi.pfg25bx, 1, 6, getString(R.string.pfg25), "Days")) {
+                            return false;
+                        }
                     }
                     if (bi.pfg25c.isChecked()) {
                         if (!validatorClass.EmptyTextBox(this, bi.pfg25cx, getString(R.string.pfg25))) {
+                            return false;
+                        }
+                        if (!validatorClass.RangeTextBox(this, bi.pfg25cx, 1, 10, getString(R.string.pfg25), "Weeks")) {
                             return false;
                         }
                     }

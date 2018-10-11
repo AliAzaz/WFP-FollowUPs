@@ -250,10 +250,19 @@ public class SectionDActivity extends AppCompatActivity {
             if (!validatorClass.EmptyTextBox(this, bi.pfd03, getString(R.string.pfd03))) {
                 return false;
             }
+            if (!validatorClass.RangeTextBox(this, bi.pfd03, 1, 3, getString(R.string.pfd03), "Sachets")) {
+                return false;
+            }
             if (!validatorClass.EmptyTextBox(this, bi.pfd04a, getString(R.string.pfd04))) {
                 return false;
             }
+            if (!validatorClass.RangeTextBox(this, bi.pfd03, 1, 31, getString(R.string.pfd04), "Days")) {
+                return false;
+            }
             if (!validatorClass.EmptyTextBox(this, bi.pfd04b, getString(R.string.pfd04))) {
+                return false;
+            }
+            if (!validatorClass.RangeTextBox(this, bi.pfd04b, 1, 31, getString(R.string.pfd04), "Sachets")) {
                 return false;
             }
             if (!validatorClass.EmptyTextBox(this, bi.pfd05a, getString(R.string.pfd05))) {
@@ -287,6 +296,9 @@ public class SectionDActivity extends AppCompatActivity {
                         }
                     }
                     if (!validatorClass.EmptyTextBox(this, bi.pfd10, getString(R.string.pfd10))) {
+                        return false;
+                    }
+                    if (!validatorClass.RangeTextBox(this, bi.pfd10, 1, 90, getString(R.string.pfd10), "Sachets")) {
                         return false;
                     }
                     if (!bi.pfd1198.isChecked()) {

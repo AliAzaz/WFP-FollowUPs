@@ -120,7 +120,7 @@
         <item name="android:padding">10dp</item>
         <item name="android:radius">2dp</item>
         <item name="android:layout_margin">10dp</item>
-        <item name="android:textColorHint">@color/black</item>
+        <item name="android:textColorHint">@color/black_overlay</item>
 
     </style>
 

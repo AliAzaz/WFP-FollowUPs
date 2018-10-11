@@ -337,7 +337,6 @@ public class InfoActivity extends Activity {
             AppMain.fc.setGpsLat(GPSPref.getString("Latitude", "0"));
             AppMain.fc.setGpsLng(GPSPref.getString("Longitude", "0"));
             AppMain.fc.setGpsAcc(GPSPref.getString("Accuracy", "0"));
-//            AppMain.fc.setGpsTime(GPSPref.getString(date, "0")); // Timestamp is converted to date above
             AppMain.fc.setGpsTime(date); // Timestamp is converted to date above
 
             Toast.makeText(this, "GPS set", Toast.LENGTH_SHORT).show();

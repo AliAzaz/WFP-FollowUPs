@@ -113,7 +113,6 @@ public class SectionFActivity extends AppCompatActivity {
         });
 
 
-
     }
 
     public void BtnContinue() {
@@ -258,6 +257,9 @@ public class SectionFActivity extends AppCompatActivity {
             }
             if (bi.pff07d.isChecked()) {
                 if (!validatorClass.EmptyTextBox(this, bi.pff07dx, getString(R.string.pff07))) {
+                    return false;
+                }
+                if (!validatorClass.RangeTextBox(this, bi.pff07dx, 1, 31, getString(R.string.pff07), "Days")) {
                     return false;
                 }
             }
