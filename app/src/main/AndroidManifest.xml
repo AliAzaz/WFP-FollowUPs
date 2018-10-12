@@ -73,6 +73,9 @@
             android:name=".activities.SectionDActivity"
             android:windowSoftInputMode="adjustResize" />
         <activity
+            android:name=".activities.SectionEActivity"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
             android:name=".activities.SectionFActivity"
             android:windowSoftInputMode="adjustResize" />
         <activity

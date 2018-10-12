@@ -132,15 +132,16 @@ public class SectionBActivity extends AppCompatActivity {
                 return false;
             }
 
-            if (bi.pfb02a.isChecked() || bi.pfb02e.isChecked()) {
-                if (bi.pfb02a.isChecked()) {
-                    if (!validatorClass.EmptyTextBox(this, bi.pfb03, getString(R.string.pfb03))) {
-                        return false;
-                    }
+            if (bi.pfb02a.isChecked()) {
+                if (!validatorClass.EmptyTextBox(this, bi.pfb03, getString(R.string.pfb03))) {
+                    return false;
                 }
+            }
 
+            if (bi.pfb02e.isChecked()) {
                 return validatorClass.EmptyTextBox(this, bi.pfb04, getString(R.string.pfb04));
             }
+
         }
 
         return true;

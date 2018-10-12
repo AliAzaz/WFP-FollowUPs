@@ -94,8 +94,10 @@ public class InfoActivity extends Activity {
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
                 if (i == R.id.pfa06b) {
                     bi.btnContinue.setVisibility(View.GONE);
+                    bi.btnEnd.setVisibility(View.VISIBLE);
                 } else {
                     bi.btnContinue.setVisibility(View.VISIBLE);
+                    bi.btnEnd.setVisibility(View.GONE);
                 }
             }
         });
