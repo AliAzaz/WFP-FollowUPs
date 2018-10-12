@@ -232,6 +232,7 @@
                                 android:textColor="@color/white" />
 
                             <EditText
+                                android:inputType="number"
                                 android:id="@+id/pfb03"
                                 style="@style/textInput"
                                 android:layout_width="match_parent"
