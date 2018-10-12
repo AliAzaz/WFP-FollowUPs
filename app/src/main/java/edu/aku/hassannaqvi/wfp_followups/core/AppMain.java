@@ -23,7 +23,6 @@ import org.json.JSONObject;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.Map;
@@ -40,18 +39,18 @@ import edu.aku.hassannaqvi.wfp_followups.other.TypefaceUtil;
 
 public class AppMain extends Application {
 
-    public static final String _IP = "43.245.131.159"; // Test PHP server
+    public static final String _IP = "f49461"; // Test PHP server
     //    public static final String _IP = "10.1.79.42"; // Matiyari server
     public static final Integer _PORT = 8080; // Port - with colon (:)
 
-    public static final String _PROJECT_FOLDER_2 = "mapps/form2/api/";
+    public static final String _PROJECT_FOLDER_PF = "wfp-pishin/api/";
     public static final String _PROJECT_FOLDER_4 = "mapps/form4/api/";
     public static final String _PROJECT_FOLDER_3 = "mapps/form3/api/";
     public static final String _PROJECT_FOLDER_15 = "mapps/form15/api/";
     public static final String _PROJECT_FOLDER_16 = "mapps/form16/api/";
     public static final String _PROJECT_FOLDER_15_16 = "mapps/form15_16/api/";
 
-    public static final String _HOST_URL = "http://" + _IP + ":" + _PORT + "/" + _PROJECT_FOLDER_2;
+    public static final String _HOST_URL = "http://" + _IP + ":" + _PORT + "/" + _PROJECT_FOLDER_PF;
 
     public static final String _HOST_URL_3 =
             "http://" + _IP
@@ -103,13 +102,11 @@ public class AppMain extends Application {
     public static String areaCode;
     public static String curCluster = "";
     //    For participant
-    public static ArrayList<EnrolledContract> Eparticipant;
+    public static EnrolledContract Eparticipant;
     public static String currentParticipantName = "";
     public static String formType = "";
     public static JSONObject sA;
     public static String[] loginMem;
-    public static String ftype = "";
-
 
     public static long installedOn;
     public static int versionCode;
@@ -182,9 +179,7 @@ public class AppMain extends Application {
 
         TypefaceUtil.overrideFont(getApplicationContext(), "SERIF", "fonts/MBLateefi.ttf"); // font from assets: "assets/fonts/Roboto-Regular.ttf
 
-        deviceId = Settings.Secure.getString(getApplicationContext().getContentResolver(),
-                Settings.Secure.ANDROID_ID);
-
+        deviceId = Settings.Secure.getString(getApplicationContext().getContentResolver(), Settings.Secure.ANDROID_ID);
 
         // Requires Permission for GPS -- android.permission.ACCESS_FINE_LOCATION
         // Requires Additional permission for 5.0 -- android.hardware.location.gps

@@ -14,8 +14,6 @@ import android.os.Handler;
 import android.text.InputType;
 import android.util.Log;
 import android.view.View;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -24,7 +22,6 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Date;
 import java.util.HashMap;
@@ -33,12 +30,11 @@ import java.util.List;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import edu.aku.hassannaqvi.wfp_followups.R;
-import edu.aku.hassannaqvi.wfp_followups.contracts.ClustersContract;
 import edu.aku.hassannaqvi.wfp_followups.contracts.FormsContract;
 import edu.aku.hassannaqvi.wfp_followups.core.AndroidDatabaseManager;
 import edu.aku.hassannaqvi.wfp_followups.core.AppMain;
 import edu.aku.hassannaqvi.wfp_followups.core.DatabaseHelper;
-import edu.aku.hassannaqvi.wfp_followups.getclasses.GetPW;
+import edu.aku.hassannaqvi.wfp_followups.getclasses.GetPWs;
 import edu.aku.hassannaqvi.wfp_followups.otherclasses.FormsList;
 import edu.aku.hassannaqvi.wfp_followups.syncclasses.SyncAllData;
 
@@ -77,7 +73,6 @@ public class MainActivity extends Activity {
         setContentView(R.layout.activity_main);
 
         ButterKnife.bind(this);
-        AppMain.ftype = "";
 
         if (Integer.valueOf(AppMain.versionName.split("\\.")[0]) > 0) {
             testing.setVisibility(View.GONE);
@@ -200,92 +195,48 @@ public class MainActivity extends Activity {
         recordSummary.setText(rSumText);
 
 
-//        Spinner Cluster
-
-        Collection<ClustersContract> clusterCollection = db.getAllClusters();
-
-        clustersName = new ArrayList<>();
-
-        cluster = new HashMap<>();
-
-        if (clusterCollection.size() != 0) {
-            for (ClustersContract c : clusterCollection) {
-                clustersName.add(c.getClusterName());
-                cluster.put(c.getClusterName(), c.getClusterCode());
-            }
-
-            // Creating adapter for spinner
-            ArrayAdapter<String> dataAdapter = new ArrayAdapter<String>(this,
-                    android.R.layout.simple_spinner_item, clustersName);
-
-            // Drop down layout style - list view with radio button
-            dataAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-
-            // attaching data adapter to spinner
-            spUC.setAdapter(dataAdapter);
-
-            spUC.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-                @Override
-                public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                    AppMain.curCluster = cluster.get(spUC.getSelectedItem().toString());
-                    Log.d("Selected Cluster", AppMain.curCluster);
-                }
-
-                @Override
-                public void onNothingSelected(AdapterView<?> parent) {
-
-                }
-            });
-
-        }
-
-
     }
 
     public void openForm(View v) {
-        if (!AppMain.curCluster.equals("")) {
-            if (sharedPref.getString("tagName", null) != "" && sharedPref.getString("tagName", null) != null) {
-                Intent oF = new Intent(MainActivity.this, InfoActivity.class);
-                AppMain.formType = "15";
-                startActivity(oF);
-            } else {
-
-                builder = new AlertDialog.Builder(MainActivity.this);
-                ImageView img = new ImageView(getApplicationContext());
-                img.setImageResource(R.drawable.tagimg);
-                img.setPadding(0, 15, 0, 15);
-                builder.setCustomTitle(img);
-
-                final EditText input = new EditText(MainActivity.this);
-                input.setInputType(InputType.TYPE_CLASS_TEXT);
-                builder.setView(input);
-
-                builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        m_Text = input.getText().toString();
-                        if (!m_Text.equals("")) {
-                            editor.putString("tagName", m_Text);
-                            editor.commit();
-
-                            AppMain.formType = "15";
-
-                            Intent oF = new Intent(MainActivity.this, InfoActivity.class);
-                            startActivity(oF);
-                        }
-                    }
-                });
-                builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        dialog.cancel();
-                    }
-                });
-
-                builder.show();
-            }
+        if (sharedPref.getString("tagName", null) != "" && sharedPref.getString("tagName", null) != null) {
+            Intent oF = new Intent(MainActivity.this, InfoActivity.class);
+            AppMain.formType = "pf";
+            startActivity(oF);
         } else {
-            Toast.makeText(this, "Sync cluster's from login page", Toast.LENGTH_SHORT).show();
+
+            builder = new AlertDialog.Builder(MainActivity.this);
+            ImageView img = new ImageView(getApplicationContext());
+            img.setImageResource(R.drawable.tagimg);
+            img.setPadding(0, 15, 0, 15);
+            builder.setCustomTitle(img);
+
+            final EditText input = new EditText(MainActivity.this);
+            input.setInputType(InputType.TYPE_CLASS_TEXT);
+            builder.setView(input);
+
+            builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+                    m_Text = input.getText().toString();
+                    if (!m_Text.equals("")) {
+                        editor.putString("tagName", m_Text);
+                        editor.commit();
+
+                        AppMain.formType = "pf";
+
+                        Intent oF = new Intent(MainActivity.this, InfoActivity.class);
+                        startActivity(oF);
+                    }
+                }
+            });
+            builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+                    dialog.cancel();
+                }
+            });
+
+            builder.show();
         }
     }
 
@@ -370,8 +321,8 @@ public class MainActivity extends Activity {
         if (networkInfo != null && networkInfo.isConnected()) {
 
             // Sync Randomization
-            Toast.makeText(getApplicationContext(), "Getting Eligibleomization", Toast.LENGTH_SHORT).show();
-            new GetPW(this).execute();
+            Toast.makeText(getApplicationContext(), "Getting PW's", Toast.LENGTH_SHORT).show();
+            new GetPWs(this).execute();
 
 
             SharedPreferences syncPref = getSharedPreferences("SyncInfo", Context.MODE_PRIVATE);

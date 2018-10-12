@@ -51,13 +51,13 @@ public class FormsAdapter extends RecyclerView.Adapter<FormsAdapter.ViewHolder> 
 //        holder.date.setText(fc.get(position).get101().toString());
 //        holder.cluster.setText(fc.get(position).get106().toString());
 
-        holder.date.setText(fc.get(position).getFormDate().toString());
-        holder.cluster.setText(fc.get(position).getHousehold().toString());
+        holder.date.setText(fc.get(position).getFormDate());
+        holder.cluster.setText(fc.get(position).getTehsilcode());
 
         String iStatus = "Status  Unknown";
         int iColor = 0;
 //        switch (fc.get(position).get109().toString()) {
-        switch (fc.get(position).getIstatus().toString()) {
+        switch (fc.get(position).getIstatus()) {
             case "1":
                 iStatus = "Complete";
                 iColor = Color.GREEN;

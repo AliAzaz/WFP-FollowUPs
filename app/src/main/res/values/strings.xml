@@ -74,7 +74,7 @@
     <string name="pfa01"> کلسٹر کی قسم </string>
     <string name="pfa01a"> انٹروینشن </string>
     <string name="pfa01b"> کنٹرول </string>
-    <string name="pfa02"> حاملہ خاتون کا شناخت نمبر </string>
+    <string name="studyID"> حاملہ خاتون کا شناخت نمبر </string>
     <string name="pfa03"> حاملہ خاتون یا دودھ پلانے والی ماں کا فالواپ نمبر </string>
     <string name="pfa03a"> فالواپ نمبر </string>
     <string name="pfa04"> خا تون کی قسم </string>

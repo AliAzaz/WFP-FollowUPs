@@ -10,6 +10,7 @@ import android.text.format.DateFormat;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
@@ -35,6 +36,7 @@ import edu.aku.hassannaqvi.wfp_followups.contracts.FormsContract;
 import edu.aku.hassannaqvi.wfp_followups.contracts.LHWsContract;
 import edu.aku.hassannaqvi.wfp_followups.core.AppMain;
 import edu.aku.hassannaqvi.wfp_followups.core.DatabaseHelper;
+import edu.aku.hassannaqvi.wfp_followups.validation.validatorClass;
 
 public class InfoActivity extends Activity {
 
@@ -44,23 +46,17 @@ public class InfoActivity extends Activity {
     DatabaseHelper db;
     HashMap<String, String> LHWs;
     Boolean check = false;
-    Collection<EnrolledContract> enrolledParticipant;
-    //    @BindView(R.id.app_header)
-//    TextView appHeader;
-//    @BindView(R.id.mp08a001)
-//    EditText mp08a001;
-//    @BindView(R.id.mp08a002)
-//    EditText mp08a002;
-//    @BindView(R.id.mp08a003)
-//    Spinner mp08a003;
-//    @BindView(R.id.lhws)
-//    Spinner lhws;
-//    @BindView(R.id.mp08a005)
-//    EditText mp08a005;
-//    @BindView(R.id.mp08a008)
-//    EditText mp08a008;
-//    @BindView(R.id.mp08a007)
-//    EditText mp08a007;
+    EnrolledContract enrolledParticipant;
+    @BindView(R.id.studyID)
+    EditText studyID;
+    @BindView(R.id.pfa01)
+    EditText pfa01;
+    @BindView(R.id.pfa04)
+    RadioGroup pfa04;
+    @BindView(R.id.pfa04a)
+    RadioButton pfa04a;
+    @BindView(R.id.pfa04b)
+    RadioButton pfa04b;
     @BindView(R.id.pfa06)
     RadioGroup pfa06;
     @BindView(R.id.pfa06a)
@@ -71,7 +67,6 @@ public class InfoActivity extends Activity {
     Button btn_Continue;
     @BindView(R.id.fldGrpParticipant)
     LinearLayout fldGrpParticipant;
-    ArrayList<String> partNames;
     int position;
 
     @Override
@@ -94,27 +89,6 @@ public class InfoActivity extends Activity {
             LHWs.put(lhws.getLhwName(), lhws.getLhwId());
 
         }
-//        lhws.setAdapter(new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, LHWsName));
-//
-//        lhws.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-//            @Override
-//            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-//
-//
-//                ((TextView) parent.getChildAt(0)).setTextColor(getResources().getColor(R.color.colorPrimary));
-//                ((TextView) parent.getChildAt(0)).setTextSize(28);
-//                Log.d("Selected LHWs", LHWs.get(lhws.getSelectedItem().toString()));
-//
-//
-//                mp08a001.setText(null);
-//
-//            }
-//
-//            @Override
-//            public void onNothingSelected(AdapterView<?> parent) {
-//
-//            }
-//        });
 
         pfa06.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
@@ -123,40 +97,14 @@ public class InfoActivity extends Activity {
                     btn_Continue.setVisibility(View.GONE);
                 } else {
                     btn_Continue.setVisibility(View.VISIBLE);
-
                 }
             }
         });
-//        mp08a003.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-//            @Override
-//            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-//
-//                mp08a002.setText(AppMain.Eparticipant.get(i).getStudy_id());
-//
-//
-//                position = i;
-//            }
-//
-//            @Override
-//            public void onNothingSelected(AdapterView<?> adapterView) {
-//
-//            }
-//        });
-
-
-        /*if (AppMain.formType.equals("15")) {
-            AppMain.ftype = "mp15";
-            this.setTitle(getResources().getString(R.string.app_name15));
-        } else if (AppMain.formType.equals("16")) {
-            AppMain.ftype = "mp16";
-            this.setTitle(getResources().getString(R.string.app_name16));
-        }*/
 
     }
 
-    @OnTextChanged(value = R.id.mp08a001,
-            callback = OnTextChanged.Callback.TEXT_CHANGED)
-    void aftermp08a001Input(Editable editable) {
+    @OnTextChanged(value = R.id.studyID, callback = OnTextChanged.Callback.TEXT_CHANGED)
+    void afterstudyIDInput(Editable editable) {
         check = false;
         fldGrpParticipant.setVisibility(View.GONE);
     }
@@ -166,36 +114,30 @@ public class InfoActivity extends Activity {
     void onCheckParticipantsClick() {
         //TODO implement
 
-        //enrolledParticipant = db.getEnrolledByHousehold(AppMain.curCluster, LHWs.get(lhws.getSelectedItem().toString()), mp08a001.getText().toString());
+        if (!studyID.getText().toString().isEmpty()) {
+            enrolledParticipant = db.getEnrolledByStudyID(studyID.getText().toString());
 
-        if (enrolledParticipant.size() != 0) {
+            if (enrolledParticipant != null) {
 
-            Toast.makeText(getApplicationContext(), "Participant found", Toast.LENGTH_LONG).show();
+                Toast.makeText(getApplicationContext(), "Participant found", Toast.LENGTH_LONG).show();
 
-            AppMain.Eparticipant = new ArrayList<>();
+                pfa01.setText(enrolledParticipant.getPw_name());
 
-            partNames = new ArrayList<>();
+                fldGrpParticipant.setVisibility(View.VISIBLE);
 
-            partNames.add("....");
-            AppMain.Eparticipant.add(new EnrolledContract());
+                check = true;
 
-            for (EnrolledContract ec : enrolledParticipant) {
-                AppMain.Eparticipant.add(new EnrolledContract(ec));
 
-                partNames.add(ec.getWomen_name().replaceFirst(String.valueOf(ec.getWomen_name().charAt(0)),
-                        String.valueOf(ec.getWomen_name().toUpperCase().charAt(0))));
+            } else {
+                Toast.makeText(getApplicationContext(), "Participant Not found", Toast.LENGTH_LONG).show();
+
+                check = false;
             }
-            fldGrpParticipant.setVisibility(View.VISIBLE);
-
-            check = true;
-
-            //mp08a003.setAdapter(new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, partNames));
-
-
         } else {
-            Toast.makeText(getApplicationContext(), "Participant Not found", Toast.LENGTH_LONG).show();
 
-            check = false;
+            if (!validatorClass.EmptyTextBox(this, studyID, getString(R.string.studyID))) {
+                return;
+            }
         }
 
 
@@ -223,8 +165,6 @@ public class InfoActivity extends Activity {
 
     @OnClick(R.id.btn_Continue)
     void onBtnContinueClick() {
-        Toast.makeText(this, "Processing This Section", Toast.LENGTH_SHORT).show();
-
         if (ValidateForm()) {
             try {
                 SaveDraft();
@@ -232,17 +172,11 @@ public class InfoActivity extends Activity {
                 e.printStackTrace();
             }
             if (UpdateDB()) {
-                Toast.makeText(this, "Starting Next Section", Toast.LENGTH_SHORT).show();
 
                 finish();
-                if (AppMain.formType.equals("15")) {
+                Intent intent = new Intent(this, SectionBActivity.class);
+                startActivity(intent);
 
-                    Intent intent = new Intent(this, SectionBActivity.class);
-                    startActivity(intent);
-                } else {
-                    Intent intent = new Intent(this, SectionBActivity.class);
-                    startActivity(intent);
-                }
             } else {
                 Toast.makeText(this, "Failed to Update Database!", Toast.LENGTH_SHORT).show();
             }
@@ -259,7 +193,6 @@ public class InfoActivity extends Activity {
         AppMain.fc.setID(rowId);
 
         if (rowId != null) {
-            Toast.makeText(this, "Updating Database... Successful!", Toast.LENGTH_SHORT).show();
             AppMain.fc.setUID(
                     (AppMain.fc.getDeviceID() + AppMain.fc.getID()));
             Toast.makeText(this, "Current Form No: " + AppMain.fc.getUID(), Toast.LENGTH_SHORT).show();
@@ -275,50 +208,47 @@ public class InfoActivity extends Activity {
     }
 
     private void SaveDraft() throws JSONException {
-        Toast.makeText(this, "Saving Draft for  This Section", Toast.LENGTH_SHORT).show();
 
         SharedPreferences sharedPref = getSharedPreferences("tagName", MODE_PRIVATE);
-
         AppMain.fc = new FormsContract();
 
-        AppMain.fc.setSurveyType(AppMain.ftype.equals("mp15") ? "Exit Questionnaire" : "End of Study Participation");
         AppMain.fc.setTagID(sharedPref.getString("tagName", null));
         AppMain.fc.setFormDate((DateFormat.format("dd-MM-yyyy HH:mm", new Date())).toString());
         AppMain.fc.setInterviewer01(AppMain.loginMem[1]);
         AppMain.fc.setInterviewer02(AppMain.loginMem[2]);
-        AppMain.fc.setClustercode(AppMain.curCluster);
-        //AppMain.fc.setHousehold(mp08a001.getText().toString());
-        AppMain.fc.setDeviceID(AppMain.deviceId);
-        AppMain.fc.setSno(AppMain.Eparticipant.get(position).getStudy_id());
-        AppMain.fc.setFormType(AppMain.formType);
-        // AppMain.fc.setVillageacode(mp08a007.getText().toString());
 
-        AppMain.fc.setLhwCode(AppMain.Eparticipant.get(position).getLhwCode());
+        AppMain.fc.setUccode(enrolledParticipant.getUc_code());
+        AppMain.fc.setTehsilcode(enrolledParticipant.getTehsil_code());
+        AppMain.fc.setVillagecode(enrolledParticipant.getVillage_code());
+        AppMain.fc.setLhwCode(enrolledParticipant.getLhw_code());
+
+        AppMain.fc.setDeviceID(AppMain.deviceId);
+        AppMain.fc.setStudyID(studyID.getText().toString());
+        AppMain.fc.setFormType(AppMain.formType);
+
         AppMain.fc.setApp_version(AppMain.versionName + "." + AppMain.versionCode);
 
-        // id = AppMain.curCluster + AppMain.Eparticipant.get(position).getLhwCode() + mp08a001.getText().toString() + AppMain.Eparticipant.get(position).getStudy_id();
-
         JSONObject sInfo = new JSONObject();
+        sInfo.put("puid", enrolledParticipant.getPuid());
+        sInfo.put("pw_name", enrolledParticipant.getPw_name());
+        sInfo.put("h_name", enrolledParticipant.getH_name());
+        sInfo.put("lmp", enrolledParticipant.getLmp());
+        sInfo.put("edd", enrolledParticipant.getEdd());
+        sInfo.put("fupdt", enrolledParticipant.getFupdt());
+        sInfo.put("fupround", enrolledParticipant.getFupround());
+        sInfo.put("resp_type", enrolledParticipant.getResp_type());
 
-        sInfo.put("luid", AppMain.Eparticipant.get(position).getLUID());
-//        sInfo.put("uid_f4", AppMain.Eparticipant.get(position).getS1());
-        //sInfo.put(AppMain.ftype + "a003", mp08a003.getSelectedItem().toString());
-        //sInfo.put(AppMain.ftype + "a005", mp08a005.getText().toString());
-        //sInfo.put(AppMain.ftype + "a008", mp08a008.getText().toString());
-        sInfo.put(AppMain.ftype + "a013", pfa06a.isChecked() ? "1" : pfa06b.isChecked() ? "2" : "0");
+        sInfo.put(AppMain.formType + "a04", pfa04a.isChecked() ? "1" : pfa04b.isChecked() ? "2" : "0");
+        sInfo.put(AppMain.formType + "a06", pfa06a.isChecked() ? "1" : pfa06b.isChecked() ? "2" : "0");
 
         AppMain.fc.setsInfo(String.valueOf(sInfo));
 
         setGPS();
 
-        Toast.makeText(this, "Validation Successful! - Saving Draft...", Toast.LENGTH_SHORT).show();
-
     }
 
     public void setGPS() {
         SharedPreferences GPSPref = getSharedPreferences("GPSCoordinates", Context.MODE_PRIVATE);
-
-//        String date = DateFormat.format("dd-MM-yyyy HH:mm", Long.parseLong(GPSPref.getString("Time", "0"))).toString();
 
         try {
             String lat = GPSPref.getString("Latitude", "0");
@@ -326,17 +256,15 @@ public class InfoActivity extends Activity {
             String acc = GPSPref.getString("Accuracy", "0");
             String dt = GPSPref.getString("Time", "0");
 
-            if (lat == "0" && lang == "0") {
+            if (lat.equals("0") && lang.equals("0")) {
                 Toast.makeText(this, "Could not obtained GPS points", Toast.LENGTH_SHORT).show();
-            } else {
-                Toast.makeText(this, "GPS set", Toast.LENGTH_SHORT).show();
             }
 
-            String date = DateFormat.format("dd-MM-yyyy HH:mm", Long.parseLong(GPSPref.getString("Time", "0"))).toString();
+            String date = DateFormat.format("dd-MM-yyyy HH:mm", Long.parseLong(dt)).toString();
 
-            AppMain.fc.setGpsLat(GPSPref.getString("Latitude", "0"));
-            AppMain.fc.setGpsLng(GPSPref.getString("Longitude", "0"));
-            AppMain.fc.setGpsAcc(GPSPref.getString("Accuracy", "0"));
+            AppMain.fc.setGpsLat(lat);
+            AppMain.fc.setGpsLng(lang);
+            AppMain.fc.setGpsAcc(acc);
             AppMain.fc.setGpsTime(date); // Timestamp is converted to date above
 
             Toast.makeText(this, "GPS set", Toast.LENGTH_SHORT).show();
@@ -349,107 +277,10 @@ public class InfoActivity extends Activity {
 
     public boolean ValidateForm() {
 
-        //======================= Q 1 ===============
-
-//        if (mp08a001.getText().toString().isEmpty()) {
-//            Toast.makeText(this, "ERROR(Empty)" + getString(R.string.mp08a001), Toast.LENGTH_SHORT).show();
-//            mp08a001.setError("This data is Required!");
-//            Log.i(TAG, "mp08a001: This Data is Required!");
-//            mp08a001.requestFocus();
-//            return false;
-//        } else {
-//            mp08a001.setError(null);
-//        }
-
-        //======================= Q 3 ===============
-
-//        if (mp08a003.getSelectedItem() == "....") {
-////        if (mp08a003.getSelectedItem().equals("")) {
-//            Toast.makeText(this, "ERROR(Empty)" + getString(R.string.mp08a003), Toast.LENGTH_SHORT).show();
-//            ((TextView) mp08a003.getSelectedView()).setText("This Data is Required");
-//            ((TextView) mp08a003.getSelectedView()).setError("This Data is Required");
-//            ((TextView) mp08a003.getSelectedView()).setTextColor(Color.RED);
-//            mp08a003.requestFocus();
-//
-//            Log.i(TAG, "mp08a003: This Data is Required!");
-//            return false;
-//        } else {
-//            ((TextView) mp08a003.getSelectedView()).setError(null);
-//        }
-
-        //======================= Q 2 ===============
-
-//        if (mp08a002.getText().toString().isEmpty()) {
-//            Toast.makeText(this, "ERROR(Empty)" + getString(R.string.mp08a002), Toast.LENGTH_SHORT).show();
-//            mp08a002.setError("This data is Required!");
-//            mp08a002.requestFocus();
-//            Log.i(TAG, "mp08a002: This Data is Required!");
-//            return false;
-//        } else {
-//            mp08a002.setError(null);
-//        }
-
-        /*if (mp08a003.getText().toString().isEmpty()) {
-            Toast.makeText(this, "ERROR(Empty)" + getString(R.string.mp08a003), Toast.LENGTH_SHORT).show();
-            mp08a003.setError("This data is Required!");
-
-            Log.i(TAG, "mp08a003: This Data is Required!");
+        if (!validatorClass.EmptyRadioButton(this, pfa04, pfa04b, getString(R.string.pfa04))) {
             return false;
-        } else {
-            mp08a003.setError(null);
-        }*/
-
-//        if (mp08a005.getText().toString().isEmpty()) {
-//            Toast.makeText(this, "ERROR(Empty)" + getString(R.string.mp08a005), Toast.LENGTH_SHORT).show();
-//            mp08a005.setError("This data is Required!");
-//            mp08a005.requestFocus();
-//            Log.i(TAG, "mp08a005: This Data is Required!");
-//            return false;
-//        } else {
-//            mp08a005.setError(null);
-//        }
-//
-//        if (mp08a007.getText().toString().isEmpty()) {
-//            Toast.makeText(this, "ERROR(Empty)" + getString(R.string.mp08a006), Toast.LENGTH_SHORT).show();
-//            mp08a007.setError("This data is Required!");
-//            mp08a007.requestFocus();
-//            Log.i(TAG, "mp08a007: This Data is Required!");
-//            return false;
-//        } else {
-//            mp08a007.setError(null);
-//        }
-
-//        if (mp08a008.getText().toString().isEmpty()) {
-//            Toast.makeText(this, "ERROR(Empty)" + getString(R.string.mp08a008), Toast.LENGTH_SHORT).show();
-//            mp08a008.setError("This data is Required!");
-//            mp08a008.requestFocus();
-//            Log.i(TAG, "mp08a008: This Data is Required!");
-//            return false;
-//        } else {
-//            mp08a008.setError(null);
-//        }
-
-
-        if (pfa06.getCheckedRadioButtonId() == -1) {
-            Toast.makeText(this, "ERROR(Empty)" + getString(R.string.pfa06), Toast.LENGTH_SHORT).show();
-            pfa06b.setError("This data is Required!");
-            pfa06b.setFocusable(true);
-            pfa06b.setFocusableInTouchMode(true);
-            pfa06b.requestFocus();
-            Log.i(TAG, "pfa06: This Data is Required!");
-            return false;
-        } else {
-            pfa06b.setError(null);
         }
-
-
-        return true;
+        return validatorClass.EmptyRadioButton(this, pfa06, pfa06b, getString(R.string.pfa03));
     }
-
-    /*@Override
-    public void onBackPressed() {
-        Toast.makeText(getApplicationContext(), "You Can't go back", Toast.LENGTH_LONG).show();
-    }
-*/
 
 }

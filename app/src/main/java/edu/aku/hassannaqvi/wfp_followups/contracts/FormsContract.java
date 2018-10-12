@@ -19,14 +19,14 @@ public class FormsContract {
     private String formDate = ""; // Date
     private String interviewer01 = ""; // Interviewer 01
     private String interviewer02 = ""; // Interviewer 02
-    private String clustercode = "0000"; // Area Code
-    private String villageacode = ""; // Sub-Area Code
-    private String household = ""; // Household number
+    private String uccode = ""; // Area Code
+    private String villagecode = ""; // Sub-Area Code
+    private String tehsilcode = ""; // Household number
     private String istatus = ""; // Interview Status
     private String endingDateTime = "";
     private String lhwCode = ""; // lhwcode
     private String formType = "";
-    private String sno = "";
+    private String studyID = "";
     private String sInfo = "";
     private String sB = "";
     private String sC = "";
@@ -52,9 +52,9 @@ public class FormsContract {
 
     public FormsContract(String formDate, String household, String istatus, String sno, String formType) {
         this.formDate = formDate;
-        this.household = household;
+        this.tehsilcode = household;
         this.istatus = istatus;
-        this.sno = sno;
+        this.studyID = sno;
         this.formType = formType;
     }
 
@@ -70,12 +70,12 @@ public class FormsContract {
         this.formType = formType;
     }
 
-    public String getSno() {
-        return sno;
+    public String getStudyID() {
+        return studyID;
     }
 
-    public void setSno(String sno) {
-        this.sno = sno;
+    public void setStudyID(String studyID) {
+        this.studyID = studyID;
     }
 
     public String getProjectName() {
@@ -126,28 +126,28 @@ public class FormsContract {
         this.interviewer02 = interviewer02;
     }
 
-    public String getClustercode() {
-        return clustercode;
+    public String getUccode() {
+        return uccode;
     }
 
-    public void setClustercode(String clustercode) {
-        this.clustercode = clustercode;
+    public void setUccode(String uccode) {
+        this.uccode = uccode;
     }
 
-    public String getVillageacode() {
-        return villageacode;
+    public String getVillagecode() {
+        return villagecode;
     }
 
-    public void setVillageacode(String villageacode) {
-        this.villageacode = villageacode;
+    public void setVillagecode(String villagecode) {
+        this.villagecode = villagecode;
     }
 
-    public String getHousehold() {
-        return household;
+    public String getTehsilcode() {
+        return tehsilcode;
     }
 
-    public void setHousehold(String household) {
-        this.household = household;
+    public void setTehsilcode(String tehsilcode) {
+        this.tehsilcode = tehsilcode;
     }
 
     public String getIstatus() {
@@ -334,12 +334,12 @@ public class FormsContract {
         this.formDate = jsonObject.getString(FormsTable.COLUMN_FORMDATE);
         this.interviewer01 = jsonObject.getString(FormsTable.COLUMN_INTERVIEWER01);
         this.interviewer02 = jsonObject.getString(FormsTable.COLUMN_INTERVIEWER02);
-        this.clustercode = jsonObject.getString(FormsTable.COLUMN_CLUSTERCODE);
-        this.villageacode = jsonObject.getString(FormsTable.COLUMN_VILLAGEACODE);
-        this.household = jsonObject.getString(FormsTable.COLUMN_HOUSEHOLD);
+        this.uccode = jsonObject.getString(FormsTable.COLUMN_UCCODE);
+        this.villagecode = jsonObject.getString(FormsTable.COLUMN_VILLAGE_CODE);
+        this.tehsilcode = jsonObject.getString(FormsTable.COLUMN_TEHSIL_CODE);
         this.lhwCode = jsonObject.getString(FormsTable.COLUMN_LHWCODE);
         this.istatus = jsonObject.getString(FormsTable.COLUMN_ISTATUS);
-        this.sno = jsonObject.getString(FormsTable.COLUMN_SNO);
+        this.studyID = jsonObject.getString(FormsTable.COLUMN_STUDY_ID);
         this.formType = jsonObject.getString(FormsTable.COLUMN_FORMTYPE);
         this.sInfo = jsonObject.getString(FormsTable.COLUMN_SINFO);
         this.sB = jsonObject.getString(FormsTable.COLUMN_SB);
@@ -369,12 +369,12 @@ public class FormsContract {
         this.formDate = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_FORMDATE));
         this.interviewer01 = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_INTERVIEWER01));
         this.interviewer02 = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_INTERVIEWER02));
-        this.clustercode = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_CLUSTERCODE));
-        this.villageacode = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_VILLAGEACODE));
-        this.household = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_HOUSEHOLD));
+        this.uccode = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_UCCODE));
+        this.villagecode = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_VILLAGE_CODE));
+        this.tehsilcode = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_TEHSIL_CODE));
         this.lhwCode = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_LHWCODE));
         this.istatus = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_ISTATUS));
-        this.sno = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_SNO));
+        this.studyID = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_STUDY_ID));
         this.formType = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_FORMTYPE));
         this.sInfo = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_SINFO));
         this.sB = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_SB));
@@ -413,12 +413,12 @@ public class FormsContract {
         json.put(FormsTable.COLUMN_FORMDATE, this.formDate == null ? JSONObject.NULL : this.formDate);
         json.put(FormsTable.COLUMN_INTERVIEWER01, this.interviewer01 == null ? JSONObject.NULL : this.interviewer01);
         json.put(FormsTable.COLUMN_INTERVIEWER02, this.interviewer02 == null ? JSONObject.NULL : this.interviewer02);
-        json.put(FormsTable.COLUMN_CLUSTERCODE, this.clustercode == null ? JSONObject.NULL : this.clustercode);
-        json.put(FormsTable.COLUMN_VILLAGEACODE, this.villageacode == null ? JSONObject.NULL : this.villageacode);
-        json.put(FormsTable.COLUMN_HOUSEHOLD, this.household == null ? JSONObject.NULL : this.household);
+        json.put(FormsTable.COLUMN_UCCODE, this.uccode == null ? JSONObject.NULL : this.uccode);
+        json.put(FormsTable.COLUMN_VILLAGE_CODE, this.villagecode == null ? JSONObject.NULL : this.villagecode);
+        json.put(FormsTable.COLUMN_TEHSIL_CODE, this.tehsilcode == null ? JSONObject.NULL : this.tehsilcode);
         json.put(FormsTable.COLUMN_LHWCODE, this.lhwCode == null ? JSONObject.NULL : this.lhwCode);
         json.put(FormsTable.COLUMN_ISTATUS, this.istatus == null ? JSONObject.NULL : this.istatus);
-        json.put(FormsTable.COLUMN_SNO, this.sno == null ? JSONObject.NULL : this.sno);
+        json.put(FormsTable.COLUMN_STUDY_ID, this.studyID == null ? JSONObject.NULL : this.studyID);
         json.put(FormsTable.COLUMN_FORMTYPE, this.formType == null ? JSONObject.NULL : this.formType);
         try {
             if (!this.sInfo.equals("")) {
@@ -516,12 +516,12 @@ public class FormsContract {
         public static final String COLUMN_FORMDATE = "formdate";
         public static final String COLUMN_INTERVIEWER01 = "interviewer01";
         public static final String COLUMN_INTERVIEWER02 = "interviewer02";
-        public static final String COLUMN_CLUSTERCODE = "clustercode";
-        public static final String COLUMN_VILLAGEACODE = "villageacode";
-        public static final String COLUMN_HOUSEHOLD = "household";
-        public static final String COLUMN_LHWCODE = "lhwcode";
+        public static final String COLUMN_UCCODE = "uc_code";
+        public static final String COLUMN_VILLAGE_CODE = "village_code";
+        public static final String COLUMN_TEHSIL_CODE = "tehsil_code";
+        public static final String COLUMN_LHWCODE = "lhw_code";
         public static final String COLUMN_ISTATUS = "istatus";
-        public static final String COLUMN_SNO = "sno";
+        public static final String COLUMN_STUDY_ID = "studyid";
         public static final String COLUMN_FORMTYPE = "formtype";
         public static final String COLUMN_SINFO = "info";
         public static final String COLUMN_SB = "sb";

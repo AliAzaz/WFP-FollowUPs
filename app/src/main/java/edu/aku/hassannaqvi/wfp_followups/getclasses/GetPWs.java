@@ -31,13 +31,13 @@ import edu.aku.hassannaqvi.wfp_followups.core.DatabaseHelper;
 /**
  * Created by hassan.naqvi on 7/26/2016.
  */
-public class GetPW extends AsyncTask<Void, Void, String> {
+public class GetPWs extends AsyncTask<Void, Void, String> {
 
-    private static final String TAG = "GetPW";
+    private static final String TAG = "GetPWs";
     private Context mContext;
     private ProgressDialog pd;
 
-    public GetPW(Context context) {
+    public GetPWs(Context context) {
         mContext = context;
     }
 
@@ -63,7 +63,7 @@ public class GetPW extends AsyncTask<Void, Void, String> {
     protected String doInBackground(Void... params) {
 
         String line = "No Response";
-        return downloadUrl(AppMain._HOST_URL_3 + EnrolledContract.EnrolledTable._URIGET);
+        return downloadUrl(AppMain._HOST_URL + EnrolledContract.EnrolledTable._URIGET);
 
     }
 

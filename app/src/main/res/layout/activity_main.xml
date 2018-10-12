@@ -22,6 +22,7 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="8dp"
             android:text="Main Menu"
+            android:textColor="@color/red"
             android:textAlignment="center"
             android:textAllCaps="true"
             android:textStyle="bold" />
@@ -134,7 +135,8 @@
             android:layout_marginBottom="8dp"
             android:onClick="syncDevice"
             android:text="Download Enrollment Data"
-            android:textSize="28sp" />
+            android:textSize="28sp"
+            android:visibility="gone" />
 
         <LinearLayout
             android:id="@+id/adminsec"

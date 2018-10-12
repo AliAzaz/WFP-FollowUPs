@@ -14,13 +14,12 @@
         android:paddingRight="14dp">
 
 
-
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:background="@color/colorPrimary"
-            android:text="@string/pfa02"
+            android:text="@string/studyID"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:textColor="@android:color/white" />
 
@@ -31,10 +30,10 @@
             android:orientation="horizontal">
 
             <Button
-                android:layout_marginTop="10dp"
                 android:id="@+id/checkParticipants"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
                 android:layout_marginEnd="2dp"
                 android:layout_weight="2"
                 android:background="@drawable/button_bg"
@@ -43,22 +42,19 @@
                 android:text="CHECK"
                 android:textColor="@color/whiteOverlay"
                 android:textSize="28sp"
-                android:textStyle="bold"
-
-                />
+                android:textStyle="bold" />
 
             <EditText
+                android:id="@+id/studyID"
                 style="@style/textInput"
-                android:id="@+id/mp08a001"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:hint="@string/pfa02"
+                android:hint="@string/studyID"
                 android:inputType="number"
-                android:maxLength="3" />
+                android:maxLength="4" />
 
         </LinearLayout>
-
 
         <LinearLayout
             android:id="@+id/fldGrpParticipant"
@@ -79,10 +75,10 @@
 
             <EditText
                 android:id="@+id/pfa01"
+                style="@style/textInput"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:enabled="false"
-                style="@style/textInput"
                 android:hint="@string/pw_name"
                 android:inputType="text" />
 
@@ -96,20 +92,20 @@
                 android:textColor="@android:color/white" />
 
             <RadioGroup
-                android:id="@+id/pfa02"
+                android:id="@+id/pfa04"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
                 <RadioButton
-                    android:id="@+id/pfa02a"
+                    android:id="@+id/pfa04a"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="@string/pfa04a" />
 
                 <RadioButton
-                    android:id="@+id/pfa02b"
+                    android:id="@+id/pfa04b"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
