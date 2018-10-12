@@ -49,7 +49,6 @@
             <!--</android.support.v7.widget.CardView>-->
 
 
-
             <LinearLayout
                 android:id="@+id/fldgrppfjmain"
                 android:layout_width="match_parent"
@@ -647,6 +646,7 @@
                         android:gravity="center"
                         android:text="@string/pfj03sub1"
                         android:textColor="@color/white" />
+
                     <CheckBox
                         android:id="@+id/pfj03d"
                         android:layout_width="match_parent"
@@ -684,12 +684,12 @@
                         android:text="@string/other" />
 
                     <EditText
-                        style="@style/textInput"
-                        android:layout_margin="10dp"
-                        android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz"
                         android:id="@+id/pfj03ix"
+                        style="@style/textInput"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz"
                         android:hint="@string/other"
                         android:text='@{pfj03i.checked ? pfj03ix.getText.toString : ""}'
                         android:visibility="@{pfj03i.checked ? View.VISIBLE : View.GONE}" />
@@ -708,28 +708,28 @@
                 android:orientation="horizontal">
 
                 <Button
-                    android:id="@+id/btn_End"
-                    android:layout_width="match_parent"
+                    android:id="@+id/btn_Continue"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="2"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="0.5"
+                    android:onClick="@{() -> callback.BtnContinue()}"
+                    android:padding="2dp"
+                    android:text="@string/nextSection"
+                    android:textSize="32sp"
+                    android:visibility="visible" />
+
+                <Button
+                    android:id="@+id/btn_End"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
                     android:onClick="@{() -> callback.BtnEnd()}"
                     android:padding="2dp"
                     android:text="@string/end_interview"
                     android:textColor="#ff1e1e"
                     android:textSize="32sp" />
 
-                <Button
-                    android:id="@+id/btn_Continue"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginRight="5dp"
-                    android:layout_weight="1"
-                    android:onClick="@{() -> callback.BtnContinue()}"
-                    android:padding="2dp"
-                    android:text="@string/nextSection"
-                    android:textColor="@color/whiteOverlay"
-                    android:textSize="32sp"
-                    android:visibility="visible" />
 
             </LinearLayout>
 

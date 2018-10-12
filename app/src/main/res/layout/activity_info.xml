@@ -1,216 +1,232 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context="edu.aku.hassannaqvi.wfp_followups.activities.InfoActivity">
+<layout>
 
-    <LinearLayout
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="callback"
+            type="edu.aku.hassannaqvi.wfp_followups.activities.InfoActivity" />
+    </data>
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layoutDirection="rtl"
-        android:orientation="vertical"
-        android:paddingEnd="16dp"
-        android:paddingRight="14dp">
-
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:background="@color/colorPrimary"
-            android:text="@string/studyID"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:textColor="@android:color/white" />
+        android:layout_height="match_parent">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="2dp"
-            android:orientation="horizontal">
-
-            <Button
-                android:id="@+id/checkParticipants"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:layout_marginEnd="2dp"
-                android:layout_weight="2"
-                android:background="@drawable/button_bg"
-                android:elevation="1dp"
-                android:padding="2dp"
-                android:text="CHECK"
-                android:textSize="28sp"
-                android:textStyle="bold" />
-
-            <EditText
-                android:id="@+id/studyID"
-                style="@style/textInput"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:hint="@string/studyID"
-                android:inputType="number"
-                android:maxLength="4" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/fldGrpParticipant"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layoutDirection="rtl"
             android:orientation="vertical"
-            android:visibility="gone"
-            tools:visibility="visible">
+            android:paddingEnd="16dp"
+            android:paddingRight="14dp">
+
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
                 android:background="@color/colorPrimary"
-                android:text="@string/pw_name"
+                android:text="@string/studyID"
                 android:textAppearance="?android:attr/textAppearanceLarge"
                 android:textColor="@android:color/white" />
 
-            <EditText
-                android:id="@+id/pfa01"
-                style="@style/textInput"
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:enabled="false"
-                android:hint="@string/pw_name"
-                android:inputType="text" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:background="@color/colorPrimary"
-                android:text="@string/pfa04"
-                android:textAppearance="?android:attr/textAppearanceLarge"
-                android:textColor="@android:color/white" />
-
-            <RadioGroup
-                android:id="@+id/pfa04"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
                 android:orientation="horizontal">
 
-                <RadioButton
-                    android:id="@+id/pfa04a"
+                <Button
+                    android:id="@+id/checkParticipants"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="2dp"
+                    android:layout_weight="2"
+                    android:background="@drawable/button_bg"
+                    android:elevation="1dp"
+                    android:onClick='@{ () -> callback.onCheckParticipantsClick()}'
+                    android:padding="2dp"
+                    android:text="CHECK"
+                    android:textSize="28sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/studyID"
+                    style="@style/textInput"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="@string/pfa04a" />
+                    android:hint="@string/studyID"
+                    android:inputType="number"
+                    android:maxLength="4" />
 
-                <RadioButton
-                    android:id="@+id/pfa04b"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="@string/pfa04b" />
+            </LinearLayout>
 
-            </RadioGroup>
-
-
-            <!--<LinearLayout
-                android:id="@+id/fldGrpClinic"
+            <LinearLayout
+                android:id="@+id/fldGrpParticipant"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                android:visibility="gone"
+                tools:visibility="visible">
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="16dp"
                     android:background="@color/colorPrimary"
-                    android:text="@string/ultcl"
+                    android:text="@string/pw_name"
                     android:textAppearance="?android:attr/textAppearanceLarge"
                     android:textColor="@android:color/white" />
 
                 <EditText
-                    android:id="@+id/mp05a012"
+                    android:id="@+id/pfa01"
+                    style="@style/textInput"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:digits="abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-                    android:enabled="true"
-                    android:hint="@string/ultcl"
-                    android:inputType="textCapWords" />
+                    android:enabled="false"
+                    android:hint="@string/pw_name"
+                    android:inputType="text" />
 
-
-            </LinearLayout>
--->
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:background="@color/colorPrimary"
-                android:text="@string/pfa06"
-                android:textAppearance="?android:attr/textAppearanceLarge"
-                android:textColor="@android:color/white" />
-
-            <RadioGroup
-                android:id="@+id/pfa06"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <RadioButton
-                    android:id="@+id/pfa06a"
+                <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="@string/yes" />
+                    android:layout_marginTop="16dp"
+                    android:background="@color/colorPrimary"
+                    android:text="@string/pfa04"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textColor="@android:color/white" />
 
-                <RadioButton
-                    android:id="@+id/pfa06b"
+                <RadioGroup
+                    android:id="@+id/pfa04"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="@string/no" />
+                    android:orientation="horizontal">
 
-            </RadioGroup>
+                    <RadioButton
+                        android:id="@+id/pfa04a"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/pfa04a" />
+
+                    <RadioButton
+                        android:id="@+id/pfa04b"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/pfa04b" />
+
+                </RadioGroup>
 
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="end"
-                android:layout_marginTop="40dp"
-                android:orientation="horizontal">
-
-                <Button
-                    android:id="@+id/btn_End"
+                <!--<LinearLayout
+                    android:id="@+id/fldGrpClinic"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="2"
-                    android:padding="2dp"
-                    android:text="@string/end_interview"
-                    android:textColor="#ff1e1e"
-                    android:textSize="32sp" />
+                    android:orientation="vertical">
 
-                <!--'onClick' for btn_End will NOT change and always call 'endInterview'-->
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:background="@color/colorPrimary"
+                        android:text="@string/ultcl"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:textColor="@android:color/white" />
 
-                <Button
-                    android:id="@+id/btn_Continue"
+                    <EditText
+                        android:id="@+id/mp05a012"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:digits="abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+                        android:enabled="true"
+                        android:hint="@string/ultcl"
+                        android:inputType="textCapWords" />
+
+
+                </LinearLayout>
+    -->
+
+                <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginRight="5dp"
-                    android:layout_weight="1"
-                    android:padding="2dp"
-                    android:text="@string/nextSection"
-                    android:textColor="@color/whiteOverlay"
-                    android:textSize="32sp"
-                    android:visibility="visible" />
-                <!--'onClick' for btn_Continue will call next section form e.g.: openSection2-->
+                    android:layout_marginTop="16dp"
+                    android:background="@color/colorPrimary"
+                    android:text="@string/pfa06"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textColor="@android:color/white" />
+
+                <RadioGroup
+                    android:id="@+id/pfa06"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/pfa06a"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/yes" />
+
+                    <RadioButton
+                        android:id="@+id/pfa06b"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/no" />
+
+                </RadioGroup>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="40dp"
+                    android:orientation="horizontal">
+
+
+                    <Button
+                        android:id="@+id/btn_Continue"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="0.5"
+                        android:onClick='@{ () -> callback.onBtnContinueClick()}'
+                        android:padding="2dp"
+                        android:text="@string/nextSection"
+                        android:textSize="32sp"
+                        android:visibility="visible" />
+                    <!--'onClick' for btn_Continue will call next section form e.g.: openSection2-->
+
+
+                    <Button
+                        android:id="@+id/btn_End"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:padding="2dp"
+                        android:text="@string/end_interview"
+                        android:textColor="#ff1e1e"
+                        android:textSize="32sp" />
+
+                    <!--'onClick' for btn_End will NOT change and always call 'endInterview'-->
+
+                </LinearLayout>
+
 
             </LinearLayout>
 
 
         </LinearLayout>
 
+    </ScrollView>
 
-    </LinearLayout>
 
-</ScrollView>
+</layout>

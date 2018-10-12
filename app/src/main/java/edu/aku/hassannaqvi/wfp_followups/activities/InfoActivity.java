@@ -4,15 +4,12 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.format.DateFormat;
 import android.util.Log;
 import android.view.View;
-import android.widget.Button;
-import android.widget.EditText;
-import android.widget.LinearLayout;
-import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Toast;
 
@@ -26,9 +23,6 @@ import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 
-import butterknife.BindView;
-import butterknife.ButterKnife;
-import butterknife.OnClick;
 import butterknife.OnTextChanged;
 import edu.aku.hassannaqvi.wfp_followups.R;
 import edu.aku.hassannaqvi.wfp_followups.contracts.EnrolledContract;
@@ -36,9 +30,12 @@ import edu.aku.hassannaqvi.wfp_followups.contracts.FormsContract;
 import edu.aku.hassannaqvi.wfp_followups.contracts.LHWsContract;
 import edu.aku.hassannaqvi.wfp_followups.core.AppMain;
 import edu.aku.hassannaqvi.wfp_followups.core.DatabaseHelper;
+import edu.aku.hassannaqvi.wfp_followups.databinding.ActivityInfoBinding;
 import edu.aku.hassannaqvi.wfp_followups.validation.validatorClass;
 
 public class InfoActivity extends Activity {
+
+    ActivityInfoBinding bi;
 
     private static final String TAG = InfoActivity.class.getSimpleName();
     static String id = "";
@@ -47,33 +44,34 @@ public class InfoActivity extends Activity {
     HashMap<String, String> LHWs;
     Boolean check = false;
     EnrolledContract enrolledParticipant;
-    @BindView(R.id.studyID)
-    EditText studyID;
-    @BindView(R.id.pfa01)
-    EditText pfa01;
-    @BindView(R.id.pfa04)
-    RadioGroup pfa04;
-    @BindView(R.id.pfa04a)
-    RadioButton pfa04a;
-    @BindView(R.id.pfa04b)
-    RadioButton pfa04b;
-    @BindView(R.id.pfa06)
-    RadioGroup pfa06;
-    @BindView(R.id.pfa06a)
-    RadioButton pfa06a;
-    @BindView(R.id.pfa06b)
-    RadioButton pfa06b;
-    @BindView(R.id.btn_Continue)
-    Button btn_Continue;
-    @BindView(R.id.fldGrpParticipant)
-    LinearLayout fldGrpParticipant;
+    //    @BindView(R.id.studyID)
+//    EditText studyID;
+//    @BindView(R.id.pfa01)
+//    EditText pfa01;
+//    @BindView(R.id.pfa04)
+//    RadioGroup pfa04;
+//    @BindView(R.id.pfa04a)
+//    RadioButton pfa04a;
+//    @BindView(R.id.pfa04b)
+//    RadioButton pfa04b;
+//    @BindView(R.id.pfa06)
+//    RadioGroup pfa06;
+//    @BindView(R.id.pfa06a)
+//    RadioButton pfa06a;
+//    @BindView(R.id.pfa06b)
+//    RadioButton pfa06b;
+//    @BindView(R.id.btn_Continue)
+//    Button btn_Continue;
+//    @BindView(R.id.fldGrpParticipant)
+//    LinearLayout fldGrpParticipant;
     int position;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_info);
-        ButterKnife.bind(this);
+
+        bi = DataBindingUtil.setContentView(this, R.layout.activity_info);
+        bi.setCallback(this);
         this.setTitle(R.string.pfaheading);
         db = new DatabaseHelper(this);
 
@@ -90,13 +88,14 @@ public class InfoActivity extends Activity {
 
         }
 
-        pfa06.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+
+        bi.pfa06.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
                 if (i == R.id.pfa06b) {
-                    btn_Continue.setVisibility(View.GONE);
+                    bi.btnContinue.setVisibility(View.GONE);
                 } else {
-                    btn_Continue.setVisibility(View.VISIBLE);
+                    bi.btnContinue.setVisibility(View.VISIBLE);
                 }
             }
         });
@@ -106,24 +105,23 @@ public class InfoActivity extends Activity {
     @OnTextChanged(value = R.id.studyID, callback = OnTextChanged.Callback.TEXT_CHANGED)
     void afterstudyIDInput(Editable editable) {
         check = false;
-        fldGrpParticipant.setVisibility(View.GONE);
+        bi.fldGrpParticipant.setVisibility(View.GONE);
     }
 
 
-    @OnClick(R.id.checkParticipants)
-    void onCheckParticipantsClick() {
+    public void onCheckParticipantsClick() {
         //TODO implement
 
-        if (!studyID.getText().toString().isEmpty()) {
-            enrolledParticipant = db.getEnrolledByStudyID(studyID.getText().toString());
+        if (!bi.studyID.getText().toString().isEmpty()) {
+            enrolledParticipant = db.getEnrolledByStudyID(bi.studyID.getText().toString());
 
             if (enrolledParticipant != null) {
 
                 Toast.makeText(getApplicationContext(), "Participant found", Toast.LENGTH_LONG).show();
 
-                pfa01.setText(enrolledParticipant.getPw_name());
+                bi.pfa01.setText(enrolledParticipant.getPw_name());
 
-                fldGrpParticipant.setVisibility(View.VISIBLE);
+                bi.fldGrpParticipant.setVisibility(View.VISIBLE);
 
                 check = true;
 
@@ -135,7 +133,7 @@ public class InfoActivity extends Activity {
             }
         } else {
 
-            if (!validatorClass.EmptyTextBox(this, studyID, getString(R.string.studyID))) {
+            if (!validatorClass.EmptyTextBox(this, bi.studyID, getString(R.string.studyID))) {
                 return;
             }
         }
@@ -144,8 +142,7 @@ public class InfoActivity extends Activity {
     }
 
 
-    @OnClick(R.id.btn_End)
-    void onBtnEndClick() {
+    public void onBtnEndClick() {
         if (ValidateForm()) {
             try {
                 SaveDraft();
@@ -163,8 +160,7 @@ public class InfoActivity extends Activity {
     }
 
 
-    @OnClick(R.id.btn_Continue)
-    void onBtnContinueClick() {
+    public void onBtnContinueClick() {
         if (ValidateForm()) {
             try {
                 SaveDraft();
@@ -175,7 +171,7 @@ public class InfoActivity extends Activity {
 
                 finish();
                 Intent intent = new Intent(this, SectionBActivity.class)
-                        .putExtra("valCheck", pfa04a.isChecked() ? 1 : 2);
+                        .putExtra("valCheck", bi.pfa04a.isChecked() ? 1 : 2);
                 startActivity(intent);
 
             } else {
@@ -224,7 +220,7 @@ public class InfoActivity extends Activity {
         AppMain.fc.setLhwCode(enrolledParticipant.getLhw_code());
 
         AppMain.fc.setDeviceID(AppMain.deviceId);
-        AppMain.fc.setStudyID(studyID.getText().toString());
+        AppMain.fc.setStudyID(bi.studyID.getText().toString());
         AppMain.fc.setFormType(AppMain.formType);
 
         AppMain.fc.setApp_version(AppMain.versionName + "." + AppMain.versionCode);
@@ -239,8 +235,8 @@ public class InfoActivity extends Activity {
         sInfo.put("fupround", enrolledParticipant.getFupround());
         sInfo.put("resp_type", enrolledParticipant.getResp_type());
 
-        sInfo.put(AppMain.formType + "a04", pfa04a.isChecked() ? "1" : pfa04b.isChecked() ? "2" : "0");
-        sInfo.put(AppMain.formType + "a06", pfa06a.isChecked() ? "1" : pfa06b.isChecked() ? "2" : "0");
+        sInfo.put(AppMain.formType + "a04", bi.pfa04a.isChecked() ? "1" : bi.pfa04b.isChecked() ? "2" : "0");
+        sInfo.put(AppMain.formType + "a06", bi.pfa06a.isChecked() ? "1" : bi.pfa06b.isChecked() ? "2" : "0");
 
         AppMain.fc.setsInfo(String.valueOf(sInfo));
 
@@ -278,10 +274,10 @@ public class InfoActivity extends Activity {
 
     public boolean ValidateForm() {
 
-        if (!validatorClass.EmptyRadioButton(this, pfa04, pfa04b, getString(R.string.pfa04))) {
+        if (!validatorClass.EmptyRadioButton(this, bi.pfa04, bi.pfa04b, getString(R.string.pfa04))) {
             return false;
         }
-        return validatorClass.EmptyRadioButton(this, pfa06, pfa06b, getString(R.string.pfa03));
+        return validatorClass.EmptyRadioButton(this, bi.pfa06, bi.pfa06b, getString(R.string.pfa03));
     }
 
 }

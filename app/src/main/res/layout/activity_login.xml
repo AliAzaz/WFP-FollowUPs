@@ -329,7 +329,7 @@
                         android:orientation="vertical">
 
                         <AutoCompleteTextView
-
+                            style="@style/textInput"
                             android:id="@+id/email1"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -365,11 +365,11 @@
                             android:padding="3dp" />
 
                         <EditText
+                            style="@style/textInput"
                             android:id="@+id/password1"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="-10dp"
-                            android:layout_weight="0.99"
                             android:drawableEnd="@drawable/ic_lock_black_24dp"
                             android:drawablePadding="2dp"
                             android:hint="@string/prompt_password"
@@ -392,6 +392,7 @@
                         android:orientation="vertical">
 
                         <AutoCompleteTextView
+                            style="@style/textInput"
                             android:id="@+id/email2"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -424,6 +425,7 @@
                             android:padding="3dp" />
 
                         <EditText
+                            style="@style/textInput"
                             android:id="@+id/password2"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"

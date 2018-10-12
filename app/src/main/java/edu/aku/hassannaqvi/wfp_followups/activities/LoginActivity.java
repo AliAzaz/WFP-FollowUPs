@@ -23,6 +23,7 @@ import android.os.Environment;
 import android.os.Handler;
 import android.provider.ContactsContract;
 import android.text.TextUtils;
+import android.text.method.PasswordTransformationMethod;
 import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
@@ -97,6 +98,12 @@ public class LoginActivity extends Activity implements LoaderCallbacks<Cursor> {
     TextView txtinstalldate;
     @BindView(R.id.email_sign_in_button)
     Button mEmailSignInButton;
+
+
+    @BindView(R.id.showPassword2)
+    Button showPassword2;
+    @BindView(R.id.showPassword)
+    Button showPassword;
     //    @BindView(R.id.spUC)
 //    Spinner spUC;
     @BindView(R.id.syncClusters)
@@ -199,6 +206,30 @@ public class LoginActivity extends Activity implements LoaderCallbacks<Cursor> {
             testing.setVisibility(View.VISIBLE);
         }
 
+    }
+
+    @OnClick(R.id.showPassword)
+    public void onShowPasswordClick() {
+        //TODO implement
+        if (mPasswordView1.getTransformationMethod() == null) {
+            mPasswordView1.setTransformationMethod(new PasswordTransformationMethod());
+            mPasswordView1.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_lock_black_24dp, 0, 0, 0);
+        } else {
+            mPasswordView1.setTransformationMethod(null);
+            mPasswordView1.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_lock_open_black_24dp, 0, 0, 0);
+        }
+    }
+
+    @OnClick(R.id.showPassword2)
+    public void onShowPasswordClick1() {
+        //TODO implement
+        if (mPasswordView2.getTransformationMethod() == null) {
+            mPasswordView2.setTransformationMethod(new PasswordTransformationMethod());
+            mPasswordView2.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_lock_black_24dp, 0, 0, 0);
+        } else {
+            mPasswordView2.setTransformationMethod(null);
+            mPasswordView2.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_lock_open_black_24dp, 0, 0, 0);
+        }
     }
 
     public void dbBackup() {
