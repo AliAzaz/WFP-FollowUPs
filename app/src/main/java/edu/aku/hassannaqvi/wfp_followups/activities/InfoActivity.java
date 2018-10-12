@@ -174,7 +174,8 @@ public class InfoActivity extends Activity {
             if (UpdateDB()) {
 
                 finish();
-                Intent intent = new Intent(this, SectionBActivity.class);
+                Intent intent = new Intent(this, SectionBActivity.class)
+                        .putExtra("valCheck", pfa04a.isChecked() ? 1 : 2);
                 startActivity(intent);
 
             } else {
