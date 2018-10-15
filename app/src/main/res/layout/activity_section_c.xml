@@ -69,7 +69,7 @@
                         android:layout_height="wrap_content"
                         android:hint="@string/pfc01a"
                         android:inputType="numberDecimal"
-                        android:maxLength="5" />
+                        android:maxLength="6" />
 
                     <TextView
                         android:gravity="center"
@@ -94,7 +94,7 @@
                         android:layout_height="wrap_content"
                         android:hint="@string/pfc01a"
                         android:inputType="numberDecimal"
-                        android:maxLength="5" />
+                        android:maxLength="6" />
 
                 </LinearLayout>
 

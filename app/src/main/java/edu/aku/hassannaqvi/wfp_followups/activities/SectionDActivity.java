@@ -255,7 +255,7 @@ public class SectionDActivity extends AppCompatActivity {
             if (!validatorClass.EmptyTextBox(this, bi.pfd04a, getString(R.string.pfd04))) {
                 return false;
             }
-            if (!validatorClass.RangeTextBox(this, bi.pfd03, 1, 31, getString(R.string.pfd04), "Days")) {
+            if (!validatorClass.RangeTextBox(this, bi.pfd04a, 1, 31, getString(R.string.pfd04), "Days")) {
                 return false;
             }
             if (!validatorClass.EmptyTextBox(this, bi.pfd04b, getString(R.string.pfd04))) {
@@ -282,44 +282,45 @@ public class SectionDActivity extends AppCompatActivity {
                         return false;
                     }
                 }
-                if (!validatorClass.EmptyRadioButton(this, bi.pfd08, bi.pfd08a, getString(R.string.pfd08))) {
+
+            }
+            if (!validatorClass.EmptyRadioButton(this, bi.pfd08, bi.pfd08a, getString(R.string.pfd08))) {
+                return false;
+            }
+            if (!bi.pfd08b.isChecked()) {
+                if (!validatorClass.EmptyCardCheckBox(this, bi.fldgrppd09, bi.pfd09a, getString(R.string.pfd09))) {
                     return false;
                 }
-                if (!bi.pfd08b.isChecked()) {
-                    if (!validatorClass.EmptyCardCheckBox(this, bi.fldgrppd09, bi.pfd09a, getString(R.string.pfd09))) {
+                if (bi.pfd0996.isChecked()) {
+                    if (!validatorClass.EmptyTextBox(this, bi.pfd0996x, getString(R.string.pfd09))) {
                         return false;
                     }
-                    if (bi.pfd0996.isChecked()) {
-                        if (!validatorClass.EmptyTextBox(this, bi.pfd0996x, getString(R.string.pfd09))) {
-                            return false;
-                        }
-                    }
-                    if (!validatorClass.EmptyTextBox(this, bi.pfd10, getString(R.string.pfd10))) {
-                        return false;
-                    }
-                    if (!validatorClass.RangeTextBox(this, bi.pfd10, 1, 90, getString(R.string.pfd10), "Sachets")) {
-                        return false;
-                    }
-                    if (!bi.pfd1198.isChecked()) {
-                        if (!validatorClass.EmptyCardCheckBox(this, bi.fldgrppd11, bi.pfd11a, getString(R.string.pfd11))) {
-                            return false;
-                        }
-                        if (bi.pfd1196.isChecked()) {
-                            if (!validatorClass.EmptyTextBox(this, bi.pfd1196x, getString(R.string.pfd11))) {
-                                return false;
-                            }
-                        }
-                    }
-                    if (!validatorClass.EmptyCardCheckBox(this, bi.fldgrppd12, bi.pfd12a, getString(R.string.pfd12))) {
-                        return false;
-                    }
-                    if (bi.pfd1296.isChecked()) {
-                        if (!validatorClass.EmptyTextBox(this, bi.pfd1296x, getString(R.string.pfd12))) {
-                            return false;
-                        }
-                    }
-
                 }
+                if (!validatorClass.EmptyTextBox(this, bi.pfd10, getString(R.string.pfd10))) {
+                    return false;
+                }
+                if (!validatorClass.RangeTextBox(this, bi.pfd10, 1, 90, getString(R.string.pfd10), "Sachets")) {
+                    return false;
+                }
+                if (!bi.pfd1198.isChecked()) {
+                    if (!validatorClass.EmptyCardCheckBox(this, bi.fldgrppd11, bi.pfd11a, getString(R.string.pfd11))) {
+                        return false;
+                    }
+                    if (bi.pfd1196.isChecked()) {
+                        if (!validatorClass.EmptyTextBox(this, bi.pfd1196x, getString(R.string.pfd11))) {
+                            return false;
+                        }
+                    }
+                }
+                if (!validatorClass.EmptyCardCheckBox(this, bi.fldgrppd12, bi.pfd12a, getString(R.string.pfd12))) {
+                    return false;
+                }
+                if (bi.pfd1296.isChecked()) {
+                    if (!validatorClass.EmptyTextBox(this, bi.pfd1296x, getString(R.string.pfd12))) {
+                        return false;
+                    }
+                }
+
             }
         }
 

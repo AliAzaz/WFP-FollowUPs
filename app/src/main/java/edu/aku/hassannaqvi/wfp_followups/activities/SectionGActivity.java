@@ -1,5 +1,6 @@
 package edu.aku.hassannaqvi.wfp_followups.activities;
 
+import android.content.Intent;
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -372,18 +373,18 @@ public class SectionGActivity extends AppCompatActivity {
 
         if (formValidation()) {
             Toast.makeText(this, "validated", Toast.LENGTH_SHORT).show();
-//            try {
-//                saveDraft();
-//            } catch (JSONException e) {
-//                e.printStackTrace();
-//            }
-//
-//            if (UpdateDB()) {
-//
-//                startActivity(new Intent(this, SectionHActivity.class)
-//                        .putExtra("complete", true));
-//                finish();
-//            }
+            try {
+                saveDraft();
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
+
+            if (UpdateDB()) {
+
+                startActivity(new Intent(this, SectionHActivity.class)
+                        .putExtra("complete", true));
+                finish();
+            }
         }
 
     }
