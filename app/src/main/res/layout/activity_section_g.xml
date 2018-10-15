@@ -126,6 +126,7 @@
                         android:textColor="@color/white" />
 
                     <EditText
+                        android:maxLength="2"
                         android:id="@+id/pfg03m"
                         style="@style/textInput"
                         android:layout_width="match_parent"
@@ -135,6 +136,7 @@
                         android:inputType="number" />
 
                     <EditText
+                        android:maxLength="2"
                         android:id="@+id/pfg03d"
                         style="@style/textInput"
                         android:layout_width="match_parent"
@@ -216,6 +218,7 @@
                         android:textColor="@color/white" />
 
                     <EditText
+                        android:maxLength="2"
                         android:id="@+id/pfg05"
                         style="@style/textInput"
                         android:layout_width="match_parent"
@@ -311,13 +314,14 @@
                             android:text="@string/pfg07a" />
 
                         <EditText
+                            android:inputType="number"
+                            android:maxLength="4"
                             android:hint="@string/pfg07a"
                             android:id="@+id/pfg07ax"
                             style="@style/textInput"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_margin="10dp"
-                            android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz"
                             android:visibility="gone" />
 
                         <RadioButton
@@ -329,13 +333,14 @@
                             android:text="@string/pfg07b" />
 
                         <EditText
+                            android:inputType="number"
+                            android:maxLength="4"
                             android:hint="@string/pfg07b"
                             android:id="@+id/pfg07bx"
                             style="@style/textInput"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_margin="10dp"
-                            android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz"
                             android:visibility="gone" />
 
                         <RadioButton
@@ -991,12 +996,13 @@
                             android:text="@string/pfg14b" />
 
                         <EditText
+                            android:inputType="number"
+                            android:maxLength="2"
                             android:id="@+id/pfg14bx"
                             style="@style/textInput"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_margin="10dp"
-                            android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz"
                             android:hint="@string/pfg14b"
                             android:text='@{pfg14b.checked? pfg14bx.getText.toString : "" }'
                             android:visibility='@{pfg14b.checked? View.VISIBLE : View.GONE}' />
@@ -1011,12 +1017,13 @@
                             android:text="@string/pfg14c" />
 
                         <EditText
+                            android:inputType="number"
+                            android:maxLength="2"
                             android:id="@+id/pfg14cx"
                             style="@style/textInput"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_margin="10dp"
-                            android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz"
                             android:hint="@string/pfg14c"
                             android:text='@{pfg14c.checked? pfg14cx.getText.toString : "" }'
                             android:visibility='@{pfg14c.checked? View.VISIBLE : View.GONE}' />
@@ -1592,12 +1599,13 @@
                             android:text="@string/pfg20a" />
 
                         <EditText
+                            android:inputType="number"
+                            android:maxLength="2"
                             android:id="@+id/pfg20ax"
                             style="@style/textInput"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_margin="10dp"
-                            android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz"
                             android:hint="@string/pfg20a"
                             android:text='@{pfg20a.checked? pfg20ax.getText.toString : "" }'
                             android:visibility='@{pfg20a.checked? View.VISIBLE : View.GONE}' />
@@ -1612,12 +1620,13 @@
                             android:text="@string/pfg20b" />
 
                         <EditText
+                            android:inputType="number"
+                            android:maxLength="2"
                             android:id="@+id/pfg20bx"
                             style="@style/textInput"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_margin="10dp"
-                            android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz"
                             android:hint="@string/pfg20b"
                             android:text='@{pfg20b.checked? pfg20bx.getText.toString : "" }'
                             android:visibility='@{pfg20b.checked? View.VISIBLE : View.GONE}' />
@@ -1632,12 +1641,13 @@
                             android:text="@string/pfg20c" />
 
                         <EditText
+                            android:inputType="number"
+                            android:maxLength="2"
                             android:id="@+id/pfg20cx"
                             style="@style/textInput"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_margin="10dp"
-                            android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz"
                             android:hint="@string/pfg20c"
                             android:text='@{pfg20c.checked? pfg20cx.getText.toString : "" }'
                             android:visibility='@{pfg20c.checked? View.VISIBLE : View.GONE}' />
@@ -1677,6 +1687,8 @@
                         android:textColor="@color/white" />
 
                     <EditText
+                        android:inputType="number"
+                        android:maxLength="1"
                         android:id="@+id/pfg21"
                         style="@style/textInput"
                         android:layout_width="match_parent"
@@ -1979,13 +1991,14 @@
                             android:text="@string/pfg25a" />
 
                         <EditText
+                            android:hint="@string/pfg25a"
+                            android:inputType="number"
                             android:id="@+id/pfg25ax"
                             style="@style/textInput"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_margin="10dp"
-                            android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz"
-                            android:hint="@string/other"
+                            android:maxLength="2"
                             android:text='@{pfg25a.checked? pfg25ax.getText.toString : "" }'
                             android:visibility='@{pfg25a.checked? View.VISIBLE : View.GONE}' />
 
@@ -1999,13 +2012,14 @@
                             android:text="@string/pfg25b" />
 
                         <EditText
+                            android:hint="@string/pfg25b"
+                            android:inputType="number"
                             android:id="@+id/pfg25bx"
                             style="@style/textInput"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_margin="10dp"
-                            android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz"
-                            android:hint="@string/other"
+                            android:maxLength="2"
                             android:text='@{pfg25b.checked? pfg25bx.getText.toString : "" }'
                             android:visibility='@{pfg25b.checked? View.VISIBLE : View.GONE}' />
 
@@ -2019,12 +2033,14 @@
                             android:text="@string/pfg25c" />
 
                         <EditText
+                            android:hint="@string/pfg25c"
+                            android:inputType="number"
                             style="@style/textInput"
                             android:id="@+id/pfg25cx"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_margin="10dp"
-                            android:hint="@string/other"
+                            android:maxLength="2"
                             android:text='@{pfg25c.checked? pfg25cx.getText.toString : "" }'
                             android:visibility='@{pfg25c.checked? View.VISIBLE : View.GONE}' />
 

@@ -482,6 +482,7 @@
                             android:text="@string/day" />
 
                         <EditText
+                            android:maxLength="11"
                             android:id="@+id/pff07dx"
                             style="@style/textInput"
                             android:layout_width="match_parent"

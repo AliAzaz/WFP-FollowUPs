@@ -46,6 +46,8 @@
                         android:textColor="@color/white" />
 
                     <TextView
+                        android:gravity="center"
+                        android:padding="5dp"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_horizontal"
@@ -61,15 +63,18 @@
                         android:layout_marginTop="8sp" />
 
                     <EditText
+
                         style="@style/textInput"
                         android:id="@+id/pfh0101"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:hint="@string/pfh01a"
                         android:inputType="numberDecimal"
-                        android:maxLength="4" />
+                        android:maxLength="6" />
 
                     <TextView
+                        android:gravity="center"
+                        android:padding="5dp"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_horizontal"
@@ -90,7 +95,7 @@
                         android:layout_height="wrap_content"
                         android:hint="@string/pfh01a"
                         android:inputType="numberDecimal"
-                        android:maxLength="4" />
+                        android:maxLength="6" />
 
                 </LinearLayout>
 
@@ -118,6 +123,8 @@
                         android:textColor="@color/white" />
 
                     <TextView
+                        android:gravity="center"
+                        android:padding="5dp"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_horizontal"
@@ -138,9 +145,11 @@
                         android:layout_height="wrap_content"
                         android:hint="@string/pfc01a"
                         android:inputType="numberDecimal"
-                        android:maxLength="4" />
+                        android:maxLength="6" />
 
                     <TextView
+                        android:gravity="center"
+                        android:padding="5dp"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_horizontal"
@@ -161,7 +170,7 @@
                         android:layout_height="wrap_content"
                         android:hint="@string/pfc01a"
                         android:inputType="numberDecimal"
-                        android:maxLength="4" />
+                        android:maxLength="6" />
 
                 </LinearLayout>
 

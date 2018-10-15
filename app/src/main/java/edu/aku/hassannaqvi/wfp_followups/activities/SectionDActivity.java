@@ -314,10 +314,10 @@ public class SectionDActivity extends AppCompatActivity {
                 if (!validatorClass.RangeTextBox(this, bi.pfd10, 1, 90, getString(R.string.pfd10), "Sachets")) {
                     return false;
                 }
+                if (!validatorClass.EmptyCardCheckBox(this, bi.fldgrppd11, bi.pfd11a, getString(R.string.pfd11))) {
+                    return false;
+                }
                 if (!bi.pfd1198.isChecked()) {
-                    if (!validatorClass.EmptyCardCheckBox(this, bi.fldgrppd11, bi.pfd11a, getString(R.string.pfd11))) {
-                        return false;
-                    }
                     if (bi.pfd1196.isChecked()) {
                         if (!validatorClass.EmptyTextBox(this, bi.pfd1196x, getString(R.string.pfd11))) {
                             return false;
