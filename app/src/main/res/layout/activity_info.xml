@@ -91,6 +91,22 @@
                     android:hint="@string/pw_name"
                     android:inputType="text" />
 
+                <!--View Data-->
+                <LinearLayout
+                    android:id="@+id/fldgrppfa01"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layoutDirection="ltr"
+                    android:visibility="gone">
+
+                    <include
+                        layout="@layout/participant_card"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -121,7 +137,6 @@
                         android:text="@string/pfa04b" />
 
                 </RadioGroup>
-
 
                 <!--<LinearLayout
                     android:id="@+id/fldGrpClinic"
@@ -192,10 +207,10 @@
 
 
                     <Button
-                        android:layout_marginEnd="10dp"
                         android:id="@+id/btn_Continue"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
+                        android:layout_marginEnd="10dp"
                         android:layout_marginRight="5dp"
                         android:layout_weight="0.5"
                         android:onClick='@{ () -> callback.onBtnContinueClick()}'
@@ -211,9 +226,9 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.5"
+                        android:onClick='@{ () -> callback.onBtnEndClick()}'
                         android:padding="2dp"
                         android:text="@string/end_interview"
-                        android:onClick='@{ () -> callback.onBtnEndClick()}'
                         android:textColor="#ff1e1e"
                         android:textSize="32sp" />
 
