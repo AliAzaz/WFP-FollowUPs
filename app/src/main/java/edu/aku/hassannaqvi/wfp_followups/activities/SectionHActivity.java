@@ -160,10 +160,10 @@ public class SectionHActivity extends AppCompatActivity {
             return false;
         }
 
-        if (!validatorClass.PatternTextBox(this, bi.pfh0101, getString(R.string.pfh01a), "^(\\d{2,2}\\.\\d{1,1})$", "XX.X")) {
+        if (!validatorClass.PatternTextBox(this, bi.pfh0101, getString(R.string.pfh01a), "^(\\d{3,3}\\.\\d{2,2})$", "XXX.XX")) {
             return false;
         }
-        if (!validatorClass.RangeTextBox(this, bi.pfh0101, 100.0, 180.0, getString(R.string.pfh01a), "height")) {
+        if (!validatorClass.RangeTextBox(this, bi.pfh0101, 10d, 140d, getString(R.string.pfh01a), "height")) {
             return false;
         }
 
@@ -174,11 +174,12 @@ public class SectionHActivity extends AppCompatActivity {
         if (!validatorClass.EmptyTextBox(this, bi.pfh0102, getString(R.string.pfh01a))) {
             return false;
         }
-        if (!validatorClass.RangeTextBox(this, bi.pfh0102, 100.0, 180.0, getString(R.string.pfh01a), "height")) {
+
+        if (!validatorClass.PatternTextBox(this, bi.pfh0102, getString(R.string.pfh01a), "^(\\d{3,3}\\.\\d{2,2})$", "XXX.XX")) {
             return false;
         }
 
-        if (!validatorClass.PatternTextBox(this, bi.pfh0102, getString(R.string.pfh01a), "^(\\d{2,2}\\.\\d{1,1})$", "XX.X")) {
+        if (!validatorClass.RangeTextBox(this, bi.pfh0102, 10d, 140d, getString(R.string.pfh01a), "height")) {
             return false;
         }
 
@@ -189,11 +190,12 @@ public class SectionHActivity extends AppCompatActivity {
         if (!validatorClass.EmptyTextBox(this, bi.pfh0201, getString(R.string.pfh02a))) {
             return false;
         }
-        if (!validatorClass.RangeTextBox(this, bi.pfh0201, 25.0, 110.0, getString(R.string.pfh02a), "weight")) {
+
+        if (!validatorClass.PatternTextBox(this, bi.pfh0201, getString(R.string.pfh02a), "^(\\d{2,2}\\.\\d{2,2})$", "XX.XX")) {
             return false;
         }
 
-        if (!validatorClass.PatternTextBox(this, bi.pfh0201, getString(R.string.pfh02a), "^(\\d{1,1}\\.\\d{2,2})$", "X.XX")) {
+        if (!validatorClass.RangeTextBox(this, bi.pfh0201, 0.5d, 40d, getString(R.string.pfh02a), "weight")) {
             return false;
         }
 
@@ -205,10 +207,11 @@ public class SectionHActivity extends AppCompatActivity {
             return false;
         }
 
-        if (!validatorClass.PatternTextBox(this, bi.pfh0202, getString(R.string.pfh02a), "^(\\d{1,1}\\.\\d{2,2})$", "X.XX")) {
+        if (!validatorClass.PatternTextBox(this, bi.pfh0202, getString(R.string.pfh02a), "^(\\d{2,2}\\.\\d{2,2})$", "XX.XX")) {
             return false;
         }
-        if (!validatorClass.RangeTextBox(this, bi.pfh0202, 25.0, 110.0, getString(R.string.pfh02a), "weight")) {
+
+        if (!validatorClass.RangeTextBox(this, bi.pfh0202, 0.5d, 40d, getString(R.string.pfh02a), "weight")) {
             return false;
         }
 

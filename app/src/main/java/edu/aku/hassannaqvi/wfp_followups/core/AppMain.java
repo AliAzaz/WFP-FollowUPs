@@ -26,6 +26,7 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.Map;
+import java.util.concurrent.TimeUnit;
 
 import edu.aku.hassannaqvi.wfp_followups.activities.EndingActivity;
 import edu.aku.hassannaqvi.wfp_followups.contracts.EnrolledContract;
@@ -201,6 +202,28 @@ public class AppMain extends Application {
                 new MyLocationListener()
         );
 
+    }
+
+    public static Date stringToDate(String strdate) {
+
+        SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd");
+
+        Date date = null;
+        try {
+            date = format.parse(strdate);
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+
+        return date;
+    }
+
+
+    public static long getDaysBWDates(Date startDate, Date endDate) {
+
+        long diff = endDate.getTime() - startDate.getTime();
+
+        return TimeUnit.DAYS.convert(diff, TimeUnit.MILLISECONDS);
     }
 
     protected void showCurrentLocation() {

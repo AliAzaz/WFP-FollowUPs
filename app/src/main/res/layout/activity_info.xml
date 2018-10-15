@@ -213,6 +213,7 @@
                         android:layout_weight="0.5"
                         android:padding="2dp"
                         android:text="@string/end_interview"
+                        android:onClick='@{ () -> callback.onBtnEndClick()}'
                         android:textColor="#ff1e1e"
                         android:textSize="32sp" />
 

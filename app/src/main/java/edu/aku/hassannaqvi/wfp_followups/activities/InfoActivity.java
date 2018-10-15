@@ -7,6 +7,7 @@ import android.content.SharedPreferences;
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.text.Editable;
+import android.text.TextWatcher;
 import android.text.format.DateFormat;
 import android.util.Log;
 import android.view.View;
@@ -23,7 +24,6 @@ import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 
-import butterknife.OnTextChanged;
 import edu.aku.hassannaqvi.wfp_followups.R;
 import edu.aku.hassannaqvi.wfp_followups.contracts.EnrolledContract;
 import edu.aku.hassannaqvi.wfp_followups.contracts.FormsContract;
@@ -102,14 +102,25 @@ public class InfoActivity extends Activity {
             }
         });
 
-    }
+        bi.studyID.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
 
-    @OnTextChanged(value = R.id.studyID, callback = OnTextChanged.Callback.TEXT_CHANGED)
-    void afterstudyIDInput(Editable editable) {
-        check = false;
-        bi.fldGrpParticipant.setVisibility(View.GONE);
-    }
+            }
 
+            @Override
+            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+                check = false;
+                bi.fldGrpParticipant.setVisibility(View.GONE);
+            }
+
+            @Override
+            public void afterTextChanged(Editable editable) {
+
+            }
+        });
+
+    }
 
     public void onCheckParticipantsClick() {
         //TODO implement
@@ -119,14 +130,19 @@ public class InfoActivity extends Activity {
 
             if (enrolledParticipant != null) {
 
-                Toast.makeText(getApplicationContext(), "Participant found", Toast.LENGTH_LONG).show();
+                Long days = AppMain.getDaysBWDates(new Date(), AppMain.stringToDate(enrolledParticipant.getFupdt()));
 
-                bi.pfa01.setText(enrolledParticipant.getPw_name());
+                if (days > -8 && days < 8) {
+                    Toast.makeText(getApplicationContext(), "Participant found", Toast.LENGTH_LONG).show();
 
-                bi.fldGrpParticipant.setVisibility(View.VISIBLE);
+                    bi.pfa01.setText(enrolledParticipant.getPw_name());
 
-                check = true;
+                    bi.fldGrpParticipant.setVisibility(View.VISIBLE);
 
+                    check = true;
+                } else {
+                    Toast.makeText(this, "Follow Up due!!", Toast.LENGTH_SHORT).show();
+                }
 
             } else {
                 Toast.makeText(getApplicationContext(), "Participant Not found", Toast.LENGTH_LONG).show();
@@ -141,6 +157,12 @@ public class InfoActivity extends Activity {
         }
 
 
+    }
+
+    public boolean checkFollowUp() {
+
+
+        return true;
     }
 
 
