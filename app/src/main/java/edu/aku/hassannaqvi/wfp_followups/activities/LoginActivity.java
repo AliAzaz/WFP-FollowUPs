@@ -35,8 +35,8 @@ import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.LinearLayout;
 import android.widget.ProgressBar;
+import android.widget.RelativeLayout;
 import android.widget.ScrollView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -109,9 +109,9 @@ public class LoginActivity extends Activity implements LoaderCallbacks<Cursor> {
     @BindView(R.id.syncClusters)
     Button syncClusters;
     @BindView(R.id.loginLayout1)
-    LinearLayout loginLayout1;
+    RelativeLayout loginLayout1;
     @BindView(R.id.loginLayout2)
-    LinearLayout loginLayout2;
+    RelativeLayout loginLayout2;
 
     DatabaseHelper db;
     List<String> clustersCode;

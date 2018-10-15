@@ -15,7 +15,6 @@
         <!--&lt;!&ndash;-->
         <!--<item name="android:windowActionBarOverlay">true</item>-->
         <!--&ndash;&gt;-->
-        <!--<item name="android:actionBarStyle">@style/ActionBarTheme</item>-->
 
     </style>
 
@@ -27,6 +26,9 @@
         <item name="android:checkboxStyle">@style/checkbox</item>
         <item name="android:radioButtonStyle">@style/radiobutton</item>
         <item name="android:actionBarStyle">@style/ActionBarTheme</item>
+        <!--<item name="android:actionBarStyle">@style/ActionBarTheme</item>-->
+
+
         <!-- Customize your theme here. -->
     </style>
 
@@ -120,6 +122,7 @@
         <item name="android:padding">10dp</item>
         <item name="android:radius">2dp</item>
         <item name="android:layout_margin">10dp</item>
+        <item name="android:paddingEnd">10dp</item>
         <item name="android:textColorHint">@color/black_overlay</item>
 
     </style>
@@ -196,7 +199,7 @@
         <item name="android:paddingRight">16dp</item>
         <item name="android:radius">2dp</item>
         <item name="android:elevation">5dp</item>
-        <item name="android:background">@drawable/button_bg</item>
+        <item name="android:background">@color/colorPrimaryDark</item>
     </style>
 
     <style name="checkbox" parent="android:Widget.Material.Light.CompoundButton.CheckBox">
