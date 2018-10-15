@@ -717,7 +717,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_margin="10dp"
-                                android:background="@color/colorPrimaryDark"
+                                android:background="@color/colorPrimary"
                                 android:padding="5dp"
                                 android:text="@string/pfi10a"
                                 android:textColor="@color/white"
@@ -772,7 +772,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_margin="10dp"
-                                android:background="@color/colorPrimaryDark"
+                                android:background="@color/colorPrimary"
                                 android:padding="5dp"
                                 android:text="@string/pfi10b"
                                 android:textColor="@color/white"
@@ -835,7 +835,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_margin="10dp"
-                                android:background="@color/colorPrimaryDark"
+                                android:background="@color/colorPrimary"
                                 android:padding="5dp"
                                 android:text="@string/pfi10c"
                                 android:textColor="@color/white"
@@ -900,7 +900,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_margin="10dp"
-                                android:background="@color/colorPrimaryDark"
+                                android:background="@color/colorPrimary"
                                 android:padding="5dp"
                                 android:text="@string/pfi10d"
                                 android:textColor="@color/white" />
@@ -954,7 +954,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_margin="10dp"
-                                android:background="@color/colorPrimaryDark"
+                                android:background="@color/colorPrimary"
                                 android:padding="5dp"
                                 android:text="@string/pfi10e"
                                 android:textColor="@color/white"
@@ -1009,7 +1009,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_margin="10dp"
-                                android:background="@color/colorPrimaryDark"
+                                android:background="@color/colorPrimary"
                                 android:padding="5dp"
                                 android:text="@string/pfi10f"
                                 android:textColor="@color/white"
@@ -1072,7 +1072,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_margin="10dp"
-                                android:background="@color/colorPrimaryDark"
+                                android:background="@color/colorPrimary"
                                 android:padding="5dp"
                                 android:text="@string/pfi10g"
                                 android:textColor="@color/white"
@@ -1127,7 +1127,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_margin="10dp"
-                                android:background="@color/colorPrimaryDark"
+                                android:background="@color/colorPrimary"
                                 android:padding="5dp"
                                 android:text="@string/pfi10h"
                                 android:textColor="@color/white"
@@ -1182,7 +1182,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_margin="10dp"
-                                android:background="@color/colorPrimaryDark"
+                                android:background="@color/colorPrimary"
                                 android:padding="5dp"
                                 android:text="@string/pfi10i"
                                 android:textColor="@color/white"
@@ -2565,6 +2565,18 @@
                 android:orientation="horizontal">
 
                 <Button
+                    android:id="@+id/btn_End"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="10dp"
+                    android:layout_weight="0.5"
+                    android:onClick="@{() -> callback.BtnEnd()}"
+                    android:padding="2dp"
+                    android:text="@string/end_interview"
+                    android:textColor="#ff1e1e"
+                    android:textSize="32sp" />
+
+                <Button
                     android:layout_marginEnd="10dp"
                     android:id="@+id/btn_Continue"
                     android:layout_width="0dp"
@@ -2576,17 +2588,6 @@
                     android:text="@string/nextSection"
                     android:textSize="32sp"
                     android:visibility="visible" />
-
-                <Button
-                    android:id="@+id/btn_End"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="0.5"
-                    android:onClick="@{() -> callback.BtnEnd()}"
-                    android:padding="2dp"
-                    android:text="@string/end_interview"
-                    android:textColor="#ff1e1e"
-                    android:textSize="32sp" />
 
 
             </LinearLayout>
