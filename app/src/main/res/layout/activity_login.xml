@@ -322,11 +322,10 @@
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
 
-                    <LinearLayout
+                    <RelativeLayout
                         android:id="@+id/loginLayout1"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical">
+                        android:layout_height="wrap_content">
 
                         <AutoCompleteTextView
                             style="@style/textInput"
@@ -354,17 +353,17 @@
                         </AutoCompleteTextView>
 
                         <Button
+                            android:layout_marginTop="80dp"
                             android:id="@+id/showPassword"
                             style="?android:attr/borderlessButtonStyle"
                             android:layout_width="30dp"
                             android:layout_height="30dp"
-                            android:layout_marginTop="10dp"
                             android:background="@drawable/round_button"
                             android:drawableStart="@drawable/ic_remove_red_eye_black_24dp"
-                            android:gravity="center"
                             android:padding="3dp" />
 
                         <EditText
+                            android:layout_below="@id/email1"
                             style="@style/textInput"
                             android:id="@+id/password1"
                             android:layout_width="match_parent"
@@ -383,13 +382,13 @@
                             android:singleLine="true"
                             android:textSize="18sp" />
 
-                    </LinearLayout>
 
-                    <LinearLayout
+                    </RelativeLayout>
+
+                    <RelativeLayout
                         android:id="@+id/loginLayout2"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical">
+                        android:layout_height="wrap_content">
 
                         <AutoCompleteTextView
                             style="@style/textInput"
@@ -418,13 +417,14 @@
                             style="?android:attr/borderlessButtonStyle"
                             android:layout_width="30dp"
                             android:layout_height="30dp"
-                            android:layout_marginTop="10dp"
+                            android:layout_marginTop="80dp"
                             android:background="@drawable/round_button"
                             android:drawableStart="@drawable/ic_remove_red_eye_black_24dp"
                             android:gravity="center"
                             android:padding="3dp" />
 
                         <EditText
+                            android:layout_below="@id/email2"
                             style="@style/textInput"
                             android:id="@+id/password2"
                             android:layout_width="match_parent"
@@ -444,7 +444,7 @@
                             android:singleLine="true"
                             android:textSize="18sp" />
 
-                    </LinearLayout>
+                    </RelativeLayout>
 
                 </LinearLayout>
 

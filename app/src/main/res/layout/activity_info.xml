@@ -46,7 +46,6 @@
                     android:layout_marginTop="10dp"
                     android:layout_marginEnd="2dp"
                     android:layout_weight="2"
-                    android:background="@drawable/button_bg"
                     android:elevation="1dp"
                     android:onClick='@{ () -> callback.onCheckParticipantsClick()}'
                     android:padding="2dp"
@@ -193,6 +192,7 @@
 
 
                     <Button
+                        android:layout_marginEnd="10dp"
                         android:id="@+id/btn_Continue"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"

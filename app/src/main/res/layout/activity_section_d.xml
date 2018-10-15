@@ -696,6 +696,7 @@
                 android:orientation="horizontal">
 
                 <Button
+                    android:layout_marginEnd="10dp"
                     android:id="@+id/btn_Continue"
                     style="@style/buttons"
                     android:layout_width="0dp"

@@ -231,6 +231,7 @@
                                 android:textColor="@color/white" />
 
                             <EditText
+                                android:maxLength="2"
                                 android:id="@+id/pfb03"
                                 style="@style/textInput"
                                 android:layout_width="match_parent"
@@ -294,6 +295,7 @@
                 android:orientation="horizontal">
 
                 <Button
+                    android:layout_marginEnd="10dp"
                     android:id="@+id/btn_Continue"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"

@@ -46,6 +46,8 @@
                         android:textColor="@color/white" />
 
                     <TextView
+                        android:gravity="center"
+                        android:padding="10dp"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_horizontal"
@@ -70,6 +72,8 @@
                         android:maxLength="5" />
 
                     <TextView
+                        android:gravity="center"
+                        android:padding="10dp"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_horizontal"
@@ -148,6 +152,7 @@
                 android:orientation="horizontal">
 
                 <Button
+                    android:layout_marginEnd="10dp"
                     android:id="@+id/btn_Continue"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
