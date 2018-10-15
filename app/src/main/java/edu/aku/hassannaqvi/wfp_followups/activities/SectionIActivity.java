@@ -88,10 +88,10 @@ public class SectionIActivity extends AppCompatActivity {
                 }
 
                 if (flag) {
-                    bi.pfi13.setVisibility(View.GONE);
+                    bi.fldgrppfi13.setVisibility(View.GONE);
                     bi.pfi13.clearCheck();
                 } else {
-                    bi.pfi13.setVisibility(View.VISIBLE);
+                    bi.fldgrppfi13.setVisibility(View.VISIBLE);
                 }
 
             }

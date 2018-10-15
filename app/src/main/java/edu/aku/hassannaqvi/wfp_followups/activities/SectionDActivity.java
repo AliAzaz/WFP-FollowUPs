@@ -5,6 +5,7 @@ import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.CompoundButton;
 import android.widget.RadioGroup;
 import android.widget.Toast;
 
@@ -153,6 +154,17 @@ public class SectionDActivity extends AppCompatActivity {
                     ClearClass.ClearAllCardFields(bi.fldgrppd11, true);
                     bi.fldgrppd12.setVisibility(View.VISIBLE);
                     ClearClass.ClearAllCardFields(bi.fldgrppd12, true);
+                }
+            }
+        });
+
+        bi.pfd1198.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+                if (b) {
+                    ClearClass.ClearAllFields(bi.fldGrppfd11a, false);
+                } else {
+                    ClearClass.ClearAllFields(bi.fldGrppfd11a, true);
                 }
             }
         });
