@@ -70,6 +70,7 @@ public class InfoActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+
         bi = DataBindingUtil.setContentView(this, R.layout.activity_info);
         bi.setCallback(this);
 
