@@ -35,7 +35,6 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_margin="10dp"
                         android:background="@color/colorPrimaryDark"
                         android:padding="5dp"
                         android:text="@string/pfi01"
@@ -100,7 +99,6 @@
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_margin="10dp"
                             android:background="@color/colorPrimaryDark"
                             android:padding="5dp"
                             android:text="@string/pfi03"
@@ -176,7 +174,6 @@
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_margin="10dp"
                             android:background="@color/colorPrimaryDark"
                             android:padding="5dp"
                             android:text="@string/pfi03"
@@ -235,7 +232,6 @@
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_margin="10dp"
                             android:background="@color/colorPrimaryDark"
                             android:padding="5dp"
                             android:text="@string/pfi04"
@@ -311,7 +307,6 @@
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_margin="10dp"
                             android:background="@color/colorPrimaryDark"
                             android:padding="5dp"
                             android:text="@string/pfi05"
@@ -363,7 +358,6 @@
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_margin="10dp"
                             android:background="@color/colorPrimaryDark"
                             android:padding="5dp"
                             android:text="@string/pfi06"
@@ -483,7 +477,6 @@
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_margin="10dp"
                             android:background="@color/colorPrimaryDark"
                             android:padding="5dp"
                             android:text="@string/pfi07"
@@ -543,7 +536,6 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_margin="10dp"
                         android:background="@color/colorPrimaryDark"
                         android:padding="5dp"
                         android:text="@string/pfi07a"
@@ -600,7 +592,6 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_margin="10dp"
                         android:background="@color/colorPrimaryDark"
                         android:padding="5dp"
                         android:text="@string/pfi08"
@@ -657,7 +648,6 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_margin="10dp"
                         android:background="@color/colorPrimaryDark"
                         android:padding="5dp"
                         android:text="@string/pfi09"
@@ -714,7 +704,6 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_margin="10dp"
                         android:background="@color/colorPrimaryDark"
                         android:padding="5dp"
                         android:text="@string/pfi10"
@@ -724,8 +713,8 @@
                     <!--<TextView-->
                     <!--android:layout_width="match_parent"-->
                     <!--android:layout_height="wrap_content"-->
-                    <!--android:layout_margin="10dp"-->
-                    <!--android:background="@color/colorPrimary"-->
+                    <!--->
+                    <!-android:background="@color/colorPrimary"-->
                     <!--android:padding="5dp"-->
                     <!--android:text="@string/pfi10sub"-->
                     <!--android:textColor="@color/white"-->
@@ -746,7 +735,6 @@
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:layout_margin="10dp"
                                 android:background="@color/colorPrimary"
                                 android:padding="5dp"
                                 android:text="@string/pfi10a"
@@ -803,7 +791,6 @@
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:layout_margin="10dp"
                                 android:background="@color/colorPrimary"
                                 android:padding="5dp"
                                 android:text="@string/pfi10b"
@@ -869,7 +856,6 @@
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:layout_margin="10dp"
                                 android:background="@color/colorPrimary"
                                 android:padding="5dp"
                                 android:text="@string/pfi10c"
@@ -937,7 +923,6 @@
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:layout_margin="10dp"
                                 android:background="@color/colorPrimary"
                                 android:padding="5dp"
                                 android:text="@string/pfi10d"
@@ -993,7 +978,6 @@
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:layout_margin="10dp"
                                 android:background="@color/colorPrimary"
                                 android:padding="5dp"
                                 android:text="@string/pfi10e"
@@ -1050,7 +1034,6 @@
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:layout_margin="10dp"
                                 android:background="@color/colorPrimary"
                                 android:padding="5dp"
                                 android:text="@string/pfi10f"
@@ -1116,7 +1099,6 @@
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:layout_margin="10dp"
                                 android:background="@color/colorPrimary"
                                 android:padding="5dp"
                                 android:text="@string/pfi10g"
@@ -1173,7 +1155,6 @@
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:layout_margin="10dp"
                                 android:background="@color/colorPrimary"
                                 android:padding="5dp"
                                 android:text="@string/pfi10h"
@@ -1230,7 +1211,6 @@
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:layout_margin="10dp"
                                 android:background="@color/colorPrimary"
                                 android:padding="5dp"
                                 android:text="@string/pfi10i"
@@ -1293,7 +1273,6 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_margin="10dp"
                         android:background="@color/colorPrimaryDark"
                         android:padding="5dp"
                         android:text="@string/pfi12"
@@ -1315,7 +1294,6 @@
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:layout_margin="10dp"
                                 android:background="@color/colorPrimary"
                                 android:padding="5dp"
                                 android:text="@string/pfi12a"
@@ -1372,7 +1350,6 @@
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:layout_margin="10dp"
                                 android:background="@color/colorPrimary"
                                 android:padding="5dp"
                                 android:text="@string/pfi12b"
@@ -1429,7 +1406,6 @@
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:layout_margin="10dp"
                                 android:background="@color/colorPrimary"
                                 android:padding="5dp"
                                 android:text="@string/pfi12c"
@@ -1486,7 +1462,6 @@
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:layout_margin="10dp"
                                 android:background="@color/colorPrimary"
                                 android:padding="5dp"
                                 android:text="@string/pfi12d"
@@ -1544,7 +1519,6 @@
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:layout_margin="10dp"
                                 android:background="@color/colorPrimary"
                                 android:padding="5dp"
                                 android:text="@string/pfi12e"
@@ -1601,7 +1575,6 @@
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:layout_margin="10dp"
                                 android:background="@color/colorPrimary"
                                 android:padding="5dp"
                                 android:text="@string/pfi12f"
@@ -1658,7 +1631,6 @@
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:layout_margin="10dp"
                                 android:background="@color/colorPrimary"
                                 android:padding="5dp"
                                 android:text="@string/pfi12g"
@@ -1715,7 +1687,6 @@
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:layout_margin="10dp"
                                 android:background="@color/colorPrimary"
                                 android:padding="5dp"
                                 android:text="@string/pfi12h"
@@ -1772,7 +1743,6 @@
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:layout_margin="10dp"
                                 android:background="@color/colorPrimary"
                                 android:padding="5dp"
                                 android:text="@string/pfi12i"
@@ -1829,7 +1799,6 @@
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:layout_margin="10dp"
                                 android:background="@color/colorPrimary"
                                 android:padding="5dp"
                                 android:text="@string/pfi12j"
@@ -1886,7 +1855,6 @@
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:layout_margin="10dp"
                                 android:background="@color/colorPrimary"
                                 android:padding="5dp"
                                 android:text="@string/pfi12k"
@@ -1943,7 +1911,6 @@
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:layout_margin="10dp"
                                 android:background="@color/colorPrimary"
                                 android:padding="5dp"
                                 android:text="@string/pfi12l"
@@ -2000,7 +1967,6 @@
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:layout_margin="10dp"
                                 android:background="@color/colorPrimary"
                                 android:padding="5dp"
                                 android:text="@string/pfi12m"
@@ -2057,7 +2023,6 @@
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:layout_margin="10dp"
                                 android:background="@color/colorPrimary"
                                 android:padding="5dp"
                                 android:text="@string/pfi12n"
@@ -2114,7 +2079,6 @@
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:layout_margin="10dp"
                                 android:background="@color/colorPrimary"
                                 android:padding="5dp"
                                 android:text="@string/pfi12o"
@@ -2171,7 +2135,6 @@
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:layout_margin="10dp"
                                 android:background="@color/colorPrimary"
                                 android:padding="5dp"
                                 android:text="@string/pfi12p"
@@ -2228,7 +2191,6 @@
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:layout_margin="10dp"
                                 android:background="@color/colorPrimary"
                                 android:padding="5dp"
                                 android:text="@string/pfi12q"
@@ -2290,7 +2252,6 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_margin="10dp"
                         android:background="@color/colorPrimaryDark"
                         android:padding="5dp"
                         android:text="@string/pfi13"
@@ -2348,7 +2309,6 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_margin="10dp"
                         android:background="@color/colorPrimaryDark"
                         android:padding="5dp"
                         android:text="@string/pfi14"
@@ -2391,7 +2351,6 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_margin="10dp"
                         android:background="@color/colorPrimaryDark"
                         android:padding="5dp"
                         android:text="@string/pfi15"
@@ -2456,7 +2415,6 @@
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_margin="10dp"
                             android:background="@color/colorPrimaryDark"
                             android:padding="5dp"
                             android:text="@string/pfi16"
@@ -2533,7 +2491,6 @@
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_margin="10dp"
                             android:background="@color/colorPrimaryDark"
                             android:padding="5dp"
                             android:text="@string/pfi17"
@@ -2609,7 +2566,6 @@
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_margin="10dp"
                             android:background="@color/colorPrimaryDark"
                             android:padding="5dp"
                             android:text="@string/pfi18"
