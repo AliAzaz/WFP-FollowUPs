@@ -236,13 +236,13 @@ public class SectionDActivity extends AppCompatActivity {
         sD.put("pfd1196x", bi.pfd1196x.getText().toString());
         sD.put("pfd1198", bi.pfd1198.isChecked() ? "98" : "0");
         sD.put("pfd12a", bi.pfd12a.isChecked() ? "1" : "0");
-        sD.put("pfd12b", bi.pfd12b.isChecked() ? "1" : "0");
-        sD.put("pfd12c", bi.pfd12c.isChecked() ? "1" : "0");
-        sD.put("pfd12d", bi.pfd12d.isChecked() ? "1" : "0");
-        sD.put("pfd12e", bi.pfd12e.isChecked() ? "1" : "0");
-        sD.put("pfd12f", bi.pfd12f.isChecked() ? "1" : "0");
-        sD.put("pfd12g", bi.pfd12g.isChecked() ? "1" : "0");
-        sD.put("pfd1296", bi.pfd1296.isChecked() ? "1" : "0");
+        sD.put("pfd12b", bi.pfd12b.isChecked() ? "2" : "0");
+        sD.put("pfd12c", bi.pfd12c.isChecked() ? "3" : "0");
+        sD.put("pfd12d", bi.pfd12d.isChecked() ? "4" : "0");
+        sD.put("pfd12e", bi.pfd12e.isChecked() ? "5" : "0");
+        sD.put("pfd12f", bi.pfd12f.isChecked() ? "6" : "0");
+        sD.put("pfd12g", bi.pfd12g.isChecked() ? "7" : "0");
+        sD.put("pfd1296", bi.pfd1296.isChecked() ? "96" : "0");
         sD.put("pfd1196x", bi.pfd1196x.getText().toString());
 
         AppMain.fc.setsD(String.valueOf(sD));
