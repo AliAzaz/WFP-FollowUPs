@@ -37,36 +37,49 @@
                 android:layout_height="wrap_content">
 
                 <RadioButton
+                    android:layout_marginBottom="1dp"
+                    android:layout_weight="1"
                     android:id="@+id/mp08a01401"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/mp08a01401" />
 
                 <RadioButton
+                    android:layout_marginBottom="1dp"
+                    android:layout_weight="1"
                     android:id="@+id/mp08a01402"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/mp08a01402" />
 
+
                 <RadioButton
+                    android:layout_marginBottom="1dp"
+                    android:layout_weight="1"
                     android:id="@+id/mp08a01403"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/mp08a01403" />
 
                 <RadioButton
+                    android:layout_marginBottom="1dp"
+                    android:layout_weight="1"
                     android:id="@+id/mp08a01404"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/mp08a01404" />
 
                 <RadioButton
+                    android:layout_marginBottom="1dp"
+                    android:layout_weight="1"
                     android:id="@+id/mp08a01405"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/mp08a01405" />
 
                 <RadioButton
+                    android:layout_marginBottom="1dp"
+                    android:layout_weight="1"
                     android:id="@+id/mp08a01406"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
