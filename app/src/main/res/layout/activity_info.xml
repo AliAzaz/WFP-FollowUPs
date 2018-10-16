@@ -19,9 +19,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layoutDirection="rtl"
-            android:orientation="vertical"
-            android:paddingEnd="16dp"
-            android:paddingRight="14dp">
+            android:orientation="vertical">
 
 
             <TextView
@@ -203,7 +201,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="end"
-                    android:layout_marginTop="40dp"
+                    android:layout_marginTop="20dp"
                     android:orientation="horizontal">
 
 

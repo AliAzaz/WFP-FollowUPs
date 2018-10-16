@@ -21,8 +21,8 @@
             android:animateLayoutChanges="true"
             android:layoutDirection="rtl"
             android:orientation="vertical"
-            android:paddingEnd="16dp"
-            android:paddingRight="14dp">
+
+            >
 
             <!--&lt;!&ndash;Q1&ndash;&gt;-->
             <!--<android.support.v7.widget.CardView-->
@@ -707,7 +707,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="end"
-                android:layout_marginTop="80dp"
+                android:layout_marginTop="20dp"
                 android:orientation="horizontal">
 
                 <Button
