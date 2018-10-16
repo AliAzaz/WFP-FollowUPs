@@ -47,6 +47,7 @@
     <string name="not_applicable">Not Applicable</string>
     <string name="reason">وجہ</string>
     <string name="pw_name">حاملہ خاتون کا نام </string>
+    <string name="pw_detail"> حاملہ خاتون کی تفصیل </string>
 
 
     <!-- Strings related to Sections Below -->

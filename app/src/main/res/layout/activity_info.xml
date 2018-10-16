@@ -66,10 +66,10 @@
             </LinearLayout>
 
             <LinearLayout
-                android:animateLayoutChanges="true"
                 android:id="@+id/fldGrpParticipant"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:animateLayoutChanges="true"
                 android:orientation="vertical"
                 android:visibility="gone"
                 tools:visibility="visible">
@@ -79,7 +79,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="16dp"
                     android:background="@color/colorPrimary"
-                    android:text="@string/pw_name"
+                    android:text="@string/pw_detail"
                     android:textAppearance="?android:attr/textAppearanceLarge"
                     android:textColor="@android:color/white" />
 
@@ -90,28 +90,21 @@
                     android:layout_height="wrap_content"
                     android:enabled="false"
                     android:hint="@string/pw_name"
-                    android:inputType="text" />
+                    android:inputType="text"
+                    android:visibility="gone" />
 
                 <!--View Data-->
-                <LinearLayout
-                    android:id="@+id/fldgrppfa01"
-                    android:layout_width="match_parent"
+                <include
+                    android:id="@+id/viewGroup01"
+                    layout="@layout/participant_card"
+                    android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:layoutDirection="ltr"
-                    android:visibility="gone">
-
-                    <include
-                        layout="@layout/participant_card"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content" />
-
-                </LinearLayout>
+                    android:layout_marginTop="10dp" />
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="16dp"
+                    android:layout_marginTop="10dp"
                     android:background="@color/colorPrimary"
                     android:text="@string/pfa04"
                     android:textAppearance="?android:attr/textAppearanceLarge"

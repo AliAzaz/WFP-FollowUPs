@@ -72,6 +72,9 @@ public class InfoActivity extends Activity {
 
         bi = DataBindingUtil.setContentView(this, R.layout.activity_info);
         bi.setCallback(this);
+
+//        bi.fldgrppfa01.
+
         this.setTitle(R.string.pfaheading);
         db = new DatabaseHelper(this);
 
@@ -135,7 +138,7 @@ public class InfoActivity extends Activity {
                 if (days > -8 && days < 8) {
                     Toast.makeText(getApplicationContext(), "Participant found", Toast.LENGTH_LONG).show();
 
-                    bi.pfa01.setText(enrolledParticipant.getPw_name());
+                    plwData();
 
                     bi.fldGrpParticipant.setVisibility(View.VISIBLE);
 
@@ -156,13 +159,13 @@ public class InfoActivity extends Activity {
             }
         }
 
-
     }
 
-    public boolean checkFollowUp() {
-
-
-        return true;
+    public void plwData() {
+        bi.viewGroup01.pwName.setText(enrolledParticipant.getPw_name());
+        bi.viewGroup01.hName.setText(enrolledParticipant.getH_name());
+        bi.viewGroup01.fupround.setText(enrolledParticipant.getFupround());
+        bi.viewGroup01.fupdate.setText(enrolledParticipant.getFupdt());
     }
 
 
