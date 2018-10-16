@@ -1057,8 +1057,7 @@
                         android:layout_height="wrap_content"
                         android:layout_margin="10dp"
                         android:hint="@string/other"
-                        android:text='@{pff0996a.checked ? pff0996x.getText.toString : "" }'
-                        android:visibility='@{pff0996a.checked? View.VISIBLE : View.GONE}' />
+                        android:visibility="gone" />
 
                     <CheckBox
                         android:id="@+id/pff0998"

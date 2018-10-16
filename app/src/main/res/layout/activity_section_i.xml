@@ -47,17 +47,18 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layoutDirection="rtl"
-                        android:orientation="vertical"
-                        android:padding="16dp">
+                        android:orientation="vertical">
 
                         <RadioButton
+                            android:layout_marginBottom="1dp"
+                            android:layout_weight="1"
                             android:id="@+id/pfi01a"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_weight="1"
                             android:text="@string/yes" />
 
                         <RadioButton
+                            android:layout_marginBottom="1dp"
                             android:id="@+id/pfi01b"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -65,6 +66,7 @@
                             android:text="@string/no" />
 
                         <RadioButton
+                            android:layout_marginBottom="1dp"
                             android:id="@+id/pfi0198"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -110,10 +112,10 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layoutDirection="rtl"
-                            android:orientation="vertical"
-                            android:padding="16dp">
+                            android:orientation="vertical">
 
                             <RadioButton
+                                android:layout_marginBottom="1dp"
                                 android:id="@+id/pfi02a"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
@@ -121,6 +123,7 @@
                                 android:text="@string/pfi02a" />
 
                             <RadioButton
+                                android:layout_marginBottom="1dp"
                                 android:id="@+id/pfi02h"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
@@ -137,6 +140,7 @@
                                 android:visibility='@{pfi02h.checked? View.VISIBLE : View.GONE}' />
 
                             <RadioButton
+                                android:layout_marginBottom="1dp"
                                 android:id="@+id/pfi02d"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
@@ -184,10 +188,10 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layoutDirection="rtl"
-                            android:orientation="vertical"
-                            android:padding="16dp">
+                            android:orientation="vertical">
 
                             <RadioButton
+                                android:layout_marginBottom="1dp"
                                 android:id="@+id/pfi03a"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
@@ -195,6 +199,7 @@
                                 android:text="@string/yes" />
 
                             <RadioButton
+                                android:layout_marginBottom="1dp"
                                 android:id="@+id/pfi03b"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
@@ -202,6 +207,7 @@
                                 android:text="@string/no" />
 
                             <RadioButton
+                                android:layout_marginBottom="1dp"
                                 android:id="@+id/pfi0398"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
@@ -240,10 +246,10 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layoutDirection="rtl"
-                            android:orientation="vertical"
-                            android:padding="16dp">
+                            android:orientation="vertical">
 
                             <RadioButton
+                                android:layout_marginBottom="1dp"
                                 android:id="@+id/pfi04a"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
@@ -251,6 +257,7 @@
                                 android:text="@string/pfi04a" />
 
                             <RadioButton
+                                android:layout_marginBottom="1dp"
                                 android:id="@+id/pfi04b"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
@@ -258,6 +265,7 @@
                                 android:text="@string/pfi04b" />
 
                             <RadioButton
+                                android:layout_marginBottom="1dp"
                                 android:id="@+id/pfi04c"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
@@ -265,6 +273,7 @@
                                 android:text="@string/pfi04c" />
 
                             <RadioButton
+                                android:layout_marginBottom="1dp"
                                 android:id="@+id/pfi0496"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
@@ -314,10 +323,10 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layoutDirection="rtl"
-                            android:orientation="vertical"
-                            android:padding="16dp">
+                            android:orientation="vertical">
 
                             <RadioButton
+                                android:layout_marginBottom="1dp"
                                 android:id="@+id/pfi05a"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
@@ -325,6 +334,7 @@
                                 android:text="@string/yes" />
 
                             <RadioButton
+                                android:layout_marginBottom="1dp"
                                 android:id="@+id/pfi05b"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
@@ -361,66 +371,77 @@
                             android:textSize="25sp" />
 
                         <CheckBox
+                            android:layout_marginBottom="1dp"
                             android:id="@+id/pfi06a"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="@string/pfi06a" />
 
                         <CheckBox
+                            android:layout_marginBottom="1dp"
                             android:id="@+id/pfi06b"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="@string/pfi06b" />
 
                         <CheckBox
+                            android:layout_marginBottom="1dp"
                             android:id="@+id/pfi06c"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="@string/pfi06c" />
 
                         <CheckBox
+                            android:layout_marginBottom="1dp"
                             android:id="@+id/pfi06d"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="@string/pfi06d" />
 
                         <CheckBox
+                            android:layout_marginBottom="1dp"
                             android:id="@+id/pfi06e"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="@string/pfi06e" />
 
                         <CheckBox
+                            android:layout_marginBottom="1dp"
                             android:id="@+id/pfi06f"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="@string/pfi06f" />
 
                         <CheckBox
+                            android:layout_marginBottom="1dp"
                             android:id="@+id/pfi06g"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="@string/pfi06g" />
 
                         <CheckBox
+                            android:layout_marginBottom="1dp"
                             android:id="@+id/pfi06h"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="@string/pfi06h" />
 
                         <CheckBox
+                            android:layout_marginBottom="1dp"
                             android:id="@+id/pfi06i"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="@string/pfi06i" />
 
                         <CheckBox
+                            android:layout_marginBottom="1dp"
                             android:id="@+id/pfi06j"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="@string/pfi06j" />
 
                         <CheckBox
+                            android:layout_marginBottom="1dp"
                             android:id="@+id/pfi0696"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -436,6 +457,7 @@
                             android:visibility='@{pfi0696.checked? View.VISIBLE : View.GONE}' />
 
                         <CheckBox
+                            android:layout_marginBottom="1dp"
                             android:id="@+id/pfi0699"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -473,10 +495,10 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layoutDirection="rtl"
-                            android:orientation="vertical"
-                            android:padding="16dp">
+                            android:orientation="vertical">
 
                             <RadioButton
+                                android:layout_marginBottom="1dp"
                                 android:id="@+id/pfi07a"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
@@ -484,6 +506,7 @@
                                 android:text="@string/yes" />
 
                             <RadioButton
+                                android:layout_marginBottom="1dp"
                                 android:id="@+id/pfi07b"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
@@ -491,6 +514,7 @@
                                 android:text="@string/no" />
 
                             <RadioButton
+                                android:layout_marginBottom="1dp"
                                 android:id="@+id/pfi0798"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
@@ -531,10 +555,10 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layoutDirection="rtl"
-                        android:orientation="vertical"
-                        android:padding="16dp">
+                        android:orientation="vertical">
 
                         <RadioButton
+                            android:layout_marginBottom="1dp"
                             android:id="@+id/pfi0701a"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -542,6 +566,7 @@
                             android:text="@string/yes" />
 
                         <RadioButton
+                            android:layout_marginBottom="1dp"
                             android:id="@+id/pfi0701b"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -549,6 +574,7 @@
                             android:text="@string/no" />
 
                         <RadioButton
+                            android:layout_marginBottom="1dp"
                             android:id="@+id/pfi070198"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -586,10 +612,10 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layoutDirection="rtl"
-                        android:orientation="vertical"
-                        android:padding="16dp">
+                        android:orientation="vertical">
 
                         <RadioButton
+                            android:layout_marginBottom="1dp"
                             android:id="@+id/pfi08a"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -597,6 +623,7 @@
                             android:text="@string/yes" />
 
                         <RadioButton
+                            android:layout_marginBottom="1dp"
                             android:id="@+id/pfi08b"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -604,6 +631,7 @@
                             android:text="@string/no" />
 
                         <RadioButton
+                            android:layout_marginBottom="1dp"
                             android:id="@+id/pfi0898"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -641,10 +669,10 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layoutDirection="rtl"
-                        android:orientation="vertical"
-                        android:padding="16dp">
+                        android:orientation="vertical">
 
                         <RadioButton
+                            android:layout_marginBottom="1dp"
                             android:id="@+id/pfi09a"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -652,6 +680,7 @@
                             android:text="@string/yes" />
 
                         <RadioButton
+                            android:layout_marginBottom="1dp"
                             android:id="@+id/pfi09b"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -659,6 +688,7 @@
                             android:text="@string/no" />
 
                         <RadioButton
+                            android:layout_marginBottom="1dp"
                             android:id="@+id/pfi0998"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -728,10 +758,10 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layoutDirection="rtl"
-                                android:orientation="vertical"
-                                android:padding="16dp">
+                                android:orientation="vertical">
 
                                 <RadioButton
+                                    android:layout_marginBottom="1dp"
                                     android:id="@+id/pfi10a01"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
@@ -739,6 +769,7 @@
                                     android:text="@string/yes" />
 
                                 <RadioButton
+                                    android:layout_marginBottom="1dp"
                                     android:id="@+id/pfi10a02"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
@@ -746,6 +777,7 @@
                                     android:text="@string/no" />
 
                                 <RadioButton
+                                    android:layout_marginBottom="1dp"
                                     android:id="@+id/pfi10a98"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
@@ -783,10 +815,10 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layoutDirection="rtl"
-                                android:orientation="vertical"
-                                android:padding="16dp">
+                                android:orientation="vertical">
 
                                 <RadioButton
+                                    android:layout_marginBottom="1dp"
                                     android:id="@+id/pfi10b01"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
@@ -794,6 +826,7 @@
                                     android:text="@string/yes" />
 
                                 <EditText
+                                    android:hint="@string/pfi10b"
                                     style="@style/textInput"
                                     android:id="@+id/pfi10bx"
                                     android:layout_width="match_parent"
@@ -802,6 +835,7 @@
                                     android:visibility='@{pfi10b01.checked? View.VISIBLE : View.GONE}' />
 
                                 <RadioButton
+                                    android:layout_marginBottom="1dp"
                                     android:id="@+id/pfi10b02"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
@@ -809,6 +843,7 @@
                                     android:text="@string/no" />
 
                                 <RadioButton
+                                    android:layout_marginBottom="1dp"
                                     android:id="@+id/pfi10b98"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
@@ -846,10 +881,10 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layoutDirection="rtl"
-                                android:orientation="vertical"
-                                android:padding="16dp">
+                                android:orientation="vertical">
 
                                 <RadioButton
+                                    android:layout_marginBottom="1dp"
                                     android:id="@+id/pfi10c01"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
@@ -858,6 +893,7 @@
 
 
                                 <EditText
+                                    android:hint="نام"
                                     style="@style/textInput"
                                     android:id="@+id/pfi10c01x"
                                     android:layout_width="match_parent"
@@ -866,6 +902,7 @@
                                     android:visibility='@{pfi10c01.checked? View.VISIBLE : View.GONE}' />
 
                                 <RadioButton
+                                    android:layout_marginBottom="1dp"
                                     android:id="@+id/pfi10c02"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
@@ -873,6 +910,7 @@
                                     android:text="@string/no" />
 
                                 <RadioButton
+                                    android:layout_marginBottom="1dp"
                                     android:id="@+id/pfi10c98"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
@@ -910,10 +948,10 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layoutDirection="rtl"
-                                android:orientation="vertical"
-                                android:padding="16dp">
+                                android:orientation="vertical">
 
                                 <RadioButton
+                                    android:layout_marginBottom="1dp"
                                     android:id="@+id/pfi10d01"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
@@ -921,6 +959,7 @@
                                     android:text="@string/yes" />
 
                                 <RadioButton
+                                    android:layout_marginBottom="1dp"
                                     android:id="@+id/pfi10d02"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
@@ -928,6 +967,7 @@
                                     android:text="@string/no" />
 
                                 <RadioButton
+                                    android:layout_marginBottom="1dp"
                                     android:id="@+id/pfi10d98"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
@@ -965,10 +1005,10 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layoutDirection="rtl"
-                                android:orientation="vertical"
-                                android:padding="16dp">
+                                android:orientation="vertical">
 
                                 <RadioButton
+                                    android:layout_marginBottom="1dp"
                                     android:id="@+id/pfi10e01"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
@@ -976,6 +1016,7 @@
                                     android:text="@string/yes" />
 
                                 <RadioButton
+                                    android:layout_marginBottom="1dp"
                                     android:id="@+id/pfi10e02"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
@@ -983,6 +1024,7 @@
                                     android:text="@string/no" />
 
                                 <RadioButton
+                                    android:layout_marginBottom="1dp"
                                     android:id="@+id/pfi10e98"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
@@ -1020,10 +1062,10 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layoutDirection="rtl"
-                                android:orientation="vertical"
-                                android:padding="16dp">
+                                android:orientation="vertical">
 
                                 <RadioButton
+                                    android:layout_marginBottom="1dp"
                                     android:id="@+id/pfi10f01"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
@@ -1031,6 +1073,7 @@
                                     android:text="@string/yes" />
 
                                 <EditText
+                                    android:hint="نام"
                                     style="@style/textInput"
                                     android:id="@+id/pfi10f01x"
                                     android:layout_width="match_parent"
@@ -1039,6 +1082,7 @@
                                     android:visibility='@{pfi10f01.checked? View.VISIBLE : View.GONE}' />
 
                                 <RadioButton
+                                    android:layout_marginBottom="1dp"
                                     android:id="@+id/pfi10f02"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
@@ -1046,6 +1090,7 @@
                                     android:text="@string/no" />
 
                                 <RadioButton
+                                    android:layout_marginBottom="1dp"
                                     android:id="@+id/pfi10f98"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
@@ -1083,10 +1128,10 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layoutDirection="rtl"
-                                android:orientation="vertical"
-                                android:padding="16dp">
+                                android:orientation="vertical">
 
                                 <RadioButton
+                                    android:layout_marginBottom="1dp"
                                     android:id="@+id/pfi10g01"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
@@ -1094,6 +1139,7 @@
                                     android:text="@string/yes" />
 
                                 <RadioButton
+                                    android:layout_marginBottom="1dp"
                                     android:id="@+id/pfi10g02"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
@@ -1101,6 +1147,7 @@
                                     android:text="@string/no" />
 
                                 <RadioButton
+                                    android:layout_marginBottom="1dp"
                                     android:id="@+id/pfi10g98"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
@@ -1138,10 +1185,10 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layoutDirection="rtl"
-                                android:orientation="vertical"
-                                android:padding="16dp">
+                                android:orientation="vertical">
 
                                 <RadioButton
+                                    android:layout_marginBottom="1dp"
                                     android:id="@+id/pfi10h01"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
@@ -1149,6 +1196,7 @@
                                     android:text="@string/yes" />
 
                                 <RadioButton
+                                    android:layout_marginBottom="1dp"
                                     android:id="@+id/pfi10h02"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
@@ -1156,6 +1204,7 @@
                                     android:text="@string/no" />
 
                                 <RadioButton
+                                    android:layout_marginBottom="1dp"
                                     android:id="@+id/pfi10h98"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
@@ -1193,10 +1242,10 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layoutDirection="rtl"
-                                android:orientation="vertical"
-                                android:padding="16dp">
+                                android:orientation="vertical">
 
                                 <RadioButton
+                                    android:layout_marginBottom="1dp"
                                     android:id="@+id/pfi10i01"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
@@ -1204,6 +1253,7 @@
                                     android:text="@string/yes" />
 
                                 <RadioButton
+                                    android:layout_marginBottom="1dp"
                                     android:id="@+id/pfi10i02"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
@@ -1212,6 +1262,7 @@
                                     android:textSize="20sp" />
 
                                 <RadioButton
+                                    android:layout_marginBottom="1dp"
                                     android:id="@+id/pfi10i98"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
@@ -1276,10 +1327,10 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layoutDirection="rtl"
-                                android:orientation="vertical"
-                                android:padding="16dp">
+                                android:orientation="vertical">
 
                                 <RadioButton
+                                    android:layout_marginBottom="1dp"
                                     android:id="@+id/pfi12a01"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
@@ -1287,6 +1338,7 @@
                                     android:text="@string/yes" />
 
                                 <RadioButton
+                                    android:layout_marginBottom="1dp"
                                     android:id="@+id/pfi12a02"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
@@ -1294,6 +1346,7 @@
                                     android:text="@string/no" />
 
                                 <RadioButton
+                                    android:layout_marginBottom="1dp"
                                     android:id="@+id/pfi12a98"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
@@ -1331,10 +1384,10 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layoutDirection="rtl"
-                                android:orientation="vertical"
-                                android:padding="16dp">
+                                android:orientation="vertical">
 
                                 <RadioButton
+                                    android:layout_marginBottom="1dp"
                                     android:id="@+id/pfi12b01"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
@@ -1342,6 +1395,7 @@
                                     android:text="@string/yes" />
 
                                 <RadioButton
+                                    android:layout_marginBottom="1dp"
                                     android:id="@+id/pfi12b02"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
@@ -1349,6 +1403,7 @@
                                     android:text="@string/no" />
 
                                 <RadioButton
+                                    android:layout_marginBottom="1dp"
                                     android:id="@+id/pfi12b98"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
@@ -1386,10 +1441,10 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layoutDirection="rtl"
-                                android:orientation="vertical"
-                                android:padding="16dp">
+                                android:orientation="vertical">
 
                                 <RadioButton
+                                    android:layout_marginBottom="1dp"
                                     android:id="@+id/pfi12c01"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
@@ -1397,6 +1452,7 @@
                                     android:text="@string/yes" />
 
                                 <RadioButton
+                                    android:layout_marginBottom="1dp"
                                     android:id="@+id/pfi12c02"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
@@ -1404,6 +1460,7 @@
                                     android:text="@string/no" />
 
                                 <RadioButton
+                                    android:layout_marginBottom="1dp"
                                     android:id="@+id/pfi12c98"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
@@ -1441,10 +1498,10 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layoutDirection="rtl"
-                                android:orientation="vertical"
-                                android:padding="16dp">
+                                android:orientation="vertical">
 
                                 <RadioButton
+                                    android:layout_marginBottom="1dp"
                                     android:id="@+id/pfi12d01"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
@@ -1452,6 +1509,7 @@
                                     android:text="@string/yes" />
 
                                 <RadioButton
+                                    android:layout_marginBottom="1dp"
                                     android:id="@+id/pfi12d02"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
@@ -1460,6 +1518,7 @@
                                     android:textSize="20sp" />
 
                                 <RadioButton
+                                    android:layout_marginBottom="1dp"
                                     android:id="@+id/pfi12d98"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
@@ -1497,10 +1556,10 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layoutDirection="rtl"
-                                android:orientation="vertical"
-                                android:padding="16dp">
+                                android:orientation="vertical">
 
                                 <RadioButton
+                                    android:layout_marginBottom="1dp"
                                     android:id="@+id/pfi12e01"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
@@ -1508,6 +1567,7 @@
                                     android:text="@string/yes" />
 
                                 <RadioButton
+                                    android:layout_marginBottom="1dp"
                                     android:id="@+id/pfi12e02"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
@@ -1515,6 +1575,7 @@
                                     android:text="@string/no" />
 
                                 <RadioButton
+                                    android:layout_marginBottom="1dp"
                                     android:id="@+id/pfi12e98"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
@@ -1552,10 +1613,10 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layoutDirection="rtl"
-                                android:orientation="vertical"
-                                android:padding="16dp">
+                                android:orientation="vertical">
 
                                 <RadioButton
+                                    android:layout_marginBottom="1dp"
                                     android:id="@+id/pfi12f01"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
@@ -1563,6 +1624,7 @@
                                     android:text="@string/yes" />
 
                                 <RadioButton
+                                    android:layout_marginBottom="1dp"
                                     android:id="@+id/pfi12f02"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
@@ -1570,6 +1632,7 @@
                                     android:text="@string/no" />
 
                                 <RadioButton
+                                    android:layout_marginBottom="1dp"
                                     android:id="@+id/pfi12f98"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
@@ -1607,10 +1670,10 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layoutDirection="rtl"
-                                android:orientation="vertical"
-                                android:padding="16dp">
+                                android:orientation="vertical">
 
                                 <RadioButton
+                                    android:layout_marginBottom="1dp"
                                     android:id="@+id/pfi12g01"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
@@ -1618,6 +1681,7 @@
                                     android:text="@string/yes" />
 
                                 <RadioButton
+                                    android:layout_marginBottom="1dp"
                                     android:id="@+id/pfi12g02"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
@@ -1625,6 +1689,7 @@
                                     android:text="@string/no" />
 
                                 <RadioButton
+                                    android:layout_marginBottom="1dp"
                                     android:id="@+id/pfi12g98"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
@@ -1662,10 +1727,10 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layoutDirection="rtl"
-                                android:orientation="vertical"
-                                android:padding="16dp">
+                                android:orientation="vertical">
 
                                 <RadioButton
+                                    android:layout_marginBottom="1dp"
                                     android:id="@+id/pfi12h01"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
@@ -1673,6 +1738,7 @@
                                     android:text="@string/yes" />
 
                                 <RadioButton
+                                    android:layout_marginBottom="1dp"
                                     android:id="@+id/pfi12h02"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
@@ -1680,6 +1746,7 @@
                                     android:text="@string/no" />
 
                                 <RadioButton
+                                    android:layout_marginBottom="1dp"
                                     android:id="@+id/pfi12h98"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
@@ -1717,10 +1784,10 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layoutDirection="rtl"
-                                android:orientation="vertical"
-                                android:padding="16dp">
+                                android:orientation="vertical">
 
                                 <RadioButton
+                                    android:layout_marginBottom="1dp"
                                     android:id="@+id/pfi12i01"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
@@ -1728,6 +1795,7 @@
                                     android:text="@string/yes" />
 
                                 <RadioButton
+                                    android:layout_marginBottom="1dp"
                                     android:id="@+id/pfi12i02"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
@@ -1735,6 +1803,7 @@
                                     android:text="@string/no" />
 
                                 <RadioButton
+                                    android:layout_marginBottom="1dp"
                                     android:id="@+id/pfi12i98"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
@@ -1772,10 +1841,10 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layoutDirection="rtl"
-                                android:orientation="vertical"
-                                android:padding="16dp">
+                                android:orientation="vertical">
 
                                 <RadioButton
+                                    android:layout_marginBottom="1dp"
                                     android:id="@+id/pfi12j01"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
@@ -1783,6 +1852,7 @@
                                     android:text="@string/yes" />
 
                                 <RadioButton
+                                    android:layout_marginBottom="1dp"
                                     android:id="@+id/pfi12j02"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
@@ -1790,6 +1860,7 @@
                                     android:text="@string/no" />
 
                                 <RadioButton
+                                    android:layout_marginBottom="1dp"
                                     android:id="@+id/pfi12j98"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
@@ -1827,10 +1898,10 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layoutDirection="rtl"
-                                android:orientation="vertical"
-                                android:padding="16dp">
+                                android:orientation="vertical">
 
                                 <RadioButton
+                                    android:layout_marginBottom="1dp"
                                     android:id="@+id/pfi12k01"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
@@ -1838,6 +1909,7 @@
                                     android:text="@string/yes" />
 
                                 <RadioButton
+                                    android:layout_marginBottom="1dp"
                                     android:id="@+id/pfi12k02"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
@@ -1845,6 +1917,7 @@
                                     android:text="@string/no" />
 
                                 <RadioButton
+                                    android:layout_marginBottom="1dp"
                                     android:id="@+id/pfi12k98"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
@@ -1882,10 +1955,10 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layoutDirection="rtl"
-                                android:orientation="vertical"
-                                android:padding="16dp">
+                                android:orientation="vertical">
 
                                 <RadioButton
+                                    android:layout_marginBottom="1dp"
                                     android:id="@+id/pfi12l01"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
@@ -1893,6 +1966,7 @@
                                     android:text="@string/yes" />
 
                                 <RadioButton
+                                    android:layout_marginBottom="1dp"
                                     android:id="@+id/pfi12l02"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
@@ -1900,6 +1974,7 @@
                                     android:text="@string/no" />
 
                                 <RadioButton
+                                    android:layout_marginBottom="1dp"
                                     android:id="@+id/pfi12l98"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
@@ -1937,10 +2012,10 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layoutDirection="rtl"
-                                android:orientation="vertical"
-                                android:padding="16dp">
+                                android:orientation="vertical">
 
                                 <RadioButton
+                                    android:layout_marginBottom="1dp"
                                     android:id="@+id/pfi12m01"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
@@ -1948,6 +2023,7 @@
                                     android:text="@string/yes" />
 
                                 <RadioButton
+                                    android:layout_marginBottom="1dp"
                                     android:id="@+id/pfi12m02"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
@@ -1955,6 +2031,7 @@
                                     android:text="@string/no" />
 
                                 <RadioButton
+                                    android:layout_marginBottom="1dp"
                                     android:id="@+id/pfi12m98"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
@@ -1992,10 +2069,10 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layoutDirection="rtl"
-                                android:orientation="vertical"
-                                android:padding="16dp">
+                                android:orientation="vertical">
 
                                 <RadioButton
+                                    android:layout_marginBottom="1dp"
                                     android:id="@+id/pfi12n01"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
@@ -2003,6 +2080,7 @@
                                     android:text="@string/yes" />
 
                                 <RadioButton
+                                    android:layout_marginBottom="1dp"
                                     android:id="@+id/pfi12n02"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
@@ -2010,6 +2088,7 @@
                                     android:text="@string/no" />
 
                                 <RadioButton
+                                    android:layout_marginBottom="1dp"
                                     android:id="@+id/pfi12n98"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
@@ -2047,10 +2126,10 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layoutDirection="rtl"
-                                android:orientation="vertical"
-                                android:padding="16dp">
+                                android:orientation="vertical">
 
                                 <RadioButton
+                                    android:layout_marginBottom="1dp"
                                     android:id="@+id/pfi12o01"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
@@ -2058,6 +2137,7 @@
                                     android:text="@string/yes" />
 
                                 <RadioButton
+                                    android:layout_marginBottom="1dp"
                                     android:id="@+id/pfi12o02"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
@@ -2065,6 +2145,7 @@
                                     android:text="@string/no" />
 
                                 <RadioButton
+                                    android:layout_marginBottom="1dp"
                                     android:id="@+id/pfi12o98"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
@@ -2102,10 +2183,10 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layoutDirection="rtl"
-                                android:orientation="vertical"
-                                android:padding="16dp">
+                                android:orientation="vertical">
 
                                 <RadioButton
+                                    android:layout_marginBottom="1dp"
                                     android:id="@+id/pfi12p01"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
@@ -2113,6 +2194,7 @@
                                     android:text="@string/yes" />
 
                                 <RadioButton
+                                    android:layout_marginBottom="1dp"
                                     android:id="@+id/pfi12p02"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
@@ -2120,6 +2202,7 @@
                                     android:text="@string/no" />
 
                                 <RadioButton
+                                    android:layout_marginBottom="1dp"
                                     android:id="@+id/pfi12p98"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
@@ -2157,10 +2240,10 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layoutDirection="rtl"
-                                android:orientation="vertical"
-                                android:padding="16dp">
+                                android:orientation="vertical">
 
                                 <RadioButton
+                                    android:layout_marginBottom="1dp"
                                     android:id="@+id/pfi12q01"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
@@ -2168,6 +2251,7 @@
                                     android:text="@string/yes" />
 
                                 <RadioButton
+                                    android:layout_marginBottom="1dp"
                                     android:id="@+id/pfi12q02"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
@@ -2175,6 +2259,7 @@
                                     android:text="@string/no" />
 
                                 <RadioButton
+                                    android:layout_marginBottom="1dp"
                                     android:id="@+id/pfi12q98"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
@@ -2217,10 +2302,10 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layoutDirection="rtl"
-                        android:orientation="vertical"
-                        android:padding="16dp">
+                        android:orientation="vertical">
 
                         <RadioButton
+                            android:layout_marginBottom="1dp"
                             android:id="@+id/pfi13a"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -2228,6 +2313,7 @@
                             android:text="@string/yes" />
 
                         <RadioButton
+                            android:layout_marginBottom="1dp"
                             android:id="@+id/pfi13b"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -2235,6 +2321,7 @@
                             android:text="@string/no" />
 
                         <RadioButton
+                            android:layout_marginBottom="1dp"
                             android:id="@+id/pfi1398"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -2276,6 +2363,7 @@
                         android:text="@string/dkn" />
 
                     <EditText
+                        android:hint="@string/pfi14"
                         style="@style/textInput"
                         android:id="@+id/pfi14t"
                         android:layout_width="match_parent"
@@ -2315,10 +2403,10 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layoutDirection="rtl"
-                        android:orientation="vertical"
-                        android:padding="16dp">
+                        android:orientation="vertical">
 
                         <RadioButton
+                            android:layout_marginBottom="1dp"
                             android:id="@+id/pfi15a"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -2326,6 +2414,7 @@
                             android:text="@string/yes" />
 
                         <RadioButton
+                            android:layout_marginBottom="1dp"
                             android:id="@+id/pfi15b"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -2333,6 +2422,7 @@
                             android:text="@string/no" />
 
                         <RadioButton
+                            android:layout_marginBottom="1dp"
                             android:id="@+id/pfi1598"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -2378,10 +2468,10 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layoutDirection="rtl"
-                            android:orientation="vertical"
-                            android:padding="16dp">
+                            android:orientation="vertical">
 
                             <RadioButton
+                                android:layout_marginBottom="1dp"
                                 android:id="@+id/pfi16a"
                                 style="@style/radiobutton"
                                 android:layout_width="match_parent"
@@ -2390,6 +2480,7 @@
                                 android:text="@string/pfi16a" />
 
                             <RadioButton
+                                android:layout_marginBottom="1dp"
                                 android:id="@+id/pfi16b"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
@@ -2397,6 +2488,7 @@
                                 android:text="@string/pfi16b" />
 
                             <RadioButton
+                                android:layout_marginBottom="1dp"
                                 android:id="@+id/pfi16c"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
@@ -2404,6 +2496,7 @@
                                 android:text="@string/pfi16c" />
 
                             <RadioButton
+                                android:layout_marginBottom="1dp"
                                 android:id="@+id/pfi1696"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
@@ -2452,10 +2545,10 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layoutDirection="rtl"
-                            android:orientation="vertical"
-                            android:padding="17dp">
+                            android:orientation="vertical">
 
                             <RadioButton
+                                android:layout_marginBottom="1dp"
                                 android:id="@+id/pfi17a"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
@@ -2463,6 +2556,7 @@
                                 android:text="@string/pfi17a" />
 
                             <RadioButton
+                                android:layout_marginBottom="1dp"
                                 android:id="@+id/pfi17b"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
@@ -2470,6 +2564,7 @@
                                 android:text="@string/pfi17b" />
 
                             <RadioButton
+                                android:layout_marginBottom="1dp"
                                 android:id="@+id/pfi17c"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
@@ -2477,6 +2572,7 @@
                                 android:text="@string/pfi17c" />
 
                             <RadioButton
+                                android:layout_marginBottom="1dp"
                                 android:id="@+id/pfi1796"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
@@ -2525,10 +2621,10 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layoutDirection="rtl"
-                            android:orientation="vertical"
-                            android:padding="16dp">
+                            android:orientation="vertical">
 
                             <RadioButton
+                                android:layout_marginBottom="1dp"
                                 android:id="@+id/pfi18a"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
@@ -2536,6 +2632,7 @@
                                 android:text="@string/yes" />
 
                             <RadioButton
+                                android:layout_marginBottom="1dp"
                                 android:id="@+id/pfi18b"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
@@ -2543,6 +2640,7 @@
                                 android:text="@string/no" />
 
                             <RadioButton
+                                android:layout_marginBottom="1dp"
                                 android:id="@+id/pfi1898"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"

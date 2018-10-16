@@ -112,6 +112,176 @@ public class SectionFActivity extends AppCompatActivity {
             }
         });
 
+        bi.pff0901.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup radioGroup, int i) {
+
+                if (i == R.id.pff0901a || i == R.id.pff0901b) {
+                    bi.pff0998.setChecked(false);
+                } else {
+                    bi.pff0998.setChecked(true);
+                }
+            }
+        });
+        bi.pff0902.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup radioGroup, int i) {
+
+                if (i == R.id.pff0902a || i == R.id.pff0902b) {
+                    bi.pff0998.setChecked(false);
+                } else {
+                    bi.pff0998.setChecked(true);
+                }
+            }
+        });
+        bi.pff0903.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup radioGroup, int i) {
+
+                if (i == R.id.pff0903a || i == R.id.pff0903b) {
+                    bi.pff0998.setChecked(false);
+                } else {
+                    bi.pff0998.setChecked(true);
+                }
+            }
+        });
+        bi.pff0904.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup radioGroup, int i) {
+
+                if (i == R.id.pff0904a || i == R.id.pff0904b) {
+                    bi.pff0998.setChecked(false);
+                } else {
+                    bi.pff0998.setChecked(true);
+                }
+            }
+        });
+        bi.pff0905.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup radioGroup, int i) {
+
+                if (i == R.id.pff0905a || i == R.id.pff0905b) {
+                    bi.pff0998.setChecked(false);
+                } else {
+                    bi.pff0998.setChecked(true);
+                }
+            }
+        });
+        bi.pff0906.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup radioGroup, int i) {
+
+                if (i == R.id.pff0906a || i == R.id.pff0906b) {
+                    bi.pff0998.setChecked(false);
+                } else {
+                    bi.pff0998.setChecked(true);
+                }
+            }
+        });
+        bi.pff0907.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup radioGroup, int i) {
+
+                if (i == R.id.pff0907a || i == R.id.pff0907b) {
+                    bi.pff0998.setChecked(false);
+                } else {
+                    bi.pff0998.setChecked(true);
+                }
+            }
+        });
+        bi.pff0908.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup radioGroup, int i) {
+
+                if (i == R.id.pff0908a || i == R.id.pff0908b) {
+                    bi.pff0998.setChecked(false);
+                } else {
+                    bi.pff0998.setChecked(true);
+                }
+            }
+        });
+        bi.pff0909.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup radioGroup, int i) {
+
+                if (i == R.id.pff0909a || i == R.id.pff0909b) {
+                    bi.pff0998.setChecked(false);
+                } else {
+                    bi.pff0998.setChecked(true);
+                }
+            }
+        });
+        bi.pff0910.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup radioGroup, int i) {
+
+                if (i == R.id.pff0910a || i == R.id.pff0910b) {
+                    bi.pff0998.setChecked(false);
+                } else {
+                    bi.pff0998.setChecked(true);
+                }
+            }
+        });
+        bi.pff0911.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup radioGroup, int i) {
+
+                if (i == R.id.pff0911a || i == R.id.pff0911b) {
+                    bi.pff0998.setChecked(false);
+                } else {
+                    bi.pff0998.setChecked(true);
+                }
+            }
+        });
+        bi.pff0912.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup radioGroup, int i) {
+
+                if (i == R.id.pff0912a || i == R.id.pff0912b) {
+                    bi.pff0998.setChecked(false);
+                } else {
+                    bi.pff0998.setChecked(true);
+                }
+            }
+        });
+        bi.pff0913.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup radioGroup, int i) {
+
+                if (i == R.id.pff0913a || i == R.id.pff0913b) {
+                    bi.pff0998.setChecked(false);
+                } else {
+                    bi.pff0998.setChecked(true);
+                }
+            }
+        });
+        bi.pff0914.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup radioGroup, int i) {
+
+                if (i == R.id.pff0914a || i == R.id.pff0914b) {
+                    bi.pff0998.setChecked(false);
+                } else {
+                    bi.pff0998.setChecked(true);
+                }
+            }
+        });
+
+        bi.pff0996.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup radioGroup, int i) {
+
+                if (i == R.id.pff0996a) {
+                    bi.pff0996x.setVisibility(View.VISIBLE);
+                    bi.pff0998.setChecked(false);
+                } else {
+                    bi.pff0996x.setVisibility(View.GONE);
+                    bi.pff0996x.setText(null);
+                }
+            }
+        });
+
+
 
     }
 

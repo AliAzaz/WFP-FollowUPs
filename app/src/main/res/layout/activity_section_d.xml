@@ -550,51 +550,45 @@
                         android:layout_marginBottom="1dp"
                         android:text="@string/dkn" />
 
-                    <LinearLayout
-                        android:id="@+id/fldGrppfd11a"
+                    <CheckBox
+                        android:id="@+id/pfd11a"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="vertical">
+                        android:layout_marginBottom="1dp"
+                        android:text="@string/pfd11a" />
 
-                        <CheckBox
-                            android:id="@+id/pfd11a"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginBottom="1dp"
-                            android:text="@string/pfd11a" />
+                    <CheckBox
+                        android:id="@+id/pfd11b"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="1dp"
+                        android:text="@string/pfd11b" />
 
-                        <CheckBox
-                            android:id="@+id/pfd11b"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginBottom="1dp"
-                            android:text="@string/pfd11b" />
+                    <CheckBox
+                        android:id="@+id/pfd11c"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="1dp"
+                        android:text="@string/pfd11c" />
 
-                        <CheckBox
-                            android:id="@+id/pfd11c"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginBottom="1dp"
-                            android:text="@string/pfd11c" />
+                    <CheckBox
+                        android:id="@+id/pfd1196"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="1dp"
+                        android:text="@string/other" />
 
-                        <CheckBox
-                            android:id="@+id/pfd1196"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginBottom="1dp"
-                            android:text="@string/other" />
+                    <EditText
+                        android:id="@+id/pfd1196x"
+                        style="@style/textInput"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:hint="@string/other"
+                        android:inputType="text"
+                        android:text='@{pfd1196.checked ? pfd1196x.getText.toString : ""}'
+                        android:visibility="@{pfd1196.checked ? View.VISIBLE : View.GONE}" />
 
-                        <EditText
-                            android:id="@+id/pfd1196x"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_margin="10dp"
-                            android:hint="@string/other"
-                            android:inputType="text"
-                            android:text='@{pfd1196.checked ? pfd1196x.getText.toString : ""}'
-                            android:visibility="@{pfd1196.checked ? View.VISIBLE : View.GONE}" />
-
-                    </LinearLayout>
 
                 </LinearLayout>
             </android.support.v7.widget.CardView>

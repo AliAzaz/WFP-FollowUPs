@@ -162,9 +162,20 @@ public class SectionDActivity extends AppCompatActivity {
             @Override
             public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
                 if (b) {
-                    ClearClass.ClearAllFields(bi.fldGrppfd11a, false);
+                    bi.pfd11a.setChecked(false);
+                    bi.pfd11a.setEnabled(false);
+                    bi.pfd11b.setChecked(false);
+                    bi.pfd11b.setEnabled(false);
+                    bi.pfd11c.setChecked(false);
+                    bi.pfd11c.setEnabled(false);
+                    bi.pfd1196.setChecked(false);
+                    bi.pfd1196.setEnabled(false);
+                    bi.pfd1196x.setText(null);
                 } else {
-                    ClearClass.ClearAllFields(bi.fldGrppfd11a, true);
+                    bi.pfd11a.setEnabled(true);
+                    bi.pfd11b.setEnabled(true);
+                    bi.pfd11c.setEnabled(true);
+                    bi.pfd1196.setEnabled(true);
                 }
             }
         });
