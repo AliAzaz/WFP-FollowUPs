@@ -848,6 +848,7 @@ public class SectionIActivity extends AppCompatActivity {
                     return false;
                 }
             }
+
         }
         if (!validatorClass.EmptyRadioButton(this, bi.pfi15, bi.pfi15a, getString(R.string.pfi15))) {
             return false;
