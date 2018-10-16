@@ -542,7 +542,15 @@ public class SectionIActivity extends AppCompatActivity {
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
 
                 if (i != R.id.pfi13a) {
+                    bi.fldgrppfi14.setVisibility(View.GONE);
                     ClearClass.ClearAllFields(bi.fldgrppfi14, true);
+
+                } else {
+                    if (flag) {
+                        bi.fldgrppfi14.setVisibility(View.VISIBLE);
+                    }
+
+
                 }
             }
         });
