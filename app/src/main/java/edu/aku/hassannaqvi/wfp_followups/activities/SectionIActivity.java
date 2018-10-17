@@ -571,7 +571,7 @@ public class SectionIActivity extends AppCompatActivity {
         if (formValidate()) {
 
             try {
-                saveData();
+                saveDraft();
             } catch (JSONException e) {
                 e.printStackTrace();
             }
@@ -599,7 +599,7 @@ public class SectionIActivity extends AppCompatActivity {
         }
     }
 
-    public void saveData() throws JSONException {
+    public void saveDraft() throws JSONException {
 
         JSONObject sI = new JSONObject();
 
@@ -661,24 +661,14 @@ public class SectionIActivity extends AppCompatActivity {
         sI.put("pfi12o", bi.pfi12o01.isChecked() ? "1" : bi.pfi12o02.isChecked() ? "1" : bi.pfi12o98.isChecked() ? "98" : "0");
         sI.put("pfi12p", bi.pfi12p01.isChecked() ? "1" : bi.pfi12p02.isChecked() ? "1" : bi.pfi12p98.isChecked() ? "98" : "0");
         sI.put("pfi12q", bi.pfi12q01.isChecked() ? "1" : bi.pfi12q02.isChecked() ? "1" : bi.pfi12q98.isChecked() ? "98" : "0");
-
         sI.put("pfi13", bi.pfi13a.isChecked() ? "1" : bi.pfi13b.isChecked() ? "2" : bi.pfi1398.isChecked() ? "98" : "0");
         sI.put("pfi14", bi.pfi1498.isChecked() ? "98" : "0");
         sI.put("pfi14t", bi.pfi14t.getText().toString());
         sI.put("pfi15", bi.pfi15a.isChecked() ? "1" : bi.pfi15b.isChecked() ? "2" : bi.pfi1598.isChecked() ? "98" : "0");
-
-        sI.put("pfi16", bi.pfi16a.isChecked() ? "1" : bi.pfi16b.isChecked() ? "2"
-                : bi.pfi16c.isChecked() ? "3"
-                : bi.pfi1696.isChecked() ? "96"
-                : "0");
+        sI.put("pfi16", bi.pfi16a.isChecked() ? "1" : bi.pfi16b.isChecked() ? "2" : bi.pfi16c.isChecked() ? "3" : bi.pfi1696.isChecked() ? "96" : "0");
         sI.put("pfi1696x", bi.pfi1696x.getText().toString());
-
-        sI.put("pfi17", bi.pfi17a.isChecked() ? "1" : bi.pfi17b.isChecked() ? "2"
-                : bi.pfi17c.isChecked() ? "3"
-                : bi.pfi1796.isChecked() ? "96"
-                : "0");
+        sI.put("pfi17", bi.pfi17a.isChecked() ? "1" : bi.pfi17b.isChecked() ? "2" : bi.pfi17c.isChecked() ? "3" : bi.pfi1796.isChecked() ? "96" : "0");
         sI.put("pfi1796x", bi.pfi1796x.getText().toString());
-
         sI.put("pfi18", bi.pfi18a.isChecked() ? "1" : bi.pfi18b.isChecked() ? "1" : bi.pfi1898.isChecked() ? "98" : "0");
 
         AppMain.fc.setsI(String.valueOf(sI));
