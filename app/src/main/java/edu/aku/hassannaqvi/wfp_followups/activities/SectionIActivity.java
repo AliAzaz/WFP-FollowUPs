@@ -631,36 +631,36 @@ public class SectionIActivity extends AppCompatActivity {
         sI.put("pfi08", bi.pfi08a.isChecked() ? "1" : bi.pfi08b.isChecked() ? "2" : bi.pfi0898.isChecked() ? "98" : "0");
         sI.put("pfi09", bi.pfi09a.isChecked() ? "1" : bi.pfi09b.isChecked() ? "2" : bi.pfi0998.isChecked() ? "98" : "0");
 
-        sI.put("pfi10a", bi.pfi10a01.isChecked() ? "1" : bi.pfi10a02.isChecked() ? "1" : bi.pfi10a98.isChecked() ? "98" : "0");
-        sI.put("pfi10b", bi.pfi10b01.isChecked() ? "1" : bi.pfi10b02.isChecked() ? "1" : bi.pfi10b98.isChecked() ? "98" : "0");
+        sI.put("pfi10a", bi.pfi10a01.isChecked() ? "1" : bi.pfi10a02.isChecked() ? "2" : bi.pfi10a98.isChecked() ? "98" : "0");
+        sI.put("pfi10b", bi.pfi10b01.isChecked() ? "1" : bi.pfi10b02.isChecked() ? "2" : bi.pfi10b98.isChecked() ? "98" : "0");
         sI.put("pfi10bt", bi.pfi10bx.getText().toString());
-        sI.put("pfi10c", bi.pfi10c01.isChecked() ? "1" : bi.pfi10c02.isChecked() ? "1" : bi.pfi10c98.isChecked() ? "98" : "0");
+        sI.put("pfi10c", bi.pfi10c01.isChecked() ? "1" : bi.pfi10c02.isChecked() ? "2" : bi.pfi10c98.isChecked() ? "98" : "0");
         sI.put("pfi10ct", bi.pfi10c01x.getText().toString());
-        sI.put("pfi10d", bi.pfi10d01.isChecked() ? "1" : bi.pfi10d02.isChecked() ? "1" : bi.pfi10d98.isChecked() ? "98" : "0");
-        sI.put("pfi10e", bi.pfi10e01.isChecked() ? "1" : bi.pfi10e02.isChecked() ? "1" : bi.pfi10e98.isChecked() ? "98" : "0");
-        sI.put("pfi10f", bi.pfi10f01.isChecked() ? "1" : bi.pfi10f02.isChecked() ? "1" : bi.pfi10f98.isChecked() ? "98" : "0");
+        sI.put("pfi10d", bi.pfi10d01.isChecked() ? "1" : bi.pfi10d02.isChecked() ? "2" : bi.pfi10d98.isChecked() ? "98" : "0");
+        sI.put("pfi10e", bi.pfi10e01.isChecked() ? "1" : bi.pfi10e02.isChecked() ? "2" : bi.pfi10e98.isChecked() ? "98" : "0");
+        sI.put("pfi10f", bi.pfi10f01.isChecked() ? "1" : bi.pfi10f02.isChecked() ? "2" : bi.pfi10f98.isChecked() ? "98" : "0");
         sI.put("pfi10ft", bi.pfi10f01x.getText().toString());
-        sI.put("pfi10g", bi.pfi10g01.isChecked() ? "1" : bi.pfi10g02.isChecked() ? "1" : bi.pfi10g98.isChecked() ? "98" : "0");
-        sI.put("pfi10h", bi.pfi10h01.isChecked() ? "1" : bi.pfi10h02.isChecked() ? "1" : bi.pfi10h98.isChecked() ? "98" : "0");
-        sI.put("pfi10i", bi.pfi10i01.isChecked() ? "1" : bi.pfi10i02.isChecked() ? "1" : bi.pfi10i98.isChecked() ? "98" : "0");
+        sI.put("pfi10g", bi.pfi10g01.isChecked() ? "1" : bi.pfi10g02.isChecked() ? "2" : bi.pfi10g98.isChecked() ? "98" : "0");
+        sI.put("pfi10h", bi.pfi10h01.isChecked() ? "1" : bi.pfi10h02.isChecked() ? "2" : bi.pfi10h98.isChecked() ? "98" : "0");
+        sI.put("pfi10i", bi.pfi10i01.isChecked() ? "1" : bi.pfi10i02.isChecked() ? "2" : bi.pfi10i98.isChecked() ? "98" : "0");
 
-        sI.put("pfi12a", bi.pfi12a01.isChecked() ? "1" : bi.pfi12a02.isChecked() ? "1" : bi.pfi12a98.isChecked() ? "98" : "0");
-        sI.put("pfi12b", bi.pfi12b01.isChecked() ? "1" : bi.pfi12b02.isChecked() ? "1" : bi.pfi12b98.isChecked() ? "98" : "0");
-        sI.put("pfi12c", bi.pfi12c01.isChecked() ? "1" : bi.pfi12c02.isChecked() ? "1" : bi.pfi12c98.isChecked() ? "98" : "0");
-        sI.put("pfi12d", bi.pfi12d01.isChecked() ? "1" : bi.pfi12d02.isChecked() ? "1" : bi.pfi12d98.isChecked() ? "98" : "0");
-        sI.put("pfi12e", bi.pfi12e01.isChecked() ? "1" : bi.pfi12e02.isChecked() ? "1" : bi.pfi12e98.isChecked() ? "98" : "0");
-        sI.put("pfi12f", bi.pfi12f01.isChecked() ? "1" : bi.pfi12f02.isChecked() ? "1" : bi.pfi12f98.isChecked() ? "98" : "0");
-        sI.put("pfi12g", bi.pfi12g01.isChecked() ? "1" : bi.pfi12g02.isChecked() ? "1" : bi.pfi12g98.isChecked() ? "98" : "0");
-        sI.put("pfi12h", bi.pfi12h01.isChecked() ? "1" : bi.pfi12h02.isChecked() ? "1" : bi.pfi12h98.isChecked() ? "98" : "0");
-        sI.put("pfi12i", bi.pfi12i01.isChecked() ? "1" : bi.pfi12i02.isChecked() ? "1" : bi.pfi12i98.isChecked() ? "98" : "0");
-        sI.put("pfi12j", bi.pfi12j01.isChecked() ? "1" : bi.pfi12j02.isChecked() ? "1" : bi.pfi12j98.isChecked() ? "98" : "0");
-        sI.put("pfi12k", bi.pfi12k01.isChecked() ? "1" : bi.pfi12k02.isChecked() ? "1" : bi.pfi12k98.isChecked() ? "98" : "0");
-        sI.put("pfi12l", bi.pfi12l01.isChecked() ? "1" : bi.pfi12l02.isChecked() ? "1" : bi.pfi12l98.isChecked() ? "98" : "0");
-        sI.put("pfi12m", bi.pfi12m01.isChecked() ? "1" : bi.pfi12m02.isChecked() ? "1" : bi.pfi12m98.isChecked() ? "98" : "0");
-        sI.put("pfi12n", bi.pfi12n01.isChecked() ? "1" : bi.pfi12n02.isChecked() ? "1" : bi.pfi12n98.isChecked() ? "98" : "0");
-        sI.put("pfi12o", bi.pfi12o01.isChecked() ? "1" : bi.pfi12o02.isChecked() ? "1" : bi.pfi12o98.isChecked() ? "98" : "0");
-        sI.put("pfi12p", bi.pfi12p01.isChecked() ? "1" : bi.pfi12p02.isChecked() ? "1" : bi.pfi12p98.isChecked() ? "98" : "0");
-        sI.put("pfi12q", bi.pfi12q01.isChecked() ? "1" : bi.pfi12q02.isChecked() ? "1" : bi.pfi12q98.isChecked() ? "98" : "0");
+        sI.put("pfi12a", bi.pfi12a01.isChecked() ? "1" : bi.pfi12a02.isChecked() ? "2" : bi.pfi12a98.isChecked() ? "98" : "0");
+        sI.put("pfi12b", bi.pfi12b01.isChecked() ? "1" : bi.pfi12b02.isChecked() ? "2" : bi.pfi12b98.isChecked() ? "98" : "0");
+        sI.put("pfi12c", bi.pfi12c01.isChecked() ? "1" : bi.pfi12c02.isChecked() ? "2" : bi.pfi12c98.isChecked() ? "98" : "0");
+        sI.put("pfi12d", bi.pfi12d01.isChecked() ? "1" : bi.pfi12d02.isChecked() ? "2" : bi.pfi12d98.isChecked() ? "98" : "0");
+        sI.put("pfi12e", bi.pfi12e01.isChecked() ? "1" : bi.pfi12e02.isChecked() ? "2" : bi.pfi12e98.isChecked() ? "98" : "0");
+        sI.put("pfi12f", bi.pfi12f01.isChecked() ? "1" : bi.pfi12f02.isChecked() ? "2" : bi.pfi12f98.isChecked() ? "98" : "0");
+        sI.put("pfi12g", bi.pfi12g01.isChecked() ? "1" : bi.pfi12g02.isChecked() ? "2" : bi.pfi12g98.isChecked() ? "98" : "0");
+        sI.put("pfi12h", bi.pfi12h01.isChecked() ? "1" : bi.pfi12h02.isChecked() ? "2" : bi.pfi12h98.isChecked() ? "98" : "0");
+        sI.put("pfi12i", bi.pfi12i01.isChecked() ? "1" : bi.pfi12i02.isChecked() ? "2" : bi.pfi12i98.isChecked() ? "98" : "0");
+        sI.put("pfi12j", bi.pfi12j01.isChecked() ? "1" : bi.pfi12j02.isChecked() ? "2" : bi.pfi12j98.isChecked() ? "98" : "0");
+        sI.put("pfi12k", bi.pfi12k01.isChecked() ? "1" : bi.pfi12k02.isChecked() ? "2" : bi.pfi12k98.isChecked() ? "98" : "0");
+        sI.put("pfi12l", bi.pfi12l01.isChecked() ? "1" : bi.pfi12l02.isChecked() ? "2" : bi.pfi12l98.isChecked() ? "98" : "0");
+        sI.put("pfi12m", bi.pfi12m01.isChecked() ? "1" : bi.pfi12m02.isChecked() ? "2" : bi.pfi12m98.isChecked() ? "98" : "0");
+        sI.put("pfi12n", bi.pfi12n01.isChecked() ? "1" : bi.pfi12n02.isChecked() ? "2" : bi.pfi12n98.isChecked() ? "98" : "0");
+        sI.put("pfi12o", bi.pfi12o01.isChecked() ? "1" : bi.pfi12o02.isChecked() ? "2" : bi.pfi12o98.isChecked() ? "98" : "0");
+        sI.put("pfi12p", bi.pfi12p01.isChecked() ? "1" : bi.pfi12p02.isChecked() ? "2" : bi.pfi12p98.isChecked() ? "98" : "0");
+        sI.put("pfi12q", bi.pfi12q01.isChecked() ? "1" : bi.pfi12q02.isChecked() ? "2" : bi.pfi12q98.isChecked() ? "98" : "0");
 
         sI.put("pfi13", bi.pfi13a.isChecked() ? "1" : bi.pfi13b.isChecked() ? "2" : bi.pfi1398.isChecked() ? "98" : "0");
         sI.put("pfi14", bi.pfi1498.isChecked() ? "98" : "0");
@@ -679,7 +679,7 @@ public class SectionIActivity extends AppCompatActivity {
                 : "0");
         sI.put("pfi1796x", bi.pfi1796x.getText().toString());
 
-        sI.put("pfi18", bi.pfi18a.isChecked() ? "1" : bi.pfi18b.isChecked() ? "1" : bi.pfi1898.isChecked() ? "98" : "0");
+        sI.put("pfi18", bi.pfi18a.isChecked() ? "1" : bi.pfi18b.isChecked() ? "2" : bi.pfi1898.isChecked() ? "98" : "0");
 
         AppMain.fc.setsI(String.valueOf(sI));
 
