@@ -67,7 +67,6 @@ public class SectionDActivity extends AppCompatActivity {
                 if (i == R.id.pfd01c) {
                     bi.pfd01bx.setVisibility(View.GONE);
                     bi.pfd01bx.setText(null);
-                    ClearClass.ClearAllCardFields(bi.fldgrppd02, false);
                     bi.fldgrppd03.setVisibility(View.GONE);
                     ClearClass.ClearAllCardFields(bi.fldgrppd03, false);
                     bi.fldgrppd04.setVisibility(View.GONE);
@@ -90,6 +89,7 @@ public class SectionDActivity extends AppCompatActivity {
                 if (i == R.id.pfd01a) {
                     bi.pfd01bx.setVisibility(View.GONE);
                     bi.pfd01bx.setText(null);
+                    bi.fldgrppd02.setVisibility(View.VISIBLE);
                     ClearClass.ClearAllCardFields(bi.fldgrppd02, true);
                     bi.fldgrppd03.setVisibility(View.VISIBLE);
                     ClearClass.ClearAllCardFields(bi.fldgrppd03, true);
