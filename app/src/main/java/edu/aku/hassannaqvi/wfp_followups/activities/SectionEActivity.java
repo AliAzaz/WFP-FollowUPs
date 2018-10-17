@@ -93,92 +93,24 @@ public class SectionEActivity extends AppCompatActivity {
 
         JSONObject sE = new JSONObject();
 
-        sE.put("pfe01", bi.pfe01a.isChecked() ? "1"
-                : bi.pfe01b.isChecked() ? "2"
-                : "0");
-
-
-        sE.put("pfe02", bi.pfe02a.isChecked() ? "1"
-                : bi.pfe02b.isChecked() ? "2"
-                : "0");
-
-
-        sE.put("pfe03", bi.pfe03a.isChecked() ? "1"
-                : bi.pfe03b.isChecked() ? "2"
-                : "0");
-
-
-        sE.put("pfe04", bi.pfe04a.isChecked() ? "1"
-                : bi.pfe04b.isChecked() ? "2"
-                : "0");
-
-
-        sE.put("pfe05", bi.pfe05a.isChecked() ? "1"
-                : bi.pfe05b.isChecked() ? "2"
-                : "0");
-
-
-        sE.put("pfe06", bi.pfe06a.isChecked() ? "1"
-                : bi.pfe06b.isChecked() ? "2"
-                : "0");
-
-
-        sE.put("pfe07", bi.pfe07a.isChecked() ? "1"
-                : bi.pfe07b.isChecked() ? "2"
-                : "0");
-
-
-        sE.put("pfe08", bi.pfe08a.isChecked() ? "1"
-                : bi.pfe08b.isChecked() ? "2"
-                : "0");
-
-
-        sE.put("pfe09", bi.pfe09a.isChecked() ? "1"
-                : bi.pfe09b.isChecked() ? "2"
-                : "0");
-
-
-        sE.put("pfe10", bi.pfe10a.isChecked() ? "1"
-                : bi.pfe10b.isChecked() ? "2"
-                : "0");
-
-
-        sE.put("pfe11", bi.pfe11a.isChecked() ? "1"
-                : bi.pfe11b.isChecked() ? "2"
-                : "0");
-
-
-        sE.put("pfe12", bi.pfe12a.isChecked() ? "1"
-                : bi.pfe12b.isChecked() ? "2"
-                : "0");
-
-
-        sE.put("pfe13", bi.pfe13a.isChecked() ? "1"
-                : bi.pfe13b.isChecked() ? "2"
-                : "0");
-
-
-        sE.put("pfe14", bi.pfe14a.isChecked() ? "1"
-                : bi.pfe14b.isChecked() ? "2"
-                : "0");
-
-
-        sE.put("pfe15", bi.pfe15a.isChecked() ? "1"
-                : bi.pfe15b.isChecked() ? "2"
-                : "0");
-
-        sE.put("pfe16", bi.pfe16a.isChecked() ? "1"
-                : bi.pfe16b.isChecked() ? "2"
-                : "0");
-
-        sE.put("pfe17", bi.pfe17a.isChecked() ? "1"
-                : bi.pfe17b.isChecked() ? "2"
-                : "0");
-
-        sE.put("pfe18", bi.pfe18a.isChecked() ? "1"
-                : bi.pfe18b.isChecked() ? "2"
-                : "0");
-
+        sE.put("pfe01", bi.pfe01a.isChecked() ? "1" : bi.pfe01b.isChecked() ? "2" : "0");
+        sE.put("pfe02", bi.pfe02a.isChecked() ? "1" : bi.pfe02b.isChecked() ? "2" : "0");
+        sE.put("pfe03", bi.pfe03a.isChecked() ? "1" : bi.pfe03b.isChecked() ? "2" : "0");
+        sE.put("pfe04", bi.pfe04a.isChecked() ? "1" : bi.pfe04b.isChecked() ? "2" : "0");
+        sE.put("pfe05", bi.pfe05a.isChecked() ? "1" : bi.pfe05b.isChecked() ? "2" : "0");
+        sE.put("pfe06", bi.pfe06a.isChecked() ? "1" : bi.pfe06b.isChecked() ? "2" : "0");
+        sE.put("pfe07", bi.pfe07a.isChecked() ? "1" : bi.pfe07b.isChecked() ? "2" : "0");
+        sE.put("pfe08", bi.pfe08a.isChecked() ? "1" : bi.pfe08b.isChecked() ? "2" : "0");
+        sE.put("pfe09", bi.pfe09a.isChecked() ? "1" : bi.pfe09b.isChecked() ? "2" : "0");
+        sE.put("pfe10", bi.pfe10a.isChecked() ? "1" : bi.pfe10b.isChecked() ? "2" : "0");
+        sE.put("pfe11", bi.pfe11a.isChecked() ? "1" : bi.pfe11b.isChecked() ? "2" : "0");
+        sE.put("pfe12", bi.pfe12a.isChecked() ? "1" : bi.pfe12b.isChecked() ? "2" : "0");
+        sE.put("pfe13", bi.pfe13a.isChecked() ? "1" : bi.pfe13b.isChecked() ? "2" : "0");
+        sE.put("pfe14", bi.pfe14a.isChecked() ? "1" : bi.pfe14b.isChecked() ? "2" : "0");
+        sE.put("pfe15", bi.pfe15a.isChecked() ? "1" : bi.pfe15b.isChecked() ? "2" : "0");
+        sE.put("pfe16", bi.pfe16a.isChecked() ? "1" : bi.pfe16b.isChecked() ? "2" : "0");
+        sE.put("pfe17", bi.pfe17a.isChecked() ? "1" : bi.pfe17b.isChecked() ? "2" : "0");
+        sE.put("pfe18", bi.pfe18a.isChecked() ? "1" : bi.pfe18b.isChecked() ? "2" : "0");
         AppMain.fc.setsE(String.valueOf(sE));
     }
 
