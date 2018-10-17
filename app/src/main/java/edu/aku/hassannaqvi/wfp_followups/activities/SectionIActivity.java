@@ -546,7 +546,7 @@ public class SectionIActivity extends AppCompatActivity {
                     ClearClass.ClearAllFields(bi.fldgrppfi14, true);
 
                 } else {
-                    if (flag) {
+                    if (!flag) {
                         bi.fldgrppfi14.setVisibility(View.VISIBLE);
                     }
 
@@ -844,13 +844,13 @@ public class SectionIActivity extends AppCompatActivity {
             return false;
         }
 
-        if (flag) {
+        if (!flag) {
             if (!validatorClass.EmptyRadioButton(this, bi.pfi13, bi.pfi13a, getString(R.string.pfi13))) {
                 return false;
             }
         }
 
-        if (flag && bi.pfi13a.isChecked()) {
+        if (!flag && bi.pfi13a.isChecked()) {
             if (!bi.pfi1498.isChecked()) {
                 if (!validatorClass.EmptyTextBox(this, bi.pfi14t, getString(R.string.pfi14))) {
                     return false;

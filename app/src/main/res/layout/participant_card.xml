@@ -86,7 +86,7 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="35"
-                        android:text="FUP Round:"
+                        android:text="FUP Round"
                         android:textColor="@color/blackOverlay"
                         android:textSize="@dimen/_9sdp" />
 
@@ -110,7 +110,7 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="35"
-                        android:text="FUP Date:"
+                        android:text="FUP Date"
                         android:textColor="@color/blackOverlay"
                         android:textSize="@dimen/_8sdp" />
 

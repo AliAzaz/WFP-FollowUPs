@@ -141,6 +141,8 @@ public class InfoActivity extends Activity {
 
                     plwData();
 
+                    AppMain.hideKeyboard(this);
+
                     bi.fldGrpParticipant.setVisibility(View.VISIBLE);
 
                     check = true;
