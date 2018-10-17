@@ -76,6 +76,7 @@
                             android:text="@string/pfd01c" />
 
                         <EditText
+                            style="@style/textInput"
                             android:id="@+id/pfd01bx"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
