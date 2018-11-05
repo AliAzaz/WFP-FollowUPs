@@ -370,4 +370,8 @@ public class SectionDActivity extends AppCompatActivity {
         AppMain.endActivity(this, this);
     }
 
+    @Override
+    public void onBackPressed() {
+        Toast.makeText(getApplicationContext(), "You Can't go back", Toast.LENGTH_LONG).show();
+    }
 }

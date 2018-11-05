@@ -339,7 +339,11 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     public boolean Login(String username, String password) throws SQLException {
         SQLiteDatabase db = this.getReadableDatabase();
 
-        Cursor mCursor = db.rawQuery("SELECT * FROM " + UsersContract.UsersTable.TABLE_NAME + " WHERE " + UsersContract.UsersTable.ROW_USERNAME + "=? AND " + UsersContract.UsersTable.ROW_PASSWORD + "=?", new String[]{username, password});
+        Cursor mCursor = db.rawQuery("SELECT * FROM "
+                + UsersContract.UsersTable.TABLE_NAME + " WHERE "
+                + UsersContract.UsersTable.ROW_USERNAME + "=? AND "
+                + UsersContract.UsersTable.ROW_PASSWORD
+                + "=?", new String[]{username, password});
 
         if (mCursor != null) {
             if (mCursor.getCount() > 0) {
