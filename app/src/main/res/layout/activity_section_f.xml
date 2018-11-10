@@ -485,7 +485,7 @@
                             android:text="@string/day" />
 
                         <EditText
-                            android:maxLength="11"
+                            android:maxLength="2"
                             android:id="@+id/pff07dx"
                             style="@style/textInput"
                             android:layout_width="match_parent"
@@ -502,7 +502,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginBottom="1dp"
                             android:layout_weight="1"
-                            android:text="@string/no" />
+                            android:text="@string/pff07b" />
 
                         <RadioButton
                             android:id="@+id/pff0798"

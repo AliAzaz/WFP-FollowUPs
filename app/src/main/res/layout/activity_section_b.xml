@@ -114,17 +114,17 @@
 
             <!--Q2-->
             <LinearLayout
-                android:id="@+id/fldgrppfba"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:visibility="@{pfb01a.checked ? View.VISIBLE : View.GONE}">
+                android:orientation="vertical">
 
                 <android.support.v7.widget.CardView
+                    android:id="@+id/fldgrppfba"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
-                    android:elevation="10dp">
+                    android:elevation="10dp"
+                    android:visibility="@{pfb01a.checked ? View.VISIBLE : View.GONE}">
 
                     <LinearLayout
                         android:id="@+id/fldgrppfb02"
@@ -202,12 +202,12 @@
 
                 <!--Q3-->
                 <LinearLayout
-                    android:id="@+id/fldgrppfbb"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
 
                     <android.support.v7.widget.CardView
+                        android:id="@+id/fldgrppfbb"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="10dp"
@@ -229,7 +229,7 @@
                                 android:textColor="@color/white" />
 
                             <EditText
-                                android:maxLength="2"
+                                android:maxLength="1"
                                 android:id="@+id/pfb03"
                                 style="@style/textInput"
                                 android:layout_width="match_parent"

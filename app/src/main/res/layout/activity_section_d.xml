@@ -76,6 +76,7 @@
                             android:text="@string/pfd01c" />
 
                         <EditText
+                            android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz"
                             style="@style/textInput"
                             android:id="@+id/pfd01bx"
                             android:layout_width="match_parent"
@@ -112,6 +113,7 @@
                         android:textColor="@color/white" />
 
                     <EditText
+                        android:digits="123456789"
                         android:id="@+id/pfd02"
                         style="@style/textInput"
                         android:layout_width="match_parent"
@@ -357,6 +359,7 @@
                         android:text="@string/other" />
 
                     <EditText
+                        android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz"
                         android:id="@+id/pfd0796x"
                         style="@style/textInput"
                         android:layout_width="match_parent"
@@ -474,6 +477,7 @@
                         android:text="@string/other" />
 
                     <EditText
+                        android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz"
                         android:id="@+id/pfd0996x"
                         style="@style/textInput"
                         android:layout_width="match_parent"
@@ -579,6 +583,7 @@
                         android:text="@string/other" />
 
                     <EditText
+                        android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz"
                         android:id="@+id/pfd1196x"
                         style="@style/textInput"
                         android:layout_width="match_parent"
@@ -673,6 +678,7 @@
                         android:text="@string/other" />
 
                     <EditText
+                        android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz"
                         android:id="@+id/pfd1296x"
                         style="@style/textInput"
                         android:layout_width="match_parent"

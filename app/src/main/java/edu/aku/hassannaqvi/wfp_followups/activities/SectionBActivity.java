@@ -58,7 +58,9 @@ public class SectionBActivity extends AppCompatActivity {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
                 if (i != bi.pfb01a.getId()) {
-                    ClearClass.ClearAllFields(bi.fldgrppfba, true);
+                    ClearClass.ClearAllCardFields(bi.fldgrppfba, false);
+                } else {
+                    ClearClass.ClearAllCardFields(bi.fldgrppfba, true);
                 }
             }
         });
@@ -67,7 +69,7 @@ public class SectionBActivity extends AppCompatActivity {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
                 if (i != bi.pfb02a.getId() || i != bi.pfb02e.getId()) {
-                    ClearClass.ClearAllFields(bi.fldgrppfbb, true);
+                    ClearClass.ClearAllCardFields(bi.fldgrppfbb, true);
                 }
             }
         });
@@ -134,6 +136,9 @@ public class SectionBActivity extends AppCompatActivity {
 
             if (bi.pfb02a.isChecked()) {
                 if (!validatorClass.EmptyTextBox(this, bi.pfb03, getString(R.string.pfb03))) {
+                    return false;
+                }
+                if (!validatorClass.RangeTextBox(this, bi.pfb03, 1, 9, getString(R.string.pfb03), "Months")) {
                     return false;
                 }
             }

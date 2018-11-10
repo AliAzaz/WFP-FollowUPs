@@ -220,7 +220,10 @@ public class SectionHActivity extends AppCompatActivity {
                 return false;
             }
 
-            return validatorClass.PatternTextBox(this, bi.pfh03, getString(R.string.pfh03), "^(\\d{2,2}\\.\\d{1,1})$", "XX.X");
+            if (!validatorClass.PatternTextBox(this, bi.pfh03, getString(R.string.pfh03), "^(\\d{2,2}\\.\\d{1,1})$", "XX.X")) {
+                return false;
+            }
+            return validatorClass.RangeTextBox(this, bi.pfh03, 4.0d, 20.0d, getString(R.string.pfh03), "g/dL");
         }
 
         return true;

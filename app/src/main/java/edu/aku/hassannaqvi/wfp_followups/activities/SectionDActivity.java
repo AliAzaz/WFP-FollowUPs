@@ -85,6 +85,8 @@ public class SectionDActivity extends AppCompatActivity {
                     ClearClass.ClearAllCardFields(bi.fldgrppd10, false);
                     bi.fldgrppd11.setVisibility(View.GONE);
                     ClearClass.ClearAllCardFields(bi.fldgrppd11, false);
+                    bi.fldgrppd12.setVisibility(View.VISIBLE);
+                    ClearClass.ClearAllCardFields(bi.fldgrppd12, true);
                 }
                 if (i == R.id.pfd01a) {
                     bi.pfd01bx.setVisibility(View.GONE);
@@ -109,8 +111,8 @@ public class SectionDActivity extends AppCompatActivity {
                     ClearClass.ClearAllCardFields(bi.fldgrppd10, true);
                     bi.fldgrppd11.setVisibility(View.VISIBLE);
                     ClearClass.ClearAllCardFields(bi.fldgrppd11, true);
-                    bi.fldgrppd12.setVisibility(View.VISIBLE);
-                    ClearClass.ClearAllCardFields(bi.fldgrppd12, true);
+                    bi.fldgrppd12.setVisibility(View.GONE);
+                    ClearClass.ClearAllCardFields(bi.fldgrppd12, false);
                 }
             }
         });

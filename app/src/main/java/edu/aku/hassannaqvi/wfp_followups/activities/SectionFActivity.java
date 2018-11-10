@@ -30,7 +30,7 @@ public class SectionFActivity extends AppCompatActivity {
         bi = DataBindingUtil.setContentView(this, R.layout.activity_section_f);
         bi.setCallback(this);
 
-        setTitle("ANC & Morbidity");
+        setTitle(R.string.pffheading);
 
         validatorClass.setScrollViewFocus(bi.scrollView);
 
@@ -106,6 +106,20 @@ public class SectionFActivity extends AppCompatActivity {
                 } else {
                     bi.fldgrppff10.setVisibility(View.VISIBLE);
                     ClearClass.ClearAllCardFields(bi.fldgrppff10, true);
+                    bi.fldgrppff11.setVisibility(View.VISIBLE);
+                    ClearClass.ClearAllCardFields(bi.fldgrppff11, true);
+                }
+            }
+        });
+
+        bi.pff10.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup radioGroup, int i) {
+
+                if (i == bi.pff10b.getId()) {
+                    bi.fldgrppff11.setVisibility(View.GONE);
+                    ClearClass.ClearAllCardFields(bi.fldgrppff11, false);
+                } else {
                     bi.fldgrppff11.setVisibility(View.VISIBLE);
                     ClearClass.ClearAllCardFields(bi.fldgrppff11, true);
                 }

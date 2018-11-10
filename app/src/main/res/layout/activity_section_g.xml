@@ -126,24 +126,24 @@
                         android:textColor="@color/white" />
 
                     <EditText
-                        android:maxLength="2"
                         android:id="@+id/pfg03m"
                         style="@style/textInput"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_margin="10dp"
                         android:hint="@string/month"
-                        android:inputType="number" />
+                        android:inputType="number"
+                        android:maxLength="2" />
 
                     <EditText
-                        android:maxLength="2"
                         android:id="@+id/pfg03d"
                         style="@style/textInput"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_margin="10dp"
                         android:hint="@string/day"
-                        android:inputType="number" />
+                        android:inputType="number"
+                        android:maxLength="2" />
 
                 </LinearLayout>
             </android.support.v7.widget.CardView>
@@ -218,14 +218,14 @@
                         android:textColor="@color/white" />
 
                     <EditText
-                        android:maxLength="2"
                         android:id="@+id/pfg05"
                         style="@style/textInput"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_margin="10dp"
+                        android:hint="@string/pfg05"
                         android:inputType="number"
-                        android:hint="@string/pfg05" />
+                        android:maxLength="2" />
 
                 </LinearLayout>
             </android.support.v7.widget.CardView>
@@ -314,14 +314,14 @@
                             android:text="@string/pfg07a" />
 
                         <EditText
-                            android:inputType="number"
-                            android:maxLength="4"
-                            android:hint="@string/pfg07a"
                             android:id="@+id/pfg07ax"
                             style="@style/textInput"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_margin="10dp"
+                            android:hint="@string/pfg07a"
+                            android:inputType="numberDecimal"
+                            android:maxLength="4"
                             android:visibility="gone" />
 
                         <RadioButton
@@ -333,14 +333,14 @@
                             android:text="@string/pfg07b" />
 
                         <EditText
-                            android:inputType="number"
-                            android:maxLength="4"
-                            android:hint="@string/pfg07b"
                             android:id="@+id/pfg07bx"
                             style="@style/textInput"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_margin="10dp"
+                            android:hint="@string/pfg07b"
+                            android:inputType="numberDecimal"
+                            android:maxLength="4"
                             android:visibility="gone" />
 
                         <RadioButton
@@ -512,91 +512,99 @@
                         android:text="@string/pfg09sub"
                         android:textColor="@color/white" />
 
-                    <CheckBox
-                        android:id="@+id/pfg09a"
+                    <LinearLayout
+                        android:id="@+id/fldgrppfg09a"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginBottom="1dp"
-                        android:layout_weight="1"
-                        android:text="@string/pfg09a" />
+                        android:orientation="vertical">
+
+                        <CheckBox
+                            android:id="@+id/pfg09a"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="1dp"
+                            android:layout_weight="1"
+                            android:text="@string/pfg09a" />
 
 
-                    <CheckBox
-                        android:id="@+id/pfg09b"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginBottom="1dp"
-                        android:layout_weight="1"
-                        android:text="@string/pfg09b" />
+                        <CheckBox
+                            android:id="@+id/pfg09b"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="1dp"
+                            android:layout_weight="1"
+                            android:text="@string/pfg09b" />
 
 
-                    <CheckBox
-                        android:id="@+id/pfg09c"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginBottom="1dp"
-                        android:layout_weight="1"
-                        android:text="@string/pfg09c" />
+                        <CheckBox
+                            android:id="@+id/pfg09c"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="1dp"
+                            android:layout_weight="1"
+                            android:text="@string/pfg09c" />
 
-                    <CheckBox
-                        android:id="@+id/pfg09d"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginBottom="1dp"
-                        android:layout_weight="1"
-                        android:text="@string/pfg09d" />
+                        <CheckBox
+                            android:id="@+id/pfg09d"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="1dp"
+                            android:layout_weight="1"
+                            android:text="@string/pfg09d" />
 
-                    <CheckBox
-                        android:id="@+id/pfg09e"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginBottom="1dp"
-                        android:layout_weight="1"
-                        android:text="@string/pfg09e" />
+                        <CheckBox
+                            android:id="@+id/pfg09e"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="1dp"
+                            android:layout_weight="1"
+                            android:text="@string/pfg09e" />
 
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_horizontal"
-                        android:background="@color/colorPrimary"
-                        android:gravity="center"
-                        android:text="@string/pfg09sub1"
-                        android:textColor="@color/white" />
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:background="@color/colorPrimary"
+                            android:gravity="center"
+                            android:text="@string/pfg09sub1"
+                            android:textColor="@color/white" />
 
-                    <CheckBox
-                        android:id="@+id/pfg09f"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginBottom="1dp"
-                        android:layout_weight="1"
-                        android:text="@string/pfg09f" />
+                        <CheckBox
+                            android:id="@+id/pfg09f"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="1dp"
+                            android:layout_weight="1"
+                            android:text="@string/pfg09f" />
 
-                    <CheckBox
-                        android:id="@+id/pfg09g"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginBottom="1dp"
-                        android:layout_weight="1"
-                        android:text="@string/pfg09g" />
+                        <CheckBox
+                            android:id="@+id/pfg09g"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="1dp"
+                            android:layout_weight="1"
+                            android:text="@string/pfg09g" />
 
-                    <CheckBox
-                        android:id="@+id/pfg0996"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginBottom="1dp"
-                        android:layout_weight="1"
-                        android:text="@string/other" />
+                        <CheckBox
+                            android:id="@+id/pfg0996"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="1dp"
+                            android:layout_weight="1"
+                            android:text="@string/other" />
 
-                    <EditText
-                        android:id="@+id/pfg0996x"
-                        style="@style/textInput"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="10dp"
-                        android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz"
-                        android:hint="@string/other"
-                        android:visibility="gone" />
+                        <EditText
+                            android:id="@+id/pfg0996x"
+                            style="@style/textInput"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz"
+                            android:hint="@string/other"
+                            android:text='@{pfg0996.checked? pfg0996x.getText.toString :"" }'
+                            android:visibility='@{pfg0996.checked? View.VISIBLE : View.GONE}' />
 
+                    </LinearLayout>
 
                     <CheckBox
                         android:id="@+id/pfg09h"
@@ -762,7 +770,7 @@
                             android:layout_height="wrap_content"
                             android:layout_margin="10dp"
                             android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz"
-                            android:hint="@string/other"
+                            android:hint="@string/pfg10i"
                             android:text='@{pfg10i.checked? pfg10ix.getText.toString : "" }'
                             android:visibility='@{pfg10i.checked? View.VISIBLE : View.GONE}' />
 
@@ -772,7 +780,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginBottom="1dp"
                             android:layout_weight="1"
-                            android:text="@string/pfg10j" />
+                            android:text="@string/other" />
 
                         <EditText
                             android:id="@+id/pfg10jx"
@@ -996,14 +1004,14 @@
                             android:text="@string/pfg14b" />
 
                         <EditText
-                            android:inputType="number"
-                            android:maxLength="2"
                             android:id="@+id/pfg14bx"
                             style="@style/textInput"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_margin="10dp"
                             android:hint="@string/pfg14b"
+                            android:inputType="number"
+                            android:maxLength="2"
                             android:text='@{pfg14b.checked? pfg14bx.getText.toString : "" }'
                             android:visibility='@{pfg14b.checked? View.VISIBLE : View.GONE}' />
 
@@ -1017,14 +1025,14 @@
                             android:text="@string/pfg14c" />
 
                         <EditText
-                            android:inputType="number"
-                            android:maxLength="2"
                             android:id="@+id/pfg14cx"
                             style="@style/textInput"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_margin="10dp"
                             android:hint="@string/pfg14c"
+                            android:inputType="number"
+                            android:maxLength="2"
                             android:text='@{pfg14c.checked? pfg14cx.getText.toString : "" }'
                             android:visibility='@{pfg14c.checked? View.VISIBLE : View.GONE}' />
 
@@ -1122,71 +1130,81 @@
                         android:text="@string/pfg16"
                         android:textColor="@color/white" />
 
-                    <CheckBox
-                        android:id="@+id/pfg16a"
+                    <LinearLayout
+                        android:id="@+id/fldgrppfg16a"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginBottom="1dp"
-                        android:layout_weight="1"
-                        android:text="@string/pfg16a" />
+                        android:orientation="vertical">
 
-                    <CheckBox
-                        android:id="@+id/pfg16b"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginBottom="1dp"
-                        android:layout_weight="1"
-                        android:text="@string/pfg16b" />
+                        <CheckBox
+                            android:id="@+id/pfg16a"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="1dp"
+                            android:layout_weight="1"
+                            android:text="@string/pfg16a" />
 
-                    <CheckBox
-                        android:id="@+id/pfg16c"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginBottom="1dp"
-                        android:layout_weight="1"
-                        android:text="@string/pfg16c" />
+                        <CheckBox
+                            android:id="@+id/pfg16b"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="1dp"
+                            android:layout_weight="1"
+                            android:text="@string/pfg16b" />
 
-                    <CheckBox
-                        android:id="@+id/pfg16d"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginBottom="1dp"
-                        android:layout_weight="1"
-                        android:text="@string/pfg16d" />
+                        <CheckBox
+                            android:id="@+id/pfg16c"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="1dp"
+                            android:layout_weight="1"
+                            android:text="@string/pfg16c" />
 
-                    <CheckBox
-                        android:id="@+id/pfg16e"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginBottom="1dp"
-                        android:layout_weight="1"
-                        android:text="@string/pfg16e" />
+                        <CheckBox
+                            android:id="@+id/pfg16d"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="1dp"
+                            android:layout_weight="1"
+                            android:text="@string/pfg16d" />
 
-                    <CheckBox
-                        android:id="@+id/pfg16f"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginBottom="1dp"
-                        android:layout_weight="1"
-                        android:text="@string/pfg16f" />
+                        <CheckBox
+                            android:id="@+id/pfg16e"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="1dp"
+                            android:layout_weight="1"
+                            android:text="@string/pfg16e" />
 
-                    <CheckBox
-                        android:id="@+id/pfg1696"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginBottom="1dp"
-                        android:layout_weight="1"
-                        android:text="@string/other" />
+                        <CheckBox
+                            android:id="@+id/pfg16f"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="1dp"
+                            android:layout_weight="1"
+                            android:text="@string/pfg16f" />
 
-                    <EditText
-                        android:id="@+id/pfg1696x"
-                        style="@style/textInput"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="10dp"
-                        android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz"
-                        android:hint="@string/other"
-                        android:visibility="gone" />
+                        <CheckBox
+                            android:id="@+id/pfg1696"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="1dp"
+                            android:layout_weight="1"
+                            android:text="@string/other" />
+
+                        <EditText
+                            android:id="@+id/pfg1696x"
+                            style="@style/textInput"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz"
+                            android:hint="@string/other"
+                            android:text='@{pfg1696.checked? pfg1696x.getText.toString : ""}'
+                            android:visibility='@{pfg1696.checked? View.VISIBLE: View.GONE}' />
+
+                    </LinearLayout>
+
 
                     <CheckBox
                         android:id="@+id/pfg1698"
@@ -1599,14 +1617,14 @@
                             android:text="@string/pfg20a" />
 
                         <EditText
-                            android:inputType="number"
-                            android:maxLength="2"
                             android:id="@+id/pfg20ax"
                             style="@style/textInput"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_margin="10dp"
                             android:hint="@string/pfg20a"
+                            android:inputType="number"
+                            android:maxLength="2"
                             android:text='@{pfg20a.checked? pfg20ax.getText.toString : "" }'
                             android:visibility='@{pfg20a.checked? View.VISIBLE : View.GONE}' />
 
@@ -1620,14 +1638,14 @@
                             android:text="@string/pfg20b" />
 
                         <EditText
-                            android:inputType="number"
-                            android:maxLength="2"
                             android:id="@+id/pfg20bx"
                             style="@style/textInput"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_margin="10dp"
                             android:hint="@string/pfg20b"
+                            android:inputType="number"
+                            android:maxLength="2"
                             android:text='@{pfg20b.checked? pfg20bx.getText.toString : "" }'
                             android:visibility='@{pfg20b.checked? View.VISIBLE : View.GONE}' />
 
@@ -1641,14 +1659,14 @@
                             android:text="@string/pfg20c" />
 
                         <EditText
-                            android:inputType="number"
-                            android:maxLength="2"
                             android:id="@+id/pfg20cx"
                             style="@style/textInput"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_margin="10dp"
                             android:hint="@string/pfg20c"
+                            android:inputType="number"
+                            android:maxLength="2"
                             android:text='@{pfg20c.checked? pfg20cx.getText.toString : "" }'
                             android:visibility='@{pfg20c.checked? View.VISIBLE : View.GONE}' />
 
@@ -1687,14 +1705,14 @@
                         android:textColor="@color/white" />
 
                     <EditText
-                        android:inputType="number"
-                        android:maxLength="1"
                         android:id="@+id/pfg21"
                         style="@style/textInput"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_margin="10dp"
-                        android:hint="@string/pfg21" />
+                        android:hint="@string/pfg21"
+                        android:inputType="number"
+                        android:maxLength="1" />
 
                 </LinearLayout>
             </android.support.v7.widget.CardView>
@@ -1991,13 +2009,13 @@
                             android:text="@string/pfg25a" />
 
                         <EditText
-                            android:hint="@string/pfg25a"
-                            android:inputType="number"
                             android:id="@+id/pfg25ax"
                             style="@style/textInput"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_margin="10dp"
+                            android:hint="@string/pfg25a"
+                            android:inputType="number"
                             android:maxLength="2"
                             android:text='@{pfg25a.checked? pfg25ax.getText.toString : "" }'
                             android:visibility='@{pfg25a.checked? View.VISIBLE : View.GONE}' />
@@ -2012,13 +2030,13 @@
                             android:text="@string/pfg25b" />
 
                         <EditText
-                            android:hint="@string/pfg25b"
-                            android:inputType="number"
                             android:id="@+id/pfg25bx"
                             style="@style/textInput"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_margin="10dp"
+                            android:hint="@string/pfg25b"
+                            android:inputType="number"
                             android:maxLength="2"
                             android:text='@{pfg25b.checked? pfg25bx.getText.toString : "" }'
                             android:visibility='@{pfg25b.checked? View.VISIBLE : View.GONE}' />
@@ -2033,13 +2051,13 @@
                             android:text="@string/pfg25c" />
 
                         <EditText
-                            android:hint="@string/pfg25c"
-                            android:inputType="number"
-                            style="@style/textInput"
                             android:id="@+id/pfg25cx"
+                            style="@style/textInput"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_margin="10dp"
+                            android:hint="@string/pfg25c"
+                            android:inputType="number"
                             android:maxLength="2"
                             android:text='@{pfg25c.checked? pfg25cx.getText.toString : "" }'
                             android:visibility='@{pfg25c.checked? View.VISIBLE : View.GONE}' />
@@ -2153,10 +2171,10 @@
                 android:orientation="horizontal">
 
                 <Button
-                    android:layout_marginEnd="10dp"
                     android:id="@+id/btn_Continue"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
+                    android:layout_marginEnd="10dp"
                     android:layout_marginRight="5dp"
                     android:layout_weight="0.5"
                     android:onClick="@{() -> callback.BtnContinue()}"

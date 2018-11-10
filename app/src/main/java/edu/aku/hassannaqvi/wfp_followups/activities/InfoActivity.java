@@ -43,7 +43,7 @@ public class InfoActivity extends Activity {
     DatabaseHelper db;
     HashMap<String, String> LHWs;
     Boolean check = false;
-    EnrolledContract enrolledParticipant;
+    public static EnrolledContract enrolledParticipant;
     //    @BindView(R.id.studyID)
 //    EditText studyID;
 //    @BindView(R.id.pfa01)
@@ -147,7 +147,7 @@ public class InfoActivity extends Activity {
 
                     check = true;
                 } else {
-                    Toast.makeText(this, "Follow Up due!!", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(this, "Follow Up not found!!", Toast.LENGTH_SHORT).show();
                 }
 
             } else {

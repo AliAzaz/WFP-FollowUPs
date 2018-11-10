@@ -29,7 +29,7 @@
     <string name="title_activity_splashscreen">SplashscreenActivity</string>
     <string name="dummy_button">Dummy Button</string>
     <string name="dummy_content">DUMMY\nCONTENT</string>
-    <string name="other"> کوئی اور وضاحت کریں </string>
+    <string name="other">  دیگر وضاحت کریں </string>
     <string name="dkn"> معلوم نہیں/یاد نہیں </string>
     <string name="yes"> ہاں </string>
     <string name="no"> نہیں </string>
@@ -41,7 +41,7 @@
     <string name="month"> مہینہ </string>
     <string name="day"> دن </string>
     <string name="weeks"> ہفتہ </string>
-    <string name="hours"> کلاک </string>
+    <string name="hours"> گھنٹوں </string>
     <string name="times"> تعداد </string>
     <string name="gl"> g/dL </string>
     <string name="not_applicable">Not Applicable</string>
@@ -61,7 +61,7 @@
     <string name="mp08a006"> ڳوٺ جو نالو </string>
     <string name="mp08a007"> مڪمل پتو </string>
     <string name="mp08a013"> زباني رضامندي </string>
-    <string name="mp08a014"> انٽرويو جو نتيجو </string>
+    <string name="mp08a014"> انٹرویو کا نتیجہ </string>
     <string name="mp08a01401"> مکمل</string>
     <string name="mp08a01402">  جزوی مکمل </string>
     <string name="mp08a01403"> انکار </string>
@@ -75,7 +75,7 @@
     <string name="pfa01"> کلسٹر کی قسم </string>
     <string name="pfa01a"> انٹروینشن </string>
     <string name="pfa01b"> کنٹرول </string>
-    <string name="studyID"> حاملہ خاتون کا شناخت نمبر </string>
+    <string name="studyID">  خاتون کا شناخت نمبر </string>
     <string name="pfa03"> حاملہ خاتون یا دودھ پلانے والی ماں کا فالواپ نمبر </string>
     <string name="pfa03a"> فالواپ نمبر </string>
     <string name="pfa04"> خا تون کی قسم </string>
@@ -103,7 +103,7 @@
     <string name="pfb03a"> مہینے </string>
     <string name="pfb04"> زندہ بچے کی تاریخ پیدائش </string>
     <string name="pfcheading"> وزن کی جانچ </string>
-    <string name="pfc01"> وزن </string>
+    <string name="pfc01"> وزن کی جانچ </string>
     <string name="pfc01a"> کلو گرام </string>
     <string name="pfc02"> خون کی مقدار کا نتیجہ </string>
     <string name="pfc02sub"> 9 ماہ کی حاملہ خاتون کے لئے </string>
@@ -137,7 +137,7 @@
     <string name="pfd11a"> منع نہیں کر سکتے </string>
     <string name="pfd11b"> ذائقہ اچھا تھا </string>
     <string name="pfd11c"> مجھے یقین تھا یہ دوسرے بچوں/بڑوں کے لئے فائدہ مند ہے۔ </string>
-    <string name="pfd12"> امتا نہ کھانے، وصول نہ کرنے اور استعمال نہ کرنے کی وجوہات کیا ہیں؟ </string>
+    <string name="pfd12"> مامتا نہ کھانے، وصول نہ کرنے اور استعمال نہ کرنے کی وجوہات کیا ہیں؟ </string>
     <string name="pfd12a"> ذائقہ اچھا نہیں / خراب ذائقہ </string>
     <string name="pfd12b"> اسہال کا سبب </string>
     <string name="pfd12c"> قے کا سبب </string>
@@ -206,9 +206,9 @@
     <string name="pff04a"> فشار خون </string>
     <string name="pff04b"> وزن </string>
     <string name="pff04c"> پیشاب کا نمونہ </string>
-    <string name="pff04d"> خؤن کا نمونہ </string>
-    <string name="pff04e"> الٹرا سائونڈ </string>
-    <string name="pff05"> کیا گزشتہ ایک مہینہ کے دوران،آپ نے بچہ کو تشنج سے بچائٔو کے لئے ران ےاکولہے میں انجیکشن لگوایا تھا،یا پیدائش کے بعد جھٹکے آنے کی صورت میں؟ </string>
+    <string name="pff04d"> خون کا نمونہ </string>
+    <string name="pff04e"> الٹرا ساؤنڈ </string>
+    <string name="pff05">کیا گزشتہ ایک مہینہ کے دوران،آپ نے بچہ کو تشنج سے بچاؤ کے لئے ران یاکولہے میں ٹیکہ لگوایا تھا،یا پیدائش کے بعد جھٹکے آنے کی صورت میں؟ </string>
     <string name="pff06"> گزشتہ ایک مہینہ کے دوران،کیا آپ کو کوئی فولاد والی گولی یا شربت دیا گیا یا آپ نے اسے اپنے لئےخریدا؟ </string>
     <string name="pff07"> گزشتہ ایک مہینہ کے دوران،آپ نے کتنے دنوں تک گولیاں یا شربت استعمال کیا؟ </string>
     <string name="pff07a"> دن </string>
@@ -219,14 +219,14 @@
     <string name="pff09b"> تيز بخار </string>
     <string name="pff09c"> سر میں درد </string>
     <string name="pff09d"> پیٹ کے نچلے حصے میں درد </string>
-    <string name="pff09e"> اندام نہانی سے خٔون کا اخراج </string>
+    <string name="pff09e"> اندام نہانی سے خون کا اخراج  </string>
     <string name="pff09f"> اندام نہانی سے بدبو دار مواد کا اخراج </string>
-    <string name="pff09g"> چہرے یا پائوں پر سوجن </string>
+    <string name="pff09g"> چہرے یا پاؤں پر سوجن </string>
     <string name="pff09h"> بلند فشار خون </string>
     <string name="pff09i"> جھٹکے </string>
     <string name="pff09j"> ٹی بی </string>
     <string name="pff09k"> ملیریا </string>
-    <string name="pff09l"> زیابیطس </string>
+    <string name="pff09l"> ذیابیطس  </string>
     <string name="pff09m"> دھندلا نظر آنا </string>
     <string name="pff09n"> پیشاب میں جلن </string>
     <string name="pff09o"> کوئی پیچیدگی نہیں </string>
@@ -289,7 +289,7 @@
     <string name="pfg10sub2"> Private medical sector </string>
     <string name="pfg10f"> نجی ہسپتال </string>
     <string name="pfg10g"> نجی کلینک </string>
-    <string name="pfg10h"> جی زچہ و بچہ سینٹر </string>
+    <string name="pfg10h"> نجی زچہ و بچہ سینٹر </string>
     <string name="pfg10i"> دیگرنجی صحت مرکز </string>
     <string name="pfg10j"> جگہ کا نام </string>
     <string name="pfg11"> کیا پیدائش سے ایک گھنٹے کےاندر، بچے(نام) کو براہ راست سینے یا چھاتی سے لگایا گیاتھا؟ </string>
@@ -352,7 +352,7 @@
     <string name="pfg22e"> مرکز صحت جانے کا مشورہ دینے </string>
     <string name="pfg22f"> ماں کے علاج کے حوالے سے </string>
     <string name="pfg22g"> اضافی خوراک کی فراہمی </string>
-    <string name="pfg22h"> انع حمل کی فراہمی </string>
+    <string name="pfg22h"> مانع حمل کی فراہمی </string>
     <string name="pfg23"> کیا کسی نے آپ کے بچہ کی صحت کا معائنہ کیاِ؟ </string>
     <string name="pfg24"> آپ کے نومولود بچے کی صحت کا معائنہ کس نے کیاتھا؟ </string>
     <string name="pfg24a"> بچوں کے ڈاکٹرنے </string>
@@ -379,8 +379,8 @@
     <string name="pfh02"> وزن </string>
     <string name="pfh01a"> سینتی میٹر </string>
     <string name="pfh02a"> سینتی میٹر </string>
-    <string name="pfh03"> خون کی مقدار کا نتیجہ </string>
-    <string name="pfiheading"> نومولود اور چھوٹے بچوں کی غذا کے بارے میں معلومات </string>
+    <string name="pfh03"> خون کی مقدار کا نتیجہ ( only At the age of 6 and 24 months ) </string>
+    <string name="pfiheading">      نومولود  بچوں کو ماں کا دودھ پلا نا</string>
     <string name="pfi01"> کیا بچہ(نام) کو کبھی ماں کا دودھ پلایا گیا ہے ؟ </string>
     <string name="pfi02"> آپ نے پیدائش کےکتنی دیر بعد پہلی دفعہ (نام) کو اپنا دودھ پلایا؟ </string>
     <string name="pfi02a"> فوری طور پر </string>
@@ -450,7 +450,8 @@
     <string name="pfi17b"> فارمیسی/فارمیسٹ </string>
     <string name="pfi17c"> رشتہ دار </string>
     <string name="pfi18"> کیا(نام) نے گزشتہ دن یا رات کے دوران کوئی وٹامن یا منرل سپلیمنٹ یا کوئی دوائی پی یاکھائی تھی؟ </string>
-    <string name="pfjheading"> Child Morbidity and Care Seeking </string>
+    <string name="pfjheading"> نومولود اور چھوٹے بچوں کی غذا کے بارے میں معلومات </string>
+    <string name="pfkheading"> Child Morbidity and Care Seeking </string>
     <string name="pfj01"> گزشتہ ایک ماہ کے دوران آپ کے بچے کو ان بیماریوں میں سے کوئی بیماری ہوئی؟ </string>
     <string name="pfj01a"> تیز بخار </string>
     <string name="pfj01b"> اسہال </string>
@@ -473,5 +474,17 @@
     <string name="pfj03g"> حکیم </string>
     <string name="pfj03h"> ڈسپینسر/کم پائونڈر </string>
 
+    <string name="pfj04"> بیماری کے علاج کے لئے کون کونسی دواء دی گئی؟ </string>
+    <string name="pfj04a"> نمکول (او آر ایس) </string>
+    <string name="pfj04b">گولیاں یا شربت </string>
+    <string name="pfj04c">اینٹی بائیوٹک </string>
+    <string name="pfj04d">دست روکنے والی ادویات </string>
+    <string name="pfj04e">زنک </string>
+    <string name="pfj04f">نامعلوم گولیاں/شربت </string>
+    <string name="pfj04g">انجکشن </string>
+    <string name="pfj04h">اینٹی بائیوٹک کے علاوہ  </string>
+    <string name="pfj04i">نامعلوم انجکش  </string>
+    <string name="pfj04j">نس کے ذریعہ  </string>
+    <string name="pfj04k"> گھر یلو ادویات یا ہربل ادویات  </string>
 
 </resources>

@@ -38,7 +38,6 @@ public class SectionGActivity extends AppCompatActivity {
 
     private void setupViews() {
 
-
         bi.pfg15.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
@@ -173,107 +172,9 @@ public class SectionGActivity extends AppCompatActivity {
             public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
 
                 if (b) {
-                    bi.pfg09a.setChecked(false);
-                    bi.pfg09b.setChecked(false);
-                    bi.pfg09c.setChecked(false);
-                    bi.pfg09d.setChecked(false);
-                    bi.pfg09e.setChecked(false);
-                    bi.pfg09f.setChecked(false);
-                    bi.pfg09g.setChecked(false);
-                    bi.pfg0996.setChecked(false);
-                    bi.pfg0996x.setText(null);
-                }
-            }
-        });
-
-        bi.pfg09a.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
-
-                if (b) {
-                    bi.pfg09h.setChecked(false);
+                    ClearClass.ClearAllFields(bi.fldgrppfg09a, false);
                 } else {
-                    bi.pfg09h.setChecked(true);
-                }
-            }
-        });
-        bi.pfg09b.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
-
-                if (b) {
-                    bi.pfg09h.setChecked(false);
-                } else {
-                    bi.pfg09h.setChecked(true);
-                }
-            }
-        });
-        bi.pfg09c.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
-
-                if (b) {
-                    bi.pfg09h.setChecked(false);
-                } else {
-                    bi.pfg09h.setChecked(true);
-                }
-            }
-        });
-        bi.pfg09d.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
-
-                if (b) {
-                    bi.pfg09h.setChecked(false);
-                } else {
-                    bi.pfg09h.setChecked(true);
-                }
-            }
-        });
-        bi.pfg09e.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
-
-                if (b) {
-                    bi.pfg09h.setChecked(false);
-                } else {
-                    bi.pfg09h.setChecked(true);
-                }
-            }
-        });
-        bi.pfg09f.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
-
-                if (b) {
-                    bi.pfg09h.setChecked(false);
-                } else {
-                    bi.pfg09h.setChecked(true);
-                }
-            }
-        });
-        bi.pfg09g.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
-
-                if (b) {
-                    bi.pfg09h.setChecked(false);
-                } else {
-                    bi.pfg09h.setChecked(true);
-                }
-            }
-        });
-        bi.pfg0996.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
-
-                if (b) {
-                    bi.pfg09h.setChecked(false);
-                    bi.pfg0996x.setVisibility(View.VISIBLE);
-                } else {
-                    bi.pfg09h.setChecked(true);
-                    bi.pfg0996x.setVisibility(View.GONE);
-                    bi.pfg0996x.setText(null);
+                    ClearClass.ClearAllFields(bi.fldgrppfg09a, true);
                 }
             }
         });
@@ -283,84 +184,23 @@ public class SectionGActivity extends AppCompatActivity {
             public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
 
                 if (b) {
-                    bi.pfg16a.setChecked(false);
-                    bi.pfg16b.setChecked(false);
-                    bi.pfg16c.setChecked(false);
-                    bi.pfg16d.setChecked(false);
-                    bi.pfg16e.setChecked(false);
-                    bi.pfg16f.setChecked(false);
-                    bi.pfg1696.setChecked(false);
-                    bi.pfg1696x.setText(null);
+                    ClearClass.ClearAllFields(bi.fldgrppfg16a, false);
+                } else {
+                    ClearClass.ClearAllFields(bi.fldgrppfg16a, true);
                 }
             }
         });
 
-        bi.pfg16b.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+        bi.pfg06.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
-            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+            public void onCheckedChanged(RadioGroup radioGroup, int i) {
 
-                if (b) {
-                    bi.pfg1698.setChecked(false);
+                if (i == bi.pfg06b.getId()) {
+                    bi.fldgrppfg07.setVisibility(View.GONE);
+                    ClearClass.ClearAllCardFields(bi.fldgrppfg07, false);
                 } else {
-                    bi.pfg1698.setChecked(true);
-                }
-            }
-        });
-        bi.pfg16c.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
-
-                if (b) {
-                    bi.pfg1698.setChecked(false);
-                } else {
-                    bi.pfg1698.setChecked(true);
-                }
-            }
-        });
-        bi.pfg16d.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
-
-                if (b) {
-                    bi.pfg1698.setChecked(false);
-                } else {
-                    bi.pfg1698.setChecked(true);
-                }
-            }
-        });
-        bi.pfg16e.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
-
-                if (b) {
-                    bi.pfg1698.setChecked(false);
-                } else {
-                    bi.pfg1698.setChecked(true);
-                }
-            }
-        });
-        bi.pfg16f.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
-
-                if (b) {
-                    bi.pfg1698.setChecked(false);
-                } else {
-                    bi.pfg1698.setChecked(true);
-                }
-            }
-        });
-        bi.pfg1696.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
-
-                if (b) {
-                    bi.pfg1698.setChecked(false);
-                    bi.pfg1696x.setVisibility(View.VISIBLE);
-                } else {
-                    bi.pfg1698.setChecked(true);
-                    bi.pfg1696x.setVisibility(View.GONE);
-                    bi.pfg1696x.setText(null);
+                    bi.fldgrppfg07.setVisibility(View.VISIBLE);
+                    ClearClass.ClearAllCardFields(bi.fldgrppfg07, true);
                 }
             }
         });
@@ -595,18 +435,26 @@ public class SectionGActivity extends AppCompatActivity {
         if (!validatorClass.EmptyRadioButton(this, bi.pfg06, bi.pfg06a, getString(R.string.pfg06))) {
             return false;
         }
-        if (!validatorClass.EmptyRadioButton(this, bi.pfg07, bi.pfg07a, getString(R.string.pfg07))) {
-            return false;
-        }
-        if (!bi.pfg07c.isChecked()) {
-            if (bi.pfg07a.isChecked()) {
-                if (!validatorClass.EmptyTextBox(this, bi.pfg07ax, getString(R.string.pfg07))) {
-                    return false;
-                }
+        if (!bi.pfg06b.isChecked()) {
+            if (!validatorClass.EmptyRadioButton(this, bi.pfg07, bi.pfg07a, getString(R.string.pfg07))) {
+                return false;
             }
-            if (bi.pfg07b.isChecked()) {
-                if (!validatorClass.EmptyTextBox(this, bi.pfg07bx, getString(R.string.pfg07))) {
-                    return false;
+            if (!bi.pfg07c.isChecked()) {
+                if (bi.pfg07a.isChecked()) {
+                    if (!validatorClass.EmptyTextBox(this, bi.pfg07ax, getString(R.string.pfg07))) {
+                        return false;
+                    }
+                    if (!validatorClass.RangeTextBox(this, bi.pfg07ax, 1.00, 5.50, getString(R.string.pfg07), "Weight")) {
+                        return false;
+                    }
+                }
+                if (bi.pfg07b.isChecked()) {
+                    if (!validatorClass.EmptyTextBox(this, bi.pfg07bx, getString(R.string.pfg07))) {
+                        return false;
+                    }
+                    if (!validatorClass.RangeTextBox(this, bi.pfg07bx, 1.00, 5.50, getString(R.string.pfg07), "Weight")) {
+                        return false;
+                    }
                 }
             }
         }
@@ -664,7 +512,7 @@ public class SectionGActivity extends AppCompatActivity {
                 if (!validatorClass.EmptyTextBox(this, bi.pfg14bx, getString(R.string.pfg14))) {
                     return false;
                 }
-                if (!validatorClass.RangeTextBox(this, bi.pfg14bx, 0, 23, getString(R.string.pfg14), "Hours")) {
+                if (!validatorClass.RangeTextBox(this, bi.pfg14bx, 1, 23, getString(R.string.pfg14), "Hours")) {
                     return false;
                 }
             }
@@ -706,120 +554,11 @@ public class SectionGActivity extends AppCompatActivity {
                 }
             }
             if (bi.pfg179603.isChecked()) {
-                if (!validatorClass.EmptyTextBox(this, bi.pfg179603x, getString(R.string.pfg17))) {
-                    return false;
-                }
+                return validatorClass.EmptyTextBox(this, bi.pfg179603x, getString(R.string.pfg17));
             }
-            if (!validatorClass.EmptyRadioButton(this, bi.pfg18, bi.pfg18a, getString(R.string.pfg18))) {
-                return false;
-            }
-            if (!bi.pfg18b.isChecked()) {
-                if (!validatorClass.EmptyCardCheckBox(this, bi.fldgrppfg19, bi.pfg19a, getString(R.string.pfg19))) {
-                    return false;
-                }
-                if (bi.pfg1996.isChecked()) {
-                    if (!validatorClass.EmptyTextBox(this, bi.pfg1996x, getString(R.string.pfg19))) {
-                        return false;
-                    }
-                }
-                if (!validatorClass.EmptyRadioButton(this, bi.pfg20, bi.pfg20a, getString(R.string.pfg20))) {
-                    return false;
-                }
-                if (!bi.pfg2098.isChecked()) {
-                    if (bi.pfg20a.isChecked()) {
-                        if (!validatorClass.EmptyTextBox(this, bi.pfg20ax, getString(R.string.pfg20))) {
-                            return false;
-                        }
-                        if (!validatorClass.RangeTextBox(this, bi.pfg20ax, 0, 23, getString(R.string.pfg20), "Hours")) {
-                            return false;
-                        }
-                    }
-                    if (bi.pfg20b.isChecked()) {
-                        if (!validatorClass.EmptyTextBox(this, bi.pfg20bx, getString(R.string.pfg20))) {
-                            return false;
-                        }
-                        if (!validatorClass.RangeTextBox(this, bi.pfg20bx, 1, 6, getString(R.string.pfg20), "Days")) {
-                            return false;
-                        }
-                    }
-                    if (bi.pfg20c.isChecked()) {
-                        if (!validatorClass.EmptyTextBox(this, bi.pfg20cx, getString(R.string.pfg20))) {
-                            return false;
-                        }
-                        if (!validatorClass.RangeTextBox(this, bi.pfg20cx, 1, 10, getString(R.string.pfg20), "Weeks")) {
-                            return false;
-                        }
-                    }
-                }
-                if (!validatorClass.EmptyTextBox(this, bi.pfg21, getString(R.string.pfg21))) {
-                    return false;
-                }
-                if (!validatorClass.RangeTextBox(this, bi.pfg21, 1, 5, getString(R.string.pfg21), "Times")) {
-                    return false;
-                }
-
-                if (!validatorClass.EmptyCardCheckBox(this, bi.fldgrppfg22, bi.pfg22a, getString(R.string.pfg22))) {
-                    return false;
-                }
-                if (bi.pfg2296.isChecked()) {
-                    if (!validatorClass.EmptyTextBox(this, bi.pfg2296x, getString(R.string.pfg22))) {
-                        return false;
-                    }
-                }
-
-            }
-            if (!validatorClass.EmptyRadioButton(this, bi.pfg23, bi.pfg23a, getString(R.string.pfg23))) {
-                return false;
-            }
-            if (!bi.pfg23b.isChecked()) {
-                if (!validatorClass.EmptyCardCheckBox(this, bi.fldgrppfg24, bi.pfg24a, getString(R.string.pfg24))) {
-                    return false;
-                }
-                if (bi.pfg2496.isChecked()) {
-                    if (!validatorClass.EmptyTextBox(this, bi.pfg2496x, getString(R.string.pfg24))) {
-                        return false;
-                    }
-                }
-                if (!validatorClass.EmptyRadioButton(this, bi.pfg25, bi.pfg25a, getString(R.string.pfg25))) {
-                    return false;
-                }
-                if (!bi.pfg2598.isChecked()) {
-                    if (bi.pfg25a.isChecked()) {
-                        if (!validatorClass.EmptyTextBox(this, bi.pfg25ax, getString(R.string.pfg25))) {
-                            return false;
-                        }
-                        if (!validatorClass.RangeTextBox(this, bi.pfg25ax, 0, 23, getString(R.string.pfg25), "Hours")) {
-                            return false;
-                        }
-                    }
-                    if (bi.pfg25b.isChecked()) {
-                        if (!validatorClass.EmptyTextBox(this, bi.pfg25bx, getString(R.string.pfg25))) {
-                            return false;
-                        }
-                        if (!validatorClass.RangeTextBox(this, bi.pfg25bx, 1, 6, getString(R.string.pfg25), "Days")) {
-                            return false;
-                        }
-                    }
-                    if (bi.pfg25c.isChecked()) {
-                        if (!validatorClass.EmptyTextBox(this, bi.pfg25cx, getString(R.string.pfg25))) {
-                            return false;
-                        }
-                        if (!validatorClass.RangeTextBox(this, bi.pfg25cx, 1, 10, getString(R.string.pfg25), "Weeks")) {
-                            return false;
-                        }
-                    }
-                }
-                if (!validatorClass.EmptyCardCheckBox(this, bi.fldgrppfg26, bi.pfg26a, getString(R.string.pfg26))) {
-                    return false;
-                }
-                if (bi.pfg2696.isChecked()) {
-                    return validatorClass.EmptyTextBox(this, bi.pfg2696x, getString(R.string.pfg26));
-                }
-
-            }
-
 
         }
+
 
 
         return true;

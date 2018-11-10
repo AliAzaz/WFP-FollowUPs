@@ -30,7 +30,7 @@ public class SectionJActivity extends AppCompatActivity {
         bi = DataBindingUtil.setContentView(this, R.layout.activity_section_j);
         bi.setCallback(this);
 
-        this.setTitle(getString(R.string.pfjheading));
+        this.setTitle(getString(R.string.pfkheading));
         validatorClass.setScrollViewFocus(bi.scrollview);
 
         setupViews();
@@ -49,6 +49,8 @@ public class SectionJActivity extends AppCompatActivity {
                     ClearClass.ClearAllCardFields(bi.fldgrppfj02, false);
                     bi.fldgrppfj03.setVisibility(View.GONE);
                     ClearClass.ClearAllCardFields(bi.fldgrppfj03, false);
+                    bi.fldgrppfj04.setVisibility(View.GONE);
+                    ClearClass.ClearAllCardFields(bi.fldgrppfj04, false);
                     bi.pfj0101.clearCheck();
                     bi.pfj0102.clearCheck();
                     bi.pfj0103.clearCheck();
@@ -83,8 +85,10 @@ public class SectionJActivity extends AppCompatActivity {
                 } else {
                     bi.fldgrppfj02.setVisibility(View.VISIBLE);
                     bi.fldgrppfj03.setVisibility(View.VISIBLE);
+                    bi.fldgrppfj04.setVisibility(View.VISIBLE);
                     ClearClass.ClearAllCardFields(bi.fldgrppfj02, true);
                     ClearClass.ClearAllCardFields(bi.fldgrppfj03, true);
+                    ClearClass.ClearAllCardFields(bi.fldgrppfj04, true);
 
                 }
             }
@@ -98,10 +102,14 @@ public class SectionJActivity extends AppCompatActivity {
                 if (i == R.id.pfj02b) {
                     bi.fldgrppfj03.setVisibility(View.GONE);
                     ClearClass.ClearAllCardFields(bi.fldgrppfj03, false);
+                    bi.fldgrppfj04.setVisibility(View.GONE);
+                    ClearClass.ClearAllCardFields(bi.fldgrppfj04, false);
                     bi.pfj03ix.setText(null);
                 } else {
                     bi.fldgrppfj03.setVisibility(View.VISIBLE);
                     ClearClass.ClearAllCardFields(bi.fldgrppfj03, true);
+                    bi.fldgrppfj04.setVisibility(View.VISIBLE);
+                    ClearClass.ClearAllCardFields(bi.fldgrppfj04, true);
                 }
             }
         });
@@ -154,6 +162,20 @@ public class SectionJActivity extends AppCompatActivity {
         sJ.put("pfj03h", bi.pfj03h.isChecked() ? "8" : "0");
         sJ.put("pfj03i", bi.pfj03i.isChecked() ? "96" : "0");
         sJ.put("pfj03i96", bi.pfj03ix.getText().toString());
+
+        sJ.put("pfj04a", bi.pfj04a.isChecked() ? "1" : "0");
+        sJ.put("pfj04b", bi.pfj04b.isChecked() ? "2" : "0");
+        sJ.put("pfj04c", bi.pfj04c.isChecked() ? "3" : "0");
+        sJ.put("pfj04d", bi.pfj04d.isChecked() ? "4" : "0");
+        sJ.put("pfj04e", bi.pfj04e.isChecked() ? "5" : "0");
+        sJ.put("pfj04f", bi.pfj04f.isChecked() ? "6" : "0");
+        sJ.put("pfj04g", bi.pfj04g.isChecked() ? "7" : "0");
+        sJ.put("pfj04h", bi.pfj04h.isChecked() ? "8" : "0");
+        sJ.put("pfj04i", bi.pfj04i.isChecked() ? "9" : "0");
+        sJ.put("pfj04j", bi.pfj04j.isChecked() ? "10" : "0");
+        sJ.put("pfj04k", bi.pfj04k.isChecked() ? "11" : "0");
+        sJ.put("pfj0496", bi.pfj0496.isChecked() ? "96" : "0");
+        sJ.put("pfj0496x", bi.pfj0496x.getText().toString());
 
         AppMain.fc.setsJ(String.valueOf(sJ));
     }
@@ -216,7 +238,15 @@ public class SectionJActivity extends AppCompatActivity {
                     return false;
                 }
                 if (bi.pfj03i.isChecked()) {
-                    return validatorClass.EmptyTextBox(this, bi.pfj03ix, getString(R.string.pfj03));
+                    if (!validatorClass.EmptyTextBox(this, bi.pfj03ix, getString(R.string.pfj03))) {
+                        return false;
+                    }
+                }
+                if (!validatorClass.EmptyCardCheckBox(this, bi.fldgrppfj04, bi.pfj04a, getString(R.string.pfj04))) {
+                    return false;
+                }
+                if (bi.pfj0496.isChecked()) {
+                    return validatorClass.EmptyTextBox(this, bi.pfj0496x, getString(R.string.pfj04));
                 }
             }
 
