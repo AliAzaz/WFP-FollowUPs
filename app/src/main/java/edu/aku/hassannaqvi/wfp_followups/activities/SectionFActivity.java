@@ -296,7 +296,6 @@ public class SectionFActivity extends AppCompatActivity {
         });
 
 
-
     }
 
     public void BtnContinue() {
@@ -310,7 +309,10 @@ public class SectionFActivity extends AppCompatActivity {
 
             if (UpdateDB()) {
 
-                startActivity(new Intent(this, SectionGActivity.class)
+                startActivity(new Intent(this,
+                        SectionBActivity.currentlyPR == 2 ||
+                                (SectionBActivity.currentlyPR < 5 && SectionBActivity.currentlyPR > 0 && !InfoActivity.enrolledParticipant.getFupround().equals("1"))
+                                ? SectionIActivity.class : SectionGActivity.class)
                         .putExtra("complete", true));
                 finish();
             }

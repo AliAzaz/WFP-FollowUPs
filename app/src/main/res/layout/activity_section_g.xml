@@ -278,7 +278,6 @@
             </android.support.v7.widget.CardView>
 
             <!--Q07-->
-
             <android.support.v7.widget.CardView
                 android:id="@+id/fldgrppfg07"
                 android:layout_width="match_parent"
@@ -482,7 +481,6 @@
             </android.support.v7.widget.CardView>
 
             <!--Q09-->
-
             <android.support.v7.widget.CardView
                 android:id="@+id/fldgrppfg09"
                 android:layout_width="match_parent"
@@ -1110,137 +1108,129 @@
             </android.support.v7.widget.CardView>
 
             <!--Q16-->
-            <android.support.v7.widget.CardView
-                android:id="@+id/fldgrppfg16"
+            <LinearLayout
+                android:id="@+id/fldGrppfg16T18"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:elevation="10dp">
+                android:orientation="vertical"
+                android:visibility="@{pfg15a.checked? View.VISIBLE : View.GONE}">
 
-                <LinearLayout
+                <android.support.v7.widget.CardView
+                    android:id="@+id/fldgrppfg16"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_horizontal"
-                        android:background="@color/colorPrimaryDark"
-                        android:text="@string/pfg16"
-                        android:textColor="@color/white" />
+                    android:layout_marginTop="10dp"
+                    android:elevation="10dp">
 
                     <LinearLayout
-                        android:id="@+id/fldgrppfg16a"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="vertical">
 
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:background="@color/colorPrimaryDark"
+                            android:text="@string/pfg16"
+                            android:textColor="@color/white" />
+
+                        <LinearLayout
+                            android:id="@+id/fldgrppfg16a"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <CheckBox
+                                android:id="@+id/pfg16a"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="1dp"
+                                android:layout_weight="1"
+                                android:text="@string/pfg16a" />
+
+                            <CheckBox
+                                android:id="@+id/pfg16b"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="1dp"
+                                android:layout_weight="1"
+                                android:text="@string/pfg16b" />
+
+                            <CheckBox
+                                android:id="@+id/pfg16c"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="1dp"
+                                android:layout_weight="1"
+                                android:text="@string/pfg16c" />
+
+                            <CheckBox
+                                android:id="@+id/pfg16d"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="1dp"
+                                android:layout_weight="1"
+                                android:text="@string/pfg16d" />
+
+                            <CheckBox
+                                android:id="@+id/pfg16e"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="1dp"
+                                android:layout_weight="1"
+                                android:text="@string/pfg16e" />
+
+                            <CheckBox
+                                android:id="@+id/pfg16f"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="1dp"
+                                android:layout_weight="1"
+                                android:text="@string/pfg16f" />
+
+                            <CheckBox
+                                android:id="@+id/pfg1696"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="1dp"
+                                android:layout_weight="1"
+                                android:text="@string/other" />
+
+                            <EditText
+                                android:id="@+id/pfg1696x"
+                                style="@style/textInput"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="10dp"
+                                android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz"
+                                android:hint="@string/other"
+                                android:text='@{pfg1696.checked? pfg1696x.getText.toString : ""}'
+                                android:visibility='@{pfg1696.checked? View.VISIBLE: View.GONE}' />
+
+                        </LinearLayout>
+
+
                         <CheckBox
-                            android:id="@+id/pfg16a"
+                            android:id="@+id/pfg1698"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginBottom="1dp"
                             android:layout_weight="1"
-                            android:text="@string/pfg16a" />
-
-                        <CheckBox
-                            android:id="@+id/pfg16b"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginBottom="1dp"
-                            android:layout_weight="1"
-                            android:text="@string/pfg16b" />
-
-                        <CheckBox
-                            android:id="@+id/pfg16c"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginBottom="1dp"
-                            android:layout_weight="1"
-                            android:text="@string/pfg16c" />
-
-                        <CheckBox
-                            android:id="@+id/pfg16d"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginBottom="1dp"
-                            android:layout_weight="1"
-                            android:text="@string/pfg16d" />
-
-                        <CheckBox
-                            android:id="@+id/pfg16e"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginBottom="1dp"
-                            android:layout_weight="1"
-                            android:text="@string/pfg16e" />
-
-                        <CheckBox
-                            android:id="@+id/pfg16f"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginBottom="1dp"
-                            android:layout_weight="1"
-                            android:text="@string/pfg16f" />
-
-                        <CheckBox
-                            android:id="@+id/pfg1696"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginBottom="1dp"
-                            android:layout_weight="1"
-                            android:text="@string/other" />
-
-                        <EditText
-                            android:id="@+id/pfg1696x"
-                            style="@style/textInput"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_margin="10dp"
-                            android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz"
-                            android:hint="@string/other"
-                            android:text='@{pfg1696.checked? pfg1696x.getText.toString : ""}'
-                            android:visibility='@{pfg1696.checked? View.VISIBLE: View.GONE}' />
+                            android:text="@string/dkn" />
 
                     </LinearLayout>
+                </android.support.v7.widget.CardView>
 
-
-                    <CheckBox
-                        android:id="@+id/pfg1698"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginBottom="1dp"
-                        android:layout_weight="1"
-                        android:text="@string/dkn" />
-
-                </LinearLayout>
-            </android.support.v7.widget.CardView>
-
-            <!--Q17-->
-
-            <android.support.v7.widget.CardView
-                android:id="@+id/fldgrppfg17"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:elevation="10dp">
-
-                <LinearLayout
+                <!--Q17-->
+                <android.support.v7.widget.CardView
+                    android:id="@+id/fldgrppfg17"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical">
+                    android:layout_marginTop="10dp"
+                    android:elevation="10dp">
 
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_horizontal"
-                        android:background="@color/colorPrimaryDark"
-                        android:text="@string/pfg17"
-                        android:textColor="@color/white" />
-
-                    <RadioGroup
-                        android:id="@+id/pfg17"
+                    <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="vertical">
@@ -1249,237 +1239,253 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_horizontal"
-                            android:background="@color/colorPrimary"
-                            android:text="@string/pfg17sub"
+                            android:background="@color/colorPrimaryDark"
+                            android:text="@string/pfg17"
                             android:textColor="@color/white" />
 
-                        <RadioButton
-                            android:id="@+id/pfg17a"
+                        <RadioGroup
+                            android:id="@+id/pfg17"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_marginBottom="1dp"
-                            android:layout_weight="1"
-                            android:text="@string/pfg17a" />
+                            android:orientation="vertical">
 
-                        <RadioButton
-                            android:id="@+id/pfg17b"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginBottom="1dp"
-                            android:layout_weight="1"
-                            android:text="@string/pfg17b" />
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:background="@color/colorPrimary"
+                                android:text="@string/pfg17sub"
+                                android:textColor="@color/white" />
 
-                        <RadioButton
-                            android:id="@+id/pfg17c"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginBottom="1dp"
-                            android:layout_weight="1"
-                            android:text="@string/pfg17c" />
+                            <RadioButton
+                                android:id="@+id/pfg17a"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="1dp"
+                                android:layout_weight="1"
+                                android:text="@string/pfg17a" />
 
-                        <RadioButton
-                            android:id="@+id/pfg17d"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginBottom="1dp"
-                            android:layout_weight="1"
-                            android:text="@string/pfg17d" />
+                            <RadioButton
+                                android:id="@+id/pfg17b"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="1dp"
+                                android:layout_weight="1"
+                                android:text="@string/pfg17b" />
 
-                        <RadioButton
-                            android:id="@+id/pfg17e"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginBottom="1dp"
-                            android:layout_weight="1"
-                            android:text="@string/pfg17e" />
+                            <RadioButton
+                                android:id="@+id/pfg17c"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="1dp"
+                                android:layout_weight="1"
+                                android:text="@string/pfg17c" />
 
-                        <RadioButton
-                            android:id="@+id/pfg1796"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginBottom="1dp"
-                            android:layout_weight="1"
-                            android:text="@string/other" />
+                            <RadioButton
+                                android:id="@+id/pfg17d"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="1dp"
+                                android:layout_weight="1"
+                                android:text="@string/pfg17d" />
 
-                        <EditText
-                            android:id="@+id/pfg1796x"
-                            style="@style/textInput"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_margin="10dp"
-                            android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz"
-                            android:hint="@string/other"
-                            android:text='@{pfg1796.checked? pfg1796x.getText.toString : "" }'
-                            android:visibility='@{pfg1796.checked? View.VISIBLE : View.GONE}' />
+                            <RadioButton
+                                android:id="@+id/pfg17e"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="1dp"
+                                android:layout_weight="1"
+                                android:text="@string/pfg17e" />
 
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center_horizontal"
-                            android:background="@color/colorPrimary"
-                            android:text="@string/pfg17sub1"
-                            android:textColor="@color/white" />
+                            <RadioButton
+                                android:id="@+id/pfg1796"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="1dp"
+                                android:layout_weight="1"
+                                android:text="@string/other" />
 
-                        <RadioButton
-                            android:id="@+id/pfg17f"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginBottom="1dp"
-                            android:layout_weight="1"
-                            android:text="@string/pfg17f" />
+                            <EditText
+                                android:id="@+id/pfg1796x"
+                                style="@style/textInput"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="10dp"
+                                android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz"
+                                android:hint="@string/other"
+                                android:text='@{pfg1796.checked? pfg1796x.getText.toString : "" }'
+                                android:visibility='@{pfg1796.checked? View.VISIBLE : View.GONE}' />
 
-                        <RadioButton
-                            android:id="@+id/pfg17g"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginBottom="1dp"
-                            android:layout_weight="1"
-                            android:text="@string/pfg17g" />
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:background="@color/colorPrimary"
+                                android:text="@string/pfg17sub1"
+                                android:textColor="@color/white" />
 
-                        <RadioButton
-                            android:id="@+id/pfg17h"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginBottom="1dp"
-                            android:layout_weight="1"
-                            android:text="@string/pfg17h" />
+                            <RadioButton
+                                android:id="@+id/pfg17f"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="1dp"
+                                android:layout_weight="1"
+                                android:text="@string/pfg17f" />
 
-                        <RadioButton
-                            android:id="@+id/pfg17i"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginBottom="1dp"
-                            android:layout_weight="1"
-                            android:text="@string/pfg17i" />
+                            <RadioButton
+                                android:id="@+id/pfg17g"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="1dp"
+                                android:layout_weight="1"
+                                android:text="@string/pfg17g" />
 
-                        <RadioButton
-                            android:id="@+id/pfg17j"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginBottom="1dp"
-                            android:layout_weight="1"
-                            android:text="@string/pfg17j" />
+                            <RadioButton
+                                android:id="@+id/pfg17h"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="1dp"
+                                android:layout_weight="1"
+                                android:text="@string/pfg17h" />
 
-                        <RadioButton
-                            android:id="@+id/pfg179602"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginBottom="1dp"
-                            android:layout_weight="1"
-                            android:text="@string/other" />
+                            <RadioButton
+                                android:id="@+id/pfg17i"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="1dp"
+                                android:layout_weight="1"
+                                android:text="@string/pfg17i" />
 
-                        <EditText
-                            android:id="@+id/pfg179602x"
-                            style="@style/textInput"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_margin="10dp"
-                            android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz"
-                            android:hint="@string/other"
-                            android:text='@{pfg179602.checked? pfg179602x.getText.toString : "" }'
-                            android:visibility='@{pfg179602.checked? View.VISIBLE : View.GONE}' />
+                            <RadioButton
+                                android:id="@+id/pfg17j"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="1dp"
+                                android:layout_weight="1"
+                                android:text="@string/pfg17j" />
 
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center_horizontal"
-                            android:background="@color/colorPrimary"
-                            android:text="@string/pfg17sub2"
-                            android:textColor="@color/white" />
+                            <RadioButton
+                                android:id="@+id/pfg179602"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="1dp"
+                                android:layout_weight="1"
+                                android:text="@string/other" />
 
-                        <RadioButton
-                            android:id="@+id/pfg17k"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginBottom="1dp"
-                            android:layout_weight="1"
-                            android:text="@string/pfg17k" />
+                            <EditText
+                                android:id="@+id/pfg179602x"
+                                style="@style/textInput"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="10dp"
+                                android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz"
+                                android:hint="@string/other"
+                                android:text='@{pfg179602.checked? pfg179602x.getText.toString : "" }'
+                                android:visibility='@{pfg179602.checked? View.VISIBLE : View.GONE}' />
 
-                        <RadioButton
-                            android:id="@+id/pfg17l"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginBottom="1dp"
-                            android:layout_weight="1"
-                            android:text="@string/pfg17l" />
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:background="@color/colorPrimary"
+                                android:text="@string/pfg17sub2"
+                                android:textColor="@color/white" />
 
-                        <RadioButton
-                            android:id="@+id/pfg17m"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginBottom="1dp"
-                            android:layout_weight="1"
-                            android:text="@string/pfg17m" />
+                            <RadioButton
+                                android:id="@+id/pfg17k"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="1dp"
+                                android:layout_weight="1"
+                                android:text="@string/pfg17k" />
 
-                        <RadioButton
-                            android:id="@+id/pfg179603"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginBottom="1dp"
-                            android:layout_weight="1"
-                            android:text="@string/other" />
+                            <RadioButton
+                                android:id="@+id/pfg17l"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="1dp"
+                                android:layout_weight="1"
+                                android:text="@string/pfg17l" />
 
-                        <EditText
-                            android:id="@+id/pfg179603x"
-                            style="@style/textInput"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_margin="10dp"
-                            android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz"
-                            android:hint="@string/other"
-                            android:text='@{pfg179603.checked? pfg179603x.getText.toString : "" }'
-                            android:visibility='@{pfg179603.checked? View.VISIBLE : View.GONE}' />
+                            <RadioButton
+                                android:id="@+id/pfg17m"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="1dp"
+                                android:layout_weight="1"
+                                android:text="@string/pfg17m" />
 
-                    </RadioGroup>
-                </LinearLayout>
-            </android.support.v7.widget.CardView>
+                            <RadioButton
+                                android:id="@+id/pfg179603"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="1dp"
+                                android:layout_weight="1"
+                                android:text="@string/other" />
 
-            <!--Q18-->
-            <android.support.v7.widget.CardView
-                android:id="@+id/fldgrppfg18"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:elevation="10dp">
+                            <EditText
+                                android:id="@+id/pfg179603x"
+                                style="@style/textInput"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="10dp"
+                                android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz"
+                                android:hint="@string/other"
+                                android:text='@{pfg179603.checked? pfg179603x.getText.toString : "" }'
+                                android:visibility='@{pfg179603.checked? View.VISIBLE : View.GONE}' />
 
-                <LinearLayout
+                        </RadioGroup>
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+
+                <!--Q18-->
+                <android.support.v7.widget.CardView
+                    android:id="@+id/fldgrppfg18"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical">
+                    android:layout_marginTop="10dp"
+                    android:elevation="10dp">
 
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_horizontal"
-                        android:background="@color/colorPrimaryDark"
-                        android:text="@string/pfg18"
-                        android:textColor="@color/white" />
-
-                    <RadioGroup
-                        android:id="@+id/pfg18"
+                    <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="vertical">
 
-                        <RadioButton
-                            android:id="@+id/pfg18a"
+                        <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_marginBottom="1dp"
-                            android:layout_weight="1"
-                            android:text="@string/yes" />
+                            android:layout_gravity="center_horizontal"
+                            android:background="@color/colorPrimaryDark"
+                            android:text="@string/pfg18"
+                            android:textColor="@color/white" />
 
-                        <RadioButton
-                            android:id="@+id/pfg18b"
+                        <RadioGroup
+                            android:id="@+id/pfg18"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_marginBottom="1dp"
-                            android:layout_weight="1"
-                            android:text="@string/no" />
+                            android:orientation="vertical">
 
-                    </RadioGroup>
-                </LinearLayout>
-            </android.support.v7.widget.CardView>
+                            <RadioButton
+                                android:id="@+id/pfg18a"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="1dp"
+                                android:layout_weight="1"
+                                android:text="@string/yes" />
+
+                            <RadioButton
+                                android:id="@+id/pfg18b"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="1dp"
+                                android:layout_weight="1"
+                                android:text="@string/no" />
+
+                        </RadioGroup>
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+
+            </LinearLayout>
 
             <!--Q19-->
             <android.support.v7.widget.CardView
@@ -1581,7 +1587,6 @@
             </android.support.v7.widget.CardView>
 
             <!--Q20-->
-
             <android.support.v7.widget.CardView
                 android:id="@+id/fldgrppfg20"
                 android:layout_width="match_parent"
@@ -1718,7 +1723,6 @@
             </android.support.v7.widget.CardView>
 
             <!--Q22-->
-
             <android.support.v7.widget.CardView
                 android:id="@+id/fldgrppfg22"
                 android:layout_width="match_parent"
@@ -1971,9 +1975,7 @@
                 </LinearLayout>
             </android.support.v7.widget.CardView>
 
-
             <!--Q25-->
-
             <android.support.v7.widget.CardView
                 android:id="@+id/fldgrppfg25"
                 android:layout_width="match_parent"
@@ -2158,7 +2160,6 @@
 
                 </LinearLayout>
             </android.support.v7.widget.CardView>
-
 
             <!--===================== Ending Button===================-->
 

@@ -66,6 +66,8 @@ public class InfoActivity extends Activity {
 //    LinearLayout fldGrpParticipant;
     int position;
 
+    public static boolean flagLM = false;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -267,6 +269,8 @@ public class InfoActivity extends Activity {
 
         sInfo.put(AppMain.formType + "a04", bi.pfa04a.isChecked() ? "1" : bi.pfa04b.isChecked() ? "2" : "0");
         sInfo.put(AppMain.formType + "a06", bi.pfa06a.isChecked() ? "1" : bi.pfa06b.isChecked() ? "2" : "0");
+
+        flagLM = bi.pfa04b.isChecked();
 
         AppMain.fc.setsInfo(String.valueOf(sInfo));
 

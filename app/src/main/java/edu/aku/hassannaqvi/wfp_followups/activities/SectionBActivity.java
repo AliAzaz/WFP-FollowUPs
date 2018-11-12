@@ -24,6 +24,8 @@ public class SectionBActivity extends AppCompatActivity {
 
     ActivitySectionBBinding bi;
 
+    public static int currentlyPR;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -40,6 +42,7 @@ public class SectionBActivity extends AppCompatActivity {
     private void setupViews() {
 
         bi.pfb04.setManager(getSupportFragmentManager());
+        bi.pfb04.setMinDate(AppMain.convertDateFormat(InfoActivity.enrolledParticipant.getFupdt()));
         bi.pfb04.setMaxDate(new SimpleDateFormat("dd/MM/yyyy").format(System.currentTimeMillis()));
 
 //        Get check from prv activity
@@ -103,6 +106,8 @@ public class SectionBActivity extends AppCompatActivity {
         sB.put("pfb02", bi.pfb02a.isChecked() ? "1" : bi.pfb02b.isChecked() ? "2" : bi.pfb02c.isChecked() ? "3" : bi.pfb02d.isChecked() ? "4" : bi.pfb02e.isChecked() ? "5" : bi.pfb02f.isChecked() ? "6" : "0");
         sB.put("pfb03", bi.pfb03.getText().toString());
         sB.put("pfb04", bi.pfb04.getText().toString());
+
+        currentlyPR = bi.pfb02a.isChecked() ? 1 : bi.pfb02b.isChecked() ? 2 : bi.pfb02c.isChecked() ? 3 : bi.pfb02d.isChecked() ? 4 : bi.pfb02e.isChecked() ? 5 : bi.pfb02f.isChecked() ? 6 : 0;
 
         AppMain.fc.setsB(String.valueOf(sB));
 

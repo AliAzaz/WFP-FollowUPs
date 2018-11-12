@@ -5,6 +5,7 @@ import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.RadioGroup;
 import android.widget.Toast;
@@ -43,56 +44,58 @@ public class SectionGActivity extends AppCompatActivity {
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
 
                 if (i != R.id.pfg15a) {
-                    bi.fldgrppfg16.setVisibility(View.GONE);
-                    ClearClass.ClearAllCardFields(bi.fldgrppfg16, false);
-                    bi.fldgrppfg17.setVisibility(View.GONE);
-                    ClearClass.ClearAllCardFields(bi.fldgrppfg17, false);
-                    bi.fldgrppfg18.setVisibility(View.GONE);
-                    ClearClass.ClearAllCardFields(bi.fldgrppfg18, false);
-                    bi.fldgrppfg19.setVisibility(View.GONE);
-                    ClearClass.ClearAllCardFields(bi.fldgrppfg19, false);
-                    bi.fldgrppfg20.setVisibility(View.GONE);
-                    ClearClass.ClearAllCardFields(bi.fldgrppfg20, false);
-                    bi.fldgrppfg21.setVisibility(View.GONE);
-                    ClearClass.ClearAllCardFields(bi.fldgrppfg21, false);
-                    bi.fldgrppfg22.setVisibility(View.GONE);
-                    ClearClass.ClearAllCardFields(bi.fldgrppfg22, false);
-                    bi.fldgrppfg23.setVisibility(View.GONE);
-                    ClearClass.ClearAllCardFields(bi.fldgrppfg23, false);
-                    bi.fldgrppfg24.setVisibility(View.GONE);
-                    ClearClass.ClearAllCardFields(bi.fldgrppfg24, false);
-                    bi.fldgrppfg25.setVisibility(View.GONE);
-                    ClearClass.ClearAllCardFields(bi.fldgrppfg25, false);
-                    bi.fldgrppfg26.setVisibility(View.GONE);
-                    ClearClass.ClearAllCardFields(bi.fldgrppfg26, false);
-                } else {
-
-                    bi.fldgrppfg16.setVisibility(View.VISIBLE);
-                    ClearClass.ClearAllCardFields(bi.fldgrppfg16, true);
-                    bi.fldgrppfg17.setVisibility(View.VISIBLE);
-                    ClearClass.ClearAllCardFields(bi.fldgrppfg17, true);
-                    bi.fldgrppfg18.setVisibility(View.VISIBLE);
-                    ClearClass.ClearAllCardFields(bi.fldgrppfg18, true);
-                    bi.fldgrppfg19.setVisibility(View.VISIBLE);
-                    ClearClass.ClearAllCardFields(bi.fldgrppfg19, true);
-                    bi.fldgrppfg20.setVisibility(View.VISIBLE);
-                    ClearClass.ClearAllCardFields(bi.fldgrppfg20, true);
-                    bi.fldgrppfg21.setVisibility(View.VISIBLE);
-                    ClearClass.ClearAllCardFields(bi.fldgrppfg21, true);
-                    bi.fldgrppfg22.setVisibility(View.VISIBLE);
-                    ClearClass.ClearAllCardFields(bi.fldgrppfg22, true);
-                    bi.fldgrppfg23.setVisibility(View.VISIBLE);
-                    ClearClass.ClearAllCardFields(bi.fldgrppfg23, true);
-                    bi.fldgrppfg24.setVisibility(View.VISIBLE);
-                    ClearClass.ClearAllCardFields(bi.fldgrppfg24, true);
-                    bi.fldgrppfg25.setVisibility(View.VISIBLE);
-                    ClearClass.ClearAllCardFields(bi.fldgrppfg25, true);
-                    bi.fldgrppfg26.setVisibility(View.VISIBLE);
-                    ClearClass.ClearAllCardFields(bi.fldgrppfg26, true);
-
+                    ClearClass.ClearAllFields(bi.fldGrppfg16T18, true);
                 }
             }
         });
+
+        CheckBox.OnCheckedChangeListener chbx16 = new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+                if (bi.pfg1698.isChecked()) {
+                    bi.pfg16a.setChecked(false);
+                    bi.pfg16a.setEnabled(false);
+                    bi.pfg16b.setChecked(false);
+                    bi.pfg16b.setEnabled(false);
+                    bi.pfg16c.setChecked(false);
+                    bi.pfg16c.setEnabled(false);
+                    bi.pfg16d.setChecked(false);
+                    bi.pfg16d.setEnabled(false);
+                    bi.pfg16e.setChecked(false);
+                    bi.pfg16e.setEnabled(false);
+                    bi.pfg16f.setChecked(false);
+                    bi.pfg16f.setEnabled(false);
+                    bi.pfg1696.setChecked(false);
+                    bi.pfg1696.setEnabled(false);
+                } else {
+                    bi.pfg16a.setEnabled(true);
+                    bi.pfg16b.setEnabled(true);
+                    bi.pfg16c.setEnabled(true);
+                    bi.pfg16d.setEnabled(true);
+                    bi.pfg16e.setEnabled(true);
+                    bi.pfg16f.setEnabled(true);
+                    bi.pfg1696.setEnabled(true);
+                }
+
+                if (bi.pfg16a.isChecked()) {
+                    bi.fldgrppfg17.setVisibility(View.VISIBLE);
+                } else {
+                    bi.fldgrppfg17.setVisibility(View.GONE);
+                    ClearClass.ClearAllCardFields(bi.fldgrppfg17, true);
+                }
+
+            }
+        };
+
+        bi.pfg16a.setOnCheckedChangeListener(chbx16);
+        bi.pfg16b.setOnCheckedChangeListener(chbx16);
+        bi.pfg16c.setOnCheckedChangeListener(chbx16);
+        bi.pfg16d.setOnCheckedChangeListener(chbx16);
+        bi.pfg16e.setOnCheckedChangeListener(chbx16);
+        bi.pfg16f.setOnCheckedChangeListener(chbx16);
+        bi.pfg1696.setOnCheckedChangeListener(chbx16);
+        bi.pfg1698.setOnCheckedChangeListener(chbx16);
+
 
         bi.pfg18.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
@@ -221,8 +224,7 @@ public class SectionGActivity extends AppCompatActivity {
 
             if (UpdateDB()) {
 
-                startActivity(new Intent(this, SectionHActivity.class)
-                        .putExtra("complete", true));
+                startActivity(new Intent(this, SectionHActivity.class));
                 finish();
             }
         }
@@ -540,25 +542,136 @@ public class SectionGActivity extends AppCompatActivity {
                     }
                 }
             }
-            if (!validatorClass.EmptyRadioButton(this, bi.pfg17, bi.pfg17a, getString(R.string.pfg17))) {
-                return false;
-            }
-            if (bi.pfg1796.isChecked()) {
-                if (!validatorClass.EmptyTextBox(this, bi.pfg1796x, getString(R.string.pfg17))) {
+
+            if (bi.pfg16a.isChecked()) {
+                if (!validatorClass.EmptyRadioButton(this, bi.pfg17, bi.pfg17a, getString(R.string.pfg17))) {
                     return false;
                 }
-            }
-            if (bi.pfg179602.isChecked()) {
-                if (!validatorClass.EmptyTextBox(this, bi.pfg179602x, getString(R.string.pfg17))) {
-                    return false;
+                if (bi.pfg1796.isChecked()) {
+                    if (!validatorClass.EmptyTextBox(this, bi.pfg1796x, getString(R.string.pfg17))) {
+                        return false;
+                    }
                 }
-            }
-            if (bi.pfg179603.isChecked()) {
-                return validatorClass.EmptyTextBox(this, bi.pfg179603x, getString(R.string.pfg17));
+                if (bi.pfg179602.isChecked()) {
+                    if (!validatorClass.EmptyTextBox(this, bi.pfg179602x, getString(R.string.pfg17))) {
+                        return false;
+                    }
+                }
+                if (bi.pfg179603.isChecked()) {
+                    return validatorClass.EmptyTextBox(this, bi.pfg179603x, getString(R.string.pfg17));
+                }
             }
 
         }
 
+        if (!validatorClass.EmptyRadioButton(this, bi.pfg18, bi.pfg18a, getString(R.string.pfg18))) {
+            return false;
+        }
+        if (!bi.pfg18b.isChecked()) {
+            if (!validatorClass.EmptyCardCheckBox(this, bi.fldgrppfg19, bi.pfg19a, getString(R.string.pfg19))) {
+                return false;
+            }
+            if (bi.pfg1996.isChecked()) {
+                if (!validatorClass.EmptyTextBox(this, bi.pfg1996x, getString(R.string.pfg19))) {
+                    return false;
+                }
+            }
+            if (!validatorClass.EmptyRadioButton(this, bi.pfg20, bi.pfg20a, getString(R.string.pfg20))) {
+                return false;
+            }
+            if (!bi.pfg2098.isChecked()) {
+                if (bi.pfg20a.isChecked()) {
+                    if (!validatorClass.EmptyTextBox(this, bi.pfg20ax, getString(R.string.pfg20))) {
+                        return false;
+                    }
+                    if (!validatorClass.RangeTextBox(this, bi.pfg20ax, 0, 23, getString(R.string.pfg20), "Hours")) {
+                        return false;
+                    }
+                }
+                if (bi.pfg20b.isChecked()) {
+                    if (!validatorClass.EmptyTextBox(this, bi.pfg20bx, getString(R.string.pfg20))) {
+                        return false;
+                    }
+                    if (!validatorClass.RangeTextBox(this, bi.pfg20bx, 1, 6, getString(R.string.pfg20), "Days")) {
+                        return false;
+                    }
+                }
+                if (bi.pfg20c.isChecked()) {
+                    if (!validatorClass.EmptyTextBox(this, bi.pfg20cx, getString(R.string.pfg20))) {
+                        return false;
+                    }
+                    if (!validatorClass.RangeTextBox(this, bi.pfg20cx, 1, 10, getString(R.string.pfg20), "Weeks")) {
+                        return false;
+                    }
+                }
+            }
+            if (!validatorClass.EmptyTextBox(this, bi.pfg21, getString(R.string.pfg21))) {
+                return false;
+            }
+            if (!validatorClass.RangeTextBox(this, bi.pfg21, 1, 5, getString(R.string.pfg21), "Times")) {
+                return false;
+            }
+
+            if (!validatorClass.EmptyCardCheckBox(this, bi.fldgrppfg22, bi.pfg22a, getString(R.string.pfg22))) {
+                return false;
+            }
+            if (bi.pfg2296.isChecked()) {
+                if (!validatorClass.EmptyTextBox(this, bi.pfg2296x, getString(R.string.pfg22))) {
+                    return false;
+                }
+            }
+
+        }
+        if (!validatorClass.EmptyRadioButton(this, bi.pfg23, bi.pfg23a, getString(R.string.pfg23))) {
+            return false;
+        }
+
+        if (!bi.pfg23b.isChecked()) {
+            if (!validatorClass.EmptyCardCheckBox(this, bi.fldgrppfg24, bi.pfg24a, getString(R.string.pfg24))) {
+                return false;
+            }
+            if (bi.pfg2496.isChecked()) {
+                if (!validatorClass.EmptyTextBox(this, bi.pfg2496x, getString(R.string.pfg24))) {
+                    return false;
+                }
+            }
+            if (!validatorClass.EmptyRadioButton(this, bi.pfg25, bi.pfg25a, getString(R.string.pfg25))) {
+                return false;
+            }
+            if (!bi.pfg2598.isChecked()) {
+                if (bi.pfg25a.isChecked()) {
+                    if (!validatorClass.EmptyTextBox(this, bi.pfg25ax, getString(R.string.pfg25))) {
+                        return false;
+                    }
+                    if (!validatorClass.RangeTextBox(this, bi.pfg25ax, 0, 23, getString(R.string.pfg25), "Hours")) {
+                        return false;
+                    }
+                }
+                if (bi.pfg25b.isChecked()) {
+                    if (!validatorClass.EmptyTextBox(this, bi.pfg25bx, getString(R.string.pfg25))) {
+                        return false;
+                    }
+                    if (!validatorClass.RangeTextBox(this, bi.pfg25bx, 1, 6, getString(R.string.pfg25), "Days")) {
+                        return false;
+                    }
+                }
+                if (bi.pfg25c.isChecked()) {
+                    if (!validatorClass.EmptyTextBox(this, bi.pfg25cx, getString(R.string.pfg25))) {
+                        return false;
+                    }
+                    if (!validatorClass.RangeTextBox(this, bi.pfg25cx, 1, 10, getString(R.string.pfg25), "Weeks")) {
+                        return false;
+                    }
+                }
+            }
+            if (!validatorClass.EmptyCardCheckBox(this, bi.fldgrppfg26, bi.pfg26a, getString(R.string.pfg26))) {
+                return false;
+            }
+            if (bi.pfg2696.isChecked()) {
+                return validatorClass.EmptyTextBox(this, bi.pfg2696x, getString(R.string.pfg26));
+            }
+
+        }
 
 
         return true;
