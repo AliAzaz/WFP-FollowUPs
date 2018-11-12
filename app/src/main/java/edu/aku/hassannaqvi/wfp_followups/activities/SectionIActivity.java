@@ -34,11 +34,11 @@ public class SectionIActivity extends AppCompatActivity {
 
         bi = DataBindingUtil.setContentView(this, R.layout.activity_section_i);
         bi.setCallback(this);
-        this.setTitle(getString(R.string.pfiheading));
 
 
         if (!InfoActivity.enrolledParticipant.getFupround().equals("1")) {
 
+            this.setTitle(getString(R.string.pfiheading2));
             bi.fldgrppfifirstfollowup.setVisibility(View.GONE);
             ClearClass.ClearAllFields(bi.fldgrppfi01, false);
             ClearClass.ClearAllFields(bi.fldgrppfi02, false);
@@ -46,6 +46,8 @@ public class SectionIActivity extends AppCompatActivity {
             ClearClass.ClearAllFields(bi.fldgrppfi04, false);
             ClearClass.ClearAllFields(bi.fldgrppfi05, false);
             ClearClass.ClearAllFields(bi.fldgrppfi06, false);
+        } else {
+            this.setTitle(getString(R.string.pfiheading));
         }
 
         //=====================skip patterns=======================================

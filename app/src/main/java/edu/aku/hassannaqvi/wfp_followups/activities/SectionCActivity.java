@@ -138,7 +138,7 @@ public class SectionCActivity extends AppCompatActivity {
         if (!validatorClass.PatternTextBox(this, bi.pfc0101, getString(R.string.pfc01a), "^(\\d{3,3}\\.\\d{2,2})$", "XXX.XX")) {
             return false;
         }
-        if (!validatorClass.RangeTextBox(this, bi.pfc0101, 25d, 150d, getString(R.string.pfc01a), "weight")) {
+        if (!validatorClass.RangeTextBox(this, bi.pfc0101, 25d, 120d, getString(R.string.pfc01a), "weight")) {
             return false;
         }
 
@@ -153,7 +153,7 @@ public class SectionCActivity extends AppCompatActivity {
         if (!validatorClass.PatternTextBox(this, bi.pfc0102, getString(R.string.pfc01a), "^(\\d{3,3}\\.\\d{2,2})$", "XXX.XX")) {
             return false;
         }
-        if (!validatorClass.RangeTextBox(this, bi.pfc0102, 25d, 150d, getString(R.string.pfc01a), "weight")) {
+        if (!validatorClass.RangeTextBox(this, bi.pfc0102, 25d, 120d, getString(R.string.pfc01a), "weight")) {
             return false;
         }
 

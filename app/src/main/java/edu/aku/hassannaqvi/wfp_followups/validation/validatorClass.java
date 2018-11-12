@@ -83,7 +83,7 @@ public abstract class validatorClass {
 
         if (Double.valueOf(txt.getText().toString()) < min || Double.valueOf(txt.getText().toString()) > max) {
             Toast.makeText(context, "ERROR(invalid): " + msg, Toast.LENGTH_SHORT).show();
-            txt.setError("Range is " + min + " to " + max + type + " ... ");    // Set Error on last radio button
+            txt.setError("Range is " + min + " to " + max + " " + type + " ... ");    // Set Error on last radio button
             txt.requestFocus();
             Log.i(context.getClass().getName(), context.getResources().getResourceEntryName(txt.getId()) + ": Range is " + min + " to " + max + " times...  ");
             return false;
