@@ -132,6 +132,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             EnrolledTable.COLUMN_EDD + " TEXT," +
             EnrolledTable.COLUMN_FUPDT + " TEXT," +
             EnrolledTable.COLUMN_FUPROUND + " TEXT," +
+            EnrolledTable.COLUMN_FORMDATE + " TEXT," +
             EnrolledTable.COLUMN_RESP_TYPE + " TEXT" +
             " );";
     private static final String SQL_CREATE_LHWS = "CREATE TABLE "
@@ -244,6 +245,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 values.put(EnrolledTable.COLUMN_EDD, prg.getEdd());
                 values.put(EnrolledTable.COLUMN_FUPDT, prg.getFupdt());
                 values.put(EnrolledTable.COLUMN_FUPROUND, prg.getFupround());
+                values.put(EnrolledTable.COLUMN_FORMDATE, prg.getFormdate());
                 values.put(EnrolledTable.COLUMN_RESP_TYPE, prg.getResp_type());
 
                 db.insert(EnrolledTable.TABLE_NAME, null, values);
@@ -860,6 +862,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 EnrolledTable.COLUMN_EDD,
                 EnrolledTable.COLUMN_FUPDT,
                 EnrolledTable.COLUMN_FUPROUND,
+                EnrolledTable.COLUMN_FORMDATE,
                 EnrolledTable.COLUMN_RESP_TYPE,
         };
 

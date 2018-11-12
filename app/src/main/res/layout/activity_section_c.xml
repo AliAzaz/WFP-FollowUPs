@@ -44,13 +44,13 @@
                         android:textColor="@color/white" />
 
                     <TextView
-                        android:gravity="center"
-                        android:padding="10dp"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_horizontal"
                         android:layout_marginTop="5dp"
                         android:background="@color/colorPrimary"
+                        android:gravity="center"
+                        android:padding="10dp"
                         android:text="@string/pfha"
                         android:textColor="@color/white" />
 
@@ -61,8 +61,8 @@
                         android:layout_marginTop="8sp" />
 
                     <EditText
-                        style="@style/textInput"
                         android:id="@+id/pfc0101"
+                        style="@style/textInput"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:hint="@string/pfc01a"
@@ -70,12 +70,12 @@
                         android:maxLength="6" />
 
                     <TextView
-                        android:gravity="center"
-                        android:padding="10dp"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_horizontal"
                         android:background="@color/colorPrimary"
+                        android:gravity="center"
+                        android:padding="10dp"
                         android:text="@string/pfhb"
                         android:textColor="@color/white" />
 
@@ -86,8 +86,8 @@
                         android:layout_marginTop="8sp" />
 
                     <EditText
-                        style="@style/textInput"
                         android:id="@+id/pfc0102"
+                        style="@style/textInput"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:hint="@string/pfc01a"
@@ -123,11 +123,12 @@
                         android:id="@+id/pfc0299"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:enabled="false"
                         android:text="@string/not_applicable" />
 
                     <EditText
-                        style="@style/textInput"
                         android:id="@+id/pfc02"
+                        style="@style/textInput"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:hint="@string/gl"
@@ -150,10 +151,10 @@
                 android:orientation="horizontal">
 
                 <Button
-                    android:layout_marginEnd="10dp"
                     android:id="@+id/btn_Continue"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
+                    android:layout_marginEnd="10dp"
                     android:layout_marginRight="5dp"
                     android:layout_weight="0.5"
                     android:onClick="@{() -> callback.BtnContinue()}"

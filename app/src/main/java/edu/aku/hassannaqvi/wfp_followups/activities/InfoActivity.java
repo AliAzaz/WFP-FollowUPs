@@ -266,6 +266,7 @@ public class InfoActivity extends Activity {
         sInfo.put("fupdt", enrolledParticipant.getFupdt());
         sInfo.put("fupround", enrolledParticipant.getFupround());
         sInfo.put("resp_type", enrolledParticipant.getResp_type());
+        sInfo.put("fup_formdate", enrolledParticipant.getFormdate());
 
         sInfo.put(AppMain.formType + "a04", bi.pfa04a.isChecked() ? "1" : bi.pfa04b.isChecked() ? "2" : "0");
         sInfo.put(AppMain.formType + "a06", bi.pfa06a.isChecked() ? "1" : bi.pfa06b.isChecked() ? "2" : "0");

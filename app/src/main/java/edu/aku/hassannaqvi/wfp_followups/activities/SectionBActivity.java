@@ -42,7 +42,7 @@ public class SectionBActivity extends AppCompatActivity {
     private void setupViews() {
 
         bi.pfb04.setManager(getSupportFragmentManager());
-        bi.pfb04.setMinDate(AppMain.convertDateFormat(InfoActivity.enrolledParticipant.getFupdt()));
+        bi.pfb04.setMinDate(AppMain.convertDateFormat(InfoActivity.enrolledParticipant.getFormdate()));
         bi.pfb04.setMaxDate(new SimpleDateFormat("dd/MM/yyyy").format(System.currentTimeMillis()));
 
 //        Get check from prv activity
