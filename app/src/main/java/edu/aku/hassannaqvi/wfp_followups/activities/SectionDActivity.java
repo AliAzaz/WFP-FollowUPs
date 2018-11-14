@@ -182,6 +182,17 @@ public class SectionDActivity extends AppCompatActivity {
             }
         });
 
+        bi.pfd01.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup radioGroup, int i) {
+                if (i == bi.pfd01a.getId()) {
+                    bi.fldgrppd12.setVisibility(View.GONE);
+                    ClearClass.ClearAllCardFields(bi.fldgrppd12, true);
+                } else {
+                    bi.fldgrppd12.setVisibility(View.VISIBLE);
+                }
+            }
+        });
 
     }
 

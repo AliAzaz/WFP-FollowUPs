@@ -524,7 +524,6 @@
                             android:layout_weight="1"
                             android:text="@string/pfg09a" />
 
-
                         <CheckBox
                             android:id="@+id/pfg09b"
                             android:layout_width="match_parent"
@@ -532,7 +531,6 @@
                             android:layout_marginBottom="1dp"
                             android:layout_weight="1"
                             android:text="@string/pfg09b" />
-
 
                         <CheckBox
                             android:id="@+id/pfg09c"
@@ -612,6 +610,7 @@
                         android:layout_weight="1"
                         android:text="@string/pfg09h" />
                 </LinearLayout>
+
             </android.support.v7.widget.CardView>
 
             <!--Q10-->
@@ -1210,7 +1209,6 @@
 
                         </LinearLayout>
 
-
                         <CheckBox
                             android:id="@+id/pfg1698"
                             android:layout_width="match_parent"
@@ -1438,54 +1436,54 @@
                     </LinearLayout>
                 </android.support.v7.widget.CardView>
 
-                <!--Q18-->
-                <android.support.v7.widget.CardView
-                    android:id="@+id/fldgrppfg18"
+            </LinearLayout>
+
+            <!--Q18-->
+            <android.support.v7.widget.CardView
+                android:id="@+id/fldgrppfg18"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:elevation="10dp">
+
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:elevation="10dp">
+                    android:orientation="vertical">
 
-                    <LinearLayout
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:background="@color/colorPrimaryDark"
+                        android:text="@string/pfg18"
+                        android:textColor="@color/white" />
+
+                    <RadioGroup
+                        android:id="@+id/pfg18"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="vertical">
 
-                        <TextView
+                        <RadioButton
+                            android:id="@+id/pfg18a"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_gravity="center_horizontal"
-                            android:background="@color/colorPrimaryDark"
-                            android:text="@string/pfg18"
-                            android:textColor="@color/white" />
+                            android:layout_marginBottom="1dp"
+                            android:layout_weight="1"
+                            android:text="@string/yes" />
 
-                        <RadioGroup
-                            android:id="@+id/pfg18"
+                        <RadioButton
+                            android:id="@+id/pfg18b"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:orientation="vertical">
+                            android:layout_marginBottom="1dp"
+                            android:layout_weight="1"
+                            android:text="@string/no" />
 
-                            <RadioButton
-                                android:id="@+id/pfg18a"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_marginBottom="1dp"
-                                android:layout_weight="1"
-                                android:text="@string/yes" />
-
-                            <RadioButton
-                                android:id="@+id/pfg18b"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_marginBottom="1dp"
-                                android:layout_weight="1"
-                                android:text="@string/no" />
-
-                        </RadioGroup>
-                    </LinearLayout>
-                </android.support.v7.widget.CardView>
-
-            </LinearLayout>
+                    </RadioGroup>
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
 
             <!--Q19-->
             <android.support.v7.widget.CardView

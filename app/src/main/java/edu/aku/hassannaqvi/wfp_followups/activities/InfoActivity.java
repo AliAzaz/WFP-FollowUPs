@@ -118,6 +118,8 @@ public class InfoActivity extends Activity {
             public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
                 check = false;
                 bi.fldGrpParticipant.setVisibility(View.GONE);
+                bi.pfa04.clearCheck();
+                bi.pfa06.clearCheck();
             }
 
             @Override

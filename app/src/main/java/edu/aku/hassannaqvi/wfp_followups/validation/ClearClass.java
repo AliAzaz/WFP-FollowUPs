@@ -143,6 +143,8 @@ public class ClearClass {
                         ((io.blackbox_vision.datetimepickeredittext.view.DatePickerInputEditText) v1).setText(null);
                         ((io.blackbox_vision.datetimepickeredittext.view.DatePickerInputEditText) v1).setError(null);
                         v1.setEnabled(flag);
+                    } else if (v1 instanceof LinearLayout) {
+                        ClearAllFields((LinearLayout) v1, flag);
                     }
                 }
             }

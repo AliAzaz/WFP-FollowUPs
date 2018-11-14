@@ -45,18 +45,6 @@ public class SectionBActivity extends AppCompatActivity {
         bi.pfb04.setMinDate(AppMain.convertDateFormat(InfoActivity.enrolledParticipant.getFormdate()));
         bi.pfb04.setMaxDate(new SimpleDateFormat("dd/MM/yyyy").format(System.currentTimeMillis()));
 
-//        Get check from prv activity
-        int flag = getIntent().getIntExtra("valCheck", 0);
-        if (flag == 1) {
-            bi.pfb02e.setEnabled(false);
-            bi.pfb02f.setEnabled(false);
-        } else {
-            bi.pfb02a.setEnabled(false);
-            bi.pfb02b.setEnabled(false);
-            bi.pfb02c.setEnabled(false);
-            bi.pfb02d.setEnabled(false);
-        }
-
         bi.pfb01.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
@@ -64,6 +52,19 @@ public class SectionBActivity extends AppCompatActivity {
                     ClearClass.ClearAllCardFields(bi.fldgrppfba, false);
                 } else {
                     ClearClass.ClearAllCardFields(bi.fldgrppfba, true);
+
+                    // Get check from prv activity
+                    int flag = getIntent().getIntExtra("valCheck", 0);
+                    if (flag == 1) {
+                        bi.pfb02e.setEnabled(false);
+                        bi.pfb02f.setEnabled(false);
+                    } else {
+                        bi.pfb02a.setEnabled(false);
+                        bi.pfb02b.setEnabled(false);
+                        bi.pfb02c.setEnabled(false);
+                        bi.pfb02d.setEnabled(false);
+                    }
+
                 }
             }
         });

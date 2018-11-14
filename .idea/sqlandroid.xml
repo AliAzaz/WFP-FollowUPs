@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="SQLAndroidSettings">
+    <option name="packageNameByDirectory">
+      <map>
+        <entry key="C:\Ali Work\Projects\WFP-FollowUps\AndroidSqlEditorDatabases\" value="edu.aku.hassannaqvi.wfp_followups" />
+      </map>
+    </option>
+  </component>
+</project>

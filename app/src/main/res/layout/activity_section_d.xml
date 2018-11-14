@@ -76,12 +76,12 @@
                             android:text="@string/pfd01c" />
 
                         <EditText
-                            android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz"
-                            style="@style/textInput"
                             android:id="@+id/pfd01bx"
+                            style="@style/textInput"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_margin="10dp"
+                            android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz"
                             android:hint="@string/reason"
                             android:inputType="textMultiLine"
                             android:visibility="gone" />
@@ -113,12 +113,12 @@
                         android:textColor="@color/white" />
 
                     <EditText
-                        android:digits="123456789"
                         android:id="@+id/pfd02"
                         style="@style/textInput"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_margin="10dp"
+                        android:digits="0123456789"
                         android:hint="@string/pfd02a"
                         android:inputType="number"
                         android:maxLength="2" />
@@ -359,12 +359,12 @@
                         android:text="@string/other" />
 
                     <EditText
-                        android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz"
                         android:id="@+id/pfd0796x"
                         style="@style/textInput"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_margin="10dp"
+                        android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz"
                         android:hint="@string/other"
                         android:inputType="text"
                         android:text='@{pfd0796.checked? pfd0796x.getText.toString : ""}'
@@ -477,12 +477,12 @@
                         android:text="@string/other" />
 
                     <EditText
-                        android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz"
                         android:id="@+id/pfd0996x"
                         style="@style/textInput"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_margin="10dp"
+                        android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz"
                         android:hint="@string/other"
                         android:inputType="text"
                         android:text='@{pfd0996.checked? pfd0996x.getText.toString : ""}'
@@ -583,12 +583,12 @@
                         android:text="@string/other" />
 
                     <EditText
-                        android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz"
                         android:id="@+id/pfd1196x"
                         style="@style/textInput"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_margin="10dp"
+                        android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz"
                         android:hint="@string/other"
                         android:inputType="text"
                         android:text='@{pfd1196.checked ? pfd1196x.getText.toString : ""}'
@@ -669,7 +669,6 @@
                         android:layout_marginBottom="1dp"
                         android:text="@string/pfd12g" />
 
-
                     <CheckBox
                         android:id="@+id/pfd1296"
                         android:layout_width="match_parent"
@@ -678,12 +677,12 @@
                         android:text="@string/other" />
 
                     <EditText
-                        android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz"
                         android:id="@+id/pfd1296x"
                         style="@style/textInput"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_margin="10dp"
+                        android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz"
                         android:hint="@string/other"
                         android:inputType="text"
                         android:text='@{pfd1296.checked? pfd1296x.getText.toString : ""}'

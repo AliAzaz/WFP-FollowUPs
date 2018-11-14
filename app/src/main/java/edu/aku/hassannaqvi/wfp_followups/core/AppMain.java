@@ -124,7 +124,7 @@ public class AppMain extends Application {
     }
 
     public static String convertDateFormat(String dateStr) {
-        SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yyyy");
+        SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yy");
         try {
             Date d = sdf.parse(dateStr);
             return new SimpleDateFormat("dd/MM/yyyy").format(d);

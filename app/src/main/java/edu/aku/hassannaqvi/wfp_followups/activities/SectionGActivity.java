@@ -211,7 +211,6 @@ public class SectionGActivity extends AppCompatActivity {
 
     }
 
-
     public void BtnContinue() {
 
         if (formValidation()) {
@@ -468,10 +467,11 @@ public class SectionGActivity extends AppCompatActivity {
                 return false;
             }
         }
-        if (!validatorClass.EmptyCardCheckBox(this, bi.fldgrppfg09, bi.pfg09a, getString(R.string.pfg09))) {
-            return false;
-        }
+
         if (!bi.pfg09h.isChecked()) {
+            if (!validatorClass.EmptyCardCheckBox(this, bi.fldgrppfg09, bi.pfg09a, getString(R.string.pfg09))) {
+                return false;
+            }
             if (bi.pfg0996.isChecked()) {
                 if (!validatorClass.EmptyTextBox(this, bi.pfg0996x, getString(R.string.pfg09))) {
                     return false;
@@ -532,10 +532,10 @@ public class SectionGActivity extends AppCompatActivity {
         }
         if (bi.pfg15a.isChecked()) {
 
-            if (!validatorClass.EmptyCardCheckBox(this, bi.fldgrppfg16, bi.pfg16a, getString(R.string.pfg16))) {
-                return false;
-            }
             if (!bi.pfg1698.isChecked()) {
+                if (!validatorClass.EmptyCardCheckBox(this, bi.fldgrppfg16, bi.pfg16a, getString(R.string.pfg16))) {
+                    return false;
+                }
                 if (bi.pfg1696.isChecked()) {
                     if (!validatorClass.EmptyTextBox(this, bi.pfg1696x, getString(R.string.pfg16))) {
                         return false;

@@ -616,7 +616,7 @@ public class SectionIActivity extends AppCompatActivity {
             }
             if (updateDB()) {
                 finish();
-                Intent secNext = new Intent(this, SectionBActivity.currentlyPR == 2 ? EndingActivity.class : SectionJActivity.class);
+                Intent secNext = new Intent(this, SectionBActivity.currentlyPR == 1 ? EndingActivity.class : SectionJActivity.class);
                 startActivity(secNext);
             }
         }
