@@ -40,15 +40,17 @@ public class SectionIActivity extends AppCompatActivity {
 
             this.setTitle(getString(R.string.pfiheading2));
             bi.fldgrppfifirstfollowup.setVisibility(View.GONE);
-            ClearClass.ClearAllFields(bi.fldgrppfi01, false);
-            ClearClass.ClearAllFields(bi.fldgrppfi02, false);
-            ClearClass.ClearAllFields(bi.fldgrppfi03, false);
-            ClearClass.ClearAllFields(bi.fldgrppfi04, false);
-            ClearClass.ClearAllFields(bi.fldgrppfi05, false);
-            ClearClass.ClearAllFields(bi.fldgrppfi06, false);
         } else {
             this.setTitle(getString(R.string.pfiheading));
         }
+
+        if (InfoActivity.enrolledParticipant.getFupround().equals("1") && InfoActivity.flagLM && SectionBActivity.currentlyPR != 1) {
+            this.setTitle(getString(R.string.pfiheading));
+        } else {
+            this.setTitle(getString(R.string.pfiheading2));
+            bi.fldgrppfifirstfollowup.setVisibility(View.GONE);
+        }
+
 
         //=====================skip patterns=======================================
 

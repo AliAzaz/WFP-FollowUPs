@@ -44,27 +44,8 @@ public class InfoActivity extends Activity {
     HashMap<String, String> LHWs;
     Boolean check = false;
     public static EnrolledContract enrolledParticipant;
-    //    @BindView(R.id.studyID)
-//    EditText studyID;
-//    @BindView(R.id.pfa01)
-//    EditText pfa01;
-//    @BindView(R.id.pfa04)
-//    RadioGroup pfa04;
-//    @BindView(R.id.pfa04a)
-//    RadioButton pfa04a;
-//    @BindView(R.id.pfa04b)
-//    RadioButton pfa04b;
-//    @BindView(R.id.pfa06)
-//    RadioGroup pfa06;
-//    @BindView(R.id.pfa06a)
-//    RadioButton pfa06a;
-//    @BindView(R.id.pfa06b)
-//    RadioButton pfa06b;
-//    @BindView(R.id.btn_Continue)
-//    Button btn_Continue;
-//    @BindView(R.id.fldGrpParticipant)
-//    LinearLayout fldGrpParticipant;
-    int position;
+
+    public static boolean motherType = false;
 
     public static boolean flagLM = false;
 
@@ -175,7 +156,6 @@ public class InfoActivity extends Activity {
         bi.viewGroup01.fupdate.setText(enrolledParticipant.getFupdt());
     }
 
-
     public void onBtnEndClick() {
         if (ValidateForm()) {
             try {
@@ -192,7 +172,6 @@ public class InfoActivity extends Activity {
             }
         }
     }
-
 
     public void onBtnContinueClick() {
         if (ValidateForm()) {
@@ -274,6 +253,8 @@ public class InfoActivity extends Activity {
         sInfo.put(AppMain.formType + "a06", bi.pfa06a.isChecked() ? "1" : bi.pfa06b.isChecked() ? "2" : "0");
 
         flagLM = bi.pfa04b.isChecked();
+
+        motherType = bi.pfa04b.isChecked();
 
         AppMain.fc.setsInfo(String.valueOf(sInfo));
 
