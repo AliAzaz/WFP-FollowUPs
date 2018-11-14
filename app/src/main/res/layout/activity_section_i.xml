@@ -546,7 +546,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:elevation="10dp"
-                android:visibility="@{!pfi01a.checked &amp;&amp; !pfi07a.checked ? View.VISIBLE : View.GONE}">
+                android:visibility="@{!pfi07a.checked ? View.VISIBLE : View.GONE}">
 
                 <LinearLayout
                     android:id="@+id/fldgrppfi0701"
