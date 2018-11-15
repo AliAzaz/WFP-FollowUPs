@@ -7,8 +7,6 @@ import android.view.View;
 import android.widget.RadioGroup;
 import android.widget.Toast;
 
-import org.json.JSONException;
-
 import edu.aku.hassannaqvi.wfp_followups.R;
 import edu.aku.hassannaqvi.wfp_followups.core.AppMain;
 import edu.aku.hassannaqvi.wfp_followups.databinding.ActivityChildSectionDBinding;
@@ -59,11 +57,7 @@ public class Child_Section_D extends AppCompatActivity {
 
         if (formValidation()) {
             Toast.makeText(this, "validated", Toast.LENGTH_SHORT).show();
-            try {
-                saveDraft();
-            } catch (JSONException e) {
-                e.printStackTrace();
-            }
+            saveDraft();
             if (UpdateDB()) {
 
 //                startActivity(new Intent(this, bi.pfb01a.isChecked() && !bi.pfb02b.isChecked() ? SectionCActivity.class : EndingActivity.class)
