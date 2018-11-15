@@ -38,81 +38,14 @@ public class SectionDActivity extends AppCompatActivity {
         bi.pfd01.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
+                if (i != bi.pfd01a.getId()) {
+                    ClearClass.ClearAllFields(bi.fldGrppda, true);
 
-                if (i == R.id.pfd01b) {
-                    bi.pfd01bx.setVisibility(View.VISIBLE);
-                    bi.fldgrppd02.setVisibility(View.GONE);
-                    ClearClass.ClearAllCardFields(bi.fldgrppd02, false);
-                    bi.fldgrppd03.setVisibility(View.GONE);
-                    ClearClass.ClearAllCardFields(bi.fldgrppd03, false);
-                    bi.fldgrppd04.setVisibility(View.GONE);
-                    ClearClass.ClearAllCardFields(bi.fldgrppd04, false);
-                    bi.fldgrppd05.setVisibility(View.GONE);
-                    ClearClass.ClearAllCardFields(bi.fldgrppd05, false);
-                    bi.fldgrppd06.setVisibility(View.GONE);
-                    ClearClass.ClearAllCardFields(bi.fldgrppd06, false);
-                    bi.fldgrppd07.setVisibility(View.GONE);
-                    ClearClass.ClearAllCardFields(bi.fldgrppd07, false);
-                    bi.fldgrppd08.setVisibility(View.GONE);
-                    ClearClass.ClearAllCardFields(bi.fldgrppd08, false);
-                    bi.fldgrppd09.setVisibility(View.GONE);
-                    ClearClass.ClearAllCardFields(bi.fldgrppd09, false);
-                    bi.fldgrppd10.setVisibility(View.GONE);
-                    ClearClass.ClearAllCardFields(bi.fldgrppd10, false);
-                    bi.fldgrppd11.setVisibility(View.GONE);
-                    ClearClass.ClearAllCardFields(bi.fldgrppd11, false);
-                    bi.fldgrppd12.setVisibility(View.GONE);
-                    ClearClass.ClearAllCardFields(bi.fldgrppd12, false);
-                }
-                if (i == R.id.pfd01c) {
-                    bi.pfd01bx.setVisibility(View.GONE);
-                    bi.pfd01bx.setText(null);
-                    bi.fldgrppd03.setVisibility(View.GONE);
-                    ClearClass.ClearAllCardFields(bi.fldgrppd03, false);
-                    bi.fldgrppd04.setVisibility(View.GONE);
-                    ClearClass.ClearAllCardFields(bi.fldgrppd04, false);
-                    bi.fldgrppd05.setVisibility(View.GONE);
-                    ClearClass.ClearAllCardFields(bi.fldgrppd05, false);
-                    bi.fldgrppd06.setVisibility(View.GONE);
-                    ClearClass.ClearAllCardFields(bi.fldgrppd06, false);
-                    bi.fldgrppd07.setVisibility(View.GONE);
-                    ClearClass.ClearAllCardFields(bi.fldgrppd07, false);
-                    bi.fldgrppd08.setVisibility(View.GONE);
-                    ClearClass.ClearAllCardFields(bi.fldgrppd08, false);
-                    bi.fldgrppd09.setVisibility(View.GONE);
-                    ClearClass.ClearAllCardFields(bi.fldgrppd09, false);
-                    bi.fldgrppd10.setVisibility(View.GONE);
-                    ClearClass.ClearAllCardFields(bi.fldgrppd10, false);
-                    bi.fldgrppd11.setVisibility(View.GONE);
-                    ClearClass.ClearAllCardFields(bi.fldgrppd11, false);
-                    bi.fldgrppd12.setVisibility(View.VISIBLE);
+                    if (i == bi.pfd01b.getId()) {
+                        ClearClass.ClearAllCardFields(bi.fldgrppd12, true);
+                    }
+                } else {
                     ClearClass.ClearAllCardFields(bi.fldgrppd12, true);
-                }
-                if (i == R.id.pfd01a) {
-                    bi.pfd01bx.setVisibility(View.GONE);
-                    bi.pfd01bx.setText(null);
-                    bi.fldgrppd02.setVisibility(View.VISIBLE);
-                    ClearClass.ClearAllCardFields(bi.fldgrppd02, true);
-                    bi.fldgrppd03.setVisibility(View.VISIBLE);
-                    ClearClass.ClearAllCardFields(bi.fldgrppd03, true);
-                    bi.fldgrppd04.setVisibility(View.VISIBLE);
-                    ClearClass.ClearAllCardFields(bi.fldgrppd04, true);
-                    bi.fldgrppd05.setVisibility(View.VISIBLE);
-                    ClearClass.ClearAllCardFields(bi.fldgrppd05, true);
-                    bi.fldgrppd06.setVisibility(View.VISIBLE);
-                    ClearClass.ClearAllCardFields(bi.fldgrppd06, true);
-                    bi.fldgrppd07.setVisibility(View.VISIBLE);
-                    ClearClass.ClearAllCardFields(bi.fldgrppd07, true);
-                    bi.fldgrppd08.setVisibility(View.VISIBLE);
-                    ClearClass.ClearAllCardFields(bi.fldgrppd08, true);
-                    bi.fldgrppd09.setVisibility(View.VISIBLE);
-                    ClearClass.ClearAllCardFields(bi.fldgrppd09, true);
-                    bi.fldgrppd10.setVisibility(View.VISIBLE);
-                    ClearClass.ClearAllCardFields(bi.fldgrppd10, true);
-                    bi.fldgrppd11.setVisibility(View.VISIBLE);
-                    ClearClass.ClearAllCardFields(bi.fldgrppd11, true);
-                    bi.fldgrppd12.setVisibility(View.GONE);
-                    ClearClass.ClearAllCardFields(bi.fldgrppd12, false);
                 }
             }
         });
@@ -120,7 +53,6 @@ public class SectionDActivity extends AppCompatActivity {
         bi.pfd06.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
-
                 if (i == R.id.pfd06b) {
                     bi.fldgrppd07.setVisibility(View.GONE);
                     ClearClass.ClearAllCardFields(bi.fldgrppd07, false);
@@ -143,8 +75,6 @@ public class SectionDActivity extends AppCompatActivity {
                     ClearClass.ClearAllCardFields(bi.fldgrppd10, false);
                     bi.fldgrppd11.setVisibility(View.GONE);
                     ClearClass.ClearAllCardFields(bi.fldgrppd11, false);
-                    bi.fldgrppd12.setVisibility(View.GONE);
-                    ClearClass.ClearAllCardFields(bi.fldgrppd12, false);
 
                 } else {
 
@@ -154,8 +84,6 @@ public class SectionDActivity extends AppCompatActivity {
                     ClearClass.ClearAllCardFields(bi.fldgrppd10, true);
                     bi.fldgrppd11.setVisibility(View.VISIBLE);
                     ClearClass.ClearAllCardFields(bi.fldgrppd11, true);
-                    bi.fldgrppd12.setVisibility(View.VISIBLE);
-                    ClearClass.ClearAllCardFields(bi.fldgrppd12, true);
                 }
             }
         });
@@ -178,18 +106,6 @@ public class SectionDActivity extends AppCompatActivity {
                     bi.pfd11b.setEnabled(true);
                     bi.pfd11c.setEnabled(true);
                     bi.pfd1196.setEnabled(true);
-                }
-            }
-        });
-
-        bi.pfd01.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(RadioGroup radioGroup, int i) {
-                if (i == bi.pfd01a.getId()) {
-                    bi.fldgrppd12.setVisibility(View.GONE);
-                    ClearClass.ClearAllCardFields(bi.fldgrppd12, true);
-                } else {
-                    bi.fldgrppd12.setVisibility(View.VISIBLE);
                 }
             }
         });
@@ -348,15 +264,6 @@ public class SectionDActivity extends AppCompatActivity {
                         }
                     }
                 }
-                if (!validatorClass.EmptyCardCheckBox(this, bi.fldgrppd12, bi.pfd12a, getString(R.string.pfd12))) {
-                    return false;
-                }
-                if (bi.pfd1296.isChecked()) {
-                    if (!validatorClass.EmptyTextBox(this, bi.pfd1296x, getString(R.string.pfd12))) {
-                        return false;
-                    }
-                }
-
             }
         }
 

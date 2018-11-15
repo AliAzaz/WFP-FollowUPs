@@ -223,7 +223,7 @@ public class SectionGActivity extends AppCompatActivity {
 
             if (UpdateDB()) {
 
-                startActivity(new Intent(this, SectionHActivity.class));
+                startActivity(new Intent(this, SectionBActivity.currentlyPR == 1 ? SectionIActivity.class : SectionHActivity.class));
                 finish();
             }
         }
@@ -541,25 +541,26 @@ public class SectionGActivity extends AppCompatActivity {
                         return false;
                     }
                 }
-            }
 
-            if (bi.pfg16a.isChecked()) {
-                if (!validatorClass.EmptyRadioButton(this, bi.pfg17, bi.pfg17a, getString(R.string.pfg17))) {
-                    return false;
-                }
-                if (bi.pfg1796.isChecked()) {
-                    if (!validatorClass.EmptyTextBox(this, bi.pfg1796x, getString(R.string.pfg17))) {
+                if (bi.pfg16a.isChecked()) {
+                    if (!validatorClass.EmptyRadioButton(this, bi.pfg17, bi.pfg17a, getString(R.string.pfg17))) {
                         return false;
                     }
-                }
-                if (bi.pfg179602.isChecked()) {
-                    if (!validatorClass.EmptyTextBox(this, bi.pfg179602x, getString(R.string.pfg17))) {
-                        return false;
+                    if (bi.pfg1796.isChecked()) {
+                        if (!validatorClass.EmptyTextBox(this, bi.pfg1796x, getString(R.string.pfg17))) {
+                            return false;
+                        }
+                    }
+                    if (bi.pfg179602.isChecked()) {
+                        if (!validatorClass.EmptyTextBox(this, bi.pfg179602x, getString(R.string.pfg17))) {
+                            return false;
+                        }
+                    }
+                    if (bi.pfg179603.isChecked()) {
+                        return validatorClass.EmptyTextBox(this, bi.pfg179603x, getString(R.string.pfg17));
                     }
                 }
-                if (bi.pfg179603.isChecked()) {
-                    return validatorClass.EmptyTextBox(this, bi.pfg179603x, getString(R.string.pfg17));
-                }
+
             }
 
         }
