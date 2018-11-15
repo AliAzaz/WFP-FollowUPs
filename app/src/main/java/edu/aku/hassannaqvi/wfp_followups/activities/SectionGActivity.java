@@ -469,7 +469,7 @@ public class SectionGActivity extends AppCompatActivity {
         }
 
         if (!bi.pfg09h.isChecked()) {
-            if (!validatorClass.EmptyCardCheckBox(this, bi.fldgrppfg09, bi.pfg09a, getString(R.string.pfg09))) {
+            if (!validatorClass.EmptyCardCheckBox(this, bi.fldgrppfg09a, bi.pfg09a, getString(R.string.pfg09))) {
                 return false;
             }
             if (bi.pfg0996.isChecked()) {
@@ -533,7 +533,7 @@ public class SectionGActivity extends AppCompatActivity {
         if (bi.pfg15a.isChecked()) {
 
             if (!bi.pfg1698.isChecked()) {
-                if (!validatorClass.EmptyCardCheckBox(this, bi.fldgrppfg16, bi.pfg16a, getString(R.string.pfg16))) {
+                if (!validatorClass.EmptyCardCheckBox(this, bi.fldgrppfg16a, bi.pfg16a, getString(R.string.pfg16))) {
                     return false;
                 }
                 if (bi.pfg1696.isChecked()) {
