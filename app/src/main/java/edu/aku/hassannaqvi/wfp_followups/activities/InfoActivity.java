@@ -44,10 +44,7 @@ public class InfoActivity extends Activity {
     HashMap<String, String> LHWs;
     Boolean check = false;
     public static EnrolledContract enrolledParticipant;
-
-    public static boolean motherType = false;
-
-    public static boolean flagLM = false;
+    public static boolean serFlagPW = false, flagLM = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -253,8 +250,7 @@ public class InfoActivity extends Activity {
         sInfo.put(AppMain.formType + "a06", bi.pfa06a.isChecked() ? "1" : bi.pfa06b.isChecked() ? "2" : "0");
 
         flagLM = bi.pfa04b.isChecked();
-
-        motherType = bi.pfa04b.isChecked();
+        serFlagPW = enrolledParticipant.getResp_type().equals("pw");
 
         AppMain.fc.setsInfo(String.valueOf(sInfo));
 

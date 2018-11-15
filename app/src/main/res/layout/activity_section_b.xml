@@ -229,13 +229,13 @@
                                 android:textColor="@color/white" />
 
                             <EditText
-                                android:maxLength="1"
                                 android:id="@+id/pfb03"
                                 style="@style/textInput"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:hint="@string/pfb03"
                                 android:inputType="number"
+                                android:maxLength="1"
                                 android:text='@{pfb02a.checked ? pfb03.getText.toString : ""}' />
 
                         </LinearLayout>
@@ -274,6 +274,7 @@
                                 android:layout_marginBottom="2dp"
                                 android:focusable="false"
                                 android:hint="DD/MM/YYYY"
+                                android:text='@{pfb02e.checked ? pfb04.getText.toString : ""}'
                                 android:textColor="@android:color/black"
                                 app:dateFormat="dd-MM-yyyy" />
                         </LinearLayout>
@@ -293,10 +294,10 @@
                 android:orientation="horizontal">
 
                 <Button
-                    android:layout_marginEnd="10dp"
                     android:id="@+id/btn_Continue"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
+                    android:layout_marginEnd="10dp"
                     android:layout_marginRight="5dp"
                     android:layout_weight="0.5"
                     android:onClick="@{() -> callback.BtnContinue()}"
