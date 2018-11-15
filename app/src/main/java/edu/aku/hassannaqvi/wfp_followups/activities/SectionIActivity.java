@@ -68,7 +68,7 @@ public class SectionIActivity extends AppCompatActivity {
         } else {
             bi.fldGrppia.setVisibility(View.GONE);
 
-            if (!InfoActivity.serFlagPW)
+            if (InfoActivity.serFlagPW)
                 startActivity(new Intent(this, SectionBActivity.currentlyPR == 1 ? EndingActivity.class : SectionJActivity.class));
         }
 
