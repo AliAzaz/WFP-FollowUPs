@@ -488,4 +488,74 @@
     <string name="pfj04j">نس کے ذریعہ  </string>
     <string name="pfj04k"> گھر یلو ادویات یا ہربل ادویات  </string>
 
+
+    <!--Child Section D-->
+
+    <string name="cfd01a">کیا آپ نے گزشتہ ایک ماہ کے دوران وا وامم موصول کی ۔
+    وا وامم کا ساشے دکھائیں۔
+</string>
+
+    <string name="cfd01ac"> وصول کرنے سے انکار کیا </string>
+
+    <string name="cfd01b"> اگر انکار کیا تو کیا وجہ تھی ؟ </string>
+    <string name="cfd01b01"> ذائقہ اچھا نہیں / خراب ذائقہ </string>
+    <string name="cfd01b02"> دست کا سبب </string>
+    <string name="cfd01b03"> قے کا سبب </string>
+    <string name="cfd01b04"> پیٹ کے درد کا سبب </string>
+    <string name="cfd01b05"> جسم پے دانوں کاسبب </string>
+    <string name="cfd01b06"> مذہب میں منع ہے </string>
+    <string name="cfd01b07"> یہ خاندانی منصوبہ بندی کے لیے ہے </string>
+
+    <string name="cfd02"> آپ نے گزشتہ ایک ماہ میں اپنے بچے کے لیے کتنے دن واوامم کے ساشے موصول کیے ؟ </string>
+    <string name="cfd02a"> کتنے واوامم کے ساششے موصول کیے </string>
+
+    <string name="cfd03a"> ایک دن میں آپ کے بچے نے کتنے ساششے استعمال کیے؟ </string>
+    <string name="cfd03a01"> ساششے </string>
+    <string name="cfd03a02"> نہیں استعمال کیے /روک دیے استعمال کرنے سے </string>
+
+    <string name="cfd03b"> اگر نہیں استعمال کیے یا روک دیے تو اس کی کیا وجوہات تھی؟ </string>
+    <string name="cfd03ba"> ذائقہ اچھا نہیں / خراب ذائقہ </string>
+    <string name="cfd03bb"> دست کا سبب </string>
+    <string name="cfd03bc"> قے کا سبب </string>
+    <string name="cfd03bd"> پیٹ کے درد کا سبب </string>
+    <string name="cfd03be"> جسم پے دانوں کاسبب </string>
+    <string name="cfd03bf"> مذہب میں منع ہے </string>
+    <string name="cfd03bg"> یہ خاندانی منصوبہ بندی کے لیے ہے </string>
+
+    <string name="cfd04a"> آپ کے بچےنے گزشتہ ایک ماہ میں کتنے دن اور کتنے واوامم استعمال کیے؟ </string>
+
+    <string name="cfd04b"> اگر بچہ گزشتہ تیس دنوں کے دوران تیس سے کم واوامم کھاتا ہے
+    تو باقی دنوں کے بارے میں پوچھیں.</string>
+    <string name="cfd04b01"> چےکی بیماری کی وجہ سے </string>
+    <string name="cfd04b02"> بچہ روزانہ کھانے سے منع کرتا ہے </string>
+    <string name="cfd04b03"> خیال رکھنے والے کی لا پروا ئی /ماں </string>
+    <string name="cfd04b04"> بچہ ادھا سا شے کھا تاہے </string>
+    <string name="cfd04b05"> ماں اور بچہ گھر میں نہیں تھے </string>
+
+
+    <string name="cfd05"> یا آپ مجھے استعمال شدہ اور غیر استعمال شدہ واوامم سپلیمینٹ کے ساشے دیکھا سکتے ہیں؟ (اگر موجود نہیں تو (00) لکھیں </string>
+    <string name="cfd05a"> استعمال شدہ پیکٹ دیکھائے </string>
+    <string name="cfd05b"> بغیر استعمال شدہ پیکٹ دیکھائے </string>
+
+    <string name="cfd06a"> کیا آپ نے گزشتہ ایک ماہ میں واوامم سپلیمینٹ کے کوئی منفی اثرات دیکھے؟ </string>
+    <string name="cfd06b"> اگر ہاں تو منفی اثرات کیا تھے؟ </string>
+    <string name="cfd06b01"> دست </string>
+    <string name="cfd06b02"> قے </string>
+    <string name="cfd06b03"> پیٹ کا درد </string>
+    <string name="cfd06b04"> جسم پے دان دان </string>
+
+    <string name="cfd07a"> گزشتہ ایک ماہ کے دوران کیا آپ نے واوامم کسی اور کے ساتھ تقسیم کیا ؟ </string>
+    <string name="cfd07b"> اگر ہاں تو کس کے ساتھ تقسیم کیا؟ </string>
+    <string name="cfd07b01"> بھائی /بہنوں سے </string>
+    <string name="cfd07b02"> پڑوسی گھروں کے ساتھ </string>
+    <string name="cfd07b03"> بڑوں کے ساتھ </string>
+
+    <string name="cfd07c"> گزشتہ ایک ماہ کے دوران کتنے ساشے تقسیم کیے؟ </string>
+
+    <string name="cfd07d"> دوسرں کے ساتھ واوامم ساششے تقسیم کرنے کی کیا وجوہات تھیں؟ </string>
+    <string name="cfd07d01"> منع نہیں کر سکتے </string>
+    <string name="cfd07d02"> ذائقہ اچھا تھا </string>
+    <string name="cfd07d03"> مجھے یقین تھا یہ دوسرے بچوں/بڑوں کے لئے فائدہ مند ہے۔ </string>
+
+
 </resources>
