@@ -55,10 +55,16 @@ public class SectionBActivity extends AppCompatActivity {
 
                     // Get check from prv activity
                     int flag = getIntent().getIntExtra("valCheck", 0);
-                    if (flag == 1) {
+                    /*if (flag == 1) {
                         bi.pfb02e.setEnabled(false);
                         bi.pfb02f.setEnabled(false);
                     } else {
+                        bi.pfb02a.setEnabled(false);
+                        bi.pfb02b.setEnabled(false);
+                        bi.pfb02c.setEnabled(false);
+                        bi.pfb02d.setEnabled(false);
+                    }*/
+                    if (flag != 1) {
                         bi.pfb02a.setEnabled(false);
                         bi.pfb02b.setEnabled(false);
                         bi.pfb02c.setEnabled(false);
