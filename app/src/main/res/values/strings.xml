@@ -558,4 +558,43 @@
     <string name="cfd07d03"> مجھے یقین تھا یہ دوسرے بچوں/بڑوں کے لئے فائدہ مند ہے۔ </string>
 
 
+    <!--child Section E-->
+
+
+    <string name="cfe01"> گزشتہ ایک ماہ کے دوران آپ کے بچے کو ان بیماریوں میں سے کوئی بیماری ہوئی؟ </string>
+    <string name="cfe01a"> تیز بخار </string>
+    <string name="cfe01b"> اسہال </string>
+    <string name="cfe01c"> کھانس/زکام </string>
+    <string name="cfe01d"> سانس لینے میں تکلیف </string>
+    <string name="cfe01e"> سینہ </string>
+    <string name="cfe01f"> جلد کی بیماری </string>
+    <string name="cfe01g"> پاخانے میں کیڑے </string>
+    <string name="cfe01h"> دھبے </string>
+    <string name="cfe0197"> کوئی بھی نہیں </string>
+
+
+    <string name="cfe02"> کیا آپ نے گزشتہ ایک ماہ میں ان بیماریوں کا علاج کروایا؟ </string>
+
+    <string name="cfe03"> آپ نےگزشتہ ماہ بیماریوں کا علاج کس سےکروایا؟ </string>
+    <string name="cfe03a"> ڈاکٹر </string>
+    <string name="cfe03b"> رس/مڈوائف/ایل ایچ وی </string>
+    <string name="cfe03c"> کمیونٹی مڈوائف </string>
+    <string name="cfe03d"> دائی/ٹی بی اے </string>
+    <string name="cfe03e"> لیڈی ہیلتھ ورکر </string>
+    <string name="cfe03f"> ہومیوپیتھک </string>
+    <string name="cfe03g"> حکیم </string>
+    <string name="cfe03h"> ڈسپینسر/کم پائونڈر </string>
+
+    <string name="cfe04"> بیماری کے علاج کے لئے کون کونسی دواء دی گئی؟ </string>
+    <string name="cfe04a"> نمکول (او آر ایس) </string>
+    <string name="cfe04b"> گولیاں یا شربت </string>
+    <string name="cfe04c"> اینٹی بائیوٹک </string>
+    <string name="cfe04d"> دست روکنے والی ادویات </string>
+    <string name="cfe04e"> انجکشن </string>
+    <string name="cfe04f"> اینٹی بائیوٹک </string>
+    <string name="cfe04g"> اینٹی بائیوٹک کے علاوہ </string>
+    <string name="cfe04h"> نامعلوم انجکش </string>
+    <string name="cfe04i"> نس کے ذریعہ </string>
+    <string name="cfe04j"> گھر یلو ادویات یا ہربل </string>
+
 </resources>

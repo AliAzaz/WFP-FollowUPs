@@ -93,9 +93,15 @@
         <activity
             android:name=".activities.Child_Section_D"
             android:screenOrientation="portrait"
-            android:windowSoftInputMode="adjustResize">
-
-        </activity>
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".activities.Child_Section_E"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize"></activity>
+        <activity
+            android:name=".activities.Child_Section_F"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize"></activity>
     </application>
 
 </manifest>
