@@ -78,7 +78,6 @@ public class Child_Section_D extends AppCompatActivity {
 
     private boolean UpdateDB() {
 
-
         return true;
     }
 
