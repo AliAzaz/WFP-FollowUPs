@@ -1,5 +1,6 @@
 package edu.aku.hassannaqvi.wfp_followups.activities;
 
+import android.content.Intent;
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -13,6 +14,7 @@ import org.json.JSONObject;
 
 import edu.aku.hassannaqvi.wfp_followups.R;
 import edu.aku.hassannaqvi.wfp_followups.core.AppMain;
+import edu.aku.hassannaqvi.wfp_followups.core.DatabaseHelper;
 import edu.aku.hassannaqvi.wfp_followups.databinding.ActivityChildSectionEBinding;
 import edu.aku.hassannaqvi.wfp_followups.validation.ClearClass;
 import edu.aku.hassannaqvi.wfp_followups.validation.validatorClass;
@@ -28,6 +30,8 @@ public class Child_Section_E extends AppCompatActivity {
 
         bi = DataBindingUtil.setContentView(this, R.layout.activity_child__section__e);
         bi.setCallback(this);
+        this.setTitle(R.string.cfeheading);
+
 
         bi.cfe0197.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
@@ -73,11 +77,8 @@ public class Child_Section_E extends AppCompatActivity {
                 e.printStackTrace();
             }
             if (UpdateDB()) {
-
-//                startActivity(new Intent(this, bi.pfb01a.isChecked() && !bi.pfb02b.isChecked() ? SectionCActivity.class : EndingActivity.class)
-//                        .putExtra("complete", true)
-//                        .putExtra("pwMonth", !bi.pfb03.getText().toString().isEmpty() && (Integer.valueOf(bi.pfb03.getText().toString()) < 9)));
-                // finish();
+                startActivity(new Intent(this, Child_Section_F.class));
+                finish();
             }
         }
 
@@ -121,12 +122,21 @@ public class Child_Section_E extends AppCompatActivity {
         cfE.put("cfe04h", bi.cfe04h.isChecked() ? "8" : "0");
         cfE.put("cfe04i", bi.cfe04i.isChecked() ? "9" : "0");
         cfE.put("cfe04j", bi.cfe04j.isChecked() ? "10" : "0");
+        AppMain.fc.setsE(String.valueOf(cfE));
 
     }
 
     private boolean UpdateDB() {
+        DatabaseHelper db = new DatabaseHelper(this);
 
-        return true;
+        int updcount = db.updatesE();
+
+        if (updcount == 1) {
+            return true;
+        } else {
+            Toast.makeText(this, "Updating Database... ERROR!", Toast.LENGTH_SHORT).show();
+            return false;
+        }
     }
 
     private boolean formValidation() {
@@ -186,6 +196,11 @@ public class Child_Section_E extends AppCompatActivity {
 
     public void BtnEnd() {
         AppMain.endActivity(this, this);
+    }
+
+    @Override
+    public void onBackPressed() {
+        Toast.makeText(getApplicationContext(), "You Can't go back", Toast.LENGTH_LONG).show();
     }
 
 }

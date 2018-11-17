@@ -47,7 +47,9 @@
     <string name="not_applicable">Not Applicable</string>
     <string name="reason">وجہ</string>
     <string name="pw_name">حاملہ خاتون کا نام </string>
+    <string name="child_name">بچے کا نام </string>
     <string name="pw_detail"> حاملہ خاتون کی تفصیل </string>
+    <string name="child_detail"> بچے کی تفصیل </string>
 
 
     <!-- Strings related to Sections Below -->
@@ -489,7 +491,37 @@
     <string name="pfj04k"> گھر یلو ادویات یا ہربل ادویات  </string>
 
 
+    <!--Child Followups Strings-->
+
+    <!--Section A-->
+
+    <string name="cfa01"> بچے کی ID </string>
+
+    <!--Section B-->
+
+    <string name="cfb02">فالو اپ  کے وقت بچے کی عمر  </string>
+
+    <string name="cfbheading">  بچے کی موجودہ حیثیت </string>
+    <string name="cfb01"> کیا بچہ انٹرویو کے لئے موجود تھا؟ </string>
+    <string name="cfb01a"> موجود ہے انٹرویو جاری رکھیں </string>
+    <string name="cfb01b"> عارضی طور پرچلےگئے </string>
+    <string name="cfb01c"> دورے کے دوران گھر بند تھا </string>
+    <string name="cfb01d"> غیرحاضر </string>
+    <string name="cfb01e">مستقل طور پر چلے گئے </string>
+    <string name="cfb01f"> انکار کردیا </string>
+    <string name="cfb01fx"> اگر انکار کیا تو، انکار کرنے کی کیا وجہ تھی </string>
+    <string name="cfb01g"> بچے کی وفات </string>
+    <string name="cfb01gx"> بچے کی وفات کی وجہ </string>
+
+    <!--Section C-->
+
+    <string name="cfc01">لمبائی </string>
+    <string name="cfc01a">cm </string>
+    <string name="cfc02sub"> فالو اپ  کے وقت بچے کی عمر </string>
+
+
     <!--Child Section D-->
+    <string name="cfdheading">Compliance Assessment of Specialized Nutritious Food (SNF)  </string>
 
     <string name="cfd01a">کیا آپ نے گزشتہ ایک ماہ کے دوران وا وامم موصول کی ۔
     وا وامم کا ساشے دکھائیں۔
@@ -560,6 +592,8 @@
 
     <!--child Section E-->
 
+    <string name="cfeheading">Child Morbidity and Care Seeking  </string>
+    <string name="cffheading">نومولود اور چھوٹے بچوں کی غذا کے بارے میں معلومات  </string>
 
     <string name="cfe01"> گزشتہ ایک ماہ کے دوران آپ کے بچے کو ان بیماریوں میں سے کوئی بیماری ہوئی؟ </string>
     <string name="cfe01a"> تیز بخار </string>

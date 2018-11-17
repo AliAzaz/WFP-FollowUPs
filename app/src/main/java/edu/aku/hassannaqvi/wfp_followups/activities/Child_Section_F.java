@@ -1,5 +1,6 @@
 package edu.aku.hassannaqvi.wfp_followups.activities;
 
+import android.content.Intent;
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -14,6 +15,7 @@ import java.util.ArrayList;
 
 import edu.aku.hassannaqvi.wfp_followups.R;
 import edu.aku.hassannaqvi.wfp_followups.core.AppMain;
+import edu.aku.hassannaqvi.wfp_followups.core.DatabaseHelper;
 import edu.aku.hassannaqvi.wfp_followups.databinding.ActivityChildSectionFBinding;
 import edu.aku.hassannaqvi.wfp_followups.validation.validatorClass;
 
@@ -30,6 +32,7 @@ public class Child_Section_F extends AppCompatActivity {
 
         bi = DataBindingUtil.setContentView(this, R.layout.activity_child__section__f);
         bi.setCallback(this);
+        this.setTitle(R.string.cffheading);
 
         bi.pfi07.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
@@ -97,18 +100,25 @@ public class Child_Section_F extends AppCompatActivity {
             }
             if (UpdateDB()) {
 
-//                startActivity(new Intent(this, bi.pfb01a.isChecked() && !bi.pfb02b.isChecked() ? SectionCActivity.class : EndingActivity.class)
-//                        .putExtra("complete", true)
-//                        .putExtra("pwMonth", !bi.pfb03.getText().toString().isEmpty() && (Integer.valueOf(bi.pfb03.getText().toString()) < 9)));
-                // finish();
+                startActivity(new Intent(this, EndingActivity.class).putExtra("complete", true));
+
+                finish();
             }
         }
 
     }
 
     private boolean UpdateDB() {
+        DatabaseHelper db = new DatabaseHelper(this);
 
-        return true;
+        int updcount = db.updatesF();
+
+        if (updcount == 1) {
+            return true;
+        } else {
+            Toast.makeText(this, "Updating Database... ERROR!", Toast.LENGTH_SHORT).show();
+            return false;
+        }
     }
 
     private void saveDraft() throws JSONException {
@@ -169,6 +179,8 @@ public class Child_Section_F extends AppCompatActivity {
         cfF.put("cff1796x", bi.pfi1796x.getText().toString());
 
         cfF.put("cff18", bi.pfi18a.isChecked() ? "1" : bi.pfi18b.isChecked() ? "2" : bi.pfi1898.isChecked() ? "98" : "0");
+        AppMain.fc.setsF(String.valueOf(cfF));
+
     }
 
     private boolean formValidation() {
@@ -327,5 +339,11 @@ public class Child_Section_F extends AppCompatActivity {
 
     public void BtnEnd() {
         AppMain.endActivity(this, this);
+    }
+
+
+    @Override
+    public void onBackPressed() {
+        Toast.makeText(getApplicationContext(), "You Can't go back", Toast.LENGTH_LONG).show();
     }
 }

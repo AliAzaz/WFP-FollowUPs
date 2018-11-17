@@ -1,5 +1,6 @@
 package edu.aku.hassannaqvi.wfp_followups.activities;
 
+import android.content.Intent;
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -12,6 +13,7 @@ import org.json.JSONObject;
 
 import edu.aku.hassannaqvi.wfp_followups.R;
 import edu.aku.hassannaqvi.wfp_followups.core.AppMain;
+import edu.aku.hassannaqvi.wfp_followups.core.DatabaseHelper;
 import edu.aku.hassannaqvi.wfp_followups.databinding.ActivityChildSectionDBinding;
 import edu.aku.hassannaqvi.wfp_followups.validation.validatorClass;
 
@@ -25,6 +27,7 @@ public class Child_Section_D extends AppCompatActivity {
 
         bi = DataBindingUtil.setContentView(this, R.layout.activity_child__section__d);
         bi.setCallback(this);
+        this.setTitle(R.string.cfdheading);
 
         setupViews();
     }
@@ -67,18 +70,25 @@ public class Child_Section_D extends AppCompatActivity {
             }
             if (UpdateDB()) {
 
-//                startActivity(new Intent(this, bi.pfb01a.isChecked() && !bi.pfb02b.isChecked() ? SectionCActivity.class : EndingActivity.class)
-//                        .putExtra("complete", true)
-//                        .putExtra("pwMonth", !bi.pfb03.getText().toString().isEmpty() && (Integer.valueOf(bi.pfb03.getText().toString()) < 9)));
-                // finish();
+                startActivity(new Intent(this, Child_Section_E.class));
+
+                finish();
             }
         }
 
     }
 
     private boolean UpdateDB() {
+        DatabaseHelper db = new DatabaseHelper(this);
 
-        return true;
+        int updcount = db.updatesD();
+
+        if (updcount == 1) {
+            return true;
+        } else {
+            Toast.makeText(this, "Updating Database... ERROR!", Toast.LENGTH_SHORT).show();
+            return false;
+        }
     }
 
     private void saveDraft() throws JSONException {
@@ -163,6 +173,8 @@ public class Child_Section_D extends AppCompatActivity {
                 : "0");
 
         cfd.put("cfd07d96x", bi.cfd07d96x.getText().toString());
+        AppMain.fc.setsD(String.valueOf(cfd));
+
     }
 
     private boolean formValidation() {
@@ -291,4 +303,8 @@ public class Child_Section_D extends AppCompatActivity {
         AppMain.endActivity(this, this);
     }
 
+    @Override
+    public void onBackPressed() {
+        Toast.makeText(getApplicationContext(), "You Can't go back", Toast.LENGTH_LONG).show();
+    }
 }
