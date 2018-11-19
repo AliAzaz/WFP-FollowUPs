@@ -226,7 +226,6 @@ public class Child_Section_F extends AppCompatActivity {
             if (!validatorClass.RangeTextBox(this, bi.pfi10c01x, 1, 12, getString(R.string.pfi10c), "Number")) {
                 return false;
             }
-
         }
         if (!validatorClass.EmptyRadioButton(this, bi.pfi10d, bi.pfi10d01, getString(R.string.pfi10d))) {
             return false;
