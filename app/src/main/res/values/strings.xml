@@ -477,15 +477,14 @@
 
     <string name="pfj04"> بیماری کے علاج کے لئے کون کونسی دواء دی گئی؟ </string>
     <string name="pfj04a"> نمکول (او آر ایس) </string>
-    <string name="pfj04b">گولیاں یا شربت </string>
-    <string name="pfj04c">اینٹی بائیوٹک </string>
-    <string name="pfj04d">دست روکنے والی ادویات </string>
-    <string name="pfj04e">زنک </string>
-    <string name="pfj04f">نامعلوم گولیاں/شربت </string>
-    <string name="pfj04g">انجکشن </string>
-    <string name="pfj04h">اینٹی بائیوٹک کے علاوہ  </string>
-    <string name="pfj04i">نامعلوم انجکش  </string>
-    <string name="pfj04j">نس کے ذریعہ  </string>
-    <string name="pfj04k"> گھر یلو ادویات یا ہربل ادویات  </string>
+    <string name="pfj04b">گولیاں یا شربت/اینٹی بائیوٹک  </string>
+    <string name="pfj04c">دست روکنے والی ادویات </string>
+    <string name="pfj04d">زنک </string>
+    <string name="pfj04e">نامعلوم گولیاں/شربت </string>
+    <string name="pfj04f">انجکشن </string>
+    <string name="pfj04g">اینٹی بائیوٹک کے علاوہ  </string>
+    <string name="pfj04h">نامعلوم انجکش  </string>
+    <string name="pfj04i">نس کے ذریعہ  </string>
+    <string name="pfj04j"> گھر یلو ادویات یا ہربل ادویات  </string>
 
 </resources>

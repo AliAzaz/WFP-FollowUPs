@@ -785,12 +785,6 @@
                         android:text="@string/pfj04j" />
 
                     <CheckBox
-                        android:id="@+id/pfj04k"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="@string/pfj04k" />
-
-                    <CheckBox
                         android:id="@+id/pfj0496"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"

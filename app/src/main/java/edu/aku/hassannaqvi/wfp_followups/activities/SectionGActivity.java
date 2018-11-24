@@ -290,8 +290,8 @@ public class SectionGActivity extends AppCompatActivity {
                 : bi.pfg1096.isChecked() ? "96"
                 : "0");
         sG.put("pfg109601", bi.pfg1096x.getText().toString());
-        sG.put("pfg10i", bi.pfg10ix.getText().toString());
-        sG.put("pfg109602", bi.pfg10jx.getText().toString());
+        sG.put("pfg109602", bi.pfg10ix.getText().toString());
+        sG.put("pfg109603", bi.pfg10jx.getText().toString());
         sG.put("pfg11", bi.pfg11a.isChecked() ? "1" : bi.pfg11b.isChecked() ? "2" : bi.pfg1198.isChecked() ? "98" : "0");
         sG.put("pfg12", bi.pfg12a.isChecked() ? "1" : bi.pfg12b.isChecked() ? "2" : bi.pfg1298.isChecked() ? "98" : "0");
         sG.put("pfg13", bi.pfg13a.isChecked() ? "1" : bi.pfg13b.isChecked() ? "2" : bi.pfg1398.isChecked() ? "98" : "0");
@@ -301,8 +301,8 @@ public class SectionGActivity extends AppCompatActivity {
                 : bi.pfg14d.isChecked() ? "97"
                 : bi.pfg1498.isChecked() ? "98"
                 : "0");
-        sG.put("pfg14d", bi.pfg14bx.getText().toString());
-        sG.put("pfg14h", bi.pfg14cx.getText().toString());
+        sG.put("pfg14h", bi.pfg14bx.getText().toString());
+        sG.put("pfg14d", bi.pfg14cx.getText().toString());
         sG.put("pfg15", bi.pfg15a.isChecked() ? "1" : bi.pfg15b.isChecked() ? "2" : bi.pfg1598.isChecked() ? "98" : "0");
 
         sG.put("pfg16a", bi.pfg16a.isChecked() ? "1" : "0");

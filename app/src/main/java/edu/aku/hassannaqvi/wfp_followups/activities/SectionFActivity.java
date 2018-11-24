@@ -363,7 +363,7 @@ public class SectionFActivity extends AppCompatActivity {
         sF.put("pff0496x", bi.pff0496x.getText().toString());
         sF.put("pff05", bi.pff05a.isChecked() ? "1" : bi.pff05b.isChecked() ? "2" : "0");
         sF.put("pff06", bi.pff06a.isChecked() ? "1" : bi.pff06b.isChecked() ? "2" : "0");
-        sF.put("pff07d", bi.pff07d.getText().toString());
+        sF.put("pff07d", bi.pff07dx.getText().toString());
         sF.put("pff07", bi.pff07d.isChecked() ? "1" : bi.pff0797.isChecked() ? "97" : bi.pff0798.isChecked() ? "98" : "0");
         sF.put("pff08", bi.pff08a.isChecked() ? "1" : bi.pff08b.isChecked() ? "2" : "0");
         sF.put("pff0901", bi.pff0901a.isChecked() ? "1" : bi.pff0901b.isChecked() ? "2" : "0");

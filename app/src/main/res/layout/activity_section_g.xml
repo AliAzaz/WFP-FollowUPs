@@ -657,7 +657,6 @@
                             android:layout_weight="1"
                             android:text="@string/pfg10a" />
 
-
                         <RadioButton
                             android:id="@+id/pfg10b"
                             android:layout_width="match_parent"
@@ -718,6 +717,7 @@
                             android:hint="@string/other"
                             android:text='@{pfg1096.checked? pfg1096x.getText.toString : "" }'
                             android:visibility='@{pfg1096.checked? View.VISIBLE : View.GONE}' />
+
 
                         <TextView
                             android:layout_width="match_parent"
@@ -1011,7 +1011,6 @@
                             android:maxLength="2"
                             android:text='@{pfg14b.checked? pfg14bx.getText.toString : "" }'
                             android:visibility='@{pfg14b.checked? View.VISIBLE : View.GONE}' />
-
 
                         <RadioButton
                             android:id="@+id/pfg14c"

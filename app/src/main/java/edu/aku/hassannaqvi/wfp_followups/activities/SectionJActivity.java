@@ -173,7 +173,6 @@ public class SectionJActivity extends AppCompatActivity {
         sJ.put("pfj04h", bi.pfj04h.isChecked() ? "8" : "0");
         sJ.put("pfj04i", bi.pfj04i.isChecked() ? "9" : "0");
         sJ.put("pfj04j", bi.pfj04j.isChecked() ? "10" : "0");
-        sJ.put("pfj04k", bi.pfj04k.isChecked() ? "11" : "0");
         sJ.put("pfj0496", bi.pfj0496.isChecked() ? "96" : "0");
         sJ.put("pfj0496x", bi.pfj0496x.getText().toString());
 
