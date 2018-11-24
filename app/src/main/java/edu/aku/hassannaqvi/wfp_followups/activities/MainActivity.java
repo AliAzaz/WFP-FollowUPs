@@ -198,9 +198,26 @@ public class MainActivity extends Activity {
     }
 
     public void openForm(View v) {
+        switch (v.getId()) {
+
+            case R.id.openFormPW:
+                AppMain.formType = AppMain.PREGNANTWOMEN;
+                break;
+
+            case R.id.openFormChild:
+                AppMain.formType = AppMain.CHILD;
+                break;
+            default:
+                break;
+        }
         if (sharedPref.getString("tagName", null) != "" && sharedPref.getString("tagName", null) != null) {
-            Intent oF = new Intent(MainActivity.this, InfoActivity.class);
-            AppMain.formType = "pf";
+            Intent oF = new Intent();
+            if(AppMain.formType.equals(AppMain.PREGNANTWOMEN)){
+                oF = new Intent(MainActivity.this, InfoActivity.class);
+
+            }else if(AppMain.formType.equals(AppMain.CHILD)){
+                oF = new Intent(MainActivity.this, ChildInfoActivity.class);
+            }
             startActivity(oF);
         } else {
 
@@ -221,10 +238,15 @@ public class MainActivity extends Activity {
                     if (!m_Text.equals("")) {
                         editor.putString("tagName", m_Text);
                         editor.commit();
+                        Intent oF = new Intent();
+                        if(AppMain.formType.equals(AppMain.PREGNANTWOMEN)){
+                            oF = new Intent(MainActivity.this, InfoActivity.class);
 
-                        AppMain.formType = "pf";
+                        }else if(AppMain.formType.equals(AppMain.CHILD)){
+                            oF = new Intent(MainActivity.this, ChildInfoActivity.class);
 
-                        Intent oF = new Intent(MainActivity.this, InfoActivity.class);
+                        }
+
                         startActivity(oF);
                     }
                 }
@@ -288,14 +310,24 @@ public class MainActivity extends Activity {
             /*Toast.makeText(getApplicationContext(), "Syncing Eligibles", Toast.LENGTH_SHORT).show();
             new SyncEligibles(this).execute();*/
 
-            Toast.makeText(getApplicationContext(), "Syncing Forms", Toast.LENGTH_SHORT).show();
+            Toast.makeText(getApplicationContext(), "Syncing Forms PW", Toast.LENGTH_SHORT).show();
             new SyncAllData(
                     this,
-                    "Forms",
+                    "PWForms",
                     "updateSyncedForms",
                     FormsContract.class,
                     AppMain._HOST_URL + FormsContract.FormsTable._URL,
-                    db.getUnsyncedForms()
+                    db.getUnsyncedForms(AppMain.PREGNANTWOMEN)
+            ).execute();
+
+            Toast.makeText(getApplicationContext(), "Syncing Forms Child", Toast.LENGTH_SHORT).show();
+            new SyncAllData(
+                    this,
+                    "ChildForms",
+                    "updateSyncedForms",
+                    FormsContract.class,
+                    AppMain._HOST_URL + FormsContract.FormsTable._URL.replace("plw_followups.php","child_followups.php"),
+                    db.getUnsyncedForms(AppMain.CHILD)
             ).execute();
 
             SharedPreferences syncPref = getSharedPreferences("SyncInfo", Context.MODE_PRIVATE);

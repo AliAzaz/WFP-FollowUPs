@@ -83,13 +83,23 @@
         </LinearLayout>
 
         <Button
-            android:id="@+id/openForm"
+            android:id="@+id/openFormPW"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:layout_marginBottom="8dp"
             android:onClick="openForm"
             android:text="حاملہ خاتون  یا دودھ پلانے والی ماں کا فالواپ"
+            android:textSize="28sp" />
+
+        <Button
+            android:id="@+id/openFormChild"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="8dp"
+            android:onClick="openForm"
+            android:text="بچے کا فالواپ"
             android:textSize="28sp" />
 
         <LinearLayout

@@ -39,14 +39,34 @@ public class SectionCActivity extends AppCompatActivity {
     }
 
     private void setupViews() {
-
-        if (getIntent().getBooleanExtra("pwMonth", false) || InfoActivity.flagLM) {
-            bi.pfc0299.setChecked(true);
+        if (AppMain.formType.equals(AppMain.PREGNANTWOMEN)) {
+            if (getIntent().getBooleanExtra("pwMonth", false) || InfoActivity.flagLM) {
+                bi.pfc0299.setChecked(true);
 //            bi.pfc0299.setEnabled(false);
+            }
+            bi.fldgrpcfc01.setVisibility(View.GONE);
+            bi.lblc02sub.setText(getString(R.string.pfc02sub));
+        } else if (AppMain.formType.equals(AppMain.CHILD)) {
+            if (!getIntent().getBooleanExtra("childMonth", false)) {
+                bi.pfc0299.setChecked(true);
+            }
+            bi.fldgrpcfc01.setVisibility(View.VISIBLE);
+            bi.lblc02sub.setText(getString(R.string.cfc02sub));
+
+
+   /* if (getIntent().getBooleanExtra("pwMonth", false) || InfoActivity.flagLM) {
+        bi.pfc0299.setChecked(true);
+//            bi.pfc0299.setEnabled(false);
+    }*/
         }
+
 
         bi.pfc01a.setAdapter(new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, Arrays.asList(AppMain.loginMem)));
         bi.pfc01b.setAdapter(new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, Arrays.asList(AppMain.loginMem)));
+        if (AppMain.formType.equals(AppMain.CHILD)) {
+            bi.cfc01a.setAdapter(new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, Arrays.asList(AppMain.loginMem)));
+            bi.cfc01b.setAdapter(new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, Arrays.asList(AppMain.loginMem)));
+        }
 
         bi.pfc01a.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
@@ -75,6 +95,33 @@ public class SectionCActivity extends AppCompatActivity {
 
             }
         });
+        bi.cfc01a.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                if (i == 0) {
+                    bi.cfc01b.setSelection(0);
+                    bi.cfc01b.setEnabled(false);
+                } else {
+                    bi.cfc01b.setEnabled(true);
+
+                    String[] users = new String[AppMain.loginMem.length - 1];
+                    int j = 0;
+                    for (String s : AppMain.loginMem) {
+                        if (!s.equals(bi.cfc01a.getSelectedItem().toString())) {
+                            users[j] = s;
+                            j++;
+                        }
+                    }
+
+                    bi.cfc01b.setAdapter(new ArrayAdapter<>(getBaseContext(), android.R.layout.simple_spinner_dropdown_item, Arrays.asList(users)));
+                }
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> adapterView) {
+
+            }
+        });
 
     }
 
@@ -88,10 +135,16 @@ public class SectionCActivity extends AppCompatActivity {
             }
 
             if (UpdateDB()) {
+                if (AppMain.formType.equals(AppMain.PREGNANTWOMEN)) {
+                    startActivity(new Intent(this, SectionDActivity.class)
+                            .putExtra("complete", true));
+                    finish();
+                } else if (AppMain.formType.equals(AppMain.CHILD)) {
+                    startActivity(new Intent(this, Child_Section_D.class));
+                    finish();
+                }
 
-                startActivity(new Intent(this, SectionDActivity.class)
-                        .putExtra("complete", true));
-                finish();
+
             }
         }
 
@@ -101,12 +154,18 @@ public class SectionCActivity extends AppCompatActivity {
 
         JSONObject sC = new JSONObject();
 
-        sC.put("pfc01a", bi.pfc01a.getSelectedItem().toString());
-        sC.put("pfc0101", bi.pfc0101.getText().toString());
-        sC.put("pfc01b", bi.pfc01b.getSelectedItem().toString());
-        sC.put("pfc0102", bi.pfc0102.getText().toString());
-        sC.put("pfc02", bi.pfc0299.isChecked() ? "99" : bi.pfc02.getText().toString());
+        sC.put(AppMain.formType + "c01a", bi.pfc01a.getSelectedItem().toString());
+        sC.put(AppMain.formType + "c0101", bi.pfc0101.getText().toString());
+        sC.put(AppMain.formType + "c01b", bi.pfc01b.getSelectedItem().toString());
+        sC.put(AppMain.formType + "c0102", bi.pfc0102.getText().toString());
+        sC.put(AppMain.formType + "c02", bi.pfc0299.isChecked() ? "99" : bi.pfc02.getText().toString());
 
+        if (AppMain.formType.equals(AppMain.CHILD)) {
+            sC.put(AppMain.formType + "c03a", bi.cfc01a.getSelectedItem().toString());
+            sC.put(AppMain.formType + "c0301", bi.cfc0101.getText().toString());
+            sC.put(AppMain.formType + "c03b", bi.cfc01b.getSelectedItem().toString());
+            sC.put(AppMain.formType + "c0302", bi.cfc0102.getText().toString());
+        }
         AppMain.fc.setsC(String.valueOf(sC));
 
     }
@@ -126,7 +185,37 @@ public class SectionCActivity extends AppCompatActivity {
     }
 
     public boolean formValidation() {
+        if (AppMain.formType.equals(AppMain.CHILD)) {
+            if (!validatorClass.EmptySpinner(this, bi.cfc01a, getString(R.string.cfc01))) {
+                return false;
+            }
 
+            if (!validatorClass.EmptyTextBox(this, bi.cfc0101, getString(R.string.cfc01a))) {
+                return false;
+            }
+
+            if (!validatorClass.PatternTextBox(this, bi.cfc0101, getString(R.string.cfc01a), "^(\\d{3,3}\\.\\d{2,2})$", "XXX.XX")) {
+                return false;
+            }
+            if (!validatorClass.RangeTextBox(this, bi.cfc0101, 55d, 95d, getString(R.string.cfc01a), "length")) {
+                return false;
+            }
+            if (!validatorClass.EmptySpinner(this, bi.cfc01b, getString(R.string.cfc01))) {
+                return false;
+            }
+
+            if (!validatorClass.EmptyTextBox(this, bi.cfc0102, getString(R.string.cfc01a))) {
+                return false;
+            }
+
+            if (!validatorClass.PatternTextBox(this, bi.cfc0102, getString(R.string.cfc01a), "^(\\d{3,3}\\.\\d{2,2})$", "XXX.XX")) {
+                return false;
+            }
+            if (!validatorClass.RangeTextBox(this, bi.cfc0102, 55d, 95d, getString(R.string.cfc01a), "length")) {
+                return false;
+            }
+
+        }
         if (!validatorClass.EmptySpinner(this, bi.pfc01a, getString(R.string.pfc01))) {
             return false;
         }
@@ -138,9 +227,18 @@ public class SectionCActivity extends AppCompatActivity {
         if (!validatorClass.PatternTextBox(this, bi.pfc0101, getString(R.string.pfc01a), "^(\\d{3,3}\\.\\d{2,2})$", "XXX.XX")) {
             return false;
         }
+        if(AppMain.formType.equals(AppMain.PREGNANTWOMEN)){
+
         if (!validatorClass.RangeTextBox(this, bi.pfc0101, 25d, 120d, getString(R.string.pfc01a), "weight")) {
             return false;
         }
+        }else if(AppMain.formType.equals(AppMain.CHILD)){
+            if (!validatorClass.RangeTextBox(this, bi.pfc0101, 4d,20d, getString(R.string.pfc01a), "weight")) {
+                return false;
+            }
+        }
+
+
 
         if (!validatorClass.EmptySpinner(this, bi.pfc01b, getString(R.string.pfc01))) {
             return false;
@@ -153,8 +251,15 @@ public class SectionCActivity extends AppCompatActivity {
         if (!validatorClass.PatternTextBox(this, bi.pfc0102, getString(R.string.pfc01a), "^(\\d{3,3}\\.\\d{2,2})$", "XXX.XX")) {
             return false;
         }
-        if (!validatorClass.RangeTextBox(this, bi.pfc0102, 25d, 120d, getString(R.string.pfc01a), "weight")) {
-            return false;
+        if(AppMain.formType.equals(AppMain.PREGNANTWOMEN)){
+
+            if (!validatorClass.RangeTextBox(this, bi.pfc0102, 25d, 120d, getString(R.string.pfc01a), "weight")) {
+                return false;
+            }
+        }else if(AppMain.formType.equals(AppMain.CHILD)){
+            if (!validatorClass.RangeTextBox(this, bi.pfc0102, 4d,20d, getString(R.string.pfc01a), "weight")) {
+                return false;
+            }
         }
 
         if (!bi.pfc0299.isChecked()) {

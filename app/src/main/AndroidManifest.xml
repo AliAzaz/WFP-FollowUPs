@@ -90,6 +90,25 @@
         <activity
             android:name=".activities.SectionJActivity"
             android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".activities.Child_Section_D"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".activities.Child_Section_E"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize"/>
+        <activity
+            android:name=".activities.Child_Section_F"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize"/>
+        <activity android:name=".activities.ChildSectionBActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize"/>
+        <activity android:name=".activities.ChildInfoActivity"
+
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize"/>
     </application>
 
 </manifest>

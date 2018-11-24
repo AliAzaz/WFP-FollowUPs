@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto">
+
+<data>
+
+    <import type="android.view.View" />
+
+    <variable
+        name="callback"
+        type="edu.aku.hassannaqvi.wfp_followups.activities.ChildSectionBActivity" />
+</data>
+
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="5dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:animateLayoutChanges="true"
+        android:layoutDirection="rtl"
+        android:orientation="vertical">
+
+        <!--Q1-->
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:elevation="10dp">
+
+            <LinearLayout
+                android:id="@+id/fldgrpcfb01"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@color/colorPrimaryDark"
+                    android:text="@string/cfb01"
+                    android:textColor="@color/white" />
+
+                <RadioGroup
+                    android:id="@+id/cfb01"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <RadioButton
+                        android:id="@+id/cfb01a"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="1dp"
+                        android:layout_weight="1"
+                        android:text="@string/cfb01a" />
+
+                    <RadioButton
+                        android:id="@+id/cfb01b"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="1dp"
+                        android:layout_weight="1"
+                        android:text="@string/cfb01b" />
+
+                    <RadioButton
+                        android:id="@+id/cfb01c"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="1dp"
+                        android:layout_weight="1"
+                        android:text="@string/cfb01c" />
+
+                    <RadioButton
+                        android:id="@+id/cfb01d"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="1dp"
+                        android:layout_weight="1"
+                        android:text="@string/cfb01d" />
+
+                    <RadioButton
+                        android:id="@+id/cfb01e"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="1dp"
+                        android:layout_weight="1"
+                        android:text="@string/cfb01e" />
+
+                    <RadioButton
+                        android:id="@+id/cfb01f"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="1dp"
+                        android:layout_weight="1"
+                        android:text="@string/cfb01f" />
+
+                    <EditText
+                        android:id="@+id/cfb01fx"
+                        style="@style/textInput"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/cfb01fx"
+                        android:inputType="number"
+                        android:text='@{cfb01f.checked ? cfb01fx.getText.toString : ""}'
+                        android:visibility="@{cfb01f.checked ? View.VISIBLE : View.GONE}"
+                        android:maxLength="1"/>
+                    <RadioButton
+                        android:id="@+id/cfb01g"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="1dp"
+                        android:layout_weight="1"
+                        android:text="@string/cfb01g" />
+                    <EditText
+                        android:id="@+id/cfb01gx"
+                        style="@style/textInput"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/cfb01fx"
+                        android:inputType="number"
+                        android:text='@{cfb01g.checked ? cfb01gx.getText.toString : ""}'
+                        android:visibility="@{cfb01g.checked ? View.VISIBLE : View.GONE}"
+                        android:maxLength="1"/>
+                </RadioGroup>
+
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+
+
+            <!--Q2-->
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/fldgrpcfbb"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:elevation="10dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:background="@color/colorPrimaryDark"
+                            android:text="@string/cfb02"
+                            android:textColor="@color/white" />
+
+                        <EditText
+                            android:id="@+id/cfb02m"
+                            style="@style/textInput"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/month"
+                            android:inputType="number"
+                            android:maxLength="2"/>
+                        <EditText
+                            android:id="@+id/cfb02d"
+                            style="@style/textInput"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/day"
+                            android:inputType="number"
+                            android:maxLength="2"/>
+
+                    </LinearLayout>
+
+                </android.support.v7.widget.CardView>
+
+
+
+        <!--================End Buttons======================-->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn_Continue"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:layout_marginRight="5dp"
+                android:layout_weight="0.5"
+                android:onClick="@{() -> callback.BtnContinue()}"
+                android:padding="2dp"
+                android:text="@string/nextSection"
+                android:textSize="32sp"
+                android:visibility="visible" />
+
+            <Button
+                android:id="@+id/btn_End"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:onClick="@{() -> callback.BtnEnd()}"
+                android:padding="2dp"
+                android:text="@string/end_interview"
+                android:textColor="#ff1e1e"
+                android:textSize="32sp" />
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>
+
+
+</layout>

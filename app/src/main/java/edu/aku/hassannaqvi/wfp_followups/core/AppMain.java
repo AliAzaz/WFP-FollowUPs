@@ -93,6 +93,8 @@ public class AppMain extends Application {
     public static EnrolledContract Eparticipant;
     public static String currentParticipantName = "";
     public static String formType = "";
+    public static final String PREGNANTWOMEN = "pf";
+    public static final String CHILD = "cf";
     public static JSONObject sA;
     public static String[] loginMem;
 

@@ -1,10 +1,10 @@
 package edu.aku.hassannaqvi.wfp_followups.activities;
 
-import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.databinding.DataBindingUtil;
+import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -17,67 +17,37 @@ import android.widget.Toast;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Collections;
 import java.util.Date;
-import java.util.HashMap;
-import java.util.List;
 
 import edu.aku.hassannaqvi.wfp_followups.R;
 import edu.aku.hassannaqvi.wfp_followups.contracts.EnrolledContract;
 import edu.aku.hassannaqvi.wfp_followups.contracts.FormsContract;
-import edu.aku.hassannaqvi.wfp_followups.contracts.LHWsContract;
 import edu.aku.hassannaqvi.wfp_followups.core.AppMain;
 import edu.aku.hassannaqvi.wfp_followups.core.DatabaseHelper;
-import edu.aku.hassannaqvi.wfp_followups.databinding.ActivityInfoBinding;
+import edu.aku.hassannaqvi.wfp_followups.databinding.ActivityChildInfoBinding;
 import edu.aku.hassannaqvi.wfp_followups.validation.validatorClass;
 
-public class InfoActivity extends Activity {
-
-    ActivityInfoBinding bi;
-
-
-    private static final String TAG = InfoActivity.class.getSimpleName();
-    static String id = "";
-    List<String> LHWsName;
-    DatabaseHelper db;
-    HashMap<String, String> LHWs;
+public class ChildInfoActivity extends AppCompatActivity {
+    ActivityChildInfoBinding bi;
     Boolean check = false;
+    DatabaseHelper db;
     public static EnrolledContract enrolledParticipant;
-    public static boolean serFlagPW = false, flagLM = false;
+    private static final String TAG = InfoActivity.class.getSimpleName();
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-
-        bi = DataBindingUtil.setContentView(this, R.layout.activity_info);
+        bi = DataBindingUtil.setContentView(this, R.layout.activity_child_info);
         bi.setCallback(this);
-
-//        bi.fldgrppfa01.
 
         this.setTitle(R.string.pfaheading);
         db = new DatabaseHelper(this);
 
-        LHWsName = new ArrayList<>();
-
-        LHWs = new HashMap<>();
-
-        final Collection<LHWsContract> collectionLHWs = db.getLHWsByCluster(AppMain.curCluster);
-
-        for (LHWsContract lhws : collectionLHWs) {
-            LHWsName.add(lhws.getLhwName());
-            Collections.sort(LHWsName);
-            LHWs.put(lhws.getLhwName(), lhws.getLhwId());
-
-        }
-
-
-        bi.pfa06.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+        bi.cfa06.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
-                if (i == R.id.pfa06b) {
+                if (i == R.id.cfa06b) {
                     bi.btnContinue.setVisibility(View.GONE);
                     bi.btnEnd.setVisibility(View.VISIBLE);
                 } else {
@@ -87,7 +57,8 @@ public class InfoActivity extends Activity {
             }
         });
 
-        bi.studyID.addTextChangedListener(new TextWatcher() {
+
+        bi.cstudyID.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
 
@@ -96,9 +67,8 @@ public class InfoActivity extends Activity {
             @Override
             public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
                 check = false;
-                bi.fldGrpParticipant.setVisibility(View.GONE);
-                bi.pfa04.clearCheck();
-                bi.pfa06.clearCheck();
+                bi.fldGrpChild.setVisibility(View.GONE);
+                bi.cfa06.clearCheck();
             }
 
             @Override
@@ -106,14 +76,12 @@ public class InfoActivity extends Activity {
 
             }
         });
-
     }
 
-    public void onCheckParticipantsClick() {
-        //TODO implement
-
-        if (!bi.studyID.getText().toString().isEmpty()) {
-            enrolledParticipant = db.getEnrolledByStudyID(bi.studyID.getText().toString());
+    public void onCheckChildClick() {
+        if (!bi.cstudyID.getText().toString().isEmpty()) {
+            bi.fldGrpChild.setVisibility(View.VISIBLE);
+          /*  enrolledParticipant = db.getEnrolledByStudyID(bi.cstudyID.getText().toString());
 
             if (enrolledParticipant != null) {
 
@@ -122,11 +90,11 @@ public class InfoActivity extends Activity {
                 if (days > -8 && days < 8) {
                     Toast.makeText(getApplicationContext(), "Participant found", Toast.LENGTH_LONG).show();
 
-                    plwData();
+                    childData();
 
                     AppMain.hideKeyboard(this);
 
-                    bi.fldGrpParticipant.setVisibility(View.VISIBLE);
+                    bi.fldGrpChild.setVisibility(View.VISIBLE);
 
                     check = true;
                 } else {
@@ -134,31 +102,34 @@ public class InfoActivity extends Activity {
                 }
 
             } else {
-                Toast.makeText(getApplicationContext(), "Participant Not found", Toast.LENGTH_LONG).show();
+                Toast.makeText(getApplicationContext(), "Child Not found", Toast.LENGTH_LONG).show();
 
                 check = false;
-            }
+            }*/
         } else {
 
-            if (!validatorClass.EmptyTextBox(this, bi.studyID, getString(R.string.studyID))) {
+            if (!validatorClass.EmptyTextBox(this, bi.cstudyID, getString(R.string.cfa01))) {
                 return;
             }
+            bi.fldGrpChild.setVisibility(View.GONE);
         }
-
     }
 
-    public void plwData() {
-        bi.viewGroup01.pwName.setText(enrolledParticipant.getPw_name());
-        bi.viewGroup01.hName.setText(enrolledParticipant.getH_name());
-        bi.viewGroup01.fupround.setText(enrolledParticipant.getFupround());
-        bi.viewGroup01.fupdate.setText(enrolledParticipant.getFupdt());
+    public void childData() {
+      /*  bi.viewGroup02.childName.setText(enrolledParticipant.getPw_name());
+        bi.viewGroup02.mName.setText(enrolledParticipant.getH_name());
+        bi.viewGroup02.cfupround.setText(enrolledParticipant.getFupround());
+        bi.viewGroup02.cfupdate.setText(enrolledParticipant.getFupdt());*/
+        bi.viewGroup02.childName.setText("Chinko");
+        bi.viewGroup02.mName.setText("Pinki");
+        bi.viewGroup02.cfupround.setText("1");
+        bi.viewGroup02.cfupdate.setText("19-11-2018");
     }
-
     public void onBtnEndClick() {
-        if (ValidateForm()) {
+//        if (ValidateForm()) {
             try {
                 SaveDraft();
-            } catch (JSONException e) {
+            } catch (org.json.JSONException e) {
                 e.printStackTrace();
             }
             if (UpdateDB()) {
@@ -168,7 +139,46 @@ public class InfoActivity extends Activity {
             } else {
                 Toast.makeText(this, "Failed to Update Database!", Toast.LENGTH_SHORT).show();
             }
-        }
+//        }
+    }
+    private void SaveDraft() throws JSONException {
+
+        SharedPreferences sharedPref = getSharedPreferences("tagName", MODE_PRIVATE);
+        AppMain.fc = new FormsContract();
+
+        AppMain.fc.setTagID(sharedPref.getString("tagName", null));
+        AppMain.fc.setFormDate((DateFormat.format("dd-MM-yyyy HH:mm", new Date())).toString());
+        AppMain.fc.setInterviewer01(AppMain.loginMem[1]);
+        AppMain.fc.setInterviewer02(AppMain.loginMem[2]);
+
+      /*  AppMain.fc.setUccode(enrolledParticipant.getUc_code());
+        AppMain.fc.setTehsilcode(enrolledParticipant.getTehsil_code());
+        AppMain.fc.setVillagecode(enrolledParticipant.getVillage_code());
+        AppMain.fc.setLhwCode(enrolledParticipant.getLhw_code());*/
+
+        AppMain.fc.setDeviceID(AppMain.deviceId);
+        AppMain.fc.setStudyID(bi.cstudyID.getText().toString());
+        AppMain.fc.setFormType(AppMain.formType);
+
+        AppMain.fc.setApp_version(AppMain.versionName + "." + AppMain.versionCode);
+
+        JSONObject sInfo = new JSONObject();
+       /* sInfo.put("cuid", enrolledParticipant.getPuid());
+        sInfo.put("child_name", enrolledParticipant.getPw_name());
+        sInfo.put("m_name", enrolledParticipant.getH_name());
+        sInfo.put("lmp", enrolledParticipant.getLmp());
+        sInfo.put("edd", enrolledParticipant.getEdd());
+        sInfo.put("fupdt", enrolledParticipant.getFupdt());
+        sInfo.put("fupround", enrolledParticipant.getFupround());
+        sInfo.put("resp_type", enrolledParticipant.getResp_type());
+        sInfo.put("fup_formdate", enrolledParticipant.getFormdate());*/
+        sInfo.put(AppMain.formType + "a06", bi.cfa06a.isChecked() ? "1" : bi.cfa06b.isChecked() ? "2" : "0");
+
+
+        AppMain.fc.setsInfo(String.valueOf(sInfo));
+
+        setGPS();
+
     }
 
     public void onBtnContinueClick() {
@@ -181,14 +191,19 @@ public class InfoActivity extends Activity {
             if (UpdateDB()) {
 
                 finish();
-                Intent intent = new Intent(this, SectionBActivity.class)
-                        .putExtra("valCheck", bi.pfa04a.isChecked() ? 1 : 2);
+                Intent intent = new Intent(this, ChildSectionBActivity.class);
                 startActivity(intent);
 
             } else {
                 Toast.makeText(this, "Failed to Update Database!", Toast.LENGTH_SHORT).show();
             }
         }
+
+    }
+
+    public boolean ValidateForm() {
+
+        return validatorClass.EmptyRadioButton(this, bi.cfa06, bi.cfa06b, getString(R.string.pfa06));
 
     }
 
@@ -214,51 +229,6 @@ public class InfoActivity extends Activity {
             return false;
         }
     }
-
-    private void SaveDraft() throws JSONException {
-
-        SharedPreferences sharedPref = getSharedPreferences("tagName", MODE_PRIVATE);
-        AppMain.fc = new FormsContract();
-
-        AppMain.fc.setTagID(sharedPref.getString("tagName", null));
-        AppMain.fc.setFormDate((DateFormat.format("dd-MM-yyyy HH:mm", new Date())).toString());
-        AppMain.fc.setInterviewer01(AppMain.loginMem[1]);
-        AppMain.fc.setInterviewer02(AppMain.loginMem[2]);
-
-        AppMain.fc.setUccode(enrolledParticipant.getUc_code());
-        AppMain.fc.setTehsilcode(enrolledParticipant.getTehsil_code());
-        AppMain.fc.setVillagecode(enrolledParticipant.getVillage_code());
-        AppMain.fc.setLhwCode(enrolledParticipant.getLhw_code());
-
-        AppMain.fc.setDeviceID(AppMain.deviceId);
-        AppMain.fc.setStudyID(bi.studyID.getText().toString());
-        AppMain.fc.setFormType(AppMain.formType);
-
-        AppMain.fc.setApp_version(AppMain.versionName + "." + AppMain.versionCode);
-
-        JSONObject sInfo = new JSONObject();
-        sInfo.put("puid", enrolledParticipant.getPuid());
-        sInfo.put("pw_name", enrolledParticipant.getPw_name());
-        sInfo.put("h_name", enrolledParticipant.getH_name());
-        sInfo.put("lmp", enrolledParticipant.getLmp());
-        sInfo.put("edd", enrolledParticipant.getEdd());
-        sInfo.put("fupdt", enrolledParticipant.getFupdt());
-        sInfo.put("fupround", enrolledParticipant.getFupround());
-        sInfo.put("resp_type", enrolledParticipant.getResp_type());
-        sInfo.put("fup_formdate", enrolledParticipant.getFormdate());
-
-        sInfo.put(AppMain.formType + "a04", bi.pfa04a.isChecked() ? "1" : bi.pfa04b.isChecked() ? "2" : "0");
-        sInfo.put(AppMain.formType + "a06", bi.pfa06a.isChecked() ? "1" : bi.pfa06b.isChecked() ? "2" : "0");
-
-        flagLM = bi.pfa04b.isChecked();
-        serFlagPW = enrolledParticipant.getResp_type().equals("pw");
-
-        AppMain.fc.setsInfo(String.valueOf(sInfo));
-
-        setGPS();
-
-    }
-
     public void setGPS() {
         SharedPreferences GPSPref = getSharedPreferences("GPSCoordinates", Context.MODE_PRIVATE);
 
@@ -287,12 +257,5 @@ public class InfoActivity extends Activity {
 
     }
 
-    public boolean ValidateForm() {
-
-        if (!validatorClass.EmptyRadioButton(this, bi.pfa04, bi.pfa04b, getString(R.string.pfa04))) {
-            return false;
-        }
-        return validatorClass.EmptyRadioButton(this, bi.pfa06, bi.pfa06b, getString(R.string.pfa03));
-    }
 
 }
