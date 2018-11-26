@@ -112,7 +112,8 @@ public class Child_Section_D extends AppCompatActivity {
 
         cfd.put("cfd01b96x", bi.cfd01b96x.getText().toString());
         cfd.put("cfd02", bi.cfd02.getText().toString());
-        cfd.put("cfd03a", bi.cfd03a02.isChecked() ? "1" : bi.cfd03a01.getText().toString());
+        cfd.put("cfd03a01", bi.cfd03a01.getText().toString());
+        cfd.put("cfd03a02", bi.cfd03a02.isChecked() ? "1" : "0");
 
         cfd.put("cfd03b01", bi.cfd03b01.isChecked() ? "1" : "0");
         cfd.put("cfd03b02", bi.cfd03b02.isChecked() ? "2" : "0");
