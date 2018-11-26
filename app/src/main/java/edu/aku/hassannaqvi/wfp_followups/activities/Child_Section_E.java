@@ -87,15 +87,15 @@ public class Child_Section_E extends AppCompatActivity {
     private void saveDraft() throws JSONException {
 
         JSONObject cfE = new JSONObject();
-        cfE.put("cfe01a", bi.cfe01a01.isChecked() ? "1" : bi.cfe01a01.isChecked() ? "2" : "0");
-        cfE.put("cfe01b", bi.cfe01b01.isChecked() ? "1" : bi.cfe01b01.isChecked() ? "2" : "0");
-        cfE.put("cfe01c", bi.cfe01c01.isChecked() ? "1" : bi.cfe01c01.isChecked() ? "2" : "0");
-        cfE.put("cfe01d", bi.cfe01d01.isChecked() ? "1" : bi.cfe01d01.isChecked() ? "2" : "0");
-        cfE.put("cfe01e", bi.cfe01e01.isChecked() ? "1" : bi.cfe01e01.isChecked() ? "2" : "0");
-        cfE.put("cfe01f", bi.cfe01f01.isChecked() ? "1" : bi.cfe01f01.isChecked() ? "2" : "0");
-        cfE.put("cfe01g", bi.cfe01g01.isChecked() ? "1" : bi.cfe01g01.isChecked() ? "2" : "0");
-        cfE.put("cfe01h", bi.cfe01h01.isChecked() ? "1" : bi.cfe01h01.isChecked() ? "2" : "0");
-        cfE.put("cfe0196", bi.cfe019601.isChecked() ? "1" : bi.cfe019601.isChecked() ? "2" : "0");
+        cfE.put("cfe01a", bi.cfe01a01.isChecked() ? "1" : bi.cfe01a02.isChecked() ? "2" : "0");
+        cfE.put("cfe01b", bi.cfe01b01.isChecked() ? "1" : bi.cfe01b02.isChecked() ? "2" : "0");
+        cfE.put("cfe01c", bi.cfe01c01.isChecked() ? "1" : bi.cfe01c02.isChecked() ? "2" : "0");
+        cfE.put("cfe01d", bi.cfe01d01.isChecked() ? "1" : bi.cfe01d02.isChecked() ? "2" : "0");
+        cfE.put("cfe01e", bi.cfe01e01.isChecked() ? "1" : bi.cfe01e02.isChecked() ? "2" : "0");
+        cfE.put("cfe01f", bi.cfe01f01.isChecked() ? "1" : bi.cfe01f02.isChecked() ? "2" : "0");
+        cfE.put("cfe01g", bi.cfe01g01.isChecked() ? "1" : bi.cfe01g02.isChecked() ? "2" : "0");
+        cfE.put("cfe01h", bi.cfe01h01.isChecked() ? "1" : bi.cfe01h02.isChecked() ? "2" : "0");
+        cfE.put("cfe0196", bi.cfe019601.isChecked() ? "1" : bi.cfe019602.isChecked() ? "2" : "0");
         cfE.put("cfe0196x", bi.cfe0196x.getText().toString());
         cfE.put("cfe0197", bi.cfe0197.isChecked() ? "97" : "0");
 
