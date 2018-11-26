@@ -100,7 +100,7 @@ public class Child_Section_D extends AppCompatActivity {
                 : bi.cfd01a02.isChecked() ? "2"
                 : "0");
 
-        cfd.put("cfd01reason", bi.cfd01a03x.getText().toString());
+        cfd.put("cfd01a03x", bi.cfd01a03x.getText().toString());
         cfd.put("cfd01b01", bi.cfd01b01.isChecked() ? "1" : "0");
         cfd.put("cfd01b02", bi.cfd01b02.isChecked() ? "2" : "0");
         cfd.put("cfd01b03", bi.cfd01b03.isChecked() ? "3" : "0");
@@ -111,9 +111,8 @@ public class Child_Section_D extends AppCompatActivity {
         cfd.put("cfd01b96", bi.cfd01b96.isChecked() ? "96" : "0");
 
         cfd.put("cfd01b96x", bi.cfd01b96x.getText().toString());
-        cfd.put("cfd03a01", bi.cfd03a01.getText().toString());
-        cfd.put("cfd03a02", bi.cfd03a02.isChecked() ? "1" : "0");
-
+        cfd.put("cfd02", bi.cfd02.getText().toString());
+        cfd.put("cfd03a", bi.cfd03a02.isChecked() ? "1" : bi.cfd03a01.getText().toString());
 
         cfd.put("cfd03b01", bi.cfd03b01.isChecked() ? "1" : "0");
         cfd.put("cfd03b02", bi.cfd03b02.isChecked() ? "2" : "0");
@@ -141,7 +140,7 @@ public class Child_Section_D extends AppCompatActivity {
         cfd.put("cfd05b", bi.cfd05b.getText().toString());
 
         cfd.put("cfd06a", bi.cfd06a01.isChecked() ? "1"
-                : bi.cfd06a01.isChecked() ? "2"
+                : bi.cfd06a02.isChecked() ? "2"
                 : "0");
 
         cfd.put("cfd06b01", bi.cfd06b01.isChecked() ? "1" : "0");
