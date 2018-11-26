@@ -147,7 +147,9 @@ public class SectionDActivity extends AppCompatActivity {
     private void saveDraft() throws JSONException {
 
         JSONObject sD = new JSONObject();
-        sD.put("pfd01", bi.pfd01a.isChecked() ? "1" : bi.pfd01b.isChecked() ? "2" : bi.pfd01c.isChecked() ? "3" : "0");
+        sD.put("pfd01", bi.pfd01a.isChecked() ? "1"
+                : bi.pfd01b.isChecked() ? "2"
+                : bi.pfd01c.isChecked() ? "3" : "0");
         sD.put("pfd01reason", bi.pfd01bx.getText().toString());
         sD.put("pfd02", bi.pfd02.getText().toString());
         sD.put("pfd03", bi.pfd03.getText().toString());

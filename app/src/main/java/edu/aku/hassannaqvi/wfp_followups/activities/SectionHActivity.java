@@ -40,6 +40,14 @@ public class SectionHActivity extends AppCompatActivity {
 
     private void setupViews() {
 
+        if (AppMain.formType.equals(AppMain.CHILD)) {
+            if (!getIntent().getBooleanExtra("childMonth", false)) {
+                bi.pfh0399.setChecked(true);
+                bi.pfh0399.setEnabled(false);
+            }
+        }
+
+
         bi.pfh01a.setAdapter(new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, Arrays.asList(AppMain.loginMem)));
         bi.pfh01b.setAdapter(new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, Arrays.asList(AppMain.loginMem)));
         bi.pfh02a.setAdapter(new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, Arrays.asList(AppMain.loginMem)));
@@ -113,8 +121,15 @@ public class SectionHActivity extends AppCompatActivity {
             }
             if (UpdateDB()) {
 
-                startActivity(new Intent(this, SectionIActivity.class));
-                finish();
+                if (AppMain.formType.equals(AppMain.CHILD)) {
+                    startActivity(new Intent(this, Child_Section_D.class));
+                    finish();
+                } else {
+                    startActivity(new Intent(this, SectionIActivity.class));
+                    finish();
+                }
+
+
             }
         }
 
@@ -123,15 +138,15 @@ public class SectionHActivity extends AppCompatActivity {
     public void saveDraft() throws JSONException {
 
         JSONObject sH = new JSONObject();
-        sH.put("pfh01a", bi.pfh01a.getSelectedItem().toString());
-        sH.put("pfh0101", bi.pfh0101.getText().toString());
-        sH.put("pfh01b", bi.pfh01b.getSelectedItem().toString());
-        sH.put("pfh0102", bi.pfh0102.getText().toString());
-        sH.put("pfh02a", bi.pfh02a.getSelectedItem().toString());
-        sH.put("pfh0201", bi.pfh0201.getText().toString());
-        sH.put("pfh02b", bi.pfh02b.getSelectedItem().toString());
-        sH.put("pfh0202", bi.pfh0202.getText().toString());
-        sH.put("pfh03", bi.pfh0399.isChecked() ? "99" : bi.pfh03.getText().toString());
+        sH.put(AppMain.formType + "h01a", bi.pfh01a.getSelectedItem().toString());
+        sH.put(AppMain.formType + "h0101", bi.pfh0101.getText().toString());
+        sH.put(AppMain.formType + "h01b", bi.pfh01b.getSelectedItem().toString());
+        sH.put(AppMain.formType + "h0102", bi.pfh0102.getText().toString());
+        sH.put(AppMain.formType + "h02a", bi.pfh02a.getSelectedItem().toString());
+        sH.put(AppMain.formType + "h0201", bi.pfh0201.getText().toString());
+        sH.put(AppMain.formType + "h02b", bi.pfh02b.getSelectedItem().toString());
+        sH.put(AppMain.formType + "h0202", bi.pfh0202.getText().toString());
+        sH.put(AppMain.formType + "h03", bi.pfh0399.isChecked() ? "99" : bi.pfh03.getText().toString());
         AppMain.fc.setsH(String.valueOf(sH));
     }
 

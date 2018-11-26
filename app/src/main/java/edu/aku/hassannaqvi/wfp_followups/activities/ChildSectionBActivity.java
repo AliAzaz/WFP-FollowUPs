@@ -2,8 +2,8 @@ package edu.aku.hassannaqvi.wfp_followups.activities;
 
 import android.content.Intent;
 import android.databinding.DataBindingUtil;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.RadioGroup;
 import android.widget.Toast;
@@ -60,7 +60,10 @@ public class ChildSectionBActivity extends AppCompatActivity {
               /*  startActivity(new Intent(this, bi.cfb01a.isChecked() && !bi.cfb02b.isChecked() ? SectionCActivity.class : EndingActivity.class)
                         .putExtra("complete", true)
                         .putExtra("pwMonth", !bi.pfb03.getText().toString().isEmpty() && (Integer.valueOf(bi.pfb03.getText().toString()) < 9)));*/
-                startActivity(new Intent(this, SectionCActivity.class).putExtra("childMonth", !bi.cfb02m.getText().toString().isEmpty() && (Integer.valueOf(bi.cfb02m.getText().toString()) == 24)));
+                startActivity(new Intent(this, SectionHActivity.class)
+                        .putExtra("childMonth",
+                                !bi.cfb02m.getText().toString().isEmpty()
+                                        && (Integer.valueOf(bi.cfb02m.getText().toString()) == 24)));
                 finish();
             }
         }
@@ -117,9 +120,7 @@ public class ChildSectionBActivity extends AppCompatActivity {
             if (!validatorClass.EmptyTextBox(this, bi.cfb02d, getString(R.string.day))) {
                 return false;
             }
-            if (!validatorClass.RangeTextBox(this, bi.cfb02d, 0, 29, getString(R.string.cfb02), "Day")) {
-                return false;
-            }
+            return validatorClass.RangeTextBox(this, bi.cfb02d, 0, 29, getString(R.string.cfb02), "Day");
         }
 
 
