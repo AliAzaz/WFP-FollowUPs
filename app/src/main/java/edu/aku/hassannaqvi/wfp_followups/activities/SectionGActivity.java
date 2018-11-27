@@ -282,12 +282,12 @@ public class SectionGActivity extends AppCompatActivity {
                 : bi.pfg10b.isChecked() ? "2"
                 : bi.pfg10d.isChecked() ? "3"
                 : bi.pfg10e.isChecked() ? "4"
+                : bi.pfg1096.isChecked() ? "961"
                 : bi.pfg10f.isChecked() ? "5"
                 : bi.pfg10g.isChecked() ? "6"
                 : bi.pfg10h.isChecked() ? "7"
-                : bi.pfg10i.isChecked() ? "8"
-                : bi.pfg10j.isChecked() ? "9"
-                : bi.pfg1096.isChecked() ? "96"
+                : bi.pfg10i.isChecked() ? "962"
+                : bi.pfg10j.isChecked() ? "963"
                 : "0");
         sG.put("pfg109601", bi.pfg1096x.getText().toString());
         sG.put("pfg109602", bi.pfg10ix.getText().toString());
