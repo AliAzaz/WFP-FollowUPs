@@ -186,6 +186,7 @@ public class SectionDActivity extends AppCompatActivity {
         sD.put("pfd12g", bi.pfd12g.isChecked() ? "7" : "0");
         sD.put("pfd1296", bi.pfd1296.isChecked() ? "96" : "0");
         sD.put("pfd1196x", bi.pfd1196x.getText().toString());
+        sD.put("pfd1296x", bi.pfd1296x.getText().toString());
 
         AppMain.fc.setsD(String.valueOf(sD));
 
