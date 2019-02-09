@@ -89,7 +89,17 @@
             android:layout_marginTop="16dp"
             android:layout_marginBottom="8dp"
             android:onClick="openForm"
-            android:text="حاملہ خاتون  یا دودھ پلانے والی ماں کا فالواپ"
+            android:text="حاملہ خاتون فالواپ"
+            android:textSize="28sp" />
+
+        <Button
+            android:id="@+id/openFormLW"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="8dp"
+            android:onClick="openForm"
+            android:text="دودھ پلانے والی ماں کا فالواپ"
             android:textSize="28sp" />
 
         <Button
