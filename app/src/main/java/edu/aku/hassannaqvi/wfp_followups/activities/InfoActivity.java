@@ -121,14 +121,14 @@ public class InfoActivity extends Activity {
 
                 if (days > -8 && days < 8) {
                     Toast.makeText(getApplicationContext(), "Participant found", Toast.LENGTH_LONG).show();
-
                     plwData();
-
                     AppMain.hideKeyboard(this);
-
                     bi.fldGrpParticipant.setVisibility(View.VISIBLE);
-
                     check = true;
+
+                    // Get Intent
+                    boolean flag = getIntent().getBooleanExtra("condPF", false);
+                    bi.pfa04.check(flag ? bi.pfa04a.getId() : bi.pfa04b.getId());
                 } else {
                     Toast.makeText(this, "Follow Up not found!!", Toast.LENGTH_SHORT).show();
                 }

@@ -198,26 +198,24 @@ public class MainActivity extends Activity {
     }
 
     public void openForm(View v) {
-        switch (v.getId()) {
 
-            case R.id.openFormPW:
-                AppMain.formType = AppMain.PREGNANTWOMEN;
-                break;
+        Intent oF = null;
 
-            case R.id.openFormChild:
-                AppMain.formType = AppMain.CHILD;
-                break;
-            default:
-                break;
+        if (v.getId() == R.id.openFormPW || v.getId() == R.id.openFormLW) {
+            AppMain.formType = AppMain.PREGNANTWOMEN;
+            oF = new Intent(MainActivity.this, InfoActivity.class);
+
+            if (v.getId() == R.id.openFormPW)
+                oF.putExtra("condPF", true);
+            else
+                oF.putExtra("condPF", false);
+
+        } else if (v.getId() == R.id.openFormChild) {
+            AppMain.formType = AppMain.CHILD;
+            oF = new Intent(MainActivity.this, ChildInfoActivity.class);
         }
-        if (sharedPref.getString("tagName", null) != "" && sharedPref.getString("tagName", null) != null) {
-            Intent oF = new Intent();
-            if(AppMain.formType.equals(AppMain.PREGNANTWOMEN)){
-                oF = new Intent(MainActivity.this, InfoActivity.class);
 
-            }else if(AppMain.formType.equals(AppMain.CHILD)){
-                oF = new Intent(MainActivity.this, ChildInfoActivity.class);
-            }
+        if (sharedPref.getString("tagName", null) != "" && sharedPref.getString("tagName", null) != null) {
             startActivity(oF);
         } else {
 
@@ -231,6 +229,7 @@ public class MainActivity extends Activity {
             input.setInputType(InputType.TYPE_CLASS_TEXT);
             builder.setView(input);
 
+            final Intent finalOF = oF;
             builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
                 @Override
                 public void onClick(DialogInterface dialog, int which) {
@@ -238,16 +237,7 @@ public class MainActivity extends Activity {
                     if (!m_Text.equals("")) {
                         editor.putString("tagName", m_Text);
                         editor.commit();
-                        Intent oF = new Intent();
-                        if(AppMain.formType.equals(AppMain.PREGNANTWOMEN)){
-                            oF = new Intent(MainActivity.this, InfoActivity.class);
-
-                        }else if(AppMain.formType.equals(AppMain.CHILD)){
-                            oF = new Intent(MainActivity.this, ChildInfoActivity.class);
-
-                        }
-
-                        startActivity(oF);
+                        startActivity(finalOF);
                     }
                 }
             });
@@ -326,7 +316,7 @@ public class MainActivity extends Activity {
                     "ChildForms",
                     "updateSyncedForms",
                     FormsContract.class,
-                    AppMain._HOST_URL + FormsContract.FormsTable._URL.replace("plw_followups.php","child_followups.php"),
+                    AppMain._HOST_URL + FormsContract.FormsTable._URL.replace("plw_followups.php", "child_followups.php"),
                     db.getUnsyncedForms(AppMain.CHILD)
             ).execute();
 
