@@ -845,7 +845,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return allCC;
     }
 
-    public EnrolledContract getEnrolledByStudyID(String studyID) {
+    public EnrolledContract getEnrolledByStudyID(String studyID, boolean pwCheck) {
         SQLiteDatabase db = this.getReadableDatabase();
         Cursor c = null;
         String[] columns = {
@@ -866,8 +866,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 EnrolledTable.COLUMN_RESP_TYPE,
         };
 
-        String whereClause = EnrolledTable.COLUMN_STUDYID + " = ?";
-        String[] whereArgs = {studyID};
+        String whereClause = EnrolledTable.COLUMN_STUDYID + " = ? AND " + EnrolledTable.COLUMN_RESP_TYPE + " =?";
+        String[] whereArgs = {studyID, pwCheck ? "pw" : "lm"};
         String groupBy = null;
         String having = null;
 
@@ -1011,7 +1011,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 FormsTable.COLUMN_FORMTYPE,
                 FormsTable.COLUMN_STUDY_ID,
         };
-        String whereClause =FormsTable.COLUMN_FORMTYPE+ " = '"+formtype+"' AND ("+ FormsTable.COLUMN_SYNCED + " is null OR " + FormsTable.COLUMN_SYNCED + " = '')";
+        String whereClause = FormsTable.COLUMN_FORMTYPE + " = '" + formtype + "' AND (" + FormsTable.COLUMN_SYNCED + " is null OR " + FormsTable.COLUMN_SYNCED + " = '')";
         String[] whereArgs = null;
         String groupBy = null;
         String having = null;

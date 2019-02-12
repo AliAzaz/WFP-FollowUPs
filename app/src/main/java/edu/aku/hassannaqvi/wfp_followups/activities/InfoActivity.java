@@ -47,15 +47,17 @@ public class InfoActivity extends Activity {
     public static EnrolledContract enrolledParticipant;
     public static boolean serFlagPW = false, flagLM = false;
 
+    boolean cond_Flag;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-
         bi = DataBindingUtil.setContentView(this, R.layout.activity_info);
         bi.setCallback(this);
 
-//        bi.fldgrppfa01.
+        // Get Intent
+        cond_Flag = getIntent().getBooleanExtra("condPF", false);
 
         this.setTitle(R.string.pfaheading);
         db = new DatabaseHelper(this);
@@ -113,7 +115,7 @@ public class InfoActivity extends Activity {
         //TODO implement
 
         if (!bi.studyID.getText().toString().isEmpty()) {
-            enrolledParticipant = db.getEnrolledByStudyID(bi.studyID.getText().toString());
+            enrolledParticipant = db.getEnrolledByStudyID(bi.studyID.getText().toString(), cond_Flag);
 
             if (enrolledParticipant != null) {
 
@@ -126,9 +128,7 @@ public class InfoActivity extends Activity {
                     bi.fldGrpParticipant.setVisibility(View.VISIBLE);
                     check = true;
 
-                    // Get Intent
-                    boolean flag = getIntent().getBooleanExtra("condPF", false);
-                    bi.pfa04.check(flag ? bi.pfa04a.getId() : bi.pfa04b.getId());
+                    bi.pfa04.check(cond_Flag ? bi.pfa04a.getId() : bi.pfa04b.getId());
                 } else {
                     Toast.makeText(this, "Follow Up not found!!", Toast.LENGTH_SHORT).show();
                 }
