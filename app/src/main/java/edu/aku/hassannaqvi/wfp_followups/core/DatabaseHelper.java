@@ -26,6 +26,8 @@ import edu.aku.hassannaqvi.wfp_followups.contracts.FormsContract.FormsTable;
 import edu.aku.hassannaqvi.wfp_followups.contracts.LHWsContract;
 import edu.aku.hassannaqvi.wfp_followups.contracts.ParticipantsContract;
 import edu.aku.hassannaqvi.wfp_followups.contracts.ParticipantsContract.ParticipantsTable;
+import edu.aku.hassannaqvi.wfp_followups.contracts.PregnancyContract;
+import edu.aku.hassannaqvi.wfp_followups.contracts.PregnancyContract.PregnancyTable;
 import edu.aku.hassannaqvi.wfp_followups.contracts.UsersContract;
 import edu.aku.hassannaqvi.wfp_followups.contracts.UsersContract.UsersTable;
 
@@ -46,7 +48,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     public static final String DATABASE_NAME = "wfp_followups.db";
     public static String DB_NAME = DATABASE_NAME.replace(".db", "_copy.db");
 
-    private static final int DATABASE_VERSION = 1;
+    private static final int DATABASE_VERSION = 2;
     private static final String SQL_CREATE_FORMS = "CREATE TABLE "
             + FormsTable.TABLE_NAME + "(" +
             FormsTable.COLUMN__ID + " INTEGER PRIMARY KEY AUTOINCREMENT," +
@@ -149,6 +151,19 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             ClustersContract.ClustersTable.COLUMN_CLUSTERNAME + " TEXT," +
             ClustersContract.ClustersTable.COLUMN_CLUSTERCODE + " TEXT" +
             " );";
+    private static final String SQL_CREATE_CURRENT_PREGNANCY = "CREATE TABLE "
+            + PregnancyTable.TABLE_NAME + "(" +
+            PregnancyTable.COLUMN_ID + " INTEGER PRIMARY KEY AUTOINCREMENT," +
+            PregnancyTable.COLUMN_PUID + " TEXT," +
+            PregnancyTable.COLUMN_UC_CODE + " TEXT," +
+            PregnancyTable.COLUMN_TEHSIL_CODE + " TEXT," +
+            PregnancyTable.COLUMN_VILLAGE_CODE + " TEXT," +
+            PregnancyTable.COLUMN_LHW_CODE + " TEXT," +
+            PregnancyTable.COLUMN_STUDYID + " TEXT," +
+            PregnancyTable.COLUMN_FORMDATE + " TEXT," +
+            PregnancyTable.COLUMN_PW_NAME + " TEXT," +
+            PregnancyTable.COLUMN_H_NAME + " TEXT" +
+            " );";
     /**
      * DELETE STRINGS
      */
@@ -181,17 +196,23 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         db.execSQL(SQL_CREATE_CLUSTERS);
         db.execSQL(SQL_CREATE_FORMS);
         db.execSQL(SQL_CREATE_PARTICIPANTS);
-
+        db.execSQL(SQL_CREATE_CURRENT_PREGNANCY);
     }
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int i, int i1) {
-        db.execSQL(SQL_DELETE_USERS);
+        /*db.execSQL(SQL_DELETE_USERS);
         db.execSQL(SQL_DELETE_ENROLLED);
         db.execSQL(SQL_DELETE_LHWS);
         db.execSQL(SQL_DELETE_CLUSTERS);
         db.execSQL(SQL_DELETE_FORMS);
-        db.execSQL(SQL_DELETE_PARTICIPANTS);
+        db.execSQL(SQL_DELETE_PARTICIPANTS);*/
+
+        switch (i) {
+            case 1:
+                db.execSQL(SQL_CREATE_CURRENT_PREGNANCY);
+        }
+
     }
 
     public void syncUsers(JSONArray userlist) {
@@ -215,6 +236,39 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
         } catch (Exception e) {
             Log.d(TAG, "syncUsers(e): " + e);
+        } finally {
+            db.close();
+        }
+    }
+
+    public void syncPregnancy(JSONArray prgList) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        db.delete(PregnancyTable.TABLE_NAME, null, null);
+        try {
+            JSONArray jsonArray = prgList;
+            for (int i = 0; i < jsonArray.length(); i++) {
+                JSONObject jsonObjectEC = jsonArray.getJSONObject(i);
+
+                PregnancyContract prg = new PregnancyContract();
+                prg.Sync(jsonObjectEC);
+
+                ContentValues values = new ContentValues();
+
+                values.put(PregnancyTable.COLUMN_PUID, prg.getPuid());
+                values.put(PregnancyTable.COLUMN_UC_CODE, prg.getUc_code());
+                values.put(PregnancyTable.COLUMN_TEHSIL_CODE, prg.getTehsil_code());
+                values.put(PregnancyTable.COLUMN_VILLAGE_CODE, prg.getVillage_code());
+                values.put(PregnancyTable.COLUMN_LHW_CODE, prg.getLhw_code());
+                values.put(PregnancyTable.COLUMN_STUDYID, prg.getStudyid());
+                values.put(PregnancyTable.COLUMN_FORMDATE, prg.getFormdate());
+                values.put(PregnancyTable.COLUMN_PW_NAME, prg.getPw_name());
+                values.put(PregnancyTable.COLUMN_H_NAME, prg.getH_name());
+
+                db.insert(PregnancyTable.TABLE_NAME, null, values);
+            }
+
+
+        } catch (Exception e) {
         } finally {
             db.close();
         }
@@ -886,6 +940,54 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             );
             while (c.moveToNext()) {
                 allEC = new EnrolledContract().Hydrate(c);
+
+            }
+        } finally {
+            if (c != null) {
+                c.close();
+            }
+            if (db != null) {
+                db.close();
+            }
+        }
+        return allEC;
+    }
+
+    public PregnancyContract getCurrentPWByStudyID(String studyID) {
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor c = null;
+        String[] columns = {
+                PregnancyTable.COLUMN_PUID,
+                PregnancyTable.COLUMN_UC_CODE,
+                PregnancyTable.COLUMN_TEHSIL_CODE,
+                PregnancyTable.COLUMN_VILLAGE_CODE,
+                PregnancyTable.COLUMN_LHW_CODE,
+                PregnancyTable.COLUMN_STUDYID,
+                PregnancyTable.COLUMN_FORMDATE,
+                PregnancyTable.COLUMN_PW_NAME,
+                PregnancyTable.COLUMN_H_NAME
+        };
+
+        String whereClause = PregnancyTable.COLUMN_STUDYID + " =?";
+        String[] whereArgs = {studyID};
+        String groupBy = null;
+        String having = null;
+
+        String orderBy = PregnancyTable.COLUMN_ID + " ASC";
+
+        PregnancyContract allEC = null;
+        try {
+            c = db.query(
+                    PregnancyTable.TABLE_NAME,  // The table to query
+                    columns,                   // The columns to return
+                    whereClause,               // The columns for the WHERE clause
+                    whereArgs,                 // The values for the WHERE clause
+                    groupBy,                   // don't group the rows
+                    having,                    // don't filter by row groups
+                    orderBy                    // The sort order
+            );
+            while (c.moveToNext()) {
+                allEC = new PregnancyContract().Hydrate(c);
 
             }
         } finally {

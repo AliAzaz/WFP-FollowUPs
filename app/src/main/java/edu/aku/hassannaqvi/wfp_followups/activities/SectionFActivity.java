@@ -310,10 +310,11 @@ public class SectionFActivity extends AppCompatActivity {
             if (UpdateDB()) {
 
                 startActivity(new Intent(this,
-                        (SectionBActivity.currentlyPR == 1 && !InfoActivity.enrolledParticipant.getFupround().equals("1")) ||
+                        /*(SectionBActivity.currentlyPR == 1 && !InfoActivity.enrolledParticipant.getFupround().equals("0")) ||
                                 ((SectionBActivity.currentlyPR == 5 || SectionBActivity.currentlyPR == 6) && InfoActivity.enrolledParticipant.getFupround().equals("1"))
-                                ? SectionIActivity.class : SectionGActivity.class)
-                        .putExtra("complete", true));
+                                ? SectionIActivity.class : SectionGActivity.class)*/
+                        AppMain.currentPrg ? SectionGActivity.class : SectionIActivity.class
+                ));
                 finish();
             }
         }

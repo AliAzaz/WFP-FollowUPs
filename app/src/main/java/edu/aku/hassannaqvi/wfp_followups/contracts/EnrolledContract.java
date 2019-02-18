@@ -256,7 +256,7 @@ public class EnrolledContract {
         public static final String COLUMN_FORMDATE = "formdate";
         public static final String COLUMN_RESP_TYPE = "resp_type";
 
-        public static final String _URIGET = "followups_pw.php";
+        public static final String _URI = "followups_pw.php";
     }
 
 }

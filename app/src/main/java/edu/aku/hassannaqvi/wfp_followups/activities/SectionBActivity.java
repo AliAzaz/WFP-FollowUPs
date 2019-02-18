@@ -54,7 +54,7 @@ public class SectionBActivity extends AppCompatActivity {
                     ClearClass.ClearAllCardFields(bi.fldgrppfba, true);
 
                     // Get check from prv activity
-                    int flag = getIntent().getIntExtra("valCheck", 0);
+                    boolean flag = getIntent().getBooleanExtra("valCheck", false);
                     /*if (flag == 1) {
                         bi.pfb02e.setEnabled(false);
                         bi.pfb02f.setEnabled(false);
@@ -64,13 +64,12 @@ public class SectionBActivity extends AppCompatActivity {
                         bi.pfb02c.setEnabled(false);
                         bi.pfb02d.setEnabled(false);
                     }*/
-                    if (flag != 1) {
+                    if (!flag) {
                         bi.pfb02a.setEnabled(false);
                         bi.pfb02b.setEnabled(false);
                         bi.pfb02c.setEnabled(false);
                         bi.pfb02d.setEnabled(false);
                     }
-
                 }
             }
         });

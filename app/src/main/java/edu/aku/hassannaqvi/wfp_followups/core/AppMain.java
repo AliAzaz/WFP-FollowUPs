@@ -91,7 +91,7 @@ public class AppMain extends Application {
     public static String curCluster = "";
     //    For participant
     public static EnrolledContract Eparticipant;
-    public static String currentParticipantName = "";
+    public static boolean currentPrg = false;
     public static String formType = "";
     public static final String PREGNANTWOMEN = "pf";
     public static final String CHILD = "cf";

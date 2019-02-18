@@ -34,7 +34,6 @@ import edu.aku.hassannaqvi.wfp_followups.contracts.FormsContract;
 import edu.aku.hassannaqvi.wfp_followups.core.AndroidDatabaseManager;
 import edu.aku.hassannaqvi.wfp_followups.core.AppMain;
 import edu.aku.hassannaqvi.wfp_followups.core.DatabaseHelper;
-import edu.aku.hassannaqvi.wfp_followups.getclasses.GetPWs;
 import edu.aku.hassannaqvi.wfp_followups.otherclasses.FormsList;
 import edu.aku.hassannaqvi.wfp_followups.syncclasses.SyncAllData;
 
@@ -201,7 +200,7 @@ public class MainActivity extends Activity {
 
         Intent oF = null;
 
-        if (v.getId() == R.id.openFormPW || v.getId() == R.id.openFormLW) {
+        if (v.getId() == R.id.openFormPW || v.getId() == R.id.openFormLW || v.getId() == R.id.openFormUnSchLW) {
             AppMain.formType = AppMain.PREGNANTWOMEN;
             oF = new Intent(MainActivity.this, InfoActivity.class);
 
@@ -209,6 +208,8 @@ public class MainActivity extends Activity {
                 oF.putExtra("condPF", true);
             else
                 oF.putExtra("condPF", false);
+
+            AppMain.currentPrg = v.getId() == R.id.openFormUnSchLW;
 
         } else if (v.getId() == R.id.openFormChild) {
             AppMain.formType = AppMain.CHILD;
@@ -343,8 +344,8 @@ public class MainActivity extends Activity {
         if (networkInfo != null && networkInfo.isConnected()) {
 
             // Sync Randomization
-            Toast.makeText(getApplicationContext(), "Getting PW's", Toast.LENGTH_SHORT).show();
-            new GetPWs(this).execute();
+            /*Toast.makeText(getApplicationContext(), "Getting PW's", Toast.LENGTH_SHORT).show();
+            new GetPWs(this).execute();*/
 
 
             SharedPreferences syncPref = getSharedPreferences("SyncInfo", Context.MODE_PRIVATE);

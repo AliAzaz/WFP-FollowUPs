@@ -59,8 +59,7 @@ import butterknife.OnClick;
 import edu.aku.hassannaqvi.wfp_followups.R;
 import edu.aku.hassannaqvi.wfp_followups.core.AppMain;
 import edu.aku.hassannaqvi.wfp_followups.core.DatabaseHelper;
-import edu.aku.hassannaqvi.wfp_followups.getclasses.GetPWs;
-import edu.aku.hassannaqvi.wfp_followups.getclasses.GetUsers;
+import edu.aku.hassannaqvi.wfp_followups.getclasses.GetAllData;
 
 
 /**
@@ -636,10 +635,13 @@ public class LoginActivity extends Activity implements LoaderCallbacks<Cursor> {
                 @Override
                 public void run() {
                     Toast.makeText(getApplicationContext(), "Getting PW's", Toast.LENGTH_SHORT).show();
-                    new GetPWs(mContext).execute();
+                    new GetAllData(mContext, "PW").execute();
 
-                    Toast.makeText(getApplicationContext(), "Getting Users", Toast.LENGTH_SHORT).show();
-                    new GetUsers(mContext).execute();
+                    Toast.makeText(LoginActivity.this, "Sync Users", Toast.LENGTH_LONG).show();
+                    new GetAllData(mContext, "User").execute();
+
+                    Toast.makeText(LoginActivity.this, "Sync FollowUps", Toast.LENGTH_LONG).show();
+                    new GetAllData(mContext, "FollowUps").execute();
                 }
             });
 
