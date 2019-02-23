@@ -200,7 +200,7 @@ public class MainActivity extends Activity {
 
         Intent oF = null;
 
-        if (v.getId() == R.id.openFormPW || v.getId() == R.id.openFormLW || v.getId() == R.id.openFormUnSchLW) {
+        if (v.getId() == R.id.openFormPW || v.getId() == R.id.openFormLW) {
             AppMain.formType = AppMain.PREGNANTWOMEN;
             oF = new Intent(MainActivity.this, InfoActivity.class);
 
@@ -209,6 +209,10 @@ public class MainActivity extends Activity {
             else
                 oF.putExtra("condPF", false);
 
+        } else if (v.getId() == R.id.openFormUnSchLW) {
+
+            AppMain.formType = AppMain.PREGNANTWOMEN;
+            oF = new Intent(MainActivity.this, LMUnscheduleActivity.class);
             AppMain.currentPrg = v.getId() == R.id.openFormUnSchLW;
 
         } else if (v.getId() == R.id.openFormChild) {

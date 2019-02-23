@@ -42,7 +42,7 @@ public class SectionBActivity extends AppCompatActivity {
     private void setupViews() {
 
         bi.pfb04.setManager(getSupportFragmentManager());
-        bi.pfb04.setMinDate(AppMain.convertDateFormat(InfoActivity.enrolledParticipant.getFormdate()));
+        bi.pfb04.setMinDate(AppMain.convertDateFormat(getIntent().getStringExtra("fdate")));
         bi.pfb04.setMaxDate(new SimpleDateFormat("dd/MM/yyyy").format(System.currentTimeMillis()));
 
         bi.pfb01.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {

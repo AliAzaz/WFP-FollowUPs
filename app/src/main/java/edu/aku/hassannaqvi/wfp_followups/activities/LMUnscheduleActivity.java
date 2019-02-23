@@ -154,7 +154,8 @@ public class LMUnscheduleActivity extends Activity {
 
                 finish();
                 Intent intent = new Intent(this, SectionBActivity.class)
-                        .putExtra("valCheck", bi.pfa04a.isChecked());
+                        .putExtra("valCheck", bi.pfa04a.isChecked())
+                        .putExtra("fdate", curPWParticipant.getFormdate());
                 startActivity(intent);
 
             } else {

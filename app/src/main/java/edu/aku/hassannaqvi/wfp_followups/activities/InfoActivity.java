@@ -40,7 +40,7 @@ public class InfoActivity extends Activity {
     DatabaseHelper db;
     HashMap<String, String> LHWs;
     Boolean check = false;
-    public static EnrolledContract enrolledParticipant;
+    private EnrolledContract enrolledParticipant;
     public static boolean serFlagPW = false, flagLM = false;
 
     boolean cond_Flag;
@@ -164,7 +164,8 @@ public class InfoActivity extends Activity {
 
                 finish();
                 Intent intent = new Intent(this, SectionBActivity.class)
-                        .putExtra("valCheck", bi.pfa04a.isChecked());
+                        .putExtra("valCheck", bi.pfa04a.isChecked())
+                        .putExtra("fdate", enrolledParticipant.getFormdate());
                 startActivity(intent);
 
             } else {

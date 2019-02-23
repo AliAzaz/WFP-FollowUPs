@@ -66,6 +66,10 @@
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustResize" />
         <activity
+            android:name=".activities.LMUnscheduleActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
             android:name=".activities.SectionBActivity"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustResize" />
