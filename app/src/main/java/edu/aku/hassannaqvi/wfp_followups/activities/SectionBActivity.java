@@ -64,11 +64,14 @@ public class SectionBActivity extends AppCompatActivity {
                         bi.pfb02c.setEnabled(false);
                         bi.pfb02d.setEnabled(false);
                     }*/
-                    if (!flag) {
-                        bi.pfb02a.setEnabled(false);
-                        bi.pfb02b.setEnabled(false);
+                    if (flag) {
                         bi.pfb02c.setEnabled(false);
                         bi.pfb02d.setEnabled(false);
+                        bi.pfb02e.setEnabled(false);
+                        bi.pfb02f.setEnabled(false);
+                    } else {
+                        bi.pfb02a.setEnabled(false);
+                        bi.pfb02b.setEnabled(false);
                     }
                 }
             }
