@@ -140,7 +140,7 @@ public class SectionEActivity extends AppCompatActivity {
             }
             if (UpdateDB()) {
                 finish();
-                startActivity(new Intent(this, InfoActivity.flagLM ? SectionGActivity.class : SectionFActivity.class));
+                startActivity(new Intent(this, MainActivity.flagLM ? SectionGActivity.class : SectionFActivity.class));
 
             } else {
                 Toast.makeText(this, "Failed to Update Database!", Toast.LENGTH_SHORT).show();

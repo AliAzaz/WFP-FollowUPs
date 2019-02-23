@@ -40,7 +40,7 @@ public class SectionCActivity extends AppCompatActivity {
 
     private void setupViews() {
 
-        if (getIntent().getBooleanExtra("pwMonth", false) || InfoActivity.flagLM) {
+        if (getIntent().getBooleanExtra("pwMonth", false) || MainActivity.flagLM) {
             bi.pfc0299.setChecked(true);
 //            bi.pfc0299.setEnabled(false);
         }

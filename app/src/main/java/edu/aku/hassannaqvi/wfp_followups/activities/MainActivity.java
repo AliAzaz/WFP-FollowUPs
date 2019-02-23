@@ -65,6 +65,7 @@ public class MainActivity extends Activity {
     private String rSumText = "";
     private ProgressDialog pd;
     private Boolean exit = false;
+    public static boolean serFlagPW = false, flagLM = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

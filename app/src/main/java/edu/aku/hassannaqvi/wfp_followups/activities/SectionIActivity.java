@@ -56,19 +56,19 @@ public class SectionIActivity extends AppCompatActivity {
             }
         }*/
 
-        if (InfoActivity.serFlagPW && InfoActivity.flagLM) {
+        if (MainActivity.serFlagPW && MainActivity.flagLM) {
             this.setTitle(getString(R.string.pfiheading));
         } else {
             this.setTitle(getString(R.string.pfiheading2));
             bi.fldgrppfifirstfollowup.setVisibility(View.GONE);
         }
 
-        if (InfoActivity.flagLM) {
+        if (MainActivity.flagLM) {
             bi.fldGrppia.setVisibility(View.VISIBLE);
         } else {
             bi.fldGrppia.setVisibility(View.GONE);
 
-            if (InfoActivity.serFlagPW)
+            if (MainActivity.serFlagPW)
                 startActivity(new Intent(this, SectionBActivity.currentlyPR == 1 ? EndingActivity.class : SectionJActivity.class).putExtra("complete", true));
         }
 
@@ -748,7 +748,7 @@ public class SectionIActivity extends AppCompatActivity {
 
     private boolean formValidate() {
 
-        if (InfoActivity.serFlagPW && InfoActivity.flagLM) {
+        if (MainActivity.serFlagPW && MainActivity.flagLM) {
 
             if (!validatorClass.EmptyRadioButton(this, bi.pfi01, bi.pfi01a, getString(R.string.pfi01))) {
                 return false;
@@ -806,7 +806,7 @@ public class SectionIActivity extends AppCompatActivity {
             }
         }
 
-        if (InfoActivity.flagLM) {
+        if (MainActivity.flagLM) {
 
             if (!validatorClass.EmptyRadioButton(this, bi.pfi07, bi.pfi07a, getString(R.string.pfi07))) {
                 return false;

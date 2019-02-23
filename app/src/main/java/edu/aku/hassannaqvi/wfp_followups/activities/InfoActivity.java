@@ -41,7 +41,6 @@ public class InfoActivity extends Activity {
     HashMap<String, String> LHWs;
     Boolean check = false;
     private EnrolledContract enrolledParticipant;
-    public static boolean serFlagPW = false, flagLM = false;
 
     boolean cond_Flag;
 
@@ -233,8 +232,8 @@ public class InfoActivity extends Activity {
         sInfo.put(AppMain.formType + "a04", bi.pfa04a.isChecked() ? "1" : bi.pfa04b.isChecked() ? "2" : "0");
         sInfo.put(AppMain.formType + "a06", bi.pfa06a.isChecked() ? "1" : bi.pfa06b.isChecked() ? "2" : "0");
 
-        flagLM = bi.pfa04b.isChecked();
-        serFlagPW = enrolledParticipant.getResp_type().equals("pw");
+        MainActivity.flagLM = bi.pfa04b.isChecked();
+        MainActivity.serFlagPW = enrolledParticipant.getResp_type().equals("pw");
 
         AppMain.fc.setsInfo(String.valueOf(sInfo));
 
