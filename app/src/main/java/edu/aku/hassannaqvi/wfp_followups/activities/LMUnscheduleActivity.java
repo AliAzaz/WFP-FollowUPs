@@ -213,6 +213,7 @@ public class LMUnscheduleActivity extends Activity {
         sInfo.put("pw_name", curPWParticipant.getPw_name());
         sInfo.put("h_name", curPWParticipant.getH_name());
         sInfo.put("fup_formdate", curPWParticipant.getFormdate());
+        sInfo.put("fupround", "1");
         sInfo.put("resp_type", "unscheduled_lm");
 
         sInfo.put(AppMain.formType + "a04", bi.pfa04a.isChecked() ? "1" : bi.pfa04b.isChecked() ? "2" : "0");
