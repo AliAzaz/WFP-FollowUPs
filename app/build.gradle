@@ -19,12 +19,12 @@ android {
 
         defaultConfig {
             applicationId "edu.aku.hassannaqvi.wfp_followups"
-            minSdkVersion 21
-            targetSdkVersion 27
+            minSdkVersion 22
+            targetSdkVersion 22
 
 
             versionCode code
-            versionName "1.5"
+            versionName "1.6"
             testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
         }
     } else {
