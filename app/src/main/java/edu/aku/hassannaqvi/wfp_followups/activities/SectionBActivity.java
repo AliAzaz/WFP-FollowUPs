@@ -72,6 +72,11 @@ public class SectionBActivity extends AppCompatActivity {
                     } else {
                         bi.pfb02a.setEnabled(false);
                         bi.pfb02b.setEnabled(false);
+
+                        if (!AppMain.currentPrg) {
+                            bi.pfb02c.setEnabled(false);
+                            bi.pfb02d.setEnabled(false);
+                        }
                     }
                 }
             }
