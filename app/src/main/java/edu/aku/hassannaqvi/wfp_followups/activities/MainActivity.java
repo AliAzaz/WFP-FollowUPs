@@ -210,11 +210,13 @@ public class MainActivity extends Activity {
             else
                 oF.putExtra("condPF", false);
 
+            AppMain.currentPrg = false;
+
         } else if (v.getId() == R.id.openFormUnSchLW) {
 
             AppMain.formType = AppMain.PREGNANTWOMEN;
             oF = new Intent(MainActivity.this, LMUnscheduleActivity.class);
-            AppMain.currentPrg = v.getId() == R.id.openFormUnSchLW;
+            AppMain.currentPrg = true;
 
         } else if (v.getId() == R.id.openFormChild) {
             AppMain.formType = AppMain.CHILD;
