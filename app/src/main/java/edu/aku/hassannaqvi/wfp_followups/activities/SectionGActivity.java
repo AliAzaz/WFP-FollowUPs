@@ -223,7 +223,8 @@ public class SectionGActivity extends AppCompatActivity {
 
             if (UpdateDB()) {
 
-                startActivity(new Intent(this, SectionBActivity.currentlyPR == 1 ? SectionIActivity.class : SectionHActivity.class));
+//                startActivity(new Intent(this, AppMain.currentPrg ? SectionIActivity.class : SectionHActivity.class));
+                startActivity(new Intent(this, SectionIActivity.class));
                 finish();
             }
         }
