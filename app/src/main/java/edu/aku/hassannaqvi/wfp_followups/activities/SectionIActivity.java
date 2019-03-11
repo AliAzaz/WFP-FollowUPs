@@ -639,7 +639,7 @@ public class SectionIActivity extends AppCompatActivity {
             if (updateDB()) {
                 finish();
 //                Intent secNext = new Intent(this, SectionBActivity.currentlyPR == 1 ? EndingActivity.class : SectionJActivity.class);
-                Intent secNext = new Intent(this, SectionJActivity.class);
+                Intent secNext = new Intent(this, SectionHActivity.class);
                 startActivity(secNext);
             }
         }
@@ -653,7 +653,7 @@ public class SectionIActivity extends AppCompatActivity {
         int updcount = db.updatesI();
 
         if (updcount == 1) {
-            Toast.makeText(this, "Updating Database... Successful!", Toast.LENGTH_SHORT).show();
+//            Toast.makeText(this, "Updating Database... Successful!", Toast.LENGTH_SHORT).show();
             return true;
         } else {
             Toast.makeText(this, "Updating Database... ERROR!", Toast.LENGTH_SHORT).show();

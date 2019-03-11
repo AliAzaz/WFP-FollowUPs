@@ -315,7 +315,7 @@ public class SectionFActivity extends AppCompatActivity {
                                 ? SectionIActivity.class : SectionGActivity.class)*//*
                         AppMain.currentPrg ? SectionGActivity.class : SectionJActivity.class
                 ));*/
-                startActivity(new Intent(this, EndingActivity.class));
+                startActivity(new Intent(this, EndingActivity.class).putExtra("complete", true));
                 finish();
             }
         }
