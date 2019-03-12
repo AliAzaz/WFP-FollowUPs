@@ -105,7 +105,8 @@ public class SectionBActivity extends AppCompatActivity {
 
                 startActivity(new Intent(this, bi.pfb01a.isChecked() && !bi.pfb02b.isChecked() ? SectionCActivity.class : EndingActivity.class)
                         .putExtra("complete", true)
-                        .putExtra("pwMonth", !bi.pfb03.getText().toString().isEmpty() && (Integer.valueOf(bi.pfb03.getText().toString()) < 9)));
+                        .putExtra("pwMonth", !bi.pfb03.getText().toString().isEmpty() &&
+                                (Integer.valueOf(bi.pfb03.getText().toString()) != 8 && Integer.valueOf(bi.pfb03.getText().toString()) != 9)));
                 finish();
             }
         }
@@ -157,7 +158,7 @@ public class SectionBActivity extends AppCompatActivity {
                 if (!validatorClass.EmptyTextBox(this, bi.pfb03, getString(R.string.pfb03))) {
                     return false;
                 }
-                if (!validatorClass.RangeTextBox(this, bi.pfb03, 1, 9, getString(R.string.pfb03), "Months")) {
+                if (!validatorClass.RangeTextBox(this, bi.pfb03, 1, 10, getString(R.string.pfb03), "Months")) {
                     return false;
                 }
             }
