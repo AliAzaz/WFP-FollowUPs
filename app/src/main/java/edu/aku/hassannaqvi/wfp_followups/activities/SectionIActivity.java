@@ -26,7 +26,7 @@ public class SectionIActivity extends AppCompatActivity {
 
     ActivitySectionIBinding bi;
     ArrayList<Integer> answersArray = new ArrayList<>();
-    boolean flag = false;
+    boolean flag = false, isFlag = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -56,21 +56,28 @@ public class SectionIActivity extends AppCompatActivity {
             }
         }*/
 
-        if (MainActivity.serFlagPW && MainActivity.flagLM) {
+        /*if (AppMain.currentPrg) {
             this.setTitle(getString(R.string.pfiheading));
+            bi.fldGrppia.setVisibility(View.GONE);
         } else {
             this.setTitle(getString(R.string.pfiheading2));
             bi.fldgrppfifirstfollowup.setVisibility(View.GONE);
-        }
+        }*/
 
-        if (MainActivity.flagLM) {
+        if (!AppMain.currentPrg) {
+            this.setTitle(getString(R.string.pfiheading2));
+            bi.fldgrppfifirstfollowup.setVisibility(View.GONE);
+        } else
+            this.setTitle(getString(R.string.pfiheading));
+
+        /*if (MainActivity.flagLM) {
             bi.fldGrppia.setVisibility(View.VISIBLE);
         } else {
             bi.fldGrppia.setVisibility(View.GONE);
 
             if (MainActivity.serFlagPW)
                 startActivity(new Intent(this, SectionBActivity.currentlyPR == 1 ? EndingActivity.class : SectionJActivity.class).putExtra("complete", true));
-        }
+        }*/
 
         //=====================skip patterns=======================================
 
@@ -625,6 +632,7 @@ public class SectionIActivity extends AppCompatActivity {
                 }
             }
         });
+
     }
 
     public void BtnContinue() {
@@ -639,8 +647,19 @@ public class SectionIActivity extends AppCompatActivity {
             if (updateDB()) {
                 finish();
 //                Intent secNext = new Intent(this, SectionBActivity.currentlyPR == 1 ? EndingActivity.class : SectionJActivity.class);
-                Intent secNext = new Intent(this, SectionHActivity.class);
+                Intent secNext = new Intent(this, SectionJActivity.class);
                 startActivity(secNext);
+
+                /*Intent secNext;
+                if (AppMain.currentPrg && !isFlag) {
+                    secNext = new Intent(this, SectionIActivity.class)
+                            .putExtra("secJFlag", true);
+                } else {
+                    secNext = new Intent(this, SectionJActivity.class);
+                }
+
+                startActivity(secNext);*/
+
             }
         }
 
@@ -749,7 +768,7 @@ public class SectionIActivity extends AppCompatActivity {
 
     private boolean formValidate() {
 
-        if (MainActivity.serFlagPW && MainActivity.flagLM) {
+        if (AppMain.currentPrg) {
 
             if (!validatorClass.EmptyRadioButton(this, bi.pfi01, bi.pfi01a, getString(R.string.pfi01))) {
                 return false;
@@ -807,149 +826,147 @@ public class SectionIActivity extends AppCompatActivity {
             }
         }
 
-        if (MainActivity.flagLM) {
+        if (!validatorClass.EmptyRadioButton(this, bi.pfi07, bi.pfi07a, getString(R.string.pfi07))) {
+            return false;
+        }
 
-            if (!validatorClass.EmptyRadioButton(this, bi.pfi07, bi.pfi07a, getString(R.string.pfi07))) {
+        if (!bi.pfi07a.isChecked()) {
+            if (!validatorClass.EmptyRadioButton(this, bi.pfi0701, bi.pfi0701a, getString(R.string.pfi07a))) {
                 return false;
-            }
-
-            if (!bi.pfi07a.isChecked()) {
-                if (!validatorClass.EmptyRadioButton(this, bi.pfi0701, bi.pfi0701a, getString(R.string.pfi07a))) {
-                    return false;
-                }
-            }
-
-            if (!validatorClass.EmptyRadioButton(this, bi.pfi08, bi.pfi08a, getString(R.string.pfi08))) {
-                return false;
-            }
-            if (!validatorClass.EmptyRadioButton(this, bi.pfi09, bi.pfi09a, getString(R.string.pfi09))) {
-                return false;
-            }
-            if (!validatorClass.EmptyRadioButton(this, bi.pfi10a, bi.pfi10a01, getString(R.string.pfi10a))) {
-                return false;
-            }
-            if (!validatorClass.EmptyRadioButton(this, bi.pfi10b, bi.pfi10b01, getString(R.string.pfi10b))) {
-                return false;
-            }
-            if (bi.pfi10b01.isChecked()) {
-                if (!validatorClass.EmptyTextBox(this, bi.pfi10bx, getString(R.string.pfi10b))) {
-                    return false;
-                }
-
-            }
-            if (!validatorClass.EmptyRadioButton(this, bi.pfi10c, bi.pfi10c01, getString(R.string.pfi10c))) {
-                return false;
-            }
-            if (bi.pfi10c01.isChecked()) {
-                if (!validatorClass.EmptyTextBox(this, bi.pfi10c01x, getString(R.string.pfi10c))) {
-                    return false;
-                }
-
-            }
-            if (!validatorClass.EmptyRadioButton(this, bi.pfi10d, bi.pfi10d01, getString(R.string.pfi10d))) {
-                return false;
-            }
-            if (!validatorClass.EmptyRadioButton(this, bi.pfi10e, bi.pfi10e01, getString(R.string.pfi10e))) {
-                return false;
-            }
-            if (!validatorClass.EmptyRadioButton(this, bi.pfi10f, bi.pfi10f01, getString(R.string.pfi10f))) {
-                return false;
-            }
-            if (bi.pfi10f01.isChecked()) {
-                if (!validatorClass.EmptyTextBox(this, bi.pfi10f01x, getString(R.string.pfi10f))) {
-                    return false;
-                }
-            }
-            if (!validatorClass.EmptyRadioButton(this, bi.pfi10g, bi.pfi10g01, getString(R.string.pfi10g))) {
-                return false;
-            }
-            if (!validatorClass.EmptyRadioButton(this, bi.pfi10h, bi.pfi10h01, getString(R.string.pfi10h))) {
-                return false;
-            }
-            if (!validatorClass.EmptyRadioButton(this, bi.pfi10i, bi.pfi10i01, getString(R.string.pfi10i))) {
-                return false;
-            }
-
-            if (!validatorClass.EmptyRadioButton(this, bi.pfi12a, bi.pfi12a01, getString(R.string.pfi12a))) {
-                return false;
-            }
-            if (!validatorClass.EmptyRadioButton(this, bi.pfi12b, bi.pfi12b01, getString(R.string.pfi12b))) {
-                return false;
-            }
-            if (!validatorClass.EmptyRadioButton(this, bi.pfi12c, bi.pfi12c01, getString(R.string.pfi12c))) {
-                return false;
-            }
-            if (!validatorClass.EmptyRadioButton(this, bi.pfi12d, bi.pfi12d01, getString(R.string.pfi12d))) {
-                return false;
-            }
-            if (!validatorClass.EmptyRadioButton(this, bi.pfi12e, bi.pfi12e01, getString(R.string.pfi12e))) {
-                return false;
-            }
-            if (!validatorClass.EmptyRadioButton(this, bi.pfi12f, bi.pfi12f01, getString(R.string.pfi12f))) {
-                return false;
-            }
-            if (!validatorClass.EmptyRadioButton(this, bi.pfi12g, bi.pfi12g01, getString(R.string.pfi12g))) {
-                return false;
-            }
-            if (!validatorClass.EmptyRadioButton(this, bi.pfi12h, bi.pfi12h01, getString(R.string.pfi12h))) {
-                return false;
-            }
-            if (!validatorClass.EmptyRadioButton(this, bi.pfi12i, bi.pfi12i01, getString(R.string.pfi12i))) {
-                return false;
-            }
-            if (!validatorClass.EmptyRadioButton(this, bi.pfi12j, bi.pfi12j01, getString(R.string.pfi12j))) {
-                return false;
-            }
-            if (!validatorClass.EmptyRadioButton(this, bi.pfi12k, bi.pfi12k01, getString(R.string.pfi12k))) {
-                return false;
-            }
-            if (!validatorClass.EmptyRadioButton(this, bi.pfi12l, bi.pfi12l01, getString(R.string.pfi12l))) {
-                return false;
-            }
-            if (!validatorClass.EmptyRadioButton(this, bi.pfi12m, bi.pfi12m01, getString(R.string.pfi12m))) {
-                return false;
-            }
-            if (!validatorClass.EmptyRadioButton(this, bi.pfi12n, bi.pfi12n01, getString(R.string.pfi12n))) {
-                return false;
-            }
-            if (!validatorClass.EmptyRadioButton(this, bi.pfi12o, bi.pfi12o01, getString(R.string.pfi12o))) {
-                return false;
-            }
-            if (!validatorClass.EmptyRadioButton(this, bi.pfi12p, bi.pfi12p01, getString(R.string.pfi12p))) {
-                return false;
-            }
-            if (!validatorClass.EmptyRadioButton(this, bi.pfi12q, bi.pfi12q01, getString(R.string.pfi12q))) {
-                return false;
-            }
-
-            if (!flag) {
-                if (!validatorClass.EmptyRadioButton(this, bi.pfi13, bi.pfi13a, getString(R.string.pfi13))) {
-                    return false;
-                }
-            }
-
-            if (!flag && bi.pfi13a.isChecked()) {
-                if (!bi.pfi1498.isChecked()) {
-                    if (!validatorClass.EmptyTextBox(this, bi.pfi14t, getString(R.string.pfi14))) {
-                        return false;
-                    }
-                }
-
-            }
-            if (!validatorClass.EmptyRadioButton(this, bi.pfi15, bi.pfi15a, getString(R.string.pfi15))) {
-                return false;
-            }
-
-            if (bi.pfi15a.isChecked()) {
-                if (!validatorClass.EmptyRadioButton(this, bi.pfi16, bi.pfi1696, bi.pfi1696x, getString(R.string.pfi16))) {
-                    return false;
-                }
-                if (!validatorClass.EmptyRadioButton(this, bi.pfi17, bi.pfi1796, bi.pfi1796x, getString(R.string.pfi17))) {
-                    return false;
-                }
-                return validatorClass.EmptyRadioButton(this, bi.pfi18, bi.pfi18a, getString(R.string.pfi18));
             }
         }
+
+        if (!validatorClass.EmptyRadioButton(this, bi.pfi08, bi.pfi08a, getString(R.string.pfi08))) {
+            return false;
+        }
+        if (!validatorClass.EmptyRadioButton(this, bi.pfi09, bi.pfi09a, getString(R.string.pfi09))) {
+            return false;
+        }
+        if (!validatorClass.EmptyRadioButton(this, bi.pfi10a, bi.pfi10a01, getString(R.string.pfi10a))) {
+            return false;
+        }
+        if (!validatorClass.EmptyRadioButton(this, bi.pfi10b, bi.pfi10b01, getString(R.string.pfi10b))) {
+            return false;
+        }
+        if (bi.pfi10b01.isChecked()) {
+            if (!validatorClass.EmptyTextBox(this, bi.pfi10bx, getString(R.string.pfi10b))) {
+                return false;
+            }
+
+        }
+        if (!validatorClass.EmptyRadioButton(this, bi.pfi10c, bi.pfi10c01, getString(R.string.pfi10c))) {
+            return false;
+        }
+        if (bi.pfi10c01.isChecked()) {
+            if (!validatorClass.EmptyTextBox(this, bi.pfi10c01x, getString(R.string.pfi10c))) {
+                return false;
+            }
+
+        }
+        if (!validatorClass.EmptyRadioButton(this, bi.pfi10d, bi.pfi10d01, getString(R.string.pfi10d))) {
+            return false;
+        }
+        if (!validatorClass.EmptyRadioButton(this, bi.pfi10e, bi.pfi10e01, getString(R.string.pfi10e))) {
+            return false;
+        }
+        if (!validatorClass.EmptyRadioButton(this, bi.pfi10f, bi.pfi10f01, getString(R.string.pfi10f))) {
+            return false;
+        }
+        if (bi.pfi10f01.isChecked()) {
+            if (!validatorClass.EmptyTextBox(this, bi.pfi10f01x, getString(R.string.pfi10f))) {
+                return false;
+            }
+        }
+        if (!validatorClass.EmptyRadioButton(this, bi.pfi10g, bi.pfi10g01, getString(R.string.pfi10g))) {
+            return false;
+        }
+        if (!validatorClass.EmptyRadioButton(this, bi.pfi10h, bi.pfi10h01, getString(R.string.pfi10h))) {
+            return false;
+        }
+        if (!validatorClass.EmptyRadioButton(this, bi.pfi10i, bi.pfi10i01, getString(R.string.pfi10i))) {
+            return false;
+        }
+
+        if (!validatorClass.EmptyRadioButton(this, bi.pfi12a, bi.pfi12a01, getString(R.string.pfi12a))) {
+            return false;
+        }
+        if (!validatorClass.EmptyRadioButton(this, bi.pfi12b, bi.pfi12b01, getString(R.string.pfi12b))) {
+            return false;
+        }
+        if (!validatorClass.EmptyRadioButton(this, bi.pfi12c, bi.pfi12c01, getString(R.string.pfi12c))) {
+            return false;
+        }
+        if (!validatorClass.EmptyRadioButton(this, bi.pfi12d, bi.pfi12d01, getString(R.string.pfi12d))) {
+            return false;
+        }
+        if (!validatorClass.EmptyRadioButton(this, bi.pfi12e, bi.pfi12e01, getString(R.string.pfi12e))) {
+            return false;
+        }
+        if (!validatorClass.EmptyRadioButton(this, bi.pfi12f, bi.pfi12f01, getString(R.string.pfi12f))) {
+            return false;
+        }
+        if (!validatorClass.EmptyRadioButton(this, bi.pfi12g, bi.pfi12g01, getString(R.string.pfi12g))) {
+            return false;
+        }
+        if (!validatorClass.EmptyRadioButton(this, bi.pfi12h, bi.pfi12h01, getString(R.string.pfi12h))) {
+            return false;
+        }
+        if (!validatorClass.EmptyRadioButton(this, bi.pfi12i, bi.pfi12i01, getString(R.string.pfi12i))) {
+            return false;
+        }
+        if (!validatorClass.EmptyRadioButton(this, bi.pfi12j, bi.pfi12j01, getString(R.string.pfi12j))) {
+            return false;
+        }
+        if (!validatorClass.EmptyRadioButton(this, bi.pfi12k, bi.pfi12k01, getString(R.string.pfi12k))) {
+            return false;
+        }
+        if (!validatorClass.EmptyRadioButton(this, bi.pfi12l, bi.pfi12l01, getString(R.string.pfi12l))) {
+            return false;
+        }
+        if (!validatorClass.EmptyRadioButton(this, bi.pfi12m, bi.pfi12m01, getString(R.string.pfi12m))) {
+            return false;
+        }
+        if (!validatorClass.EmptyRadioButton(this, bi.pfi12n, bi.pfi12n01, getString(R.string.pfi12n))) {
+            return false;
+        }
+        if (!validatorClass.EmptyRadioButton(this, bi.pfi12o, bi.pfi12o01, getString(R.string.pfi12o))) {
+            return false;
+        }
+        if (!validatorClass.EmptyRadioButton(this, bi.pfi12p, bi.pfi12p01, getString(R.string.pfi12p))) {
+            return false;
+        }
+        if (!validatorClass.EmptyRadioButton(this, bi.pfi12q, bi.pfi12q01, getString(R.string.pfi12q))) {
+            return false;
+        }
+
+        if (!flag) {
+            if (!validatorClass.EmptyRadioButton(this, bi.pfi13, bi.pfi13a, getString(R.string.pfi13))) {
+                return false;
+            }
+        }
+
+        if (!flag && bi.pfi13a.isChecked()) {
+            if (!bi.pfi1498.isChecked()) {
+                if (!validatorClass.EmptyTextBox(this, bi.pfi14t, getString(R.string.pfi14))) {
+                    return false;
+                }
+            }
+
+        }
+        if (!validatorClass.EmptyRadioButton(this, bi.pfi15, bi.pfi15a, getString(R.string.pfi15))) {
+            return false;
+        }
+
+        if (bi.pfi15a.isChecked()) {
+            if (!validatorClass.EmptyRadioButton(this, bi.pfi16, bi.pfi1696, bi.pfi1696x, getString(R.string.pfi16))) {
+                return false;
+            }
+            if (!validatorClass.EmptyRadioButton(this, bi.pfi17, bi.pfi1796, bi.pfi1796x, getString(R.string.pfi17))) {
+                return false;
+            }
+            return validatorClass.EmptyRadioButton(this, bi.pfi18, bi.pfi18a, getString(R.string.pfi18));
+        }
+
 
         return true;
     }

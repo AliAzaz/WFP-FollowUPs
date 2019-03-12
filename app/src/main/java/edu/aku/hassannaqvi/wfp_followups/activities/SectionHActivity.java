@@ -125,7 +125,7 @@ public class SectionHActivity extends AppCompatActivity {
                     startActivity(new Intent(this, Child_Section_D.class));
                     finish();
                 } else {
-                    startActivity(new Intent(this, SectionJActivity.class));
+                    startActivity(new Intent(this, SectionIActivity.class));
                     finish();
                 }
 
