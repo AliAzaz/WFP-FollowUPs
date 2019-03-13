@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
 import android.widget.RadioGroup;
 import android.widget.Toast;
 
@@ -88,8 +89,16 @@ public class SectionBActivity extends AppCompatActivity {
                 if (i != bi.pfb02a.getId() || i != bi.pfb02e.getId()) {
                     ClearClass.ClearAllCardFields(bi.fldgrppfbb, true);
                 }
+
+                if (i == bi.pfb02e.getId()) {
+                    if (AppMain.currentPrg)
+                        bi.fldgrppfb04.setVisibility(View.VISIBLE);
+                    else
+                        bi.fldgrppfb04.setVisibility(View.GONE);
+                }
             }
         });
+
 
     }
 
@@ -164,7 +173,8 @@ public class SectionBActivity extends AppCompatActivity {
             }
 
             if (bi.pfb02e.isChecked()) {
-                return validatorClass.EmptyTextBox(this, bi.pfb04, getString(R.string.pfb04));
+                if (AppMain.currentPrg)
+                    return validatorClass.EmptyTextBox(this, bi.pfb04, getString(R.string.pfb04));
             }
 
         }
