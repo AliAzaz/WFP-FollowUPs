@@ -344,6 +344,7 @@
                             android:maxLines="1"
                             android:paddingStart="4dp"
                             android:paddingEnd="4dp"
+                            android:privateImeOptions="nm"
                             android:singleLine="true"
                             android:textSize="18sp"
                             tools:ignore="InvalidImeActionId">
@@ -414,6 +415,7 @@
                             android:maxLines="1"
                             android:paddingStart="4dp"
                             android:paddingEnd="4dp"
+                            android:privateImeOptions="nm"
                             android:singleLine="true"
                             android:textSize="18sp">
 
