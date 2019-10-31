@@ -85,7 +85,7 @@
     <string name="pfa04b"> دودھ پلانے والی ماں </string>
     <string name="pfa05"> فالو اپ کی تاریخ </string>
     <string name="pfa06">زبانی رضامندی </string>
-    <string name="pfbheading"> حاملہ خاتون یا دودھ پلانے والی ماں کی موجودہ صورت حال </string>
+    <string name="pfbheading"> حاملہ خاتون  / دودھ پلانے والی ماں/بچہ کی موجودہ حیثیت </string>
     <string name="pfb01"> کیا حاملہ خاتون یا دودھ پلانے والی ماں انٹرویو کے لئے دستیاب ہے؟ </string>
     <string name="pfb01a"> موجود ہے انٹرویو جاری رکھیں </string>
     <string name="pfb01b"> وقتی طور پر موجود نہیں </string>
@@ -101,15 +101,18 @@
     <string name="pfb02d"> مردہ بچہ پیدا ہوا تھا </string>
     <string name="pfb02e"> زندہ بچہ پیدا ہوا ہےاوراس وقت زندہ ہے </string>
     <string name="pfb02f"> زندہ بچہ پیدا ہوا تھا بعد میں انتقال ہو گیا </string>
+    <string name="pfb02g"> جڑوں بچوں کی پیدائش (1 زندہ بچہ 1 مردہ بچہ) </string>
+    <string name="pfb02h"> جڑوں بچوں کی پیدائش (2 زندہ بچے) </string>
     <string name="pfb03"> موجودہ حمل کا مہینہ؟ </string>
     <string name="pfb03a"> مہینے </string>
     <string name="pfb04"> زندہ بچے کی تاریخ پیدائش </string>
-    <string name="pfcheading"> وزن کی جانچ </string>
+    <string name="pfb05"> مردہ بچے کی تاریخ پیدائش </string>
+    <string name="pfcheading"> حاملہ خاتون  / دودھ پلانے والی ماں: دوران حمل اور ابتدائی 6 ماہ کے دوران دودھ پلانے والی ماؤں کے لیے قابل اطلاق ہے </string>
     <string name="pfc01"> وزن کی جانچ </string>
     <string name="pfc01a"> کلو گرام </string>
     <string name="pfc02"> خون کی مقدار کا نتیجہ </string>
     <string name="pfc02sub"> 9 ماہ کی حاملہ خاتون کے لئے </string>
-    <string name="pfdheading"> ڈبلیو ایف پی کی اضافی خوراک کی جانچ </string>
+    <string name="pfdheading"> حاملہ خاتون  / دودھ پلانے والی ماں: دوران حمل اور ابتدائی 6 ماہ کے دوران دودھ پلانے والی ماؤں کے لیے قابل اطلاق ہے </string>
     <string name="pfd01"> کیا آپ کوگزشتہ مہینے کے دوران مامتا کے ساشے ملے تھے؟ </string>
     <string name="pfd01c"> لینے سے انکار کردیا </string>
     <string name="pfd02"> آپ نے گزشتہ ایک ماہ میں اپنے لیے کتنے مامتا کے ساشے موصول کیے تھے؟ </string>
@@ -147,7 +150,7 @@
     <string name="pfd12e"> جسم پے دانوں کاسبب </string>
     <string name="pfd12f"> مذہب میں منع ہے </string>
     <string name="pfd12g"> یہ خاندانی منصوبہ بندی کے لیے ہے </string>
-    <string name="pfeheading"> حاملہ خاتون یا دودھ پلانے والی ماں کے لئے کم سے کم غذائی مقدار </string>
+    <string name="pfeheading">حاملہ خاتون یا دودھ پلانے والی ماں کے لئے کم سے کم غذائی مقدار : دوران حمل اور ابتدائی 6 ماہ کے دوران دودھ پلانے والی ماؤں کے لیے قابل اطلاق ہے</string>
     <string name="pfesub"> براہ مہربانی کھانے کی اشیاء (کھانے اور ہلکی غذائیں) جو کہ کل دن یا رات کے دوران گھر میں یا گھر سے باہر کھایا یا پیا وضاحت کریں ۔صبح سویرے جو پہلی غذا یا یا مشروب کھایا پیا اس سے شروع کریں ۔ </string>
     <string name="pfesub1"> اوپر دیئے ہوئے کھانے یا پینے کے بارے میں لکھیں ۔اجزاء کی فہرست میں سے پوچھیں جن میں کھانے اور پینے والی اجزا ء کا ذکر نہیں ہے ان کے بارے میں مزید تحقیقات کریں </string>
     <string name="pfe01"> اناج </string>
@@ -186,7 +189,7 @@
     <string name="pfe17e"> تیل ، چربی یا مکھن کھانے میں شامل یا کھانا پکانے میں استعمال کیا جاتا ہو </string>
     <string name="pfe18"> مٹھائی </string>
     <string name="pfe18e"> چینی سے بنی اشیاء جیسے کہ چاکلیٹ ، کینڈی ، بسکٹ، اور کیک۔ وغیرہ </string>
-    <string name="pffheading"> حاملہ عورت کے لیے:حمل کے دوران کی دیکھ بھال اور بیماریاں </string>
+    <string name="pffheading"> پیدائش سے پہلے حاملہ عورت کا معائنہ اور کسی بیماری کے لیے معائنہ:حاملہ عورت کے لیے دوران حمل قابل اطلاق ہے </string>
     <string name="pff01"> کیا آپ نے گزشتہ ایک مہینے کے دوران حمل کے لئے چیک اپ کروایا تھا؟ </string>
     <string name="pff02"> پچھلے ایک مہینہ کے دوران کس نے دورہ کیا تھا ؟ </string>
     <string name="pff02sub"> HEALTH PERSONNEL </string>
@@ -374,7 +377,7 @@
     <string name="pfg26c"> یچیدگیوں کی جانچ کرنے </string>
     <string name="pfg26d"> صحت مرکز جانے کا مشورہ دینے </string>
     <string name="pfg26e"> بچے کے علاج کے بارے میں </string>
-    <string name="pfhheading"> اور ہیموگلوبین جسمانی پیمائش </string>
+    <string name="pfhheading"> بچے کے قد وزن اور خون کا معائنہ   : زندہ بچہ اور پیدائش سے 24 مہینے تک کی عمر کے لیے قابل اطلاق ہے </string>
     <string name="pfha"> Measure Code: 1 </string>
     <string name="pfhb"> Measure Code: 2 </string>
     <string name="pfh01"> لمبائی </string>
@@ -454,7 +457,7 @@
     <string name="pfi17c"> رشتہ دار </string>
     <string name="pfi18"> کیا(نام) نے گزشتہ دن یا رات کے دوران کوئی وٹامن یا منرل سپلیمنٹ یا کوئی دوائی پی یاکھائی تھی؟ </string>
     <string name="pfjheading"> نومولود اور چھوٹے بچوں کی غذا کے بارے میں معلومات </string>
-    <string name="pfkheading"> Child Morbidity and Care Seeking </string>
+    <string name="pfkheading"> بچے کی بیماری کی دیکھ بھال کی معلومات : زندہ بچہ اور پیدائش سے 24 مہینے تک کی عمر کے لیے قابل اطلاق ہے </string>
     <string name="pfj01"> گزشتہ ایک ماہ کے دوران آپ کے بچے کو ان بیماریوں میں سے کوئی بیماری ہوئی؟ </string>
     <string name="pfj01a"> تیز بخار </string>
     <string name="pfj01b"> اسہال </string>

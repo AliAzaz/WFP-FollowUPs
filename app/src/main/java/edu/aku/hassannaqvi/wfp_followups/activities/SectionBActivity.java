@@ -127,9 +127,10 @@ public class SectionBActivity extends AppCompatActivity {
         JSONObject sB = new JSONObject();
 
         sB.put("pfb01", bi.pfb01a.isChecked() ? "1" : bi.pfb01b.isChecked() ? "2" : bi.pfb01c.isChecked() ? "3" : bi.pfb01d.isChecked() ? "4" : bi.pfb01e.isChecked() ? "5" : bi.pfb01f.isChecked() ? "6" : bi.pfb01g.isChecked() ? "7" : "0");
-        sB.put("pfb02", bi.pfb02a.isChecked() ? "1" : bi.pfb02b.isChecked() ? "2" : bi.pfb02c.isChecked() ? "3" : bi.pfb02d.isChecked() ? "4" : bi.pfb02e.isChecked() ? "5" : bi.pfb02f.isChecked() ? "6" : "0");
+        sB.put("pfb02", bi.pfb02a.isChecked() ? "1" : bi.pfb02b.isChecked() ? "2" : bi.pfb02c.isChecked() ? "3" : bi.pfb02d.isChecked() ? "4" : bi.pfb02e.isChecked() ? "5" : bi.pfb02f.isChecked() ? "6" : bi.pfb02g.isChecked() ? "7" : bi.pfb02h.isChecked() ? "8" : "0");
         sB.put("pfb03", bi.pfb03.getText().toString());
         sB.put("pfb04", bi.pfb04.getText().toString());
+        sB.put("pfb05", bi.pfb05.getText().toString());
 
         currentlyPR = bi.pfb02a.isChecked() ? 1 : bi.pfb02b.isChecked() ? 2 : bi.pfb02c.isChecked() ? 3 : bi.pfb02d.isChecked() ? 4 : bi.pfb02e.isChecked() ? 5 : bi.pfb02f.isChecked() ? 6 : 0;
 
