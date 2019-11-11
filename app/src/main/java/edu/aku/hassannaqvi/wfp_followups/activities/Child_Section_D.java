@@ -99,8 +99,8 @@ public class Child_Section_D extends AppCompatActivity {
         cfd.put("cfd01a", bi.cfd01a01.isChecked() ? "1"
                 : bi.cfd01a02.isChecked() ? "2"
                 : "0");
-
         cfd.put("cfd01a03x", bi.cfd01a03x.getText().toString());
+
         cfd.put("cfd01b01", bi.cfd01b01.isChecked() ? "1" : "0");
         cfd.put("cfd01b02", bi.cfd01b02.isChecked() ? "2" : "0");
         cfd.put("cfd01b03", bi.cfd01b03.isChecked() ? "3" : "0");
@@ -109,8 +109,8 @@ public class Child_Section_D extends AppCompatActivity {
         cfd.put("cfd01b06", bi.cfd01b06.isChecked() ? "6" : "0");
         cfd.put("cfd01b07", bi.cfd01b07.isChecked() ? "7" : "0");
         cfd.put("cfd01b96", bi.cfd01b96.isChecked() ? "96" : "0");
-
         cfd.put("cfd01b96x", bi.cfd01b96x.getText().toString());
+
         cfd.put("cfd02", bi.cfd02.getText().toString());
         cfd.put("cfd03a01", bi.cfd03a01.getText().toString());
         cfd.put("cfd03a02", bi.cfd03a02.isChecked() ? "1" : "0");
@@ -155,24 +155,30 @@ public class Child_Section_D extends AppCompatActivity {
                 : bi.cfd07a02.isChecked() ? "2"
                 : "0");
 
-
         cfd.put("cfd07b01", bi.cfd07b01.isChecked() ? "1" : "0");
         cfd.put("cfd07b02", bi.cfd07b02.isChecked() ? "2" : "0");
         cfd.put("cfd07b03", bi.cfd07b03.isChecked() ? "3" : "0");
         cfd.put("cfd07b96", bi.cfd07b96.isChecked() ? "96" : "0");
         cfd.put("cfd07b96x", bi.cfd07b96x.getText().toString());
 
-
         cfd.put("cfd07c", bi.cfd07c.getText().toString());
 
-        cfd.put("cfd07d", bi.cfd07d01.isChecked() ? "1"
+        cfd.put("cfd07d01", bi.cfd07d01.isChecked() ? "1" : "0");
+        cfd.put("cfd07d02", bi.cfd07d02.isChecked() ? "2" : "0");
+        cfd.put("cfd07d03", bi.cfd07d03.isChecked() ? "3" : "0");
+        cfd.put("cfd07d96", bi.cfd07d96.isChecked() ? "96" : "0");
+        cfd.put("cfd07d98", bi.cfd07d98.isChecked() ? "98" : "0");
+        cfd.put("cfd07d96x", bi.cfd07d96x.getText().toString());
+
+
+
+       /*cfd.put("cfd07d", bi.cfd07d01.isChecked() ? "1"
                 : bi.cfd07d02.isChecked() ? "2"
                 : bi.cfd07d03.isChecked() ? "3"
                 : bi.cfd07d96.isChecked() ? "96"
                 : bi.cfd07d98.isChecked() ? "98"
-                : "0");
+                : "0");*/
 
-        cfd.put("cfd07d96x", bi.cfd07d96x.getText().toString());
         AppMain.fc.setsD(String.valueOf(cfd));
 
     }
@@ -287,7 +293,7 @@ public class Child_Section_D extends AppCompatActivity {
             if (!validatorClass.RangeTextBox(this, bi.cfd07c, 1, 90, getString(R.string.cfd07c), "Sachets")) {
                 return false;
             }
-            if (!validatorClass.EmptyRadioButton(this, bi.cfd07d, bi.cfd07d01, getString(R.string.cfd07d))) {
+            if (!validatorClass.EmptyCheckBox(this, bi.fldgrpcfd07d, bi.cfd07d01, getString(R.string.cfd07d))) {
                 return false;
             }
             if (bi.cfd07d96.isChecked()) {

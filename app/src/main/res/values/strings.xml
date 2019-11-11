@@ -397,7 +397,7 @@
     <string name="pfi04a"> اس دودھ کو خراب سمجھتی ہیں </string>
     <string name="pfi04b"> بچے کی بیماری کا خوف </string>
     <string name="pfi04c"> گاڑھاپن </string>
-    <string name="pfi05"> کیا بچے (نام)کو ماں کا دودھ پینے سے پہلے کچھ اور پینے کے لیےدیا تھا ؟ </string>
+    <string name="pfi05"> کیا بچے (نام)کو ماں کا دودھ  پینے سے پہلے کچھ اور پینے کے لیےدیا تھا ؟ </string>
     <string name="pfi06"> (نام) کو پینے کے لئے کیادیا گیا تھا؟ </string>
     <string name="pfi06a"> دودھ (ماں کےدودھ علاوہ) </string>
     <string name="pfi06b"> سادہ پانی </string>
@@ -560,14 +560,14 @@
 
     <string name="cfd04b"> اگر بچہ گزشتہ تیس دنوں کے دوران تیس سے کم واوامم کھاتا ہے
     تو باقی دنوں کے بارے میں پوچھیں.</string>
-    <string name="cfd04b01"> چےکی بیماری کی وجہ سے </string>
+    <string name="cfd04b01"> بچے کی بیماری کی وجہ سے </string>
     <string name="cfd04b02"> بچہ روزانہ کھانے سے منع کرتا ہے </string>
-    <string name="cfd04b03"> خیال رکھنے والے کی لا پروا ئی /ماں </string>
-    <string name="cfd04b04"> بچہ ادھا سا شے کھا تاہے </string>
+    <string name="cfd04b03"> خیال رکھنے والے کی لا پروا ئی / ماں </string>
+    <string name="cfd04b04"> بچہ ادھا ساشے کھاتا ہے </string>
     <string name="cfd04b05"> ماں اور بچہ گھر میں نہیں تھے </string>
 
 
-    <string name="cfd05"> یا آپ مجھے استعمال شدہ اور غیر استعمال شدہ واوامم سپلیمینٹ کے ساشے دیکھا سکتے ہیں؟ (اگر موجود نہیں تو (00) لکھیں </string>
+    <string name="cfd05"> کیا آپ مجھے استعمال شدہ اور غیر استعمال شدہ واوامم سپلیمینٹ کے ساشے دیکھا سکتے ہیں ؟ اگر موجود نہیں تو 00 لکھیں. </string>
     <string name="cfd05a"> استعمال شدہ پیکٹ دیکھائے </string>
     <string name="cfd05b"> بغیر استعمال شدہ پیکٹ دیکھائے </string>
 
@@ -576,7 +576,7 @@
     <string name="cfd06b01"> دست </string>
     <string name="cfd06b02"> قے </string>
     <string name="cfd06b03"> پیٹ کا درد </string>
-    <string name="cfd06b04"> جسم پے دان دان </string>
+    <string name="cfd06b04"> جسم پے دانے </string>
 
     <string name="cfd07a"> گزشتہ ایک ماہ کے دوران کیا آپ نے واوامم کسی اور کے ساتھ تقسیم کیا ؟ </string>
     <string name="cfd07b"> اگر ہاں تو کس کے ساتھ تقسیم کیا؟ </string>
