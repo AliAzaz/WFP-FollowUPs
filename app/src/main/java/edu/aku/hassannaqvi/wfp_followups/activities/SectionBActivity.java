@@ -42,7 +42,7 @@ public class SectionBActivity extends AppCompatActivity {
 
     private void setupViews() {
 
-        bi.pfb04.setManager(getSupportFragmentManager());
+        bi.pfb05.setMinDate(AppMain.convertDateFormat(getIntent().getStringExtra("fdate")));
         bi.pfb04.setMinDate(AppMain.convertDateFormat(getIntent().getStringExtra("fdate")));
         bi.pfb04.setMaxDate(new SimpleDateFormat("dd/MM/yyyy").format(System.currentTimeMillis()));
 
@@ -70,6 +70,8 @@ public class SectionBActivity extends AppCompatActivity {
                         bi.pfb02d.setEnabled(false);
                         bi.pfb02e.setEnabled(false);
                         bi.pfb02f.setEnabled(false);
+                        bi.pfb02g.setEnabled(false);
+                        bi.pfb02h.setEnabled(false);
                     } else {
                         bi.pfb02a.setEnabled(false);
                         bi.pfb02b.setEnabled(false);

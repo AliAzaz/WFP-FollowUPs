@@ -84,6 +84,7 @@
                             android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz"
                             android:hint="@string/reason"
                             android:inputType="textMultiLine"
+                            android:text='@{pfd01b.checked ? pfd01bx.getText.toString : ""}'
                             android:visibility="@{pfd01b.checked ? View.VISIBLE : View.GONE}" />
                     </RadioGroup>
 
