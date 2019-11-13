@@ -86,6 +86,22 @@ public class Child_Section_D extends AppCompatActivity {
             }
         });
 
+        bi.cfd03a02.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+                if (!b)
+                    ClearClass.ClearCheckBoxes(bi.fldgrpcfd03b);
+            }
+        });
+
+        bi.cfd07a.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup radioGroup, int i) {
+                if (i == bi.cfd07a02.getId())
+                    ClearClass.ClearAllFields(bi.fldGrpChildD02, null);
+            }
+        });
+
     }
 
     public void BtnContinue() {

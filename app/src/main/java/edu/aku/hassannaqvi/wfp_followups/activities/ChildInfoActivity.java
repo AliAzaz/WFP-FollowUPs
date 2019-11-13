@@ -4,8 +4,8 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.databinding.DataBindingUtil;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.text.format.DateFormat;
@@ -80,8 +80,9 @@ public class ChildInfoActivity extends AppCompatActivity {
 
     public void onCheckChildClick() {
         if (!bi.cstudyID.getText().toString().isEmpty()) {
-            bi.fldGrpChild.setVisibility(View.VISIBLE);
-          /*  enrolledParticipant = db.getEnrolledByStudyID(bi.cstudyID.getText().toString());
+//            bi.fldGrpChild.setVisibility(View.VISIBLE);
+
+            enrolledParticipant = db.getEnrolledByStudyID(bi.cstudyID.getText().toString());
 
             if (enrolledParticipant != null) {
 
@@ -105,7 +106,8 @@ public class ChildInfoActivity extends AppCompatActivity {
                 Toast.makeText(getApplicationContext(), "Child Not found", Toast.LENGTH_LONG).show();
 
                 check = false;
-            }*/
+            }
+
         } else {
 
             if (!validatorClass.EmptyTextBox(this, bi.cstudyID, getString(R.string.cfa01))) {
@@ -125,22 +127,24 @@ public class ChildInfoActivity extends AppCompatActivity {
         bi.viewGroup02.cfupround.setText("1");
         bi.viewGroup02.cfupdate.setText("19-11-2018");
     }
+
     public void onBtnEndClick() {
 //        if (ValidateForm()) {
-            try {
-                SaveDraft();
-            } catch (org.json.JSONException e) {
-                e.printStackTrace();
-            }
-            if (UpdateDB()) {
+        try {
+            SaveDraft();
+        } catch (org.json.JSONException e) {
+            e.printStackTrace();
+        }
+        if (UpdateDB()) {
 
-                AppMain.endActivity(this, this);
+            AppMain.endActivity(this, this);
 
-            } else {
-                Toast.makeText(this, "Failed to Update Database!", Toast.LENGTH_SHORT).show();
-            }
+        } else {
+            Toast.makeText(this, "Failed to Update Database!", Toast.LENGTH_SHORT).show();
+        }
 //        }
     }
+
     private void SaveDraft() throws JSONException {
 
         SharedPreferences sharedPref = getSharedPreferences("tagName", MODE_PRIVATE);
@@ -191,7 +195,7 @@ public class ChildInfoActivity extends AppCompatActivity {
             if (UpdateDB()) {
 
                 finish();
-                Intent intent = new Intent(this, ChildSectionBActivity.class);
+                Intent intent = new Intent(this, ChildSectionBActivity.class).putExtra("dobdate", enrolledParticipant.getDob());
                 startActivity(intent);
 
             } else {
@@ -229,6 +233,7 @@ public class ChildInfoActivity extends AppCompatActivity {
             return false;
         }
     }
+
     public void setGPS() {
         SharedPreferences GPSPref = getSharedPreferences("GPSCoordinates", Context.MODE_PRIVATE);
 

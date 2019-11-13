@@ -48,7 +48,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     public static final String DATABASE_NAME = "wfp_followups.db";
     public static String DB_NAME = DATABASE_NAME.replace(".db", "_copy.db");
 
-    private static final int DATABASE_VERSION = 2;
+    private static final int DATABASE_VERSION = 3;
     private static final String SQL_CREATE_FORMS = "CREATE TABLE "
             + FormsTable.TABLE_NAME + "(" +
             FormsTable.COLUMN__ID + " INTEGER PRIMARY KEY AUTOINCREMENT," +
@@ -132,6 +132,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             EnrolledTable.COLUMN_H_NAME + " TEXT," +
             EnrolledTable.COLUMN_LMP + " TEXT," +
             EnrolledTable.COLUMN_EDD + " TEXT," +
+            EnrolledTable.COLUMN_DOB + " TEXT," +
             EnrolledTable.COLUMN_FUPDT + " TEXT," +
             EnrolledTable.COLUMN_FUPROUND + " TEXT," +
             EnrolledTable.COLUMN_FORMDATE + " TEXT," +
@@ -164,6 +165,9 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             PregnancyTable.COLUMN_PW_NAME + " TEXT," +
             PregnancyTable.COLUMN_H_NAME + " TEXT" +
             " );";
+    private static final String SQL_ALTER_FW = "ALTER TABLE " +
+            EnrolledTable.TABLE_NAME + " ADD COLUMN " +
+            EnrolledTable.COLUMN_DOB + " TEXT ";
     /**
      * DELETE STRINGS
      */
@@ -211,6 +215,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         switch (i) {
             case 1:
                 db.execSQL(SQL_CREATE_CURRENT_PREGNANCY);
+            case 2:
+                db.execSQL(SQL_ALTER_FW);
         }
 
     }
@@ -297,6 +303,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 values.put(EnrolledTable.COLUMN_H_NAME, prg.getH_name());
                 values.put(EnrolledTable.COLUMN_LMP, prg.getLmp());
                 values.put(EnrolledTable.COLUMN_EDD, prg.getEdd());
+                values.put(EnrolledTable.COLUMN_DOB, prg.getDob());
                 values.put(EnrolledTable.COLUMN_FUPDT, prg.getFupdt());
                 values.put(EnrolledTable.COLUMN_FUPROUND, prg.getFupround());
                 values.put(EnrolledTable.COLUMN_FORMDATE, prg.getFormdate());
@@ -914,6 +921,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 EnrolledTable.COLUMN_H_NAME,
                 EnrolledTable.COLUMN_LMP,
                 EnrolledTable.COLUMN_EDD,
+                EnrolledTable.COLUMN_DOB,
                 EnrolledTable.COLUMN_FUPDT,
                 EnrolledTable.COLUMN_FUPROUND,
                 EnrolledTable.COLUMN_FORMDATE,
@@ -922,6 +930,61 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
         String whereClause = EnrolledTable.COLUMN_STUDYID + " = ? AND " + EnrolledTable.COLUMN_RESP_TYPE + " =?";
         String[] whereArgs = {studyID, pwCheck ? "pw" : "lm"};
+        String groupBy = null;
+        String having = null;
+
+        String orderBy = EnrolledTable.COLUMN_ID + " ASC";
+
+        EnrolledContract allEC = null;
+        try {
+            c = db.query(
+                    EnrolledTable.TABLE_NAME,  // The table to query
+                    columns,                   // The columns to return
+                    whereClause,               // The columns for the WHERE clause
+                    whereArgs,                 // The values for the WHERE clause
+                    groupBy,                   // don't group the rows
+                    having,                    // don't filter by row groups
+                    orderBy                    // The sort order
+            );
+            while (c.moveToNext()) {
+                allEC = new EnrolledContract().Hydrate(c);
+
+            }
+        } finally {
+            if (c != null) {
+                c.close();
+            }
+            if (db != null) {
+                db.close();
+            }
+        }
+        return allEC;
+    }
+
+    public EnrolledContract getEnrolledByStudyID(String studyID) {
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor c = null;
+        String[] columns = {
+                EnrolledTable.COLUMN_ID,
+                EnrolledTable.COLUMN_PUID,
+                EnrolledTable.COLUMN_UC_CODE,
+                EnrolledTable.COLUMN_TEHSIL_CODE,
+                EnrolledTable.COLUMN_VILLAGE_CODE,
+                EnrolledTable.COLUMN_LHW_CODE,
+                EnrolledTable.COLUMN_STUDYID,
+                EnrolledTable.COLUMN_PW_NAME,
+                EnrolledTable.COLUMN_H_NAME,
+                EnrolledTable.COLUMN_LMP,
+                EnrolledTable.COLUMN_EDD,
+                EnrolledTable.COLUMN_DOB,
+                EnrolledTable.COLUMN_FUPDT,
+                EnrolledTable.COLUMN_FUPROUND,
+                EnrolledTable.COLUMN_FORMDATE,
+                EnrolledTable.COLUMN_RESP_TYPE,
+        };
+
+        String whereClause = EnrolledTable.COLUMN_STUDYID + " = ? AND cast(" + EnrolledTable.COLUMN_FUPROUND + " as unsigned) >= 6";
+        String[] whereArgs = {studyID};
         String groupBy = null;
         String having = null;
 

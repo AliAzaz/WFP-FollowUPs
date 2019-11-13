@@ -27,6 +27,7 @@ public class EnrolledContract {
     private String h_name;
     private String lmp;
     private String edd;
+    private String dob;
     private String fupdt;
     private String fupround;
     private String formdate;
@@ -65,6 +66,7 @@ public class EnrolledContract {
         this.h_name = jsonObject.getString(EnrolledTable.COLUMN_H_NAME);
         this.lmp = jsonObject.getString(EnrolledTable.COLUMN_LMP);
         this.edd = jsonObject.getString(EnrolledTable.COLUMN_EDD);
+        this.dob = jsonObject.getString(EnrolledTable.COLUMN_DOB);
         this.fupdt = jsonObject.getString(EnrolledTable.COLUMN_FUPDT);
         this.fupround = jsonObject.getString(EnrolledTable.COLUMN_FUPROUND);
         this.resp_type = jsonObject.getString(EnrolledTable.COLUMN_RESP_TYPE);
@@ -87,6 +89,7 @@ public class EnrolledContract {
         this.lmp = cursor.getString(cursor.getColumnIndex(EnrolledTable.COLUMN_LMP));
         this.edd = cursor.getString(cursor.getColumnIndex(EnrolledTable.COLUMN_EDD));
         this.fupdt = cursor.getString(cursor.getColumnIndex(EnrolledTable.COLUMN_FUPDT));
+        this.dob = cursor.getString(cursor.getColumnIndex(EnrolledTable.COLUMN_DOB));
         this.fupround = cursor.getString(cursor.getColumnIndex(EnrolledTable.COLUMN_FUPROUND));
         this.resp_type = cursor.getString(cursor.getColumnIndex(EnrolledTable.COLUMN_RESP_TYPE));
         this.formdate = cursor.getString(cursor.getColumnIndex(EnrolledTable.COLUMN_FORMDATE));
@@ -214,6 +217,14 @@ public class EnrolledContract {
         this.formdate = formdate;
     }
 
+    public String getDob() {
+        return dob;
+    }
+
+    public void setDob(String dob) {
+        this.dob = dob;
+    }
+
     public JSONObject toJSONObject() throws JSONException {
         JSONObject json = new JSONObject();
 
@@ -232,6 +243,7 @@ public class EnrolledContract {
         json.put(EnrolledTable.COLUMN_FUPROUND, this.fupround == null ? JSONObject.NULL : this.fupround);
         json.put(EnrolledTable.COLUMN_RESP_TYPE, this.resp_type == null ? JSONObject.NULL : this.resp_type);
         json.put(EnrolledTable.COLUMN_FORMDATE, this.formdate == null ? JSONObject.NULL : this.formdate);
+        json.put(EnrolledTable.COLUMN_DOB, this.dob == null ? JSONObject.NULL : this.dob);
 
         return json;
     }
@@ -251,6 +263,7 @@ public class EnrolledContract {
         public static final String COLUMN_H_NAME = "h_name";
         public static final String COLUMN_LMP = "lmp";
         public static final String COLUMN_EDD = "edd";
+        public static final String COLUMN_DOB = "dob";
         public static final String COLUMN_FUPDT = "fupdt";
         public static final String COLUMN_FUPROUND = "fupround";
         public static final String COLUMN_FORMDATE = "formdate";

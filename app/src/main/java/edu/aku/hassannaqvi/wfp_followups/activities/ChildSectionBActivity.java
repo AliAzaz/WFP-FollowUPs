@@ -14,7 +14,6 @@ import org.json.JSONObject;
 import edu.aku.hassannaqvi.wfp_followups.R;
 import edu.aku.hassannaqvi.wfp_followups.core.AppMain;
 import edu.aku.hassannaqvi.wfp_followups.core.DatabaseHelper;
-import edu.aku.hassannaqvi.wfp_followups.core.DateUtils;
 import edu.aku.hassannaqvi.wfp_followups.databinding.ActivityChildSectionBBinding;
 import edu.aku.hassannaqvi.wfp_followups.validation.ClearClass;
 import edu.aku.hassannaqvi.wfp_followups.validation.ValidatorClass02;
@@ -33,7 +32,7 @@ public class ChildSectionBActivity extends AppCompatActivity {
 
     private void setUpViews() {
 
-        bi.cfb03.setMinDate(DateUtils.getThreeDaysBack("dd/MM/yyyy", -60));
+        bi.cfb03.setMinDate(AppMain.convertDateFormat(getIntent().getStringExtra("dobdate")));
         bi.cfb01.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
