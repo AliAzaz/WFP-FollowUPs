@@ -4,7 +4,7 @@ import android.content.Intent;
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.view.View;
+import android.widget.CompoundButton;
 import android.widget.RadioGroup;
 import android.widget.Toast;
 
@@ -15,7 +15,8 @@ import edu.aku.hassannaqvi.wfp_followups.R;
 import edu.aku.hassannaqvi.wfp_followups.core.AppMain;
 import edu.aku.hassannaqvi.wfp_followups.core.DatabaseHelper;
 import edu.aku.hassannaqvi.wfp_followups.databinding.ActivityChildSectionDBinding;
-import edu.aku.hassannaqvi.wfp_followups.validation.validatorClass;
+import edu.aku.hassannaqvi.wfp_followups.validation.ClearClass;
+import edu.aku.hassannaqvi.wfp_followups.validation.ValidatorClass02;
 
 public class Child_Section_D extends AppCompatActivity {
 
@@ -34,7 +35,7 @@ public class Child_Section_D extends AppCompatActivity {
 
     private void setupViews() {
 
-        bi.cfd01a.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+        /*bi.cfd01a.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
 
@@ -54,8 +55,36 @@ public class Child_Section_D extends AppCompatActivity {
                     bi.fldgrpcfd01b.setVisibility(View.VISIBLE);
                 }
             }
+        });*/
+
+        bi.cfd01a.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup radioGroup, int i) {
+                if (i == bi.cfd01a02.getId())
+                    ClearClass.ClearAllFields(bi.fldgrpmain1, null);
+                else if (i == bi.cfd01a01.getId())
+                    ClearClass.ClearCheckBoxes(bi.fldgrpcfd01b);
+
+            }
         });
 
+        bi.cfd06a.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup radioGroup, int i) {
+                if (i == bi.cfd06a02.getId())
+                    ClearClass.ClearAllFields(bi.fldgrpcfd06b, null);
+            }
+        });
+
+        bi.cfd07d98.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+                if (b)
+                    ClearClass.ClearAllFields(bi.fldgrpcfd07d, false);
+                else
+                    ClearClass.ClearAllFields(bi.fldgrpcfd07d, true);
+            }
+        });
 
     }
 
@@ -70,10 +99,9 @@ public class Child_Section_D extends AppCompatActivity {
             }
             if (UpdateDB()) {
 
-                startActivity(new Intent(Child_Section_D.this, Child_Section_E.class));
-//                        .putExtra("complete", true)
-//                        .putExtra("pwMonth", !bi.pfb03.getText().toString().isEmpty() && (Integer.valueOf(bi.pfb03.getText().toString()) < 9)));
                 finish();
+                startActivity(new Intent(this, EndingActivity.class)
+                        .putExtra("complete", true));
             }
         }
 
@@ -185,7 +213,7 @@ public class Child_Section_D extends AppCompatActivity {
 
     private boolean formValidation() {
 
-        if (!validatorClass.EmptyRadioButton(this, bi.cfd01a, bi.cfd01a01, getString(R.string.cfd01a))) {
+        /*if (!validatorClass.EmptyRadioButton(this, bi.cfd01a, bi.cfd01a01, getString(R.string.cfd01a))) {
             return false;
         }
         if (bi.cfd01a02.isChecked()) {
@@ -299,10 +327,10 @@ public class Child_Section_D extends AppCompatActivity {
             if (bi.cfd07d96.isChecked()) {
                 return validatorClass.EmptyTextBox(this, bi.cfd07d96x, getString(R.string.cfd07d));
             }
-        }
+        }*/
 
 
-        return true;
+        return ValidatorClass02.EmptyCheckingContainer(this, bi.fldGrpChildD01);
     }
 
     public void BtnEnd() {

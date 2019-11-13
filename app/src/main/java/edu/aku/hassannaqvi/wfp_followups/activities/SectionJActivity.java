@@ -127,10 +127,15 @@ public class SectionJActivity extends AppCompatActivity {
             }
 
             if (UpdateDB()) {
-
-                startActivity(new Intent(this, EndingActivity.class)
-                        .putExtra("complete", true));
                 finish();
+                if (AppMain.formType.equals(AppMain.CHILD)) {
+                    startActivity(new Intent(this, Child_Section_D.class));
+                } else {
+                    startActivity(new Intent(this, EndingActivity.class)
+                            .putExtra("complete", true));
+                }
+
+
             }
         }
 

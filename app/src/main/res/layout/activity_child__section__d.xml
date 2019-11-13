@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:android="http://schemas.android.com/apk/res/android">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <data>
 
@@ -15,6 +16,7 @@
         android:layout_height="wrap_content">
 
         <LinearLayout
+            android:id="@+id/fldGrpChildD01"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:animateLayoutChanges="true"
@@ -83,29 +85,31 @@
                 android:id="@+id/fldgrpmain1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                android:visibility="@{!cfd01a02.checked ? View.VISIBLE : View.GONE}">
 
                 <!--Q1b-->
                 <android.support.v7.widget.CardView
+                    android:visibility="@{cfd01a03.checked ? View.VISIBLE : View.GONE}"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
                     android:elevation="10dp">
 
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:background="@color/colorPrimaryDark"
+                        android:text="@string/cfd01b"
+                        android:textColor="@color/white" />
+
                     <LinearLayout
                         android:id="@+id/fldgrpcfd01b"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="vertical">
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center_horizontal"
-                            android:background="@color/colorPrimaryDark"
-                            android:text="@string/cfd01b"
-                            android:textColor="@color/white" />
-
+                        android:orientation="vertical"
+                        android:tag="0">
 
                         <CheckBox
                             android:id="@+id/cfd01b01"
@@ -171,7 +175,6 @@
                             android:layout_weight="1"
                             android:text="@string/other" />
 
-
                         <EditText
                             android:id="@+id/cfd01b96x"
                             style="@style/textInput"
@@ -181,6 +184,7 @@
                             android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz"
                             android:hint="@string/other"
                             android:inputType="text"
+                            android:tag="cfd01b96"
                             android:text='@{cfd01b96.checked? cfd01b96x.getText.toString : ""}'
                             android:visibility='@{cfd01b96.checked? View.VISIBLE : View.GONE}' />
 
@@ -211,7 +215,7 @@
                             android:textColor="@color/white" />
 
 
-                        <EditText
+                        <com.edittextpicker.aliazaz.EditTextPicker
                             android:id="@+id/cfd02"
                             style="@style/textInput"
                             android:layout_width="match_parent"
@@ -219,7 +223,10 @@
                             android:layout_margin="10dp"
                             android:hint="@string/cfd02a"
                             android:inputType="number"
-                            android:maxLength="2" />
+                            android:maxLength="2"
+                            app:maxValue="90"
+                            app:minValue="1"
+                            app:type="range" />
 
                     </LinearLayout>
 
@@ -246,25 +253,29 @@
                             android:text="@string/cfd03a"
                             android:textColor="@color/white" />
 
-
-                        <EditText
-                            android:id="@+id/cfd03a01"
-                            style="@style/textInput"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_margin="10dp"
-                            android:hint="@string/cfd03a01"
-                            android:inputType="number"
-                            android:maxLength="1"
-                            android:text='@{cfd03a02.checked? "" : cfd03a01.getText.toString }'
-                            android:visibility='@{cfd03a02.checked? View.GONE : View.VISIBLE}' />
-
                         <CheckBox
                             android:id="@+id/cfd03a02"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginBottom="1dp"
+                            android:tag="-1"
                             android:text="@string/cfd03a02" />
+
+                        <com.edittextpicker.aliazaz.EditTextPicker
+                            android:id="@+id/cfd03a01"
+                            style="@style/textInput"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:enabled='@{cfd03a02.checked? false : true}'
+                            android:hint="@string/cfd03a01"
+                            android:inputType="number"
+                            android:maxLength="1"
+                            android:text='@{cfd03a02.checked? "" : cfd03a01.getText.toString }'
+                            app:maxValue="3"
+                            app:minValue="1"
+                            app:type="range" />
+
 
                     </LinearLayout>
 
@@ -278,19 +289,20 @@
                     android:elevation="10dp"
                     android:visibility='@{cfd03a02.checked? View.VISIBLE : View.GONE}'>
 
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:background="@color/colorPrimaryDark"
+                        android:text="@string/cfd03b"
+                        android:textColor="@color/white" />
+
                     <LinearLayout
                         android:id="@+id/fldgrpcfd03b"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="vertical">
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center_horizontal"
-                            android:background="@color/colorPrimaryDark"
-                            android:text="@string/cfd03b"
-                            android:textColor="@color/white" />
+                        android:orientation="vertical"
+                        android:tag="0">
 
 
                         <CheckBox
@@ -367,6 +379,7 @@
                             android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz"
                             android:hint="@string/other"
                             android:inputType="text"
+                            android:tag="cfd03b96"
                             android:text='@{cfd03b96.checked? cfd03b96x.getText.toString : ""}'
                             android:visibility='@{cfd03b96.checked? View.VISIBLE : View.GONE}' />
 
@@ -398,7 +411,7 @@
                             android:textColor="@color/white" />
 
 
-                        <EditText
+                        <com.edittextpicker.aliazaz.EditTextPicker
                             android:id="@+id/cfd04a01"
                             style="@style/textInput"
                             android:layout_width="match_parent"
@@ -406,9 +419,12 @@
                             android:layout_margin="10dp"
                             android:hint="@string/cfd03a01"
                             android:inputType="number"
-                            android:maxLength="2" />
+                            android:maxLength="2"
+                            app:maxValue="31"
+                            app:minValue="1"
+                            app:type="range" />
 
-                        <EditText
+                        <com.edittextpicker.aliazaz.EditTextPicker
                             android:id="@+id/cfd04a02"
                             style="@style/textInput"
                             android:layout_width="match_parent"
@@ -416,7 +432,10 @@
                             android:layout_margin="10dp"
                             android:hint="@string/day"
                             android:inputType="number"
-                            android:maxLength="2" />
+                            android:maxLength="2"
+                            app:maxValue="60"
+                            app:minValue="1"
+                            app:type="range" />
 
                     </LinearLayout>
 
@@ -430,20 +449,21 @@
                     android:layout_marginTop="10dp"
                     android:elevation="10dp">
 
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:background="@color/colorPrimaryDark"
+                        android:text="@string/cfd04b"
+                        android:textColor="@color/white" />
+
                     <LinearLayout
                         android:id="@+id/fldgrpcfd04b"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="vertical">
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center_horizontal"
-                            android:background="@color/colorPrimaryDark"
-                            android:text="@string/cfd04b"
-                            android:textColor="@color/white" />
-
+                        android:orientation="vertical"
+                        android:tag="0">
 
                         <CheckBox
                             android:id="@+id/cfd04b01"
@@ -503,6 +523,7 @@
                             android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz"
                             android:hint="@string/other"
                             android:inputType="text"
+                            android:tag="cfd04b96"
                             android:text='@{cfd04b96.checked? cfd04b96x.getText.toString : ""}'
                             android:visibility='@{cfd04b96.checked? View.VISIBLE : View.GONE}' />
 
@@ -533,7 +554,7 @@
                             android:textColor="@color/white" />
 
 
-                        <EditText
+                        <com.edittextpicker.aliazaz.EditTextPicker
                             android:id="@+id/cfd05a"
                             style="@style/textInput"
                             android:layout_width="match_parent"
@@ -541,9 +562,12 @@
                             android:layout_margin="10dp"
                             android:hint="@string/cfd05a"
                             android:inputType="number"
-                            android:maxLength="2" />
+                            android:maxLength="2"
+                            app:maxValue="90"
+                            app:minValue="0"
+                            app:type="range" />
 
-                        <EditText
+                        <com.edittextpicker.aliazaz.EditTextPicker
                             android:id="@+id/cfd05b"
                             style="@style/textInput"
                             android:layout_width="match_parent"
@@ -551,7 +575,10 @@
                             android:layout_margin="10dp"
                             android:hint="@string/cfd05b"
                             android:inputType="number"
-                            android:maxLength="2" />
+                            android:maxLength="2"
+                            app:maxValue="90"
+                            app:minValue="0"
+                            app:type="range" />
 
                     </LinearLayout>
 
@@ -610,26 +637,27 @@
 
                 <!--Q6b-->
                 <android.support.v7.widget.CardView
+                    android:id="@+id/fldgrpcfd06a02"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
                     android:elevation="10dp"
                     android:visibility='@{cfd06a02.checked? View.GONE : View.VISIBLE}'>
 
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:background="@color/colorPrimaryDark"
+                        android:text="@string/cfd06b"
+                        android:textColor="@color/white" />
+
                     <LinearLayout
                         android:id="@+id/fldgrpcfd06b"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="vertical">
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center_horizontal"
-                            android:background="@color/colorPrimaryDark"
-                            android:text="@string/cfd06b"
-                            android:textColor="@color/white" />
-
+                        android:orientation="vertical"
+                        android:tag="0">
 
                         <CheckBox
                             android:id="@+id/cfd06b01"
@@ -680,9 +708,9 @@
                             android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz"
                             android:hint="@string/other"
                             android:inputType="text"
+                            android:tag="cfd06b96"
                             android:text='@{cfd06b96.checked? cfd06b96x.getText.toString : ""}'
                             android:visibility='@{cfd06b96.checked? View.VISIBLE : View.GONE}' />
-
 
                     </LinearLayout>
 
@@ -747,20 +775,20 @@
                     android:elevation="10dp"
                     android:visibility='@{cfd07a02.checked? View.GONE : View.VISIBLE}'>
 
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:background="@color/colorPrimaryDark"
+                        android:text="@string/cfd07b"
+                        android:textColor="@color/white" />
+
                     <LinearLayout
                         android:id="@+id/fldgrpcfd07b"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="vertical">
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center_horizontal"
-                            android:background="@color/colorPrimaryDark"
-                            android:text="@string/cfd07b"
-                            android:textColor="@color/white" />
-
+                        android:orientation="vertical"
+                        android:tag="0">
 
                         <CheckBox
                             android:id="@+id/cfd07b01"
@@ -803,6 +831,7 @@
                             android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz"
                             android:hint="@string/other"
                             android:inputType="text"
+                            android:tag="cfd07b96"
                             android:text='@{cfd07b96.checked? cfd07b96x.getText.toString : ""}'
                             android:visibility='@{cfd07b96.checked? View.VISIBLE : View.GONE}' />
 
@@ -834,7 +863,7 @@
                             android:textColor="@color/white" />
 
 
-                        <EditText
+                        <com.edittextpicker.aliazaz.EditTextPicker
                             android:id="@+id/cfd07c"
                             style="@style/textInput"
                             android:layout_width="match_parent"
@@ -842,7 +871,10 @@
                             android:layout_margin="10dp"
                             android:hint="@string/cfd03a01"
                             android:inputType="number"
-                            android:maxLength="2" />
+                            android:maxLength="2"
+                            app:maxValue="90"
+                            app:minValue="1"
+                            app:type="range" />
 
 
                     </LinearLayout>
@@ -857,19 +889,20 @@
                     android:elevation="10dp"
                     android:visibility='@{cfd07a02.checked? View.GONE : View.VISIBLE}'>
 
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:background="@color/colorPrimaryDark"
+                        android:text="@string/cfd07d"
+                        android:textColor="@color/white" />
+
                     <LinearLayout
                         android:id="@+id/fldgrpcfd07d"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="vertical">
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center_horizontal"
-                            android:background="@color/colorPrimaryDark"
-                            android:text="@string/cfd07d"
-                            android:textColor="@color/white" />
+                        android:orientation="vertical"
+                        android:tag="0">
 
                         <CheckBox
                             android:id="@+id/cfd07d01"
@@ -912,19 +945,20 @@
                             android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz"
                             android:hint="@string/other"
                             android:inputType="text"
+                            android:tag="cfd07d96"
                             android:text='@{cfd07d96.checked? cfd07d96x.getText.toString : ""}'
                             android:visibility='@{cfd07d96.checked? View.VISIBLE : View.GONE}' />
 
-                        <CheckBox
-                            android:id="@+id/cfd07d98"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginBottom="1dp"
-                            android:layout_weight="1"
-                            android:text="@string/dkn" />
-
-
                     </LinearLayout>
+
+                    <CheckBox
+                        android:id="@+id/cfd07d98"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="1dp"
+                        android:layout_weight="1"
+                        android:tag="-1"
+                        android:text="@string/dkn" />
 
                 </android.support.v7.widget.CardView>
 
@@ -936,7 +970,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:elevation="10dp">
+                android:elevation="10dp"
+                android:visibility="@{cfd01a02.checked ? View.VISIBLE : View.GONE}">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -949,6 +984,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_margin="10dp"
+                        android:text='@{cfd01a02.checked ? cfd01a03x.getText.toString : ""}'
                         android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz"
                         android:hint="@string/reason"
                         android:inputType="text"

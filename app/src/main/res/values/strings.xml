@@ -506,14 +506,15 @@
     <string name="cfbheading">  بچے کی موجودہ حیثیت </string>
     <string name="cfb01"> کیا بچہ انٹرویو کے لئے موجود تھا؟ </string>
     <string name="cfb01a"> موجود ہے انٹرویو جاری رکھیں </string>
-    <string name="cfb01b"> عارضی طور پرچلےگئے </string>
+    <string name="cfb01b"> وقتی طور پر موجود نہیں </string>
     <string name="cfb01c"> دورے کے دوران گھر بند تھا </string>
-    <string name="cfb01d"> غیرحاضر </string>
-    <string name="cfb01e">مستقل طور پر چلے گئے </string>
+    <string name="cfb01d"> موجود نہیں </string>
+    <string name="cfb01e">ہمیشہ کے لئے جا چکے ہیں </string>
     <string name="cfb01f"> انکار کردیا </string>
     <string name="cfb01fx"> اگر انکار کیا تو، انکار کرنے کی کیا وجہ تھی </string>
     <string name="cfb01g"> بچے کی وفات </string>
     <string name="cfb01gx"> بچے کی وفات کی وجہ </string>
+    <string name="cfb03">  بچے کی وفات کی تاریخ </string>
 
     <!--Section C-->
 

@@ -14,9 +14,10 @@ import org.json.JSONObject;
 import edu.aku.hassannaqvi.wfp_followups.R;
 import edu.aku.hassannaqvi.wfp_followups.core.AppMain;
 import edu.aku.hassannaqvi.wfp_followups.core.DatabaseHelper;
+import edu.aku.hassannaqvi.wfp_followups.core.DateUtils;
 import edu.aku.hassannaqvi.wfp_followups.databinding.ActivityChildSectionBBinding;
 import edu.aku.hassannaqvi.wfp_followups.validation.ClearClass;
-import edu.aku.hassannaqvi.wfp_followups.validation.validatorClass;
+import edu.aku.hassannaqvi.wfp_followups.validation.ValidatorClass02;
 
 public class ChildSectionBActivity extends AppCompatActivity {
     ActivityChildSectionBBinding bi;
@@ -32,6 +33,7 @@ public class ChildSectionBActivity extends AppCompatActivity {
 
     private void setUpViews() {
 
+        bi.cfb03.setMinDate(DateUtils.getThreeDaysBack("dd/MM/yyyy", -60));
         bi.cfb01.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
@@ -60,10 +62,11 @@ public class ChildSectionBActivity extends AppCompatActivity {
               /*  startActivity(new Intent(this, bi.cfb01a.isChecked() && !bi.cfb02b.isChecked() ? SectionCActivity.class : EndingActivity.class)
                         .putExtra("complete", true)
                         .putExtra("pwMonth", !bi.pfb03.getText().toString().isEmpty() && (Integer.valueOf(bi.pfb03.getText().toString()) < 9)));*/
-                startActivity(new Intent(this, SectionHActivity.class)
+                startActivity(new Intent(this, bi.cfb01a.isChecked() ? SectionHActivity.class : EndingActivity.class)
                         .putExtra("childMonth",
                                 !bi.cfb02m.getText().toString().isEmpty()
-                                        && (Integer.valueOf(bi.cfb02m.getText().toString()) == 24)));
+                                        && (Integer.valueOf(bi.cfb02m.getText().toString()) == 24))
+                        .putExtra("complete", true));
                 finish();
             }
         }
@@ -82,6 +85,7 @@ public class ChildSectionBActivity extends AppCompatActivity {
         sB.put("cfb01", bi.cfb01a.isChecked() ? "1" : bi.cfb01b.isChecked() ? "2" : bi.cfb01c.isChecked() ? "3" : bi.cfb01d.isChecked() ? "4" : bi.cfb01e.isChecked() ? "5" : bi.cfb01f.isChecked() ? "6" : bi.cfb01g.isChecked() ? "7" : "0");
         sB.put("cfb02m", bi.cfb02m.getText().toString());
         sB.put("cfb02d", bi.cfb02d.getText().toString());
+        sB.put("cfb03", bi.cfb03.getText().toString());
 
         AppMain.fc.setsB(String.valueOf(sB));
 
@@ -104,7 +108,7 @@ public class ChildSectionBActivity extends AppCompatActivity {
 
     public boolean formValidation() {
 
-        if (!validatorClass.EmptyRadioButton(this, bi.cfb01, bi.cfb01g, getString(R.string.cfb01))) {
+        /*if (!validatorClass.EmptyRadioButton(this, bi.cfb01, bi.cfb01g, getString(R.string.cfb01))) {
             return false;
         }
 
@@ -121,10 +125,10 @@ public class ChildSectionBActivity extends AppCompatActivity {
                 return false;
             }
             return validatorClass.RangeTextBox(this, bi.cfb02d, 0, 29, getString(R.string.cfb02), "Day");
-        }
+        }*/
 
 
-        return true;
+        return ValidatorClass02.EmptyCheckingContainer(this, bi.fldGrpChildB01);
     }
 
 

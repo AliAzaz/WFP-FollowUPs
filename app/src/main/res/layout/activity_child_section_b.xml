@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:android="http://schemas.android.com/apk/res/android">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <data>
 
@@ -16,6 +17,7 @@
         android:padding="5dp">
 
         <LinearLayout
+            android:id="@+id/fldGrpChildB01"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:animateLayoutChanges="true"
@@ -102,9 +104,10 @@
                             style="@style/textInput"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz"
                             android:hint="@string/cfb01fx"
-                            android:inputType="number"
-                            android:maxLength="1"
+                            android:maxLength="30"
+                            android:tag="cfb01f"
                             android:text='@{cfb01f.checked ? cfb01fx.getText.toString : ""}'
                             android:visibility="@{cfb01f.checked ? View.VISIBLE : View.GONE}" />
 
@@ -121,9 +124,10 @@
                             style="@style/textInput"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz"
                             android:hint="@string/cfb01gx"
-                            android:inputType="number"
-                            android:maxLength="1"
+                            android:maxLength="30"
+                            android:tag="cfb01g"
                             android:text='@{cfb01g.checked ? cfb01gx.getText.toString : ""}'
                             android:visibility="@{cfb01g.checked ? View.VISIBLE : View.GONE}" />
                     </RadioGroup>
@@ -132,9 +136,47 @@
 
             </android.support.v7.widget.CardView>
 
+            <!--05-->
+            <android.support.v7.widget.CardView
+                android:id="@+id/fldgrpcfb03"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:elevation="10dp"
+                android:visibility="@{cfb01g.checked ? View.VISIBLE : View.GONE}">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:background="@color/colorPrimaryDark"
+                        android:text="@string/cfb03"
+                        android:textColor="@color/white" />
+
+                    <io.blackbox_vision.datetimepickeredittext.view.DatePickerInputEditText
+                        android:id="@+id/cfb03"
+                        style="@style/textInput"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:layout_marginTop="2dp"
+                        android:layout_marginBottom="2dp"
+                        android:focusable="false"
+                        android:hint="DD/MM/YYYY"
+                        android:text='@{cfb01g.checked ? cfb03.getText.toString : ""}'
+                        android:textColor="@android:color/black"
+                        app:dateFormat="dd-MM-yyyy"
+                        app:maxDate="CR_DATE" />
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
 
             <!--Q2-->
-
             <android.support.v7.widget.CardView
                 android:id="@+id/fldgrpcfbb"
                 android:layout_width="match_parent"
@@ -155,23 +197,29 @@
                         android:text="@string/cfb02"
                         android:textColor="@color/white" />
 
-                    <EditText
+                    <com.edittextpicker.aliazaz.EditTextPicker
                         android:id="@+id/cfb02m"
                         style="@style/textInput"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:hint="@string/month"
                         android:inputType="number"
-                        android:maxLength="2" />
+                        android:maxLength="2"
+                        app:maxValue="24"
+                        app:minValue="6"
+                        app:type="range" />
 
-                    <EditText
+                    <com.edittextpicker.aliazaz.EditTextPicker
                         android:id="@+id/cfb02d"
                         style="@style/textInput"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:hint="@string/day"
                         android:inputType="number"
-                        android:maxLength="2" />
+                        android:maxLength="2"
+                        app:maxValue="29"
+                        app:minValue="0"
+                        app:type="range" />
 
                 </LinearLayout>
 

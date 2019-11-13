@@ -70,6 +70,11 @@ public class SectionIActivity extends AppCompatActivity {
         } else
             this.setTitle(getString(R.string.pfiheading));
 
+        if (AppMain.formType.equals(AppMain.CHILD)) {
+            this.setTitle(getString(R.string.pfiheading2));
+            bi.fldgrppfifirstfollowup.setVisibility(View.GONE);
+        }
+
         /*if (MainActivity.flagLM) {
             bi.fldGrppia.setVisibility(View.VISIBLE);
         } else {
@@ -852,7 +857,8 @@ public class SectionIActivity extends AppCompatActivity {
             if (!validatorClass.EmptyTextBox(this, bi.pfi10bx, getString(R.string.pfi10b))) {
                 return false;
             }
-
+            if (!validatorClass.RangeTextBox(this, bi.pfi10bx, 1, 15, getString(R.string.pfi10b), ""))
+                return false;
         }
         if (!validatorClass.EmptyRadioButton(this, bi.pfi10c, bi.pfi10c01, getString(R.string.pfi10c))) {
             return false;
@@ -861,6 +867,8 @@ public class SectionIActivity extends AppCompatActivity {
             if (!validatorClass.EmptyTextBox(this, bi.pfi10c01x, getString(R.string.pfi10c))) {
                 return false;
             }
+            if (!validatorClass.RangeTextBox(this, bi.pfi10c01x, 1, 15, getString(R.string.pfi10b), ""))
+                return false;
 
         }
         if (!validatorClass.EmptyRadioButton(this, bi.pfi10d, bi.pfi10d01, getString(R.string.pfi10d))) {
@@ -876,6 +884,8 @@ public class SectionIActivity extends AppCompatActivity {
             if (!validatorClass.EmptyTextBox(this, bi.pfi10f01x, getString(R.string.pfi10f))) {
                 return false;
             }
+            if (!validatorClass.RangeTextBox(this, bi.pfi10f01x, 1, 15, getString(R.string.pfi10b), ""))
+                return false;
         }
         if (!validatorClass.EmptyRadioButton(this, bi.pfi10g, bi.pfi10g01, getString(R.string.pfi10g))) {
             return false;

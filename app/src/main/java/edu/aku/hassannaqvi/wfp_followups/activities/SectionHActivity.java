@@ -121,14 +121,16 @@ public class SectionHActivity extends AppCompatActivity {
             }
             if (UpdateDB()) {
 
-                if (AppMain.formType.equals(AppMain.CHILD)) {
+                /*if (AppMain.formType.equals(AppMain.CHILD)) {
                     startActivity(new Intent(this, Child_Section_D.class));
                     finish();
                 } else {
                     startActivity(new Intent(this, SectionIActivity.class));
                     finish();
-                }
+                }*/
 
+                finish();
+                startActivity(new Intent(this, SectionIActivity.class));
 
             }
         }
