@@ -4,6 +4,9 @@ import android.content.Intent;
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.text.Editable;
+import android.text.TextWatcher;
+import android.view.View;
 import android.widget.CompoundButton;
 import android.widget.RadioGroup;
 import android.widget.Toast;
@@ -99,6 +102,30 @@ public class Child_Section_D extends AppCompatActivity {
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
                 if (i == bi.cfd07a02.getId())
                     ClearClass.ClearAllFields(bi.fldGrpChildD02, null);
+            }
+        });
+
+        bi.cfd03a01.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+                bi.fldGrpChildD03b.setVisibility(View.GONE);
+
+                if (!bi.cfd03a01.getText().toString().isEmpty())
+                    if (Integer.valueOf(bi.cfd03a01.getText().toString()) < 30)
+                        bi.fldGrpChildD03b.setVisibility(View.VISIBLE);
+
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable editable) {
+
             }
         });
 

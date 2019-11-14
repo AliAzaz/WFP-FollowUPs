@@ -983,7 +983,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 EnrolledTable.COLUMN_RESP_TYPE,
         };
 
-        String whereClause = EnrolledTable.COLUMN_STUDYID + " = ? AND cast(" + EnrolledTable.COLUMN_FUPROUND + " as unsigned) >= 6";
+        String whereClause = EnrolledTable.COLUMN_STUDYID + " = ?";
         String[] whereArgs = {studyID};
         String groupBy = null;
         String having = null;

@@ -84,7 +84,7 @@ public class ChildInfoActivity extends AppCompatActivity {
 
             enrolledParticipant = db.getEnrolledByStudyID(bi.cstudyID.getText().toString());
 
-            if (enrolledParticipant != null) {
+            if (enrolledParticipant != null && Integer.valueOf(enrolledParticipant.getFupround()) >= 6) {
 
                 Long days = AppMain.getDaysBWDates(new Date(), AppMain.stringToDate(enrolledParticipant.getFupdt()));
 
