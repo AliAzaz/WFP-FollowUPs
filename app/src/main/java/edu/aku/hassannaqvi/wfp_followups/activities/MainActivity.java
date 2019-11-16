@@ -266,7 +266,7 @@ public class MainActivity extends Activity {
     }
 
     public void openA(View v) {
-        Intent iA = new Intent(this, InfoActivity.class);
+        Intent iA = new Intent(this, Child_Section_D.class);
         startActivity(iA);
     }
 

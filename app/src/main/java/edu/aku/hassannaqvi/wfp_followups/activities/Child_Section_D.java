@@ -18,7 +18,7 @@ import edu.aku.hassannaqvi.wfp_followups.R;
 import edu.aku.hassannaqvi.wfp_followups.core.AppMain;
 import edu.aku.hassannaqvi.wfp_followups.core.DatabaseHelper;
 import edu.aku.hassannaqvi.wfp_followups.databinding.ActivityChildSectionDBinding;
-import edu.aku.hassannaqvi.wfp_followups.validation.ClearClass;
+import edu.aku.hassannaqvi.wfp_followups.validation.ClearClass02;
 import edu.aku.hassannaqvi.wfp_followups.validation.ValidatorClass02;
 
 public class Child_Section_D extends AppCompatActivity {
@@ -63,11 +63,10 @@ public class Child_Section_D extends AppCompatActivity {
         bi.cfd01a.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
-                if (i == bi.cfd01a02.getId())
-                    ClearClass.ClearAllFields(bi.fldgrpmain1, null);
-                else if (i == bi.cfd01a01.getId())
-                    ClearClass.ClearCheckBoxes(bi.fldgrpcfd01b);
-
+                if (i != bi.cfd01a03.getId())
+                    ClearClass02.ClearAllFields(bi.fldgrpcfd01b, null);
+                if (i != bi.cfd01a01.getId())
+                    ClearClass02.ClearAllFields(bi.fldgrpmain1, null);
             }
         });
 
@@ -75,7 +74,7 @@ public class Child_Section_D extends AppCompatActivity {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
                 if (i == bi.cfd06a02.getId())
-                    ClearClass.ClearAllFields(bi.fldgrpcfd06b, null);
+                    ClearClass02.ClearAllFields(bi.fldgrpcfd06b, null);
             }
         });
 
@@ -83,17 +82,24 @@ public class Child_Section_D extends AppCompatActivity {
             @Override
             public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
                 if (b)
-                    ClearClass.ClearAllFields(bi.fldgrpcfd07d, false);
+                    ClearClass02.ClearAllFields(bi.fldgrpcfd07d, false);
                 else
-                    ClearClass.ClearAllFields(bi.fldgrpcfd07d, true);
+                    ClearClass02.ClearAllFields(bi.fldgrpcfd07d, true);
             }
         });
 
         bi.cfd03a02.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
-                if (!b)
-                    ClearClass.ClearCheckBoxes(bi.fldgrpcfd03b);
+                if (b) {
+                    bi.fldGrpChildD03b.setVisibility(View.VISIBLE);
+                    bi.cfd03a01.setEnabled(false);
+                    bi.cfd03a01.setText(null);
+                } else {
+                    bi.cfd03a01.setEnabled(true);
+                    bi.fldGrpChildD03b.setVisibility(View.GONE);
+                    ClearClass02.ClearAllFields(bi.fldgrpcfd03b, null);
+                }
             }
         });
 
@@ -101,11 +107,11 @@ public class Child_Section_D extends AppCompatActivity {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
                 if (i == bi.cfd07a02.getId())
-                    ClearClass.ClearAllFields(bi.fldGrpChildD02, null);
+                    ClearClass02.ClearAllFields(bi.fldGrpChildD02, null);
             }
         });
 
-        bi.cfd03a01.addTextChangedListener(new TextWatcher() {
+        bi.cfd04a01.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
 
@@ -114,11 +120,12 @@ public class Child_Section_D extends AppCompatActivity {
             @Override
             public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
 
-                bi.fldGrpChildD03b.setVisibility(View.GONE);
+                bi.fldgrpcfd04b.setVisibility(View.GONE);
+                ClearClass02.ClearAllFields(bi.fldgrpcfd04b01, null);
 
-                if (!bi.cfd03a01.getText().toString().isEmpty())
-                    if (Integer.valueOf(bi.cfd03a01.getText().toString()) < 30)
-                        bi.fldGrpChildD03b.setVisibility(View.VISIBLE);
+                if (!bi.cfd04a01.getText().toString().isEmpty())
+                    if (Integer.valueOf(bi.cfd04a01.getText().toString()) < 30)
+                        bi.fldgrpcfd04b.setVisibility(View.VISIBLE);
 
 
             }
@@ -240,15 +247,6 @@ public class Child_Section_D extends AppCompatActivity {
         cfd.put("cfd07d96", bi.cfd07d96.isChecked() ? "96" : "0");
         cfd.put("cfd07d98", bi.cfd07d98.isChecked() ? "98" : "0");
         cfd.put("cfd07d96x", bi.cfd07d96x.getText().toString());
-
-
-
-       /*cfd.put("cfd07d", bi.cfd07d01.isChecked() ? "1"
-                : bi.cfd07d02.isChecked() ? "2"
-                : bi.cfd07d03.isChecked() ? "3"
-                : bi.cfd07d96.isChecked() ? "96"
-                : bi.cfd07d98.isChecked() ? "98"
-                : "0");*/
 
         AppMain.fc.setsD(String.valueOf(cfd));
 
