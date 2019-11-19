@@ -118,14 +118,14 @@ public class ChildInfoActivity extends AppCompatActivity {
     }
 
     public void childData() {
-      /*  bi.viewGroup02.childName.setText(enrolledParticipant.getPw_name());
+        bi.viewGroup02.childName.setText(enrolledParticipant.getPw_name());
         bi.viewGroup02.mName.setText(enrolledParticipant.getH_name());
         bi.viewGroup02.cfupround.setText(enrolledParticipant.getFupround());
-        bi.viewGroup02.cfupdate.setText(enrolledParticipant.getFupdt());*/
-        bi.viewGroup02.childName.setText("Chinko");
+        bi.viewGroup02.cfupdate.setText(enrolledParticipant.getFupdt());
+        /*bi.viewGroup02.childName.setText("Chinko");
         bi.viewGroup02.mName.setText("Pinki");
         bi.viewGroup02.cfupround.setText("1");
-        bi.viewGroup02.cfupdate.setText("19-11-2018");
+        bi.viewGroup02.cfupdate.setText("19-11-2018");*/
     }
 
     public void onBtnEndClick() {
@@ -155,10 +155,10 @@ public class ChildInfoActivity extends AppCompatActivity {
         AppMain.fc.setInterviewer01(AppMain.loginMem[1]);
         AppMain.fc.setInterviewer02(AppMain.loginMem[2]);
 
-      /*  AppMain.fc.setUccode(enrolledParticipant.getUc_code());
+        AppMain.fc.setUccode(enrolledParticipant.getUc_code());
         AppMain.fc.setTehsilcode(enrolledParticipant.getTehsil_code());
         AppMain.fc.setVillagecode(enrolledParticipant.getVillage_code());
-        AppMain.fc.setLhwCode(enrolledParticipant.getLhw_code());*/
+        AppMain.fc.setLhwCode(enrolledParticipant.getLhw_code());
 
         AppMain.fc.setDeviceID(AppMain.deviceId);
         AppMain.fc.setStudyID(bi.cstudyID.getText().toString());
@@ -167,7 +167,7 @@ public class ChildInfoActivity extends AppCompatActivity {
         AppMain.fc.setApp_version(AppMain.versionName + "." + AppMain.versionCode);
 
         JSONObject sInfo = new JSONObject();
-       /* sInfo.put("cuid", enrolledParticipant.getPuid());
+        sInfo.put("cuid", enrolledParticipant.getPuid());
         sInfo.put("child_name", enrolledParticipant.getPw_name());
         sInfo.put("m_name", enrolledParticipant.getH_name());
         sInfo.put("lmp", enrolledParticipant.getLmp());
@@ -175,7 +175,7 @@ public class ChildInfoActivity extends AppCompatActivity {
         sInfo.put("fupdt", enrolledParticipant.getFupdt());
         sInfo.put("fupround", enrolledParticipant.getFupround());
         sInfo.put("resp_type", enrolledParticipant.getResp_type());
-        sInfo.put("fup_formdate", enrolledParticipant.getFormdate());*/
+        sInfo.put("fup_formdate", enrolledParticipant.getFormdate());
         sInfo.put(AppMain.formType + "a06", bi.cfa06a.isChecked() ? "1" : bi.cfa06b.isChecked() ? "2" : "0");
 
 
