@@ -84,7 +84,7 @@
                             android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz"
                             android:hint="@string/reason"
                             android:inputType="textMultiLine"
-                            android:text='@{pfd01b.checked ? pfd01bx.getText.toString : ""}'
+                            android:text='@{pfd01b.checked ? pfd01bx.getText().toString() : ""}'
                             android:visibility="@{pfd01b.checked ? View.VISIBLE : View.GONE}" />
                     </RadioGroup>
 
@@ -375,7 +375,7 @@
                             android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz"
                             android:hint="@string/other"
                             android:inputType="text"
-                            android:text='@{pfd0796.checked? pfd0796x.getText.toString : ""}'
+                            android:text='@{pfd0796.checked? pfd0796x.getText().toString() : ""}'
                             android:visibility='@{pfd0796.checked? View.VISIBLE : View.GONE}' />
 
                     </LinearLayout>
@@ -493,7 +493,7 @@
                             android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz"
                             android:hint="@string/other"
                             android:inputType="text"
-                            android:text='@{pfd0996.checked? pfd0996x.getText.toString : ""}'
+                            android:text='@{pfd0996.checked? pfd0996x.getText().toString() : ""}'
                             android:visibility='@{pfd0996.checked? View.VISIBLE : View.GONE}' />
 
                     </LinearLayout>
@@ -599,7 +599,7 @@
                             android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz"
                             android:hint="@string/other"
                             android:inputType="text"
-                            android:text='@{pfd1196.checked ? pfd1196x.getText.toString : ""}'
+                            android:text='@{pfd1196.checked ? pfd1196x.getText().toString() : ""}'
                             android:visibility="@{pfd1196.checked ? View.VISIBLE : View.GONE}" />
 
 
@@ -695,7 +695,7 @@
                         android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz"
                         android:hint="@string/other"
                         android:inputType="text"
-                        android:text='@{pfd1296.checked? pfd1296x.getText.toString : ""}'
+                        android:text='@{pfd1296.checked? pfd1296x.getText().toString() : ""}'
                         android:visibility='@{pfd1296.checked? View.VISIBLE : View.GONE}' />
 
                 </LinearLayout>

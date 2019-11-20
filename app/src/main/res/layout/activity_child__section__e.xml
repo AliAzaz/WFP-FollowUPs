@@ -382,7 +382,7 @@
                                 android:layout_height="wrap_content"
                                 android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz"
                                 android:hint="@string/other"
-                                android:text='@{cfe019601.checked? cfe0196x.getText.toString : ""}'
+                                android:text='@{cfe019601.checked? cfe0196x.getText().toString() : ""}'
                                 android:visibility='@{cfe019601.checked? View.VISIBLE : View.GONE}' />
                         </RadioGroup>
 
@@ -596,7 +596,7 @@
                             android:layout_height="wrap_content"
                             android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz"
                             android:hint="@string/other"
-                            android:text='@{cfe0396.checked? ccg0396x.getText.toString : "" }'
+                            android:text='@{cfe0396.checked? ccg0396x.getText().toString() : "" }'
                             android:visibility='@{cfe0396.checked? View.VISIBLE : View.GONE}' />
 
 

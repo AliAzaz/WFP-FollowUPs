@@ -473,7 +473,7 @@
                             android:layout_margin="10dp"
                             android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz"
                             android:hint="@string/other"
-                            android:text='@{pfg0896.checked? pfg0896x.getText.toString : "" }'
+                            android:text='@{pfg0896.checked? pfg0896x.getText().toString() : "" }'
                             android:visibility='@{pfg0896.checked? View.VISIBLE : View.GONE}' />
 
                     </RadioGroup>
@@ -597,7 +597,7 @@
                             android:layout_margin="10dp"
                             android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz"
                             android:hint="@string/other"
-                            android:text='@{pfg0996.checked? pfg0996x.getText.toString :"" }'
+                            android:text='@{pfg0996.checked? pfg0996x.getText().toString() :"" }'
                             android:visibility='@{pfg0996.checked? View.VISIBLE : View.GONE}' />
 
                     </LinearLayout>
@@ -715,7 +715,7 @@
                             android:layout_margin="10dp"
                             android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz"
                             android:hint="@string/other"
-                            android:text='@{pfg1096.checked? pfg1096x.getText.toString : "" }'
+                            android:text='@{pfg1096.checked? pfg1096x.getText().toString() : "" }'
                             android:visibility='@{pfg1096.checked? View.VISIBLE : View.GONE}' />
 
 
@@ -768,7 +768,7 @@
                             android:layout_margin="10dp"
                             android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz"
                             android:hint="@string/pfg10i"
-                            android:text='@{pfg10i.checked? pfg10ix.getText.toString : "" }'
+                            android:text='@{pfg10i.checked? pfg10ix.getText().toString() : "" }'
                             android:visibility='@{pfg10i.checked? View.VISIBLE : View.GONE}' />
 
                         <RadioButton
@@ -787,7 +787,7 @@
                             android:layout_margin="10dp"
                             android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz"
                             android:hint="@string/other"
-                            android:text='@{pfg10j.checked? pfg10jx.getText.toString : "" }'
+                            android:text='@{pfg10j.checked? pfg10jx.getText().toString() : "" }'
                             android:visibility='@{pfg10j.checked? View.VISIBLE : View.GONE}' />
 
 
@@ -1009,7 +1009,7 @@
                             android:hint="@string/pfg14b"
                             android:inputType="number"
                             android:maxLength="2"
-                            android:text='@{pfg14b.checked? pfg14bx.getText.toString : "" }'
+                            android:text='@{pfg14b.checked? pfg14bx.getText().toString() : "" }'
                             android:visibility='@{pfg14b.checked? View.VISIBLE : View.GONE}' />
 
                         <RadioButton
@@ -1029,7 +1029,7 @@
                             android:hint="@string/pfg14c"
                             android:inputType="number"
                             android:maxLength="2"
-                            android:text='@{pfg14c.checked? pfg14cx.getText.toString : "" }'
+                            android:text='@{pfg14c.checked? pfg14cx.getText().toString() : "" }'
                             android:visibility='@{pfg14c.checked? View.VISIBLE : View.GONE}' />
 
                         <RadioButton
@@ -1203,7 +1203,7 @@
                                 android:layout_margin="10dp"
                                 android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz"
                                 android:hint="@string/other"
-                                android:text='@{pfg1696.checked? pfg1696x.getText.toString : ""}'
+                                android:text='@{pfg1696.checked? pfg1696x.getText().toString() : ""}'
                                 android:visibility='@{pfg1696.checked? View.VISIBLE: View.GONE}' />
 
                         </LinearLayout>
@@ -1310,7 +1310,7 @@
                                 android:layout_margin="10dp"
                                 android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz"
                                 android:hint="@string/other"
-                                android:text='@{pfg1796.checked? pfg1796x.getText.toString : "" }'
+                                android:text='@{pfg1796.checked? pfg1796x.getText().toString() : "" }'
                                 android:visibility='@{pfg1796.checked? View.VISIBLE : View.GONE}' />
 
                             <TextView
@@ -1377,7 +1377,7 @@
                                 android:layout_margin="10dp"
                                 android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz"
                                 android:hint="@string/other"
-                                android:text='@{pfg179602.checked? pfg179602x.getText.toString : "" }'
+                                android:text='@{pfg179602.checked? pfg179602x.getText().toString() : "" }'
                                 android:visibility='@{pfg179602.checked? View.VISIBLE : View.GONE}' />
 
                             <TextView
@@ -1428,7 +1428,7 @@
                                 android:layout_margin="10dp"
                                 android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz"
                                 android:hint="@string/other"
-                                android:text='@{pfg179603.checked? pfg179603x.getText.toString : "" }'
+                                android:text='@{pfg179603.checked? pfg179603x.getText().toString() : "" }'
                                 android:visibility='@{pfg179603.checked? View.VISIBLE : View.GONE}' />
 
                         </RadioGroup>
@@ -1577,7 +1577,7 @@
                         android:layout_margin="10dp"
                         android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz"
                         android:hint="@string/other"
-                        android:text='@{pfg1996.checked? pfg1996x.getText.toString : "" }'
+                        android:text='@{pfg1996.checked? pfg1996x.getText().toString() : "" }'
                         android:visibility='@{pfg1996.checked? View.VISIBLE : View.GONE}' />
 
                 </LinearLayout>
@@ -1627,7 +1627,7 @@
                             android:hint="@string/pfg20a"
                             android:inputType="number"
                             android:maxLength="2"
-                            android:text='@{pfg20a.checked? pfg20ax.getText.toString : "" }'
+                            android:text='@{pfg20a.checked? pfg20ax.getText().toString() : "" }'
                             android:visibility='@{pfg20a.checked? View.VISIBLE : View.GONE}' />
 
 
@@ -1648,7 +1648,7 @@
                             android:hint="@string/pfg20b"
                             android:inputType="number"
                             android:maxLength="2"
-                            android:text='@{pfg20b.checked? pfg20bx.getText.toString : "" }'
+                            android:text='@{pfg20b.checked? pfg20bx.getText().toString() : "" }'
                             android:visibility='@{pfg20b.checked? View.VISIBLE : View.GONE}' />
 
 
@@ -1669,7 +1669,7 @@
                             android:hint="@string/pfg20c"
                             android:inputType="number"
                             android:maxLength="2"
-                            android:text='@{pfg20c.checked? pfg20cx.getText.toString : "" }'
+                            android:text='@{pfg20c.checked? pfg20cx.getText().toString() : "" }'
                             android:visibility='@{pfg20c.checked? View.VISIBLE : View.GONE}' />
 
 
@@ -1820,7 +1820,7 @@
                         android:layout_margin="10dp"
                         android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz"
                         android:hint="@string/other"
-                        android:text='@{pfg2296.checked? pfg2296x.getText.toString : "" }'
+                        android:text='@{pfg2296.checked? pfg2296x.getText().toString() : "" }'
                         android:visibility='@{pfg2296.checked? View.VISIBLE : View.GONE}' />
 
                 </LinearLayout>
@@ -1966,7 +1966,7 @@
                         android:layout_margin="10dp"
                         android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz"
                         android:hint="@string/other"
-                        android:text='@{pfg2496.checked? pfg2496x.getText.toString : "" }'
+                        android:text='@{pfg2496.checked? pfg2496x.getText().toString() : "" }'
                         android:visibility='@{pfg2496.checked? View.VISIBLE : View.GONE}' />
 
                 </LinearLayout>
@@ -2016,7 +2016,7 @@
                             android:hint="@string/pfg25a"
                             android:inputType="number"
                             android:maxLength="2"
-                            android:text='@{pfg25a.checked? pfg25ax.getText.toString : "" }'
+                            android:text='@{pfg25a.checked? pfg25ax.getText().toString() : "" }'
                             android:visibility='@{pfg25a.checked? View.VISIBLE : View.GONE}' />
 
 
@@ -2037,7 +2037,7 @@
                             android:hint="@string/pfg25b"
                             android:inputType="number"
                             android:maxLength="2"
-                            android:text='@{pfg25b.checked? pfg25bx.getText.toString : "" }'
+                            android:text='@{pfg25b.checked? pfg25bx.getText().toString() : "" }'
                             android:visibility='@{pfg25b.checked? View.VISIBLE : View.GONE}' />
 
 
@@ -2058,7 +2058,7 @@
                             android:hint="@string/pfg25c"
                             android:inputType="number"
                             android:maxLength="2"
-                            android:text='@{pfg25c.checked? pfg25cx.getText.toString : "" }'
+                            android:text='@{pfg25c.checked? pfg25cx.getText().toString() : "" }'
                             android:visibility='@{pfg25c.checked? View.VISIBLE : View.GONE}' />
 
 
@@ -2152,7 +2152,7 @@
                         android:layout_margin="10dp"
                         android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz"
                         android:hint="@string/other"
-                        android:text='@{pfg2696.checked? pfg2696x.getText.toString : "" }'
+                        android:text='@{pfg2696.checked? pfg2696x.getText().toString() : "" }'
                         android:visibility='@{pfg2696.checked? View.VISIBLE : View.GONE}' />
 
                 </LinearLayout>

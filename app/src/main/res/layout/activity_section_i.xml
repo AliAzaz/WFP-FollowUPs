@@ -141,7 +141,7 @@
                                     android:layout_height="wrap_content"
                                     android:hint="@string/hours"
                                     android:maxLength="2"
-                                    android:text='@{pfi02h.checked? pfi02hx.getText.toString : ""}'
+                                    android:text='@{pfi02h.checked? pfi02hx.getText().toString() : ""}'
                                     android:visibility='@{pfi02h.checked? View.VISIBLE : View.GONE}' />
 
                                 <RadioButton
@@ -159,7 +159,7 @@
                                     android:layout_height="wrap_content"
                                     android:hint="@string/day"
                                     android:maxLength="2"
-                                    android:text='@{pfi02d.checked? pfi02dx.getText.toString : ""}'
+                                    android:text='@{pfi02d.checked? pfi02dx.getText().toString() : ""}'
                                     android:visibility='@{pfi02d.checked? View.VISIBLE : View.GONE}' />
                             </RadioGroup>
 
@@ -291,7 +291,7 @@
                                     android:layout_height="wrap_content"
                                     android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz"
                                     android:hint="@string/other"
-                                    android:text='@{pfi0496.checked? pfi0496x.getText.toString : ""}'
+                                    android:text='@{pfi0496.checked? pfi0496x.getText().toString() : ""}'
                                     android:visibility='@{pfi0496.checked? View.VISIBLE : View.GONE}' />
 
                             </RadioGroup>
@@ -462,7 +462,7 @@
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:hint="@string/other"
-                                    android:text='@{pfi0696.checked? pfi0696x.getText.toString : ""}'
+                                    android:text='@{pfi0696.checked? pfi0696x.getText().toString() : ""}'
                                     android:visibility='@{pfi0696.checked? View.VISIBLE : View.GONE}' />
 
 
@@ -845,7 +845,7 @@
                                         android:hint="Number Of times"
                                         android:inputType="number"
                                         android:maxLength="2"
-                                        android:text='@{pfi10b01.checked? pfi10bx.getText.toString :"" }'
+                                        android:text='@{pfi10b01.checked? pfi10bx.getText().toString() :"" }'
                                         android:visibility='@{pfi10b01.checked? View.VISIBLE : View.GONE}' />
 
                                     <RadioButton
@@ -912,7 +912,7 @@
                                         android:layout_height="wrap_content"
                                         android:hint="Number Of times"
                                         android:maxLength="2"
-                                        android:text='@{pfi10c01.checked? pfi10c01x.getText.toString :"" }'
+                                        android:text='@{pfi10c01.checked? pfi10c01x.getText().toString() :"" }'
                                         android:visibility='@{pfi10c01.checked? View.VISIBLE : View.GONE}' />
 
                                     <RadioButton
@@ -1090,7 +1090,7 @@
                                         android:layout_height="wrap_content"
                                         android:hint="Number Of times"
                                         android:maxLength="2"
-                                        android:text='@{pfi10f01.checked? pfi10f01x.getText.toString :"" }'
+                                        android:text='@{pfi10f01.checked? pfi10f01x.getText().toString() :"" }'
                                         android:visibility='@{pfi10f01.checked? View.VISIBLE : View.GONE}' />
 
                                     <RadioButton
@@ -2358,7 +2358,7 @@
                             android:layout_height="wrap_content"
                             android:hint="Number Of Times"
                             android:maxLength="2"
-                            android:text='@{pfi1498.checked? "" : pfi14t.getText.toString }'
+                            android:text='@{pfi1498.checked? "" : pfi14t.getText().toString() }'
                             android:visibility='@{pfi1498.checked? View.GONE : View.VISIBLE}' />
 
                     </LinearLayout>
@@ -2498,7 +2498,7 @@
                                     android:layout_height="wrap_content"
                                     android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz"
                                     android:hint="@string/other"
-                                    android:text='@{pfi1696.checked? pfi1696x.getText.toString : ""}'
+                                    android:text='@{pfi1696.checked? pfi1696x.getText().toString() : ""}'
                                     android:visibility='@{pfi1696.checked? View.VISIBLE : View.GONE}' />
 
                             </RadioGroup>
@@ -2574,7 +2574,7 @@
                                     android:layout_height="wrap_content"
                                     android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz"
                                     android:hint="@string/other"
-                                    android:text='@{pfi1796.checked? pfi1796x.getText.toString : ""}'
+                                    android:text='@{pfi1796.checked? pfi1796x.getText().toString() : ""}'
                                     android:visibility='@{pfi1796.checked? View.VISIBLE : View.GONE}' />
 
                             </RadioGroup>

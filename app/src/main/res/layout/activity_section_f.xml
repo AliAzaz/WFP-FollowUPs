@@ -192,7 +192,7 @@
                         android:layout_height="wrap_content"
                         android:layout_margin="10dp"
                         android:hint="@string/other"
-                        android:text='@{pff0296.checked? pff0296x.getText.toString : "" }'
+                        android:text='@{pff0296.checked? pff0296x.getText().toString() : "" }'
                         android:visibility='@{pff0296.checked? View.VISIBLE : View.GONE}' />
 
 
@@ -268,7 +268,7 @@
                         android:layout_height="wrap_content"
                         android:layout_margin="10dp"
                         android:hint="@string/other"
-                        android:text='@{pff0396.checked? pff0396x.getText.toString : "" }'
+                        android:text='@{pff0396.checked? pff0396x.getText().toString() : "" }'
                         android:visibility='@{pff0396.checked? View.VISIBLE : View.GONE}' />
 
 
@@ -352,7 +352,7 @@
                         android:layout_height="wrap_content"
                         android:layout_margin="10dp"
                         android:hint="@string/other"
-                        android:text='@{pff0496.checked? pff0496x.getText.toString : "" }'
+                        android:text='@{pff0496.checked? pff0496x.getText().toString() : "" }'
                         android:visibility='@{pff0496.checked? View.VISIBLE : View.GONE}' />
                 </LinearLayout>
             </android.support.v7.widget.CardView>
@@ -493,7 +493,7 @@
                             android:layout_margin="10dp"
                             android:hint="@string/day"
                             android:inputType="number"
-                            android:text='@{pff07d.checked? pff07dx.getText.toString: ""}'
+                            android:text='@{pff07d.checked? pff07dx.getText().toString(): ""}'
                             android:visibility='@{pff07d.checked? View.VISIBLE : View.GONE}' />
 
                         <RadioButton
@@ -1239,7 +1239,7 @@
                         android:layout_height="wrap_content"
                         android:layout_margin="10dp"
                         android:hint="@string/other"
-                        android:text='@{pff1196.checked ? pff1196x.getText.toString : "" }'
+                        android:text='@{pff1196.checked ? pff1196x.getText().toString() : "" }'
                         android:visibility='@{pff1196.checked? View.VISIBLE : View.GONE}' />
 
                 </LinearLayout>

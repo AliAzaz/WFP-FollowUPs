@@ -210,7 +210,7 @@
                         android:hint="@string/gl"
                         android:inputType="numberDecimal"
                         android:maxLength="4"
-                        android:text='@{pfh0399.checked ? "" : pfh03.getText.toString}'
+                        android:text='@{pfh0399.checked ? "" : pfh03.getText().toString()}'
                         android:visibility="@{pfh0399.checked ? View.GONE : View.VISIBLE}" />
 
 

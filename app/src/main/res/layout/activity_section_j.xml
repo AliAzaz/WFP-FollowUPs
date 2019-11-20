@@ -509,7 +509,7 @@
                             android:layout_height="wrap_content"
                             android:layout_margin="10dp"
                             android:hint="@string/other"
-                            android:text='@{pfj0109a.checked ? pfj0109ax.getText.toString : ""}'
+                            android:text='@{pfj0109a.checked ? pfj0109ax.getText().toString() : ""}'
                             android:visibility="@{pfj0109a.checked ? View.VISIBLE : View.GONE}" />
 
                         <!--01.00-->
@@ -695,7 +695,7 @@
                         android:layout_margin="10dp"
                         android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz"
                         android:hint="@string/other"
-                        android:text='@{pfj03i.checked ? pfj03ix.getText.toString : ""}'
+                        android:text='@{pfj03i.checked ? pfj03ix.getText().toString() : ""}'
                         android:visibility="@{pfj03i.checked ? View.VISIBLE : View.GONE}" />
 
                 </LinearLayout>
@@ -799,7 +799,7 @@
                         android:layout_margin="10dp"
                         android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz"
                         android:hint="@string/other"
-                        android:text='@{pfj0496.checked ? pfj0496x.getText.toString : ""}'
+                        android:text='@{pfj0496.checked ? pfj0496x.getText().toString() : ""}'
                         android:visibility="@{pfj0496.checked ? View.VISIBLE : View.GONE}" />
 
                 </LinearLayout>

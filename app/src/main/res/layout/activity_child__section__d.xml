@@ -180,7 +180,7 @@
                         android:hint="@string/other"
                         android:inputType="text"
                         android:tag="cfd01b96"
-                        android:text='@{cfd01b96.checked? cfd01b96x.getText.toString : ""}'
+                        android:text='@{cfd01b96.checked? cfd01b96x.getText().toString() : ""}'
                         android:visibility='@{cfd01b96.checked? View.VISIBLE : View.GONE}' />
 
 
@@ -382,7 +382,7 @@
                             android:hint="@string/other"
                             android:inputType="text"
                             android:tag="cfd03b96"
-                            android:text='@{cfd03b96.checked? cfd03b96x.getText.toString : ""}'
+                            android:text='@{cfd03b96.checked? cfd03b96x.getText().toString() : ""}'
                             android:visibility='@{cfd03b96.checked? View.VISIBLE : View.GONE}' />
 
 
@@ -530,7 +530,7 @@
                                 android:hint="@string/other"
                                 android:inputType="text"
                                 android:tag="cfd04b96"
-                                android:text='@{cfd04b96.checked? cfd04b96x.getText.toString : ""}'
+                                android:text='@{cfd04b96.checked? cfd04b96x.getText().toString() : ""}'
                                 android:visibility='@{cfd04b96.checked? View.VISIBLE : View.GONE}' />
 
 
@@ -718,7 +718,7 @@
                             android:hint="@string/other"
                             android:inputType="text"
                             android:tag="cfd06b96"
-                            android:text='@{cfd06b96.checked? cfd06b96x.getText.toString : ""}'
+                            android:text='@{cfd06b96.checked? cfd06b96x.getText().toString() : ""}'
                             android:visibility='@{cfd06b96.checked? View.VISIBLE : View.GONE}' />
 
                     </LinearLayout>
@@ -853,7 +853,7 @@
                                     android:hint="@string/other"
                                     android:inputType="text"
                                     android:tag="cfd07b96"
-                                    android:text='@{cfd07b96.checked? cfd07b96x.getText.toString : ""}'
+                                    android:text='@{cfd07b96.checked? cfd07b96x.getText().toString() : ""}'
                                     android:visibility='@{cfd07b96.checked? View.VISIBLE : View.GONE}' />
 
 
@@ -974,7 +974,7 @@
                                     android:hint="@string/other"
                                     android:inputType="text"
                                     android:tag="cfd07d96"
-                                    android:text='@{cfd07d96.checked? cfd07d96x.getText.toString : ""}'
+                                    android:text='@{cfd07d96.checked? cfd07d96x.getText().toString() : ""}'
                                     android:visibility='@{cfd07d96.checked? View.VISIBLE : View.GONE}' />
 
                             </LinearLayout>
@@ -1018,7 +1018,7 @@
                         android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz"
                         android:hint="@string/reason"
                         android:inputType="text"
-                        android:text='@{cfd01a02.checked ? cfd01a03x.getText.toString : ""}'
+                        android:text='@{cfd01a02.checked ? cfd01a03x.getText().toString() : ""}'
                         android:visibility="gone" />
 
 
