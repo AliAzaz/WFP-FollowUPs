@@ -22,158 +22,172 @@
             android:layoutDirection="rtl"
             android:orientation="vertical">
 
-            <!--Q1-->
-            <android.support.v7.widget.CardView
+            <CheckBox
+                android:id="@+id/pfh0199"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:elevation="10dp">
+                android:text="Height/Weight Not Applicable" />
 
-                <LinearLayout
-                    android:id="@+id/fldgrppfh01"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_horizontal"
-                        android:background="@color/colorPrimaryDark"
-                        android:text="@string/pfh01"
-                        android:textColor="@color/white" />
-
-                    <TextView
-                        android:gravity="center"
-                        android:padding="5dp"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_horizontal"
-                        android:layout_marginTop="5dp"
-                        android:background="@color/colorPrimary"
-                        android:text="@string/pfha"
-                        android:textColor="@color/white" />
-
-                    <Spinner
-                        android:id="@+id/pfh01a"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="8sp" />
-
-                    <EditText
-
-                        style="@style/textInput"
-                        android:id="@+id/pfh0101"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:hint="@string/pfh01a"
-                        android:inputType="numberDecimal"
-                        android:maxLength="6" />
-
-                    <TextView
-                        android:gravity="center"
-                        android:padding="5dp"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_horizontal"
-                        android:background="@color/colorPrimary"
-                        android:text="@string/pfhb"
-                        android:textColor="@color/white" />
-
-                    <Spinner
-                        android:id="@+id/pfh01b"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="8sp" />
-
-                    <EditText
-                        style="@style/textInput"
-                        android:id="@+id/pfh0102"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:hint="@string/pfh01a"
-                        android:inputType="numberDecimal"
-                        android:maxLength="6" />
-
-                </LinearLayout>
-
-            </android.support.v7.widget.CardView>
-
-            <!--Q2-->
-            <android.support.v7.widget.CardView
+            <LinearLayout
+                android:id="@+id/fldgrppfh99"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:elevation="10dp">
+                android:orientation="vertical">
 
-                <LinearLayout
-                    android:id="@+id/fldgrppfh02"
+                <!--Q1-->
+                <android.support.v7.widget.CardView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical">
+                    android:layout_marginTop="10dp"
+                    android:elevation="10dp">
 
-                    <TextView
+                    <LinearLayout
+                        android:id="@+id/fldgrppfh01"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_gravity="center_horizontal"
-                        android:background="@color/colorPrimaryDark"
-                        android:text="@string/pfh02"
-                        android:textColor="@color/white" />
+                        android:orientation="vertical">
 
-                    <TextView
-                        android:layout_marginTop="5dp"
-                        android:gravity="center"
-                        android:padding="5dp"
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:background="@color/colorPrimaryDark"
+                            android:text="@string/pfh01"
+                            android:textColor="@color/white" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginTop="5dp"
+                            android:background="@color/colorPrimary"
+                            android:gravity="center"
+                            android:padding="5dp"
+                            android:text="@string/pfha"
+                            android:textColor="@color/white" />
+
+                        <Spinner
+                            android:id="@+id/pfh01a"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8sp" />
+
+                        <EditText
+
+                            android:id="@+id/pfh0101"
+                            style="@style/textInput"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/pfh01a"
+                            android:inputType="numberDecimal"
+                            android:maxLength="6" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:background="@color/colorPrimary"
+                            android:gravity="center"
+                            android:padding="5dp"
+                            android:text="@string/pfhb"
+                            android:textColor="@color/white" />
+
+                        <Spinner
+                            android:id="@+id/pfh01b"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8sp" />
+
+                        <EditText
+                            android:id="@+id/pfh0102"
+                            style="@style/textInput"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/pfh01a"
+                            android:inputType="numberDecimal"
+                            android:maxLength="6" />
+
+                    </LinearLayout>
+
+                </android.support.v7.widget.CardView>
+
+                <!--Q2-->
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:elevation="10dp">
+
+                    <LinearLayout
+                        android:id="@+id/fldgrppfh02"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_gravity="center_horizontal"
-                        android:background="@color/colorPrimary"
-                        android:text="@string/pfha"
-                        android:textColor="@color/white" />
+                        android:orientation="vertical">
 
-                    <Spinner
-                        android:id="@+id/pfh02a"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="8sp" />
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:background="@color/colorPrimaryDark"
+                            android:text="@string/pfh02"
+                            android:textColor="@color/white" />
 
-                    <EditText
-                        style="@style/textInput"
-                        android:id="@+id/pfh0201"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:hint="@string/pfc01a"
-                        android:inputType="numberDecimal"
-                        android:maxLength="5" />
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginTop="5dp"
+                            android:background="@color/colorPrimary"
+                            android:gravity="center"
+                            android:padding="5dp"
+                            android:text="@string/pfha"
+                            android:textColor="@color/white" />
 
-                    <TextView
-                        android:gravity="center"
-                        android:padding="5dp"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_horizontal"
-                        android:background="@color/colorPrimary"
-                        android:text="@string/pfhb"
-                        android:textColor="@color/white" />
+                        <Spinner
+                            android:id="@+id/pfh02a"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8sp" />
 
-                    <Spinner
-                        android:id="@+id/pfh02b"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="8sp" />
+                        <EditText
+                            android:id="@+id/pfh0201"
+                            style="@style/textInput"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/pfc01a"
+                            android:inputType="numberDecimal"
+                            android:maxLength="5" />
 
-                    <EditText
-                        style="@style/textInput"
-                        android:id="@+id/pfh0202"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:hint="@string/pfc01a"
-                        android:inputType="numberDecimal"
-                        android:maxLength="5" />
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:background="@color/colorPrimary"
+                            android:gravity="center"
+                            android:padding="5dp"
+                            android:text="@string/pfhb"
+                            android:textColor="@color/white" />
 
-                </LinearLayout>
+                        <Spinner
+                            android:id="@+id/pfh02b"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8sp" />
 
-            </android.support.v7.widget.CardView>
+                        <EditText
+                            android:id="@+id/pfh0202"
+                            style="@style/textInput"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/pfc01a"
+                            android:inputType="numberDecimal"
+                            android:maxLength="5" />
+
+                    </LinearLayout>
+
+                </android.support.v7.widget.CardView>
+
+            </LinearLayout>
 
             <!--Q2-->
             <android.support.v7.widget.CardView
@@ -203,8 +217,8 @@
                         android:text="@string/not_applicable" />
 
                     <EditText
-                        style="@style/textInput"
                         android:id="@+id/pfh03"
+                        style="@style/textInput"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:hint="@string/gl"
@@ -228,10 +242,10 @@
                 android:orientation="horizontal">
 
                 <Button
-                    android:layout_marginEnd="10dp"
                     android:id="@+id/btn_Continue"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
+                    android:layout_marginEnd="10dp"
                     android:layout_marginRight="5dp"
                     android:layout_weight="0.5"
                     android:onClick="@{() -> callback.BtnContinue()}"

@@ -43,56 +43,72 @@
                         android:text="@string/pfc01"
                         android:textColor="@color/white" />
 
-                    <TextView
+                    <CheckBox
+                        android:id="@+id/pfc0199"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_gravity="center_horizontal"
-                        android:layout_marginTop="5dp"
-                        android:background="@color/colorPrimary"
-                        android:gravity="center"
-                        android:padding="10dp"
-                        android:text="@string/pfha"
-                        android:textColor="@color/white" />
+                        android:enabled="true"
+                        android:tag="-1"
+                        android:text="@string/not_applicable" />
 
-                    <Spinner
-                        android:id="@+id/pfc01a"
+                    <LinearLayout
+                        android:id="@+id/fldgropfc0199"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="8sp" />
+                        android:orientation="vertical">
 
-                    <EditText
-                        android:id="@+id/pfc0101"
-                        style="@style/textInput"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:hint="@string/pfc01a"
-                        android:inputType="numberDecimal"
-                        android:maxLength="6" />
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginTop="5dp"
+                            android:background="@color/colorPrimary"
+                            android:gravity="center"
+                            android:padding="10dp"
+                            android:text="@string/pfha"
+                            android:textColor="@color/white" />
 
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_horizontal"
-                        android:background="@color/colorPrimary"
-                        android:gravity="center"
-                        android:padding="10dp"
-                        android:text="@string/pfhb"
-                        android:textColor="@color/white" />
+                        <Spinner
+                            android:id="@+id/pfc01a"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8sp" />
 
-                    <Spinner
-                        android:id="@+id/pfc01b"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="8sp" />
+                        <EditText
+                            android:id="@+id/pfc0101"
+                            style="@style/textInput"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/pfc01a"
+                            android:inputType="numberDecimal"
+                            android:maxLength="6" />
 
-                    <EditText
-                        android:id="@+id/pfc0102"
-                        style="@style/textInput"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:hint="@string/pfc01a"
-                        android:inputType="numberDecimal"
-                        android:maxLength="6" />
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:background="@color/colorPrimary"
+                            android:gravity="center"
+                            android:padding="10dp"
+                            android:text="@string/pfhb"
+                            android:textColor="@color/white" />
+
+                        <Spinner
+                            android:id="@+id/pfc01b"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8sp" />
+
+                        <EditText
+                            android:id="@+id/pfc0102"
+                            style="@style/textInput"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/pfc01a"
+                            android:inputType="numberDecimal"
+                            android:maxLength="6" />
+
+                    </LinearLayout>
 
                 </LinearLayout>
 
@@ -123,7 +139,7 @@
                         android:id="@+id/pfc0299"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:enabled="false"
+                        android:enabled="true"
                         android:text="@string/not_applicable" />
 
                     <EditText

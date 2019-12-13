@@ -7,7 +7,10 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.CompoundButton;
 import android.widget.Toast;
+
+import com.validatorcrawler.aliazaz.Clear;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -43,7 +46,7 @@ public class SectionHActivity extends AppCompatActivity {
         if (AppMain.formType.equals(AppMain.CHILD)) {
             if (!getIntent().getBooleanExtra("childMonth", false)) {
                 bi.pfh0399.setChecked(true);
-                bi.pfh0399.setEnabled(false);
+//                bi.pfh0399.setEnabled(false);
             }
         }
 
@@ -109,6 +112,14 @@ public class SectionHActivity extends AppCompatActivity {
             }
         });
 
+        bi.pfh0199.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+                if (b) Clear.clearAllFields(bi.fldgrppfh99, false);
+                else Clear.clearAllFields(bi.fldgrppfh99, true);
+            }
+        });
+
     }
 
     public void BtnContinue() {
@@ -140,6 +151,7 @@ public class SectionHActivity extends AppCompatActivity {
     public void saveDraft() throws JSONException {
 
         JSONObject sH = new JSONObject();
+        sH.put(AppMain.formType + "h0199", bi.pfh0199.isChecked() ? "99" : "0");
         sH.put(AppMain.formType + "h01a", bi.pfh01a.getSelectedItem().toString());
         sH.put(AppMain.formType + "h0101", bi.pfh0101.getText().toString());
         sH.put(AppMain.formType + "h01b", bi.pfh01b.getSelectedItem().toString());
@@ -168,67 +180,70 @@ public class SectionHActivity extends AppCompatActivity {
 
     public boolean formValidation() {
 
-        if (!validatorClass.EmptySpinner(this, bi.pfh01a, getString(R.string.pfh01))) {
-            return false;
-        }
+        if (!bi.pfh0199.isChecked()) {
+            if (!validatorClass.EmptySpinner(this, bi.pfh01a, getString(R.string.pfh01))) {
+                return false;
+            }
 
-        if (!validatorClass.EmptyTextBox(this, bi.pfh0101, getString(R.string.pfh01a))) {
-            return false;
-        }
+            if (!validatorClass.EmptyTextBox(this, bi.pfh0101, getString(R.string.pfh01a))) {
+                return false;
+            }
 
-        if (!validatorClass.PatternTextBox(this, bi.pfh0101, getString(R.string.pfh01a), "^(\\d{3,3}\\.\\d{2,2})$", "XXX.XX")) {
-            return false;
-        }
-        if (!validatorClass.RangeTextBox(this, bi.pfh0101, 10d, 140d, getString(R.string.pfh01a), "height")) {
-            return false;
-        }
+            if (!validatorClass.PatternTextBox(this, bi.pfh0101, getString(R.string.pfh01a), "^(\\d{3,3}\\.\\d{2,2})$", "XXX.XX")) {
+                return false;
+            }
+            if (!validatorClass.RangeTextBox(this, bi.pfh0101, 10d, 140d, getString(R.string.pfh01a), "height")) {
+                return false;
+            }
 
-        if (!validatorClass.EmptySpinner(this, bi.pfh01b, getString(R.string.pfh01))) {
-            return false;
-        }
+            if (!validatorClass.EmptySpinner(this, bi.pfh01b, getString(R.string.pfh01))) {
+                return false;
+            }
 
-        if (!validatorClass.EmptyTextBox(this, bi.pfh0102, getString(R.string.pfh01a))) {
-            return false;
-        }
+            if (!validatorClass.EmptyTextBox(this, bi.pfh0102, getString(R.string.pfh01a))) {
+                return false;
+            }
 
-        if (!validatorClass.PatternTextBox(this, bi.pfh0102, getString(R.string.pfh01a), "^(\\d{3,3}\\.\\d{2,2})$", "XXX.XX")) {
-            return false;
-        }
+            if (!validatorClass.PatternTextBox(this, bi.pfh0102, getString(R.string.pfh01a), "^(\\d{3,3}\\.\\d{2,2})$", "XXX.XX")) {
+                return false;
+            }
 
-        if (!validatorClass.RangeTextBox(this, bi.pfh0102, 10d, 140d, getString(R.string.pfh01a), "height")) {
-            return false;
-        }
+            if (!validatorClass.RangeTextBox(this, bi.pfh0102, 10d, 140d, getString(R.string.pfh01a), "height")) {
+                return false;
+            }
 
-        if (!validatorClass.EmptySpinner(this, bi.pfh02a, getString(R.string.pfh02))) {
-            return false;
-        }
+            if (!validatorClass.EmptySpinner(this, bi.pfh02a, getString(R.string.pfh02))) {
+                return false;
+            }
 
-        if (!validatorClass.EmptyTextBox(this, bi.pfh0201, getString(R.string.pfh02a))) {
-            return false;
-        }
+            if (!validatorClass.EmptyTextBox(this, bi.pfh0201, getString(R.string.pfh02a))) {
+                return false;
+            }
 
-        if (!validatorClass.PatternTextBox(this, bi.pfh0201, getString(R.string.pfh02a), "^(\\d{2,2}\\.\\d{2,2})$", "XX.XX")) {
-            return false;
-        }
+            if (!validatorClass.PatternTextBox(this, bi.pfh0201, getString(R.string.pfh02a), "^(\\d{2,2}\\.\\d{2,2})$", "XX.XX")) {
+                return false;
+            }
 
-        if (!validatorClass.RangeTextBox(this, bi.pfh0201, 0.5d, 40d, getString(R.string.pfh02a), "weight")) {
-            return false;
-        }
+            if (!validatorClass.RangeTextBox(this, bi.pfh0201, 0.5d, 40d, getString(R.string.pfh02a), "weight")) {
+                return false;
+            }
 
-        if (!validatorClass.EmptySpinner(this, bi.pfh02b, getString(R.string.pfh02))) {
-            return false;
-        }
+            if (!validatorClass.EmptySpinner(this, bi.pfh02b, getString(R.string.pfh02))) {
+                return false;
+            }
 
-        if (!validatorClass.EmptyTextBox(this, bi.pfh0202, getString(R.string.pfh02a))) {
-            return false;
-        }
+            if (!validatorClass.EmptyTextBox(this, bi.pfh0202, getString(R.string.pfh02a))) {
+                return false;
+            }
 
-        if (!validatorClass.PatternTextBox(this, bi.pfh0202, getString(R.string.pfh02a), "^(\\d{2,2}\\.\\d{2,2})$", "XX.XX")) {
-            return false;
-        }
+            if (!validatorClass.PatternTextBox(this, bi.pfh0202, getString(R.string.pfh02a), "^(\\d{2,2}\\.\\d{2,2})$", "XX.XX")) {
+                return false;
+            }
 
-        if (!validatorClass.RangeTextBox(this, bi.pfh0202, 0.5d, 40d, getString(R.string.pfh02a), "weight")) {
-            return false;
+            if (!validatorClass.RangeTextBox(this, bi.pfh0202, 0.5d, 40d, getString(R.string.pfh02a), "weight")) {
+                return false;
+            }
+
         }
 
         if (!bi.pfh0399.isChecked()) {

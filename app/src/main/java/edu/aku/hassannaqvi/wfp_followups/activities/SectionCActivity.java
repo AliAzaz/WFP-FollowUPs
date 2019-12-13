@@ -7,7 +7,10 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.CompoundButton;
 import android.widget.Toast;
+
+import com.validatorcrawler.aliazaz.Clear;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -76,6 +79,14 @@ public class SectionCActivity extends AppCompatActivity {
             }
         });
 
+        bi.pfc0199.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+                if (b) Clear.clearAllFields(bi.fldgropfc0199, false);
+                else Clear.clearAllFields(bi.fldgropfc0199, true);
+            }
+        });
+
     }
 
     public void BtnContinue() {
@@ -101,6 +112,7 @@ public class SectionCActivity extends AppCompatActivity {
 
         JSONObject sC = new JSONObject();
 
+        sC.put("pfc0199", bi.pfc0199.isChecked() ? "99" : "0");
         sC.put("pfc01a", bi.pfc01a.getSelectedItem().toString());
         sC.put("pfc0101", bi.pfc0101.getText().toString());
         sC.put("pfc01b", bi.pfc01b.getSelectedItem().toString());
