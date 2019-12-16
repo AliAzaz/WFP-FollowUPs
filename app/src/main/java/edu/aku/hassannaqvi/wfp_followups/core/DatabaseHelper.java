@@ -983,8 +983,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 EnrolledTable.COLUMN_RESP_TYPE,
         };
 
-        String whereClause = EnrolledTable.COLUMN_STUDYID + " = ?";
-        String[] whereArgs = {studyID};
+        String whereClause = EnrolledTable.COLUMN_STUDYID + " = ? and " + EnrolledTable.COLUMN_RESP_TYPE + "=?";
+        String[] whereArgs = {studyID, "lm"};
         String groupBy = null;
         String having = null;
 
