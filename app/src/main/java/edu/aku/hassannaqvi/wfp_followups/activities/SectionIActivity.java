@@ -18,7 +18,7 @@ import edu.aku.hassannaqvi.wfp_followups.R;
 import edu.aku.hassannaqvi.wfp_followups.core.AppMain;
 import edu.aku.hassannaqvi.wfp_followups.core.DatabaseHelper;
 import edu.aku.hassannaqvi.wfp_followups.databinding.ActivitySectionIBinding;
-import edu.aku.hassannaqvi.wfp_followups.validation.ClearClass;
+import edu.aku.hassannaqvi.wfp_followups.validation.ClearClass02;
 import edu.aku.hassannaqvi.wfp_followups.validation.validatorClass;
 
 public class SectionIActivity extends AppCompatActivity {
@@ -91,7 +91,7 @@ public class SectionIActivity extends AppCompatActivity {
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
 
                 if (i != R.id.pfi01a) {
-                    ClearClass.ClearAllFields(bi.flgrppfia, null);
+                    ClearClass02.ClearAllFields(bi.flgrppfia, null);
                 }
             }
         });
@@ -101,7 +101,7 @@ public class SectionIActivity extends AppCompatActivity {
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
 
                 if (i != R.id.pfi03b) {
-                    ClearClass.ClearAllFields(bi.fldgrppfi04, null);
+                    ClearClass02.ClearAllFields(bi.fldgrppfi04, null);
                 }
             }
         });
@@ -111,7 +111,7 @@ public class SectionIActivity extends AppCompatActivity {
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
                 if (i != bi.pfi05a.getId()) {
                     bi.fldgrppfi06.setVisibility(View.GONE);
-                    ClearClass.ClearAllFields(bi.fldgrppfi06, null);
+                    ClearClass02.ClearAllFields(bi.fldgrppfi06, null);
                 } else {
                     bi.fldgrppfi06.setVisibility(View.VISIBLE);
                 }
@@ -123,9 +123,9 @@ public class SectionIActivity extends AppCompatActivity {
             public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
 
                 if (b) {
-                    ClearClass.ClearAllFields(bi.fldgrpppfi06a, false);
+                    ClearClass02.ClearAllFields(bi.fldgrpppfi06a, false);
                 } else {
-                    ClearClass.ClearAllFields(bi.fldgrpppfi06a, true);
+                    ClearClass02.ClearAllFields(bi.fldgrpppfi06a, true);
                 }
             }
         });
@@ -197,11 +197,11 @@ public class SectionIActivity extends AppCompatActivity {
                 for (int j = 0; j < answersArray.size(); j++) {
                     if (answersArray.get(j) == 2) {
                         bi.fldgrppfi12.setVisibility(View.GONE);
-                        ClearClass.ClearAllFields(bi.fldgrppfi12, false);
+                        ClearClass02.ClearAllFields(bi.fldgrppfi12, false);
 
                     } else {
                         bi.fldgrppfi12.setVisibility(View.VISIBLE);
-                        ClearClass.ClearAllFields(bi.fldgrppfi12, true);
+                        ClearClass02.ClearAllFields(bi.fldgrppfi12, true);
                     }
                 }
 
@@ -222,11 +222,11 @@ public class SectionIActivity extends AppCompatActivity {
 
                     if (answersArray.get(j) == 2) {
                         bi.fldgrppfi12.setVisibility(View.GONE);
-                        ClearClass.ClearAllFields(bi.fldgrppfi12, false);
+                        ClearClass02.ClearAllFields(bi.fldgrppfi12, false);
 
                     } else {
                         bi.fldgrppfi12.setVisibility(View.VISIBLE);
-                        ClearClass.ClearAllFields(bi.fldgrppfi12, true);
+                        ClearClass02.ClearAllFields(bi.fldgrppfi12, true);
                     }
                 }
 
@@ -247,11 +247,11 @@ public class SectionIActivity extends AppCompatActivity {
 
                     if (answersArray.get(j) == 2) {
                         bi.fldgrppfi12.setVisibility(View.GONE);
-                        ClearClass.ClearAllFields(bi.fldgrppfi12, false);
+                        ClearClass02.ClearAllFields(bi.fldgrppfi12, false);
 
                     } else {
                         bi.fldgrppfi12.setVisibility(View.VISIBLE);
-                        ClearClass.ClearAllFields(bi.fldgrppfi12, true);
+                        ClearClass02.ClearAllFields(bi.fldgrppfi12, true);
                     }
                 }
 
@@ -272,11 +272,11 @@ public class SectionIActivity extends AppCompatActivity {
 
                     if (answersArray.get(j) == 2) {
                         bi.fldgrppfi12.setVisibility(View.GONE);
-                        ClearClass.ClearAllFields(bi.fldgrppfi12, false);
+                        ClearClass02.ClearAllFields(bi.fldgrppfi12, false);
 
                     } else {
                         bi.fldgrppfi12.setVisibility(View.VISIBLE);
-                        ClearClass.ClearAllFields(bi.fldgrppfi12, true);
+                        ClearClass02.ClearAllFields(bi.fldgrppfi12, true);
                     }
                 }
 
@@ -297,11 +297,11 @@ public class SectionIActivity extends AppCompatActivity {
 
                     if (answersArray.get(j) == 2) {
                         bi.fldgrppfi12.setVisibility(View.GONE);
-                        ClearClass.ClearAllFields(bi.fldgrppfi12, false);
+                        ClearClass02.ClearAllFields(bi.fldgrppfi12, false);
 
                     } else {
                         bi.fldgrppfi12.setVisibility(View.VISIBLE);
-                        ClearClass.ClearAllFields(bi.fldgrppfi12, true);
+                        ClearClass02.ClearAllFields(bi.fldgrppfi12, true);
                     }
                 }
 
@@ -322,11 +322,11 @@ public class SectionIActivity extends AppCompatActivity {
 
                     if (answersArray.get(j) == 2) {
                         bi.fldgrppfi12.setVisibility(View.GONE);
-                        ClearClass.ClearAllFields(bi.fldgrppfi12, false);
+                        ClearClass02.ClearAllFields(bi.fldgrppfi12, false);
 
                     } else {
                         bi.fldgrppfi12.setVisibility(View.VISIBLE);
-                        ClearClass.ClearAllFields(bi.fldgrppfi12, true);
+                        ClearClass02.ClearAllFields(bi.fldgrppfi12, true);
                     }
                 }
             }
@@ -346,11 +346,11 @@ public class SectionIActivity extends AppCompatActivity {
 
                     if (answersArray.get(j) == 2) {
                         bi.fldgrppfi12.setVisibility(View.GONE);
-                        ClearClass.ClearAllFields(bi.fldgrppfi12, false);
+                        ClearClass02.ClearAllFields(bi.fldgrppfi12, false);
 
                     } else {
                         bi.fldgrppfi12.setVisibility(View.VISIBLE);
-                        ClearClass.ClearAllFields(bi.fldgrppfi12, true);
+                        ClearClass02.ClearAllFields(bi.fldgrppfi12, true);
                     }
                 }
 
@@ -371,11 +371,11 @@ public class SectionIActivity extends AppCompatActivity {
 
                     if (answersArray.get(j) == 2) {
                         bi.fldgrppfi12.setVisibility(View.GONE);
-                        ClearClass.ClearAllFields(bi.fldgrppfi12, false);
+                        ClearClass02.ClearAllFields(bi.fldgrppfi12, false);
 
                     } else {
                         bi.fldgrppfi12.setVisibility(View.VISIBLE);
-                        ClearClass.ClearAllFields(bi.fldgrppfi12, true);
+                        ClearClass02.ClearAllFields(bi.fldgrppfi12, true);
                     }
                 }
 
@@ -396,11 +396,11 @@ public class SectionIActivity extends AppCompatActivity {
 
                     if (answersArray.get(j) == 2) {
                         bi.fldgrppfi12.setVisibility(View.GONE);
-                        ClearClass.ClearAllFields(bi.fldgrppfi12, false);
+                        ClearClass02.ClearAllFields(bi.fldgrppfi12, false);
 
                     } else {
                         bi.fldgrppfi12.setVisibility(View.VISIBLE);
-                        ClearClass.ClearAllFields(bi.fldgrppfi12, true);
+                        ClearClass02.ClearAllFields(bi.fldgrppfi12, true);
                     }
                 }
 
@@ -421,11 +421,11 @@ public class SectionIActivity extends AppCompatActivity {
 
                     if (answersArray.get(j) == 2) {
                         bi.fldgrppfi12.setVisibility(View.GONE);
-                        ClearClass.ClearAllFields(bi.fldgrppfi12, false);
+                        ClearClass02.ClearAllFields(bi.fldgrppfi12, false);
 
                     } else {
                         bi.fldgrppfi12.setVisibility(View.VISIBLE);
-                        ClearClass.ClearAllFields(bi.fldgrppfi12, true);
+                        ClearClass02.ClearAllFields(bi.fldgrppfi12, true);
                     }
                 }
 
@@ -446,11 +446,11 @@ public class SectionIActivity extends AppCompatActivity {
 
                     if (answersArray.get(j) == 2) {
                         bi.fldgrppfi12.setVisibility(View.GONE);
-                        ClearClass.ClearAllFields(bi.fldgrppfi12, false);
+                        ClearClass02.ClearAllFields(bi.fldgrppfi12, false);
 
                     } else {
                         bi.fldgrppfi12.setVisibility(View.VISIBLE);
-                        ClearClass.ClearAllFields(bi.fldgrppfi12, true);
+                        ClearClass02.ClearAllFields(bi.fldgrppfi12, true);
                     }
                 }
 
@@ -471,11 +471,11 @@ public class SectionIActivity extends AppCompatActivity {
 
                     if (answersArray.get(j) == 2) {
                         bi.fldgrppfi12.setVisibility(View.GONE);
-                        ClearClass.ClearAllFields(bi.fldgrppfi12, false);
+                        ClearClass02.ClearAllFields(bi.fldgrppfi12, false);
 
                     } else {
                         bi.fldgrppfi12.setVisibility(View.VISIBLE);
-                        ClearClass.ClearAllFields(bi.fldgrppfi12, true);
+                        ClearClass02.ClearAllFields(bi.fldgrppfi12, true);
                     }
                 }
 
@@ -496,11 +496,11 @@ public class SectionIActivity extends AppCompatActivity {
 
                     if (answersArray.get(j) == 2) {
                         bi.fldgrppfi12.setVisibility(View.GONE);
-                        ClearClass.ClearAllFields(bi.fldgrppfi12, false);
+                        ClearClass02.ClearAllFields(bi.fldgrppfi12, false);
 
                     } else {
                         bi.fldgrppfi12.setVisibility(View.VISIBLE);
-                        ClearClass.ClearAllFields(bi.fldgrppfi12, true);
+                        ClearClass02.ClearAllFields(bi.fldgrppfi12, true);
                     }
                 }
 
@@ -521,11 +521,11 @@ public class SectionIActivity extends AppCompatActivity {
 
                     if (answersArray.get(j) == 2) {
                         bi.fldgrppfi12.setVisibility(View.GONE);
-                        ClearClass.ClearAllFields(bi.fldgrppfi12, false);
+                        ClearClass02.ClearAllFields(bi.fldgrppfi12, false);
 
                     } else {
                         bi.fldgrppfi12.setVisibility(View.VISIBLE);
-                        ClearClass.ClearAllFields(bi.fldgrppfi12, true);
+                        ClearClass02.ClearAllFields(bi.fldgrppfi12, true);
                     }
                 }
 
@@ -546,11 +546,11 @@ public class SectionIActivity extends AppCompatActivity {
 
                     if (answersArray.get(j) == 2) {
                         bi.fldgrppfi12.setVisibility(View.GONE);
-                        ClearClass.ClearAllFields(bi.fldgrppfi12, false);
+                        ClearClass02.ClearAllFields(bi.fldgrppfi12, false);
 
                     } else {
                         bi.fldgrppfi12.setVisibility(View.VISIBLE);
-                        ClearClass.ClearAllFields(bi.fldgrppfi12, true);
+                        ClearClass02.ClearAllFields(bi.fldgrppfi12, true);
                     }
                 }
 
@@ -571,11 +571,11 @@ public class SectionIActivity extends AppCompatActivity {
 
                     if (answersArray.get(j) == 2) {
                         bi.fldgrppfi12.setVisibility(View.GONE);
-                        ClearClass.ClearAllFields(bi.fldgrppfi12, false);
+                        ClearClass02.ClearAllFields(bi.fldgrppfi12, false);
 
                     } else {
                         bi.fldgrppfi12.setVisibility(View.VISIBLE);
-                        ClearClass.ClearAllFields(bi.fldgrppfi12, true);
+                        ClearClass02.ClearAllFields(bi.fldgrppfi12, true);
                     }
                 }
 
@@ -596,10 +596,10 @@ public class SectionIActivity extends AppCompatActivity {
 
                     if (answersArray.get(j) == 2) {
                         bi.fldgrppfi12.setVisibility(View.GONE);
-                        ClearClass.ClearAllFields(bi.fldgrppfi12, false);
+                        ClearClass02.ClearAllFields(bi.fldgrppfi12, false);
                     } else {
                         bi.fldgrppfi12.setVisibility(View.VISIBLE);
-                        ClearClass.ClearAllFields(bi.fldgrppfi12, true);
+                        ClearClass02.ClearAllFields(bi.fldgrppfi12, true);
                     }
                 }
 
@@ -612,7 +612,7 @@ public class SectionIActivity extends AppCompatActivity {
 
                 if (i != R.id.pfi13a) {
                     bi.fldgrppfi14.setVisibility(View.GONE);
-                    ClearClass.ClearAllFields(bi.fldgrppfi14, true);
+                    ClearClass02.ClearAllFields(bi.fldgrppfi14, true);
 
                 } else {
                     if (!flag) {
@@ -629,7 +629,7 @@ public class SectionIActivity extends AppCompatActivity {
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
 
                 if (i != R.id.pfi15a) {
-                    ClearClass.ClearAllFields(bi.flgrppfib, true);
+                    ClearClass02.ClearAllFields(bi.flgrppfib, true);
                 }
             }
         });
