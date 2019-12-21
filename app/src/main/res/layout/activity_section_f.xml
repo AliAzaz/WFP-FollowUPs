@@ -25,7 +25,7 @@
             android:orientation="vertical">
 
             <!--Q1-->
-            <android.support.v7.widget.CardView
+            <androidx.cardview.widget.CardView
                 android:id="@+id/fldgrppff01"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -68,10 +68,10 @@
                             android:text="@string/no" />
                     </RadioGroup>
                 </LinearLayout>
-            </android.support.v7.widget.CardView>
+            </androidx.cardview.widget.CardView>
 
             <!--Q02-->
-            <android.support.v7.widget.CardView
+            <androidx.cardview.widget.CardView
                 android:id="@+id/fldgrppff02"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -197,10 +197,10 @@
 
 
                 </LinearLayout>
-            </android.support.v7.widget.CardView>
+            </androidx.cardview.widget.CardView>
 
             <!--Q03-->
-            <android.support.v7.widget.CardView
+            <androidx.cardview.widget.CardView
                 android:id="@+id/fldgrppff03"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -273,10 +273,10 @@
 
 
                 </LinearLayout>
-            </android.support.v7.widget.CardView>
+            </androidx.cardview.widget.CardView>
 
             <!--Q04-->
-            <android.support.v7.widget.CardView
+            <androidx.cardview.widget.CardView
                 android:id="@+id/fldgrppff04"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -355,10 +355,10 @@
                         android:text='@{pff0496.checked? pff0496x.getText().toString() : "" }'
                         android:visibility='@{pff0496.checked? View.VISIBLE : View.GONE}' />
                 </LinearLayout>
-            </android.support.v7.widget.CardView>
+            </androidx.cardview.widget.CardView>
 
             <!--Q05-->
-            <android.support.v7.widget.CardView
+            <androidx.cardview.widget.CardView
                 android:id="@+id/fldgrppff05"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -401,10 +401,10 @@
                             android:text="@string/no" />
                     </RadioGroup>
                 </LinearLayout>
-            </android.support.v7.widget.CardView>
+            </androidx.cardview.widget.CardView>
 
             <!--Q06-->
-            <android.support.v7.widget.CardView
+            <androidx.cardview.widget.CardView
                 android:id="@+id/fldgrppff06"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -447,10 +447,10 @@
                             android:text="@string/no" />
                     </RadioGroup>
                 </LinearLayout>
-            </android.support.v7.widget.CardView>
+            </androidx.cardview.widget.CardView>
 
             <!--Q07-->
-            <android.support.v7.widget.CardView
+            <androidx.cardview.widget.CardView
                 android:id="@+id/fldgrppff07"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -515,10 +515,10 @@
 
 
                 </LinearLayout>
-            </android.support.v7.widget.CardView>
+            </androidx.cardview.widget.CardView>
 
             <!--Q08-->
-            <android.support.v7.widget.CardView
+            <androidx.cardview.widget.CardView
                 android:id="@+id/fldgrppff08"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -561,10 +561,10 @@
                             android:text="@string/no" />
                     </RadioGroup>
                 </LinearLayout>
-            </android.support.v7.widget.CardView>
+            </androidx.cardview.widget.CardView>
 
             <!--Q09-->
-            <android.support.v7.widget.CardView
+            <androidx.cardview.widget.CardView
                 android:id="@+id/fldgrppff09"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -1068,11 +1068,11 @@
                         android:layout_marginBottom="1dp"
                         android:text="@string/pff09o" />
                 </LinearLayout>
-            </android.support.v7.widget.CardView>
+            </androidx.cardview.widget.CardView>
 
 
             <!--Q10-->
-            <android.support.v7.widget.CardView
+            <androidx.cardview.widget.CardView
                 android:id="@+id/fldgrppff10"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -1115,10 +1115,10 @@
                             android:text="@string/no" />
                     </RadioGroup>
                 </LinearLayout>
-            </android.support.v7.widget.CardView>
+            </androidx.cardview.widget.CardView>
 
             <!--Q11-->
-            <android.support.v7.widget.CardView
+            <androidx.cardview.widget.CardView
                 android:id="@+id/fldgrppff11"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -1243,7 +1243,7 @@
                         android:visibility='@{pff1196.checked? View.VISIBLE : View.GONE}' />
 
                 </LinearLayout>
-            </android.support.v7.widget.CardView>
+            </androidx.cardview.widget.CardView>
 
 
             <!--===================== Ending Button===================-->

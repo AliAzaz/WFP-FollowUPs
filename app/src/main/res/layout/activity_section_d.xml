@@ -24,7 +24,7 @@
             android:orientation="vertical">
 
             <!--Q1-->
-            <android.support.v7.widget.CardView
+            <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
@@ -90,7 +90,7 @@
 
                 </LinearLayout>
 
-            </android.support.v7.widget.CardView>
+            </androidx.cardview.widget.CardView>
 
             <!--Q2-->
             <LinearLayout
@@ -100,7 +100,7 @@
                 android:orientation="vertical"
                 android:visibility="@{pfd01a.checked ? View.VISIBLE : View.GONE}">
 
-                <android.support.v7.widget.CardView
+                <androidx.cardview.widget.CardView
                     android:id="@+id/fldgrppd02"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -132,10 +132,10 @@
                             android:maxLength="2" />
 
                     </LinearLayout>
-                </android.support.v7.widget.CardView>
+                </androidx.cardview.widget.CardView>
 
                 <!--Q3-->
-                <android.support.v7.widget.CardView
+                <androidx.cardview.widget.CardView
                     android:id="@+id/fldgrppd03"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -167,10 +167,10 @@
                             android:maxLength="2" />
 
                     </LinearLayout>
-                </android.support.v7.widget.CardView>
+                </androidx.cardview.widget.CardView>
 
                 <!--Q4-->
-                <android.support.v7.widget.CardView
+                <androidx.cardview.widget.CardView
                     android:id="@+id/fldgrppd04"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -211,10 +211,10 @@
                             android:inputType="number"
                             android:maxLength="2" />
                     </LinearLayout>
-                </android.support.v7.widget.CardView>
+                </androidx.cardview.widget.CardView>
 
                 <!--Q5-->
-                <android.support.v7.widget.CardView
+                <androidx.cardview.widget.CardView
                     android:id="@+id/fldgrppd05"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -255,10 +255,10 @@
                             android:inputType="number"
                             android:maxLength="2" />
                     </LinearLayout>
-                </android.support.v7.widget.CardView>
+                </androidx.cardview.widget.CardView>
 
                 <!--Q6-->
-                <android.support.v7.widget.CardView
+                <androidx.cardview.widget.CardView
                     android:id="@+id/fldgrppd06"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -306,10 +306,10 @@
 
                     </LinearLayout>
 
-                </android.support.v7.widget.CardView>
+                </androidx.cardview.widget.CardView>
 
                 <!--Q7-->
-                <android.support.v7.widget.CardView
+                <androidx.cardview.widget.CardView
                     android:id="@+id/fldgrppd07"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -379,10 +379,10 @@
                             android:visibility='@{pfd0796.checked? View.VISIBLE : View.GONE}' />
 
                     </LinearLayout>
-                </android.support.v7.widget.CardView>
+                </androidx.cardview.widget.CardView>
 
                 <!--Q8-->
-                <android.support.v7.widget.CardView
+                <androidx.cardview.widget.CardView
                     android:id="@+id/fldgrppd08"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -430,10 +430,10 @@
 
                     </LinearLayout>
 
-                </android.support.v7.widget.CardView>
+                </androidx.cardview.widget.CardView>
 
                 <!--Q9-->
-                <android.support.v7.widget.CardView
+                <androidx.cardview.widget.CardView
                     android:id="@+id/fldgrppd09"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -497,10 +497,10 @@
                             android:visibility='@{pfd0996.checked? View.VISIBLE : View.GONE}' />
 
                     </LinearLayout>
-                </android.support.v7.widget.CardView>
+                </androidx.cardview.widget.CardView>
 
                 <!--Q10-->
-                <android.support.v7.widget.CardView
+                <androidx.cardview.widget.CardView
                     android:id="@+id/fldgrppd10"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -532,10 +532,10 @@
                             android:maxLength="2" />
 
                     </LinearLayout>
-                </android.support.v7.widget.CardView>
+                </androidx.cardview.widget.CardView>
 
                 <!--Q11-->
-                <android.support.v7.widget.CardView
+                <androidx.cardview.widget.CardView
                     android:id="@+id/fldgrppd11"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -604,12 +604,12 @@
 
 
                     </LinearLayout>
-                </android.support.v7.widget.CardView>
+                </androidx.cardview.widget.CardView>
 
             </LinearLayout>
 
             <!--Q12-->
-            <android.support.v7.widget.CardView
+            <androidx.cardview.widget.CardView
                 android:id="@+id/fldgrppd12"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -699,7 +699,7 @@
                         android:visibility='@{pfd1296.checked? View.VISIBLE : View.GONE}' />
 
                 </LinearLayout>
-            </android.support.v7.widget.CardView>
+            </androidx.cardview.widget.CardView>
 
 
             <!--  = = = = =  END OF FORM FIELDS  = = = = = -->

@@ -61,7 +61,6 @@ import edu.aku.hassannaqvi.wfp_followups.core.AppMain;
 import edu.aku.hassannaqvi.wfp_followups.core.DatabaseHelper;
 import edu.aku.hassannaqvi.wfp_followups.getclasses.GetAllData;
 
-
 /**
  * A login screen that offers login via email/password.
  */
@@ -150,7 +149,7 @@ public class LoginActivity extends Activity implements LoaderCallbacks<Cursor> {
                     .getPackageManager()
                     .getPackageInfo("edu.aku.hassannaqvi.wfp_followups", 0)
                     .versionName;
-            txtinstalldate.setText("Ver. " + AppMain.versionName + "." + String.valueOf(AppMain.versionCode) + " \r\n( Last Updated: " + new SimpleDateFormat("dd MMM. yyyy").format(new Date(AppMain.installedOn)) + " )");
+            txtinstalldate.setText("Ver. " + AppMain.versionName + "." + AppMain.versionCode + " \r\n( Last Updated: " + new SimpleDateFormat("dd MMM. yyyy").format(new Date(AppMain.installedOn)) + " )");
         } catch (PackageManager.NameNotFoundException e) {
             e.printStackTrace();
         }

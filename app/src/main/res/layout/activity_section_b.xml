@@ -24,7 +24,7 @@
             android:orientation="vertical">
 
             <!--Q1-->
-            <android.support.v7.widget.CardView
+            <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
@@ -110,7 +110,7 @@
 
                 </LinearLayout>
 
-            </android.support.v7.widget.CardView>
+            </androidx.cardview.widget.CardView>
 
             <!--Q2-->
             <LinearLayout
@@ -118,7 +118,7 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
 
-                <android.support.v7.widget.CardView
+                <androidx.cardview.widget.CardView
                     android:id="@+id/fldgrppfba"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -216,7 +216,7 @@
 
                     </LinearLayout>
 
-                </android.support.v7.widget.CardView>
+                </androidx.cardview.widget.CardView>
 
                 <!--Q3-->
                 <LinearLayout
@@ -224,7 +224,7 @@
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
 
-                    <android.support.v7.widget.CardView
+                    <androidx.cardview.widget.CardView
                         android:id="@+id/fldgrppfbb"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -258,10 +258,10 @@
 
                         </LinearLayout>
 
-                    </android.support.v7.widget.CardView>
+                    </androidx.cardview.widget.CardView>
 
                     <!--04-->
-                    <android.support.v7.widget.CardView
+                    <androidx.cardview.widget.CardView
                         android:id="@+id/fldgrppfb04"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -298,10 +298,10 @@
                                 app:dateFormat="dd-MM-yyyy" />
                         </LinearLayout>
 
-                    </android.support.v7.widget.CardView>
+                    </androidx.cardview.widget.CardView>
 
                     <!--05-->
-                    <android.support.v7.widget.CardView
+                    <androidx.cardview.widget.CardView
                         android:id="@+id/fldgrppfb05"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -338,7 +338,7 @@
                                 app:maxDate="CR_DATE" />
                         </LinearLayout>
 
-                    </android.support.v7.widget.CardView>
+                    </androidx.cardview.widget.CardView>
 
                 </LinearLayout>
             </LinearLayout>

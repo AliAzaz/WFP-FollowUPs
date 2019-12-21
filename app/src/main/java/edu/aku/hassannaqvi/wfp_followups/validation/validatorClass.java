@@ -2,7 +2,6 @@ package edu.aku.hassannaqvi.wfp_followups.validation;
 
 import android.content.Context;
 import android.graphics.Color;
-import android.support.v7.widget.CardView;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.MotionEvent;
@@ -17,6 +16,8 @@ import android.widget.ScrollView;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import androidx.cardview.widget.CardView;
 
 /**
  * Created by ali.azaz on 12/04/17.

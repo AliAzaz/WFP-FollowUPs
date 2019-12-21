@@ -1,15 +1,16 @@
 package edu.aku.hassannaqvi.wfp_followups.activities;
 
 import android.content.Intent;
-import android.databinding.DataBindingUtil;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.View;
 import android.widget.CompoundButton;
 import android.widget.RadioGroup;
 import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.databinding.DataBindingUtil;
 
 import org.json.JSONException;
 import org.json.JSONObject;
