@@ -99,7 +99,7 @@ public class InfoActivity extends Activity {
         if (!bi.studyID.getText().toString().isEmpty()) {
             enrolledParticipant = db.getEnrolledByStudyID(bi.studyID.getText().toString(), cond_Flag);
 
-            if (enrolledParticipant != null && (cond_Flag || Integer.valueOf(enrolledParticipant.getFupround()) <= 5)) {
+            if (enrolledParticipant != null && (cond_Flag || Integer.valueOf(enrolledParticipant.getFupround()) <= 6)) {
 
                 Long days = AppMain.getDaysBWDates(new Date(), AppMain.stringToDate(enrolledParticipant.getFupdt()));
 
