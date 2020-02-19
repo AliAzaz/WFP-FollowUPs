@@ -22,9 +22,9 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="8dp"
             android:text="Main Menu"
-            android:textColor="@color/red"
             android:textAlignment="center"
             android:textAllCaps="true"
+            android:textColor="@color/red"
             android:textStyle="bold" />
 
         <TextView
@@ -120,7 +120,7 @@
             android:layout_marginTop="16dp"
             android:layout_marginBottom="8dp"
             android:onClick="openForm"
-            android:text="بچے کا فالواپ"
+            android:text="24-6 مہینے کِے بچے کا فالواپ"
             android:textSize="28sp" />
 
         <LinearLayout

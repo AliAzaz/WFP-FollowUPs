@@ -17,6 +17,7 @@
         android:padding="5dp">
 
         <LinearLayout
+            android:id="@+id/fldGrpSectionB"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:animateLayoutChanges="true"
@@ -246,7 +247,7 @@
                                 android:text="@string/pfb03"
                                 android:textColor="@color/white" />
 
-                            <EditText
+                            <com.edittextpicker.aliazaz.EditTextPicker
                                 android:id="@+id/pfb03"
                                 style="@style/textInput"
                                 android:layout_width="match_parent"
@@ -254,7 +255,10 @@
                                 android:hint="@string/pfb03"
                                 android:inputType="number"
                                 android:maxLength="2"
-                                android:text='@{pfb02a.checked ? pfb03.getText().toString() : ""}' />
+                                android:text='@{pfb02a.checked ? pfb03.getText().toString() : ""}'
+                                app:maxValue="10"
+                                app:minValue="1"
+                                app:type="range" />
 
                         </LinearLayout>
 
@@ -306,8 +310,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="10dp"
-                        android:elevation="10dp"
-                        android:visibility="@{pfb02d.checked ? View.VISIBLE : View.GONE}">
+                        android:elevation="10dp">
 
                         <LinearLayout
                             android:layout_width="match_parent"
@@ -332,10 +335,44 @@
                                 android:layout_marginBottom="2dp"
                                 android:focusable="false"
                                 android:hint="DD/MM/YYYY"
-                                android:text='@{pfb02d.checked ? pfb05.getText().toString() : ""}'
                                 android:textColor="@android:color/black"
                                 app:dateFormat="dd-MM-yyyy"
                                 app:maxDate="CR_DATE" />
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <!--06-->
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/fldgrppfb06"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:elevation="10dp"
+                        android:visibility="gone">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:background="@color/colorPrimaryDark"
+                                android:text="@string/pfb06"
+                                android:textColor="@color/white" />
+
+
+                            <EditText
+                                android:id="@+id/pfb06"
+                                style="@style/textInput"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:digits="abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+                                android:hint="@string/pfb06" />
+
                         </LinearLayout>
 
                     </androidx.cardview.widget.CardView>

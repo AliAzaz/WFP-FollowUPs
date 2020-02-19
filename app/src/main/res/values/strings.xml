@@ -105,8 +105,9 @@
     <string name="pfb02h"> جڑوں بچوں کی پیدائش (2 زندہ بچے) </string>
     <string name="pfb03"> موجودہ حمل کا مہینہ؟ </string>
     <string name="pfb03a"> مہینے </string>
-    <string name="pfb04"> زندہ بچے کی تاریخ پیدائش </string>
-    <string name="pfb05"> مردہ بچے کی تاریخ پیدائش </string>
+    <string name="pfb04">  تاریخ پیدائش </string>
+    <string name="pfb05">تاریخ وفات </string>
+    <string name="pfb06">وفات کی وجوہات</string>
     <string name="pfcheading"> حاملہ خاتون  / دودھ پلانے والی ماں: دوران حمل اور ابتدائی 6 ماہ کے دوران دودھ پلانے والی ماؤں کے لیے قابل اطلاق ہے </string>
     <string name="pfc01"> وزن کی جانچ </string>
     <string name="pfc01a"> کلو گرام </string>

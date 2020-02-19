@@ -9,6 +9,8 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
 
+import com.validatorcrawler.aliazaz.Validator;
+
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -94,10 +96,29 @@ public class SectionBActivity extends AppCompatActivity {
                 }
 
                 if (i == bi.pfb02e.getId()) {
-                    if (AppMain.currentPrg)
+                    if (AppMain.currentPrg) {
                         bi.fldgrppfb04.setVisibility(View.VISIBLE);
-                    else
+                        bi.fldgrppfb05.setVisibility(View.GONE);
+                    } else {
                         bi.fldgrppfb04.setVisibility(View.GONE);
+                    }
+                }
+
+                if (i == bi.pfb02d.getId()) {
+                    bi.fldgrppfb05.setVisibility(View.VISIBLE);
+                    bi.fldgrppfb04.setVisibility(View.GONE);
+                } else {
+                    bi.fldgrppfb05.setVisibility(View.GONE);
+                    bi.pfb05.setText(null);
+                }
+
+                if (i == bi.pfb02f.getId()) {
+                    bi.fldgrppfb06.setVisibility(View.VISIBLE);
+                    bi.fldgrppfb04.setVisibility(View.GONE);
+                    bi.fldgrppfb05.setVisibility(View.VISIBLE);
+                } else {
+                    bi.fldgrppfb06.setVisibility(View.GONE);
+                    bi.pfb06.setText(null);
                 }
             }
         });
@@ -134,6 +155,7 @@ public class SectionBActivity extends AppCompatActivity {
         sB.put("pfb03", bi.pfb03.getText().toString());
         sB.put("pfb04", bi.pfb04.getText().toString());
         sB.put("pfb05", bi.pfb05.getText().toString());
+        sB.put("pfb06", bi.pfb06.getText().toString());
 
         currentlyPR = bi.pfb02a.isChecked() ? 1 : bi.pfb02b.isChecked() ? 2 : bi.pfb02c.isChecked() ? 3 : bi.pfb02d.isChecked() ? 4 : bi.pfb02e.isChecked() ? 5 : bi.pfb02f.isChecked() ? 6 : 0;
 
@@ -158,7 +180,8 @@ public class SectionBActivity extends AppCompatActivity {
 
     public boolean formValidation() {
 
-        if (!validatorClass.EmptyRadioButton(this, bi.pfb01, bi.pfb01g, getString(R.string.pfb01))) {
+
+       /* if (!validatorClass.EmptyRadioButton(this, bi.pfb01, bi.pfb01g, getString(R.string.pfb01))) {
             return false;
         }
 
@@ -181,9 +204,9 @@ public class SectionBActivity extends AppCompatActivity {
                     return validatorClass.EmptyTextBox(this, bi.pfb04, getString(R.string.pfb04));
             }
 
-        }
+        }*/
 
-        return true;
+        return Validator.emptyCheckingContainer(this, bi.fldGrpSectionB);
     }
 
     public void BtnEnd() {
