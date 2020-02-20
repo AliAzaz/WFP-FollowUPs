@@ -10,6 +10,8 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
 
+import com.validatorcrawler.aliazaz.Validator;
+
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -769,6 +771,7 @@ public class SectionIActivity extends AppCompatActivity {
     }
 
     private boolean formValidate() {
+/*
 
         if (AppMain.currentPrg) {
 
@@ -973,9 +976,10 @@ public class SectionIActivity extends AppCompatActivity {
             }
             return validatorClass.EmptyRadioButton(this, bi.pfi18, bi.pfi18a, getString(R.string.pfi18));
         }
+*/
 
 
-        return true;
+        return Validator.emptyCheckingContainer(this, bi.fldGrpSectionI);
     }
 
     public void BtnEnd() {

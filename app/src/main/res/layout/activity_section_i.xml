@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:android="http://schemas.android.com/apk/res/android">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <data>
 
@@ -15,6 +16,7 @@
         android:layout_height="wrap_content">
 
         <LinearLayout
+            android:id="@+id/fldGrpSectionI"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
@@ -134,7 +136,10 @@
                                     android:layout_weight="1"
                                     android:text="@string/hours" />
 
-                                <EditText
+                                <com.edittextpicker.aliazaz.EditTextPicker
+                                    app:minValue="1"
+                                    app:maxValue="23"
+                                    app:type="range"
                                     android:id="@+id/pfi02hx"
                                     style="@style/textInput"
                                     android:layout_width="match_parent"
@@ -152,7 +157,10 @@
                                     android:layout_weight="1"
                                     android:text="@string/day" />
 
-                                <EditText
+                                <com.edittextpicker.aliazaz.EditTextPicker
+                                    app:minValue="1"
+                                    app:maxValue="60"
+                                    app:type="range"
                                     android:id="@+id/pfi02dx"
                                     style="@style/textInput"
                                     android:layout_width="match_parent"
@@ -837,7 +845,10 @@
                                         android:layout_weight="1"
                                         android:text="@string/yes" />
 
-                                    <EditText
+                                    <com.edittextpicker.aliazaz.EditTextPicker
+                                        app:minValue="1"
+                                        app:maxValue="15"
+                                        app:type="range"
                                         android:id="@+id/pfi10bx"
                                         style="@style/textInput"
                                         android:layout_width="match_parent"
@@ -905,7 +916,10 @@
                                         android:text="@string/yes" />
 
 
-                                    <EditText
+                                    <com.edittextpicker.aliazaz.EditTextPicker
+                                        app:minValue="1"
+                                        app:maxValue="15"
+                                        app:type="range"
                                         android:id="@+id/pfi10c01x"
                                         style="@style/textInput"
                                         android:layout_width="match_parent"
@@ -1083,7 +1097,10 @@
                                         android:layout_weight="1"
                                         android:text="@string/yes" />
 
-                                    <EditText
+                                    <com.edittextpicker.aliazaz.EditTextPicker
+                                        app:minValue="1"
+                                        app:maxValue="15"
+                                        app:type="range"
                                         android:id="@+id/pfi10f01x"
                                         style="@style/textInput"
                                         android:layout_width="match_parent"
