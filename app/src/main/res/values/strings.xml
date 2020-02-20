@@ -87,6 +87,9 @@
     <string name="pfa06">زبانی رضامندی </string>
     <string name="pfbheading"> حاملہ خاتون  / دودھ پلانے والی ماں/بچہ کی موجودہ حیثیت </string>
     <string name="pfb01"> کیا حاملہ خاتون یا دودھ پلانے والی ماں انٹرویو کے لئے دستیاب ہے؟ </string>
+    <string name="pfb0101">اگر انکا کیا تو انکار کی وجہ کیا تھی؟</string>
+    <string name="pfb0102">دودھ پلانے ماں کے وفات کی تاریخ</string>
+    <string name="pfb0103">دودھ پلانے ماں کے وفات کی وجوہات</string>
     <string name="pfb01a"> موجود ہے انٹرویو جاری رکھیں </string>
     <string name="pfb01b"> وقتی طور پر موجود نہیں </string>
     <string name="pfb01c"> دورے کے دوران گھر بندتھا </string>
@@ -112,7 +115,7 @@
     <string name="pfc01"> وزن کی جانچ </string>
     <string name="pfc01a"> کلو گرام </string>
     <string name="pfc02"> خون کی مقدار کا نتیجہ </string>
-    <string name="pfc02sub"> 9 ماہ کی حاملہ خاتون کے لئے </string>
+    <string name="pfc02sub">صرف9 ماہ کے حمل کے پورے ہونے پر</string>
     <string name="pfdheading"> حاملہ خاتون  / دودھ پلانے والی ماں: دوران حمل اور ابتدائی 6 ماہ کے دوران دودھ پلانے والی ماؤں کے لیے قابل اطلاق ہے </string>
     <string name="pfd01"> کیا آپ کوگزشتہ مہینے کے دوران مامتا کے ساشے ملے تھے؟ </string>
     <string name="pfd01c"> لینے سے انکار کردیا </string>
@@ -126,7 +129,7 @@
     <string name="pfd05"> کیا آپ مجھے استعمال شدہ اور غیر استعمال شدہ ساشے کے پیکٹ دیکھا سکتے ہیں؟ (اگر موجود نہیں تو (00) لکھیں </string>
     <string name="pfd05a"> استعمال شدہ پیکٹ دیکھائیں </string>
     <string name="pfd05b"> بغیر استعمال شدہ پیکٹ دیکھائیں </string>
-    <string name="pfd06"> کیا آپ نے گزشتہ ایک ماہ میں مامتا کے کھانے کی وجہ سے کوئی منفی اثرات دیکھے تھے؟ </string>
+    <string name="pfd06">کیا آپ نے گزشتہ ایک ماہ میں مامتا کے  کھانے کی وجہ سے  کوئی منفی اثرات دیکھے ؟  </string>
     <string name="pfd07"> اگر ہاں تو وہ منفی اثرات کیا تھے؟ </string>
     <string name="pfd07a"> دست </string>
     <string name="pfd07b"> الٹی </string>
@@ -190,7 +193,7 @@
     <string name="pfe17e"> تیل ، چربی یا مکھن کھانے میں شامل یا کھانا پکانے میں استعمال کیا جاتا ہو </string>
     <string name="pfe18"> مٹھائی </string>
     <string name="pfe18e"> چینی سے بنی اشیاء جیسے کہ چاکلیٹ ، کینڈی ، بسکٹ، اور کیک۔ وغیرہ </string>
-    <string name="pffheading"> پیدائش سے پہلے حاملہ عورت کا معائنہ اور کسی بیماری کے لیے معائنہ:حاملہ عورت کے لیے دوران حمل قابل اطلاق ہے </string>
+    <string name="pffheading">پیدائش سے پہلے حاملہ عورت کا معائنہ اور کسی بیماری کے لیے معائنہ:حاملہ عورت  کے لیے دوران   حمل اور ماں بننے کے پہلے فالواپ پر قابل اطلاق ہے </string>
     <string name="pff01"> کیا آپ نے گزشتہ ایک مہینے کے دوران حمل کے لئے چیک اپ کروایا تھا؟ </string>
     <string name="pff02"> پچھلے ایک مہینہ کے دوران کس نے دورہ کیا تھا ؟ </string>
     <string name="pff02sub"> HEALTH PERSONNEL </string>
