@@ -73,8 +73,8 @@ public class GetAllData extends AsyncTask<String, String, String> {
             }
 
             urlConnection = (HttpURLConnection) url.openConnection();
-            urlConnection.setReadTimeout(10000 /* milliseconds */);
-            urlConnection.setConnectTimeout(15000 /* milliseconds */);
+            urlConnection.setReadTimeout(100000 /* milliseconds */);
+            urlConnection.setConnectTimeout(150000 /* milliseconds */);
             Log.d(TAG, "doInBackground: " + urlConnection.getResponseCode());
             if (urlConnection.getResponseCode() == HttpURLConnection.HTTP_OK) {
                 InputStream in = new BufferedInputStream(urlConnection.getInputStream());
