@@ -99,7 +99,7 @@
             android:layout_marginTop="16dp"
             android:layout_marginBottom="8dp"
             android:onClick="openForm"
-            android:text="دودھ پلانے والی ماں کا پہلا فالواپ"
+            android:text="دودھ پلانے والی ماں کا بچے سمیت پہلا فالواپ"
             android:textSize="28sp" />
 
         <Button
@@ -109,7 +109,7 @@
             android:layout_marginTop="16dp"
             android:layout_marginBottom="8dp"
             android:onClick="openForm"
-            android:text="دودھ پلانے والی ماں کا فالواپ"
+            android:text="دودھ پلانے والی ماں کا بچے سمیت فالواپ"
             android:textSize="28sp" />
 
 
