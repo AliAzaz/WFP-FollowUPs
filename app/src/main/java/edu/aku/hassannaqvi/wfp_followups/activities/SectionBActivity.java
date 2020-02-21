@@ -103,6 +103,7 @@ public class SectionBActivity extends AppCompatActivity {
                     if (AppMain.currentPrg) {
                         bi.fldgrppfb04.setVisibility(View.VISIBLE);
                         bi.fldgrppfb05.setVisibility(View.GONE);
+                        return;
                     } else {
                         bi.fldgrppfb04.setVisibility(View.GONE);
                     }
@@ -111,6 +112,7 @@ public class SectionBActivity extends AppCompatActivity {
                 if (i == bi.pfb02d.getId() || i == bi.pfb02h.getId()) {
                     bi.fldgrppfb04.setVisibility(View.VISIBLE);
                     bi.fldgrppfb05.setVisibility(View.GONE);
+                    return;
                 } else {
                     bi.fldgrppfb04.setVisibility(View.GONE);
                 }
