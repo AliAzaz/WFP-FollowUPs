@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
 
     <data>
 
@@ -142,7 +143,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:digits="abcdegfhijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-                        android:hint="@string/reason" />
+                        android:hint="@string/reason"
+                        android:text='@{pfb01f.checked ? pfb0101.getText().toString() : ""}' />
 
                 </LinearLayout>
 
@@ -173,6 +175,7 @@
                     <io.blackbox_vision.datetimepickeredittext.view.DatePickerInputEditText
                         android:id="@+id/pfb0102"
                         style="@style/textInput"
+                        android:text='@{pfb01g.checked ? pfb0102.getText().toString() : ""}'
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:hint="@string/pfb0102"
@@ -210,7 +213,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:digits="abcdegfhijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-                        android:hint="@string/reason" />
+                        android:hint="@string/reason"
+                        android:text='@{pfb01g.checked ? pfb0103.getText().toString() : ""}' />
 
                 </LinearLayout>
 
@@ -333,7 +337,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="10dp"
                         android:elevation="10dp"
-                        android:visibility="@{!pfb02f.checked || pfb02a.checked ? View.VISIBLE : View.GONE}">
+                        android:visibility="@{pfb02a.checked ? View.VISIBLE : View.GONE}">
 
                         <LinearLayout
                             android:id="@+id/fldgrppfb03"
@@ -373,7 +377,8 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="10dp"
                         android:elevation="10dp"
-                        android:visibility="gone">
+                        android:visibility="gone"
+                        tools:visibility="visible">
                         <!--android:visibility="@{pfb02e.checked ? View.VISIBLE : View.GONE}"-->
 
                         <LinearLayout
@@ -412,7 +417,9 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="10dp"
-                        android:elevation="10dp">
+                        android:elevation="10dp"
+                        android:visibility="gone"
+                        tools:visibility="visible">
 
                         <LinearLayout
                             android:layout_width="match_parent"

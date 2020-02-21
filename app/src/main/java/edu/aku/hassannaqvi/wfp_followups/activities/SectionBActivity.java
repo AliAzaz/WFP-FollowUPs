@@ -21,7 +21,6 @@ import edu.aku.hassannaqvi.wfp_followups.core.AppMain;
 import edu.aku.hassannaqvi.wfp_followups.core.DatabaseHelper;
 import edu.aku.hassannaqvi.wfp_followups.databinding.ActivitySectionBBinding;
 import edu.aku.hassannaqvi.wfp_followups.validation.ClearClass;
-import edu.aku.hassannaqvi.wfp_followups.validation.validatorClass;
 
 public class SectionBActivity extends AppCompatActivity {
 
@@ -46,6 +45,7 @@ public class SectionBActivity extends AppCompatActivity {
     private void setupViews() {
 
         boolean flag = getIntent().getBooleanExtra("valCheck", false);
+        bi.pfb0102.setMinDate(AppMain.convertDateFormat(getIntent().getStringExtra("fdate")));
         bi.pfb05.setMinDate(AppMain.convertDateFormat(getIntent().getStringExtra("fdate")));
         bi.pfb04.setMinDate(AppMain.convertDateFormat(getIntent().getStringExtra("fdate")));
         bi.pfb04.setMaxDate(new SimpleDateFormat("dd/MM/yyyy").format(System.currentTimeMillis()));
@@ -86,7 +86,7 @@ public class SectionBActivity extends AppCompatActivity {
                         }
                     }
                 }
-                if(i == bi.pfb02f.getId()){
+                if (i == bi.pfb02f.getId()) {
 
                 }
             }
@@ -99,7 +99,7 @@ public class SectionBActivity extends AppCompatActivity {
                     ClearClass.ClearAllCardFields(bi.fldgrppfbb, true);
                 }
 
-                if (i == bi.pfb02e.getId()) {
+                if (i == bi.pfb02e.getId() || i == bi.pfb02d.getId() || i == bi.pfb02h.getId()) {
                     if (AppMain.currentPrg) {
                         bi.fldgrppfb04.setVisibility(View.VISIBLE);
                         bi.fldgrppfb05.setVisibility(View.GONE);
@@ -108,21 +108,24 @@ public class SectionBActivity extends AppCompatActivity {
                     }
                 }
 
-                if (i == bi.pfb02d.getId()) {
+                /*if (i == bi.pfb02d.getId()) {
                     bi.fldgrppfb05.setVisibility(View.VISIBLE);
                     bi.fldgrppfb04.setVisibility(View.GONE);
                 } else {
                     bi.fldgrppfb05.setVisibility(View.GONE);
                     bi.pfb05.setText(null);
-                }
+                }*/
 
-                if (i == bi.pfb02f.getId()) {
+                if (i == bi.pfb02f.getId() || i == bi.pfb02g.getId()) {
                     bi.fldgrppfb06.setVisibility(View.VISIBLE);
-                    bi.fldgrppfb04.setVisibility(View.GONE);
+                    bi.fldgrppfb04.setVisibility(View.VISIBLE);
                     bi.fldgrppfb05.setVisibility(View.VISIBLE);
                 } else {
                     bi.fldgrppfb06.setVisibility(View.GONE);
+                    bi.fldgrppfb04.setVisibility(View.GONE);
+                    bi.fldgrppfb05.setVisibility(View.GONE);
                     bi.pfb06.setText(null);
+                    bi.pfb05.setText(null);
                 }
             }
         });

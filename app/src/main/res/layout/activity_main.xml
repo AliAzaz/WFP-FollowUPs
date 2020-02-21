@@ -181,6 +181,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
                 android:layout_marginBottom="8dp"
+                android:visibility="gone"
                 android:onClick="openMembers"
                 android:text="Section Members"
                 android:textSize="28sp" />
@@ -191,59 +192,10 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
                 android:layout_marginBottom="8dp"
+                android:visibility="gone"
                 android:onClick="openA"
                 android:text="Section A"
                 android:textSize="28sp" />
-
-            <Button
-                android:id="@+id/openB"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:layout_marginBottom="8dp"
-                android:onClick="openB"
-                android:text="Section B"
-                android:textSize="28sp" />
-
-            <Button
-                android:id="@+id/openC"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:layout_marginBottom="8dp"
-                android:onClick="openC"
-                android:text="Section C"
-                android:textSize="28sp" />
-
-            <Button
-                android:id="@+id/openD"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:layout_marginBottom="8dp"
-                android:onClick="openD"
-                android:text="Section D"
-                android:textSize="28sp" />
-
-            <Button
-                android:id="@+id/openE"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:layout_marginBottom="8dp"
-                android:onClick="openE"
-                android:text="Section E"
-                android:textSize="28sp" />
-
-
-            <!--<Button-->
-            <!--android:id="@+id/openEnd"-->
-            <!--android:layout_width="match_parent"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:layout_marginBottom="8dp"-->
-            <!--android:layout_marginTop="16dp"-->
-            <!--android:onClick="openEnd"-->
-            <!--android:text="Section End" />-->
 
             <Button
                 android:id="@+id/openDB"

@@ -20,6 +20,7 @@ import java.lang.reflect.Method;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.nio.charset.StandardCharsets;
 import java.util.Collection;
 
 import edu.aku.hassannaqvi.wfp_followups.core.DatabaseHelper;
@@ -92,6 +93,8 @@ public class SyncAllData extends AsyncTask<Void, Void, String> {
 
                     connection.setDoOutput(true);
                     connection.setDoInput(true);
+                    connection.setReadTimeout(100000 /* milliseconds */);
+                    connection.setConnectTimeout(150000 /* milliseconds */);
                     connection.setInstanceFollowRedirects(false);
                     connection.setRequestMethod("POST");
                     connection.setRequestProperty("Content-Type", "application/json");
@@ -128,7 +131,7 @@ public class SyncAllData extends AsyncTask<Void, Void, String> {
 
 
                     BufferedReader br = new BufferedReader(new InputStreamReader(
-                            connection.getInputStream(), "utf-8"));
+                            connection.getInputStream(), StandardCharsets.UTF_8));
                     StringBuffer sb = new StringBuffer();
 
                     while ((line = br.readLine()) != null) {

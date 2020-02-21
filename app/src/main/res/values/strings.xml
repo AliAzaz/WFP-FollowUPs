@@ -82,12 +82,12 @@
     <string name="pfa03a"> فالواپ نمبر </string>
     <string name="pfa04"> خا تون کی قسم </string>
     <string name="pfa04a"> حاملہ خاتون </string>
-    <string name="pfa04b"> دودھ پلانے والی ماں </string>
+    <string name="pfa04b"> دودھ پلانے والی ماں بچے سمیت  </string>
     <string name="pfa05"> فالو اپ کی تاریخ </string>
     <string name="pfa06">زبانی رضامندی </string>
     <string name="pfbheading"> حاملہ خاتون  / دودھ پلانے والی ماں/بچہ کی موجودہ حیثیت </string>
     <string name="pfb01"> کیا حاملہ خاتون یا دودھ پلانے والی ماں انٹرویو کے لئے دستیاب ہے؟ </string>
-    <string name="pfb0101">اگر انکا کیا تو انکار کی وجہ کیا تھی؟</string>
+    <string name="pfb0101">اگر انکار کیا تو انکار کی وجہ کیا تھی؟</string>
     <string name="pfb0102">دودھ پلانے ماں کے وفات کی تاریخ</string>
     <string name="pfb0103">دودھ پلانے ماں کے وفات کی وجوہات</string>
     <string name="pfb01a"> موجود ہے انٹرویو جاری رکھیں </string>
