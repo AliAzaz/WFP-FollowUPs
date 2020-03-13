@@ -65,7 +65,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginBottom="1dp"
                             android:layout_weight="1"
-                            android:text="@string/no" />
+                            android:text="@string/cfd01ab" />
 
                         <RadioButton
                             android:id="@+id/cfd01a03"
@@ -183,6 +183,44 @@
                         android:text='@{cfd01b96.checked? cfd01b96x.getText().toString() : ""}'
                         android:visibility='@{cfd01b96.checked? View.VISIBLE : View.GONE}' />
 
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <!--Q1b-->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:elevation="10dp">
+
+                <LinearLayout
+                    android:id="@+id/fldgrpcfd01c"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="@{cfd01a02.checked ? View.VISIBLE : View.GONE}">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:background="@color/colorPrimaryDark"
+                        android:text="@string/cfd01ab"
+                        android:textColor="@color/white" />
+
+                    <EditText
+                        android:id="@+id/cfd01a03x"
+                        style="@style/textInput"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz"
+                        android:hint="@string/cfd01ab"
+                        android:inputType="text"
+                        android:text='@{cfd01a02.checked? cfd01a03x.getText().toString() : ""}'
+                        android:visibility='@{cfd01a02.checked? View.VISIBLE : View.GONE}' />
 
                 </LinearLayout>
 
@@ -995,36 +1033,6 @@
                 </LinearLayout>
 
             </LinearLayout>
-
-            <!--reason-->
-            <androidx.cardview.widget.CardView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:elevation="10dp"
-                android:visibility="@{cfd01a02.checked ? View.VISIBLE : View.GONE}">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
-
-                    <EditText
-                        android:id="@+id/cfd01a03x"
-                        style="@style/textInput"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="10dp"
-                        android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz"
-                        android:hint="@string/reason"
-                        android:inputType="text"
-                        android:text='@{cfd01a02.checked ? cfd01a03x.getText().toString() : ""}'
-                        android:visibility="gone" />
-
-
-                </LinearLayout>
-
-            </androidx.cardview.widget.CardView>
 
             <!--================End Buttons======================-->
 

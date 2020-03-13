@@ -99,9 +99,9 @@ public class InfoActivity extends Activity {
         if (!bi.studyID.getText().toString().isEmpty()) {
             enrolledParticipant = db.getEnrolledByStudyID(bi.studyID.getText().toString(), cond_Flag);
 
-            if (enrolledParticipant != null && (cond_Flag || Integer.valueOf(enrolledParticipant.getFupround()) <= 7)) {
+            if (enrolledParticipant != null && (cond_Flag || Integer.parseInt(enrolledParticipant.getFupround()) <= 7)) {
 
-                Long days = AppMain.getDaysBWDates(new Date(), AppMain.stringToDate(enrolledParticipant.getFupdt()));
+                long days = AppMain.getDaysBWDates(new Date(), AppMain.stringToDate(enrolledParticipant.getFupdt()));
 
                 if (days > -8 && days < 8) {
                     Toast.makeText(getApplicationContext(), "Participant found", Toast.LENGTH_LONG).show();

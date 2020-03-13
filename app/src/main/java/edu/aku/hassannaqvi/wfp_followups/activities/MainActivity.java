@@ -74,7 +74,7 @@ public class MainActivity extends Activity {
 
         ButterKnife.bind(this);
 
-        if (Integer.valueOf(AppMain.versionName.split("\\.")[0]) > 0) {
+        if (Integer.parseInt(AppMain.versionName.split("\\.")[0]) > 0) {
             testing.setVisibility(View.GONE);
         } else {
             testing.setVisibility(View.VISIBLE);
@@ -108,7 +108,7 @@ public class MainActivity extends Activity {
                 m_Text = input.getText().toString();
                 if (!m_Text.equals("")) {
                     editor.putString("tagName", m_Text);
-                    editor.commit();
+                    editor.apply();
                 }
             }
         });
@@ -223,7 +223,7 @@ public class MainActivity extends Activity {
             oF = new Intent(MainActivity.this, ChildInfoActivity.class);
         }
 
-        if (sharedPref.getString("tagName", null) != "" && sharedPref.getString("tagName", null) != null) {
+        if (!sharedPref.getString("tagName", null).equals("") && sharedPref.getString("tagName", null) != null) {
             startActivity(oF);
         } else {
 
@@ -269,7 +269,6 @@ public class MainActivity extends Activity {
         Intent iA = new Intent(this, Child_Section_D.class);
         startActivity(iA);
     }
-
 
     public void openDB(View v) {
         Intent dbmanager = new Intent(getApplicationContext(), AndroidDatabaseManager.class);

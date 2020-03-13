@@ -86,9 +86,6 @@ public class SectionBActivity extends AppCompatActivity {
                         }
                     }
                 }
-                if (i == bi.pfb02f.getId()) {
-
-                }
             }
         });
 
@@ -106,13 +103,6 @@ public class SectionBActivity extends AppCompatActivity {
                 bi.pfb05.setText(null);
                 bi.pfb06.setText(null);
 
-                if (i == bi.pfb02e.getId()) {
-                    if (AppMain.currentPrg) {
-                        bi.fldgrppfb04.setVisibility(View.VISIBLE);
-                        bi.fldgrppfb05.setVisibility(View.GONE);
-                    }
-                }
-
                 if (i == bi.pfb02d.getId() || i == bi.pfb02h.getId()) {
                     bi.fldgrppfb04.setVisibility(View.VISIBLE);
                     bi.fldgrppfb05.setVisibility(View.GONE);
@@ -124,6 +114,19 @@ public class SectionBActivity extends AppCompatActivity {
                     bi.fldgrppfb04.setVisibility(View.VISIBLE);
                     bi.fldgrppfb05.setVisibility(View.VISIBLE);
                 }
+
+                if (i == bi.pfb02e.getId()) {
+                    if (AppMain.currentPrg) {
+                        bi.fldgrppfb04.setVisibility(View.VISIBLE);
+                        bi.fldgrppfb05.setVisibility(View.GONE);
+                    }
+                }
+
+
+                if (!AppMain.currentPrg) {
+                    bi.fldgrppfb04.setVisibility(View.GONE);
+                }
+
             }
         });
 

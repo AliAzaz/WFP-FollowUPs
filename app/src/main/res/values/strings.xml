@@ -115,7 +115,7 @@
     <string name="pfc01"> وزن کی جانچ </string>
     <string name="pfc01a"> کلو گرام </string>
     <string name="pfc02"> خون کی مقدار کا نتیجہ </string>
-    <string name="pfc02sub">صرف9 ماہ کے حمل کے پورے ہونے پر</string>
+    <string name="pfc02sub">خون کی مقدار کا نتیجہ صرف 9 ماہ کے حمل کے پورے ہونے پر</string>
     <string name="pfdheading"> حاملہ خاتون  / دودھ پلانے والی ماں: دوران حمل اور ابتدائی 6 ماہ کے دوران دودھ پلانے والی ماؤں کے لیے قابل اطلاق ہے </string>
     <string name="pfd01"> کیا آپ کوگزشتہ مہینے کے دوران مامتا کے ساشے ملے تھے؟ </string>
     <string name="pfd01c"> لینے سے انکار کردیا </string>
@@ -534,6 +534,7 @@
     وا وامم کا ساشے دکھائیں۔
 </string>
 
+    <string name="cfd01ab"> نہیں کی وجہ </string>
     <string name="cfd01ac"> وصول کرنے سے انکار کیا </string>
 
     <string name="cfd01b"> اگر انکار کیا تو کیا وجہ تھی ؟ </string>
